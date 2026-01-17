@@ -19,47 +19,17 @@ Repositorio oficial del curso **Salesforce Administrator** del **Grupo 3 - VISIO
 
 ---
 
-## 📁 Estructura del Repositorio
+## 📚 Navegación Principal
 
-A continuación se detalla la estructura completa de archivos y directorios del proyecto:
+Explora el contenido del curso a través de los siguientes módulos:
 
-- 📂 [**curriculum/**](curriculum/) - Material del curso
-  - 📂 [sprint_01/](curriculum/sprint_01/)
-    - 📂 [semana_01/](curriculum/sprint_01/semana_01/) (Clases 1-4)
-    - 📂 [semana_02/](curriculum/sprint_01/semana_02/) (Clases 5, 6 y 8)
-- 📂 [**Superbadge_Object_Relationships/**](Superbadge_Object_Relationships/README.md) - 🏆 Superbadge Completado
-  - 📄 [README.md](Superbadge_Object_Relationships/README.md)
-  - 📄 [ENUNCIADO_ORIGINAL.md](Superbadge_Object_Relationships/ENUNCIADO_ORIGINAL.md)
-  - 📄 [01-Reto_I_Objetos_Estandar.md](Superbadge_Object_Relationships/01-Reto_I_Objetos_Estandar.md)
-  - 📄 [02-Reto_II_Objetos_Custom.md](Superbadge_Object_Relationships/02-Reto_II_Objetos_Custom.md)
-  - 📄 [03-Reto_III_Lightning_App.md](Superbadge_Object_Relationships/03-Reto_III_Lightning_App.md)
-- 📂 [**Superbadge_Formulas/**](Superbadge_Formulas/README.md) - 🏆 Superbadge Completado
-  - 📄 [README.md](Superbadge_Formulas/README.md)
-  - 📄 [ENUNCIADO_ORIGINAL.md](Superbadge_Formulas/ENUNCIADO_ORIGINAL.md)
-  - 📄 [GUIA_SB_SOLUCION_v1.0.md](Superbadge_Formulas/GUIA_SB_SOLUCION_v1.0.md)
-  - 📄 [GUIA_sB_SOLUCION_v2.0.md](Superbadge_Formulas/GUIA_sB_SOLUCION_v2.0.md)
-- 📂 [**Superbadge_User_Authentication/**](Superbadge_User_Authentication/README.md) - 🏆 Superbadge Completado
-  - 📄 [README.md](Superbadge_User_Authentication/README.md)
-  - 📄 [ENUNCIADO_ORIGINAL.md](Superbadge_User_Authentication/ENUNCIADO_ORIGINAL.md)
-  - 📄 [GUIA_SB_SOLUCION.md](Superbadge_User_Authentication/GUIA_SB_SOLUCION.md)
-- 📂 [**Practica_Financiera/**](Practica_Financiera/README.md) - 💼 Caso de Estudio Real
-  - 📄 [README.md](Practica_Financiera/README.md)
-  - 📄 [CASO_DE_ESTUDIO.md](Practica_Financiera/CASO_DE_ESTUDIO.md)
-  - 📄 [REQUERIMIENTO_1_GARANTES.md](Practica_Financiera/REQUERIMIENTO_1_GARANTES.md)
-  - 📄 [REQUERIMIENTO_2_SALARIO_OCULTO.md](Practica_Financiera/REQUERIMIENTO_2_SALARIO_OCULTO.md)
-  - 📄 [REQUERIMIENTO_3_MULTIPLES_CUENTAS.md](Practica_Financiera/REQUERIMIENTO_3_MULTIPLES_CUENTAS.md)
-- 📂 [**Gestor_de_Versiones/**](Gestor_de_Versiones/README.md) - 🔄 Guías de Git y Entornos
-  - 📄 [README.md](Gestor_de_Versiones/README.md)
-  - 📄 [00-PLAN_DE_TRABAJO.md](Gestor_de_Versiones/00-PLAN_DE_TRABAJO.md)
-  - 📄 [11-Ambiente_DEV.md](Gestor_de_Versiones/11-Ambiente_DEV.md)
-  - 📄 [12-Ambiente_QA.md](Gestor_de_Versiones/12-Ambiente_QA.md)
-  - 📄 [13-Ambiente_PROD.md](Gestor_de_Versiones/13-Ambiente_PROD.md)
-- 📂 [**schedules/**](schedules/)
-  - 📅 [sprint1_schedule.md](schedules/sprint1_schedule.md)
-- 📂 [**docs/**](docs/README.md)
-  - 📄 [CHANGELOG.md](docs/CHANGELOG.md)
-  - 📄 [TASK_LIST.md](docs/TASK_LIST.md)
-- 📄 [**course_structure.md**](course_structure.md)
+| **Módulo** | **Descripción** | **Contenido** |
+| :--- | :--- | :--- |
+| **🚀 [Curriculum Principal](curriculum/)** | Material de estudio organizado por semanas. | [Semana 1](curriculum/sprint_01/semana_01/) • [Semana 2](curriculum/sprint_01/semana_02/) |
+| **🏆 [Superbadges](Superbadge_Object_Relationships/README.md)** | Soluciones y guías paso a paso de retos. | [Obj. Relationships](Superbadge_Object_Relationships/README.md) • [Formulas](Superbadge_Formulas/README.md) • [Auth](Superbadge_User_Authentication/README.md) |
+| **💼 [Prácticas Reales](Practica_Financiera/README.md)** | Casos de estudio y ejercicios prácticos. | [Financiera Horizonte](Practica_Financiera/README.md) |
+| **🛠️ [Kit de Herramientas](Gestor_de_Versiones/README.md)** | Guías técnicas y metodologías. | [Git & DevOps](Gestor_de_Versiones/README.md) • [Trello](Gestor_de_Versiones/00-INTEGRACION_TRELLO.md) |
+| **📅 [Cronograma](schedules/sprint1_schedule.md)** | Fechas de entrega y seguimiento. | [Sprint 1](schedules/sprint1_schedule.md) |
 
 ---
 
