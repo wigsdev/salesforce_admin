@@ -18,7 +18,6 @@
 | 🚀 [**Reto 1: Objetos Estándar**](01-Reto_I_Objetos_Estandar.md) | Configuración de Account, Contact y Campaign. |
 | 🚀 [**Reto 2: Objetos Custom**](02-Reto_II_Objetos_Custom.md) | Creación de Track List y relaciones complejas. |
 | 🚀 [**Reto 3: Lightning App**](03-Reto_III_Lightning_App.md) | Construcción de la App "World Tour Manager". |
-| ✅ [**Resumen Final**](COMPLETADO.md) | Reflexiones y aprendizajes clave. |
 | 🔙 [**Volver al Inicio**](../README.md) | Regresar al índice principal del curso. |
 
 ---
