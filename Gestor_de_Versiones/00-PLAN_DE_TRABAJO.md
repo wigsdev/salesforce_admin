@@ -27,16 +27,16 @@
 
 - [x] **Ambiente DEV creado** (Trailhead Playground)
   - [x] 2 usuarios Admin configurados (Estudiantes 1-2)
-  - [x] Credenciales documentadas en `11-Ambiente_DEV.md`
+  - [x] Credenciales documentadas en [11-Ambiente_DEV.md](11-Ambiente_DEV.md)
   
 - [x] **Ambiente QA creado** (Trailhead Playground)
   - [x] 2 usuarios Admin configurados (Estudiantes 3-4)
   - [x] 3 usuarios de testing (Ejecutivo, Atención Cliente, Gerente)
-  - [x] Credenciales documentadas en `12-Ambiente_QA.md`
+  - [x] Credenciales documentadas en [12-Ambiente_QA.md](12-Ambiente_QA.md)
   
 - [x] **Ambiente PROD identificado**
   - [x] 2 usuarios Admin configurados (Estudiantes 5-6)
-  - [x] Acceso documentado en `13-Ambiente_PROD.md`
+  - [x] Acceso documentado en [13-Ambiente_PROD.md](13-Ambiente_PROD.md)
 
 ### **Semana 1 (5-9 Enero) - Análisis**
 
@@ -46,45 +46,45 @@
   - [x] 16 Story Points asignados
   - [x] Sprint Backlog creado
   - [x] Participantes: 9 personas (todo el equipo)
-  - [x] Documentado en `07-SPRINT_1.md`
+  - [x] Documentado en [07-SPRINT_1.md](07-SPRINT_1.md)
 
 - [x] **Análisis de Requerimientos** (6-9 Enero)
   - [x] Análisis de 3 requerimientos completado
   - [x] Traducción de palabras del cliente a Salesforce
   - [x] Preguntas de indagación formuladas
   - [x] Tabla resumen de soluciones
-  - [x] Documentado en `01-Business_Analyst.md`
+  - [x] Documentado en [01-Business_Analyst.md](01-Business_Analyst.md)
 
 - [x] **Preguntas al Cliente** (6-9 Enero)
   - [x] P1-P3: Preguntas generales (edición SF, ambientes, usuarios)
   - [x] P4-P6: Preguntas sobre HU-001 (Garantes)
-  - [x] Documentado en `05-Preguntas_y_Dudas.md`
+  - [x] Documentado en [05-Preguntas_y_Dudas.md](05-Preguntas_y_Dudas.md)
 
 - [x] **Daily Standups**
   - [x] Daily #1 (6 Enero)
   - [x] Daily #2 (8 Enero)
-  - [x] Documentados en `07-SPRINT_1.md`
+  - [x] Documentados en [07-SPRINT_1.md](07-SPRINT_1.md)
 
 ### **Semana 2 (12-16 Enero) - Investigación (PARCIAL)**
 
 - [x] **Investigaciones Técnicas** (8-13 Enero)
   - [x] Investigación 1: Contact Roles vs Junction Object (8 Enero)
   - [x] Investigación 2: FLS vs Page Layouts (13 Enero)
-  - [x] Documentado en `06-Investigaciones.md`
+  - [x] Documentado en [06-Investigaciones.md](06-Investigaciones.md)
 
 - [x] **Decisiones Técnicas** (Parcial)
   - [x] Solución HU-001 (Garantes) definida
   - [x] Solución HU-002 (Salario) definida
-  - [x] Documentado en `02-Salesforce_Consultant.md`
+  - [x] Documentado en [02-Salesforce_Consultant.md](02-Salesforce_Consultant.md)
 
 - [x] **Preguntas sobre HU-002** (13 Enero)
   - [x] P7-P9: Preguntas sobre seguridad de datos
-  - [x] Documentado en `05-Preguntas_y_Dudas.md`
+  - [x] Documentado en [05-Preguntas_y_Dudas.md](05-Preguntas_y_Dudas.md)
 
 - [x] **Daily Standups**
   - [x] Daily #3 (13 Enero)
   - [x] Daily #4 (15 Enero)
-  - [x] Documentados en `07-SPRINT_1.md`
+  - [x] Documentados en [07-SPRINT_1.md](07-SPRINT_1.md)
 
 - [x] **Desarrollo en DEV**
   - [x] HU-002 (Salario Oculto) implementada:
@@ -99,27 +99,27 @@
 
 ### **Documentación (2-3 horas)**
 
-- [ ] **Completar `06-Investigaciones.md`**
+- [ ] **Completar [06-Investigaciones.md](06-Investigaciones.md)**
   - [ ] Investigación 3: Platform Encryption para CBU (20 Enero según timeline)
   - [ ] Investigación 4: Validation Rule vs Flow (20 Enero)
   - [ ] Investigación 5: Change Sets vs SFDX (27 Enero)
   - **Acción**: Documentar las 3 investigaciones restantes
 
-- [ ] **Completar `02-Salesforce_Consultant.md`**
+- [ ] **Completar [02-Salesforce_Consultant.md](02-Salesforce_Consultant.md)**
   - [ ] Solución técnica para HU-003 (Múltiples Cuentas)
   - [ ] Evaluación de alternativas
   - [ ] Votación del equipo
   - [ ] Tabla resumen final con 16 Story Points
   - **Acción**: Agregar sección HU-003
 
-- [ ] **Actualizar `05-Preguntas_y_Dudas.md`**
+- [ ] **Actualizar [05-Preguntas_y_Dudas.md](05-Preguntas_y_Dudas.md)**
   - [ ] P10: ¿Cuántas cuentas máximo por cliente?
   - [ ] P11: ¿El CBU debe estar encriptado?
   - [ ] P12: ¿Qué pasa si marcan 2 cuentas como primarias?
   - [ ] P13: ¿Necesitan historial de transacciones?
   - **Acción**: Agregar preguntas P10-P13
 
-- [ ] **Daily Standup de hoy en `07-SPRINT_1.md`**
+- [ ] **Daily Standup de hoy en [07-SPRINT_1.md](07-SPRINT_1.md)**
   - [ ] Daily #5 (16 Enero)
   - **Acción**: Documentar qué hiciste ayer, qué harás hoy, impedimentos
 
@@ -138,7 +138,7 @@
 
 ### **Documentación (5-6 horas total)**
 
-- [ ] **Iniciar `03-Salesforce_Admin.md`** (19-23 Enero)
+- [ ] **Iniciar [03-Salesforce_Admin.md](03-Salesforce_Admin.md)** (19-23 Enero)
   - [ ] Documentar implementación de HU-001 (paso a paso)
   - [ ] Documentar implementación de HU-002 (paso a paso)
   - [ ] Documentar implementación de HU-003 (paso a paso)
@@ -146,17 +146,17 @@
   - [ ] Deployment plan (DEV → QA → PROD)
   - **Tiempo estimado**: 3-4 horas
 
-- [ ] **Actualizar `11-Ambiente_DEV.md`** (Continuo)
+- [ ] **Actualizar [11-Ambiente_DEV.md](11-Ambiente_DEV.md)** (Continuo)
   - [ ] Registrar cambios realizados en DEV
   - [ ] Tabla de cambios con fechas
   - **Tiempo estimado**: 30 minutos
 
-- [ ] **Daily Standups en `07-SPRINT_1.md`**
+- [ ] **Daily Standups en [07-SPRINT_1.md](07-SPRINT_1.md)**
   - [ ] Daily #6 (20 Enero)
   - [ ] Daily #7 (22 Enero)
   - **Tiempo estimado**: 15 min cada uno
 
-- [ ] **Actualizar `05-Preguntas_y_Dudas.md`** (Si surgen)
+- [ ] **Actualizar [05-Preguntas_y_Dudas.md](05-Preguntas_y_Dudas.md)** (Si surgen)
   - [ ] P14-P15: Preguntas técnicas del equipo
   - **Tiempo estimado**: 30 minutos
 
@@ -190,7 +190,7 @@
 
 ### **Documentación (6-8 horas total)**
 
-- [ ] **Completar `04-Tester_QA.md`** (27 Enero - 5 Febrero)
+- [ ] **Completar [04-Tester_QA.md](04-Tester_QA.md)** (27 Enero - 5 Febrero)
   - [ ] Crear 21 test cases:
     - [ ] HU-001: 5 test cases
     - [ ] HU-002: 7 test cases
@@ -201,12 +201,12 @@
   - [ ] Estadísticas finales
   - **Tiempo estimado**: 4-5 horas
 
-- [ ] **Actualizar `12-Ambiente_QA.md`** (27 Enero - 5 Febrero)
+- [ ] **Actualizar [12-Ambiente_QA.md](12-Ambiente_QA.md)** (27 Enero - 5 Febrero)
   - [ ] Registro de testing (tabla con fechas y resultados)
   - [ ] Bugs encontrados (si hay)
   - **Tiempo estimado**: 1 hora
 
-- [ ] **Completar `14-DevOPS.md`** (3-5 Febrero)
+- [ ] **Completar [14-DevOPS.md](14-DevOPS.md)** (3-5 Febrero)
   - [ ] Change Sets creados
   - [ ] Deployment logs
   - [ ] Problemas encontrados
@@ -282,10 +282,10 @@
 ### **HOY - 16 Enero (Viernes)**
 
 **Documentación** (2-3 horas):
-- [ ] Investigaciones 3, 4, 5 en `06-Investigaciones.md`
-- [ ] HU-003 en `02-Salesforce_Consultant.md`
-- [ ] Preguntas P10-P13 en `05-Preguntas_y_Dudas.md`
-- [ ] Daily #5 en `07-SPRINT_1.md`
+- [ ] Investigaciones 3, 4, 5 en [06-Investigaciones.md](06-Investigaciones.md)
+- [ ] HU-003 en [02-Salesforce_Consultant.md](02-Salesforce_Consultant.md)
+- [ ] Preguntas P10-P13 en [05-Preguntas_y_Dudas.md](05-Preguntas_y_Dudas.md)
+- [ ] Daily #5 en [07-SPRINT_1.md](07-SPRINT_1.md)
 
 **Playground** (2-3 horas):
 - [ ] HU-001 completa en DEV
@@ -295,8 +295,8 @@
 ### **Lunes 19 Enero (Inicio Semana 3)**
 
 **Documentación** (1 hora):
-- [ ] Iniciar `03-Salesforce_Admin.md`
-- [ ] Daily #6 en `07-SPRINT_1.md`
+- [ ] Iniciar [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
+- [ ] Daily #6 en [07-SPRINT_1.md](07-SPRINT_1.md)
 
 **Playground** (3-4 horas):
 - [ ] Empezar HU-003: Crear objeto `Bank_Account__c`
@@ -307,7 +307,7 @@
 ### **Martes 20 Enero**
 
 **Documentación** (1 hora):
-- [ ] Continuar `03-Salesforce_Admin.md` (HU-003)
+- [ ] Continuar [03-Salesforce_Admin.md](03-Salesforce_Admin.md) (HU-003)
 
 **Playground** (3-4 horas):
 - [ ] Completar campos de HU-003
@@ -318,8 +318,8 @@
 ### **Miércoles 22 Enero**
 
 **Documentación** (1 hora):
-- [ ] Daily #7 en `07-SPRINT_1.md`
-- [ ] Continuar `03-Salesforce_Admin.md`
+- [ ] Daily #7 en [07-SPRINT_1.md](07-SPRINT_1.md)
+- [ ] Continuar [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
 
 **Playground** (3-4 horas):
 - [ ] Crear Flow "Auto_Unmark_Primary_Account"
@@ -330,7 +330,7 @@
 ### **Jueves 23 Enero**
 
 **Documentación** (1 hora):
-- [ ] Finalizar `03-Salesforce_Admin.md`
+- [ ] Finalizar [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
 
 **Playground** (2-3 horas):
 - [ ] Crear Formula Field y Reportes
@@ -351,7 +351,7 @@
 ### **3. Prioriza lo crítico**
 Si vas con poco tiempo:
 1. **Primero**: Trabajo en Playground (implementación)
-2. **Segundo**: Documentación en `03-Salesforce_Admin.md`
+2. **Segundo**: Documentación en [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
 3. **Tercero**: Resto de documentación
 
 ### **4. Toma screenshots**
@@ -382,7 +382,7 @@ Si vas con poco tiempo:
 - [ ] Guardar credenciales de ambientes de forma segura
 - [ ] Hacer backup antes de deployments
 - [ ] Tomar screenshots de configuraciones
-- [ ] Actualizar `05-Preguntas_y_Dudas.md` cuando surjan dudas
+- [ ] Actualizar [05-Preguntas_y_Dudas.md](05-Preguntas_y_Dudas.md) cuando surjan dudas
 - [ ] Daily Standups cada día laborable
 
 ---
@@ -390,7 +390,7 @@ Si vas con poco tiempo:
 ## 📞 SOPORTE
 
 **Si tienes dudas**:
-1. Revisa `00-GUIA_DE_USO.md` (guía completa)
+1. Revisa [00-GUIA_DE_USO.md](00-GUIA_DE_USO.md) (guía completa)
 2. Revisa los archivos de ejemplo (tienen contenido detallado)
 3. Consulta con tu equipo
 4. Pregunta al instructor

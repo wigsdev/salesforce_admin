@@ -21,9 +21,9 @@ Este documento explica cómo **Trello** y el **Gestor de Versiones** trabajan ju
 - **Actualización**: Continua (mientras trabajas)
 
 ### **Carpeta Practica_Financiera (Referencia)**
-- **Historias de Usuario**: Ya redactadas en `03-Requerimientos_SOLUCION.md`
-- **Guía de Trello**: Paso a paso en `04-Guia_Trello_Paso_a_Paso.md`
-- **Caso de estudio**: Contexto en `01-Caso_de_Estudio.md`
+- **Historias de Usuario**: Ya redactadas en [03-Requerimientos_SOLUCION.md](../Practica_Financiera/03-Requerimientos_SOLUCION.md)
+- **Guía de Trello**: Paso a paso en [04-Guia_Trello_Paso_a_Paso.md](../Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md)
+- **Caso de estudio**: Contexto en [01-Caso_de_Estudio.md](../Practica_Financiera/01-Caso_de_Estudio.md)
 
 ---
 
@@ -118,14 +118,14 @@ PASO 8: ¿Test PASS?
 - Invitar a los 9 miembros del equipo
 - Asignar permisos de edición a todos
 
-**Referencia**: `Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md` (Partes 1-2)
+**Referencia**: [Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md](../Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md) (Partes 1-2)
 
 ---
 
 ### **Semana 1 (6-9 Enero): Crear Historias de Usuario**
 
 **Paso 3: Leer Historias de Usuario**
-- Abrir `Practica_Financiera/03-Requerimientos_SOLUCION.md`
+- Abrir [Practica_Financiera/03-Requerimientos_SOLUCION.md](../Practica_Financiera/03-Requerimientos_SOLUCION.md)
 - Leer HU-001, HU-002, HU-003 completas
 
 **Paso 4: Crear Tarjetas en Trello**
@@ -236,7 +236,7 @@ PASO 8: ¿Test PASS?
 
 ---
 
-**Referencia**: `Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md` (Parte 3)
+**Referencia**: [Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md](../Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md) (Parte 3)
 
 ---
 
@@ -245,8 +245,8 @@ PASO 8: ¿Test PASS?
 **Acción en Trello**: Ninguna (las tarjetas siguen en "To Do")
 
 **Acción en Gestor de Versiones**:
-- Documentar investigaciones en `06-Investigaciones.md`
-- Documentar decisiones en `02-Salesforce_Consultant.md`
+- Documentar investigaciones en [06-Investigaciones.md](06-Investigaciones.md)
+- Documentar decisiones en [02-Salesforce_Consultant.md](02-Salesforce_Consultant.md)
 
 ---
 
@@ -258,7 +258,7 @@ PASO 8: ¿Test PASS?
 3. Agregar comentario: "Iniciando desarrollo - [Tu nombre]"
 
 **Mientras desarrollas**:
-- Documentar en `03-Salesforce_Admin.md`
+- Documentar en [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
 - Actualizar comentarios en Trello con progreso diario
 
 **Al terminar HU-001**:
@@ -279,7 +279,7 @@ PASO 8: ¿Test PASS?
 
 **Durante testing**:
 - Ejecutar test cases
-- Documentar en `04-Tester_QA.md`
+- Documentar en [04-Tester_QA.md](04-Tester_QA.md)
 
 **Si test PASS**:
 1. Marcar TODOS los checklist items como completados ✅
@@ -350,17 +350,17 @@ PASO 8: ¿Test PASS?
 
 | Fecha | Acción en Trello | Acción en Gestor de Versiones |
 |-------|------------------|-------------------------------|
-| **5 Ene** | Crear tarjeta HU-001 en "To Do" | Documentar en `01-Business_Analyst.md` |
-| **8 Ene** | (Tarjeta sigue en "To Do") | Investigar en `06-Investigaciones.md` |
-| **13 Ene** | (Tarjeta sigue en "To Do") | Decidir en `02-Salesforce_Consultant.md` |
-| **19 Ene** | Mover a "In Progress", asignar | Empezar `03-Salesforce_Admin.md` |
+| **5 Ene** | Crear tarjeta HU-001 en "To Do" | Documentar en [01-Business_Analyst.md](01-Business_Analyst.md) |
+| **8 Ene** | (Tarjeta sigue en "To Do") | Investigar en [06-Investigaciones.md](06-Investigaciones.md) |
+| **13 Ene** | (Tarjeta sigue en "To Do") | Decidir en [02-Salesforce_Consultant.md](02-Salesforce_Consultant.md) |
+| **19 Ene** | Mover a "In Progress", asignar | Empezar [03-Salesforce_Admin.md](03-Salesforce_Admin.md) |
 | **20 Ene** | Comentar progreso | Continuar documentando |
 | **21 Ene** | Marcar 2/5 checklist items | Continuar documentando |
 | **22 Ene** | Mover a "Testing", notificar QA | Finalizar documentación |
-| **28 Ene** | QA se asigna, comenta inicio | Empezar `04-Tester_QA.md` |
+| **28 Ene** | QA se asigna, comenta inicio | Empezar [04-Tester_QA.md](04-Tester_QA.md) |
 | **29 Ene** | Marcar 5/5 checklist items ✅ | Completar test cases |
 | **30 Ene** | Mover a "QA Approved" | Documentar resultados |
-| **5 Feb** | Mover a "Done", comentar deployment | Actualizar `14-DevOPS.md` |
+| **5 Feb** | Mover a "Done", comentar deployment | Actualizar [14-DevOPS.md](14-DevOPS.md) |
 
 ---
 
@@ -376,9 +376,9 @@ PASO 8: ¿Test PASS?
 - Gestor de Versiones para documentación profesional
 
 **Referencias**:
-- Historias de Usuario: `Practica_Financiera/03-Requerimientos_SOLUCION.md`
-- Guía de Trello: `Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md`
-- Guía de Uso: `Gestor_de_Versiones/00-GUIA_DE_USO.md`
+- Historias de Usuario: [Practica_Financiera/03-Requerimientos_SOLUCION.md](../Practica_Financiera/03-Requerimientos_SOLUCION.md)
+- Guía de Trello: [Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md](../Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md)
+- Guía de Uso: [Gestor_de_Versiones/00-GUIA_DE_USO.md](00-GUIA_DE_USO.md)
 
 ---
 

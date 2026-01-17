@@ -96,9 +96,9 @@ SEMANA 4: Testing y Cierre
 
 | Archivo | Cuándo | Responsable | Acción |
 |---------|--------|-------------|--------|
-| `11-Ambiente_DEV.md` | Antes de empezar | Admin | Crear ambiente DEV y documentar credenciales |
-| `12-Ambiente_QA.md` | Antes de empezar | Admin | Crear ambiente QA y documentar credenciales |
-| `13-Ambiente_PROD.md` | Antes de empezar | Admin | Documentar acceso a PROD |
+| [11-Ambiente_DEV.md](11-Ambiente_DEV.md) | Antes de empezar | Admin | Crear ambiente DEV y documentar credenciales |
+| [12-Ambiente_QA.md](12-Ambiente_QA.md) | Antes de empezar | Admin | Crear ambiente QA y documentar credenciales |
+| [13-Ambiente_PROD.md](13-Ambiente_PROD.md) | Antes de empezar | Admin | Documentar acceso a PROD |
 
 ---
 
@@ -109,7 +109,7 @@ SEMANA 4: Testing y Cierre
 | **Trello** | Durante Planning | Scrum Master | - Crear tablero "Equipo 3 - Sprint 1"<br>- Crear 8 columnas: Backlog, To Do, In Progress, Code Review, Testing, QA Approved, Done, Blocked<br>- Crear etiquetas de Épicas (🔵 Gestión Clientes, 🔴 Seguridad, 🟢 Automatización)<br>- Invitar a los 9 miembros del equipo |
 | `07-SPRINT_1.md` | Durante Planning | Scrum Master | - Sprint Goal<br>- User Stories seleccionadas<br>- Story Points<br>- Sprint Backlog (tasks) |
 
-**📋 Referencia**: Ver `Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md` para instrucciones detalladas de configuración de Trello.
+**📋 Referencia**: Ver [Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md](../Practica_Financiera/04-Guia_Trello_Paso_a_Paso.md) para instrucciones detalladas de configuración de Trello.
 
 ---
 
@@ -117,13 +117,13 @@ SEMANA 4: Testing y Cierre
 
 | Archivo/Herramienta | Momento | Responsable | Qué Documentar |
 |---------------------|---------|-------------|----------------|
-| `01-Business_Analyst.md` | Al analizar cada requerimiento | Business Analyst | - Traducción de palabras del cliente a Salesforce<br>- Preguntas de indagación<br>- Problemas identificados<br>- Tabla resumen de soluciones |
+| [01-Business_Analyst.md](01-Business_Analyst.md) | Al analizar cada requerimiento | Business Analyst | - Traducción de palabras del cliente a Salesforce<br>- Preguntas de indagación<br>- Problemas identificados<br>- Tabla resumen de soluciones |
 | **Trello** | Después del análisis | Business Analyst + Scrum Master | - Crear 3 tarjetas (HU-001, HU-002, HU-003)<br>- Título: "[HU-XXX] [Título] (X pts)"<br>- Descripción: Problema, solución, criterios de aceptación<br>- Etiquetas: Épica correspondiente<br>- Checklist: Criterios de Aceptación<br>- Mover a columna "To Do" |
-| `05-Preguntas_y_Dudas.md` | Cuando surjan dudas | Cualquier miembro | - Preguntas al cliente<br>- Preguntas técnicas<br>- Respuestas recibidas<br>- Decisiones tomadas |
+| [05-Preguntas_y_Dudas.md](05-Preguntas_y_Dudas.md) | Cuando surjan dudas | Cualquier miembro | - Preguntas al cliente<br>- Preguntas técnicas<br>- Respuestas recibidas<br>- Decisiones tomadas |
 
-**💡 Tip**: Actualiza `05-Preguntas_y_Dudas.md` **en tiempo real** cada vez que alguien haga una pregunta.
+**💡 Tip**: Actualiza [05-Preguntas_y_Dudas.md](05-Preguntas_y_Dudas.md) **en tiempo real** cada vez que alguien haga una pregunta.
 
-**📋 Referencia**: Las Historias de Usuario ya están redactadas en `Practica_Financiera/03-Requerimientos_SOLUCION.md`. Úsalas como base para crear las tarjetas en Trello.
+**📋 Referencia**: Las Historias de Usuario ya están redactadas en [Practica_Financiera/03-Requerimientos_SOLUCION.md](../Practica_Financiera/03-Requerimientos_SOLUCION.md). Úsalas como base para crear las tarjetas en Trello.
 
 ---
 
@@ -131,8 +131,8 @@ SEMANA 4: Testing y Cierre
 
 | Archivo | Momento | Responsable | Qué Documentar |
 |---------|---------|-------------|----------------|
-| `06-Investigaciones.md` | Al evaluar alternativas técnicas | Consultant + Admin | - Opciones evaluadas (A vs B)<br>- Documentación consultada<br>- Pruebas realizadas<br>- Decisión final y justificación |
-| `02-Salesforce_Consultant.md` | Después de investigar | Salesforce Consultant | - Soluciones propuestas para cada HU<br>- Alternativas evaluadas<br>- Votaciones del equipo<br>- Story Points asignados<br>- Tabla resumen de decisiones |
+| [06-Investigaciones.md](06-Investigaciones.md) | Al evaluar alternativas técnicas | Consultant + Admin | - Opciones evaluadas (A vs B)<br>- Documentación consultada<br>- Pruebas realizadas<br>- Decisión final y justificación |
+| [02-Salesforce_Consultant.md](02-Salesforce_Consultant.md) | Después de investigar | Salesforce Consultant | - Soluciones propuestas para cada HU<br>- Alternativas evaluadas<br>- Votaciones del equipo<br>- Story Points asignados<br>- Tabla resumen de decisiones |
 | `07-SPRINT_1.md` | Diariamente (15 min) | Scrum Master | - Daily Standups (¿Qué hice? ¿Qué haré? ¿Impedimentos?) |
 
 **💡 Tip**: Documenta las investigaciones **ANTES** de empezar a desarrollar. Esto justifica tus decisiones técnicas.
@@ -144,7 +144,7 @@ SEMANA 4: Testing y Cierre
 | Archivo/Herramienta | Momento | Responsable | Qué Documentar |
 |---------------------|---------|-------------|----------------|
 | **Trello** | Al empezar cada HU | DEV Admins | - Mover tarjeta de "To Do" a "In Progress"<br>- Asignarse la tarjeta<br>- Actualizar comentarios con progreso |
-| `03-Salesforce_Admin.md` | Al implementar cada HU | Salesforce Admin | - Configuración paso a paso<br>- Campos creados<br>- Flows/Validation Rules<br>- Page Layouts modificados<br>- Screenshots de configuración<br>- Notas para futuros admins |
+| [03-Salesforce_Admin.md](03-Salesforce_Admin.md) | Al implementar cada HU | Salesforce Admin | - Configuración paso a paso<br>- Campos creados<br>- Flows/Validation Rules<br>- Page Layouts modificados<br>- Screenshots de configuración<br>- Notas para futuros admins |
 | **Trello** | Al terminar desarrollo | DEV Admins | - Mover tarjeta a "Testing"<br>- Agregar comentario: "Listo para QA" |
 | `07-SPRINT_1.md` | Diariamente | Scrum Master | - Daily Standups (actualizar progreso) |
 
@@ -157,12 +157,12 @@ SEMANA 4: Testing y Cierre
 | Archivo/Herramienta | Momento | Responsable | Qué Documentar |
 |---------------------|---------|-------------|----------------|
 | **Trello** | Al empezar testing | QA Admins | - Asignarse la tarjeta<br>- Agregar comentario: "Iniciando testing" |
-| `04-Tester_QA.md` | Al ejecutar cada test case | Tester QA | - Test cases con pasos detallados<br>- Resultados (PASS/FAIL)<br>- Screenshots de evidencia<br>- Bugs encontrados<br>- Estadísticas finales |
+| [04-Tester_QA.md](04-Tester_QA.md) | Al ejecutar cada test case | Tester QA | - Test cases con pasos detallados<br>- Resultados (PASS/FAIL)<br>- Screenshots de evidencia<br>- Bugs encontrados<br>- Estadísticas finales |
 | **Trello** | Si test PASS | QA Admins | - Marcar checklist items como completados<br>- Mover tarjeta a "QA Approved" |
 | **Trello** | Si test FAIL | QA Admins | - Mover tarjeta a "Blocked"<br>- Agregar etiqueta roja "Bug"<br>- Comentar qué falló<br>- Notificar a DEV Admins |
-| `12-Ambiente_QA.md` | Durante testing | Tester QA | - Registro de testing (fecha, HU, resultado)<br>- Bugs reportados |
+| [12-Ambiente_QA.md](12-Ambiente_QA.md) | Durante testing | Tester QA | - Registro de testing (fecha, HU, resultado)<br>- Bugs reportados |
 | **Trello** | Después de deployment a PROD | PROD Admins | - Mover tarjeta a "Done"<br>- Agregar comentario: "Deployed to PROD" |
-| `14-DevOPS.md` | Al hacer deployment | Admin | - Change Sets creados<br>- Deployment logs<br>- Problemas encontrados |
+| [14-DevOPS.md](14-DevOPS.md) | Al hacer deployment | Admin | - Change Sets creados<br>- Deployment logs<br>- Problemas encontrados |
 | `07-SPRINT_1.md` | Al final del sprint | Scrum Master | - Sprint Review (demo, feedback)<br>- Retrospective (Start, Stop, Continue)<br>- Métricas (burndown, velocity) |
 
 ---

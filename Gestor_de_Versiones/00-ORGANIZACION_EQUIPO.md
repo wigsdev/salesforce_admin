@@ -18,8 +18,8 @@
 
 **Tareas**:
 - Implementar las 3 HU en DEV
-- Documentar en `03-Salesforce_Admin.md`
-- Actualizar `11-Ambiente_DEV.md`
+- Documentar en [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
+- Actualizar [11-Ambiente_DEV.md](11-Ambiente_DEV.md)
 
 ---
 
@@ -31,8 +31,8 @@
 
 **Tareas**:
 - Ejecutar test cases
-- Documentar en `04-Tester_QA.md`
-- Actualizar `12-Ambiente_QA.md`
+- Documentar en [04-Tester_QA.md](04-Tester_QA.md)
+- Actualizar [12-Ambiente_QA.md](12-Ambiente_QA.md)
 - Gestionar datos de prueba
 
 ---
@@ -45,8 +45,8 @@
 
 **Tareas**:
 - Gestionar deployments DEV → QA → PROD
-- Documentar en `14-DevOPS.md`
-- Actualizar `13-Ambiente_PROD.md`
+- Documentar en [14-DevOPS.md](14-DevOPS.md)
+- Actualizar [13-Ambiente_PROD.md](13-Ambiente_PROD.md)
 - Preparar demo final
 
 ---
@@ -61,8 +61,8 @@
 **Tareas**:
 - Analizar requerimientos del cliente
 - Traducir a términos Salesforce
-- Documentar en `01-Business_Analyst.md`
-- Gestionar `05-Preguntas_y_Dudas.md`
+- Documentar en [01-Business_Analyst.md](01-Business_Analyst.md)
+- Gestionar [05-Preguntas_y_Dudas.md](05-Preguntas_y_Dudas.md)
 
 ---
 
@@ -74,8 +74,8 @@
 **Tareas**:
 - Evaluar alternativas técnicas
 - Investigar soluciones
-- Documentar en `02-Salesforce_Consultant.md`
-- Documentar en `06-Investigaciones.md`
+- Documentar en [02-Salesforce_Consultant.md](02-Salesforce_Consultant.md)
+- Documentar en [06-Investigaciones.md](06-Investigaciones.md)
 
 ---
 
@@ -86,10 +86,10 @@
 
 **Tareas**:
 - Facilitar ceremonias Agile
-- Documentar en `07-SPRINT_1.md`
+- Documentar en [07-SPRINT_1.md](07-SPRINT_1.md)
 - Coordinar Daily Standups
 - Gestionar Trello
-- Preparar `10-DEMO_FINAL.md`
+- Preparar [10-DEMO_FINAL.md](10-DEMO_FINAL.md)
 
 ---
 
@@ -97,20 +97,20 @@
 
 | Archivo | Responsable Principal | Apoyo |
 |---------|----------------------|-------|
-| `01-Business_Analyst.md` | Estudiante 7 (BA) | Todos |
-| `02-Salesforce_Consultant.md` | Estudiante 8 (Consultant) | Estudiantes 1-2 (DEV Admins) |
-| `03-Salesforce_Admin.md` | Estudiantes 1-2 (DEV Admins) | - |
-| `04-Tester_QA.md` | Estudiantes 3-4 (QA Admins) | - |
-| `05-Preguntas_y_Dudas.md` | Estudiante 7 (BA) | Todos (agregan preguntas) |
-| `06-Investigaciones.md` | Estudiante 8 (Consultant) | Estudiantes 1-2 (DEV Admins) |
-| `07-SPRINT_1.md` | Estudiante 9 (Scrum Master) | - |
-| `08-SPRINT_2.md` | Estudiante 9 (Scrum Master) | - |
-| `09-SPRINT_3.md` | Estudiante 9 (Scrum Master) | - |
-| `10-DEMO_FINAL.md` | Estudiante 9 (Scrum Master) | Todos |
-| `11-Ambiente_DEV.md` | Estudiantes 1-2 (DEV Admins) | - |
-| `12-Ambiente_QA.md` | Estudiantes 3-4 (QA Admins) | - |
-| `13-Ambiente_PROD.md` | Estudiantes 5-6 (PROD Admins) | - |
-| `14-DevOPS.md` | Estudiantes 5-6 (PROD Admins) | - |
+| [01-Business_Analyst.md](01-Business_Analyst.md) | Estudiante 7 (BA) | Todos |
+| [02-Salesforce_Consultant.md](02-Salesforce_Consultant.md) | Estudiante 8 (Consultant) | Estudiantes 1-2 (DEV Admins) |
+| [03-Salesforce_Admin.md](03-Salesforce_Admin.md) | Estudiantes 1-2 (DEV Admins) | - |
+| [04-Tester_QA.md](04-Tester_QA.md) | Estudiantes 3-4 (QA Admins) | - |
+| [05-Preguntas_y_Dudas.md](05-Preguntas_y_Dudas.md) | Estudiante 7 (BA) | Todos (agregan preguntas) |
+| [06-Investigaciones.md](06-Investigaciones.md) | Estudiante 8 (Consultant) | Estudiantes 1-2 (DEV Admins) |
+| [07-SPRINT_1.md](07-SPRINT_1.md) | Estudiante 9 (Scrum Master) | - |
+| [08-SPRINT_2.md](08-SPRINT_2.md) | Estudiante 9 (Scrum Master) | - |
+| [09-SPRINT_3.md](09-SPRINT_3.md) | Estudiante 9 (Scrum Master) | - |
+| [10-DEMO_FINAL.md](10-DEMO_FINAL.md) | Estudiante 9 (Scrum Master) | Todos |
+| [11-Ambiente_DEV.md](11-Ambiente_DEV.md) | Estudiantes 1-2 (DEV Admins) | - |
+| [12-Ambiente_QA.md](12-Ambiente_QA.md) | Estudiantes 3-4 (QA Admins) | - |
+| [13-Ambiente_PROD.md](13-Ambiente_PROD.md) | Estudiantes 5-6 (PROD Admins) | - |
+| [14-DevOPS.md](14-DevOPS.md) | Estudiantes 5-6 (PROD Admins) | - |
 
 ---
 
@@ -160,7 +160,7 @@
 
 ### **Para Admins de DEV (Estudiantes 1-2)**
 
-**Archivo**: `11-Ambiente_DEV.md`
+**Archivo**: [11-Ambiente_DEV.md](11-Ambiente_DEV.md)
 
 ```markdown
 ### Usuario Admin 1
@@ -184,7 +184,7 @@
 
 ### **Para Admins de QA (Estudiantes 3-4)**
 
-**Archivo**: `12-Ambiente_QA.md`
+**Archivo**: [12-Ambiente_QA.md](12-Ambiente_QA.md)
 
 ```markdown
 ### Usuario Admin 1
@@ -228,7 +228,7 @@
 
 ### **Para Admins de PROD (Estudiantes 5-6)**
 
-**Archivo**: `13-Ambiente_PROD.md`
+**Archivo**: [13-Ambiente_PROD.md](13-Ambiente_PROD.md)
 
 ```markdown
 ### Usuario Admin 1
@@ -280,18 +280,18 @@
 - [ ] **Estudiantes 1-2**: Crear Trailhead Playground para DEV
   - [ ] Nombre: "Equipo 3 - DEV"
   - [ ] Crear 2 usuarios Admin
-  - [ ] Documentar en `11-Ambiente_DEV.md`
+  - [ ] Documentar en [11-Ambiente_DEV.md](11-Ambiente_DEV.md)
 
 - [ ] **Estudiantes 3-4**: Crear Trailhead Playground para QA
   - [ ] Nombre: "Equipo 3 - QA"
   - [ ] Crear 2 usuarios Admin
   - [ ] Crear 3 usuarios de testing
-  - [ ] Documentar en `12-Ambiente_QA.md`
+  - [ ] Documentar en [12-Ambiente_QA.md](12-Ambiente_QA.md)
 
 - [ ] **Estudiantes 5-6**: Identificar Playground para PROD
   - [ ] Nombre: "Equipo 3 - PROD"
   - [ ] Crear 2 usuarios Admin
-  - [ ] Documentar en `13-Ambiente_PROD.md`
+  - [ ] Documentar en [13-Ambiente_PROD.md](13-Ambiente_PROD.md)
 
 ### **Paso 2: Compartir Credenciales**
 
