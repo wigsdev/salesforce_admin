@@ -1,0 +1,162 @@
+Salesforce
+Admin +
+Agent Force
+
+daily
+¿Cómo venimos?
+¿Algo nos bloquea?
+¿Cómo estamos?
+
+
+
+
+Guia: Consultar si Saben que es un administrador de Salesforce, si habian escuchado antes de rol
+
+
+
+
+Estos SB NO SON OBLIGATORIOS - SON OPCIONALES
+
+¡Manos a la obra!
+SB - Guia - Fórmulas
+Avanzamos con los trails.
+
+
+
+SUPERBADGE
+Guia: Consultar si Saben que es un administrador de Salesforce, si habian escuchado antes de rol
+
+
+
+Superbadges: La Prueba de Fuego del Administrador
+¿Qué es un Superbadge?
+No es un módulo normal. Es una Credencial basada en Habilidades.
+Adiós a las instrucciones: Aquí no existe el "Paso 1, haz clic aquí". Salesforce te da un Caso de Negocio (un problema real de una empresa ficticia) y tú debes decidir cómo resolverlo.
+Evaluación Automática: Un "robot" entra a tu organización de Salesforce y verifica si la configuración funciona correctamente según los requisitos del cliente.
+
+¿Por qué son vitales para tu carrera?
+El Puente Teórico-Práctico: Los módulos te enseñan a usar el martillo; los Superbadges te piden construir una casa.
+Resume Booster (CV): Los reclutadores saben que un Superbadge no se consigue leyendo, se consigue haciendo. Valen mucho más que 100 badges normales.
+Prerrequisito de Certificación: Para algunas certificaciones avanzadas, debes tener ciertos Superbadges completados.
+
+¿Por qué son vitales para tu carrera?
+El Puente Teórico-Práctico: Los módulos te enseñan a usar el martillo; los Superbadges te piden construir una casa.
+Resume Booster (CV): Los reclutadores saben que un Superbadge no se consigue leyendo, se consigue haciendo. Valen mucho más que 100 badges normales.
+Prerrequisito de Certificación: Para algunas certificaciones avanzadas, debes tener ciertos Superbadges completados.
+
+LINK
+
+Formulas & Validations: 
+El Cerebro Silencioso de Salesforce
+El Concepto: Salesforce no es solo una base de datos estática; es un motor lógico.
+La Meta: Dejar de pedirle al usuario que calcule cosas mentalmente y dejar de permitir que ingresen datos "basura".
+Duración Estimada del Reto: 1.5 - 2 horas.
+Dificultad: Media (Requiere pensamiento abstracto).
+¿Qué habilidades van a demostrar?
+Automatización de Cálculos: Crear campos que se calculan solos (Fórmulas) basándose en fechas, números y lógica condicional.
+Integridad de Datos: Diseñar Reglas de Validación que impidan guardar registros si no cumplen los estándares del negocio.
+Lógica Condicional Compleja: Uso de funciones anidadas (IF, AND, OR, CASE) para resolver problemas reales.
+Manejo de Errores: Evitar los temidos errores de "Dividir por cero" o valores nulos.
+
+ Herramientas Lógicas Indispensables
+Sintaxis de Fórmulas:
+Matemáticas: +, -, *, /.
+Lógica: AND(), OR(), NOT(), IF().
+Funciones de Fecha y Tiempo:
+TODAY(), NOW(), DATE(), YEAR(). Vitales para calcular antigüedades o vencimientos.
+Manejo de Texto:
+TEXT() vs VALUE(). Recuerden: No se puede sumar texto.
+La Regla de Oro de la Validación:
+La fórmula define el ERROR, no el éxito.
+Si la fórmula da TRUE → Bloquea al usuario.
+
+El Escenario: "Ursa Major Solar" (u otro ficticio)
+El Cliente: Una empresa que está creciendo y perdiendo el control de sus datos.
+Los Dolores (Pain Points):
+Datos incompletos en las Oportunidades (Falta información de envío).
+Descuentos locos aplicados por vendedores sin autorización.
+Necesidad de categorizar clientes automáticamente sin intervención manual.
+Tu Solución:
+Campos de Fórmula para calcular descuentos y totales automáticamente.
+Validaciones para prohibir descuentos > 20% sin aprobación.
+
+¿Por qué saber esto?
+Cálculo de Comisiones: "Si la venta es > 10k, comisión del 10%; si no, del 5%". (Fórmulas IF anidadas).
+SLA (Acuerdos de Nivel de Servicio): "El campo 'Prioridad' debe ser obligatorio si el cliente es VIP". (Validación).
+Data Cleansing para IA: La Inteligencia Artificial falla con datos sucios. Las validaciones son el primer filtro para asegurar que la IA reciba datos de calidad.
+Reportes Ejecutivos: Los jefes quieren ver métricas calculadas (Márgenes, ROIs) que no existen en los campos estándar.
+
+Consejos de Supervivencia para el Superbadge
+El Editor Avanzado es tu amigo: 
+Nunca usen el editor simple. 
+Usen siempre "Advanced Formula" para tener acceso a la lista de funciones y al botón Check Syntax.
+Cuidado con los NULOS:
+Usen BLANKVALUE(campo, 0) en cálculos matemáticos. 
+Si suman 5 + null, Salesforce puede dar error o vacío.
+Paréntesis Balanceados: 
+El 90% de los errores son paréntesis que faltan. 
+Escriban la fórmula con espacios para ver dónde abre y cierra cada uno.
+API Names vs Labels: ¡Cuidado! Las fórmulas usan el API Name (Descuento__c), no la Etiqueta ("Descuento"). Un error tipográfico aquí y el reto falla.
+
+Análisis SB
+Guía
+Paréntesis: En el Reto 1, al sumar los IF, cuidado con los paréntesis. Es IF(..., 1, 0) + IF(..., 1, 0). No metas un IF dentro de otro para la suma.
+Imágenes: Si la fórmula de imagen no carga, verifica que la URL de la imagen empiece con una barra / (ej. /img/samples/...).
+Check Syntax: En el Reto 2, usa siempre el botón "Check Syntax" antes de guardar la regla de validación.
+Row-Level vs Summary: En el Reto 3, asegúrate de elegir Row-Level Formula (Calcula línea por línea) y no Summary Formula (Calcula totales), a menos que el requisito pida un porcentaje del total.
+
+Después de completar el Superbadge
+es OBLIGATORIO llenar el formulario.
+1.
+Cargar la imágen del SuperBadge
+2.
+Análisis de lo aprendido
+Llenar formulario de entrega
+SuperBadge
+SPRINT 1
+Fecha Límite: 23 de Enero
+
+¡Manos a la obra!
+SB - Guia
+Avanzamos con los trails.
+
+
+
+LINK
+
+La Identidad
+MFA (Multi-Factor Authentication): El objetivo principal es aprender a forzar y configurar que los usuarios prueben quiénes son, no solo con una contraseña, sino con un segundo factor. Entenderán la diferencia entre usar MFA para todos versus usarlo para usuarios con permisos privilegiados.
+Higiene de contraseñas: Aprenderán a configurar la complejidad, la caducidad y qué sucede cuando alguien falla sus intentos de acceso.
+Personalización de Dominio: No es solo estético. Validarán cómo 'My Domain' afecta las URL de inicio de sesión y cómo es un requisito previo para características avanzadas.
+Experiencia de Usuario vs. Seguridad: El objetivo final es aprender a equilibrar la seguridad con la comodidad, implementando herramientas como Lightning Login para que el acceso sea seguro pero rápido."
+
+Análisis SB
+Guía
+Dominio de Perfiles y Permission Sets.
+Comprensión de la diferencia entre Autenticación (Quién eres) y Autorización (Qué puedes hacer).
+Familiaridad con la configuración de Sesiones.
+Badge recomendado: User Authentication (Módulo).
+CONOCIMIENTOS NECESARIOS
+Nivel de Dificultad
+Clasificación: Intermedio - Avanzado
+El Reto: No hay instrucciones "paso a paso".
+El Enfoque: Casos de uso de negocio.
+Trampas comunes: Superposición de permisos y bloqueo accidental de usuarios (incluso del administrador).
+
+PROYECTO REAL
+¿Por qué esto importa en la vida real?
+Cumplimiento de Normativas (Auditorías).
+Protección contra ataques comunes (Phishing/Credential Stuffing).
+Gestión de Crisis (Despidos o pérdida de equipos).
+Resultado: Convertirse en un "Gatekeeper" confiable.
+
+Después de completar el Superbadge
+es OBLIGATORIO llenar el formulario.
+1.
+Cargar la imágen del SuperBadge
+2.
+Análisis de lo aprendido
+Llenar formulario de entrega
+SuperBadge
+SPRINT 1
+Fecha Límite: 23 de Enero

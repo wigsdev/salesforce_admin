@@ -1,0 +1,149 @@
+Salesforce
+Admin +
+Agent Force
+
+daily
+Poner una frase MOTIVADORA
+para el día de hoy.
+
+
+
+
+Reemplazar imagen con foto propia seleccionando la forma y usando REEMPLAZAR IMAGEN
+
+Skills Técnicas (El "Qué" haces)
+Gestión de Usuarios y Seguridad: El pan de cada día. Crear usuarios, resetear contraseñas, asignar Perfiles y Roles sin abrir brechas de seguridad.
+Gestión de Datos (Data Management): Limpieza, carga masiva (Data Loader/Import Wizard) y prevención de duplicados. Saber que "datos sucios = reportes inútiles".
+Automatización Básica (Flows): Capacidad de crear flujos sencillos (Record-Triggered) para reemplazar tareas manuales repetitivas.
+Reportes y Dashboards: Crear visibilidad para los jefes. Saber traducir preguntas de negocio ("¿Cuánto vendimos?") en gráficos.
+AgentForce: puedas familiarizarte con la configuración de agentes dentro de Salesforce.
+Reemplazar imagen con foto propia seleccionando la forma y usando REEMPLAZAR IMAGEN
+
+Skills Blandas (El "Cómo" lo haces)
+Comunicación Traducida: Habilidad para hablar con un vendedor sin usar jerga técnica ("Objeto", "API"). Explicar el por qué, no solo el cómo.
+Resolución de Problemas (Google-Fu): No saberlo todo, pero saber cómo buscarlo. Diagnosticar errores antes de escalar.
+Mentalidad de Aprendiz (Learner's Mindset): Salesforce cambia 3 veces al año. La curiosidad vale más que la memoria.
+Atención al Detalle: Probar antes de desplegar. Un pequeño error en un Flow puede detener a toda la empresa.
+Reemplazar imagen con foto propia seleccionando la forma y usando REEMPLAZAR IMAGEN
+
+COLABORACIÓN
+Aprender con y de otras personas
+AUSENCIAS
+Seguir con la planilla y actividades 
+MIC o CHAT
+Comunicación
+ERRORES
+Atrasados
+JUEVES
+PREGUNTAS
+Al final de la clase Teórica
+Para una buena clase…
+AUTONOMÍA
+Utilizar las herramientas
+
+Calidad de Datos y Gestión de Duplicados
+vamos a ver la segunda parte de modelado de datos… 
+
+
+
+¿Por qué nos importa esto?
+La Realidad de los Datos
+Concepto clave: Salesforce es tan bueno como los datos que tiene. Si entra "basura" (datos erróneos), salen reportes "basura".
+El problema: Los duplicados y los datos incompletos no son solo molestos; cuestan dinero y tiempo a los equipos de ventas.
+Tu rol como Admin: No es solo borrar datos, es prevenir que entren mal. Para eso tenemos dos herramientas principales: Gestión de Duplicados y Validaciones.
+ imaginen que llaman a un cliente y le dicen 'Hola Sr. Gómez'. Y a los 10 minutos lo llama su compañero y le dice lo mismo. El cliente piensa: 'Esta empresa es un desastre, no se hablan entre ellos'.
+La Calidad de Datos no es un tema técnico, es un tema de Reputación. Como Admins, somos los guardianes de esa reputación. Si la base está sucia, los vendedores dejarán de usar Salesforce porque 'no confían en el sistema'.
+
+
+¿Cómo medimos si un dato es "bueno"?
+No basta con decir "está mal". 
+Debemos identificar el tipo de error según estas 6 dimensiones (esto suele ser pregunta de examen):
+Antigüedad (Age): ¿El dato es de hace 5 años o de ayer?
+Integridad (Completeness): ¿Faltan campos clave como el email o la industria? (Espacios en blanco).
+Precisión (Accuracy): ¿El dato es real? (¿El email rebota?).
+Coherencia (Consistency): ¿Escriben "California", "CA" y "Cali"? (Falta de estandarización).
+Duplicación: ¿Tengo al mismo cliente 3 veces?
+Uso: ¿Alguien usa estos datos o solo ocupan espacio?
+Aquí es donde se confunden en el examen. Piensen en esto como un aeropuerto:
+La Matching Rule es el escáner de rayos X. Dice: '¡Atención! Esta maleta se parece a esta otra'. Solo identifica.
+La Duplicate Rule es el guardia de seguridad. El escáner avisa, pero el guardia decide: ¿Te dejo pasar con advertencia? ¿O te bloqueo la entrada y te mando a casa?
+Ustedes configuran ambas cosas por separado. Primero definen la coincidencia, luego definen el castigo
+
+La Caja de Herramientas del Admin
+Una vez identificado el problema, usamos estas herramientas nativas de Salesforce para prevenir y corregir:
+Para evitar vacíos (Integridad): Campos obligatorios (Required Fields).
+Para evitar formatos locos (Coherencia): Listas de selección (Picklists) y Reglas de Validación (Validation Rules). Ejemplo: Que el teléfono tenga el formato correcto.
+Para evitar repeticiones (Duplicación): Duplicate Management (Reglas de coincidencia y duplicados).
+Para automatizar: Flujos (Flows) para llenar datos automáticamente.
+¿Qué hacemos si ya tenemos 1000 duplicados? No se borran uno por uno.
+Usamos la herramienta de Merge (Fusionar). Salesforce les permite tomar 3 registros duplicados y convertirlos en uno solo, eligiendo el mejor teléfono de uno, el mejor email del otro y conservando toda la historia (casos, ventas) de los tres.
+Nunca eliminen un duplicado sin revisar qué información histórica tiene.
+
+Gestión de Leads y Oportunidades
+vamos a ver la segunda parte de modelado de datos… 
+
+
+
+El Embudo de Ventas: 
+De Candidato (Lead) a Negocio Cerrado
+Lead (Prospecto): Es una semilla. No sabemos si crecerá. Es una tarjeta de visita que te dieron en una feria, un email de la web. Son datos "sucios" o sin cualificar.
+Opportunity (Oportunidad): Es una planta que ya brotó. Ya sabemos que tienen presupuesto y necesidad. Aquí empieza la negociación real.
+El objetivo: El trabajo del vendedor es mover al Lead hacia la conversión. No queremos "basura" en el pipeline de oportunidades, por eso filtramos primero en Leads.
+el error #1 es tratar a todo el mundo como 'Cliente'.
+Imaginen que van a una feria y recolectan 100 tarjetas. ¿Esos 100 van a comprar? No. Esos son Leads.
+Solo cuando llaman y verifican que tienen presupuesto y necesidad, los convierten en Contactos.
+Si mezclan todo, sus reportes de 'Clientes Activos' serán falsos. El Lead es el 'quizás', el Contacto es el 'confirmado'.
+
+El Momento Mágico: La Conversión 
+(1 se vuelve 3)
+Cuando un Lead se califica, ocurre una transformación única en la base de datos. El registro del Lead deja de ser editable y crea automáticamente tres registros nuevos vinculados:
+Cuenta (Account): La Empresa (¿Para quién trabaja?).
+Contacto (Contact): La Persona (¿Con quién hablo?).
+Oportunidad (Opportunity): El Negocio Potencial (¿Cuánto dinero hay en juego?).
+Nota Técnica: Los campos personalizados del Lead no pasan solos; requieren un Mapeo de Campos (Map Lead Fields) previo.
+"Presten atención aquí: La Conversión es irreversible.
+Salesforce toma los datos del Lead y los reparte. El nombre va al Contacto, la empresa va a la Cuenta, y el interés de compra va a la Oportunidad.
+Como Admins, su trabajo es asegurar que si crearon un campo 'Preferencia de Color' en el Lead, ese dato viaje a la Oportunidad. Si no configuran el Field Mapping, ese dato se pierde en el limbo al convertir."
+
+
+Oportunidades y el "Sales Path"
+Definición: Es el objeto donde ocurre la negociación. Aquí vive el dinero (Amount) y la fecha de cierre (Close Date).
+Probabilidad y Etapas: Cada etapa del proceso (ej. "Análisis", "Negociación") tiene un % de Probabilidad asociado. Esto alimenta el Forecast (Pronóstico).
+Guidance for Success (Guía para el Éxito): En Lightning, podemos configurar consejos y campos clave que aparecen en pantalla según la etapa en la que esté la venta, guiando al vendedor junior.
+¿Ven esa barra verde arriba en las Oportunidades? Eso es el Path.
+No es solo un dibujo. Ustedes pueden configurar que cuando el vendedor llegue a la etapa 'Negociación', aparezca un cartel que diga: 'Recuerda pedir el RUT de la empresa y no ofrecer más del 10% de descuento'.
+Es como tener al gerente de ventas susurrándole al oído al vendedor qué hacer en cada paso."
+
+
+
+¡Manos a la obra!
+Avanzamos con los trails.
+
+
+
+LEER CON ATENCIÓN
+Las prácticas previas al challenge son importantes para entender el challenge
+
+NO DEJARLAS PASAR
+ATENCIÓN
+ERRORES
+Agotar herramientas
+Consultar con su grupo
+Hacer una nueva ORG
+Recién consultar a los profesores
+CONSULTAS
+Haber agotado todas las instancias de herramientas
+Contexto
+SB-Jueves
+
+PAIR PROGRAMING
+Compartir pantalla
+Hablar sobre el proceso del Trailhead
+Ir rotando
+No se puede estar en silencio
+El trabajo individual es fuera de la cursada
+
+
+Calidad de Datos
+Jerarquía
+LINK

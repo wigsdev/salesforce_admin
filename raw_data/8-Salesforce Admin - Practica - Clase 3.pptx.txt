@@ -1,0 +1,339 @@
+Salesforce
+Admin +
+Agent Force
+
+EQUIPOS
+
+EQUIPOS
+EQUIPO 1 
+Sulca Jota, Delia
+mattos matos, robert christiam
+Guerrero Huamán, Nicole Brigitte
+Fernandez, Andrea
+Plasencia Luis, Mayra Johana
+Zapata Zapata, Eddy Joel
+Atencio Caldera, Angel Alberto
+Espinoza Aguedo, Lady
+SUDARIO MANRIQUE, JEAN CARLOS ALBERTO
+Reategui Siancas, Rosa Maria Gianella
+EQUIPO 2
+Maravi Iporre, Cinthia Paola
+RUIZ VICTORIO, PAOLA ROSMERY
+Guevara Escobedo, Mathews
+Cerna, Yeisim
+Loza Sanchez, Gianmarco Alejandro
+Huamanyalli Jorge, Ronaldo
+Aguilar Yanayaco, Luz Maribel
+Quíspe Pérez, Benjamin Williams
+ASMAT NUNJA, JEAN CARLO
+Suarez Alvarez, Juliana
+
+EQUIPOS
+EQUIPO 3 
+Siguas, Brissa
+Pomayay Sobero, Joaquin Hernan
+ORTEGA VIDAL, ALEXANDER
+Vega Simón, Irayda Yesenia
+Contreras Sanchez, Emilio Martin
+Solis Perez, Cristhian Bryan 
+Bravo Vilchez, Astrid Carolina
+GULCOHIA SANCHEZ, WILMER
+INUMA TORREJON, JOSELIN
+Canahuire Argandoña, Jakeline Nathaly
+
+EQUIPO 4
+Rodriguez Ore, Laura Valentina
+VERGARA GOICOCHEA, ANGELICA MARIA
+Palomino Rugel, Donna Eilyn
+Cornejo Chávez, María Antonieta
+Sánchez Asión, Karla Maria
+Cobba Ariza, Stefanny Brisseth Clara
+Salvador Zambrano, Junior Andre
+ESCOBEDO CARHUAMACA, RUTH SAYURI
+Huamani, Elvis
+Arauco Orellana, Bonnie
+
+
+EQUIPOS
+EQUIPO 5 
+Anco Bustillos, Katya Geraldine
+Huánuco Medina, Patzy Lita
+Vallejo Silvera, Micaela Alexandra
+Saavedra Angeles, Julisa Vicky
+Mimbela Arenaza, Michael
+FLORES ALDERETE, MARICRUZ DORIS
+LEON CHURQUIPA, LUZ CARINA
+Cisneros Quezada, Jhoel Paul
+Arauco Orellana, Bonnie
+Alarcon Gala, Víctor Hugo
+EQUIPO 6
+Alva Palomino, Juan Angel
+Soto Colchado, Wesdy Estefani
+Cabanillas Salas, Max Ferrer
+Triviño Monroy, Marysol
+Paredes Quispe, Lindbergh
+Cifuentes Leon, Mao Antonio
+Quispe Aroste, Guillermo
+Ponce, Grecia
+Boyer Pérez, Anais Elena
+Vásquez Jiménez, Marjorie Alexandra
+
+
+01
+02
+03
+04
+EQUIPOS
+Seguimos con la teoría que se aplica a la práctica.
+AUSENCIAS
+ORGANIZACIÓN
+NOMBRE
+HERRAMIENTAS
+Que nos ayuden a la gestión rápida: IA - YouTube -  Foros, Etc
+Mantener informado al equipo
+Además de Equipo y el número tendrán que ponerse un nombre de 1 o 2 palabras
+Lo que van a ver las primeras 4 clases a modo de título. 
+
+
+
+
+TRELLO
+ Práctica
+
+Loguearse
+Crear un tablero
+TRELLO Click aquí        link 
+1
+2
+
+TABLERO
+1
+Elegir el diseño
+
+Ponerlo público y agregar a la Mentora y Facilitador en rol de edición
+Diseñar las columnas
+
+Columnas
+2
+Las Columnas Obligatorias (Flujo de Izquierda a Derecha):
+Historias de Usuarios (Backlog): Todo lo que podríamos hacer. El "Deseo".
+Por Hacer (Sprint Backlog): Lo que nos comprometemos a hacer en este Sprint.
+En Progreso: Lo que estoy construyendo AHORA (Límite: 1 o 2 por persona).
+SF Desarrollo: Configuración en Sandbox (Dev Org).
+SF QA: Pruebas internas (Tú o un compañero verifican que funcione).
+Aprobación TL (Team Lead): Revisión de calidad del líder.
+SF Producción: Despliegue final (Change Sets / DevOps).
+Terminado: ¡Éxito! Criterios de aceptación cumplidos.
+el movimiento es siempre hacia la derecha.
+Regla de oro: Nunca muevas una tarjeta hacia atrás. Si falla en QA, se crea un "Bug" nuevo o se marca con una etiqueta roja de "Bloqueado", pero intentamos solucionar hacia adelante.
+WIP (Work In Progress): Insiste en que no tengan 10 tarjetas en "En Progreso". Solo 1 a la vez. "Terminar es mejor que empezar".
+
+Historias de Usuario
+3
+Cómo escribir una Card perfecta (User Story)
+(Formato Estándar):
+[ID] - Como [Perfil], quiero [Funcionalidad], para [Beneficio]
+Ejemplo: US-001 - Como Vendedor, quiero ver mis comisiones, para saber cuánto gané.
+el movimiento es siempre hacia la derecha.
+Regla de oro: Nunca muevas una tarjeta hacia atrás. Si falla en QA, se crea un "Bug" nuevo o se marca con una etiqueta roja de "Bloqueado", pero intentamos solucionar hacia adelante.
+WIP (Work In Progress): Insiste en que no tengan 10 tarjetas en "En Progreso". Solo 1 a la vez. "Terminar es mejor que empezar".
+
+EPICAS
+4
+Gestión de Épicas (Grandes Temas):
+En Trello no existen "Épicas" nativas.
+Solución: Usamos ETIQUETAS (Labels) de colores.
+🔴 Rojo = Seguridad / Permisos
+🔵 Azul = UI / Lightning Pages
+🟢 Verde = Automatización (Flows)
+el movimiento es siempre hacia la derecha.
+Regla de oro: Nunca muevas una tarjeta hacia atrás. Si falla en QA, se crea un "Bug" nuevo o se marca con una etiqueta roja de "Bloqueado", pero intentamos solucionar hacia adelante.
+WIP (Work In Progress): Insiste en que no tengan 10 tarjetas en "En Progreso". Solo 1 a la vez. "Terminar es mejor que empezar".
+
+Story Points
+5
+Duración y Esfuerzo (Story Points):
+Opción A (Power-Up): Activar "Custom Fields" y crear campo numérico "Puntos".
+Opción B (Truco Rápido): Poner el número entre paréntesis al inicio del título.
+Ejemplo: (3) US-001 - Como Vendedor... (Donde 3 es la dificultad/tiempo).
+el movimiento es siempre hacia la derecha.
+Regla de oro: Nunca muevas una tarjeta hacia atrás. Si falla en QA, se crea un "Bug" nuevo o se marca con una etiqueta roja de "Bloqueado", pero intentamos solucionar hacia adelante.
+WIP (Work In Progress): Insiste en que no tengan 10 tarjetas en "En Progreso". Solo 1 a la vez. "Terminar es mejor que empezar".
+
+SPRINTS
+6
+Organización de Sprints y "Hacks" de Productividad
+¿Cómo manejar 4 Sprints en un solo tablero?
+Usamos ETIQUETAS DE SPRINT (Gris o Negro).
+Etiqueta: Sprint 1, Sprint 2, Sprint 3, Sprint 4.
+Filtrado: Presiona la tecla F en el teclado y selecciona "Sprint 1" para ver solo lo actual.
+Definition of Done (DoD) - Checklist:
+Dentro de cada tarjeta, crea una Checklist llamada "DoD".
+Items: [ ] Criterios de aceptación cumplidos, [ ] Testeado en Sandbox, [ ] Documentado.
+Trucos de Teclado (Speed Mode):
+Barra Espaciadora: Te asigna la tarjeta a ti mismo (Self-assign).
+Q: Muestra solo mis tarjetas (filtro rápido).
+D: Pone fecha de vencimiento (Due Date).
+L: Abre el menú de etiquetas (Labels).
+el movimiento es siempre hacia la derecha.
+Regla de oro: Nunca muevas una tarjeta hacia atrás. Si falla en QA, se crea un "Bug" nuevo o se marca con una etiqueta roja de "Bloqueado", pero intentamos solucionar hacia adelante.
+WIP (Work In Progress): Insiste en que no tengan 10 tarjetas en "En Progreso". Solo 1 a la vez. "Terminar es mejor que empezar".
+
+HU
+Creación de Historias de usuario
+
+El Puente entre Negocio y Tecnología
+Hoy vamos a entender por qué fallan los proyectos. 
+No fallan por configuración, fallan por comunicación. 
+El cliente habla de 'dolores' y 'dinero', y Salesforce habla de 'Objetos' y 'Flows'. 
+Nuestro trabajo es ser el puente entre esos dos mundos. 
+Vamos a ver los roles que hacen esto posible.
+Hoy vamos a entender por qué fallan los proyectos. No fallan por código, fallan por comunicación. El cliente habla de 'dolores' y 'dinero', y Salesforce habla de 'Objetos' y 'Flows'. Nuestro trabajo es ser el puente entre esos dos mundos. Vamos a ver los roles que hacen esto posible.
+
+BA vs. Consultant  
+¿Quién hace qué?
+Business Analyst (BA): 
+El "Arquitecto". 
+Pregunta el QUÉ y el POR QUÉ. 
+Entiende el proceso de negocio.
+Salesforce Consultant: 
+El "Ingeniero". 
+Define el CÓMO. 
+Conoce la herramienta técnica.
+
+La Skill del Analista 
+ El Traductor
+Regla de Oro: 
+El cliente es dueño del Problema, ustedes son dueños de la Solución. No dejen que el cliente diseñe el sistema."
+
+El semáforo 
+¿Qué mirar antes de construir?
+
+De la idea al papel
+ La Historia de Usuario
+
+Criterios de Aceptación 
+ La Letra Chica
+
+PARA PENSAR
+
+Vamos ingresar para mostrarles cómo se crea una organización práctica y que todos puedan crear una.
+Indiquemos que investiguen la organización, que entren y revisen
+link: https://trailhead.salesforce.com/es/users/profiles/orgs
+Compartir pantalla para que vean como se hace el proceso
+
+DINÁMICA
+Requerimiento: El cliente quiere un Excel
+
+¿Cómo transformamos esto en una Historia de Usuario?
+Respuesta: 
+"Como analista, quiero exportar reportes de ventas, para trabajarlos offline".
+
+DINÁMICA
+Requerimiento: 📞 El Cliente dice:
+"El vendedor Juan renunció ayer. Quiero que entres y borres su usuario del sistema inmediatamente para que no robe datos."
+¿Cómo analizamos esto y hacemos una HU?
+🛑 El Problema (Análisis):
+En Salesforce no se pueden borrar usuarios (por integridad referencial histórica).
+Lo que el cliente quiere es seguridad y reasignación de trabajo.
+✅ La Traducción (Historia de Usuario):
+COMO Gerente de Ventas...
+QUIERO desactivar el acceso de usuarios que ya no trabajan y transferir sus cuentas pendientes a otro vendedor...
+PARA proteger la base de datos y asegurar que los clientes sigan siendo atendidos.
+
+DINÁMICA
+Requerimiento: 📞 El Cliente dice:
+"Estoy harto de que los vendedores carguen datos incompletos. Poné que el campo 'Celular' sea obligatorio. Que no puedan guardar nada si no ponen el número."
+¿Cómo analizamos esto y hacemos una HU?
+
+
+🛑 El Problema (Análisis):
+Si haces el campo obligatorio, cuando tengan un cliente que solo tiene Email o Teléfono Fijo, el vendedor pondrá "1111111" para saltar la regla (datos basura).
+Lo que el cliente quiere es contactabilidad, no necesariamente un celular específico.
+✅ La Traducción (Historia de Usuario):
+COMO Gerente de Marketing...
+QUIERO que el sistema valide que exista al menos un medio de contacto (Email O Celular) antes de guardar...
+PARA asegurar que podamos contactar al prospecto en el futuro sin trabar la carga de datos.
+
+DINÁMICA
+Requerimiento: 📞 El Cliente dice:
+"Quiero que me llegue un correo electrónico cada vez que un vendedor cambie la fecha de cierre de una venta. Quiero estar encima de ellos."
+¿Cómo analizamos esto y hacemos una HU?
+
+🛑 El Problema (Análisis):
+Si tienen 10 vendedores y cada uno mueve 5 fechas al día, el Gerente recibirá 50 emails diarios. Los marcará como Spam y dejará de leerlos a los dos días.
+Lo que el cliente quiere es auditoría y control, no spam.
+✅ La Traducción (Historia de Usuario):
+COMO Director Comercial...
+QUIERO activar el "History Tracking" (rastreo de auditoría) en el campo Fecha de Cierre y recibir un reporte resumen cada viernes...
+PARA visualizar qué vendedores están posponiendo ventas constantemente sin llenar mi bandeja de entrada.
+
+¡Manos a la obra!
+
+Vamos ingresar para mostrarles cómo se crea una organización práctica y que todos puedan crear una.
+Indiquemos que investiguen la organización, que entren y revisen
+link: https://trailhead.salesforce.com/es/users/profiles/orgs
+Compartir pantalla para que vean como se hace el proceso
+
+Crear el tablero para su equipo
+
+Analizar y crear Historias de Usuario
+Ejercicio
+SPRINT 1
+Diseñen a su gusto el tablero
+1.
+Ponerse un nombre como equipo
+Dividir los roles y si van a ser movibles durante los Sprints
+2.
+Agregar las columnas obligatorias
+3.
+Analizar y crear HU de este CASO (hacer una copia > archivo >crear una copia
+
+Equipo Salesforce
+Guia: En la clase de hoy nos vamos a adentrar en el rol de Administrador de Salesforce, la importancia del mencionado rol y las tareas a su cargo. pero primero lo primero… comencemos con el equipo.
+
+
+
+Product Owner (PO)
+Representa las necesidades del negocio, priorizando y definiendo los requisitos para asegurar que las funcionalidades agreguen valor. 
+Product Manajer (PM)
+Facilita las ceremonias Agile y remueve obstáculos, asegurando que el equipo se mantenga enfocado en los objetivos de cada sprint.
+Administrador de Salesforce
+Gestiona la configuración, usuarios y permisos en Salesforce, optimizando su funcionamiento y mantenimiento diario.
+Para armar un equipo de desarrollo de Salesforce acorde a la metodología Agile, se necesitan roles clave que permitan una colaboración rápida, iterativa y enfocada en los objetivos de negocio.
+Equipo
+Product Owner (PO): Este rol es crucial en Agile y en un equipo de Salesforce, ya que representa al negocio y sus necesidades. El PO prioriza y define los requisitos, asegurando que las funcionalidades desarrolladas en Salesforce tengan un alto valor para los usuarios finales.
+Scrum Master: El Scrum Master es responsable de facilitar las ceremonias Agile (como las retrospectivas, los stand-ups diarios y las reuniones de planificación) y de eliminar obstáculos que puedan afectar al equipo. Ayuda a mantener el enfoque en los objetivos de cada sprint y asegura que el equipo de Salesforce siga los principios Agile.
+Administrador de Salesforce: Este rol gestiona las configuraciones de la plataforma y se asegura de que la instancia de Salesforce esté optimizada. Realiza ajustes en la configuración, administra usuarios y permisos y apoya en el mantenimiento diario de la plataforma.
+Desarrolladores de Salesforce: Los desarrolladores construyen componentes personalizados usando Apex, Visualforce, Lightning Web Components (LWC) y otras tecnologías de Salesforce. Su tarea es implementar los requisitos definidos en el backlog de manera eficiente y alineada con los objetivos del sprint.
+Arquitecto de Soluciones: El arquitecto define la estructura técnica de la solución y la mejor forma de integrar Salesforce con otros sistemas. Este rol es crucial para mantener la escalabilidad, seguridad y eficiencia de la plataforma en el largo plazo.
+Analista de Negocio: Trabaja en estrecha colaboración con el Product Owner para entender las necesidades del negocio y traducirlas en requisitos claros para el equipo de desarrollo. También ayuda a priorizar el backlog y asegura que las soluciones cumplan con los objetivos estratégicos.
+Tester/Quality Assurance (QA): Este rol asegura que todas las funcionalidades desarrolladas se prueben exhaustivamente antes de su implementación. En Agile, el QA participa en cada sprint, realizando pruebas de calidad y funcionalidad para asegurar que el producto cumple con los estándares.
+Especialista en DevOps: En un entorno Agile, el DevOps automatiza procesos de despliegue y mantenimiento, permitiendo que el equipo de Salesforce libere nuevas funcionalidades de manera rápida y segura. Este rol es clave para asegurar que los desarrollos lleguen a producción sin problemas y con alta frecuencia.
+Este equipo, trabajando en sprints y utilizando las prácticas de Agile, puede desarrollar soluciones en Salesforce de manera ágil, asegurando la alineación con el negocio, la calidad del producto y una entrega continua de valor.
+
+
+Tester/Quality Assurance (QA)
+Prueba exhaustivamente las funcionalidades en cada sprint, asegurando que cumplan con los estándares de calidad.
+Especialista en DevOps
+Automatiza despliegues y mantenimiento, facilitando la liberación rápida y segura de nuevas funcionalidades en producción.
+Para armar un equipo de desarrollo de Salesforce acorde a la metodología Agile, se necesitan roles clave que permitan una colaboración rápida, iterativa y enfocada en los objetivos de negocio.
+Equipo
+Analista de Negocio
+Colabora con el PO para traducir necesidades de negocio en requisitos claros, ayudando a priorizar el backlog.
+Product Owner (PO): Este rol es crucial en Agile y en un equipo de Salesforce, ya que representa al negocio y sus necesidades. El PO prioriza y define los requisitos, asegurando que las funcionalidades desarrolladas en Salesforce tengan un alto valor para los usuarios finales.
+Scrum Master: El Scrum Master es responsable de facilitar las ceremonias Agile (como las retrospectivas, los stand-ups diarios y las reuniones de planificación) y de eliminar obstáculos que puedan afectar al equipo. Ayuda a mantener el enfoque en los objetivos de cada sprint y asegura que el equipo de Salesforce siga los principios Agile.
+Administrador de Salesforce: Este rol gestiona las configuraciones de la plataforma y se asegura de que la instancia de Salesforce esté optimizada. Realiza ajustes en la configuración, administra usuarios y permisos y apoya en el mantenimiento diario de la plataforma.
+Desarrolladores de Salesforce: Los desarrolladores construyen componentes personalizados usando Apex, Visualforce, Lightning Web Components (LWC) y otras tecnologías de Salesforce. Su tarea es implementar los requisitos definidos en el backlog de manera eficiente y alineada con los objetivos del sprint.
+Arquitecto de Soluciones: El arquitecto define la estructura técnica de la solución y la mejor forma de integrar Salesforce con otros sistemas. Este rol es crucial para mantener la escalabilidad, seguridad y eficiencia de la plataforma en el largo plazo.
+Analista de Negocio: Trabaja en estrecha colaboración con el Product Owner para entender las necesidades del negocio y traducirlas en requisitos claros para el equipo de desarrollo. También ayuda a priorizar el backlog y asegura que las soluciones cumplan con los objetivos estratégicos.
+Tester/Quality Assurance (QA): Este rol asegura que todas las funcionalidades desarrolladas se prueben exhaustivamente antes de su implementación. En Agile, el QA participa en cada sprint, realizando pruebas de calidad y funcionalidad para asegurar que el producto cumple con los estándares.
+Especialista en DevOps: En un entorno Agile, el DevOps automatiza procesos de despliegue y mantenimiento, permitiendo que el equipo de Salesforce libere nuevas funcionalidades de manera rápida y segura. Este rol es clave para asegurar que los desarrollos lleguen a producción sin problemas y con alta frecuencia.
+Este equipo, trabajando en sprints y utilizando las prácticas de Agile, puede desarrollar soluciones en Salesforce de manera ágil, asegurando la alineación con el negocio, la calidad del producto y una entrega continua de valor.
+
+
+¿Cómo nos fué?¿Qué cosas no quedaron claras y necesitamos repasar la próxima?
+retro
+
+
+

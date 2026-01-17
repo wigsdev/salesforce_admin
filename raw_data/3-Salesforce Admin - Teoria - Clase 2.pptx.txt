@@ -1,0 +1,391 @@
+Salesforce
+Admin +
+Agent Force
+
+daily
+¿Cómo venimos?
+¿Algo nos bloquea?
+¿Cómo seguimos?
+
+
+
+
+Mascotas de Salesforce
+
+PREGUNTAS
+Anotar en un cuaderno
+Al final de la clase
+COMPROMISO
+Asistencia,atención 
+y puntualidad
+CÁMARA PRENDIDA
+En los grupos
+MICRÓFONO APAGADO
+Cuando no hablamos
+EN PARALELO
+No distraerse con otras tareas
+ENFOQUE
+Prestar atención
+Seguir el hilo
+Dinámica de trabajo
+
+¿Qué es el modelo de datos
+ IMPORTANTE
+
+Concepto
+ Imaginen una hoja de cálculo de Excel gigante. Eso es una base de datos plana. 
+El modelo de datos de Salesforce es como tomar ese Excel, cortar las pestañas y conectarlas entre sí de forma inteligente.
+
+Por qué importa: Si el modelo de datos está mal diseñado, todo lo demás fallará (reportes, seguridad, automatización). Es el cimiento del edificio.
+
+BLOQUES DE CONSTRUCCIÓN
+Objetos (Las Tablas): Son los contenedores de información.
+Objetos Estándar: Vienen de fábrica con Salesforce (Cuentas, Contactos, Oportunidades, Casos). Ya están ahí, no se pueden borrar, solo ocultar.
+Objetos Personalizados: Los que creamos nosotros para necesidades específicas del negocio (ej. "Inmuebles", "Proyectos", "Vehículos").
+Dato clave: En la API (el código), los personalizados siempre terminan en __c (ej. Inmueble__c).
+Campos (Las Columnas): Son los datos específicos dentro de un objeto.
+Identidad (ID): Cada registro tiene un DNI único de 15 o 18 caracteres.
+Sistema: Se llenan solos (Creado por, Última modificación).
+Nombre: El nombre del registro (puede ser texto o autounumérico).
+Personalizados: Los que creamos (Texto, Fecha, Picklist, Checkbox, Moneda).
+
+El corazón del sistema: RELACIONES
+Existen dos formas principales de conectar dos objetos (Padre e Hijo):
+A. Relación de Búsqueda (Lookup Relationship):
+Definición: Una relación flexible. Como un post-it en un archivo que hace referencia a otro.
+Comportamiento: Si borras al Padre, el Hijo sobrevive.
+Seguridad: El hijo puede tener su propia seguridad, independiente del padre.
+Uso: Cuando los datos están relacionados pero no dependen el uno del otro (ej. Un Contacto asignado a un Proyecto específico).
+B. Relación Maestro-Detalle (Master-Detail Relationship):
+Definición: Una relación fuerte y estricta. Están pegados con pegamento industrial.
+Comportamiento: Si borras al Padre (Maestro), los Hijos (Detalle) se borran automáticamente (Efecto cascada).
+Seguridad: El hijo hereda la seguridad del padre. Si no puedes ver al padre, no ves al hijo.
+Ventaja: Permite crear Campos de Resumen (Roll-up Summary) en el padre (ej. Sumar el total de precios de todos los productos en una oportunidad).
+C. Relación Muchos a Muchos (Many-to-Many):
+No existe un botón para esto. Se crea usando un tercer objeto en el medio (Objeto de Unión) con dos relaciones Maestro-Detalle.
+Ejemplo: Un Alumno puede tener muchas Clases, y una Clase tiene muchos Alumnos. El objeto del medio sería "Inscripción".
+
+HERRAMIENTA VISUAL
+Schema Builder 
+En lugar de crear campos lista por lista, Salesforce tiene una herramienta llamada Schema Builder (Generador de Esquemas).
+Permite ver el modelo de datos como un diagrama visual (mapa), arrastrar y soltar cajas para crear objetos y dibujar líneas para crear relaciones. Es vital para visualizar la arquitectura compleja.
+
+
+¡Manos a la obra!
+Avanzamos con los trails.
+
+
+
+Modelado de 
+Datos I
+LINK
+
+Herramientas del Administrador
+Guia: Consultar si Saben que es un administrador de Salesforce, si habian escuchado antes de rol
+
+
+
+Object Manager
+Sección de Salesforce donde los administradores gestionan objetos, campos y relaciones entre ellos.
+¿Como se asignan los permisos?
+¿Que es la data? ¿Qué es la metadata?
+DESCRIPCIÓN
+UTILIDAD
+Facilita la administración de los datos en la plataforma, permitiendo a los administradores crear objetos personalizados y organizar los datos según los procesos de negocio.
+Object Manager en Salesforce
+El Object Manager es una herramienta dentro de la configuración de Salesforce que permite a los administradores y desarrolladores gestionar los objetos de la plataforma. Es una parte esencial de la funcionalidad de Salesforce, ya que proporciona acceso a todos los objetos estándar y personalizados, permitiendo su personalización y configuración según las necesidades del negocio.
+Características principales:
+Acceso centralizado a objetos:
+Contiene todos los objetos estándar (como Accounts, Contacts, Opportunities) y los objetos personalizados creados por los usuarios.
+Facilita la navegación y organización de los objetos disponibles en la org.
+Gestión de campos:
+Permite crear, editar o eliminar campos personalizados dentro de los objetos.
+Soporta diferentes tipos de campos, como texto, número, fórmula, fecha, entre otros.
+Configura propiedades de los campos como obligatoriedad, valores predeterminados y etiquetas.
+Diseño de páginas:
+Permite personalizar las layouts de página (Page Layouts) para ajustar qué información se muestra y en qué orden.
+Configura las páginas Lightning para objetos específicos.
+Relaciones entre objetos:
+Configura relaciones entre objetos mediante Lookup o Master-Detail, permitiendo establecer cómo interactúan y comparten datos.
+Define reglas de acceso y dependencias entre los registros relacionados.
+Gestión de validaciones y reglas:
+Permite crear reglas de validación para garantizar que los datos ingresados cumplan con ciertos criterios.
+Configura reglas de negocio para automatizar comportamientos o procesos en registros.
+Definición de procesos automatizados:
+Configura Triggers, Workflows, Flows o Process Builder para los objetos, automatizando tareas o procesos.
+Seguimiento de historial:
+Activa el seguimiento de campos para monitorear los cambios realizados en registros específicos.
+Seguridad y permisos:
+Configura niveles de acceso para campos, registros u objetos completos, asegurando que solo los usuarios autorizados puedan ver o modificar información.
+
+
+Perfil y Permisos
+Controlan qué información pueden ver y modificar los usuarios.
+DESCRIPCIÓN
+UTILIDAD
+Aseguran que cada usuario tenga acceso solo a la información relevante para su rol, mejorando la seguridad de la información y cumpliendo con las políticas de la organización.
+Perfiles y Permisos en Salesforce
+Los Perfiles y los Permisos son herramientas fundamentales en Salesforce para controlar quién puede acceder a qué datos y qué acciones pueden realizar los usuarios dentro de la plataforma. Estos elementos forman parte del modelo de seguridad en Salesforce, garantizando que la información y las funcionalidades estén protegidas y adecuadamente distribuidas entre los usuarios.
+1. Perfiles
+Un perfil es un conjunto de configuraciones y permisos que definen lo que un usuario puede hacer dentro de Salesforce. Cada usuario en Salesforce debe estar asociado a un único perfil.
+Características principales:
+Acceso a objetos: Define qué objetos (estándar o personalizados) puede ver, crear, editar o eliminar un usuario.
+Acceso a campos: Controla los permisos a nivel de campo para limitar la visibilidad o edición de información específica en un objeto.
+Acceso a aplicaciones: Determina qué aplicaciones o pestañas estarán disponibles para el usuario.
+Configuraciones de página: Establece qué vistas de página (Layouts) verá el usuario al interactuar con registros.
+Reglas de validación: Permite o restringe ciertas acciones basadas en reglas configuradas.
+Permisos del sistema: Incluye opciones como la capacidad de exportar datos, usar informes o administrar usuarios.
+Tipos de perfiles:
+Estándar: Perfiles predefinidos por Salesforce (como System Administrator, Standard User, Marketing User).
+Personalizados: Perfiles creados por los administradores para satisfacer necesidades específicas.
+2. Permisos
+Los permisos son configuraciones más granulares que controlan el acceso y las capacidades específicas del usuario dentro de Salesforce.
+Tipos de permisos:
+Permisos de objeto:
+Crear, Leer, Editar, Eliminar (CRUD): Controlan las operaciones básicas sobre objetos.
+Ver Todos / Modificar Todos: Otorgan acceso global a los registros de un objeto, independientemente de las reglas de propiedad o compartición.
+Permisos de campo:
+Visible: Permite que un usuario vea el campo.
+Editable: Permite que un usuario edite el campo.
+Permisos del sistema:
+Controlan acciones generales, como administrar usuarios, crear informes, restablecer contraseñas, entre otros.
+Permisos personalizados: Permiten acceder a funcionalidades específicas creadas en la organización.
+
+
+Herramientas de Seguridad
+Incluyen la configuración de roles, permisos y opciones como la autenticación de dos factores
+DESCRIPCIÓN
+UTILIDAD
+Garantizan que sólo los usuarios autorizados accedan a los datos y funcionalidades de Salesforce, protegiendo la información sensible de la organización.
+Herramientas de Seguridad en Salesforce
+Salesforce ofrece un conjunto robusto de herramientas y configuraciones para garantizar la seguridad de los datos y accesos dentro de la plataforma. Estas herramientas están diseñadas para proteger tanto a nivel de usuario como a nivel organizacional, cumpliendo con estándares de seguridad internacionales.
+1. Seguridad a nivel de acceso
+1.1 Perfiles y Conjuntos de Permisos
+Perfiles: Definen qué puede hacer un usuario dentro del sistema, desde acceso a objetos hasta permisos del sistema.
+Conjuntos de Permisos: Complementan los perfiles, permitiendo otorgar permisos adicionales sin modificar el perfil base.
+1.2 Roles
+Define la jerarquía de acceso a los registros. Los usuarios en niveles superiores pueden acceder a registros de usuarios en niveles inferiores, según las reglas de propiedad.
+1.3 Grupos Públicos
+Facilitan la compartición de registros entre usuarios que no están relacionados por roles, pero necesitan acceso común a datos.
+2. Seguridad a nivel de datos
+2.1 Modelos de uso compartido (Sharing Models)
+Privado: Los registros solo son visibles para sus propietarios.
+Público: Los registros son visibles para todos los usuarios.
+Híbrido: Configuración personalizada mediante reglas de compartición.
+2.2 Reglas de Compartición (Sharing Rules)
+Permiten compartir registros automáticamente con usuarios o grupos basados en criterios definidos.
+2.3 Acceso a campos (Field-Level Security)
+Controla qué campos pueden ver o editar los usuarios, incluso si tienen acceso al registro.
+2.4 Auditoría de campo
+Registra quién realizó cambios en campos críticos y cuándo.
+3. Herramientas para Administradores
+3.1 Health Check
+Evalúa las configuraciones de seguridad de tu organización y las compara con un conjunto estándar recomendado.
+Identifica áreas de mejora y ofrece pasos sugeridos para resolverlas.
+3.2 Login IP Ranges
+Restringe el acceso a Salesforce solo desde rangos de IP aprobados.
+3.3 Horarios de inicio de sesión
+Limita cuándo los usuarios pueden acceder al sistema, definiendo ventanas de tiempo específicas.
+3.4 Session Settings
+Configura reglas para controlar la duración de las sesiones activas, logout automático y políticas de seguridad relacionadas.
+4. Seguridad en autenticación
+4.1 Autenticación multifactor (MFA)
+Añade una capa adicional de seguridad requiriendo una verificación adicional, como un código generado en un dispositivo móvil.
+4.2 Single Sign-On (SSO)
+Permite a los usuarios acceder a Salesforce y otras aplicaciones usando un solo conjunto de credenciales, reduciendo riesgos de contraseñas débiles o reutilizadas.
+5. Auditorías y monitoreo
+5.1 Event Monitoring
+Proporciona registros detallados de eventos (inicio de sesión, visualización de registros, exportación de datos) para identificar actividades sospechosas.
+5.2 Field Audit Trail
+Registra el historial de cambios en datos críticos para fines de cumplimiento y auditoría.
+5.3 Setup Audit Trail
+Rastrear cambios realizados en la configuración de Salesforce, identificando quién hizo cada cambio y cuándo.
+6. Seguridad de datos externos
+6.1 Shield Platform Encryption
+Encripta datos almacenados en Salesforce (tanto estándar como personalizados) para proteger información sensible.
+6.2 Data Mask
+Cubre datos sensibles en entornos de desarrollo y pruebas, asegurando que los datos reales no se utilicen innecesariamente.
+6.3 Identity Verification
+Verifica la identidad de los usuarios en operaciones críticas o desde dispositivos desconocidos.
+7. Automatización y control
+7.1 Validación de campos
+Impone reglas para asegurar que los datos ingresados cumplan con estándares establecidos.
+7.2 Flujos de aprobación
+Garantiza que ciertas acciones solo puedan completarse con la autorización adecuada.
+7.3 Políticas de acceso basadas en aplicaciones
+Restringe o permite el acceso a funciones específicas de Salesforce según la aplicación desde la cual se accede.
+Mejores prácticas para la seguridad en Salesforce:
+Activar MFA para todos los usuarios.
+Limitar accesos innecesarios utilizando reglas de compartición y field-level security.
+Habilitar y revisar periódicamente el Health Check.
+Monitorear actividades sospechosas mediante Event Monitoring.
+Implementar Shield Encryption para proteger datos sensibles.
+Capacitar a los usuarios sobre buenas prácticas en contraseñas y manejo de datos.
+
+
+
+
+
+
+
+APP
+BUILDER
+Herramienta visual que permite a los administradores crear aplicaciones personalizadas, definir el diseño de las páginas y personalizar la experiencia del usuario.
+DESCRIPCIÓN
+UTILIDAD
+Permite la creación de interfaces intuitivas y optimizadas para diferentes roles, mejorando la experiencia de usuario y adaptando las aplicaciones a las necesidades de cada equipo.
+Guia:App Builder en Salesforce
+El App Builder es una herramienta visual dentro de la plataforma de Salesforce que permite a los administradores y desarrolladores crear aplicaciones personalizadas de manera rápida y sencilla, sin necesidad de escribir código. Es parte de las capacidades declarativas de Salesforce y forma un componente clave para construir aplicaciones modernas que aprovechan el poder de la nube.
+Características principales:
+Interfaz Drag-and-Drop: Ofrece una interfaz intuitiva de arrastrar y soltar que facilita la creación de aplicaciones al permitir añadir componentes predefinidos como listas, gráficos y formularios.
+Diseño adaptable: Las aplicaciones creadas con App Builder son automáticamente responsivas, lo que significa que se ajustan a diferentes tamaños de pantalla (móvil, tablet o escritorio).
+Uso de Lightning Components: Soporta componentes Lightning estándar, personalizados y de terceros para ampliar las capacidades y funcionalidades de la aplicación.
+Integración con Salesforce: Se pueden incluir datos y objetos de Salesforce (estándar y personalizados) directamente en las aplicaciones, lo que permite integraciones profundas con los procesos de negocio.
+Creación de Páginas Lightning: App Builder es utilizado para crear tres tipos de páginas:
+Páginas de Aplicación: Diseñadas para proporcionar una vista centrada en tareas o flujos de trabajo específicos.
+Páginas de Inicio: Personalizadas para usuarios con un enfoque en su actividad diaria o prioridades clave.
+Páginas de Registro: Para personalizar la forma en que se muestran los registros de objetos.
+Control de Acceso: Permite establecer visibilidad basada en perfiles, roles o criterios específicos para que diferentes usuarios vean elementos adaptados a sus necesidades.
+Integración con Flujos: Se pueden agregar flujos creados en Flow Builder dentro de las aplicaciones para automatizar tareas o guiar al usuario a través de procesos.
+Ventajas del App Builder:
+Rápida implementación: Permite crear y lanzar aplicaciones en menor tiempo, acelerando la transformación digital.
+Sin necesidad de código: Ideal para usuarios no técnicos que buscan personalizar la plataforma.
+Escalabilidad: Las aplicaciones se pueden mejorar y extender según sea necesario.
+Interacción con Lightning Experience: Aprovecha la potencia y flexibilidad de Lightning para aplicaciones dinámicas.
+Casos de uso comunes:
+Personalización de la interfaz para usuarios finales.
+Creación de aplicaciones específicas para departamentos, como ventas, soporte o marketing.
+Desarrollo de dashboards interactivos para análisis de datos en tiempo real.
+Creación de portales para clientes o socios.
+
+
+Reports and Dashboards
+Herramientas de análisis que permiten a los usuarios ver, analizar y representar datos de forma visual.
+DESCRIPCIÓN
+UTILIDAD
+Facilitan la toma de decisiones al permitir a los administradores y ejecutivos obtener insights clave y crear reportes personalizados.
+Reportes y Tableros en Salesforce
+Los reportes y tableros (o dashboards) son herramientas esenciales de Salesforce para analizar y visualizar datos, tomar decisiones informadas y medir el rendimiento de los procesos de negocio en tiempo real. Ambos trabajan en conjunto para proporcionar una visión clara y accionable de la información almacenada en Salesforce.
+1. Reportes en Salesforce
+Un reporte es una representación tabular o gráfica de datos almacenados en Salesforce. Puedes personalizarlos para mostrar la información que necesitas analizar y compartir.
+Características principales de los reportes:
+Tipos de Reportes:
+Tabular: Lista simple de datos (ideal para exportar o vistas rápidas).
+Resumen: Agrupa datos y proporciona subtotales (ideal para analizar métricas agrupadas).
+Matriz: Datos organizados por filas y columnas con totales (ideal para análisis comparativos).
+De unión: Combina múltiples reportes en un solo reporte (útil para comparar datos de diferentes fuentes).
+Filtros:
+Permiten limitar los datos mostrados, como registros creados en un rango de fechas o por propietario.
+Campos personalizados:
+Selecciona qué columnas o métricas se incluyen en el reporte.
+Gráficos:
+Visualiza los datos directamente en el reporte utilizando gráficos como barras, tortas, líneas, etc.
+Programación:
+Los reportes pueden programarse para ser enviados automáticamente a usuarios específicos.
+2. Tableros (Dashboards) en Salesforce
+Un tablero es una colección visual de componentes (gráficos, métricas, tablas) basada en uno o más reportes. Es ideal para proporcionar una visión resumida y gráfica de los datos.
+Características principales de los tableros:
+Componentes del tablero:
+Gráficos: Representación visual de datos (barras, tortas, líneas, etc.).
+Métricas: Valores individuales, como el total de ingresos.
+Tablas: Listas resumidas de datos clave.
+Indicadores: Muestran el progreso frente a un objetivo o métrica.
+Personalización:
+Los tableros pueden diseñarse para roles específicos (por ejemplo, un tablero de ventas o de soporte).
+Interactividad:
+Los usuarios pueden hacer clic en los componentes para explorar los reportes subyacentes.
+Filtros globales:
+Permite aplicar filtros comunes a todos los componentes del tablero, como fechas, territorios o productos.
+Actualización programada:
+Los tableros se actualizan automáticamente a intervalos definidos o en tiempo real.
+
+
+Process Builder y Flow Builder
+Herramientas de automatización que permiten crear flujos de trabajo personalizados y automatizar tareas repetitivas.
+DESCRIPCIÓN
+UTILIDAD
+ Reducen el trabajo manual y aseguran la consistencia de los procesos, optimizando el tiempo y recursos de la organización.
+Process Builder y Flow Builder en Salesforce
+Tanto Process Builder como Flow Builder son herramientas declarativas de Salesforce que permiten automatizar procesos de negocio sin necesidad de programar código. Cada una tiene sus características y casos de uso específicos, y juntas forman un ecosistema de automatización poderoso y flexible.
+1. Process Builder
+El Process Builder es una herramienta visual utilizada para automatizar procesos simples a moderadamente complejos basados en reglas específicas.
+Características principales:
+Automatización basada en eventos:
+Los procesos se inician cuando ocurre un evento, como la creación o actualización de un registro, o cuando se recibe una plataforma de eventos.
+Interfaz visual:
+Usa un diseño de árbol de decisiones para definir condiciones y acciones.
+Acciones disponibles:
+Crear registros.
+Actualizar registros relacionados.
+Invocar flujos.
+Enviar correos electrónicos.
+Publicar mensajes en Chatter.
+Invocar procesos subordinados.
+Condiciones:
+Permite definir múltiples conjuntos de criterios y ejecutar acciones según los resultados.
+Integración con flujos:
+Puede llamar a flujos creados en Flow Builder para ejecutar tareas más complejas.
+Casos de uso comunes:
+Enviar un correo electrónico al propietario de una oportunidad cuando cambia de etapa.
+Actualizar automáticamente campos relacionados en registros padres o hijos.
+Publicar un mensaje en Chatter al crear un nuevo registro.
+Ventajas:
+Fácil de usar para usuarios no técnicos.
+Ideal para automatizaciones lineales y basadas en reglas simples.
+Es una opción más sencilla para automatizaciones de nivel básico.
+2. Flow Builder
+El Flow Builder es una herramienta más avanzada que permite crear flujos de trabajo interactivos y automatización de procesos complejos.
+Características principales:
+Automatización avanzada:
+Permite automatizar procesos complejos con múltiples pasos, lógica condicional y entrada de datos del usuario.
+Tipos de flujos:
+Screen Flow: Incluye pantallas para la interacción del usuario (ideal para asistentes y formularios).
+Autolaunched Flow: Se ejecuta automáticamente sin interacción del usuario (ideal para procesos de backend).
+Scheduled Flow: Se ejecuta en horarios definidos.
+Triggered Flow: Se activa mediante eventos, como la creación o actualización de un registro.
+Acciones disponibles:
+Crear, actualizar, eliminar registros.
+Consultar registros mediante SOQL.
+Ejecutar lógica condicional con decisiones.
+Llamar a Apex y procesos externos.
+Enviar correos electrónicos o mensajes de texto.
+Realizar cálculos complejos.
+Pantallas interactivas:
+Crea pantallas personalizadas para capturar datos del usuario.
+Conectores y lógica:
+Ofrece una amplia gama de conectores para definir rutas basadas en decisiones, bucles y manejo de errores.
+Casos de uso comunes:
+Crear un formulario interactivo para recopilar información de clientes.
+Automatizar procesos de aprobación complejos.
+Realizar asignaciones masivas de registros basadas en reglas dinámicas.
+Integrar Salesforce con sistemas externos mediante Apex invocable.
+Ventajas:
+Capacidad para manejar procesos complejos y dinámicos.
+Interactividad con los usuarios mediante pantallas.
+Mayor flexibilidad para integraciones y lógica avanzada.
+
+
+Data Loader
+Herramienta que permite importar, exportar y actualizar grandes volúmenes de datos.
+DESCRIPCIÓN
+UTILIDAD
+Muy útil para migrar datos o realizar actualizaciones masivas, lo que ahorra tiempo y reduce el riesgo de errores manuales.
+Data Loader en Salesforce
+Data Loader es una herramienta que permite realizar operaciones masivas de carga, actualización, eliminación y exportación de datos en Salesforce. Es especialmente útil cuando se trabaja con grandes volúmenes de registros o cuando se requiere procesar datos de manera repetitiva y eficiente.
+Características principales:
+Carga masiva de datos:
+Permite insertar, actualizar y upsert (insertar o actualizar según sea necesario) registros en Salesforce.
+Eliminación de datos:
+Soporta la eliminación masiva de registros mediante IDs especificados.
+Exportación de datos:
+Permite exportar datos existentes de Salesforce a un archivo CSV para análisis, copias de seguridad o actualizaciones externas.
+Compatibilidad con todos los objetos:
+Funciona tanto con objetos estándar (Accounts, Contacts) como con objetos personalizados.
+Interfaz amigable:
+Ofrece una interfaz gráfica para usuarios que prefieren configuraciones visuales.
+Incluye opciones avanzadas de línea de comandos para automatizar procesos mediante scripts.
+Compatibilidad con CSV:
+Utiliza archivos CSV para cargar y extraer datos.
+Manejo de errores:
+Genera un archivo de error detallado para identificar problemas en los registros rechazados durante las operaciones.
+
