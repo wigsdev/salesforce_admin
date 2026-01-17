@@ -93,7 +93,33 @@ Elimina las listas por defecto y crea estas 8 columnas en orden:
 
 En el campo **"Descripción"**, copia y pega:
 
-```
+👀 **Vista Previa (Así se verá en Trello):**
+> **Como**: Ejecutivo de Créditos
+> **Quiero**: Registrar múltiples garantes asociados a un préstamo con sus datos completos
+> **Para**: Poder contactarlos cuando sea necesario y tener trazabilidad de quiénes respaldan cada crédito
+>
+> ---
+>
+> **🔧 Solución Técnica**
+>
+> **Objeto**: Opportunity (Oportunidad = Préstamo)
+> **Funcionalidad**: Contact Roles (Roles de Contacto)
+>
+> **Configuración**:
+> - Usar Contact Roles nativo de Salesforce
+> - Agregar valor "Garante" al picklist de roles
+> - Crear Page Layout personalizado para mostrar Contact Roles
+>
+> ---
+>
+> **📊 Notas Adicionales**
+>
+> **Alternativa Custom**: Objeto Junction `Loan_Contact__c` si se necesita más flexibilidad
+> **Campos adicionales**: Role, Guarantee_Percentage
+
+📋 **Código para Copiar (Markdown):**
+
+```markdown
 **Como**: Ejecutivo de Créditos
 **Quiero**: Registrar múltiples garantes asociados a un préstamo con sus datos completos
 **Para**: Poder contactarlos cuando sea necesario y tener trazabilidad de quiénes respaldan cada crédito
@@ -155,7 +181,36 @@ En el campo **"Descripción"**, copia y pega:
 
 #### Paso 3.7: Completar la descripción
 
-```
+👀 **Vista Previa (Así se verá en Trello):**
+> **Como**: Gerente de Finanzas
+> **Quiero**: Que solo los vendedores y gerentes puedan ver el salario de los clientes
+> **Para**: Proteger la privacidad de la información financiera y cumplir con políticas de seguridad
+>
+> ---
+>
+> **🔧 Solución Técnica**
+>
+> **Funcionalidad**: Field-Level Security (FLS)
+> **Objeto**: Contact
+> **Campo**: Monthly_Salary__c
+>
+> **Configuración**:
+> 1. Setup → Object Manager → Contact → Fields → Monthly_Salary__c
+> 2. Configurar FLS por perfil:
+>    - ✅ Visible: "Ejecutivo de Créditos", "Gerente de Finanzas"
+>    - ❌ No Visible: "Atención al Cliente"
+> 3. Crear Permission Set "Financial_Data_Access"
+>
+> ---
+>
+> **⚠️ Validación**
+>
+> - Probar con usuarios de diferentes perfiles
+> - Verificar que reportes respeten FLS
+
+📋 **Código para Copiar (Markdown):**
+
+```markdown
 **Como**: Gerente de Finanzas
 **Quiero**: Que solo los vendedores y gerentes puedan ver el salario de los clientes
 **Para**: Proteger la privacidad de la información financiera y cumplir con políticas de seguridad
@@ -211,7 +266,36 @@ En el campo **"Descripción"**, copia y pega:
 
 #### Paso 3.11: Completar la descripción
 
-```
+👀 **Vista Previa (Así se verá en Trello):**
+> **Como**: Analista de Desembolsos
+> **Quiero**: Registrar todas las cuentas bancarias de un cliente y marcar cuál es la activa
+> **Para**: Tener historial completo de cuentas y saber a cuál transferir sin perder información
+>
+> ---
+>
+> **🔧 Solución Técnica**
+>
+> **Objeto Custom**: Bank_Account__c (Cuenta Bancaria)
+> **Relación**: Master-Detail con Contact
+>
+> **Campos del objeto**:
+> - Contact__c (Master-Detail)
+> - Bank_Name__c (Picklist) - Banco
+> - Account_Number__c (Text Encrypted) - Número de cuenta
+> - CBU__c (Text 22) - Clave Bancaria Uniforme
+> - Account_Type__c (Picklist) - "Caja de Ahorro", "Cuenta Corriente"
+> - Is_Primary__c (Checkbox) - Cuenta preferida
+> - Status__c (Picklist) - "Activa", "Inactiva", "Cerrada"
+>
+> **Validation Rule**:
+> Solo una cuenta puede estar marcada como Is_Primary__c = TRUE por contacto
+>
+> **Flow**:
+> Auto-desmarcar cuentas anteriores al marcar nueva como primaria
+
+📋 **Código para Copiar (Markdown):**
+
+```markdown
 **Como**: Analista de Desembolsos
 **Quiero**: Registrar todas las cuentas bancarias de un cliente y marcar cuál es la activa
 **Para**: Tener historial completo de cuentas y saber a cuál transferir sin perder información
