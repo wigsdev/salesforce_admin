@@ -22,7 +22,7 @@ Explora el contenido del curso a través de los siguientes módulos:
 | **Módulo** | **Descripción** | **Contenido** |
 | :--- | :--- | :--- |
 | **🚀 [Curriculum Principal](curriculum/README.md)** | Material de estudio organizado por semanas. | [Sprint 1](curriculum/sprint_01/README.md) ➡️ ([Semana 1](curriculum/sprint_01/semana_01/README.md) • [Semana 2](curriculum/sprint_01/semana_02/README.md) • [Semana 3](curriculum/sprint_01/semana_03/README.md) • [Semana 4](curriculum/sprint_01/semana_04/README.md)) |
-| **🏆 [Superbadges](Superbadge_Object_Relationships/README.md)** | Soluciones y guías paso a paso de retos. | [Obj. Relationships](Superbadge_Object_Relationships/README.md) • [Formulas](Superbadge_Formulas/README.md) • [Auth](Superbadge_User_Authentication/README.md) |
+| **🏆 [Superbadges](Superbadges/README.md)** | Soluciones y guías paso a paso de retos. | [Object Relationships](Superbadges/Object_Relationships/README.md) • [Formulas](Superbadges/Formulas/README.md) • [User Auth](Superbadges/User_Authentication/README.md) |
 | **💼 [Prácticas Reales](Practica_Financiera/README.md)** | Casos de estudio y ejercicios prácticos. | [Financiera Horizonte](Practica_Financiera/README.md) |
 | **🛠️ [Kit de Herramientas](Gestor_de_Versiones/README.md)** | Guías técnicas y metodologías. | [Git & DevOps](Gestor_de_Versiones/README.md) • [Trello](Gestor_de_Versiones/00-INTEGRACION_TRELLO.md) |
 | **📅 [Cronograma](schedules/sprint1_schedule.md)** | Fechas de entrega y seguimiento. | [Sprint 1](schedules/sprint1_schedule.md) |
