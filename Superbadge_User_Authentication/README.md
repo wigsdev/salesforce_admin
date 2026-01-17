@@ -10,11 +10,13 @@
 
 ---
 
-## Estructura de Archivos
+## 🧭 Navegación del Superbadge
 
-1. **README.md** - Este archivo (índice)
-2. **ENUNCIADO_ORIGINAL.md** - Enunciado oficial traducido (con interpretaciones marcadas)
-3. **GUIA_SB_SOLUCION.md** - Guía paso a paso de solución
+| **Recurso** | **Descripción** |
+| :--- | :--- |
+| 📖 [**Enunciado Original**](ENUNCIADO_ORIGINAL.md) | Requisitos oficiales traducidos y analizados. |
+| 🚀 [**Guía de Solución**](GUIA_SB_SOLUCION.md) | Pasos detallados para configurar la seguridad. |
+| 🔙 [**Volver al Inicio**](../README.md) | Regresar al índice principal del curso. |
 
 ---
 

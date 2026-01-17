@@ -10,14 +10,16 @@
 
 ---
 
-## Estructura de Archivos
+## 🧭 Navegación del Superbadge
 
-1. **README.md** - Este archivo (índice)
-2. **ENUNCIADO_ORIGINAL.md** - Enunciado oficial traducido (con interpretaciones marcadas)
-3. **01-Reto_I_Objetos_Estandar.md** - Solución Reto 1 (Account y Campaign)
-4. **02-Reto_II_Objetos_Custom.md** - Solución Reto 2 (Track List y relaciones)
-5. **03-Reto_III_Lightning_App.md** - Solución Reto 3 (World Tour Manager App)
-6. **COMPLETADO.md** - Resumen de completación y aprendizajes
+| **Recurso** | **Descripción** |
+| :--- | :--- |
+| 📖 [**Enunciado Original**](ENUNCIADO_ORIGINAL.md) | Requisitos oficiales traducidos y analizados. |
+| 🚀 [**Reto 1: Objetos Estándar**](01-Reto_I_Objetos_Estandar.md) | Configuración de Account, Contact y Campaign. |
+| 🚀 [**Reto 2: Objetos Custom**](02-Reto_II_Objetos_Custom.md) | Creación de Track List y relaciones complejas. |
+| 🚀 [**Reto 3: Lightning App**](03-Reto_III_Lightning_App.md) | Construcción de la App "World Tour Manager". |
+| ✅ [**Resumen Final**](COMPLETADO.md) | Reflexiones y aprendizajes clave. |
+| 🔙 [**Volver al Inicio**](../README.md) | Regresar al índice principal del curso. |
 
 ---
 

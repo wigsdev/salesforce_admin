@@ -4,42 +4,16 @@ Este directorio contiene el caso de estudio completo para la **Práctica de Clas
 
 ---
 
-## 📁 Contenido
+## 🧭 Navegación de la Práctica
 
-### [01-Caso_de_Estudio.md](./01-Caso_de_Estudio.md)
-Descripción completa del caso de negocio de Financiera Horizonte S.A., incluyendo:
-- Objetivos estratégicos 2026
-- Objetivos dentro de Salesforce
-- Requerimientos del Gerente de Finanzas (Req A, B, C)
-
-### [02-Guia_Alumnos.md](./02-Guia_Alumnos.md)
-Guía metodológica para los estudiantes con:
-- Rol del Consultor (indagación)
-- Redacción de Historias de Usuario (formato Agile)
-- Organización en Trello
-
-### [03-Requerimientos_SOLUCION.md](./03-Requerimientos_SOLUCION.md)
-**Solución completa** elaborada por un Salesforce Senior Admin:
-- **Requerimiento 1**: Gestión de Garantes (Contact Roles)
-- **Requerimiento 2**: Restricción de Datos Sensibles (Field-Level Security)
-- **Requerimiento 3**: Múltiples Cuentas Bancarias (Objeto Custom)
-
-Cada requerimiento incluye:
-- 🧠 Análisis técnico del problema
-- 💡 Solución en Salesforce (objetos, campos, configuración)
-- 📝 Historia de Usuario completa con criterios de aceptación
-- 🏷️ Épica, Story Points y Prioridad
-
-### [04-Guia_Trello_Paso_a_Paso.md](./04-Guia_Trello_Paso_a_Paso.md)
-**Guía completa** para trasladar las Historias de Usuario a Trello:
-- ✅ Creación y configuración del tablero (8 columnas Agile)
-- ✅ Configuración de etiquetas (Épicas y Prioridades)
-- ✅ Creación de las 3 tarjetas con toda la información
-- ✅ Checklists de Criterios de Aceptación
-- ✅ Atajos de teclado y buenas prácticas
-- ✅ Organización del Sprint y filtros
-
-**Tiempo estimado**: 20-30 minutos
+| **Recurso** | **Descripción** |
+| :--- | :--- |
+| 💼 [**Caso de Estudio**](01-Caso_de_Estudio.md) | Análisis de Financiera Horizonte y sus objetivos. |
+| 🎓 [**Guía del Alumno**](02-Guia_Alumnos.md) | Metodología Agile y preparación. |
+| ✅ [**Solución Completa**](03-Requerimientos_SOLUCION.md) | Requerimientos resueltos (Garantes, Seguridad, Cuentas). |
+| 📋 [**Gestión en Trello**](04-Guia_Trello_Paso_a_Paso.md) | Guía paso a paso para organizar el tablero Agile. |
+| 📊 [**Resumen Visual**](05-Resumen_Visual.md) | Diagramas y esquemas de la solución. |
+| 🔙 [**Volver al Inicio**](../README.md) | Regresar al índice principal del curso. |
 
 ---
 

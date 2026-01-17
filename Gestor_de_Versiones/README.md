@@ -4,42 +4,16 @@ Documentación completa para la gestión de versiones, ambientes y roles del pro
 
 ---
 
-## 📁 Estructura de Archivos
+## 🧭 Navegación del Módulo
 
-### 🎭 Roles del Equipo (01-04)
-1. [Business Analyst](./01-Business_Analyst.md)
-2. [Salesforce Consultant](./02-Salesforce_Consultant.md)
-3. [Salesforce Admin](./03-Salesforce_Admin.md)
-4. [Tester QA](./04-Tester_QA.md)
-
-### 📝 Documentación General (05-06)
-5. [Preguntas y Dudas](./05-Preguntas_y_Dudas.md)
-6. [Investigaciones](./06-Investigaciones.md)
-
-### 🏃 Sprints (07-09)
-7. [SPRINT 1](./07-SPRINT_1.md)
-8. [SPRINT 2](./08-SPRINT_2.md)
-9. [SPRINT 3](./09-SPRINT_3.md)
-
-### 🎯 Demo y Ambientes (10-14)
-10. [DEMO FINAL](./10-DEMO_FINAL.md)
-11. [Ambiente DEV](./11-Ambiente_DEV.md)
-12. [Ambiente QA](./12-Ambiente_QA.md)
-13. [Ambiente PROD](./13-Ambiente_PROD.md)
-14. [DevOPS](./14-DevOPS.md)
-
----
-
-## 🎯 Uso
-
-Cada archivo está diseñado para documentar aspectos específicos del proyecto:
-
-- **Roles**: Responsabilidades y tareas de cada miembro
-- **Sprints**: Planificación y seguimiento de cada sprint
-- **Ambientes**: Credenciales y configuración de cada ambiente
-- **DevOPS**: Procesos de despliegue y automatización
-
----
+| **Recurso** | **Descripción** |
+| :--- | :--- |
+| 🎭 [**Roles del Equipo**](01-Business_Analyst.md) | Guías para BA, Consultant, Admin y QA. |
+| 📝 [**Resolución de Dudas**](05-Preguntas_y_Dudas.md) | FAQs e investigaciones técnicas. |
+| 🏃 [**Sprints**](07-SPRINT_1.md) | Planificación detallada por Sprint. |
+| 🏗️ [**Ambientes**](11-Ambiente_DEV.md) | Configuración de DEV, QA y PROD. |
+| 🚀 [**DevOPS**](14-DevOPS.md) | Estrategias de despliegue y CI/CD. |
+| 🔙 [**Volver al Inicio**](../README.md) | Regresar al índice principal del curso. |
 
 ## 📊 Estado
 
