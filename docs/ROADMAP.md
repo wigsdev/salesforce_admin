@@ -32,8 +32,8 @@ Docs                       Content       Content       Platform
 ---
 
 ## 🚀 v0.30.0 - Web Platform MVP (EN DESARROLLO)
-**Fecha estimada**: 10 Febrero 2026  
-**Duración**: 3-4 semanas  
+**Fecha estimada**: 14 Febrero 2026  
+**Duración**: 4 semanas  
 **Estado**: 🔄 Planning
 
 ### Objetivos:
@@ -267,8 +267,8 @@ Junio 2026
 ## 📊 Recursos Necesarios
 
 ### v0.30.0 (Web MVP)
-- **Developers**: 2 full-time (3-4 semanas)
-- **QA**: 1 part-time (1 semana)
+- **Developer**: 1 solo (con AI Agent)
+- **Duración**: 4 semanas
 - **Costo**: $0 (Render free tier)
 
 ### v0.40.0 - v1.0.0
