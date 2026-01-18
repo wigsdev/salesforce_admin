@@ -4,6 +4,12 @@ Schemas package.
 
 from app.schemas.user import UserCreate, UserLogin, UserResponse, UserUpdate
 from app.schemas.auth import TokenResponse, TokenData
+from app.schemas.progress import (
+    ProgressCreate,
+    ProgressResponse,
+    SprintProgressResponse,
+    UserProgressSummary
+)
 
 __all__ = [
     "UserCreate",
@@ -12,4 +18,8 @@ __all__ = [
     "UserUpdate",
     "TokenResponse",
     "TokenData",
+    "ProgressCreate",
+    "ProgressResponse",
+    "SprintProgressResponse",
+    "UserProgressSummary",
 ]

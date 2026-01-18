@@ -10,19 +10,19 @@
 
 ## 📊 Progreso General
 
-**Total**: 20/45 tareas (44%)
+**Total**: 25/45 tareas (56%)
 
 - 📋 Planning: 5/5 (100%) ✅
 - 🏗️ Infrastructure: 8/8 (100%) ✅
 - 🔐 Authentication: 7/7 (100%) ✅
-- 📄 Markdown Rendering: 0/5 (0%)
+- 📄 Markdown Rendering: 5/5 (100%) ✅
 - 📊 Progress Tracking: 0/6 (0%)
 - 🎨 Frontend: 0/7 (0%)
 - 🧪 Testing: 0/4 (0%)
 - 🚀 Deployment: 0/3 (0%)
 
-**Última actualización**: 17 Enero 2026 - 22:00  
-**Estado**: Fases 2 y 3 completadas (adelantados al cronograma)
+**Última actualización**: 18 Enero 2026 - 00:05  
+**Estado**: Fase 4 completada, iniciando Fase 5 (Progress Tracking)
 
 ---
 
@@ -65,15 +65,15 @@
 
 ---
 
-## 📄 FASE 4: Markdown Rendering (7 tareas)
+## 📄 FASE 4: Markdown Rendering ✅ COMPLETA (5/5 tareas)
 
-- [ ] Instalar python-markdown
-- [ ] Crear MarkdownService
-- [ ] Implementar lectura de archivos `.md`
-- [ ] Implementar conversión Markdown → HTML
-- [ ] Resolver links relativos
-- [ ] Crear endpoint `/docs/{path:path}`
-- [ ] Crear template `doc_viewer.html`
+- [x] Instalar python-markdown
+- [x] Crear MarkdownService con lectura de archivos .md
+- [x] Implementar conversión Markdown → HTML con TOC
+- [x] Crear endpoint `/docs/browse` para navegación
+- [x] Crear endpoint `/docs/{path}` para visualización
+- [x] Crear templates `doc_viewer.html` y `docs_browser.html`
+- [x] Resolver links relativos y breadcrumbs
 
 ---
 

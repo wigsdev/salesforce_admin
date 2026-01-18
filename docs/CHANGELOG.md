@@ -40,6 +40,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - TokenResponse and TokenData schemas
   - Email validation and password length constraints (8-72 chars)
 
+- **Markdown Rendering System** (Phase 4)
+  - MarkdownService for reading and converting .md files to HTML
+  - Support for tables, fenced code, syntax highlighting, and TOC generation
+  - Directory listing and file browsing capabilities
+  - Title extraction from H1 headers or filenames
+  
+- **Documentation Endpoints**
+  - `GET /docs/browse` - Browse documentation directory with folder navigation
+  - `GET /docs/{path}` - View markdown document rendered as HTML
+  
+- **Documentation Templates**
+  - `doc_viewer.html` - Render markdown with TOC sidebar and breadcrumbs
+  - `docs_browser.html` - Directory navigation interface with file/folder icons
+  - Responsive design with purple gradient theme
+  - Clean, modern UI with proper typography
+
 - **Infrastructure** (Phase 2)
   - Complete project structure (app/, content/, tests/, alembic/, scripts/)
   - Docker Compose configuration for local PostgreSQL
@@ -62,8 +78,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SQLAlchemy TypingOnly inheritance error with Python 3.13
 
 ### In Progress
-- Web Platform MVP (v0.30.0) development - 44% complete (20/45 tasks)
-- Next: Phase 4 - Markdown Rendering
+- Web Platform MVP (v0.30.0) development - 56% complete (25/45 tasks)
+- Next: Phase 5 - Progress Tracking System
 
 ---
 
