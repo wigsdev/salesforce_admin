@@ -11,10 +11,14 @@ from sqlalchemy.orm import sessionmaker
 from app.config import settings
 
 # Create database engine
-# Note: psycopg3 uses 'postgresql+psycopg://' instead of 'postgresql://'
-# But SQLAlchemy 2.0 auto-detects the driver
+# Note: psycopg3 uses 'postgresql+psycopg://' dialect
+# We need to replace 'postgresql://' with 'postgresql+psycopg://'
+database_url = settings.DATABASE_URL
+if database_url.startswith("postgresql://"):
+    database_url = database_url.replace("postgresql://", "postgresql+psycopg://", 1)
+
 engine = create_engine(
-    settings.DATABASE_URL,
+    database_url,
     pool_pre_ping=True,  # Verify connections before using
     pool_size=10,        # Number of connections to maintain
     max_overflow=20,     # Max connections beyond pool_size
