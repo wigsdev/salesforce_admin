@@ -5,6 +5,7 @@ Loads environment variables and provides application settings.
 """
 
 from typing import List
+from pydantic import field_validator
 from pydantic_settings import BaseSettings
 
 
@@ -25,7 +26,7 @@ class Settings(BaseSettings):
     ENVIRONMENT: str = "development"
     DEBUG: bool = True
     
-    # CORS
+    # CORS - will be parsed from comma-separated string in .env
     ALLOWED_ORIGINS: List[str] = [
         "http://localhost:3000",
         "http://localhost:8000",
@@ -38,6 +39,14 @@ class Settings(BaseSettings):
     # Pagination
     DEFAULT_PAGE_SIZE: int = 20
     MAX_PAGE_SIZE: int = 100
+    
+    @field_validator('ALLOWED_ORIGINS', mode='before')
+    @classmethod
+    def parse_cors(cls, v):
+        """Parse ALLOWED_ORIGINS from comma-separated string or list."""
+        if isinstance(v, str):
+            return [origin.strip() for origin in v.split(',')]
+        return v
     
     class Config:
         env_file = ".env"
