@@ -9,10 +9,61 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Database Models** (Phase 3)
+  - User model with authentication fields (email, password_hash, role, team)
+  - Sprint model for course structure (number, name, dates, is_active)
+  - Task model for content items (title, category, markdown_path, sprint relationship)
+  - UserProgress model for completion tracking (status, timestamps, notes)
+  - All models with proper relationships, indexes, and constraints
+
+- **Alembic Migrations**
+  - Initial migration (001_initial) with all 4 tables
+  - Configured env.py with psycopg dialect conversion
+  - Migration applied successfully to PostgreSQL
+
+- **Authentication System**
+  - JWT token generation with 7-day expiration (HS256 algorithm)
+  - Password hashing with bcrypt (cost factor 12)
+  - Security utilities (hash_password, verify_password, create_access_token, verify_token)
+  - AuthService for user registration and login
+  - Last login timestamp tracking
+
+- **API Endpoints**
+  - `POST /api/auth/register` - User registration with email uniqueness validation
+  - `POST /api/auth/login` - User login returning JWT access token
+  - `POST /api/auth/logout` - Logout endpoint (client-side token removal)
+  - `GET /api/users/me` - Get current authenticated user (protected endpoint)
+
+- **Pydantic Schemas**
+  - UserCreate, UserLogin, UserResponse, UserUpdate schemas
+  - TokenResponse and TokenData schemas
+  - Email validation and password length constraints (8-72 chars)
+
+- **Infrastructure** (Phase 2)
+  - Complete project structure (app/, content/, tests/, alembic/, scripts/)
+  - Docker Compose configuration for local PostgreSQL
+  - FastAPI application with CORS, static files, and Jinja2 templates
+  - Environment configuration with .env support
+  - Dependency injection for database sessions and authentication
+
+### Changed
+- Updated SQLAlchemy from 2.0.25 to 2.0.36 for Python 3.13 compatibility
+- Updated Pydantic from 2.5.3 to 2.10.5 (pre-built wheels for Python 3.13)
+- Updated FastAPI from 0.109.0 to 0.115.6 (Pydantic 2.10 compatible)
+- Moved content directories (curriculum/, Superbadges/, etc.) to `content/` folder
+- Database URL auto-conversion to postgresql+psycopg:// dialect
+
+### Fixed
+- psycopg2 compatibility by migrating to psycopg v3 (3.2.3)
+- bcrypt version pinned to 4.0.1 for passlib 1.7.4 compatibility
+- ALLOWED_ORIGINS parsing from comma-separated .env string
+- Password max length validation (72 bytes for bcrypt)
+- SQLAlchemy TypingOnly inheritance error with Python 3.13
+
 ### In Progress
-- Web Platform MVP (v0.30.0) development
-- Infrastructure setup for FastAPI application
-- Database schema design and implementation
+- Web Platform MVP (v0.30.0) development - 44% complete (20/45 tasks)
+- Next: Phase 4 - Markdown Rendering
 
 ---
 
