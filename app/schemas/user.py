@@ -16,7 +16,7 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     """Schema for creating a new user."""
-    password: str = Field(..., min_length=8, max_length=100)
+    password: str = Field(..., min_length=8, max_length=72)  # bcrypt max is 72 bytes
 
 
 class UserLogin(BaseModel):
