@@ -20,10 +20,8 @@
                 Progreso Total</div>
             <div style="font-size: 2rem; font-weight: 700; color: var(--primary);" x-text="overallProgress + '%'">0%
             </div>
-            <div
-                style="width: 100%; height: 0.75rem; background: var(--gray-200); border-radius: 999px; overflow: hidden; margin-top: 1rem;">
-                <div style="height: 100%; background: linear-gradient(90deg, var(--primary), var(--secondary)); transition: width 0.5s ease-out;"
-                    :style="`width: ${overallProgress}%`"></div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" :style="{ width: overallProgress + '%' }"></div>
             </div>
         </div>
         <div class="card">
@@ -294,6 +292,24 @@
 </script>
 
 <style>
+    /* Progress Bar */
+    .progress-bar-container {
+        width: 100%;
+        height: 0.75rem;
+        background: var(--gray-200);
+        border-radius: 999px;
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+
+    .progress-bar-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        transition: width 0.5s ease-out;
+        width: 0%;
+        /* Default width */
+    }
+
     /* Specific styles for checked state that are hard to do with classes only */
     input[type="checkbox"].checked-style {
         background-color: var(--green-500) !important;
