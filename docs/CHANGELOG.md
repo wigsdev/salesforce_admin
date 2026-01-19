@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.31.0] - 2026-01-19
+### Added
+- **Mobile First UX**:
+  - Implementado menú "Hamburguesa" responsivo en la barra de navegación para móviles.
+  - Diseño de tarjetas de tareas apilables (`flex-col`) para mejorar la vista en pantallas pequeñas.
+  - Aumentados los tamaños de objetivos táctiles (botones, checkboxes) para facilitar el uso en móviles.
+- **Feedback Visual**:
+  - Sistema de notificaciones "Toast" flotantes para feedback inmediato (Éxito/Error).
+  - Integración de notificaciones al completar/desmarcar tareas.
+
 ## [Unreleased]
 
 ### Added
