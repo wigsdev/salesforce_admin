@@ -118,9 +118,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `AI_ROLE_FRAMEWORK.md`: Framework for AI agent role-switching in solo development
   - `IMPLEMENTATION_PLAN.md`: Comprehensive architecture and implementation plan for MVP
 
+### Added
+- **Feature**: Implementación de fechas límite (Task Deadlines).
+  - Nuevo campo `due_date` en modelo `Task`.
+  - Cálculo automático de fechas en `seed_data.py`.
+  - Indicadores visuales en Dashboard (A tiempo, Atrasado, Completado).
+
+### Fixed
+- **UI/UX**: Corregido el diseño del Dashboard (Flexbox) y restaurada la carga de TailwindCSS en `base.html`.
+- **Lógica**: Corregida validación de fechas (`isOverdue`) para no marcar fechas futuras como atrasadas.
+
 ### In Progress
-- **Feature**: Implementación de fechas límite (Task Deadlines) con indicadores visuales de estado (A tiempo/Atrasado).
-- **Testing**: Pruebas unitarias para nueva lógica de fechas.
+- **Testing**: Verificación visual por parte del usuario.
 
 ### Changed
 - **Gestor de Versiones Documentation**
