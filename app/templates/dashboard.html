@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Salesforce Admin Learning Platform</title>
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <style>
+        :root {
+            --primary: #667eea;
+            --primary-dark: #5a67d8;
+            --secondary: #764ba2;
+            --gray-100: #f7fafc;
+            --gray-200: #edf2f7;
+            --gray-300: #e2e8f0;
+            --gray-700: #4a5568;
+            --gray-800: #2d3748;
+            --green-500: #48bb78;
+            --yellow-500: #ecc94b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--gray-100);
+            color: var(--gray-800);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .stat-label {
+            color: var(--gray-700);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 0.75rem;
+            background: var(--gray-200);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.5s ease-out;
+        }
+
+        /* Task List */
+        .sprint-section {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .sprint-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #f8f9fa, #ffffff);
+        }
+
+        .sprint-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .task-list {
+            list-style: none;
+        }
+
+        .task-item {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: background 0.2s;
+        }
+
+        .task-item:last-child {
+            border-bottom: none;
+        }
+
+        .task-item:hover {
+            background: var(--gray-100);
+        }
+
+        /* Checkbox Styling */
+        .checkbox-wrapper {
+            position: relative;
+            width: 24px;
+            height: 24px;
+        }
+
+        .custom-checkbox {
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--gray-300);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .custom-checkbox:checked {
+            background: var(--green-500);
+            border-color: var(--green-500);
+        }
+
+        .custom-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 16px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .task-content {
+            flex: 1;
+        }
+
+        .task-title {
+            font-weight: 500;
+            display: block;
+        }
+
+        .task-title.completed {
+            text-decoration: line-through;
+            color: var(--gray-700);
+            opacity: 0.7;
+        }
+
+        .task-meta {
+            font-size: 0.875rem;
+            color: var(--gray-700);
+            margin-top: 0.25rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-clase {
+            background: #ebf8ff;
+            color: #4299e1;
+        }
+
+        .badge-practica {
+            background: #faf5ff;
+            color: #805ad5;
+        }
+
+        .badge-superbadge {
+            background: #fff5f5;
+            color: #f56565;
+        }
+
+        /* Loading & Empty States */
+        .loading-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--gray-700);
+        }
+
+        /* Navigation */
+        .nav-header {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.25rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body x-data="dashboard()">
+    <!-- Navigation -->
+    <nav class="nav-header">
+        <div class="nav-brand">Admin Salesforce Learning</div>
+        <div>
+            <span x-text="user.name" class="font-medium mr-4"></span>
+            <button @click="logout" class="text-sm text-gray-600 hover:text-primary">Cerrar Sesión</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Stats Overview -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Progreso Total</div>
+                <div class="stat-value" x-text="overallProgress + '%'">0%</div>
+                <div class="progress-container">
+                    <div class="progress-bar" :style="`width: ${overallProgress}%`"></div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Tareas Completadas</div>
+                <div class="stat-value">
+                    <span x-text="completedTasks">0</span>
+                    <span class="text-gray-400 text-lg">/ <span x-text="totalTasks">0</span></span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Sprints Activos</div>
+                <div class="stat-value">1</div>
+            </div>
+        </div>
+
+        <!-- Sprints -->
+        <template x-for="sprint in sprints" :key="sprint.id">
+            <div class="sprint-section">
+                <div class="sprint-header">
+                    <div>
+                        <h2 class="sprint-title" x-text="`Sprint ${sprint.number}: ${sprint.name}`"></h2>
+                        <div class="text-sm text-gray-500 mt-1" x-text="sprint.description"></div>
+                    </div>
+                </div>
+
+                <ul class="task-list">
+                    <template x-for="task in sprint.tasks" :key="task.id">
+                        <li class="task-item">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" class="custom-checkbox" :checked="task.status === 'completed'"
+                                    @change="toggleTask(task)">
+                            </div>
+                            <div class="task-content">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <a :href="`/docs/${task.markdown_path}`"
+                                            class="task-title hover:text-blue-600 hover:underline"
+                                            :class="{ 'completed': task.status === 'completed' }" x-text="task.title">
+                                        </a>
+                                        <div class="task-meta">
+                                            <span class="badge" :class="`badge-${task.category.toLowerCase()}`"
+                                                x-text="task.category"></span>
+                                        </div>
+                                    </div>
+                                    <template x-if="task.status === 'completed'">
+                                        <span class="text-xs text-green-600 font-medium">Completado</span>
+                                    </template>
+                                </div>
+                            </div>
+                        </li>
+                    </template>
+
+                    <!-- Empty State for Sprint -->
+                    <template x-if="!sprint.tasks || sprint.tasks.length === 0">
+                        <li class="p-6 text-center text-gray-500 italic">
+                            No hay tareas en este sprint
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </template>
+
+        <!-- Loading State -->
+        <div x-show="loading" class="loading-state">
+            <p>Cargando tu progreso...</p>
+        </div>
+    </div>
+
+    <script>
+        function dashboard() {
+            return {
+                loading: true,
+                user: {},
+                sprints: [],
+                completedTasks: 0,
+                totalTasks: 0,
+                overallProgress: 0,
+                token: localStorage.getItem('token'),
+
+                async init() {
+                    if (!this.token) {
+                        window.location.href = '/login';
+                        return;
+                    }
+
+                    await this.fetchUser();
+                    await this.fetchData();
+                    this.loading = false;
+                },
+
+                async fetchUser() {
+                    try {
+                        const res = await fetch('/api/users/me', {
+                            headers: { 'Authorization': `Bearer ${this.token}` }
+                        });
+                        if (res.ok) this.user = await res.json();
+                    } catch (e) {
+                        console.error('Error fetching user', e);
+                    }
+                },
+
+                async fetchData() {
+                    // This is a mock implementation. 
+                    // In a real scenario, you'd fetch sprints and merge with progress data.
+                    // For now, we'll fetch just progress and current sprint tasks
+
+                    try {
+                        // 1. Fetch Sprint 1 details (since we seeded it)
+                        // Ideally we need an endpoint to get all sprints + tasks
+                        // For MVP, we'll hit the sprint endpoint we have or mock the structure
+
+                        // NOTE: Backend needs an endpoint to listing tasks. 
+                        // For MVP, we will fetch progress and merge with a known structure 
+                        // or add an endpoint to get tasks.
+
+                        // Let's assume we have this structure for now based on your seed
+                        const tasks = [
+                            { id: 1, sprint_id: 1, category: 'Clase', title: 'Clase 1: Introducción al Ecosistema Salesforce', markdown_path: 'curriculum/sprint1/clase1.md' },
+                            { id: 2, sprint_id: 1, category: 'Practica', title: 'Práctica 1: Configuración de tu Org', markdown_path: 'curriculum/sprint1/practica1.md' },
+                            { id: 3, sprint_id: 1, category: 'Superbadge', title: 'Superbadge: Security Specialist', markdown_path: 'curriculum/sprint1/superbadge_security.md' }
+                        ];
+
+                        const sprint1 = {
+                            id: 1,
+                            number: 1,
+                            name: 'Fundamentos y Modelado de Datos',
+                            description: 'Introducción a Salesforce, configuración de org.',
+                            tasks: tasks
+                        };
+
+                        // 2. Fetch User Progress
+                        const res = await fetch('/api/progress/me', {
+                            headers: { 'Authorization': `Bearer ${this.token}` }
+                        });
+                        const progressData = await res.json();
+
+                        // 3. Merge Progress
+                        const progressMap = {};
+                        progressData.forEach(p => progressMap[p.task_id] = p.status);
+
+                        sprint1.tasks = sprint1.tasks.map(t => ({
+                            ...t,
+                            status: progressMap[t.id] || 'not_started'
+                        }));
+
+                        this.sprints = [sprint1];
+                        this.calculateStats();
+
+                    } catch (e) {
+                        console.error('Error loading dashboard data', e);
+                    }
+                },
+
+                calculateStats() {
+                    let total = 0;
+                    let completed = 0;
+
+                    this.sprints.forEach(sprint => {
+                        sprint.tasks.forEach(task => {
+                            total++;
+                            if (task.status === 'completed') completed++;
+                        });
+                    });
+
+                    this.totalTasks = total;
+                    this.completedTasks = completed;
+                    this.overallProgress = total > 0 ? Math.round((completed / total) * 100) : 0;
+                },
+
+                async toggleTask(task) {
+                    const newStatus = task.status === 'completed' ? 'not_started' : 'completed';
+
+                    // Optimistic update
+                    task.status = newStatus;
+                    this.calculateStats();
+
+                    try {
+                        const res = await fetch('/api/progress/mark', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': `Bearer ${this.token}`
+                            },
+                            body: JSON.stringify({
+                                task_id: task.id,
+                                status: newStatus
+                            })
+                        });
+
+                        if (!res.ok) {
+                            // Revert on error
+                            task.status = newStatus === 'completed' ? 'not_started' : 'completed';
+                            this.calculateStats();
+                            alert('Error updating task');
+                        }
+                    } catch (e) {
+                        console.error(e);
+                        task.status = newStatus === 'completed' ? 'not_started' : 'completed';
+                        this.calculateStats();
+                    }
+                },
+
+                logout() {
+                    localStorage.removeItem('token');
+                    window.location.href = '/login';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

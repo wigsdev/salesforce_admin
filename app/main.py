@@ -35,15 +35,6 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/templates")
 
 
-@app.get("/")
-async def root():
-    """Root endpoint - health check."""
-    return {
-        "app": settings.APP_NAME,
-        "version": settings.VERSION,
-        "status": "running",
-        "environment": settings.ENVIRONMENT
-    }
 
 
 @app.get("/health")
@@ -53,12 +44,13 @@ async def health_check():
 
 
 # Include routers
-from app.routers import auth, users, docs, progress
+from app.routers import auth, users, docs, progress, frontend
 
 app.include_router(auth.router, prefix="/api/auth", tags=["Authentication"])
 app.include_router(users.router, prefix="/api/users", tags=["Users"])
 app.include_router(docs.router, prefix="/docs", tags=["Documentation"])
 app.include_router(progress.router, prefix="/api/progress", tags=["Progress"])
+app.include_router(frontend.router, tags=["Frontend"])
 
 # TODO: Include other routers when created
 # from app.routers import sprints
