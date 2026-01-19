@@ -50,6 +50,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `GET /docs/browse` - Browse documentation directory with folder navigation
   - `GET /docs/{path}` - View markdown document rendered as HTML
   
+- **Progress Tracking System** (Phase 5)
+  - `ProgressService` for managing user task completion
+  - REST API endpoints for user, sprint, and team progress
+  - Automatic timestamp tracking (started_at, completed_at)
+  - Status validation (not_started, in_progress, completed)
+  - Seed data script for initial content population
+
+- **Frontend Dashboard**
+  - Interactive Dashboard with Alpine.js
+  - Real-time progress stats calculation
+  - Task completion toggling with optimistic UI updates
+  - Login page with JWT token management and error handling
+  - Responsive layout with navigation bar and sprint visualization
+
+- **Frontend Polish & Unification** (Phase 6)
+  - Unified Design System with Vanilla CSS (`styles.css`)
+  - `base.html` Jinja2 template for consistent layout and navigation
+  - Full Authentication Flow: Login and **Registration** (`/register`)
+  - Refactored `dashboard.html` with responsive grid layout
+  - Improved Documentation Browser with folder/file icons
+  - Enhanced Document Viewer with Table of Contents sidebar
+  - Responsive design for mobile devices
+
 - **Documentation Templates**
   - `doc_viewer.html` - Render markdown with TOC sidebar and breadcrumbs
   - `docs_browser.html` - Directory navigation interface with file/folder icons
@@ -78,8 +101,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SQLAlchemy TypingOnly inheritance error with Python 3.13
 
 ### In Progress
-- Web Platform MVP (v0.30.0) development - 56% complete (25/45 tasks)
-- Next: Phase 5 - Progress Tracking System
+### In Progress
+- Web Platform MVP (v0.30.0) development - 84% complete (38/45 tasks)
+- Next: Phase 7 - Testing & Quality Assurance
 
 ---
 
@@ -93,6 +117,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `TASK_LIST_MVP.md`: Detailed task list with 45 tasks for MVP v0.30.0
   - `AI_ROLE_FRAMEWORK.md`: Framework for AI agent role-switching in solo development
   - `IMPLEMENTATION_PLAN.md`: Comprehensive architecture and implementation plan for MVP
+
+### In Progress
+- **Feature**: Implementación de fechas límite (Task Deadlines) con indicadores visuales de estado (A tiempo/Atrasado).
+- **Testing**: Pruebas unitarias para nueva lógica de fechas.
 
 ### Changed
 - **Gestor de Versiones Documentation**

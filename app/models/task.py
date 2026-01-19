@@ -33,6 +33,7 @@ class Task(Base):
     description = Column(Text, nullable=True)
     markdown_path = Column(String(500), nullable=False, unique=True)
     order_index = Column(Integer, default=0)
+    due_date = Column(DateTime, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
     
     # Relationships

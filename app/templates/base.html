@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Salesforce Admin Learning Platform{% endblock %}</title>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    {% block head %}{% endblock %}
+</head>
+
+<body x-data="authData()">
+
+    <!-- Navigation -->
+    <nav class="nav-header">
+        <a href="/" class="nav-brand">Admin Salesforce Learning</a>
+
+        <div class="nav-links">
+            <template x-if="user">
+                <div class="flex items-center gap-4">
+                    <a href="/" class="nav-link">Dashboard</a>
+                    <a href="/docs/browse" class="nav-link">Documentación</a>
+                    <!-- <a href="/team" class="nav-link">Equipo</a> -->
+
+                    <div class="flex items-center gap-3 ml-4 bg-gray-50 px-3 py-1 rounded-full border border-gray-200">
+                        <span x-text="user.name" class="font-bold text-sm text-gray-700"></span>
+                        <button @click="logout" class="text-sm text-red hover:text-red-800 font-medium">Salir</button>
+                    </div>
+                </div>
+            </template>
+
+            <template x-if="!user">
+                <div class="flex items-center gap-4">
+                    <a href="/login" class="nav-link">Login</a>
+                    <a href="/register" class="btn btn-primary text-sm py-2">Registrarse</a>
+                </div>
+            </template>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>© 2026 Admin Salesforce Learning Platform. MVP v0.30.0</p>
+    </footer>
+
+    <!-- Global Auth Logic -->
+    <script>
+        function authData() {
+            return {
+                user: null,
+                token: localStorage.getItem('token'),
+
+                async init() {
+                    if (this.token) {
+                        await this.fetchUser();
+                    } else {
+                        // Check if current page requires auth
+                        const publicPages = ['/login', '/register'];
+                        if (!publicPages.includes(window.location.pathname)) {
+                            window.location.href = '/login';
+                        }
+                    }
+                },
+
+                async fetchUser() {
+                    try {
+                        const res = await fetch('/api/users/me', {
+                            headers: { 'Authorization': `Bearer ${this.token}` }
+                        });
+                        if (res.ok) {
+                            this.user = await res.json();
+                        } else {
+                            this.logout();
+                        }
+                    } catch (e) {
+                        console.error('Auth error', e);
+                    }
+                },
+
+                logout() {
+                    localStorage.removeItem('token');
+                    this.user = null;
+                    this.token = null;
+                    window.location.href = '/login';
+                }
+            }
+        }
+    </script>
+
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

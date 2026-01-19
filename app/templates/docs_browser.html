@@ -1,159 +1,98 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Salesforce Admin Learning Platform</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        
-        .header h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-        
-        .header p {
-            opacity: 0.9;
-            font-size: 16px;
-        }
-        
-        .breadcrumb {
-            background: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        
-        .breadcrumb a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        
-        .file-list {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        
-        .file-item {
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            transition: background 0.2s;
-        }
-        
-        .file-item:last-child {
-            border-bottom: none;
-        }
-        
-        .file-item:hover {
-            background: #f9f9f9;
-        }
-        
-        .file-item a {
-            color: #333;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            width: 100%;
-        }
-        
-        .file-icon {
-            font-size: 24px;
-            margin-right: 15px;
-        }
-        
-        .file-name {
-            font-size: 16px;
-            font-weight: 500;
-        }
-        
-        .empty-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: #999;
-        }
-        
-        .empty-state .icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>📚 Explorador de Documentación</h1>
-            <p>Navega por el contenido del curso</p>
-        </div>
-        
-        {% if current_path %}
-        <div class="breadcrumb">
-            <a href="/docs/browse">🏠 Inicio</a>
-            {% if current_path %}
-                / {{ current_path }}
-            {% endif %}
-        </div>
-        {% endif %}
-        
-        <div class="file-list">
-            {% if files %}
-                {% for file in files %}
-                <div class="file-item">
-                    {% if file.type == 'directory' %}
-                        <a href="/docs/browse?path={{ file.path }}">
-                            <span class="file-icon">📁</span>
-                            <span class="file-name">{{ file.name }}</span>
-                        </a>
-                    {% else %}
-                        <a href="/docs/{{ file.path }}">
-                            <span class="file-icon">📄</span>
-                            <span class="file-name">{{ file.name }}</span>
-                        </a>
-                    {% endif %}
-                </div>
-                {% endfor %}
-            {% else %}
-                <div class="empty-state">
-                    <div class="icon">📭</div>
-                    <p>No hay archivos en este directorio</p>
-                </div>
-            {% endif %}
-        </div>
+{% extends "base.html" %}
+
+{% block title %}Explorar Documentación - Salesforce Admin{% endblock %}
+
+{% block head %}
+<style>
+    .browser-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .browser-item {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s, box-shadow 0.2s;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid transparent;
+    }
+
+    .browser-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-color: var(--primary);
+    }
+
+    .item-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--primary);
+    }
+
+    .item-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--gray-800);
+        margin-bottom: 0.5rem;
+    }
+
+    .item-meta {
+        font-size: 0.875rem;
+        color: var(--gray-500);
+        margin-top: auto;
+    }
+
+    .folder-icon {
+        color: var(--primary);
+    }
+
+    .file-icon {
+        color: var(--secondary);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="mb-4">
+        <h1 class="page-title">Explorar Documentación</h1>
+        <p class="page-subtitle">Navega por el contenido del curso</p>
     </div>
-</body>
-</html>
+
+    <div class="browser-grid">
+        <!-- Back Button (if not root) -->
+        <!-- Logic to be added in backend to verify root, for now hardcoded root doesn't need back -->
+
+        <!-- Folders -->
+        {% for item in files if item.type == 'directory' %}
+        <a href="/docs/browse?path={{ item.path }}" class="browser-item">
+            <div class="item-icon folder-icon">📁</div>
+            <div class="item-title">{{ item.name }}</div>
+            <div class="item-meta">Carpeta</div>
+        </a>
+        {% endfor %}
+
+        <!-- Files -->
+        {% for item in files if item.type != 'directory' %}
+        <a href="/docs/{{ item.path }}" class="browser-item">
+            <div class="item-icon file-icon">📄</div>
+            <div class="item-title">{{ item.name }}</div>
+            <div class="item-meta">Documento</div>
+        </a>
+        {% endfor %}
+    </div>
+
+    {% if not files %}
+    <div class="text-center py-12 text-gray-500">
+        <p>Esta carpeta está vacía.</p>
+        <a href="/docs/browse" class="btn btn-primary mt-4">Volver al inicio</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

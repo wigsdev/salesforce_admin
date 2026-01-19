@@ -1,101 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Salesforce Admin Learning Platform</title>
-    <!-- Alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+{% block title %}Iniciar Sesión - Salesforce Admin{% endblock %}
 
-        .login-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 1rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .title {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #2d3748;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #4a5568;
-            font-size: 0.875rem;
-            font-weight: 600;
-        }
-
-        input {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.5rem;
-            margin-top: 0.25rem;
-            font-size: 1rem;
-            transition: border-color 0.2s;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        button {
-            width: 100%;
-            padding: 0.75rem;
-            background: #667eea;
-            color: white;
-            border: none;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        button:hover {
-            background: #5a67d8;
-        }
-
-        button:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-
-        .error-message {
-            color: #e53e3e;
-            font-size: 0.875rem;
-            margin-top: 1rem;
-            text-align: center;
-        }
-    </style>
-</head>
-
-<body x-data="loginForm()">
-    <div class="login-card">
-        <h1 class="title">Iniciar Sesión</h1>
+{% block content %}
+<div class="container"
+    style="display: flex; align-items: center; justify-content: center; min-height: calc(100vh - 80px);">
+    <div class="form-card" x-data="loginForm()">
+        <h1 class="page-title text-center" style="margin-bottom: 2rem;">Acceder</h1>
 
         <form @submit.prevent="submitLogin">
             <div class="form-group">
@@ -108,67 +19,67 @@
                 <input type="password" id="password" x-model="password" required placeholder="••••••••">
             </div>
 
-            <button type="submit" :disabled="loading" x-text="loading ? 'Entrando...' : 'Entrar'"></button>
+            <button type="submit" class="btn btn-primary btn-full" :disabled="loading"
+                x-text="loading ? 'Entrando...' : 'Entrar'"></button>
 
-            <div x-show="error" class="error-message" x-text="error"></div>
+            <div x-show="error" class="error-message" x-text="error" style="display: none;"></div>
+
+            <div class="text-center mt-4 text-sm">
+                <span style="color: var(--gray-600);">¿No tienes cuenta?</span>
+                <a href="/register" style="color: var(--primary); font-weight: 600; text-decoration: none;">Regístrate
+                    aquí</a>
+            </div>
         </form>
     </div>
+</div>
+{% endblock %}
 
-    <script>
-        function loginForm() {
-            return {
-                username: '',
-                password: '',
-                loading: false,
-                error: '',
+{% block scripts %}
+<script>
+    function loginForm() {
+        return {
+            username: '',
+            password: '',
+            loading: false,
+            error: '',
 
-                async submitLogin() {
-                    this.loading = true;
-                    this.error = '';
+            async submitLogin() {
+                this.loading = true;
+                this.error = '';
 
-                    try {
-                        const res = await fetch('/api/auth/login', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                                email: this.username,
-                                password: this.password
-                            })
-                        });
+                try {
+                    const res = await fetch('/api/auth/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            email: this.username,
+                            password: this.password
+                        })
+                    });
 
-                        const data = await res.json();
+                    const data = await res.json();
 
-                        if (!res.ok) {
-                            let errorMessage = 'Error al iniciar sesión';
-                            if (data.detail) {
-                                if (typeof data.detail === 'string') {
-                                    errorMessage = data.detail;
-                                } else if (Array.isArray(data.detail)) {
-                                    errorMessage = data.detail.map(e => e.msg).join(', ');
-                                } else {
-                                    errorMessage = JSON.stringify(data.detail);
-                                }
-                            }
-                            throw new Error(errorMessage);
+                    if (!res.ok) {
+                        let errorMessage = 'Error al iniciar sesión';
+                        if (data.detail) {
+                            if (typeof data.detail === 'string') errorMessage = data.detail;
+                            else if (Array.isArray(data.detail)) errorMessage = data.detail.map(e => e.msg).join(', ');
                         }
-
-                        // Save token
-                        localStorage.setItem('token', data.access_token);
-
-                        // Redirect to dashboard
-                        window.location.href = '/';
-
-                    } catch (e) {
-                        this.error = e.message;
-                    } finally {
-                        this.loading = false;
+                        throw new Error(errorMessage);
                     }
+
+                    localStorage.setItem('token', data.access_token);
+                    window.location.href = '/';
+
+                } catch (e) {
+                    this.error = e.message;
+                } finally {
+                    this.loading = false;
                 }
             }
         }
-    </script>
-</body>
-
-</html>
+    }
+</script>
+{% endblock %}

@@ -1,238 +1,246 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Salesforce Admin Learning Platform</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+{% block title %}{{ title }} - Salesforce Admin{% endblock %}
+
+{% block head %}
+<style>
+    /* Documentation specific styles */
+    .docs-layout {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    /* Sidebar */
+    .toc-sidebar {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 100px;
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+    }
+
+    .toc-title {
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--gray-800);
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--gray-200);
+    }
+
+    .toc ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .toc li {
+        margin-bottom: 0.5rem;
+    }
+
+    .toc a {
+        text-decoration: none;
+        color: var(--gray-600);
+        font-size: 0.9rem;
+        display: block;
+        padding: 0.25rem 0;
+        transition: color 0.2s;
+    }
+
+    .toc a:hover {
+        color: var(--primary);
+    }
+
+    .toc ul ul {
+        padding-left: 1rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Content Area */
+    .doc-content {
+        background: white;
+        padding: 3rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        min-height: 500px;
+    }
+
+    /* Markdown Styles */
+    .markdown-body h1 {
+        font-size: 2.25rem;
+        font-weight: 800;
+        color: var(--gray-900);
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid var(--gray-200);
+        padding-bottom: 0.5rem;
+    }
+
+    .markdown-body h2 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--gray-800);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .markdown-body h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--gray-800);
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .markdown-body p {
+        margin-bottom: 1rem;
+        color: var(--gray-700);
+        line-height: 1.7;
+    }
+
+    .markdown-body ul,
+    .markdown-body ol {
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+        color: var(--gray-700);
+    }
+
+    .markdown-body li {
+        margin-bottom: 0.5rem;
+    }
+
+    .markdown-body code {
+        background: var(--gray-100);
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-family: monospace;
+        font-size: 0.9em;
+        color: var(--secondary);
+    }
+
+    .markdown-body pre {
+        background: var(--gray-900);
+        color: var(--gray-100);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .markdown-body pre code {
+        background: transparent;
+        color: inherit;
+        padding: 0;
+    }
+
+    .markdown-body blockquote {
+        border-left: 4px solid var(--primary);
+        padding-left: 1rem;
+        margin-left: 0;
+        color: var(--gray-600);
+        font-style: italic;
+        background: var(--blue-100);
+        padding: 1rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .markdown-body table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1.5rem;
+    }
+
+    .markdown-body th,
+    .markdown-body td {
+        border: 1px solid var(--gray-300);
+        padding: 0.75rem;
+        text-align: left;
+    }
+
+    .markdown-body th {
+        background: var(--gray-100);
+        font-weight: 600;
+    }
+
+    .markdown-body img {
+        max-width: 100%;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 1rem 0;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+        margin-bottom: 1rem;
+        color: var(--gray-600);
+        font-size: 0.9rem;
+    }
+
+    .breadcrumbs a {
+        color: var(--primary);
+        text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .docs-layout {
+            grid-template-columns: 1fr;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+        .toc-sidebar {
+            display: none;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+        /* Hide TOC on mobile for now */
+    }
+</style>
+{% endblock %}
 
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+{% block content %}
+<div class="container docs-layout">
+    <!-- Sidebar -->
+    <aside class="toc-sidebar">
+        <div class="toc-title">En esta página</div>
+        <div class="toc">
+            {{ toc | safe }}
+        </div>
 
-        .header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
+        <div style="margin-top: 2rem; pt: 1rem; border-top: 1px solid var(--gray-200);">
+            <a href="/docs/browse" class="btn btn-primary btn-full text-center"
+                style="color: white; text-decoration: none;">
+                ← Volver al índice
+            </a>
+        </div>
+    </aside>
 
-        .breadcrumb {
-            font-size: 14px;
-            opacity: 0.9;
-        }
+    <!-- Main Content -->
+    <article>
+        <div class="breadcrumbs">
+            <a href="/">Inicio</a> / <a href="/docs/browse">Documentación</a> / <span>{{ title }}</span>
+        </div>
 
-        .breadcrumb a {
-            color: white;
-            text-decoration: none;
-        }
+        <div class="doc-content">
+            <div class="markdown-body">
+                {{ html_content | safe }}
+            </div>
 
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-
-        .content-wrapper {
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 30px;
-        }
-
-        .toc {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 20px;
-            max-height: calc(100vh - 40px);
-            overflow-y: auto;
-        }
-
-        .toc h3 {
-            margin-bottom: 15px;
-            color: #667eea;
-        }
-
-        .toc ul {
-            list-style: none;
-        }
-
-        .toc a {
-            color: #666;
-            text-decoration: none;
-            display: block;
-            padding: 5px 0;
-        }
-
-        .toc a:hover {
-            color: #667eea;
-        }
-
-        .content {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .markdown-body h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        .markdown-body h2 {
-            font-size: 24px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #34495e;
-        }
-
-        .markdown-body h3 {
-            font-size: 20px;
-            margin-top: 25px;
-            margin-bottom: 12px;
-            color: #34495e;
-        }
-
-        .markdown-body p {
-            margin-bottom: 15px;
-        }
-
-        .markdown-body ul,
-        .markdown-body ol {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-
-        .markdown-body li {
-            margin-bottom: 8px;
-        }
-
-        .markdown-body code {
-            background: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-        }
-
-        .markdown-body pre {
-            background: #2d2d2d;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            margin-bottom: 20px;
-        }
-
-        .markdown-body pre code {
-            background: none;
-            color: inherit;
-            padding: 0;
-        }
-
-        .markdown-body table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        .markdown-body th,
-        .markdown-body td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        .markdown-body th {
-            background: #667eea;
-            color: white;
-            font-weight: 600;
-        }
-
-        .markdown-body tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-
-        .markdown-body a {
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .markdown-body a:hover {
-            text-decoration: underline;
-        }
-
-        .markdown-body blockquote {
-            border-left: 4px solid #667eea;
-            padding-left: 20px;
-            margin: 20px 0;
-            color: #666;
-            font-style: italic;
-        }
-
-        @media (max-width: 768px) {
-            .content-wrapper {
-                grid-template-columns: 1fr;
-            }
-
-            .toc {
-                position: static;
-                max-height: none;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>{{ title }}</h1>
-            <div class="breadcrumb">
-                <a href="/docs/browse">📚 Documentación</a> / {{ path }}
+            <!-- Navigation Footer -->
+            <div
+                style="margin-top: 3rem; pt: 2rem; border-top: 1px solid var(--gray-200); display: flex; justify-content: space-between;">
+                <a href="/docs/browse" style="text-decoration: none; color: var(--gray-600); font-weight: 500;">
+                    ← Volver al navegador
+                </a>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+                    style="background: none; border: none; color: var(--primary); cursor: pointer; font-weight: 500;">
+                    Ir arriba ↑
+                </button>
             </div>
         </div>
-
-        <div class="content-wrapper">
-            {% if toc %}
-            <aside class="toc">
-                <h3>📑 Contenido</h3>
-                {{ toc|safe }}
-            </aside>
-            {% endif %}
-
-            <main class="content">
-                <div class="markdown-body">
-                    {{ html_content|safe }}
-                </div>
-            </main>
-        </div>
-    </div>
-</body>
-
-</html>
+    </article>
+</div>
+{% endblock %}

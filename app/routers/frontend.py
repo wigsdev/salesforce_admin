@@ -18,3 +18,10 @@ async def login_page(request: Request):
     Render login page.
     """
     return templates.TemplateResponse("login.html", {"request": request})
+
+@router.get("/register", response_class=HTMLResponse)
+async def register_page(request: Request):
+    """
+    Render registration page.
+    """
+    return templates.TemplateResponse("register.html", {"request": request})
