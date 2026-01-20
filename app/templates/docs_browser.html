@@ -86,29 +86,44 @@
         <p class="page-subtitle">Navega por el contenido del curso</p>
     </div>
 
-    <div class="browser-grid">
-        <!-- Back Button (if not root) -->
-        <!-- Logic to be added in backend to verify root, for now hardcoded root doesn't need back -->
+    <div x-data="{ loading: true }" x-init="setTimeout(() => loading = false, 400)">
 
-        <!-- Folders -->
-        {% for item in files if item.type == 'directory' %}
-        <a href="/docs/browse?path={{ item.path }}"
-            class="browser-item dark:bg-dark-surface dark:border-dark-border dark:text-gray-200">
-            <div class="item-icon folder-icon">📁</div>
-            <div class="item-title dark:text-gray-100">{{ item.name | replace('_', ' ') }}</div>
-            <div class="item-meta dark:text-gray-400">Carpeta</div>
-        </a>
-        {% endfor %}
+        <!-- Skeleton Grid (Loading State) -->
+        <div x-show="loading" class="browser-grid">
+            <template x-for="i in 6">
+                <div class="browser-item dark:bg-dark-surface dark:border-dark-border">
+                    <div class="w-12 h-12 skeleton mb-4"></div>
+                    <div class="h-6 w-3/4 skeleton mb-2"></div>
+                    <div class="h-4 w-1/2 skeleton mt-auto"></div>
+                </div>
+            </template>
+        </div>
 
-        <!-- Files -->
-        {% for item in files if item.type != 'directory' %}
-        <a href="/docs/{{ item.path }}"
-            class="browser-item dark:bg-dark-surface dark:border-dark-border dark:text-gray-200">
-            <div class="item-icon file-icon">📄</div>
-            <div class="item-title dark:text-gray-100">{{ item.name | replace('_', ' ') }}</div>
-            <div class="item-meta dark:text-gray-400">Documento</div>
-        </a>
-        {% endfor %}
+        <!-- Real Content (Loaded State) -->
+        <div x-show="!loading" class="browser-grid" style="display: none;">
+            <!-- Back Button (if not root) -->
+            <!-- Logic to be added in backend to verify root, for now hardcoded root doesn't need back -->
+
+            <!-- Folders -->
+            {% for item in files if item.type == 'directory' %}
+            <a href="/docs/browse?path={{ item.path }}"
+                class="browser-item dark:bg-dark-surface dark:border-dark-border dark:text-gray-200">
+                <div class="item-icon folder-icon">📁</div>
+                <div class="item-title dark:text-gray-100">{{ item.name | replace('_', ' ') }}</div>
+                <div class="item-meta dark:text-gray-400">Carpeta</div>
+            </a>
+            {% endfor %}
+
+            <!-- Files -->
+            {% for item in files if item.type != 'directory' %}
+            <a href="/docs/{{ item.path }}"
+                class="browser-item dark:bg-dark-surface dark:border-dark-border dark:text-gray-200">
+                <div class="item-icon file-icon">📄</div>
+                <div class="item-title dark:text-gray-100">{{ item.name | replace('_', ' ') }}</div>
+                <div class="item-meta dark:text-gray-400">Documento</div>
+            </a>
+            {% endfor %}
+        </div>
     </div>
 
     {% if not files %}
