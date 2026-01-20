@@ -41,10 +41,19 @@ body {
 
 /* Layout */
 .container {
-    max-width: 1200px;
+    max-width: 1400px !important;
+    /* Force fluid width up to 1400px, ignoring Tailwind breakpoints */
     margin: 0 auto;
-    padding: 2rem;
-    width: 100%;
+    width: 100% !important;
+    padding: 0 1rem;
+    /* 16px - Mobile */
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+        /* 32px - Tablet/Desktop */
+    }
 }
 
 .main-content {
@@ -54,9 +63,9 @@ body {
 /* Navigation */
 .nav-header {
     background: white;
-    padding: 1rem 2rem;
+    padding: 0 !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    display: flex;
+    position: sticky;
     justify-content: space-between;
     align-items: center;
     position: sticky;

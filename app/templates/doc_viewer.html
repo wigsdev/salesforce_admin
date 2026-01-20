@@ -8,12 +8,18 @@
     .docs-layout {
         display: grid;
         grid-template-columns: 280px 1fr;
+        grid-template-areas:
+            ". breadcrumbs"
+            "sidebar content";
         gap: 2rem;
         align-items: start;
+        padding-top: 1.5rem !important;
+        /* 24px */
     }
 
     /* Sidebar */
     .toc-sidebar {
+        grid-area: sidebar;
         background: white;
         padding: 1.5rem;
         border-radius: 1rem;
@@ -60,6 +66,12 @@
     }
 
     /* Content Area */
+    .doc-content-wrapper {
+        grid-area: content;
+        min-width: 0;
+        /* Prevent grid overflow */
+    }
+
     .doc-content {
         background: white;
         padding: 3rem;
@@ -173,9 +185,10 @@
 
     /* Breadcrumbs */
     .breadcrumbs {
-        margin-bottom: 1rem;
+        grid-area: breadcrumbs;
         color: var(--gray-600);
         font-size: 0.9rem;
+        text-align: left;
     }
 
     .breadcrumbs a {
@@ -190,13 +203,75 @@
     @media (max-width: 768px) {
         .docs-layout {
             grid-template-columns: 1fr;
+            grid-template-areas:
+                "breadcrumbs"
+                "content";
         }
 
         .toc-sidebar {
             display: none;
         }
+    }
 
-        /* Hide TOC on mobile for now */
+    /* Dark Mode Overrides */
+    .dark .toc-sidebar,
+    .dark .doc-content {
+        background-color: #1E293B;
+        /* dark:bg-dark-surface */
+        border: 1px solid #334155;
+        /* dark:border-dark-border */
+    }
+
+    .dark .toc-title {
+        color: #F8FAFC;
+        border-bottom-color: #334155;
+    }
+
+    .dark .toc a {
+        color: #94A3B8;
+    }
+
+    .dark .toc a:hover {
+        color: #38BDF8;
+        /* sky-400 */
+    }
+
+    .dark .markdown-body h1,
+    .dark .markdown-body h2,
+    .dark .markdown-body h3 {
+        color: #F8FAFC;
+        border-bottom-color: #334155;
+    }
+
+    .dark .markdown-body p,
+    .dark .markdown-body ul,
+    .dark .markdown-body ol {
+        color: #CBD5E1;
+        /* gray-300 */
+    }
+
+    .dark .markdown-body code {
+        background-color: #0F172A;
+        color: #38BDF8;
+    }
+
+    .dark .markdown-body pre {
+        background-color: #0F172A;
+        border: 1px solid #334155;
+    }
+
+    .dark .markdown-body table th,
+    .dark .markdown-body table td {
+        border-color: #475569;
+    }
+
+    .dark .markdown-body table th {
+        background-color: #334155;
+        color: white;
+    }
+
+    .dark .breadcrumbs {
+        color: #94A3B8;
     }
 </style>
 {% endblock %}
@@ -210,7 +285,7 @@
             {{ toc | safe }}
         </div>
 
-        <div style="margin-top: 2rem; pt: 1rem; border-top: 1px solid var(--gray-200);">
+        <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
             <a href="/docs/browse" class="btn btn-primary btn-full text-center"
                 style="color: white; text-decoration: none;">
                 ← Volver al índice
@@ -218,12 +293,13 @@
         </div>
     </aside>
 
-    <!-- Main Content -->
-    <article>
-        <div class="breadcrumbs">
-            <a href="/">Inicio</a> / <a href="/docs/browse">Documentación</a> / <span>{{ title }}</span>
-        </div>
+    <!-- Breadcrumbs (Restored to Grid Area) -->
+    <div class="breadcrumbs text-sm text-gray-500 dark:text-gray-400">
+        <a href="/">Inicio</a> / <a href="/docs/browse">Documentación</a> / <span>{{ title }}</span>
+    </div>
 
+    <!-- Main Content -->
+    <article class="doc-content-wrapper">
         <div class="doc-content">
             <div class="markdown-body">
                 {{ html_content | safe }}
@@ -231,7 +307,7 @@
 
             <!-- Navigation Footer -->
             <div
-                style="margin-top: 3rem; pt: 2rem; border-top: 1px solid var(--gray-200); display: flex; justify-content: space-between;">
+                style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gray-200); display: flex; justify-content: space-between;">
                 <a href="/docs/browse" style="text-decoration: none; color: var(--gray-600); font-weight: 500;">
                     ← Volver al navegador
                 </a>
