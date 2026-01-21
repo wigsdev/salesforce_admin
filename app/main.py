@@ -54,6 +54,9 @@ app.include_router(progress.router, prefix="/api/progress", tags=["Progress"])
 app.include_router(curriculum.router, prefix="/api/curriculum", tags=["Curriculum"])
 app.include_router(frontend.router, tags=["Frontend"])
 
+from app.routers import lumina
+app.include_router(lumina.router, prefix="/lumina", tags=["Lumina Project"])
+
 # TODO: Include other routers when created
 # from app.routers import sprints
 # app.include_router(sprints.router, prefix="/api/sprints", tags=["sprints"])

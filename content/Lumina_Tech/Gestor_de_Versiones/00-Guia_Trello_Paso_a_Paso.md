@@ -1,204 +1,173 @@
-# 📋 Guía Paso a Paso: Gestión del Sprint 1 en Trello
+# 📋 Guía Passo a Paso: Configuración de Trello - Sprint 1
 
-Esta guía te acompañará para configurar el tablero de Trello del proyecto **Universidad Lumina Tech**, simulando el entorno de trabajo real de un equipo Salesforce.
+Esta guía te ayudará a configurar el tablero de gestión de proyectos para **Lumina Tech**, alineado con la metodología ágil y las mejores prácticas de Salesforce.
 
 ---
 
 ## 🎯 Objetivo
-Al finalizar esta guía tendrás:
-- ✅ Un tablero llamado `Universidad Lumina Tech - Sprint 1`.
-- ✅ 3 Tarjetas de Historias de Usuario (HU-001, HU-002, HU-003) cargadas.
-- ✅ Etiquetas de Épicas (Seguridad, Académico) configuradas.
-
-**Tiempo estimado**: 20 minutos.
+Configurar un tablero profesional para simular el ciclo de vida de desarrollo (SDLC) y cargar las 7 Historias de Usuario del MVP.
 
 ---
 
-## 📝 PARTE 1: Configuración del Tablero
+## 🏗️ Paso 1: Configuración del Tablero
 
-### Paso 1.1: Crear el tablero
-1.  En Trello, haz clic en **"Crear nuevo tablero"**.
-2.  **Título**: `Universidad Lumina Tech - Sprint 1`.
-3.  **Fondo**: Elige un color sólido (ej: Violeta/Azul) o foto de oficina.
-4.  **Visibilidad**: Privado o Espacio de Trabajo.
+### 1.1 Crear Tablero
+*   **Título**: `Proyecto Lumina Tech - [Tu Nombre]`.
+*   **Visibilidad**: Espacio de Trabajo.
+*   **Fondo**: Elige uno profesional (Oficina/Tecnología).
 
-### Paso 1.2: Definir Columnas (Flujo Agile Completo)
-Elimina las listas por defecto y crea estas 7 columnas en orden:
+### 1.2 Definir Columnas (Organización Estricta)
+Configura tu tablero con las siguientes 8 columnas, en este orden exacto:
 
-1.  **Backlog** (Historias de Usuario Identificadas)
-2.  **Sprint Backlog** (Seleccionadas para el Sprint)
-3.  **En Progreso** (Diseño y Configuración)
-4.  **SF Desarrollo** (Ya en Sandbox, listo para pruebas unitarias)
-5.  **SF QA** (Tester validando Criterios de Aceptación)
-6.  **Aprobación TL** (Revisión de Estándares - Naming Conventions)
-7.  **Terminado** (Listo para Demo / Producción)
-
----
-
-## 🏷️ PARTE 2: Etiquetas (Épicas)
-Vamos a categorizar las tareas por "Módulo Funcional".
-
-1.  Abre el menú > **Etiquetas**.
-2.  Crea o edita las siguientes:
-    *   🔴 **Seguridad** (Para HU-001 y HU-002)
-    *   🔵 **Académico** (Para HU-003)
-    *   🟣 **Calidad de Datos** (Para Validaciones)
+1.  **Backlog** - Todas las historias de usuario identificadas
+2.  **Sprint Backlog** - HU seleccionadas para el sprint actual
+3.  **En Progreso** - Trabajo activo
+4.  **SF Desarrollo** - Configuración en Sandbox
+5.  **SF QA** - Pruebas internas
+6.  **Aprobación TL** - Revisión del Team Lead
+7.  **SF Producción** - Despliegue final
+8.  **Terminado** - Completado y validado
 
 ---
 
-## 📌 PARTE 3: Carga de Historias de Usuario
+## 🏷️ Paso 2: Etiquetas (Categorías)
 
-Vamos a crear las tarjetas reales del proyecto Lumina.
+Usa etiquetas para identificar el tipo de requerimiento visualmente:
+*   🔴 **Seguridad** (Permisos, Acceso, Roles).
+*   🔵 **Académico** (Funcionalidad Core del negocio).
+*   🟣 **Data Quality** (Validaciones, Reglas).
 
-### 🔴 HU-001: Visibilidad de Alumnos (Seguridad)
+---
 
-1.  En la columna **Backlog**, click en "+ Añadir tarjeta".
-2.  **Título**: `(3) HU-001 - Visibilidad Privada de Alumnos`.
-3.  Entra a la tarjeta y en **Descripción** pega esto:
+## � Paso 3: Carga de Historias de Usuario (Sprint 1)
 
+Copia y pega el siguiente contenido en tarjetas individuales dentro de la columna **Sprint Backlog**.
+
+> **💡 Tip**: El título de la tarjeta debe ser el código (HU-XXX) y un resumen breve.
+
+### HU-001: Privacidad de Alumnos
+**Título en Trello**: `HU-001 - Visibilidad Privada de Alumnos`
+**Etiqueta**: 🔴 Seguridad
+
+**Descripción (Copia y pega esto)**:
 ```markdown
-**Como**: Profesor de Lumina Tech.
-**Quiero**: Ver únicamente los alumnos de mis cursos asignados.
-**Para**: Proteger la privacidad de los estudiantes y no viciar las listas.
+**Como**: Profesor de la Universidad.
+**Quiero**: Ver únicamente los alumnos de mis propios cursos.
+**Para**: Proteger la privacidad de los estudiantes y evitar confusiones con otras materias.
 
 ---
-### 🔧 Solución Técnica
-- **Objeto**: Alumno__c
-- **Configuración**: OWD (Organization-Wide Defaults) en "Private".
-- **Sharing**: Reglas de compartición basadas en asignación de materia.
+### Criterios de Aceptación:
+- [ ] La configuración de OWD (Organization-Wide Defaults) para el objeto Alumno__c es "Private".
+- [ ] Un usuario con perfil "Lumina_Profesor" NO puede ver alumnos que no le fueron asignados.
+- [ ] El Administrador del sistema mantiene acceso total a todos los registros.
 ```
 
-4.  **Checklist (Criterios de Aceptación)**:
-    *   [ ] OWD de Alumno está en Private.
-    *   [ ] Un Profesor no ve alumnos de otros colegas.
-    *   [ ] Un Admin puede ver todos los alumnos.
+### HU-002: Integridad de Notas
+**Título en Trello**: `HU-002 - Bloqueo de Edición de Notas`
+**Etiqueta**: 🔴 Seguridad
 
-### 🔴 HU-002: Restricción de Notas (Seguridad)
-
-1.  Nueva Tarjeta: `(3) HU-002 - Bloqueo de Edición de Notas`.
-2.  **Etiquetas**: 🔴 Seguridad.
-3.  **Descripción**:
-
+**Descripción**:
 ```markdown
-**Como**: Administrativo.
-**Quiero**: Ver el legajo del alumno pero NO poder modificar sus notas.
-**Para**: Evitar fraudes o errores involuntarios.
+**Como**: Administrativo de Lumina.
+**Quiero**: Poder ver el historial académico pero NO modificar las notas.
+**Para**: Evitar fraudes académicos o errores de tipeo involuntarios.
 
 ---
-### 🔧 Solución Técnica
-- **Herramienta**: FLS (Field-Level Security).
-- **Campo**: Examen__c.Nota__c
-- **Perfil**: Lumina_Administrativo (Read-Only).
+### Criterios de Aceptación:
+- [ ] El campo "Nota" (Examen__c) es de Solo Lectura para el perfil "Lumina_Administrativo".
+- [ ] El perfil "Lumina_Profesor" tiene permisos de Escritura sobre el campo Nota.
+- [ ] Se verificó usando "Login As" (Iniciar sesión como otro usuario).
 ```
 
-4.  **Checklist**:
-    *   [ ] Perfil Administrativo ve el campo Nota "Grisado" (Solo lectura).
-    *   [ ] Perfil Profesor puede editar la Nota.
+### HU-003: Gestión de Inscripciones
+**Título en Trello**: `HU-003 - Relación Alumno-Materia`
+**Etiqueta**: 🔵 Académico
 
-### 🔵 HU-003: Estructura de Cursada (Académico)
-
-1.  Nueva Tarjeta: `(5) HU-003 - Gestión de Inscripciones`.
-2.  **Etiquetas**: 🔵 Académico.
-3.  **Descripción**:
-
+**Descripción**:
 ```markdown
 **Como**: Secretario Académico.
-**Quiero**: Inscribir un alumno a una materia y guardar su estado (Cursando/Aprobado).
-**Para**: Tener la historia académica completa.
+**Quiero**: Inscribir a un alumno existente en una materia ofertada.
+**Para**: Registrar formalmente su cursada y generar el acta.
 
 ---
-### 🔧 Solución Técnica
-- **Objeto**: Inscripcion__c (Junction Object).
-- **Relaciones**: Master-Detail a Alumno y Materia.
-- **Campos**: Ciclo Lectivo, Estado, Nota Final.
+### Criterios de Aceptación:
+- [ ] Existe el objeto "Inscripcion__c" como conector (Junction Object).
+- [ ] No se puede crear una inscripción sin seleccionar un Alumno y una Materia (Master-Detail).
+- [ ] El nombre de la inscripción se autogenera o sigue un formato lógico.
 ```
 
-### 🔵 HU-004: Gestión de Exámenes (Académico)
+### HU-004: Registro de Exámenes
+**Título en Trello**: `HU-004 - Carga de Notas Parciales`
+**Etiqueta**: 🔵 Académico
 
-1.  Nueva Tarjeta: `(5) HU-004 - Registro de Parciales`.
-2.  **Etiquetas**: 🔵 Académico.
-3.  **Descripción**:
-
+**Descripción**:
 ```markdown
-**Como**: Profesor.
-**Quiero**: Cargar la nota de un parcial a un alumno inscrito.
-**Para**: Evaluar su desempeño en el cuatrimestre.
+**Como**: Profesor Titular.
+**Quiero**: Registrar la nota de un examen parcial asociado a una inscripción.
+**Para**: Evaluar el desempeño del alumno durante el cuatrimestre.
 
 ---
-### 🔧 Solución Técnica
-- **Objeto**: Examen__c (Detail de Inscripción).
-- **Campos**: Nota (0-10), Fecha, Tipo (Parcial/Final).
+### Criterios de Aceptación:
+- [ ] El objeto "Examen__c" es hijo de "Inscripcion__c".
+- [ ] Se puede registrar la fecha del examen.
+- [ ] El sistema permite diferenciar entre "Parcial" y "Final" (Picklist).
 ```
 
-### 🟣 HU-005: Calidad de Email (Data Quality)
+### HU-005: Calidad de Email
+**Título en Trello**: `HU-005 - Validación de Email`
+**Etiqueta**: 🟣 Data Quality
 
-1.  Nueva Tarjeta: `(2) HU-005 - Validación de Correo`.
-2.  **Etiquetas**: 🟣 Calidad de Datos.
-3.  **Descripción**:
-
+**Descripción**:
 ```markdown
-**Como**: Admisión.
-**Quiero**: Que el sistema rechace emails sin arroba o con comas.
-**Para**: Evitar rebotes en notificaciones.
+**Como**: Equipo de Marketing.
+**Quiero**: Que el sistema rechace correos electrónicos con formato inválido.
+**Para**: Asegurar que las comunicaciones oficiales lleguen a los alumnos.
 
 ---
-### 🔧 Solución Técnica
-- **Campo**: Email estándar.
-- **Validación Manual**: Probar inputs inválidos ("juan,perez").
+### Criterios de Aceptación:
+- [ ] El campo Email usa el tipo de dato "Email" estándar de Salesforce.
+- [ ] Al intentar guardar "juan.perez" (sin @) el sistema arroja error.
+- [ ] Se permiten dominios corporativos (@lumina.edu).
 ```
 
-### 🟣 HU-006: Integridad de Notas (Data Quality)
+### HU-006: Rango de Notas Lógico
+**Título en Trello**: `HU-006 - Validación de Rango de Notas`
+**Etiqueta**: 🟣 Data Quality
 
-1.  Nueva Tarjeta: `(2) HU-006 - Rango de Notas Lógico`.
-2.  **Etiquetas**: 🟣 Calidad de Datos.
-3.  **Descripción**:
-
+**Descripción**:
 ```markdown
 **Como**: Rectoría.
-**Quiero**: Impedir que se carguen notas menores a 0 o mayores a 10.
-**Para**: Mantener la consistencia estadística.
+**Quiero**: Impedir la carga de notas negativas o mayores a 10.
+**Para**: Mantener la consistencia estadística de los promedios.
 
 ---
-### 🔧 Solución Técnica
-- **Validation Rule**: Nota < 0 || Nota > 10.
-- **Error Message**: "La nota debe ser entre 0 y 10".
+### Criterios de Aceptación:
+- [ ] Existe una Regla de Validación (Validation Rule) activa.
+- [ ] Al ingresar "-1" el sistema muestra el error: "La nota debe estar entre 0 y 10".
+- [ ] Al ingresar "11" el sistema bloquea el guardado.
 ```
 
-### 🟣 HU-007: Identidad Obligatoria (Data Quality)
+### HU-007: Identidad Obligatoria
+**Título en Trello**: `HU-007 - DNI Obligatorio`
+**Etiqueta**: 🟣 Data Quality
 
-1.  Nueva Tarjeta: `(1) HU-007 - DNI Obligatorio`.
-2.  **Etiquetas**: 🟣 Calidad de Datos.
-3.  **Descripción**:
-
+**Descripción**:
 ```markdown
-**Como**: Legal.
-**Quiero**: Que Alumno requiera DNI para guardarse.
-**Para**: Cumplir normativa.
+**Como**: Departamento Legal.
+**Quiero**: Que sea imposible crear un legajo de alumno sin su número de documento.
+**Para**: Cumplir con las normativas ministeriales de identificación.
 
 ---
-### 🔧 Solución Técnica
-- **Schema**: Field DNI Required = System Level.
+### Criterios de Aceptación:
+- [ ] El campo DNI está marcado como "Required" a nivel de objeto o Page Layout.
+- [ ] Al intentar guardar un alumno vacío, aparece el error estándar de campo obligatorio.
 ```
 
 ---
 
-## 🚀 PARTE 4: Lanzamiento del Sprint
+## 🚀 Protip: Metodología de Trabajo
 
-Simulemos que empieza la semana de trabajo.
-
-1.  Mueve las tarjetas **HU-001** y **HU-002** de "Backlog" a **"Sprint Backlog"**.
-2.  Arrastra la **HU-001** a **"Doing"**. ¡Has empezado a trabajar!
-
-### Reglas de Oro del Profesor
-*   **WIP Limit**: No tengas más de 2 tarjetas en "Doing" a la vez.
-*   **Evidencia**: Cuando termines una tarea, adjunta una captura de pantalla de Salesforce en la tarjeta antes de pasarla a "QA".
-
----
-
-## 📊 Glosario Trello-Salesforce
-*   **Card (Tarjeta)** = User Story (Requerimiento).
-*   **Checklist** = Acceptance Criteria (Lo que prueba el QA).
-*   **Description** = Análisis Funcional y Técnico.
-*   **Member** = Quién lo está configurando en Salesforce.
-
-¡Listo! Ya tienes tu entorno de gestión profesional configurado. 🎓
+1.  Mueve **solo 1 o 2 tarjetas** a la columna **Doing**. (No hagas todo a la vez).
+2.  Cuando termines la configuración en Salesforce, mueve la tarjeta a **QA**.
+3.  Imagina que eres el Tester: ¿Cumple los "Criterios de Aceptación"?
+4.  Si sí -> Mover a **Done**. ¡Felicidades! �
