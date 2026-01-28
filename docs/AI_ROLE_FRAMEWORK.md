@@ -189,7 +189,7 @@ class User(Base):
 {% raw %}
 ```html
 <!-- app/templates/dashboard.html -->
-<!-- extends "base.html" (Jinja2 tag) -->
+<!-- {% extends "base.html" %} -->
 
 {% block title %}Dashboard - Mi Progreso{% endblock %}
 
