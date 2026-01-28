@@ -1,0 +1,31 @@
+services:
+  # 1. FastAPI Web Service
+  - type: web
+    name: admin-salesforce
+    env: python
+    buildCommand: "./scripts/build.sh"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0 # Render stable support
+      - key: DATABASE_URL
+        fromDatabase:
+          name: admin-salesforce-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ENVIRONMENT
+        value: production
+      - key: NODE_VERSION 
+        value: 20
+
+databases:
+  # 2. PostgreSQL Database
+  - name: admin-salesforce-db
+    databaseName: salesforce_admin
+    user: admin_user
+    plan: free # Tier gratuito de Render
+    region: oregon # US West (elegido por latencia std, cambiar si es necesario)
+
+# Configuración de equipo/proyecto (Opcional si usas cuenta personal)
+# teamId: ...
