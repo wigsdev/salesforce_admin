@@ -188,7 +188,7 @@ class User(Base):
 **Ejemplo de output:**
 ```html
 <!-- app/templates/dashboard.html -->
-<!-- {% extends "base.html" %} -->
+<!-- extends "base.html" (Jinja2 tag) -->
 
 {% block title %}Dashboard - Mi Progreso{% endblock %}
 
