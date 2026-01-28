@@ -750,7 +750,7 @@ alembic upgrade head
 ### FASE 6: Testing (Días 16-18) ✅
 - [x] Unit tests (services, models)
 - [x] Integration tests (API)
-- [x] Coverage > 75%
+- [x] Coverage > 75% (Logrado: 77%)
 
 ### FASE 7: Deployment (Días 19-21)
 - Configurar Render
