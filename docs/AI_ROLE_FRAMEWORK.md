@@ -186,6 +186,7 @@ class User(Base):
 - Accesibilidad (WCAG 2.1 AA)
 
 **Ejemplo de output:**
+{% raw %}
 ```html
 <!-- app/templates/dashboard.html -->
 <!-- extends "base.html" (Jinja2 tag) -->
@@ -260,6 +261,7 @@ function toggleTask(taskId) {
 </script>
 {% endblock %}
 ```
+{% endraw %}
 
 **Características del código frontend que genero:**
 - ✅ HTML semántico
