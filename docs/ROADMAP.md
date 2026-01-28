@@ -31,16 +31,16 @@ Docs                       Content       Content       Platform
 
 ---
 
-## 🚀 v0.30.0 - Web Platform MVP (EN DESARROLLO)
-**Fecha estimada**: 14 Febrero 2026  
-**Duración**: 4 semanas  
-**Estado**: 🔄 Planning
+## 🚀 v0.30.0 - Web Platform MVP (LISTO PARA DEPLOY)
+**Fecha estimada**: 28 Enero 2026 (Adelantado)
+**Duración**: 1.5 semanas (Intensivo)
+**Estado**: ✅ Ready for Deployment
 
 ### Objetivos:
 Migrar de GitHub Pages estático a plataforma web interactiva en Render.
 
-### Features:
-- 🔐 **Autenticación**
+### Features Completadas:
+- 🔐 **Autenticación** ✅
   - Registro de usuarios
   - Login/Logout
   - Sesiones persistentes (JWT)
