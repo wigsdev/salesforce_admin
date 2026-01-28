@@ -17,24 +17,24 @@ markdown_service = MarkdownService()
 async def browse_docs(request: Request, path: str = ""):
     """
     Browse documentation directory.
-    
+
     Args:
         request: FastAPI request
         path: Optional subdirectory path
-        
+
     Returns:
         HTML page with directory listing
     """
     files = markdown_service.list_directory(path)
-    
+
     return templates.TemplateResponse(
         "docs_browser.html",
         {
             "request": request,
             "files": files,
             "current_path": path,
-            "title": "Documentation Browser"
-        }
+            "title": "Documentation Browser",
+        },
     )
 
 
@@ -42,32 +42,29 @@ async def browse_docs(request: Request, path: str = ""):
 async def view_document(request: Request, path: str):
     """
     View a markdown document.
-    
+
     Args:
         request: FastAPI request
         path: Path to markdown file
-        
+
     Returns:
         HTML page with rendered markdown
-        
+
     Raises:
         HTTPException: If document not found
     """
     document = markdown_service.get_document(path)
-    
+
     if not document:
-        raise HTTPException(
-            status_code=404,
-            detail=f"Document not found: {path}"
-        )
-    
+        raise HTTPException(status_code=404, detail=f"Document not found: {path}")
+
     return templates.TemplateResponse(
         "doc_viewer.html",
         {
             "request": request,
-            "title": document['title'],
-            "html_content": document['html'],
-            "toc": document['toc'],
-            "path": document['path']
-        }
+            "title": document["title"],
+            "html_content": document["html"],
+            "toc": document["toc"],
+            "path": document["path"],
+        },
     )

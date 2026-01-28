@@ -8,7 +8,7 @@ from app.schemas.progress import (
     ProgressCreate,
     ProgressResponse,
     SprintProgressResponse,
-    UserProgressSummary
+    UserProgressSummary,
 )
 
 __all__ = [

@@ -20,17 +20,13 @@ if database_url.startswith("postgresql://"):
 engine = create_engine(
     database_url,
     pool_pre_ping=True,  # Verify connections before using
-    pool_size=10,        # Number of connections to maintain
-    max_overflow=20,     # Max connections beyond pool_size
-    echo=settings.DEBUG  # Log SQL queries in debug mode
+    pool_size=10,  # Number of connections to maintain
+    max_overflow=20,  # Max connections beyond pool_size
+    echo=settings.DEBUG,  # Log SQL queries in debug mode
 )
 
 # Create session factory
-SessionLocal = sessionmaker(
-    autocommit=False,
-    autoflush=False,
-    bind=engine
-)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Base class for all models
 Base = declarative_base()
@@ -39,12 +35,12 @@ Base = declarative_base()
 def get_db():
     """
     Dependency function for database sessions.
-    
+
     Yields a database session and ensures it's closed after use.
-    
+
     Yields:
         Session: SQLAlchemy database session
-        
+
     Example:
         @app.get("/users")
         def get_users(db: Session = Depends(get_db)):
