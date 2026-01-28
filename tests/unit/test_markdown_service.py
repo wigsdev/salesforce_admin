@@ -22,9 +22,11 @@ def test_render_markdown_basic(md_service):
 
 def test_extract_title_from_h1(md_service):
     """Test que extrae el título del primer H1."""
-    content = """Ignored line
-# My Document Title
-Body text"""
+    content = """
+    Ignored line
+    # My Document Title
+    Body text
+    """
     title = md_service._extract_title(content, "fallback.md")
     assert title == "My Document Title"
 

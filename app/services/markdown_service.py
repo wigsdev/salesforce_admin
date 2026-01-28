@@ -133,8 +133,8 @@ class MarkdownService:
         """
         lines = content.split("\n")
         for line in lines:
-            if line.startswith("# "):
-                return line[2:].strip()
+            if line.strip().startswith("# "):
+                return line.strip()[2:].strip()
 
         # Fallback to filename
         return Path(fallback_path).stem.replace("_", " ").replace("-", " ").title()
