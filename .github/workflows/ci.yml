@@ -1,0 +1,42 @@
+name: Admin Salesforce CI
+
+on:
+  push:
+    branches: [ "main", "master", "feature/*" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    env:
+      # Configuracion basica para tests (no bases de datos reales necesarias aun gracias a mocks)
+      SECRET_KEY: "test_secret_key_for_ci_pipeline"
+      ALGORITHM: "HS256"
+      ACCESS_TOKEN_EXPIRE_DAYS: 1
+      DATABASE_URL: "sqlite:///./test.db" # Usar SQLite para CI rápido
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.13"
+        cache: 'pip' # Cachea dependencias para velocidad
+        
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        # Instalar dependencias extra de testing
+        pip install pytest httpx pytest-asyncio passlib bcrypt python-multipart python-jose email-validator
+
+    - name: Run Tests
+      run: |
+        # Ejecutar pytest con verbose output
+        python -m pytest tests/ -v
