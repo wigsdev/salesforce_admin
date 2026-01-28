@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
   - **Pre-commit Hooks**: Automatic local verification before commit (`scripts/run_tests.bat`).
   - **Code Standard**: Enforced Black (formatting) and Ruff (linting) standards.
   - **Testing**: Added Pytest suite for Unit (Security) and E2E (Auth) tests.
+- **Deployment**: Added Render Blueprint (`render.yaml`) and build scripts (`scripts/build.sh`) for automated production deployment.
 
 ### Changed
 - **UI/UX**: Refactored Lumina Dashboard to match specific Curriculum Tasks (Classes 7-10).
