@@ -10,13 +10,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.templating import Jinja2Templates
 
 from app.config import settings
+from app.routers import auth, users, docs, progress, frontend, curriculum, lumina
 
 # Create FastAPI application
 app = FastAPI(
     title=settings.APP_NAME,
     version=settings.VERSION,
     description="Interactive learning platform for Salesforce Admin certification",
-    debug=settings.DEBUG
+    debug=settings.DEBUG,
 )
 
 # Configure CORS
@@ -36,8 +37,6 @@ templates = Jinja2Templates(directory="app/templates")
 templates.env.globals["app_version"] = settings.VERSION
 
 
-
-
 @app.get("/health")
 async def health_check():
     """Health check endpoint for monitoring."""
@@ -45,17 +44,12 @@ async def health_check():
 
 
 # Include routers
-# Include routers
-from app.routers import auth, users, docs, progress, frontend, curriculum
-
 app.include_router(auth.router, prefix="/api/auth", tags=["Authentication"])
 app.include_router(users.router, prefix="/api/users", tags=["Users"])
 app.include_router(docs.router, prefix="/docs", tags=["Documentation"])
 app.include_router(progress.router, prefix="/api/progress", tags=["Progress"])
 app.include_router(curriculum.router, prefix="/api/curriculum", tags=["Curriculum"])
 app.include_router(frontend.router, tags=["Frontend"])
-
-from app.routers import lumina
 app.include_router(lumina.router, prefix="/lumina", tags=["Lumina Project"])
 
 # TODO: Include other routers when created

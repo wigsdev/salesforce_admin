@@ -1,4 +1,3 @@
-
 import sys
 import os
 from dotenv import load_dotenv
@@ -14,6 +13,7 @@ if url:
     # Print protocol and host, mask password
     try:
         from sqlalchemy.engine.url import make_url
+
         u = make_url(url)
         print(f"DEBUG: Drivername: {u.drivername}")
         print(f"DEBUG: Host: {u.host}")
@@ -22,17 +22,16 @@ if url:
     except Exception as e:
         print(f"DEBUG: Could not parse URL: {e}")
 
-from sqlalchemy import text
-from app.database import SessionLocal
 
 print("Testing DB connection with timeout...")
 try:
     # Try a quick engine directly
     from sqlalchemy import create_engine
+
     # Use valid replacement logic from app/database.py
     if url and url.startswith("postgresql://"):
         url = url.replace("postgresql://", "postgresql+psycopg://", 1)
-    
+
     eng = create_engine(url, connect_args={"connect_timeout": 5})
     with eng.connect() as conn:
         print("✅ DB Connection successful")

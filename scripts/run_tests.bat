@@ -1,12 +1,28 @@
 @echo off
 echo ==========================================
-echo 🧪 EJECUTANDO VERIFICACION PRE-COMMIT
+echo 🧪 EJECUTANDO VERIFICACION DE CALIDAD TOTAL
 echo ==========================================
 
 echo.
-echo [1/3] Verificando Estilo de Codigo (Linting)...
-REM Aqui podriamos agregar ruff o flake8 en el futuro
-echo (Saltado - No configurado aun)
+echo [1/3] Verificando Estilo y Formato (Linting)...
+
+REM 1. Auto-Formateo con Black
+echo    - Ejecutando Black (Auto-Format)...
+python -m black .
+IF %ERRORLEVEL% NEQ 0 (
+    echo ❌ FALLO EN BLACK
+    exit /b 1
+)
+
+REM 2. Linting rapido con Ruff
+echo    - Ejecutando Ruff (Linter)...
+python -m ruff check . --fix
+IF %ERRORLEVEL% NEQ 0 (
+    echo ❌ FALLO EN RUFF
+    exit /b 1
+)
+
+echo ✅ Codigo Limpio y Formateado.
 
 echo.
 echo [2/3] Ejecutando Tests Unitarios...
@@ -26,6 +42,6 @@ IF %ERRORLEVEL% NEQ 0 (
 
 echo.
 echo ==========================================
-echo ✅ TODO OK. LISTO PARA COMMIT/PUSH.
+echo ✅ CALIDAD EXCELENTE. LISTO PARA COMMIT.
 echo ==========================================
 exit /b 0

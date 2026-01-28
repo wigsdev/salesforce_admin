@@ -11,6 +11,11 @@ All notable changes to this project will be documented in this file.
   - Added "Sticky Footer" layout support for short content pages.
   - Added "Add Task" manual input field for rapid entry.
 - **Frontend**: Clean and Minimalist Mobile Brand Icon (Cloud SVG).
+- **Quality**: Implemented extensive CI/CD Pipeline.
+  - **GitHub Actions**: Automated testing workflow on push/PR (`.github/workflows/ci.yml`).
+  - **Pre-commit Hooks**: Automatic local verification before commit (`scripts/run_tests.bat`).
+  - **Code Standard**: Enforced Black (formatting) and Ruff (linting) standards.
+  - **Testing**: Added Pytest suite for Unit (Security) and E2E (Auth) tests.
 
 ### Changed
 - **UI/UX**: Refactored Lumina Dashboard to match specific Curriculum Tasks (Classes 7-10).

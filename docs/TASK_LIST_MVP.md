@@ -1,4 +1,4 @@
-# ✅ TASK LIST - Web Platform Migration (v0.30.0)
+ # ✅ TASK LIST - Web Platform Migration (v0.30.0)
 
 **Proyecto**: Salesforce Admin Learning Platform  
 **Sprint**: Migration to Web Platform  

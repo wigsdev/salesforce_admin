@@ -1,0 +1,21 @@
+#!/bin/sh
+# Git Pre-Commit Hook
+
+echo "--------------------------------------------------------"
+echo "🔍 Ejecutando Verificación Automática Pre-Commit..."
+echo "--------------------------------------------------------"
+
+# Detectar el script de tests relativo a la raíz del repo
+# Git ejecuta el hook desde la raíz del repositorio
+./scripts/run_tests.bat
+
+if [ $? -ne 0 ]; then
+    echo " "
+    echo "❌ ERROR: Los tests fallaron. El commit ha sido cancelado."
+    echo "💡 Corrige los errores o usa 'git commit --no-verify' para forzar."
+    echo "--------------------------------------------------------"
+    exit 1
+fi
+
+echo "✅ Verificación exitosa. Procediendo con el commit..."
+exit 0

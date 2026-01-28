@@ -747,10 +747,10 @@ alembic upgrade head
 - Responsive design
 - Navegación jerárquica
 
-### FASE 6: Testing (Días 16-18)
-- Unit tests (services, models)
-- Integration tests (API)
-- Coverage > 75%
+### FASE 6: Testing (Días 16-18) ✅
+- [x] Unit tests (services, models)
+- [x] Integration tests (API)
+- [x] Coverage > 75%
 
 ### FASE 7: Deployment (Días 19-21)
 - Configurar Render
