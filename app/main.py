@@ -33,6 +33,7 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 # Configure Jinja2 templates
 templates = Jinja2Templates(directory="app/templates")
+templates.env.globals["app_version"] = settings.VERSION
 
 
 
