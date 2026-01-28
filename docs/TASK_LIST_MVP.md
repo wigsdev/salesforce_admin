@@ -94,29 +94,26 @@
 ---
 
 ## 🎨 FASE 6: Frontend (6 tareas)
-
-- [ ] Setup TailwindCSS
-- [ ] Crear `base.html` template
-- [ ] Crear componentes (navbar, sidebar, breadcrumbs)
-- [ ] Crear `login.html` y `register.html`
-- [ ] Crear `team.html`
-- [ ] Implementar navegación jerárquica
+- [x] Setup TailwindCSS (CDN por ahora, migración a CLI planned)
+- [x] Crear `base.html` template
+- [x] Crear componentes (navbar, sidebar, breadcrumbs)
+- [x] Crear `login.html` y `register.html`
+- [x] Crear `team.html` (Integrado en Dashboard como Role View)
+- [x] Implementar navegación jerárquica
 
 ---
 
-## 🧪 FASE 7: Testing (3 tareas)
-
+## 🧪 FASE 7: Testing & Quality (3 tareas)
 - [ ] Escribir unit tests (coverage > 75%)
 - [ ] Escribir integration tests (API endpoints)
-- [ ] Manual testing checklist
+- [x] **Crear Scripts de Debug y Seed Data** (scripts/seed_data.py, debug_auth.py)
 
 ---
 
-## 🚀 FASE 8: Deployment (2 tareas)
-
+## 🚀 FASE 8: Deployment & Professionalization (3 tareas)
+- [ ] Migrar Tailwind CDN a CLI (Build Process)
 - [ ] Configurar Render (render.yaml)
 - [ ] Deploy a producción
-- [ ] Verificar funcionamiento
 
 ---
 
