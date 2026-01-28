@@ -1,74 +1,128 @@
-# 🎓 Salesforce Administrator - Documentación del Curso
+# 🚀 Salesforce Admin Learning Platform (MVP v0.30.0)
 
-[![Salesforce](https://img.shields.io/badge/Salesforce-Administrator-00A1E0?logo=salesforce&logoColor=white)](https://trailhead.salesforce.com/)
-[![Status](https://img.shields.io/badge/Status-Active-success)]()
-[![Sprint](https://img.shields.io/badge/Sprint-1-blue)]()
+[![Status](https://img.shields.io/badge/Status-Active_Development-success?style=for-the-badge&logo=statuspage)](https://salesforce-admin.onrender.com)
+[![Version](https://img.shields.io/badge/MVP-v0.30.0-blue?style=for-the-badge&logo=semver)](docs/NO_VERSION_YET)
+[![Tech Stack](https://img.shields.io/badge/Stack-FastAPI%20%7C%20Tailwind%20%7C%20PostgreSQL-005A9C?style=for-the-badge&logo=python)](docs/IMPLEMENTATION_PLAN.md)
 
-Repositorio oficial del curso **Salesforce Administrator** del **Grupo 3 - VISIONARY ADMINS**. Contiene material teórico, guías prácticas, documentación de Superbadges completados y ejercicios prácticos organizados por Sprints.
-
----
-
-## 📋 Tabla de Contenidos
-
-- [Navegación Principal](#-navegación-principal)
-- [Recursos Adicionales](#-recursos-adicionales)
+> **Plataforma Web Interactiva** para la gestión y aprendizaje del curso Salesforce Administrator.  
+> Diseñada para el equipo **VISIONARY ADMINS (Grupo 3)**.
 
 ---
 
-## 📚 Navegación Principal
+## 🏛️ Sobre el Proyecto: "Lumina Tech"
 
-Explora el contenido del curso a través de los siguientes módulos:
+Esta plataforma no es solo un repositorio de documentación. Es el **Centro de Comando** digital donde simulamos la implementación real de Salesforce para nuestro cliente ficticio, la universidad **Lumina Tech**.
 
-| **Módulo** | **Descripción** | **Contenido** |
+Permite a los estudiantes (rol Admin) y profesores (rol Stakeholders) visualizar el avance del Sprint, validar requisitos y acceder a la documentación técnica centralizada.
+
+### 🌟 Características Principales (MVP)
+
+*   **🔐 Autenticación Segura**: Sistema de Login/Registro con JWT.
+*   **📊 Centro de Comando (Dashboard)**:
+    *   Visualización de avance por Sprints.
+    *   Filtrado por Roles (Admin, Consultant, QA).
+    *   KPIs de Calidad de Datos.
+*   **📄 Documentación Viva**: Motor de renderizado Markdown que convierte los apuntes de clase en guías visuales.
+*   **📱 Diseño Responsivo**: Interfaz moderna adaptable a cualquier dispositivo (Dark Mode incluido).
+
+---
+
+## 🛠️ Stack Tecnológico
+
+La plataforma ha sido migrada de una web estática a una aplicación Full-Stack robusta:
+
+| Capa | Tecnología | Descripción |
 | :--- | :--- | :--- |
-| **🚀 [Curriculum Principal](curriculum/README.md)** | Material de estudio organizado por semanas. | [Sprint 1](curriculum/sprint_01/README.md) ➡️ ([Semana 1](curriculum/sprint_01/semana_01/README.md) • [Semana 2](curriculum/sprint_01/semana_02/README.md) • [Semana 3](curriculum/sprint_01/semana_03/README.md) • [Semana 4](curriculum/sprint_01/semana_04/README.md)) |
-| **🏆 [Superbadges](Superbadges/README.md)** | Soluciones y guías paso a paso de retos. | [Object Relationships](Superbadges/Object_Relationships/README.md) • [Formulas](Superbadges/Formulas/README.md) • [User Auth](Superbadges/User_Authentication/README.md) |
-| **💼 [Prácticas Reales](Practica_Financiera/README.md)** | Casos de estudio y ejercicios prácticos. | [Financiera Horizonte](Practica_Financiera/README.md) |
-| **🛠️ [Kit de Herramientas](Gestor_de_Versiones/README.md)** | Guías técnicas y metodologías. | [Git & DevOps](Gestor_de_Versiones/README.md) • [Trello](Gestor_de_Versiones/00-INTEGRACION_TRELLO.md) |
-| **📅 [Cronograma](schedules/sprint1_schedule.md)** | Fechas de entrega y seguimiento. | [Sprint 1](schedules/sprint1_schedule.md) |
+| **Backend** | ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) | API REST asíncrona de alto rendimiento. |
+| **Database** | ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white) | Persistencia de usuarios, tareas y progreso. |
+| **Frontend** | ![Tailwind](https://img.shields.io/badge/-TailwindCSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) | Estilos utilitarios y diseño responsivo. |
+| **Templating** | ![Jinja2](https://img.shields.io/badge/-Jinja2-B41717?style=flat-square&logo=jinja&logoColor=white) | Renderizado del lado del servidor (SSR). |
+| **Interactivity** | ![Alpine.js](https://img.shields.io/badge/-Alpine.js-8BC0D0?style=flat-square&logo=alpine.js&logoColor=white) | Micro-interacciones sin la complejidad de React. |
 
 ---
 
+## 📂 Estructura del Proyecto
 
-
-
-
-## 📚 Recursos Adicionales
-
-### Plataformas Oficiales
-- 🌐 [Trailhead](https://trailhead.salesforce.com/) - Plataforma de aprendizaje de Salesforce
-- 🔧 [Developer Edition Sign Up](https://developer.salesforce.com/signup) - Crear org de desarrollo
-- 📖 [Salesforce Help](https://help.salesforce.com/) - Documentación oficial
-
-### Herramientas de Desarrollo
-- 💻 [VS Code + Salesforce Extensions](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode)
-- 🔍 [Salesforce Inspector](https://chrome.google.com/webstore/detail/salesforce-inspector/aodjmnfhjibkcdimpodiifdjnnncaafh)
-- 📊 [Schema Builder](https://help.salesforce.com/s/articleView?id=sf.schema_builder.htm)
-
-### Comunidad
-- 💬 [Trailblazer Community](https://trailhead.salesforce.com/trailblazer-community)
-- 🎯 [Success Community](https://success.salesforce.com/)
-- 📺 [Salesforce YouTube](https://www.youtube.com/user/salesforce)
+```bash
+salesforce_admin/
+├── app/
+│   ├── main.py              # 🚀 Punto de entrada FastAPI
+│   ├── models/              # 🗄️ Modelos de Base de Datos (User, Progress)
+│   ├── routers/             # 🚦 Endpoints de la API (Auth, Docs)
+│   ├── services/            # 🧠 Lógica de Negocio (Markdown Parser)
+│   └── templates/           # 🎨 Vistas HTML (Jinja2)
+│       ├── lumina_dashboard.html  # Centro de Comando
+│       └── doc_viewer.html        # Visor de Documentación
+├── content/                 # 📚 Documentación del Curso (Markdown)
+│   └── Lumina_Tech/         # Proyecto Práctico
+├── docs/                    # 📋 Documentación del Sistema (SDLC, Roadmap)
+└── scripts/                 # 🛠️ Scripts de utilidad (Seed Data)
+```
 
 ---
 
-## 👥 Equipo
+## 🚀 Cómo Iniciar (Local)
 
-**Grupo 3 - VISIONARY ADMINS**
+Sigue estos pasos para levantar el Centro de Comando en tu máquina:
+
+### 1. Prerrequisitos
+*   Python 3.10+
+*   PostgreSQL (o Docker)
+
+### 2. Instalación
+```bash
+# Clonar repositorio
+git clone https://github.com/tu-usuario/admin_salesforce.git
+cd admin_salesforce
+
+# Activar entorno virtual
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Instalar dependencias
+# Instalar dependencias Python
+pip install -r requirements.txt
+
+# Instalar dependencias Frontend (Tailwind)
+npm install
+npm run build:css
+```
+
+### 3. Configuración
+Crea un archivo `.env` en la raíz (puedes copiar `.env.example`):
+```env
+DATABASE_URL=postgresql://user:pass@localhost/salesforce_db
+SECRET_KEY=tu_secreto_super_seguro
+```
+
+### 4. Ejecutar
+```bash
+# Iniciar servidor de desarrollo
+uvicorn app.main:app --reload
+```
+Visita `http://localhost:8000` para ver el Dashboard.
 
 ---
 
-## 📝 Licencia
+## 🗺️ Roadmap & Progreso
 
-Este repositorio contiene material educativo del curso Salesforce Administrator.
+Estamos en la fase de **MVP (v0.30.0)**.
+
+- [x] **Fase 1**: Infraestructura Backend ✅
+- [x] **Fase 2**: Autenticación y Usuarios ✅
+- [x] **Fase 3**: Motor de Documentación ✅
+- [x] **Fase 4**: Dashboard Interactivo "Lumina" ✅
+- [ ] **Fase 5**: Integración con Salesforce (Futuro) ⏳
+
+> Consulta [docs/ROADMAP.md](docs/ROADMAP.md) para más detalles.
 
 ---
 
-## 📞 Contacto
+## 👥 Equipo Visionary Admins - Grupo 3
 
-Para consultas sobre el contenido del curso, consulta con tu instructor o utiliza los canales oficiales del programa.
+*   **Product Owner**: (Tu Nombre)
+*   **Salesforce Admin**: (Tu Nombre)
+*   **AI Developer Agent**: Gemini
 
 ---
-
-**Última actualización**: 17 Enero 2026  
-**Versión**: 1.0.0
+*Hecho con ❤️ y ☕ para dominar Salesforce.*

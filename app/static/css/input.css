@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* 
+     * LEGACY STYLES - MIGRATED FROM styles.css
+     * Preserving original definitions for pixel-perfect fidelity.
+     */
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    :root {
+        --primary: #667eea;
+        --primary-dark: #5a67d8;
+        --secondary: #764ba2;
+        --accent: #ed64a6;
+        --gray-50: #f9fafb;
+        --gray-100: #f7fafc;
+        --gray-200: #edf2f7;
+        --gray-300: #e2e8f0;
+        --gray-700: #4a5568;
+        --gray-800: #2d3748;
+        --gray-900: #1a202c;
+        --green-100: #f0fff4;
+        --green-500: #48bb78;
+        --green-800: #22543d;
+        --blue-100: #ebf8ff;
+        --blue-600: #3182ce;
+        --blue-800: #2c5282;
+        --purple-100: #faf5ff;
+        --purple-600: #805ad5;
+        --red-100: #fff5f5;
+        --red-500: #f56565;
+        --red-600: #e53e3e;
+    }
+
+    /* Layout */
+    .container {
+        max-width: 1400px !important;
+        margin: 0 auto;
+        width: 100% !important;
+        padding: 0 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            padding: 0 2rem;
+        }
+    }
+
+    .main-content {
+        flex: 1;
+    }
+
+    /* Navigation */
+    .nav-header {
+        background: white;
+        padding: 0 !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+    }
+
+    .dark .nav-header {
+        background-color: #1F2937;
+        /* Dark surface */
+        border-bottom: 1px solid #374151;
+    }
+
+    .nav-brand {
+        font-weight: 700;
+        font-size: 1.25rem;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .nav-link {
+        color: var(--gray-700);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+
+    .dark .nav-link {
+        color: #D1D5DB;
+        /* Gray 300 */
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--primary);
+    }
+
+    .dark .nav-link:hover,
+    .dark .nav-link.active {
+        color: #ffffff;
+    }
+
+    /* Cards & Containers */
+    .card,
+    .lumina-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .dark .card,
+    .dark .lumina-card {
+        background-color: #1F2937;
+        border: 1px solid #374151;
+        box-shadow: none;
+    }
+
+    .form-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+
+    /* Typography */
+    .page-title {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: var(--gray-900);
+        margin-bottom: 0.5rem;
+    }
+
+    .page-subtitle {
+        color: var(--gray-700);
+        margin-bottom: 2rem;
+    }
+
+    /* Buttons */
+    .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: none;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: var(--primary-dark);
+    }
+
+    .btn-full {
+        width: 100%;
+    }
+
+    /* Badges */
+    .badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+    .badge-clase {
+        background: var(--blue-100);
+        color: var(--blue-800);
+    }
+
+    .badge-practica {
+        background: var(--purple-100);
+        color: var(--purple-600);
+    }
+
+    .badge-superbadge {
+        background: var(--red-100);
+        color: var(--red-500);
+    }
+
+    /* Lumina Specific */
+    .lumina-gradient {
+        background: linear-gradient(135deg, #005A9C 0%, #00477D 100%);
+    }
+}

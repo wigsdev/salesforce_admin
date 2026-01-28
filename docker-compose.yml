@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    container_name: salesforce_admin_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: dev_password
+      POSTGRES_DB: salesforce_admin_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - app_network
+
+  # FastAPI Web Application
+  web:
+    build: .
+    container_name: salesforce_admin_web
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://admin:dev_password@db:5432/salesforce_admin_dev
+      SECRET_KEY: dev_secret_key_change_in_production
+      ENVIRONMENT: development
+      DEBUG: "True"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app_network
+
+volumes:
+  postgres_data:
+
+networks:
+  app_network:
+    driver: bridge

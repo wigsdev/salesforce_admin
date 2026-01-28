@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+
+{% block title %}Comando Lumina Tech - Roadmap Project{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-8 py-8" x-data="projectManager()">
+
+    <!-- HEADER & CONTROLS -->
+    <div class="mb-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>
+            <div class="flex items-center gap-3 mb-1">
+                <span
+                    class="bg-blue-100 text-[#005A9C] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Sprint
+                    1</span>
+            </div>
+            <h1 class="text-3xl font-black text-gray-900 dark:text-white tracking-tight">Lumina Tech <span
+                    class="text-[#005A9C]">Daily Check</span> 🏛️</h1>
+        </div>
+
+        <!-- DYNAMIC DAY SELECTOR & MANAGEMENT -->
+        <div class="w-full md:w-auto flex items-center gap-2">
+            <div class="relative flex-1 md:w-80">
+                <select id="daySelect" x-model.number="selectedDayId"
+                    class="block w-full pl-4 pr-12 py-3 text-base border-gray-300 focus:outline-none focus:ring-[#005A9C] focus:border-[#005A9C] sm:text-sm rounded-xl shadow-sm dark:bg-dark-surface dark:border-dark-border dark:text-white appearance-none bg-no-repeat bg-right">
+                    <template x-for="day in days" :key="day.id">
+                        <option :value="day.id" x-text="day.title"></option>
+                    </template>
+                </select>
+                <!-- Custom Arrow -->
+                <div
+                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700 dark:text-gray-300">
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- ADD NEW DAY BUTTON -->
+            <button @click="createNewDay()" title="Crear Nuevo Día"
+                class="p-3 bg-[#005A9C] hover:bg-blue-700 text-white rounded-xl shadow-sm transition-colors flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+            </button>
+
+            <!-- DELETE DAY BUTTON -->
+            <button @click="deleteCurrentDay()" title="Eliminar Día Actual" x-show="days.length > 1"
+                class="p-3 bg-red-100 hover:bg-red-200 text-red-600 rounded-xl shadow-sm transition-colors flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN TASK BOARD -->
+    <template x-if="currentDay">
+        <div
+            class="bg-white dark:bg-dark-surface rounded-2xl shadow-lg border border-gray-100 dark:border-dark-border overflow-hidden min-h-[500px] flex flex-col">
+
+            <!-- EDITABLE HEADER -->
+            <div
+                class="p-6 border-b border-gray-100 dark:border-dark-border bg-gray-50 dark:bg-gray-800/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="flex-1 w-full">
+                    <!-- Title Input -->
+                    <input type="text" x-model="currentDay.title"
+                        class="w-full bg-transparent border-none p-0 text-2xl font-bold text-gray-900 dark:text-white focus:ring-0 placeholder-gray-400"
+                        placeholder="Nombre del Día (Ej: DÍA 5: Repaso)">
+                    <!-- Reference Input -->
+                    <input type="text" x-model="currentDay.reference"
+                        class="w-full bg-transparent border-none p-0 mt-1 text-sm text-gray-500 dark:text-gray-400 font-medium focus:ring-0 placeholder-gray-300"
+                        placeholder="Referencia (Ej: Práctica Clase X)">
+                </div>
+
+                <!-- Day Completion Status (ALWAYS VISIBLE WHEN COMPLETE) -->
+                <div x-show="isDayComplete()" x-transition
+                    class="flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-lg border border-green-200 shadow-sm flex-shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="font-bold text-sm uppercase">Día Completado</span>
+                </div>
+            </div>
+
+            <!-- TASK LIST -->
+            <div class="p-6 space-y-4">
+                <template x-for="(task, index) in currentDay.tasks" :key="task.id">
+                    <div class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all duration-200 group hover:shadow-md"
+                        :class="task.done ? 'border-green-500 bg-green-50 dark:bg-green-900/10' : 'border-gray-100 dark:border-dark-border hover:border-[#005A9C]'">
+
+                        <!-- Checkbox -->
+                        <div class="relative flex items-center justify-center cursor-pointer flex-shrink-0"
+                            @click="toggleTask(index)">
+                            <div class="h-6 w-6 rounded-md border-2 border-gray-300 shadow-sm transition-all"
+                                :class="{'bg-green-500 border-green-500': task.done, 'bg-white dark:bg-gray-700': !task.done}">
+                            </div>
+                            <svg class="pointer-events-none absolute w-4 h-4 text-white"
+                                :class="{'opacity-100': task.done, 'opacity-0': !task.done}" viewBox="0 0 14 14"
+                                fill="none">
+                                <path d="M3 7L6 10L11 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <!-- Editable Text -->
+                        <input type="text" x-model="task.desc"
+                            class="flex-1 bg-transparent border-none focus:ring-0 text-lg font-medium transition-colors p-0"
+                            :class="task.done ? 'text-green-800 dark:text-green-300 line-through' : 'text-gray-800 dark:text-gray-200'">
+
+                        <!-- Actions & Badges -->
+                        <div class="flex items-center gap-3">
+                            <!-- Status Badge (RESTORED) -->
+                            <span
+                                class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full transition-colors hidden sm:inline-block flex-shrink-0"
+                                :class="task.done ? 'bg-green-200 text-green-800' : 'bg-gray-100 text-gray-500'">
+                                <span x-text="task.done ? 'Completada' : 'Pendiente'"></span>
+                            </span>
+
+                            <!-- Delete Button (Hover) -->
+                            <button @click="deleteTask(index)"
+                                class="p-2 text-gray-400 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0"
+                                title="Eliminar Tarea">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </template>
+
+                <!-- Empty State -->
+                <div x-show="currentDay.tasks.length === 0" class="text-center py-10 text-gray-400">
+                    <p>Este día aún no tiene tareas. ¡Añade la primera!</p>
+                </div>
+
+                <!-- ADD TASK INPUT -->
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-dark-border">
+                    <div class="flex items-center gap-3 group">
+                        <div
+                            class="flex-shrink-0 w-6 h-6 rounded-md border-2 border-gray-300 border-dashed flex items-center justify-center text-gray-400 group-hover:border-[#005A9C] group-hover:text-[#005A9C] transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4"></path>
+                            </svg>
+                        </div>
+                        <input type="text" x-model="newTaskText" @keydown.enter="addTask()"
+                            placeholder="Añadir una tarea a este día..."
+                            class="flex-1 bg-transparent border-none focus:ring-0 text-gray-600 dark:text-gray-300 placeholder-gray-400 transition-colors focus:text-gray-900 dark:focus:text-white">
+                        <button @click="addTask()" :disabled="!newTaskText"
+                            class="text-sm font-bold text-[#005A9C] disabled:opacity-50 disabled:cursor-not-allowed hover:underline">
+                            AÑADIR
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+</div>
+
+<script>
+    function projectManager() {
+        return {
+            selectedDayId: 1,
+            newTaskText: '',
+
+            // Dynamic Data Structure: Array of Days
+            days: [
+                {
+                    id: 1,
+                    title: '📅 DÍA 1: Análisis y Conocimiento',
+                    reference: 'Referencia: Práctica Clase 7',
+                    tasks: [
+                        { id: 101, desc: 'Leer juntos y conocer la Empresa.', done: false },
+                        { id: 102, desc: 'Definir Roles.', done: false },
+                        { id: 103, desc: 'Generar preguntas en el documento para evacuar dudas.', done: false },
+                        { id: 104, desc: 'Registrar en el Doc: gestor de versiones.', done: false }
+                    ]
+                },
+                {
+                    id: 2,
+                    title: '🏗️ DÍA 2: HU-Modelo de Datos',
+                    reference: 'Referencia: Práctica Clase 8',
+                    tasks: [
+                        { id: 201, desc: 'Creación de objetos Custom - Standard.', done: false },
+                        { id: 202, desc: 'Relación entre Objetos.', done: false },
+                        { id: 203, desc: 'Campos personalizados.', done: false },
+                        { id: 204, desc: 'Registrar en el Doc: gestor de versiones.', done: false },
+                        { id: 205, desc: 'Crear las HU en TRELLO.', done: false }
+                    ]
+                },
+                {
+                    id: 3,
+                    title: '🎨 DÍA 3: HU - Creación de la APP',
+                    reference: 'Referencia: Práctica Clase 9',
+                    tasks: [
+                        { id: 301, desc: 'Tener en cuenta el diseño.', done: false },
+                        { id: 302, desc: 'Lograr hacer el dominio personalizado.', done: false },
+                        { id: 303, desc: 'Agregar el Logo y colores.', done: false }
+                    ]
+                },
+                {
+                    id: 4,
+                    title: '🧪 DÍA 4: HU - Creación de los Formularios',
+                    reference: 'Referencia: Práctica Clase 10',
+                    tasks: [
+                        { id: 401, desc: 'Campos adicionales.', done: false },
+                        { id: 402, desc: 'Reglas de validación y campos formula.', done: false },
+                        { id: 403, desc: 'Registrar en el Doc: gestor de versiones.', done: false },
+                        { id: 404, desc: 'Crear las HU en TRELLO.', done: false }
+                    ]
+                }
+            ],
+
+            init() {
+                // Initialize checks or load from localStorage if we implemented it
+            },
+
+            get currentDay() {
+                return this.days.find(d => d.id === this.selectedDayId);
+            },
+
+            createNewDay() {
+                const newId = this.days.length > 0 ? Math.max(...this.days.map(d => d.id)) + 1 : 1;
+                this.days.push({
+                    id: newId,
+                    title: `📝 DÍA ${newId}: Nuevo Día`,
+                    reference: 'Sin referencia',
+                    tasks: [] // Empty checklist
+                });
+                this.selectedDayId = newId; // Switch to new day
+            },
+
+            deleteCurrentDay() {
+                if (this.days.length <= 1) {
+                    alert('No puedes eliminar el único día restante.');
+                    return;
+                }
+                if (confirm('¿Estás seguro de eliminar este día completo y sus tareas?')) {
+                    const idx = this.days.findIndex(d => d.id === this.selectedDayId);
+                    this.days.splice(idx, 1);
+                    // Select previous or first day
+                    this.selectedDayId = this.days[Math.max(0, idx - 1)].id;
+                }
+            },
+
+            addTask() {
+                if (!this.newTaskText.trim()) return;
+
+                this.currentDay.tasks.push({
+                    id: Date.now(),
+                    desc: this.newTaskText,
+                    done: false
+                });
+                this.newTaskText = '';
+            },
+
+            toggleTask(index) {
+                this.currentDay.tasks[index].done = !this.currentDay.tasks[index].done;
+            },
+
+            deleteTask(index) {
+                this.currentDay.tasks.splice(index, 1);
+            },
+
+            isDayComplete() {
+                if (!this.currentDay || this.currentDay.tasks.length === 0) return false;
+                return this.currentDay.tasks.every(t => t.done);
+            }
+        }
+    }
+</script>
+{% endblock %}

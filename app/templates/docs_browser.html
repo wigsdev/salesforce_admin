@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block title %}Explorar Documentación - Salesforce Admin{% endblock %}
+
+{% block head %}
+<style>
+    .browser-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .browser-item {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s, box-shadow 0.2s;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid transparent;
+    }
+
+    .browser-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-color: var(--primary);
+    }
+
+    .item-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--primary);
+    }
+
+    .item-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--gray-800);
+        margin-bottom: 0.5rem;
+    }
+
+    .item-meta {
+        font-size: 0.875rem;
+        color: var(--gray-500);
+        margin-top: auto;
+    }
+
+    .folder-icon {
+        color: var(--primary);
+    }
+
+    .file-icon {
+        color: var(--secondary);
+    }
+
+    /* Dark Mode Overrides */
+    .dark .browser-item:hover {
+        background-color: #1E293B;
+        /* dark-surface */
+        border-color: var(--primary);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .dark .browser-item {
+        background-color: #1E293B;
+        border: 1px solid #334155;
+    }
+
+    .dark .page-title {
+        color: #F8FAFC;
+    }
+
+    .dark .page-subtitle {
+        color: #94A3B8;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="mb-4">
+        <h1 class="page-title">Explorar Documentación</h1>
+        <p class="page-subtitle">Navega por el contenido del curso</p>
+    </div>
+
+    <div x-data="{ loading: true }" x-init="setTimeout(() => loading = false, 400)">
+
+        <!-- Skeleton Grid (Loading State) -->
+        <div x-show="loading" class="browser-grid">
+            <template x-for="i in 6">
+                <div class="browser-item dark:bg-dark-surface dark:border-dark-border">
+                    <div class="w-12 h-12 skeleton mb-4"></div>
+                    <div class="h-6 w-3/4 skeleton mb-2"></div>
+                    <div class="h-4 w-1/2 skeleton mt-auto"></div>
+                </div>
+            </template>
+        </div>
+
+        <!-- Real Content (Loaded State) -->
+        <div x-show="!loading" class="browser-grid" style="display: none;">
+            <!-- Back Button (if not root) -->
+            <!-- Logic to be added in backend to verify root, for now hardcoded root doesn't need back -->
+
+            <!-- Folders -->
+            {% for item in files if item.type == 'directory' %}
+            <a href="/docs/browse?path={{ item.path }}"
+                class="browser-item dark:bg-dark-surface dark:border-dark-border dark:text-gray-200">
+                <div class="item-icon folder-icon">📁</div>
+                <div class="item-title dark:text-gray-100">{{ item.name | replace('_', ' ') }}</div>
+                <div class="item-meta dark:text-gray-400">Carpeta</div>
+            </a>
+            {% endfor %}
+
+            <!-- Files -->
+            {% for item in files if item.type != 'directory' %}
+            <a href="/docs/{{ item.path }}"
+                class="browser-item dark:bg-dark-surface dark:border-dark-border dark:text-gray-200">
+                <div class="item-icon file-icon">📄</div>
+                <div class="item-title dark:text-gray-100">{{ item.name | replace('_', ' ') }}</div>
+                <div class="item-meta dark:text-gray-400">Documento</div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% if not files %}
+    <div class="text-center py-12 text-gray-500">
+        <p>Esta carpeta está vacía.</p>
+        <a href="/docs/browse" class="btn btn-primary mt-4">Volver al inicio</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

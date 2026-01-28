@@ -1,0 +1,33 @@
+{
+  "name": "admin_salesforce",
+  "version": "1.0.0",
+  "description": "[![Status](https://img.shields.io/badge/Status-Active_Development-success?style=for-the-badge&logo=statuspage)](https://salesforce-admin.onrender.com)\r [![Version](https://img.shields.io/badge/MVP-v0.30.0-blue?style=for-the-badge&logo=semver)](docs/NO_VERSION_YET)\r [![Tech Stack](https://img.shields.io/badge/Stack-FastAPI%20%7C%20Tailwind%20%7C%20PostgreSQL-005A9C?style=for-the-badge&logo=python)](docs/IMPLEMENTATION_PLAN.md)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i ./app/static/css/input.css -o ./app/static/css/main.css --minify",
+    "watch:css": "tailwindcss -i ./app/static/css/input.css -o ./app/static/css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wigsdev/salesforce_admin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wigsdev/salesforce_admin/issues"
+  },
+  "homepage": "https://github.com/wigsdev/salesforce_admin#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "glob": "^13.0.0"
+  }
+}
