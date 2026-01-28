@@ -1,20 +1,32 @@
+const path = require('path');
+
+// Function to normalize paths to use forward slashes (required for fast-glob on Windows)
+const normalize = (p) => p.replace(/\\/g, '/');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/templates/**/*.html",
-    "./app/static/**/*.js"
+    normalize(path.join(__dirname, "app/templates/**/*.html")),
+    normalize(path.join(__dirname, "app/static/**/*.js"))
   ],
+  darkMode: 'class', // Usar clase .dark para activar modo oscuro
   theme: {
     extend: {
       colors: {
-        primary: "#005A9C", // Lumina Blue
-        "primary-dark": "#00477D",
-        "dark-bg": "#111827",
-        "dark-surface": "#1F2937",
-        "dark-border": "#374151"
+        primary: {
+          DEFAULT: "#667eea", // Restore original primary
+          dark: "#5a67d8",
+          600: "#3182ce"
+        },
+        secondary: "#764ba2",
+        accent: "#ed64a6",
+        dark: {
+          bg: "#111827",
+          surface: "#1F2937",
+          border: "#374151"
+        }
       }
     },
   },
   plugins: [],
-  darkMode: 'class',
 }

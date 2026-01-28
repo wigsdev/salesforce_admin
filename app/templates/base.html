@@ -10,7 +10,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- TailwindCSS (Compiled) -->
-    <link href="{{ url_for('static', path='/css/main.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/main.css') }}?v={{ app_version }}" rel="stylesheet">
 
     <script>
         // Global Toast Helper
@@ -89,8 +89,8 @@
         }
     </script>
 
-    <!-- Global Styles -->
-    <link rel="stylesheet" href="/static/css/styles.css?v=3.1">
+    <!-- Global Styles (Deprecated, moved to Tailwind layer) -->
+    <!-- <link rel="stylesheet" href="/static/css/styles.css?v=3.1"> -->
 
     {% block head %}{% endblock %}
 </head>
@@ -106,8 +106,12 @@
             <!-- Brand -->
             <a href="/" class="nav-brand dark:text-white flex items-center">
                 <span class="hidden md:block">Admin Salesforce Learning</span>
-                <span
-                    class="md:hidden flex items-center justify-center w-8 h-8 rounded bg-primary text-white font-bold">AS</span>
+                <div class="md:hidden flex items-center justify-center w-10 h-10">
+                    <svg class="w-8 h-8 text-primary dark:text-blue-500" fill="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.42 9.21a6.6 6.6 0 0 0-11.84 0A5.5 5.5 0 0 0 6.5 20h11A4.5 4.5 0 0 0 18.42 9.21z" />
+                    </svg>
+                </div>
             </a>
 
             <!-- Desktop Menu -->
