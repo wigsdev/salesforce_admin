@@ -62,4 +62,14 @@ raw_data/
 !requirements-dev.txt
 
 # Alembic
-alembic/versions/*.pyc
+
+# Node.js / Frontend
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json  # Optional: keep if you want to lock versions, ignore if libraries are not core
+.parcel-cache/
+dist/
+
+# Compiled CSS (generated from input.css)
+app/static/css/main.css

@@ -80,7 +80,12 @@ python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # Instalar dependencias
+# Instalar dependencias Python
 pip install -r requirements.txt
+
+# Instalar dependencias Frontend (Tailwind)
+npm install
+npm run build:css
 ```
 
 ### 3. Configuración
