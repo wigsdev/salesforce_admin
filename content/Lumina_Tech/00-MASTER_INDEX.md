@@ -20,11 +20,20 @@
 ## 👥 Fase 2: Roles y Responsabilidades
 *Define quién eres y qué debes hacer.*
 
+*   ♟️ **MATRIZ DE EQUIPO (6 Integrantes)**: [Ver Distribución Recomendada](Tutoriales_por_Rol/00-MATRIZ_ROLES_EQUIPO.md). 👈 **(¡Empieza Aquí!)**
 *   🕵️ **Business Analyst**: [Tu Guía Aquí](Tutoriales_por_Rol/01-Rol_Business_Analyst.md). (Traduce necesidades).
+
+*   👔 **Product Owner (PO)**: [Tu Guía Aquí](Tutoriales_por_Rol/06-Rol_Product_Owner.md). (Prioriza valor).
 *   🏗️ **Consultant / Architect**: [Tu Guía Aquí](Tutoriales_por_Rol/02-Rol_Salesforce_Consultant.md). (Diseña los datos).
+*   🛡️ **Team Lead (TL)**: [Tu Guía Aquí](Tutoriales_por_Rol/07-Rol_Team_Lead.md). (Calidad técnica).
+*   ⏱️ **Scrum Master**: [Tu Guía Aquí](Tutoriales_por_Rol/08-Rol_Scrum_Master.md). (Ritmo y procesos).
 *   ⚙️ **Salesforce Admin**: [Tu Guía Aquí](Tutoriales_por_Rol/05-Rol_Salesforce_Admin.md). (Construye la solución).
 *   🧪 **QA Tester**: [Tu Guía Aquí](Tutoriales_por_Rol/03-Rol_QA_Tester.md). (Rompe el sistema).
 *   🚀 **Release Manager**: [Tu Guía Aquí](Tutoriales_por_Rol/04-Rol_Release_Manager.md). (Cuida Producción).
+*   ♾️ **DevOps Specialist**: [Tu Guía Aquí](Tutoriales_por_Rol/09-Rol_DevOps_Specialist.md). (Automatización).
+*   💻 **Salesforce Developer**: [Tu Guía Aquí](Tutoriales_por_Rol/10-Rol_Salesforce_Developer.md). (Código avanzado).
+
+
 
 ---
 
@@ -54,6 +63,7 @@
 
 2.  **🛡️ Lógica y Seguridad**
     *   [5. Validaciones (Email y Notas)](Guias_Implementacion/05-Tutorial_Validaciones.md)
+    *   [**5b. Automatización (Fórmulas)**](Guias_Implementacion/05b-Tutorial_Campos_Formula.md) 🆕
     *   [6. Seguridad (OWD y Perfiles)](Guias_Implementacion/06-Tutorial_Seguridad.md)
 
 3.  **🎨 Interfaz de Usuario**

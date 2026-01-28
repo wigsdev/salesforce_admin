@@ -47,6 +47,18 @@ def seed_data():
                 team="Admin Force"
             )
             db.add(student)
+
+        # 1b. Create Wilmer User (Owner)
+        if not db.query(User).filter(User.email == "karlwgs1989@gmail.com").first():
+            print("Creating Wilmer's user...")
+            wilmer = User(
+                email="karlwgs1989@gmail.com",
+                name="Wilmer G",
+                password_hash=hash_password("admin123"),
+                role="admin",
+                team="Visionary Admins"
+            )
+            db.add(wilmer)
             
         db.commit()
 
