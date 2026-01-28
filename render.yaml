@@ -2,6 +2,7 @@ services:
   # 1. FastAPI Web Service
   - type: web
     name: admin-salesforce
+    plan: free # Explicitly use the Free Tier
     env: python
     buildCommand: "./scripts/build.sh"
     startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
