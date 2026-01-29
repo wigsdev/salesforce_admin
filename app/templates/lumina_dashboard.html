@@ -60,11 +60,11 @@
     <!-- MAIN TASK BOARD -->
     <template x-if="currentDay">
         <div
-            class="bg-white dark:bg-dark-surface rounded-2xl shadow-lg border border-gray-100 dark:border-dark-border overflow-hidden min-h-[500px] flex flex-col">
+            class="bg-white dark:bg-dark-surface rounded-lg shadow-sm border border-gray-100 dark:border-dark-border overflow-hidden min-h-[500px] flex flex-col">
 
             <!-- EDITABLE HEADER -->
             <div
-                class="p-6 border-b border-gray-100 dark:border-dark-border bg-gray-50 dark:bg-gray-800/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                class="p-6 bg-gradient-to-r from-gray-50 to-white dark:from-dark-surface dark:to-dark-bg border-b border-gray-200 dark:border-dark-border flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div class="flex-1 w-full">
                     <!-- Title Input -->
                     <input type="text" x-model="currentDay.title" @input.debounce.500ms="updateDayTitle()"
