@@ -89,27 +89,25 @@
             <!-- TASK LIST -->
             <div class="p-6 space-y-4">
                 <template x-for="(task, index) in currentDay.tasks" :key="task.id">
-                    <div class="flex items-center gap-4 p-4 rounded-xl border-2 transition-all duration-200 group hover:shadow-md"
-                        :class="task.done ? 'border-green-500 bg-green-50 dark:bg-green-900/10' : 'border-gray-100 dark:border-dark-border hover:border-[#005A9C]'">
+                    <div class="flex items-center gap-4 p-3 rounded-lg group transition-colors hover:bg-gray-50 dark:hover:bg-gray-800"
+                        :class="task.done ? 'opacity-75' : ''">
 
                         <!-- Checkbox -->
                         <div class="relative flex items-center justify-center cursor-pointer flex-shrink-0"
                             @click="toggleTask(index)">
-                            <div class="h-6 w-6 rounded-md border-2 border-gray-300 shadow-sm transition-all"
-                                :class="{'bg-green-500 border-green-500': task.done, 'bg-white dark:bg-gray-700': !task.done}">
+                            <div class="h-6 w-6 rounded-md border-2 border-gray-300 shadow-sm transition-all flex items-center justify-center"
+                                :class="{'bg-[#005A9C] border-[#005A9C]': task.done, 'bg-white dark:bg-gray-700 dark:border-gray-500': !task.done}">
+                                <svg x-show="task.done" class="w-4 h-4 text-white" viewBox="0 0 14 14" fill="none">
+                                    <path d="M3 7L6 10L11 4" stroke="currentColor" stroke-width="2.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                             </div>
-                            <svg class="pointer-events-none absolute w-4 h-4 text-white"
-                                :class="{'opacity-100': task.done, 'opacity-0': !task.done}" viewBox="0 0 14 14"
-                                fill="none">
-                                <path d="M3 7L6 10L11 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
                         </div>
 
                         <!-- Editable Text -->
                         <input type="text" x-model="task.desc"
-                            class="flex-1 bg-transparent border-none focus:ring-0 text-lg font-medium transition-colors p-0"
-                            :class="task.done ? 'text-green-800 dark:text-green-300 line-through' : 'text-gray-800 dark:text-gray-200'">
+                            class="flex-1 !bg-transparent !border-none !p-0 text-base font-normal text-gray-800 dark:text-gray-200 focus:ring-0 !shadow-none"
+                            :class="task.done ? 'line-through text-gray-500 dark:text-gray-500' : ''">
 
                         <!-- Actions & Badges -->
                         <div class="flex items-center gap-3">
