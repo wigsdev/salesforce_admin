@@ -10,7 +10,6 @@ services:
       - key: PYTHON_VERSION
         value: 3.11.0 # Render stable support
       - key: DATABASE_URL
-        sync: false # ⚠️ Ingresar manualmente la URL de conexión (ej. Neon.tech, Supabase, o Render existente)
       - key: SECRET_KEY
         generateValue: true
       - key: ENVIRONMENT
