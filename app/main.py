@@ -50,7 +50,7 @@ app.include_router(docs.router, prefix="/docs", tags=["Documentation"])
 app.include_router(progress.router, prefix="/api/progress", tags=["Progress"])
 app.include_router(curriculum.router, prefix="/api/curriculum", tags=["Curriculum"])
 app.include_router(frontend.router, tags=["Frontend"])
-app.include_router(lumina.router, prefix="/lumina", tags=["Lumina Project"])
+app.include_router(lumina.router, prefix="/api/lumina", tags=["Lumina Project"])
 
 # TODO: Include other routers when created
 # from app.routers import sprints

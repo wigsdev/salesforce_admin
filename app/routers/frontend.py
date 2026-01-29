@@ -28,3 +28,17 @@ async def register_page(request: Request):
     Render registration page.
     """
     return templates.TemplateResponse("register.html", {"request": request})
+
+
+@router.get("/lumina/dashboard", response_class=HTMLResponse)
+async def lumina_dashboard(request: Request):
+    """
+    Render the Lumina Tech Project Dashboard.
+    """
+    return templates.TemplateResponse(
+        "lumina_dashboard.html",
+        {
+            "request": request,
+            "title": "Dashboard Lumina Tech",
+        },
+    )

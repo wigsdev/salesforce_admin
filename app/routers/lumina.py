@@ -136,18 +136,4 @@ def delete_task(task_id: int, db: Session = Depends(get_db)):
     return {"success": True}
 
 
-# --- Views ---
 
-
-@router.get("/dashboard", response_class=HTMLResponse)
-async def lumina_dashboard(request: Request):
-    """
-    Frontend View: Render the Lumina Tech Project Dashboard.
-    """
-    return templates.TemplateResponse(
-        "lumina_dashboard.html",
-        {
-            "request": request,
-            "title": "Dashboard Lumina Tech",
-        },
-    )
