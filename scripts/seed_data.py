@@ -63,24 +63,22 @@ def seed_data():
 
         db.commit()
 
-        # 2. CLEAR EXISTING DATA (To remove mock data and phantoms)
-        print("Clearing existing curriculum data...")
-        db.query(Task).delete()
-        db.query(Sprint).delete()
-        db.commit()
-
-        # 3. Create Sprint 1
-        print("Creating Sprint 1...")
-        sprint1 = Sprint(
-            name="Fundamentos y Modelado de Datos",
-            description="Introducción a Salesforce, configuración de org, seguridad y reportes.",
-            number=1,
-            start_date=datetime(2026, 1, 5),
-            end_date=datetime(2026, 2, 6),
-        )
-        db.add(sprint1)
-        db.commit()
-        db.refresh(sprint1)
+        # 2. Get or Create Sprint 1
+        sprint1 = db.query(Sprint).filter(Sprint.number == 1).first()
+        if not sprint1:
+            print("Creating Sprint 1...")
+            sprint1 = Sprint(
+                name="Fundamentos y Modelado de Datos",
+                description="Introducción a Salesforce, configuración de org, seguridad y reportes.",
+                number=1,
+                start_date=datetime(2026, 1, 5),
+                end_date=datetime(2026, 2, 6),
+            )
+            db.add(sprint1)
+            db.commit()
+            db.refresh(sprint1)
+        else:
+            print("Sprint 1 already exists. Skipping creation.")
 
         # 4. Create Tasks for Sprint 1
         print("Seeding Tasks...")
