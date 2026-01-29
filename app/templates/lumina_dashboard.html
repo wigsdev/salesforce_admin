@@ -179,7 +179,13 @@
             async fetchData() {
                 try {
                     const res = await fetch('/api/lumina/days');
-                    this.days = await res.json();
+                    if (res.ok) {
+                        const data = await res.json();
+                        this.days = Array.isArray(data) ? data : [];
+                    } else {
+                        console.error("Failed to fetch days:", res.status);
+                        this.days = [];
+                    }
 
                     // Select first day if none selected or invalid
                     if (this.days.length > 0) {
@@ -187,11 +193,11 @@
                             this.selectedDayId = this.days[0].id; // Select the first day by default
                         }
                     } else {
-                        // Create Day 1 automatically if empty? Or leave empty?
                         this.selectedDayId = null;
                     }
                 } catch (e) {
                     console.error("Error loading days", e);
+                    this.days = []; // Ensure it's an array on error
                 }
             },
 
