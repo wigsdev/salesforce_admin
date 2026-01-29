@@ -67,11 +67,11 @@
                 class="p-6 border-b border-gray-100 dark:border-dark-border bg-gray-50 dark:bg-gray-800/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div class="flex-1 w-full">
                     <!-- Title Input -->
-                    <input type="text" x-model="currentDay.title"
+                    <input type="text" x-model="currentDay.title" @input.debounce.500ms="updateDayTitle()"
                         class="w-full bg-transparent border-none p-0 text-2xl font-bold text-gray-900 dark:text-white focus:ring-0 placeholder-gray-400"
                         placeholder="Nombre del Día (Ej: DÍA 5: Repaso)">
                     <!-- Reference Input -->
-                    <input type="text" x-model="currentDay.reference"
+                    <input type="text" x-model="currentDay.reference" @input.debounce.500ms="updateDayRef()"
                         class="w-full bg-transparent border-none p-0 mt-1 text-sm text-gray-500 dark:text-gray-400 font-medium focus:ring-0 placeholder-gray-300"
                         placeholder="Referencia (Ej: Práctica Clase X)">
                 </div>
@@ -167,106 +167,154 @@
 <script>
     function projectManager() {
         return {
-            selectedDayId: 1,
+            days: [],
+            selectedDayId: null,
             newTaskText: '',
+            loading: false,
 
-            // Dynamic Data Structure: Array of Days
-            days: [
-                {
-                    id: 1,
-                    title: '📅 DÍA 1: Análisis y Conocimiento',
-                    reference: 'Referencia: Práctica Clase 7',
-                    tasks: [
-                        { id: 101, desc: 'Leer juntos y conocer la Empresa.', done: false },
-                        { id: 102, desc: 'Definir Roles.', done: false },
-                        { id: 103, desc: 'Generar preguntas en el documento para evacuar dudas.', done: false },
-                        { id: 104, desc: 'Registrar en el Doc: gestor de versiones.', done: false }
-                    ]
-                },
-                {
-                    id: 2,
-                    title: '🏗️ DÍA 2: HU-Modelo de Datos',
-                    reference: 'Referencia: Práctica Clase 8',
-                    tasks: [
-                        { id: 201, desc: 'Creación de objetos Custom - Standard.', done: false },
-                        { id: 202, desc: 'Relación entre Objetos.', done: false },
-                        { id: 203, desc: 'Campos personalizados.', done: false },
-                        { id: 204, desc: 'Registrar en el Doc: gestor de versiones.', done: false },
-                        { id: 205, desc: 'Crear las HU en TRELLO.', done: false }
-                    ]
-                },
-                {
-                    id: 3,
-                    title: '🎨 DÍA 3: HU - Creación de la APP',
-                    reference: 'Referencia: Práctica Clase 9',
-                    tasks: [
-                        { id: 301, desc: 'Tener en cuenta el diseño.', done: false },
-                        { id: 302, desc: 'Lograr hacer el dominio personalizado.', done: false },
-                        { id: 303, desc: 'Agregar el Logo y colores.', done: false }
-                    ]
-                },
-                {
-                    id: 4,
-                    title: '🧪 DÍA 4: HU - Creación de los Formularios',
-                    reference: 'Referencia: Práctica Clase 10',
-                    tasks: [
-                        { id: 401, desc: 'Campos adicionales.', done: false },
-                        { id: 402, desc: 'Reglas de validación y campos formula.', done: false },
-                        { id: 403, desc: 'Registrar en el Doc: gestor de versiones.', done: false },
-                        { id: 404, desc: 'Crear las HU en TRELLO.', done: false }
-                    ]
+            async init() {
+                await this.fetchData();
+            },
+
+            async fetchData() {
+                try {
+                    const res = await fetch('/api/lumina/days');
+                    this.days = await res.json();
+
+                    // Select first day if none selected or invalid
+                    if (this.days.length > 0) {
+                        if (!this.selectedDayId || !this.days.find(d => d.id === this.selectedDayId)) {
+                            this.selectedDayId = this.days[0].id; // Select the first day by default
+                        }
+                    } else {
+                        // Create Day 1 automatically if empty? Or leave empty?
+                        this.selectedDayId = null;
+                    }
+                } catch (e) {
+                    console.error("Error loading days", e);
                 }
-            ],
-
-            init() {
-                // Initialize checks or load from localStorage if we implemented it
             },
 
             get currentDay() {
                 return this.days.find(d => d.id === this.selectedDayId);
             },
 
-            createNewDay() {
-                const newId = this.days.length > 0 ? Math.max(...this.days.map(d => d.id)) + 1 : 1;
-                this.days.push({
-                    id: newId,
-                    title: `📝 DÍA ${newId}: Nuevo Día`,
-                    reference: 'Sin referencia',
-                    tasks: [] // Empty checklist
-                });
-                this.selectedDayId = newId; // Switch to new day
+            async createNewDay() {
+                const dayCount = this.days.length + 1;
+                const newTitle = `📝 DÍA ${dayCount}: Nuevo Día`;
+                const newRef = "Sin referencia";
+
+                try {
+                    const res = await fetch('/api/lumina/days', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ title: newTitle, reference: newRef })
+                    });
+
+                    const newDay = await res.json();
+                    this.days.push(newDay);
+                    this.selectedDayId = newDay.id;
+                } catch (e) {
+                    console.error("Error creating day", e);
+                    alert("Error al crear el día");
+                }
             },
 
-            deleteCurrentDay() {
-                if (this.days.length <= 1) {
-                    alert('No puedes eliminar el único día restante.');
-                    return;
-                }
+            async deleteCurrentDay() {
+                if (!this.currentDay) return;
+
                 if (confirm('¿Estás seguro de eliminar este día completo y sus tareas?')) {
-                    const idx = this.days.findIndex(d => d.id === this.selectedDayId);
-                    this.days.splice(idx, 1);
-                    // Select previous or first day
-                    this.selectedDayId = this.days[Math.max(0, idx - 1)].id;
+                    const idToDelete = this.selectedDayId;
+                    try {
+                        const res = await fetch(`/api/lumina/days/${idToDelete}`, { method: 'DELETE' });
+                        if (res.ok) {
+                            const idx = this.days.findIndex(d => d.id === this.selectedDayId);
+                            this.days.splice(idx, 1);
+                            // Select previous or first day
+                            if (this.days.length > 0) {
+                                this.selectedDayId = this.days[Math.max(0, idx - 1)].id;
+                            } else {
+                                this.selectedDayId = null;
+                            }
+                        }
+                    } catch (e) {
+                        console.error("Error deleting day", e);
+                    }
                 }
             },
 
-            addTask() {
+            async addTask() {
                 if (!this.newTaskText.trim()) return;
+                if (!this.currentDay) return;
 
-                this.currentDay.tasks.push({
-                    id: Date.now(),
-                    desc: this.newTaskText,
-                    done: false
-                });
-                this.newTaskText = '';
+                const text = this.newTaskText;
+                this.newTaskText = ''; // Clear input immediately
+
+                try {
+                    const res = await fetch(`/api/lumina/days/${this.selectedDayId}/tasks`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ description: text })
+                    });
+                    const newTask = await res.json();
+                    this.currentDay.tasks.push(newTask);
+                } catch (e) {
+                    console.error("Error adding task", e);
+                    alert("Error al agregar tarea");
+                }
             },
 
-            toggleTask(index) {
-                this.currentDay.tasks[index].done = !this.currentDay.tasks[index].done;
+            async toggleTask(index) {
+                const task = this.currentDay.tasks[index];
+                // Optimistic toggle
+                task.done = !task.done;
+
+                try {
+                    const res = await fetch(`/api/lumina/tasks/${task.id}/toggle`, { method: 'PUT' });
+                    if (!res.ok) {
+                        // Revert on error
+                        task.done = !task.done;
+                    }
+                } catch (e) {
+                    console.error("Error toggling task", e);
+                    task.done = !task.done;
+                }
             },
 
-            deleteTask(index) {
-                this.currentDay.tasks.splice(index, 1);
+            async deleteTask(index) {
+                const task = this.currentDay.tasks[index];
+                if (!confirm("¿Eliminar tarea?")) return;
+
+                try {
+                    const res = await fetch(`/api/lumina/tasks/${task.id}`, { method: 'DELETE' });
+                    if (res.ok) {
+                        this.currentDay.tasks.splice(index, 1);
+                    }
+                } catch (e) {
+                    console.error("Error deleting task", e);
+                }
+            },
+
+            async updateDayTitle() {
+                if (!this.currentDay) return;
+                try {
+                    await fetch(`/api/lumina/days/${this.currentDay.id}`, {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ title: this.currentDay.title })
+                    });
+                } catch (e) { console.error(e); }
+            },
+
+            async updateDayRef() {
+                if (!this.currentDay) return;
+                try {
+                    await fetch(`/api/lumina/days/${this.currentDay.id}`, {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ reference: this.currentDay.reference })
+                    });
+                } catch (e) { console.error(e); }
             },
 
             isDayComplete() {
