@@ -12,8 +12,9 @@ echo "🎨 Compilando TailwindCSS..."
 npm install
 npm run build:css
 
-echo "🗄️ Ejecutando Migraciones (Alembic)..."
-alembic upgrade head
+# echo "🗄️ Ejecutando Migraciones (Alembic)..."
+# Las migraciones se moverán al comando de inicio (start)
+# alembic upgrade head
 
 echo "🌱 Seed Data (Opcional)..."
 # python scripts/seed_data.py  <-- Descomentar si queremos seed automático

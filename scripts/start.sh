@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -o errexit
+
+echo "🗄️ Ejecutando Migraciones de Base de Datos..."
+alembic upgrade head
+
+echo "🚀 Iniciando Servidor Web..."
+uvicorn app.main:app --host 0.0.0.0 --port $PORT

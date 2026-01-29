@@ -5,7 +5,7 @@ services:
     plan: free # Explicitly use the Free Tier
     env: python
     buildCommand: "./scripts/build.sh"
-    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    startCommand: "./scripts/start.sh" # Migrations + Start
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0 # Render stable support
