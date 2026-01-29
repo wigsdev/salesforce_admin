@@ -236,7 +236,10 @@ def seed_data():
 
         # 5. SEED LUMINA DASHBOARD DATA (Restoring previous content)
         print("Seeding Lumina Dashboard Data...")
-        from app.models.lumina import LuminaDeliverable, LuminaTask # Local import to avoid circular issues
+        from app.models.lumina import (
+            LuminaDeliverable,
+            LuminaTask,
+        )  # Local import to avoid circular issues
 
         lumina_days = [
             {
@@ -246,8 +249,8 @@ def seed_data():
                     "Leer juntos y conocer la Empresa.",
                     "Definir Roles.",
                     "Generar preguntas en el documento para evacuar dudas.",
-                    "Registrar en el Doc: gestor de versiones."
-                ]
+                    "Registrar en el Doc: gestor de versiones.",
+                ],
             },
             {
                 "title": "🏗️ DÍA 2: HU-Modelo de Datos",
@@ -257,8 +260,8 @@ def seed_data():
                     "Relación entre Objetos.",
                     "Campos personalizados.",
                     "Registrar en el Doc: gestor de versiones.",
-                    "Crear las HU en TRELLO."
-                ]
+                    "Crear las HU en TRELLO.",
+                ],
             },
             {
                 "title": "🎨 DÍA 3: HU - Creación de la APP",
@@ -266,8 +269,8 @@ def seed_data():
                 "tasks": [
                     "Tener en cuenta el diseño.",
                     "Lograr hacer el dominio personalizado.",
-                    "Agregar el Logo y colores."
-                ]
+                    "Agregar el Logo y colores.",
+                ],
             },
             {
                 "title": "🧪 DÍA 4: HU - Creación de los Formularios",
@@ -276,32 +279,32 @@ def seed_data():
                     "Campos adicionales.",
                     "Reglas de validación y campos formula.",
                     "Registrar en el Doc: gestor de versiones.",
-                    "Crear las HU en TRELLO."
-                ]
-            }
+                    "Crear las HU en TRELLO.",
+                ],
+            },
         ]
 
         for day_data in lumina_days:
-            # Check if day exists by reference/path
-            day = db.query(LuminaDeliverable).filter(LuminaDeliverable.path == day_data["reference"]).first()
+            # Check if day exists by reference
+            day = (
+                db.query(LuminaDeliverable)
+                .filter(LuminaDeliverable.reference == day_data["reference"])
+                .first()
+            )
             if not day:
                 print(f"Creating Day: {day_data['title']}")
                 day = LuminaDeliverable(
                     title=day_data["title"],
-                    path=day_data["reference"],
-                    role="general",
-                    weight=0
+                    reference=day_data["reference"],
                 )
                 db.add(day)
                 db.commit()
                 db.refresh(day)
-                
+
                 # Add tasks
                 for task_desc in day_data["tasks"]:
                     task = LuminaTask(
-                        deliverable_id=day.id,
-                        description=task_desc,
-                        is_completed=False
+                        deliverable_id=day.id, description=task_desc, is_completed=False
                     )
                     db.add(task)
                 db.commit()

@@ -1,6 +1,5 @@
 from typing import Optional
-from fastapi import APIRouter, Depends, Request, HTTPException
-from fastapi.responses import HTMLResponse
+from fastapi import APIRouter, Depends, HTTPException
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
@@ -41,7 +40,7 @@ def get_days(db: Session = Depends(get_db)):
         {
             "id": d.id,
             "title": d.title,
-            "reference": d.path,  # Using 'path' to store reference/subtitle for now
+            "reference": d.reference,
             "tasks": [
                 {"id": t.id, "desc": t.description, "done": t.is_completed}
                 for t in d.tasks
@@ -54,12 +53,9 @@ def get_days(db: Session = Depends(get_db)):
 @router.post("/days")
 def create_day(day_in: DayCreate, db: Session = Depends(get_db)):
     """Create a new Day."""
-    # We use 'path' field to store the reference/subtitle since the model requires 'path'
     new_day = LuminaDeliverable(
         title=day_in.title,
-        path=day_in.reference or "Sin referencia",
-        role="general",  # Default role
-        weight=0,
+        reference=day_in.reference or "Sin referencia",
     )
     db.add(new_day)
     db.commit()
@@ -67,7 +63,7 @@ def create_day(day_in: DayCreate, db: Session = Depends(get_db)):
     return {
         "id": new_day.id,
         "title": new_day.title,
-        "reference": new_day.path,
+        "reference": new_day.reference,
         "tasks": [],
     }
 
@@ -92,7 +88,7 @@ def update_day(day_id: int, day_in: DayUpdate, db: Session = Depends(get_db)):
     if day_in.title is not None:
         day.title = day_in.title
     if day_in.reference is not None:
-        day.path = day_in.reference
+        day.reference = day_in.reference
 
     db.commit()
     return {"success": True}
@@ -134,6 +130,3 @@ def delete_task(task_id: int, db: Session = Depends(get_db)):
         db.delete(task)
         db.commit()
     return {"success": True}
-
-
-

@@ -12,13 +12,11 @@ class LuminaDeliverable(BaseModel, TimestampMixin):
     __tablename__ = "lumina_deliverables"
 
     title = Column(String, nullable=False)
-    path = Column(String, unique=True, nullable=False, index=True)
-    role = Column(String, nullable=False, index=True)
-    weight = Column(Integer, default=10, nullable=False)
-
+    reference = Column(String, nullable=False)  # Renamed from path, used as subtitle/reference
+    
     # Relationships
     tasks = relationship(
-        "LuminaTask", back_populates="deliverable", cascade="all, delete-orphan"
+        "LuminaTask", back_populates="deliverable", cascade="all, delete-orphan", order_by="LuminaTask.id"
     )
 
 
