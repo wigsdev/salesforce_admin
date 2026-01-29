@@ -87,12 +87,12 @@
             </div>
 
             <!-- TASK LIST -->
-            <!-- TASK LIST (Minimalist Divided Style) -->
-            <div class=""> <!-- Removed p-6 to allow full-width borders -->
+            <!-- TASK LIST (Standardized Layout: Contained borders) -->
+            <div class="p-6"> <!-- Restored padding to match header alignment -->
                 <ul class="flex flex-col">
                     <template x-for="(task, index) in currentDay.tasks" :key="task.id">
                         <li
-                            class="group flex items-center gap-4 px-6 py-4 border-b border-gray-100 dark:border-dark-border last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors duration-200">
+                            class="group flex items-center gap-4 py-4 border-b border-gray-100 dark:border-dark-border last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors duration-200">
 
                             <!-- Checkbox -->
                             <button type="button" @click="toggleTask(index)"
@@ -132,7 +132,7 @@
 
                 <!-- ADD TASK INPUT -->
                 <div class="mt-4 pt-4 border-t border-gray-100 dark:border-dark-border">
-                    <div class="flex items-center gap-3 group px-6">
+                    <div class="flex items-center gap-3 group">
                         <div
                             class="flex-shrink-0 w-6 h-6 rounded-md border-2 border-gray-300 border-dashed flex items-center justify-center text-gray-400 group-hover:border-[#005A9C] group-hover:text-[#005A9C] transition-colors">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
