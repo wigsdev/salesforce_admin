@@ -66,14 +66,14 @@
             <div
                 class="p-6 bg-gradient-to-r from-gray-50 to-white dark:from-dark-surface dark:to-dark-bg border-b border-gray-200 dark:border-dark-border flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div class="flex-1 w-full">
-                    <!-- Title Input -->
+                    <!-- Title Input (Standardized: text-xl font-semibold) -->
                     <input type="text" x-model="currentDay.title" @input.debounce.500ms="updateDayTitle()"
-                        class="w-full !bg-transparent !border-none !p-0 text-2xl font-bold text-gray-900 dark:text-white focus:ring-0 placeholder-gray-400 !shadow-none ring-0"
-                        placeholder="Nombre del Día (Ej: DÍA 5: Repaso)">
-                    <!-- Reference Input (Styled as Subtitle) -->
+                        class="w-full !bg-transparent !border-none !p-0 text-xl font-semibold text-gray-800 dark:text-white focus:ring-0 placeholder-gray-400 !shadow-none ring-0"
+                        placeholder="Nombre del Día">
+                    <!-- Reference Input (Standardized: text-sm text-gray-500) -->
                     <input type="text" x-model="currentDay.reference" @input.debounce.500ms="updateDayRef()"
-                        class="w-full !bg-transparent !border-none !p-0 mt-1 text-xs text-gray-400 dark:text-gray-500 font-normal focus:ring-0 placeholder-gray-300 !shadow-none ring-0"
-                        placeholder="Referencia (Ej: Práctica Clase X)">
+                        class="w-full !bg-transparent !border-none !p-0 mt-1 text-sm text-gray-500 dark:text-gray-400 focus:ring-0 placeholder-gray-300 !shadow-none ring-0"
+                        placeholder="Referencia">
                 </div>
 
                 <!-- Day Completion Status (ALWAYS VISIBLE WHEN COMPLETE) -->
