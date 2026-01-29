@@ -59,48 +59,44 @@
 
     <!-- MAIN TASK BOARD -->
     <template x-if="currentDay">
-        <!-- Main Card Container: Unified dark background, no internal dividers between header/body -->
         <div
             class="bg-white dark:bg-dark-surface rounded-lg shadow-sm border border-gray-100 dark:border-dark-border overflow-hidden min-h-[500px] flex flex-col">
 
-            <!-- Content Wrapper with Unified Padding (This creates the 'green shaded area' effect you wanted) -->
-            <div class="p-6 flex flex-col h-full">
-
-                <!-- HEADER (Inside padding) -->
-                <div
-                    class="mb-6 border-b border-gray-800 pb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <div class="flex-1 w-full">
-                        <!-- Title Input (Standardized: text-xl font-semibold) -->
-                        <input type="text" x-model="currentDay.title" @input.debounce.500ms="updateDayTitle()"
-                            class="w-full !bg-transparent !border-none !p-0 text-xl font-semibold text-gray-800 dark:text-white focus:ring-0 placeholder-gray-400 !shadow-none ring-0"
-                            placeholder="Nombre del Día">
-                        <!-- Reference Input (Standardized: text-sm text-gray-500) -->
-                        <input type="text" x-model="currentDay.reference" @input.debounce.500ms="updateDayRef()"
-                            class="w-full !bg-transparent !border-none !p-0 mt-1 text-sm text-gray-500 dark:text-gray-400 focus:ring-0 placeholder-gray-300 !shadow-none ring-0"
-                            placeholder="Referencia">
-                    </div>
-
-                    <!-- Day Completion Status (ALWAYS VISIBLE WHEN COMPLETE) -->
-                    <div x-show="isDayComplete()" x-transition
-                        class="flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-lg border border-green-200 shadow-sm flex-shrink-0">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                            </path>
-                        </svg>
-                        <span class="font-bold text-sm uppercase">Día Completado</span>
-                    </div>
+            <!-- EDITABLE HEADER (Distinct Darker Block) -->
+            <div
+                class="p-6 bg-gradient-to-r from-gray-50 to-white dark:from-dark-surface dark:to-dark-bg border-b border-gray-200 dark:border-dark-border flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="flex-1 w-full">
+                    <!-- Title Input (Standardized) -->
+                    <input type="text" x-model="currentDay.title" @input.debounce.500ms="updateDayTitle()"
+                        class="w-full !bg-transparent !border-none !p-0 text-xl font-bold text-gray-900 dark:text-white focus:ring-0 placeholder-gray-500 !shadow-none ring-0"
+                        placeholder="Nombre del Día">
+                    <!-- Reference Input (Subtitle) -->
+                    <input type="text" x-model="currentDay.reference" @input.debounce.500ms="updateDayRef()"
+                        class="w-full !bg-transparent !border-none !p-0 mt-1 text-sm text-gray-500 dark:text-gray-400 focus:ring-0 placeholder-gray-500 !shadow-none ring-0"
+                        placeholder="Referencia">
                 </div>
 
-                <!-- TASK LIST -->
-                <ul class="flex-1 flex flex-col">
-                    <template x-for="(task, index) in currentDay.tasks" :key="task.id">
-                        <li
-                            class="group flex items-center gap-4 py-4 border-b border-gray-100 dark:border-dark-border last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors duration-200">
+                <!-- Day Status -->
+                <div x-show="isDayComplete()" x-transition
+                    class="flex items-center gap-2 bg-green-900/30 text-green-400 px-3 py-1 rounded-full border border-green-800 text-xs font-bold uppercase tracking-wide">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>Completado</span>
+                </div>
+            </div>
 
+            <!-- TASK LIST BODY -->
+            <ul class="flex-col">
+                <template x-for="(task, index) in currentDay.tasks" :key="task.id">
+                    <li
+                        class="group flex items-center justify-between gap-4 p-4 border-b border-gray-100 dark:border-dark-border last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors duration-200">
+
+                        <div class="flex items-center gap-4 flex-1">
                             <!-- Checkbox -->
                             <button type="button" @click="toggleTask(index)"
                                 class="flex-shrink-0 w-6 h-6 rounded border transition-all duration-200 flex items-center justify-center focus:outline-none"
-                                :class="task.done ? 'bg-green-500 border-green-500 shadow-sm' : 'border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600 hover:border-[#005A9C]'">
+                                :class="task.done ? 'bg-green-600 border-green-600 shadow-sm' : 'border-gray-500 bg-transparent hover:border-blue-500'">
 
                                 <svg x-show="task.done" class="w-4 h-4 text-white" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
@@ -112,9 +108,20 @@
                             <!-- Editable Text -->
                             <input type="text" x-model="task.desc"
                                 class="flex-1 !bg-transparent !border-none !p-0 text-base font-normal text-gray-800 dark:text-gray-200 focus:ring-0 !shadow-none"
-                                :class="task.done ? 'line-through text-gray-400 dark:text-gray-500' : ''">
+                                :class="task.done ? 'line-through text-gray-500' : ''">
+                        </div>
 
-                            <!-- Delete Button (Hover) -->
+                        <!-- Right Actions: Badge & Delete -->
+                        <div class="flex items-center gap-4 pl-4">
+                            <!-- Status Badge -->
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border whitespace-nowrap"
+                                :class="task.done ? 'bg-green-100 text-green-800 border-green-200' : 'bg-red-100 text-red-800 border-red-200'">
+                                <span x-text="task.done ? 'Completado' : 'Atrasado'"></span>
+                                <!-- Using 'Atrasado' style for pending as per user request/image -->
+                            </span>
+
+                            <!-- Delete Button -->
                             <button @click="deleteTask(index)"
                                 class="p-2 text-gray-400 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0"
                                 title="Eliminar Tarea">
@@ -124,204 +131,202 @@
                                     </path>
                                 </svg>
                             </button>
-                        </li>
-                    </template>
-                </ul>
-
-                <!-- Empty State -->
-                <div x-show="currentDay.tasks.length === 0" class="text-center py-10 text-gray-400">
-                    <p>Este día aún no tiene tareas. ¡Añade la primera!</p>
-                </div>
-
-                <!-- ADD TASK INPUT -->
-                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-dark-border">
-                    <div class="flex items-center gap-3 group">
-                        <div
-                            class="flex-shrink-0 w-6 h-6 rounded-md border-2 border-gray-300 border-dashed flex items-center justify-center text-gray-400 group-hover:border-[#005A9C] group-hover:text-[#005A9C] transition-colors">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 4v16m8-8H4"></path>
-                            </svg>
                         </div>
-                        <input type="text" x-model="newTaskText" @keydown.enter="addTask()"
-                            placeholder="Añadir una tarea a este día..."
-                            class="flex-1 bg-transparent border-none focus:ring-0 text-gray-600 dark:text-gray-300 placeholder-gray-400 transition-colors focus:text-gray-900 dark:focus:text-white">
-                        <button @click="addTask()" :disabled="!newTaskText"
-                            class="text-sm font-bold text-[#005A9C] disabled:opacity-50 disabled:cursor-not-allowed hover:underline">
-                            AÑADIR
-                        </button>
+                    </li>
+                </template>
+            </ul>
+
+            <!-- Empty State -->
+            <div x-show="currentDay.tasks.length === 0" class="text-center py-10 text-gray-400">
+                <p>Este día aún no tiene tareas. ¡Añade la primera!</p>
+            </div>
+
+            <!-- ADD TASK INPUT (Footer Style) -->
+            <div class="p-4 bg-gray-50 dark:bg-gray-800/20 border-t border-gray-100 dark:border-dark-border">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="flex-shrink-0 w-6 h-6 rounded-md border-2 border-gray-300 border-dashed flex items-center justify-center text-gray-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4">
+                            </path>
+                        </svg>
                     </div>
+                    <input type="text" x-model="newTaskText" @keydown.enter="addTask()"
+                        placeholder="Añadir una tarea..."
+                        class="flex-1 bg-transparent border-none focus:ring-0 text-gray-600 dark:text-gray-300 placeholder-gray-400">
+                    <button @click="addTask()" :disabled="!newTaskText"
+                        class="text-sm font-bold text-[#005A9C] disabled:opacity-50 disabled:cursor-not-allowed hover:underline">
+                        AÑADIR
+                    </button>
                 </div>
             </div>
+
         </div>
-    </template>
 
-</div>
+        <script>
+            function projectManager() {
+                return {
+                    days: [],
+                    selectedDayId: null,
+                    newTaskText: '',
+                    loading: false,
 
-<script>
-    function projectManager() {
-        return {
-            days: [],
-            selectedDayId: null,
-            newTaskText: '',
-            loading: false,
+                    async init() {
+                        await this.fetchData();
+                    },
 
-            async init() {
-                await this.fetchData();
-            },
+                    async fetchData() {
+                        try {
+                            const res = await fetch('/api/lumina/days');
+                            if (res.ok) {
+                                const data = await res.json();
+                                this.days = Array.isArray(data) ? data : [];
+                            } else {
+                                console.error("Failed to fetch days:", res.status);
+                                this.days = [];
+                            }
 
-            async fetchData() {
-                try {
-                    const res = await fetch('/api/lumina/days');
-                    if (res.ok) {
-                        const data = await res.json();
-                        this.days = Array.isArray(data) ? data : [];
-                    } else {
-                        console.error("Failed to fetch days:", res.status);
-                        this.days = [];
-                    }
-
-                    // Select first day if none selected or invalid
-                    if (this.days.length > 0) {
-                        if (!this.selectedDayId || !this.days.find(d => d.id === this.selectedDayId)) {
-                            this.selectedDayId = this.days[0].id; // Select the first day by default
-                        }
-                    } else {
-                        this.selectedDayId = null;
-                    }
-                } catch (e) {
-                    console.error("Error loading days", e);
-                    this.days = []; // Ensure it's an array on error
-                }
-            },
-
-            get currentDay() {
-                return this.days.find(d => d.id === this.selectedDayId);
-            },
-
-            async createNewDay() {
-                const dayCount = this.days.length + 1;
-                const newTitle = `📝 DÍA ${dayCount}: Nuevo Día`;
-                const newRef = "Sin referencia";
-
-                try {
-                    const res = await fetch('/api/lumina/days', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ title: newTitle, reference: newRef })
-                    });
-
-                    const newDay = await res.json();
-                    this.days.push(newDay);
-                    this.selectedDayId = newDay.id;
-                } catch (e) {
-                    console.error("Error creating day", e);
-                    alert("Error al crear el día");
-                }
-            },
-
-            async deleteCurrentDay() {
-                if (!this.currentDay) return;
-
-                if (confirm('¿Estás seguro de eliminar este día completo y sus tareas?')) {
-                    const idToDelete = this.selectedDayId;
-                    try {
-                        const res = await fetch(`/api/lumina/days/${idToDelete}`, { method: 'DELETE' });
-                        if (res.ok) {
-                            const idx = this.days.findIndex(d => d.id === this.selectedDayId);
-                            this.days.splice(idx, 1);
-                            // Select previous or first day
+                            // Select first day if none selected or invalid
                             if (this.days.length > 0) {
-                                this.selectedDayId = this.days[Math.max(0, idx - 1)].id;
+                                if (!this.selectedDayId || !this.days.find(d => d.id === this.selectedDayId)) {
+                                    this.selectedDayId = this.days[0].id; // Select the first day by default
+                                }
                             } else {
                                 this.selectedDayId = null;
                             }
+                        } catch (e) {
+                            console.error("Error loading days", e);
+                            this.days = []; // Ensure it's an array on error
                         }
-                    } catch (e) {
-                        console.error("Error deleting day", e);
-                    }
-                }
-            },
+                    },
 
-            async addTask() {
-                if (!this.newTaskText.trim()) return;
-                if (!this.currentDay) return;
+                    get currentDay() {
+                        return this.days.find(d => d.id === this.selectedDayId);
+                    },
 
-                const text = this.newTaskText;
-                this.newTaskText = ''; // Clear input immediately
+                    async createNewDay() {
+                        const dayCount = this.days.length + 1;
+                        const newTitle = `📝 DÍA ${dayCount}: Nuevo Día`;
+                        const newRef = "Sin referencia";
 
-                try {
-                    const res = await fetch(`/api/lumina/days/${this.selectedDayId}/tasks`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ description: text })
-                    });
-                    const newTask = await res.json();
-                    this.currentDay.tasks.push(newTask);
-                } catch (e) {
-                    console.error("Error adding task", e);
-                    alert("Error al agregar tarea");
-                }
-            },
+                        try {
+                            const res = await fetch('/api/lumina/days', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ title: newTitle, reference: newRef })
+                            });
 
-            async toggleTask(index) {
-                const task = this.currentDay.tasks[index];
-                // Optimistic toggle
-                task.done = !task.done;
+                            const newDay = await res.json();
+                            this.days.push(newDay);
+                            this.selectedDayId = newDay.id;
+                        } catch (e) {
+                            console.error("Error creating day", e);
+                            alert("Error al crear el día");
+                        }
+                    },
 
-                try {
-                    const res = await fetch(`/api/lumina/tasks/${task.id}/toggle`, { method: 'PUT' });
-                    if (!res.ok) {
-                        // Revert on error
+                    async deleteCurrentDay() {
+                        if (!this.currentDay) return;
+
+                        if (confirm('¿Estás seguro de eliminar este día completo y sus tareas?')) {
+                            const idToDelete = this.selectedDayId;
+                            try {
+                                const res = await fetch(`/api/lumina/days/${idToDelete}`, { method: 'DELETE' });
+                                if (res.ok) {
+                                    const idx = this.days.findIndex(d => d.id === this.selectedDayId);
+                                    this.days.splice(idx, 1);
+                                    // Select previous or first day
+                                    if (this.days.length > 0) {
+                                        this.selectedDayId = this.days[Math.max(0, idx - 1)].id;
+                                    } else {
+                                        this.selectedDayId = null;
+                                    }
+                                }
+                            } catch (e) {
+                                console.error("Error deleting day", e);
+                            }
+                        }
+                    },
+
+                    async addTask() {
+                        if (!this.newTaskText.trim()) return;
+                        if (!this.currentDay) return;
+
+                        const text = this.newTaskText;
+                        this.newTaskText = ''; // Clear input immediately
+
+                        try {
+                            const res = await fetch(`/api/lumina/days/${this.selectedDayId}/tasks`, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ description: text })
+                            });
+                            const newTask = await res.json();
+                            this.currentDay.tasks.push(newTask);
+                        } catch (e) {
+                            console.error("Error adding task", e);
+                            alert("Error al agregar tarea");
+                        }
+                    },
+
+                    async toggleTask(index) {
+                        const task = this.currentDay.tasks[index];
+                        // Optimistic toggle
                         task.done = !task.done;
+
+                        try {
+                            const res = await fetch(`/api/lumina/tasks/${task.id}/toggle`, { method: 'PUT' });
+                            if (!res.ok) {
+                                // Revert on error
+                                task.done = !task.done;
+                            }
+                        } catch (e) {
+                            console.error("Error toggling task", e);
+                            task.done = !task.done;
+                        }
+                    },
+
+                    async deleteTask(index) {
+                        const task = this.currentDay.tasks[index];
+                        if (!confirm("¿Eliminar tarea?")) return;
+
+                        try {
+                            const res = await fetch(`/api/lumina/tasks/${task.id}`, { method: 'DELETE' });
+                            if (res.ok) {
+                                this.currentDay.tasks.splice(index, 1);
+                            }
+                        } catch (e) {
+                            console.error("Error deleting task", e);
+                        }
+                    },
+
+                    async updateDayTitle() {
+                        if (!this.currentDay) return;
+                        try {
+                            await fetch(`/api/lumina/days/${this.currentDay.id}`, {
+                                method: 'PUT',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ title: this.currentDay.title })
+                            });
+                        } catch (e) { console.error(e); }
+                    },
+
+                    async updateDayRef() {
+                        if (!this.currentDay) return;
+                        try {
+                            await fetch(`/api/lumina/days/${this.currentDay.id}`, {
+                                method: 'PUT',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ reference: this.currentDay.reference })
+                            });
+                        } catch (e) { console.error(e); }
+                    },
+
+                    isDayComplete() {
+                        if (!this.currentDay || this.currentDay.tasks.length === 0) return false;
+                        return this.currentDay.tasks.every(t => t.done);
                     }
-                } catch (e) {
-                    console.error("Error toggling task", e);
-                    task.done = !task.done;
                 }
-            },
-
-            async deleteTask(index) {
-                const task = this.currentDay.tasks[index];
-                if (!confirm("¿Eliminar tarea?")) return;
-
-                try {
-                    const res = await fetch(`/api/lumina/tasks/${task.id}`, { method: 'DELETE' });
-                    if (res.ok) {
-                        this.currentDay.tasks.splice(index, 1);
-                    }
-                } catch (e) {
-                    console.error("Error deleting task", e);
-                }
-            },
-
-            async updateDayTitle() {
-                if (!this.currentDay) return;
-                try {
-                    await fetch(`/api/lumina/days/${this.currentDay.id}`, {
-                        method: 'PUT',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ title: this.currentDay.title })
-                    });
-                } catch (e) { console.error(e); }
-            },
-
-            async updateDayRef() {
-                if (!this.currentDay) return;
-                try {
-                    await fetch(`/api/lumina/days/${this.currentDay.id}`, {
-                        method: 'PUT',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ reference: this.currentDay.reference })
-                    });
-                } catch (e) { console.error(e); }
-            },
-
-            isDayComplete() {
-                if (!this.currentDay || this.currentDay.tasks.length === 0) return false;
-                return this.currentDay.tasks.every(t => t.done);
             }
-        }
-    }
-</script>
-{% endblock %}
+        </script>
+        {% endblock %}
