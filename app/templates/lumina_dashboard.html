@@ -59,37 +59,40 @@
 
     <!-- MAIN TASK BOARD -->
     <template x-if="currentDay">
+        <!-- Main Card Container: Unified dark background, no internal dividers between header/body -->
         <div
             class="bg-white dark:bg-dark-surface rounded-lg shadow-sm border border-gray-100 dark:border-dark-border overflow-hidden min-h-[500px] flex flex-col">
 
-            <!-- EDITABLE HEADER -->
-            <div
-                class="p-6 bg-gradient-to-r from-gray-50 to-white dark:from-dark-surface dark:to-dark-bg border-b border-gray-200 dark:border-dark-border flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div class="flex-1 w-full">
-                    <!-- Title Input (Standardized: text-xl font-semibold) -->
-                    <input type="text" x-model="currentDay.title" @input.debounce.500ms="updateDayTitle()"
-                        class="w-full !bg-transparent !border-none !p-0 text-xl font-semibold text-gray-800 dark:text-white focus:ring-0 placeholder-gray-400 !shadow-none ring-0"
-                        placeholder="Nombre del Día">
-                    <!-- Reference Input (Standardized: text-sm text-gray-500) -->
-                    <input type="text" x-model="currentDay.reference" @input.debounce.500ms="updateDayRef()"
-                        class="w-full !bg-transparent !border-none !p-0 mt-1 text-sm text-gray-500 dark:text-gray-400 focus:ring-0 placeholder-gray-300 !shadow-none ring-0"
-                        placeholder="Referencia">
+            <!-- Content Wrapper with Unified Padding (This creates the 'green shaded area' effect you wanted) -->
+            <div class="p-6 flex flex-col h-full">
+
+                <!-- HEADER (Inside padding) -->
+                <div
+                    class="mb-6 border-b border-gray-800 pb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div class="flex-1 w-full">
+                        <!-- Title Input (Standardized: text-xl font-semibold) -->
+                        <input type="text" x-model="currentDay.title" @input.debounce.500ms="updateDayTitle()"
+                            class="w-full !bg-transparent !border-none !p-0 text-xl font-semibold text-gray-800 dark:text-white focus:ring-0 placeholder-gray-400 !shadow-none ring-0"
+                            placeholder="Nombre del Día">
+                        <!-- Reference Input (Standardized: text-sm text-gray-500) -->
+                        <input type="text" x-model="currentDay.reference" @input.debounce.500ms="updateDayRef()"
+                            class="w-full !bg-transparent !border-none !p-0 mt-1 text-sm text-gray-500 dark:text-gray-400 focus:ring-0 placeholder-gray-300 !shadow-none ring-0"
+                            placeholder="Referencia">
+                    </div>
+
+                    <!-- Day Completion Status (ALWAYS VISIBLE WHEN COMPLETE) -->
+                    <div x-show="isDayComplete()" x-transition
+                        class="flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-lg border border-green-200 shadow-sm flex-shrink-0">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="font-bold text-sm uppercase">Día Completado</span>
+                    </div>
                 </div>
 
-                <!-- Day Completion Status (ALWAYS VISIBLE WHEN COMPLETE) -->
-                <div x-show="isDayComplete()" x-transition
-                    class="flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-lg border border-green-200 shadow-sm flex-shrink-0">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="font-bold text-sm uppercase">Día Completado</span>
-                </div>
-            </div>
-
-            <!-- TASK LIST -->
-            <!-- TASK LIST (Standardized Layout: Contained borders) -->
-            <div class="p-6"> <!-- Restored padding to match header alignment -->
-                <ul class="flex flex-col">
+                <!-- TASK LIST -->
+                <ul class="flex-1 flex flex-col">
                     <template x-for="(task, index) in currentDay.tasks" :key="task.id">
                         <li
                             class="group flex items-center gap-4 py-4 border-b border-gray-100 dark:border-dark-border last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors duration-200">
