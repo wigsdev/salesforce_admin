@@ -156,6 +156,69 @@
         margin-bottom: 2rem;
     }
 
+    .dark .page-title {
+        color: white;
+    }
+
+    .dark .page-subtitle {
+        color: #9CA3AF;
+    }
+
+    /* Forms */
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: var(--gray-700);
+    }
+
+    .dark label {
+        color: #D1D5DB;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--gray-300);
+        background-color: white;
+        color: var(--gray-900);
+        font-size: 1rem;
+        transition: all 0.2s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .dark input[type="text"],
+    .dark input[type="email"],
+    .dark input[type="password"] {
+        background-color: #374151;
+        /* gray-700 */
+        border-color: #4B5563;
+        /* gray-600 */
+        color: white;
+    }
+
+    .dark input[type="text"]:focus,
+    .dark input[type="email"]:focus,
+    .dark input[type="password"]:focus {
+        border-color: var(--primary);
+        background-color: #1F2937;
+        /* Even darker on focus */
+    }
+
     /* Buttons */
     .btn {
         display: inline-block;
