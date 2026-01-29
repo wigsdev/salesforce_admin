@@ -87,36 +87,29 @@
             </div>
 
             <!-- TASK LIST -->
-            <div class="p-6 space-y-4">
-                <template x-for="(task, index) in currentDay.tasks" :key="task.id">
-                    <div class="flex items-center gap-4 p-3 rounded-lg group transition-colors hover:bg-gray-50 dark:hover:bg-gray-800"
-                        :class="task.done ? 'opacity-75' : ''">
+            <!-- TASK LIST (Minimalist Divided Style) -->
+            <div class=""> <!-- Removed p-6 to allow full-width borders -->
+                <ul class="flex flex-col">
+                    <template x-for="(task, index) in currentDay.tasks" :key="task.id">
+                        <li
+                            class="group flex items-center gap-4 p-4 border-b border-gray-100 dark:border-dark-border last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors duration-200">
 
-                        <!-- Checkbox -->
-                        <div class="relative flex items-center justify-center cursor-pointer flex-shrink-0"
-                            @click="toggleTask(index)">
-                            <div class="h-6 w-6 rounded-md border-2 border-gray-300 shadow-sm transition-all flex items-center justify-center"
-                                :class="{'bg-[#005A9C] border-[#005A9C]': task.done, 'bg-white dark:bg-gray-700 dark:border-gray-500': !task.done}">
-                                <svg x-show="task.done" class="w-4 h-4 text-white" viewBox="0 0 14 14" fill="none">
-                                    <path d="M3 7L6 10L11 4" stroke="currentColor" stroke-width="2.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                            <!-- Checkbox -->
+                            <button type="button" @click="toggleTask(index)"
+                                class="flex-shrink-0 w-6 h-6 rounded border transition-all duration-200 flex items-center justify-center focus:outline-none"
+                                :class="task.done ? 'bg-green-500 border-green-500 shadow-sm' : 'border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600 hover:border-[#005A9C]'">
+
+                                <svg x-show="task.done" class="w-4 h-4 text-white" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7"></path>
                                 </svg>
-                            </div>
-                        </div>
+                            </button>
 
-                        <!-- Editable Text -->
-                        <input type="text" x-model="task.desc"
-                            class="flex-1 !bg-transparent !border-none !p-0 text-base font-normal text-gray-800 dark:text-gray-200 focus:ring-0 !shadow-none"
-                            :class="task.done ? 'line-through text-gray-500 dark:text-gray-500' : ''">
-
-                        <!-- Actions & Badges -->
-                        <div class="flex items-center gap-3">
-                            <!-- Status Badge (RESTORED) -->
-                            <span
-                                class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full transition-colors hidden sm:inline-block flex-shrink-0"
-                                :class="task.done ? 'bg-green-200 text-green-800' : 'bg-gray-100 text-gray-500'">
-                                <span x-text="task.done ? 'Completada' : 'Pendiente'"></span>
-                            </span>
+                            <!-- Editable Text -->
+                            <input type="text" x-model="task.desc"
+                                class="flex-1 !bg-transparent !border-none !p-0 text-base font-normal text-gray-800 dark:text-gray-200 focus:ring-0 !shadow-none"
+                                :class="task.done ? 'line-through text-gray-400 dark:text-gray-500' : ''">
 
                             <!-- Delete Button (Hover) -->
                             <button @click="deleteTask(index)"
@@ -128,9 +121,9 @@
                                     </path>
                                 </svg>
                             </button>
-                        </div>
-                    </div>
-                </template>
+                        </li>
+                    </template>
+                </ul>
 
                 <!-- Empty State -->
                 <div x-show="currentDay.tasks.length === 0" class="text-center py-10 text-gray-400">
