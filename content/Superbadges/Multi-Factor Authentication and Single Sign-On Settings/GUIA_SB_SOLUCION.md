@@ -1,36 +1,37 @@
 # 🏆 Guía de Solución: Multi-Factor Authentication & SSO Settings Superbadge
 
-## 🚨 Paso 0: Preparación de la Organización (Crucial)
-Antes de empezar los retos, debes configurar los usuarios en la Special Developer Edition Org.
+## 🚨 PASO 0: Preparación (Crucial)
+**Basado en Video 1:** Si no haces esto, no podrás loguearte como los usuarios de prueba.
 
-1. Inicia sesión en tu org especial.
-2. Ve a **Setup** > **Users** > **Users**.
+1. Regístrate en la Special Developer Edition Org (enlace en la sección "Sign Up" del reto).
+2. Conecta la org a Trailhead.
+3. Ve a **Setup** > **Users** > **Users**.
 
-### Configurar a Murphy Jean:
-1. Edita el usuario.
-2. Cambia el **Email** a tu correo real.
-3. Marca la casilla: **Generate new password and notify user immediately**.
-4. Guarda y anota su Username.
+### Configura a Murphy Jean:
+* **Email:** Tu correo real.
+* **Marca:** Generate new password and notify user immediately.
+* **Username:** Anótalo (no lo cambies).
+* Haz clic en **Save**.
 
-### Configurar a Brochan Pane:
-1. Edita el usuario.
-2. Cambia el **Email** a tu correo real.
-3. Marca la casilla: **Generate new password...**
-4. Guarda y anota su Username.
+### Configura a Brochan Pane:
+* **Email:** Tu correo real.
+* **Marca:** Generate new password...
+* **Username:** Anótalo.
+* Haz clic en **Save**.
 
-**Establecer Contraseñas:** Revisa tu bandeja de entrada y crea las contraseñas para ambos usuarios.
+**Acción:** Ve a tu email, abre los correos de Salesforce y establece las contraseñas para ambos.
 
 ---
 
-## 🔹 Reto 1: Configuración de Single Sign-On (SSO)
+## 🔹 RETO 1: Single Sign-On (SSO)
 
-### 1. Activar el Motor SAML (El paso secreto)
-Sin esto, los permisos de SSO no aparecen.
+### 1. Activar el Motor SAML (El "Paso Secreto")
+Sin esto, el permiso "Is Single Sign-On Enabled" no aparecerá.
 
 1. Ve a **Setup** > **Single Sign-On Settings**.
 2. Haz clic en **Edit**.
 3. Marca la casilla **SAML Enabled**.
-4. (Opcional) Si aparece, marca también **Delegated Authentication**.
+4. (Opcional) Si aparece, marca **Delegated Authentication**.
 5. Haz clic en **Save**.
 
 ### 2. Crear Permission Set para SSO
@@ -43,23 +44,21 @@ Sin esto, los permisos de SSO no aparecen.
 4. Ve a **System Permissions** > **Edit**.
 5. Busca y marca: `Is Single Sign-On Enabled`.
 6. Haz clic en **Save**.
-7. Haz clic en **Manage Assignments** > **Add Assignment**.
-8. Asigna este permiso al usuario **Murphy Jean**.
+7. Haz clic en **Manage Assignments** > **Add Assignment**: Asigna a **Murphy Jean**.
 
 ### 3. Configurar Federation ID
 1. Ve a **Setup** > **Users** > **Users**.
 2. Edita a **Murphy Jean**.
-3. En la sección **Single Sign On Information**, campo **Federation ID**, escribe:
-    * **Valor:** `murphy_sso`
+3. En la sección **Single Sign On Information**, campo **Federation ID**:
+    * **Escribe:** `murphy_sso`
 4. Haz clic en **Save**.
 
 ### 4. Configurar SAML (Axiom & Salesforce)
-1. Abre una nueva pestaña: **Axiom Heroku**.
-2. Ve a **SAML Identity Provider & Tester**.
-3. Haz clic en **Download the Identity Provider Certificate** (Guarda el archivo).
-4. Vuelve a Salesforce (**Setup** > **Single Sign-On Settings**).
-5. En **SAML Single Sign-On Settings**, haz clic en **New**.
-6. Completa el formulario:
+1. Abre **Axiom Heroku** en otra pestaña.
+2. Ve a **SAML Identity Provider & Tester** > **Download Identity Provider Certificate**.
+3. Vuelve a Salesforce (**Single Sign-On Settings**).
+4. En **SAML Single Sign-On Settings**, haz clic en **New**.
+5. Completa:
     * **Name:** `Axiom SSO Test`
     * **Issuer:** `https://axiomsso.herokuapp.com`
     * **Identity Provider Certificate:** Sube el archivo descargado.
@@ -67,37 +66,38 @@ Sin esto, los permisos de SSO no aparecen.
     * **SAML Identity Type:** Assertion contains the Federation ID from the User object
     * **SAML Identity Location:** Identity is in the NameIdentifier element of the Subject statement
     * **Identity Provider Login URL:** `https://axiomsso.herokuapp.com/RequestSamlResponse.action`
-    * **Entity ID:** Copia la URL de tu dominio (ej: `https://tu-org-dev-ed.my.salesforce.com`). **IMPORTANTE:** Sin barra `/` al final.
-7. Haz clic en **Save**.
-8. **Copiar URL:** En la sección **Endpoints** (abajo), copia la **Login URL**.
+    * **Entity ID:** Tu dominio (ej: `https://midominio-dev-ed.my.salesforce.com`). **IMPORTANTE:** Sin barra `/` al final.
+6. Haz clic en **Save**.
+7. **Copiar URL Crítica:** En la sección **Endpoints** (abajo), copia la **Login URL**.
+    * **Nota del Video:** Asegúrate de copiar la URL larga que termina con `?so=XXXXXXXX`.
 
 ### 5. Configurar My Domain y Restricciones
 1. Ve a **Setup** > **My Domain**.
 2. En **Authentication Configuration**, haz clic en **Edit**.
-3. Marca **Axiom SSO Test** (mantén marcado "Login Form" por ahora).
+3. Marca **Axiom SSO Test** (mantén marcado "Login Form").
 4. Haz clic en **Save**.
 
-### Prueba de Fuego (Testing):
+### Validación en Axiom:
 1. Ve a Axiom > **Generate a SAML Response**.
     * **SAML Version:** 2.0 (¡Importante!)
-    * **Username or Federation ID:** `murphy_sso`
+    * **Username:** `murphy_sso`
     * **Issuer:** `https://axiomsso.herokuapp.com`
-    * **Recipient URL:** Pega la Login URL de Salesforce (la que termina en `?so=XXXX`).
+    * **Recipient URL:** Pega la Login URL de Salesforce (la larga).
     * **Entity ID:** Tu dominio (sin barra al final).
 2. Clic en **Request SAML Response** > **Login**.
-3. Debe iniciar sesión exitosamente como Murphy Jean.
+3. Debe entrar como **Murphy Jean**.
 
-### Bloquear Acceso Directo:
-1. Vuelve a Salesforce como Admin.
-2. Ve a **My Domain** > **Routing** > **Edit**.
+### Bloquear Acceso:
+1. Vuelve a Admin Salesforce.
+2. **My Domain** > **Routing** > **Edit**.
 3. Marca: **Prevent login from https://login.salesforce.com**.
 4. Haz clic en **Save**.
 
 ---
 
-## 🔹 Reto 2: MFA para Break Glass Admin
+## 🔹 RETO 2: MFA para Break Glass Admin
 
-### 1. Crear Permission Set MFA
+### 1. Permission Set MFA
 1. Ve a **Setup** > **Permission Sets** > **New**.
     * **Label:** `MFA Authorization for Break Glass Admin`
     * **API Name:** `MFA_Authorization_for_Break_Glass_Admin`
@@ -105,18 +105,20 @@ Sin esto, los permisos de SSO no aparecen.
 2. Ve a **System Permissions** > **Edit**.
 3. Marca: `Multi-Factor Authentication for User Interface Logins`.
 4. Haz clic en **Save**.
-5. **Manage Assignments** > **Add Assignment**: Asigna a **Brochan Pane**.
+5. **Manage Assignments**: Asigna a **Brochan Pane**.
 
 ---
 
-## 🔹 Reto 3: Lightning Login
+## 🔹 RETO 3: Lightning Login
 
 ### 1. Activar Lightning Login (Global)
+**Basado en Video 5.**
+
 1. Ve a **Setup** > **Session Settings**.
-2. Busca y marca la casilla: **Allow Lightning Login**.
+2. Busca y marca: **Allow Lightning Login**.
 3. Haz clic en **Save** (al final de la página).
 
-### 2. Crear Permission Set Lightning Login
+### 2. Permission Set Lightning Login
 1. Ve a **Setup** > **Permission Sets** > **New**.
     * **Label:** `Lightning Login User`
     * **API Name:** `Lightning_Login_User`
@@ -124,30 +126,34 @@ Sin esto, los permisos de SSO no aparecen.
 2. Ve a **System Permissions** > **Edit**.
 3. Marca: `Lightning Login User`.
 4. Haz clic en **Save**.
-5. **Manage Assignments** > **Add Assignment**: Asigna a **Brochan Pane**.
+5. **Manage Assignments**: Asigna a **Brochan Pane**.
 
 ---
 
-## 🔹 Reto 4: Prueba Móvil y Finalización
+## 🔹 RETO 4: Prueba Móvil (El Truco Final)
 
-### 1. Conexión de App y Enrollment
-Necesitarás la app **Salesforce Authenticator** en tu móvil.
+### 1. Conexión y "Enrollment" Manual
+Este paso soluciona el error "We can't see that you tested..."
 
-1. Abre una ventana de **Incógnito/Privada**.
-2. Ve a tu dominio e inicia sesión como **Brochan Pane** (Usuario y Contraseña).
-3. Conecta la app usando la frase de dos palabras.
-4. Una vez dentro, haz clic en el Avatar de Perfil > **Settings**.
-5. Ve a **Advanced User Details**.
-6. Busca el campo **Lightning Login** y haz clic en **Enroll**.
-7. Aprueba la solicitud en tu móvil. (Debe aparecer un check verde ✅).
+1. Abre una ventana de **Incógnito**.
+2. Loguéate como **Brochan Pane** (Usuario y Contraseña).
+3. Conecta la app **Salesforce Authenticator**.
+4. Una vez dentro, haz clic en el **Avatar** > **Settings** > **Advanced User Details**.
+5. Busca el campo **Lightning Login**.
+6. Haz clic explícitamente en **Enroll** (Inscribirse).
+7. Aprueba en el móvil. (Debe salir un check ✅).
 
-### 2. Prueba Final
-1. Cierra sesión como Brochan.
-2. En la pantalla de login, haz clic en el usuario **Brochan Pane** (que tendrá un icono de rayo ⚡).
-3. Aprueba la entrada en el móvil (sin escribir contraseña).
-4. Si entraste correctamente, cierra la ventana de incógnito.
+### 2. La Prueba con "Remember Me"
+**Truco extraído del Video 5.**
+
+1. Cierra sesión con Brochan.
+2. En la pantalla de login, escribe usuario y contraseña de Brochan pero **MARCA LA CASILLA "Remember Me"**.
+3. Entra.
+4. Cierra sesión de nuevo.
+5. Ahora, haz clic en el usuario (que tendrá un rayito ⚡).
+6. Aprueba en el móvil sin escribir contraseña.
 
 ---
 
-## 🏁 Validación
-Vuelve a Trailhead y haz clic en **Check Challenge**.
+## ✅ FIN
+Vuelve a Trailhead y haz clic en **Check Challenge**. ¡Debe salir el confeti! 🎉
