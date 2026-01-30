@@ -16,18 +16,20 @@ from sqlalchemy import text
 
 def parse_lumina_checklist():
     """
-    Parses content/Lumina_Tech/Archivos_intermedios/Checklist_por_dia.md 
+    Parses content/Lumina_Tech/Archivos_intermedios/Checklist_por_dia.md
     to extract Days, Tasks, and File Links.
     """
-    file_path = os.path.join("content", "Lumina_Tech", "Archivos_intermedios", "Checklist_por_dia.md")
-    
+    file_path = os.path.join(
+        "content", "Lumina_Tech", "Archivos_intermedios", "Checklist_por_dia.md"
+    )
+
     if not os.path.exists(file_path):
         print(f"Warning: Checklist file not found at {file_path}")
         return []
 
     days = []
     current_day = None
-    
+
     # Regex patterns
     day_pattern = re.compile(r"^##\s+📅\s+(Día\s+\d+:.+)")
     task_pattern = re.compile(r"^\d+\.\s+\*\*(.+?)\*\*")
@@ -36,30 +38,30 @@ def parse_lumina_checklist():
     with open(file_path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
-            
+
             # Match Day Header
             day_match = day_pattern.match(line)
             if day_match:
                 if current_day:
                     days.append(current_day)
-                
-                day_title = day_match.group(1) # e.g. "Día 0: Análisis..."
+
+                day_title = day_match.group(1)  # e.g. "Día 0: Análisis..."
                 # Extract simple day "Día X" for reference
-                ref_part = day_title.split(":")[0] 
+                ref_part = day_title.split(":")[0]
                 current_day = {
                     "title": f"📅 {day_title}",
                     "reference": f"Log: {ref_part}",
-                    "tasks": []
+                    "tasks": [],
                 }
                 continue
 
             # Match Task Title
             task_match = task_pattern.match(line)
             if task_match and current_day:
-                title = task_match.group(1).rstrip(".") # Remove trailing dot
+                title = task_match.group(1).rstrip(".")  # Remove trailing dot
                 current_day["tasks"].append({"desc": title, "path": None})
                 continue
-            
+
             # Match Link
             link_match = link_pattern.search(line)
             if link_match and current_day and current_day["tasks"]:
@@ -70,7 +72,7 @@ def parse_lumina_checklist():
 
     if current_day:
         days.append(current_day)
-        
+
     return days
 
 
@@ -108,7 +110,7 @@ def seed_data():
                 team="Admin Force",
             )
             db.add(student)
-            
+
         if not db.query(User).filter(User.email == "karlwgs1989@gmail.com").first():
             print("Creating Wilmer's user...")
             wilmer = User(
@@ -297,21 +299,21 @@ def seed_data():
         from app.models.lumina import (
             LuminaDeliverable,
             LuminaTask,
-        ) 
+        )
 
         lumina_days = parse_lumina_checklist()
-        
+
         if not lumina_days:
             # Fallback for resiliency
             print("Warning: No data parsed from checklist. Running basic seed.")
-        
+
         for day_data in lumina_days:
             day = (
                 db.query(LuminaDeliverable)
                 .filter(LuminaDeliverable.title == day_data["title"])
                 .first()
             )
-            
+
             if not day:
                 print(f"Creating Day: {day_data['title']}")
                 day = LuminaDeliverable(
@@ -321,36 +323,36 @@ def seed_data():
                 db.add(day)
                 db.commit()
                 db.refresh(day)
-            
+
             for task_info in day_data["tasks"]:
                 description = task_info["desc"]
                 doc_path = task_info["path"]
-                
+
                 # Check existance
                 existing_task = (
                     db.query(LuminaTask)
                     .filter(
-                        LuminaTask.deliverable_id == day.id, 
-                        LuminaTask.description == description
+                        LuminaTask.deliverable_id == day.id,
+                        LuminaTask.description == description,
                     )
                     .first()
                 )
-                
+
                 if not existing_task:
                     print(f"  + Task: {description}")
                     task = LuminaTask(
-                        deliverable_id=day.id, 
-                        description=description, 
-                        doc_path=doc_path, # Native Column!
-                        is_completed=False
+                        deliverable_id=day.id,
+                        description=description,
+                        doc_path=doc_path,  # Native Column!
+                        is_completed=False,
                     )
                     db.add(task)
                 else:
                     # Update doc_path if changed
                     if existing_task.doc_path != doc_path:
-                         print(f"  ~ Link Update: {description}")
-                         existing_task.doc_path = doc_path
-                         
+                        print(f"  ~ Link Update: {description}")
+                        existing_task.doc_path = doc_path
+
             db.commit()
 
         print("Seeding completed successfully!")

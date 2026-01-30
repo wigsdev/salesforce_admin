@@ -44,10 +44,10 @@ def get_days(db: Session = Depends(get_db)):
             "reference": d.reference,
             "tasks": [
                 {
-                    "id": t.id, 
-                    "desc": t.description, 
+                    "id": t.id,
+                    "desc": t.description,
                     "doc_path": t.doc_path,  # Include in response
-                    "done": t.is_completed
+                    "done": t.is_completed,
                 }
                 for t in d.tasks
             ],
@@ -104,10 +104,10 @@ def update_day(day_id: int, day_in: DayUpdate, db: Session = Depends(get_db)):
 def create_task(day_id: int, task_in: TaskCreate, db: Session = Depends(get_db)):
     """Add a task to a day."""
     new_task = LuminaTask(
-        deliverable_id=day_id, 
-        description=task_in.description, 
-        doc_path=task_in.doc_path, # Save doc_path
-        is_completed=False
+        deliverable_id=day_id,
+        description=task_in.description,
+        doc_path=task_in.doc_path,  # Save doc_path
+        is_completed=False,
     )
     db.add(new_task)
     db.commit()
@@ -115,7 +115,7 @@ def create_task(day_id: int, task_in: TaskCreate, db: Session = Depends(get_db))
     return {
         "id": new_task.id,
         "desc": new_task.description,
-        "doc_path": new_task.doc_path, # Return doc_path
+        "doc_path": new_task.doc_path,  # Return doc_path
         "done": new_task.is_completed,
     }
 
