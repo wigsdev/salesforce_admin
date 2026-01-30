@@ -63,6 +63,7 @@
 ---
 
 ## 📅 Día 2: HU - Creación de la APP
+**Fuente**: [Practica_Clase_9.md](../../curriculum/sprint_01/semana_04/21-Practica_Clase_9.md)
 
 ### Lista de Tareas
 1.  **Tener en cuenta el diseño.**
@@ -101,6 +102,7 @@
 ---
 
 ## 📅 Día 3: HU - Creación de los Formularios
+**Fuente**: [Practica_Clase_10.md](../../curriculum/sprint_01/semana_04/23-Practica_Clase_10.md)
 
 ### Lista de Tareas
 1.  **Campos adicionales.**
@@ -137,6 +139,7 @@
 ---
 
 ## 📅 Día 4: Gestión de Usuarios y Seguridad
+**Fuente**: [Practica_Clase_11.md](../../curriculum/sprint_01/semana_04/25-Practica_Clase_11.md)
 
 ### Lista de Tareas
 1.  **Configuración de Permission Sets.**
