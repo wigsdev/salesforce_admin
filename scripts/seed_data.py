@@ -336,15 +336,17 @@ def seed_data():
                 doc_path = task_info["path"]
 
                 # FILTER: Skip administrative/Trello tasks
-                if description.startswith("Mover a") or description.startswith("Registrar en el Doc"):
-                     continue
+                if description.startswith("Mover a") or description.startswith(
+                    "Registrar en el Doc"
+                ):
+                    continue
 
                 print(f"  + Task: {description}")
                 task = LuminaTask(
                     deliverable_id=day.id,
                     description=description,
                     doc_path=doc_path,
-                    is_completed=False
+                    is_completed=False,
                 )
                 db.add(task)
 
