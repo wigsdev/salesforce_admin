@@ -91,44 +91,55 @@ def seed_data():
     try:
         # ... (omitted) ...
 
-        # 5. SEED LUMINA DASHBOARD DATA (Backend Native Mode)
-        print("Seeding Lumina Dashboard Data (Backend Native)...")
+        # 5. SEED LUMINA DASHBOARD DATA (Smart Sync)
+        print("Seeding Lumina Dashboard Data (Smart Sync)...")
         from app.models.lumina import (
             LuminaDeliverable,
             LuminaTask,
         )
 
-        # CLEANUP: Remove duplicates by wiping Lumina data first
-        print("  - Cleaning up old Lumina data...")
-        db.query(LuminaTask).delete()
-        db.query(LuminaDeliverable).delete()
-        db.commit()
-
         lumina_days = parse_lumina_checklist()
 
         if not lumina_days:
-            # Fallback for resiliency
-            print("Warning: No data parsed from checklist. Running basic seed.")
+            print("Warning: No data parsed from checklist. Skipping sync.")
+        
+        # Track active IDs to prune legacy data later
+        active_day_ids = []
 
         for day_data in lumina_days:
-            # Check if day exists (it shouldn't after cleanup, but good practice)
+            # 1. Sync Day (Deliverable)
             day = (
                 db.query(LuminaDeliverable)
                 .filter(LuminaDeliverable.title == day_data["title"])
                 .first()
             )
 
-            if not day:
-                print(f"Creating Day: {day_data['title']}")
+            if day:
+                # Update existing day fields (except content usually stays same, but good for links)
+                day.reference = ""
+                day.source_link = day_data.get("source_link")
+                day.source_label = day_data.get("source_label")
+                print(f"  ~ Updating Day: {day.title}")
+            else:
+                # Create new day
+                print(f"  + Creating Day: {day_data['title']}")
                 day = LuminaDeliverable(
                     title=day_data["title"],
-                    reference="",  # Cleared per user request
+                    reference="",
                     source_link=day_data.get("source_link"),
-                    source_label=day_data.get("source_label"),  # Add source label
+                    source_label=day_data.get("source_label"),
                 )
                 db.add(day)
-                db.commit()
-                db.refresh(day)
+            
+            db.commit()
+            db.refresh(day)
+            active_day_ids.append(day.id)
+
+            # 2. Sync Tasks
+            current_tasks = db.query(LuminaTask).filter(LuminaTask.deliverable_id == day.id).all()
+            # Map description -> Task object for quick lookups
+            task_map = {t.description: t for t in current_tasks}
+            active_task_ids = []
 
             for task_info in day_data["tasks"]:
                 description = task_info["desc"]
@@ -138,18 +149,43 @@ def seed_data():
                 if description.startswith("Mover a"):
                     continue
 
-                print(f"  + Task: {description}")
-                task = LuminaTask(
-                    deliverable_id=day.id,
-                    description=description,
-                    doc_path=doc_path,
-                    is_completed=False,
-                )
-                db.add(task)
+                if description in task_map:
+                    # Task exists - Update metadata, PRESERVE is_completed
+                    existing_task = task_map[description]
+                    existing_task.doc_path = doc_path
+                    active_task_ids.append(existing_task.id)
+                    # print(f"    ~ Synced Task: {description}") # Noise reduction
+                else:
+                    # Task is new - Create it
+                    print(f"    + New Task: {description}")
+                    new_task = LuminaTask(
+                        deliverable_id=day.id,
+                        description=description,
+                        doc_path=doc_path,
+                        is_completed=False,
+                    )
+                    db.add(new_task)
+                    db.commit() # Commit to get ID
+                    db.refresh(new_task)
+                    active_task_ids.append(new_task.id)
 
+            # 3. Prune Tasks (Delete tasks in DB that are no longer in Markdown)
+            for old_task in current_tasks:
+                if old_task.id not in active_task_ids:
+                    print(f"    - Removing Obsolete Task: {old_task.description}")
+                    db.delete(old_task)
+            
             db.commit()
 
-        print("Seeding completed successfully!")
+        # 4. Prune Days (Delete days in DB that are no longer in Markdown)
+        all_days = db.query(LuminaDeliverable).all()
+        for old_day in all_days:
+            if old_day.id not in active_day_ids:
+                 print(f"  - Removing Obsolete Day: {old_day.title}")
+                 db.delete(old_day)
+        
+        db.commit()
+        print("Sync completed successfully!")
 
     except Exception as e:
         print(f"Error seeding data: {e}")
