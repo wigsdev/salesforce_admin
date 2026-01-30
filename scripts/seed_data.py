@@ -131,7 +131,7 @@ def seed_data():
                 )
                 db.add(day)
 
-            db.commit()
+            db.flush()
             db.refresh(day)
             active_day_ids.append(day.id)
 
@@ -167,7 +167,7 @@ def seed_data():
                         is_completed=False,
                     )
                     db.add(new_task)
-                    db.commit()  # Commit to get ID
+                    db.flush()  # Flush to get ID if needed immediately
                     db.refresh(new_task)
                     active_task_ids.append(new_task.id)
 
@@ -177,7 +177,7 @@ def seed_data():
                     print(f"    - Removing Obsolete Task: {old_task.description}")
                     db.delete(old_task)
 
-            db.commit()
+            # db.commit() removed for atomicity
 
         # 4. Prune Days (Delete days in DB that are no longer in Markdown)
         all_days = db.query(LuminaDeliverable).all()
@@ -192,6 +192,7 @@ def seed_data():
     except Exception as e:
         print(f"Error seeding data: {e}")
         db.rollback()
+        raise e  # Critical: Re-raise for robust deployment failure
     finally:
         db.close()
 
