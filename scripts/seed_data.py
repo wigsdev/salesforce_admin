@@ -301,6 +301,12 @@ def seed_data():
             LuminaTask,
         )
 
+        # CLEANUP: Remove duplicates by wiping Lumina data first
+        print("  - Cleaning up old Lumina data...")
+        db.query(LuminaTask).delete()
+        db.query(LuminaDeliverable).delete()
+        db.commit()
+
         lumina_days = parse_lumina_checklist()
 
         if not lumina_days:
@@ -308,6 +314,7 @@ def seed_data():
             print("Warning: No data parsed from checklist. Running basic seed.")
 
         for day_data in lumina_days:
+            # Check if day exists (it shouldn't after cleanup, but good practice)
             day = (
                 db.query(LuminaDeliverable)
                 .filter(LuminaDeliverable.title == day_data["title"])
@@ -328,30 +335,18 @@ def seed_data():
                 description = task_info["desc"]
                 doc_path = task_info["path"]
 
-                # Check existance
-                existing_task = (
-                    db.query(LuminaTask)
-                    .filter(
-                        LuminaTask.deliverable_id == day.id,
-                        LuminaTask.description == description,
-                    )
-                    .first()
-                )
+                # FILTER: Skip administrative/Trello tasks
+                if description.startswith("Mover a") or description.startswith("Registrar en el Doc"):
+                     continue
 
-                if not existing_task:
-                    print(f"  + Task: {description}")
-                    task = LuminaTask(
-                        deliverable_id=day.id,
-                        description=description,
-                        doc_path=doc_path,  # Native Column!
-                        is_completed=False,
-                    )
-                    db.add(task)
-                else:
-                    # Update doc_path if changed
-                    if existing_task.doc_path != doc_path:
-                        print(f"  ~ Link Update: {description}")
-                        existing_task.doc_path = doc_path
+                print(f"  + Task: {description}")
+                task = LuminaTask(
+                    deliverable_id=day.id,
+                    description=description,
+                    doc_path=doc_path,
+                    is_completed=False
+                )
+                db.add(task)
 
             db.commit()
 
