@@ -42,6 +42,7 @@ def get_days(db: Session = Depends(get_db)):
             "id": d.id,
             "title": d.title,
             "reference": d.reference,
+            "source_link": d.source_link, # Added field
             "tasks": [
                 {
                     "id": t.id,
