@@ -73,20 +73,22 @@
                         class="w-full !bg-transparent !border-none !p-0 text-xl font-bold text-gray-900 dark:text-white focus:ring-0 placeholder-gray-500 !shadow-none ring-0"
                         placeholder="Nombre del Día">
                     <!-- Reference Input -->
+                    <!-- Reference Input (Only show if has value, or leave generic) -->
+                    <!-- User wanted 'Log: Day 0' gone. We cleared it in seed. -->
                     <input type="text" x-model="currentDay.reference" @input.debounce.500ms="updateDayRef()"
                         class="w-full !bg-transparent !border-none !p-0 mt-1 text-sm text-gray-500 dark:text-gray-400 focus:ring-0 placeholder-gray-500 !shadow-none ring-0"
-                        placeholder="Referencia">
+                        placeholder="Referencia" :class="!currentDay.reference ? 'hidden pointer-events-none' : ''">
 
                     <!-- Source Link -->
                     <template x-if="currentDay.source_link">
                         <a :href="'/docs/' + currentDay.source_link" target="_blank"
-                            class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-[#005A9C] hover:text-blue-700 hover:underline transition-colors">
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="inline-flex items-center gap-1 mt-1 text-xs font-semibold text-[#005A9C] hover:text-blue-700 hover:underline transition-colors">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
                                 </path>
                             </svg>
-                            Ver Clase Fuente
+                            <span x-text="currentDay.source_label || 'Ver Clase Fuente'"></span>
                         </a>
                     </template>
                 </div>
@@ -106,15 +108,15 @@
             <ul class="flex-col flex-1">
                 <template x-for="(task, index) in currentDay.tasks" :key="task.id">
                     <li
-                        class="group flex items-center justify-between gap-4 py-4 border-b border-gray-100 dark:border-dark-border last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors duration-200">
+                        class="group flex items-center justify-between gap-3 py-3 border-b border-gray-100 dark:border-dark-border last:border-0 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors duration-200">
 
-                        <div class="flex items-center gap-4 flex-1">
+                        <div class="flex items-center gap-3 flex-1 overflow-hidden">
                             <!-- Checkbox -->
                             <button type="button" @click="toggleTask(index)"
-                                class="flex-shrink-0 w-6 h-6 rounded border transition-all duration-200 flex items-center justify-center focus:outline-none"
+                                class="flex-shrink-0 w-5 h-5 rounded border transition-all duration-200 flex items-center justify-center focus:outline-none"
                                 :class="task.done ? 'bg-green-600 border-green-600 shadow-sm' : 'border-gray-500 bg-transparent hover:border-blue-500'">
 
-                                <svg x-show="task.done" class="w-4 h-4 text-white" fill="none" stroke="currentColor"
+                                <svg x-show="task.done" class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                         d="M5 13l4 4L19 7"></path>
@@ -123,37 +125,36 @@
 
                             <!-- Editable Text -->
                             <input type="text" x-model="task.desc"
-                                class="flex-1 !bg-transparent !border-none !p-0 text-base font-normal text-gray-800 dark:text-gray-200 focus:ring-0 !shadow-none"
+                                class="flex-1 min-w-0 !bg-transparent !border-none !p-0 text-sm font-normal text-gray-800 dark:text-gray-200 focus:ring-0 !shadow-none truncate"
                                 :class="task.done ? 'line-through text-gray-500' : ''">
 
-                            <!-- Document Link (Native) -->
+                            <!-- Document Link (Native) - Compact Icon Only -->
                             <template x-if="task.doc_path">
-                                <a :href="'/docs/' + task.doc_path" target="_blank" title="Ver Documentación"
-                                    class="p-2 ml-2 text-[#005A9C] bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors flex items-center gap-2 text-sm font-medium">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <a :href="'/docs/' + task.doc_path" target="_blank" title="Ver Guía Detallada"
+                                    class="flex-shrink-0 p-1.5 text-gray-400 hover:text-[#005A9C] hover:bg-blue-50 rounded-lg transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
                                         </path>
                                     </svg>
-                                    <span class="hidden md:inline">Ver Guía</span>
                                 </a>
                             </template>
                         </div>
 
-                        <!-- Right Actions: Badge & Delete -->
-                        <div class="flex items-center gap-4 pl-4">
-                            <!-- Status Badge -->
+                        <!-- Right Actions -->
+                        <div class="flex items-center gap-2 pl-2">
+                            <!-- Status Badge (Keep it small) -->
                             <span
-                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border whitespace-nowrap"
-                                :class="task.done ? 'bg-green-100 text-green-800 border-green-200' : 'bg-gray-200 text-gray-600 border-gray-300'">
-                                <span x-text="task.done ? 'Completado' : 'Pendiente'"></span>
+                                class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium border whitespace-nowrap"
+                                :class="task.done ? 'bg-green-100 text-green-800 border-green-200' : 'bg-gray-100 text-gray-500 border-gray-200'">
+                                <span x-text="task.done ? 'Listo' : 'Pendiente'"></span>
                             </span>
 
                             <!-- Delete Button -->
                             <button @click="deleteTask(index)"
-                                class="p-2 text-gray-400 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0"
+                                class="p-1.5 text-gray-300 hover:text-red-500 transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0"
                                 title="Eliminar Tarea">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
                                     </path>

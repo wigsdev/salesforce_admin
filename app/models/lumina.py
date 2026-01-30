@@ -16,6 +16,7 @@ class LuminaDeliverable(BaseModel, TimestampMixin):
         String, nullable=False
     )  # Renamed from path, used as subtitle/reference
     source_link = Column(String, nullable=True)
+    source_label = Column(String, nullable=True) # Text for the link
 
     # Relationships
     tasks = relationship(
