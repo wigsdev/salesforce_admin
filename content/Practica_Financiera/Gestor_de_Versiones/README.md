@@ -51,7 +51,7 @@ Documentación completa para la gestión de versiones, ambientes y roles del pro
 
 ---
 
-🔙 [**Volver al Inicio**](../README.md)
+
 
 ## 📊 Estado
 

@@ -13,7 +13,7 @@ Este directorio contiene el caso de estudio completo para la **Práctica de Clas
 | ✅ [**Solución Completa**](03-Requerimientos_SOLUCION.md) | Requerimientos resueltos (Garantes, Seguridad, Cuentas). |
 | 📋 [**Gestión en Trello**](04-Guia_Trello_Paso_a_Paso.md) | Guía paso a paso para organizar el tablero Agile. |
 | 📊 [**Resumen Visual**](05-Resumen_Visual.md) | Diagramas y esquemas de la solución. |
-| 🔙 [**Volver al Inicio**](../README.md) | Regresar al índice principal del curso. |
+
 
 ---
 

@@ -17,7 +17,7 @@
 | 📖 [**Enunciado Original**](ENUNCIADO_ORIGINAL.md) | Requisitos oficiales traducidos y analizados. |
 | 🧠 [**Solución v1.0**](GUIA_SB_SOLUCION_v1.0.md) | Guía detallada con enfoque principal. |
 | 💡 [**Solución v2.0**](GUIA_sB_SOLUCION_v2.0.md) | Método alternativo y tips adicionales. |
-| 🔙 [**Volver al Inicio**](../README.md) | Regresar al índice principal del curso. |
+
 
 ---
 

@@ -179,3 +179,55 @@ class MarkdownService:
                 )
 
         return files
+
+    def get_content_tree(self, relative_path: str = "") -> List[Dict]:
+        """
+        Recursively get the full content tree.
+
+        Args:
+            relative_path: Start path
+
+        Returns:
+            Nested list of file/directory objects
+        """
+        # Normalize path
+        if relative_path.startswith("/"):
+            relative_path = relative_path[1:]
+
+        base_dir = (
+            self.content_path / relative_path if relative_path else self.content_path
+        )
+
+        if not base_dir.exists():
+            return []
+
+        tree = []
+
+        # Sort items: directories first, then files, both simple case-insensitive sort
+        items = sorted(
+            base_dir.iterdir(), key=lambda x: (not x.is_dir(), x.name.lower())
+        )
+
+        for item in items:
+            # Skip hidden files/dirs
+            if item.name.startswith("."):
+                continue
+
+            node = {
+                "name": item.name,
+                "path": str(item.relative_to(self.content_path)).replace("\\", "/"),
+                "type": "directory" if item.is_dir() else "file",
+            }
+
+            if item.is_dir():
+                # Recursive call
+                children = self.get_content_tree(
+                    str(item.relative_to(self.content_path))
+                )
+                # Only add directory if it's not empty or we want to show empty dirs
+                node["children"] = children
+                tree.append(node)
+            elif item.is_file() and item.suffix == ".md":
+                tree.append(node)
+
+        return tree

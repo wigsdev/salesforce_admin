@@ -42,4 +42,4 @@ Documentación completa de los Superbadges realizados durante el Sprint 1 del cu
 
 ---
 
-🔙 [**Volver al Inicio**](../README.md)
+

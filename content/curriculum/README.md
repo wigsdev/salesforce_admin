@@ -18,4 +18,4 @@ Bienvenido al índice principal del material de estudio. El curso está dividido
 - **Sprint 2**: Semanas 5-8
 - **Sprint 3**: Semanas 9-12
 
-🔙 [**Volver al Inicio**](../README.md)
+

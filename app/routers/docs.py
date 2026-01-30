@@ -38,6 +38,17 @@ async def browse_docs(request: Request, path: str = ""):
     )
 
 
+@router.get("/tree")
+async def get_docs_tree():
+    """
+    Get the full recursive documentation tree.
+
+    Returns:
+        JSON structure of all folders and markdown files.
+    """
+    return markdown_service.get_content_tree()
+
+
 @router.get("/{path:path}", response_class=HTMLResponse)
 async def view_document(request: Request, path: str):
     """
