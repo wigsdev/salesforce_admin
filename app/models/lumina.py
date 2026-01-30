@@ -34,12 +34,12 @@ class LuminaTask(BaseModel, TimestampMixin):
     )
     description = Column(String, nullable=False)
     # doc_path is already in the DB from previous migration, but wasn't in the file I viewed?
-    # Wait, looking at previous view_file of models/lumina.py (Step 11882), doc_path WAS MISSING in line 34-36. 
+    # Wait, looking at previous view_file of models/lumina.py (Step 11882), doc_path WAS MISSING in line 34-36.
     # Ah, I see "doc_path = Column(String, nullable=True) # New field for documentation link" in the diff in Step 11877 removal!
     # I accidentally removed it! I must restore it.
     doc_path = Column(String, nullable=True)
     is_completed = Column(Boolean, default=False, nullable=False)
-    
+
     # The TimestampMixin already provides created_at and updated_at.
     # No need to redefine them here.
     # created_at = Column(DateTime, default=datetime.utcnow)

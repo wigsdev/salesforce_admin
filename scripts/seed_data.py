@@ -1,17 +1,11 @@
 import sys
 import os
 import re
-from datetime import datetime, timedelta
 
 # Add parent directory to path to import app modules
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from app.database import SessionLocal
-from app.models.sprint import Sprint
-from app.models.task import Task
-from app.models.user import User
-from app.utils.security import hash_password
-from sqlalchemy import text
 
 
 def parse_lumina_checklist():
@@ -52,7 +46,7 @@ def parse_lumina_checklist():
                 current_day = {
                     "title": f"📅 {day_title}",
                     "reference": f"Log: {ref_part}",
-                    "source_link": None, # Init source link
+                    "source_link": None,  # Init source link
                     "tasks": [],
                 }
                 continue
@@ -60,12 +54,12 @@ def parse_lumina_checklist():
             # Match Source Link (Usually right after day header)
             source_match = source_pattern.search(line)
             if source_match and current_day:
-                 raw_path = source_match.group(1)
-                 # Clean up path (remove ../../)
-                 clean_path = raw_path.replace("../../", "").replace("../", "")
-                 current_day["source_link"] = clean_path
-                 continue
-            
+                raw_path = source_match.group(1)
+                # Clean up path (remove ../../)
+                clean_path = raw_path.replace("../../", "").replace("../", "")
+                current_day["source_link"] = clean_path
+                continue
+
             # Match Task Title
             task_match = task_pattern.match(line)
             if task_match and current_day:
@@ -125,7 +119,7 @@ def seed_data():
                 day = LuminaDeliverable(
                     title=day_data["title"],
                     reference=day_data["reference"],
-                    source_link=day_data.get("source_link"), # Add source link
+                    source_link=day_data.get("source_link"),  # Add source link
                 )
                 db.add(day)
                 db.commit()
