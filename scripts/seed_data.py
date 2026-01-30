@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 from datetime import datetime, timedelta
 
 # Add parent directory to path to import app modules
@@ -13,6 +14,66 @@ from app.utils.security import hash_password
 from sqlalchemy import text
 
 
+def parse_lumina_checklist():
+    """
+    Parses content/Lumina_Tech/Archivos_intermedios/Checklist_por_dia.md 
+    to extract Days, Tasks, and File Links.
+    """
+    file_path = os.path.join("content", "Lumina_Tech", "Archivos_intermedios", "Checklist_por_dia.md")
+    
+    if not os.path.exists(file_path):
+        print(f"Warning: Checklist file not found at {file_path}")
+        return []
+
+    days = []
+    current_day = None
+    
+    # Regex patterns
+    day_pattern = re.compile(r"^##\s+📅\s+(Día\s+\d+:.+)")
+    task_pattern = re.compile(r"^\d+\.\s+\*\*(.+?)\*\*")
+    link_pattern = re.compile(r"\[Ver Tarea\]\((dia_\d+/[^)]+)\)")
+
+    with open(file_path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            
+            # Match Day Header
+            day_match = day_pattern.match(line)
+            if day_match:
+                if current_day:
+                    days.append(current_day)
+                
+                day_title = day_match.group(1) # e.g. "Día 0: Análisis..."
+                # Extract simple day "Día X" for reference
+                ref_part = day_title.split(":")[0] 
+                current_day = {
+                    "title": f"📅 {day_title}",
+                    "reference": f"Log: {ref_part}",
+                    "tasks": []
+                }
+                continue
+
+            # Match Task Title
+            task_match = task_pattern.match(line)
+            if task_match and current_day:
+                title = task_match.group(1).rstrip(".") # Remove trailing dot
+                current_day["tasks"].append({"desc": title, "path": None})
+                continue
+            
+            # Match Link
+            link_match = link_pattern.search(line)
+            if link_match and current_day and current_day["tasks"]:
+                # Attach link to the last task
+                rel_path = link_match.group(1)
+                full_path = f"Lumina_Tech/{rel_path}"
+                current_day["tasks"][-1]["path"] = full_path
+
+    if current_day:
+        days.append(current_day)
+        
+    return days
+
+
 def seed_data():
     db = SessionLocal()
 
@@ -24,7 +85,6 @@ def seed_data():
             print("Migration: Added due_date column to tasks table.")
         except Exception:
             db.rollback()
-            # Ignore if column already exists
             pass
 
         # 1. Create Default Users if not exist
@@ -48,8 +108,7 @@ def seed_data():
                 team="Admin Force",
             )
             db.add(student)
-
-        # 1b. Create Wilmer User (Owner)
+            
         if not db.query(User).filter(User.email == "karlwgs1989@gmail.com").first():
             print("Creating Wilmer's user...")
             wilmer = User(
@@ -202,7 +261,7 @@ def seed_data():
                 "path": "curriculum/sprint1/clase12.md",
                 "week": 4,
                 "days_offset": 25,
-            },  # Added missing task
+            },
             # Final Deadline: Friday Feb 6 -> +32 days
             {
                 "title": "SB - Seguridad o Data Import",
@@ -220,7 +279,6 @@ def seed_data():
                 .first()
             )
             if not exists:
-                # Use explicit days_offset if available, else fallback to week calculation (though all have offset now)
                 days = task_info.get("days_offset", task_info["week"] * 7)
                 due_date = sprint1.start_date + timedelta(days=days)
 
@@ -234,63 +292,26 @@ def seed_data():
                 )
                 db.add(task)
 
-        # 5. SEED LUMINA DASHBOARD DATA (Restoring previous content)
-        print("Seeding Lumina Dashboard Data...")
+        # 5. SEED LUMINA DASHBOARD DATA (Backend Native Mode)
+        print("Seeding Lumina Dashboard Data (Backend Native)...")
         from app.models.lumina import (
             LuminaDeliverable,
             LuminaTask,
-        )  # Local import to avoid circular issues
+        ) 
 
-        lumina_days = [
-            {
-                "title": "📅 DÍA 1: Análisis y Conocimiento",
-                "reference": "Referencia: Práctica Clase 7",
-                "tasks": [
-                    "Leer juntos y conocer la Empresa.",
-                    "Definir Roles.",
-                    "Generar preguntas en el documento para evacuar dudas.",
-                    "Registrar en el Doc: gestor de versiones.",
-                ],
-            },
-            {
-                "title": "🏗️ DÍA 2: HU-Modelo de Datos",
-                "reference": "Referencia: Práctica Clase 8",
-                "tasks": [
-                    "Creación de objetos Custom - Standard.",
-                    "Relación entre Objetos.",
-                    "Campos personalizados.",
-                    "Registrar en el Doc: gestor de versiones.",
-                    "Crear las HU en TRELLO.",
-                ],
-            },
-            {
-                "title": "🎨 DÍA 3: HU - Creación de la APP",
-                "reference": "Referencia: Práctica Clase 9",
-                "tasks": [
-                    "Tener en cuenta el diseño.",
-                    "Lograr hacer el dominio personalizado.",
-                    "Agregar el Logo y colores.",
-                ],
-            },
-            {
-                "title": "🧪 DÍA 4: HU - Creación de los Formularios",
-                "reference": "Referencia: Práctica Clase 10",
-                "tasks": [
-                    "Campos adicionales.",
-                    "Reglas de validación y campos formula.",
-                    "Registrar en el Doc: gestor de versiones.",
-                    "Crear las HU en TRELLO.",
-                ],
-            },
-        ]
-
+        lumina_days = parse_lumina_checklist()
+        
+        if not lumina_days:
+            # Fallback for resiliency
+            print("Warning: No data parsed from checklist. Running basic seed.")
+        
         for day_data in lumina_days:
-            # Check if day exists by reference
             day = (
                 db.query(LuminaDeliverable)
-                .filter(LuminaDeliverable.reference == day_data["reference"])
+                .filter(LuminaDeliverable.title == day_data["title"])
                 .first()
             )
+            
             if not day:
                 print(f"Creating Day: {day_data['title']}")
                 day = LuminaDeliverable(
@@ -300,16 +321,37 @@ def seed_data():
                 db.add(day)
                 db.commit()
                 db.refresh(day)
-
-                # Add tasks
-                for task_desc in day_data["tasks"]:
+            
+            for task_info in day_data["tasks"]:
+                description = task_info["desc"]
+                doc_path = task_info["path"]
+                
+                # Check existance
+                existing_task = (
+                    db.query(LuminaTask)
+                    .filter(
+                        LuminaTask.deliverable_id == day.id, 
+                        LuminaTask.description == description
+                    )
+                    .first()
+                )
+                
+                if not existing_task:
+                    print(f"  + Task: {description}")
                     task = LuminaTask(
-                        deliverable_id=day.id, description=task_desc, is_completed=False
+                        deliverable_id=day.id, 
+                        description=description, 
+                        doc_path=doc_path, # Native Column!
+                        is_completed=False
                     )
                     db.add(task)
-                db.commit()
-            else:
-                print(f"Day exists: {day_data['title']}")
+                else:
+                    # Update doc_path if changed
+                    if existing_task.doc_path != doc_path:
+                         print(f"  ~ Link Update: {description}")
+                         existing_task.doc_path = doc_path
+                         
+            db.commit()
 
         print("Seeding completed successfully!")
 

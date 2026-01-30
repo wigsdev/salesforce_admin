@@ -32,6 +32,7 @@ class LuminaTask(BaseModel, TimestampMixin):
         Integer, ForeignKey("lumina_deliverables.id"), nullable=False, index=True
     )
     description = Column(String, nullable=False)
+    doc_path = Column(String, nullable=True)  # New field for documentation link
     is_completed = Column(Boolean, default=False, nullable=False)
 
     # Relationships
