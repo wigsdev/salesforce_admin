@@ -1,95 +1,58 @@
-# 06-Investigaciones.md - Análisis de Arquitectura
-
-**Proyecto**: Universidad Lumina Tech
-**Responsable**: Salesforce Consultant
-**Fecha**: 19 Enero 2026
+# 06-Investigaciones.md - Decisiones de Diseño (ADR)
+**Rol**: Solutions Architect
+**Tema**: Diseño de Base de Datos y Seguridad
 
 ---
 
-## 🔬 Investigación 1: Modelado de Inscripciones (Muchos a Muchos)
+## 🔬 Investigación 1: Modelo Relacional de Inscripciones
 
-### ❓ El Problema
-Un `Alumno` puede cursar muchas `Materias`. Una `Materia` tiene muchos `Alumnos`.
-Salesforce no tiene una relación "Many-to-Many" directa.
+### Contexto
+Necesitamos conectar `Alumnos` con `Materias`. Un alumno tiene muchas materias, y una materia tiene muchos alumnos (N:N).
 
-### 🧪 Alternativas Evaluadas
+### Opciones Analizadas
 
-#### Opción A: Lookup en Alumno
-- Crear campo `Materia__c` en Objeto Alumno.
-- **Pros**: Fácil de hacer.
-- **Contras**: Un alumno solo podría cursar UNA materia a la vez. **Inviable**.
+#### ❌ Opción A: Master-Detail Directo
+*   **Concepto**: Poner un campo `Materia__c` en el objeto Alumno.
+*   **Problema**: Un alumno solo podría cursar UNA materia a la vez. No escala.
 
-#### Opción B: Multi-Select Picklist
-- Crear picklist "Materias Cursadas" en Alumno.
-- **Pros**: Rápido.
-- **Contras**: No se puede guardar nota, ni estado, ni fecha. Límite de 100 valores. Reportes imposibles. **Descartado**.
+#### ❌ Opción B: Multi-Select Picklist
+*   **Concepto**: Una lista desplegable en Alumno con las materias.
+*   **Problema**: Pesadilla de reportes. No permite guardar "Nota" ni "Estado" por materia. Límites de caracteres.
 
-#### Opción C: Objeto de Unión (Junction Object) 🏆
-- Crear objeto custom `Inscripcion__c`.
-- Master-Detail a `Alumno__c`.
-- Master-Detail a `Materia__c`.
-- **Pros**:
-    - Permite guardar atributos de la relación (`Nota_Final`, `Estado`, `Ciclo`).
-    - Permite "Cascade Delete" (si borro Alumno, se borran sus inscripciones).
-    - Reportes nativos "Alumnos con Inscripciones con Materias".
-- **Contras**: Requiere crear un objeto extra.
-
-### ✅ Decisión Final
-Implementar **Opción C**. Es el estándar de arquitectura Salesforce para este caso de uso.
+#### ✅ Opción C: Junction Object (`Inscripcion__c`)
+*   **Concepto**: Crear un tercer objeto que tenga dos Master-Details (uno a Alumno, uno a Materia).
+*   **Ventajas**:
+    *   Permite atributos propios de la relación ("Nota Final", "Fecha Inscripción").
+    *   Integridad referencial total (si borras al alumno, se borran sus inscripciones).
+    *   Reportes nativos "Alumnos con Inscripciones y Materias".
+*   **Decisión**: APROBADA.
 
 ---
 
-## 🔬 Investigación 2: Seguridad de Notas (FLS vs Page Layouts)
+## 🔬 Investigación 2: Validación de Integridad de Datos
 
-### ❓ El Problema
-El Administrativo debe poder ver los datos del alumno, pero **NO** debe poder editar las notas de los exámenes.
+### Contexto
+Evitar "Data Pollution" (basura en la base de datos) desde el día 1.
 
-### 🧪 Alternativas Evaluadas
+### Estrategia: "Swiss Cheese Model" (Capas de defensa)
 
-#### Opción A: Page Layouts (Solo visual)
-- Crear un Layout "Admin" y poner el campo Nota como "Read-Only" en la UI.
-- **Riesgo**: Si el admin sabe usar Data Loader o API, puede editar la nota igual. Es inseguro a nivel backend.
+1.  **Capa 1: UI (Page Layouts)**
+    *   Marcar campos como Required en la pantalla.
+    *   *Debilidad*: Se puede saltar por API/Data Loader.
 
-#### Opción B: Validation Rule
-- Regla: `AND($Profile.Name = "Administrativo", ISCHANGED(Nota__c))`.
-- **Pros**: Funciona en backend.
-- **Contras**: El usuario se entera que no puede editar *después* de intentar guardar (mala UX).
+2.  **Capa 2: Metadata (Schema)**
+    *   Marcar campos como `Required` y `Unique` a nivel definición de objeto.
+    *   *Fortaleza*: Inviolable. Si no hay DNI, no hay registro.
 
-#### Opción C: Field Level Security (FLS) 🏆
-- Quitar permiso "Edit" al perfil Administrativo a nivel de metadatos.
-- **Pros**: El campo aparece grisado o invisible en todos lados (UI, API, Reportes). Es la seguridad más robusta.
-
-### ✅ Decisión Final
-Usar **Field Level Security (FLS)** como mecanismo principal.
-Opción C es la práctica recomendada de seguridad ("Defense in Depth").
+3.  **Capa 3: Lógica (Validation Rules)**
+    *   Para reglas complejas (Rango 0-10, Regex de Email).
+    *   *Decisión*: Implementar VRs para todo lo que no sea binario.
 
 ---
 
-## 🔬 Investigación 3: Validación de Datos (Email)
+## 🔬 Investigación 3: Naming Conventions
 
-### ❓ El Problema
-Necesitamos asegurar que el campo `Email__c` en Alumno tenga formato válido, pero sin escribir código complejo (Apex) si es evitable.
-
-### 🧪 Alternativas Evaluadas
-
-#### Opción A: Campo tipo "Email" Estándar
-- Crear campo `Email__c` seleccionando el tipo "Email".
-- **Pros**: Validación nativa de Salesforce.
-- **Contras**: La validación es muy laxa (acepta `a@b`). No previene dominios falsos.
-
-#### Opción B: Regla de Validación (Regex) 🏆
-- Usar función `REGEX(Email__c, "[a-zA-Z0-9._-]+@[a-z]+\\.edu")`.
-- **Pros**:
-    - Control total del patrón.
-    - Mensaje de error personalizado en UI.
-    - Funciona en cargas masivas (Data Loader).
-- **Contras**: Requiere saber sintaxis Regex.
-
-#### Opción C: Trigger Apex (before insert/update)
-- Escribir clase Apex que parsee el string.
-- **Pros**: Lógica infinita (podría verificar si el dominio existe via API).
-- **Contras**: Code maintenance. Requiere Test Class coverage. Overkill para este sprint.
-
-### ✅ Decisión Final
-Implementar **Opción B (Regex Validation Rule)**.
-Es el balance perfecto entre robustez y mantenibilidad (Low Code).
+Para mantener el orden en una Org que crecerá:
+*   **Objetos**: Singular, PascalCase (`Alumno__c`, no `Alumnos__c`).
+*   **Campos**: Explícitos (`Fecha_Nacimiento__c`, no `Fecha__c`).
+*   **Triggers**: `ObjetoTrigger` (e.g., `AlumnoTrigger`).

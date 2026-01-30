@@ -1,60 +1,37 @@
-# 13-Ambiente_PROD.md - Entorno de Producción
-
-## 📋 Información del Ambiente
-
-**Proyecto**: Lumina Tech
-**Tipo de Ambiente**: Production Org (Developer Edition actuando como PROD)
-**Propósito**: Uso final por la Rectora y Profesores reales.
-**Equipo**: Grupo de Trabajo (Estudiantes)
-**Responsables**: Todo el equipo (Custodia compartida)
-**Estado**: 🔴 Protegido (Solo lectura hasta Deploy)
+# 13-Ambiente_PROD.md - Bitácora de Producción
+**Org ID**: `00D_PROD_LUMINA`
+**Dominio**: `lumina.my.salesforce.com`
+**Estado**: 🔒 Locked (Solo Deployments)
 
 ---
 
-## 🔗 Acceso al Ambiente
+## 🛑 Política de Acceso (Governance)
 
-### URL de Login
-**URL**: [https://login.salesforce.com](https://login.salesforce.com)
-**My Domain**: `https://lumina-tech.my.salesforce.com` (Definitivo)
-
----
-
-## 👥 Administradores de Producción (Grupo de Trabajo)
-
-⚠ **Política de Acceso**: Solo 2 personas tienen la contraseña de Admin en PROD para evitar errores accidentales.
-
-### Gatekeeper 1 (Release Manager)
-**Responsable**: Estudiante 1
-**Usuario**: `admin@lumina.edu`
-**Función**: Aprobar y ejecutar deployments finales.
-
-### Gatekeeper 2 (Backup)
-**Responsable**: Estudiante 2
-**Usuario**: `backup@lumina.edu`
-**Función**: Acceso de emergencia.
+*   **Regla #1**: Nadie configura "a mano" en Producción.
+*   **Regla #2**: Todo cambio debe venir de un Change Set aprobado en QA.
+*   **Excepción**: Reportes y Dashboards pueden crearse directamente en PROD por usuarios Power Users.
 
 ---
 
-## ⚠️ Protocolo de Seguridad (Reglas de Oro)
+## 📦 Historial de Versiones (Changelog)
 
-1.  **NUNCA probar en PROD**: Las pruebas se hacen en QA.
-2.  **Backup Obligatorio**: Antes de cualquier deploy, exportar datos (Data Export).
-3.  **Ventana de Mantenimiento**: Los deploys se hacen Viernes 18:00hs (simulado).
+### v1.0.0 - "Genesis" (Sprint 1)
+**Fecha**: 25/01/2026
+**Release Manager**: WIGUSA
+
+**Contenido**:
+*   Core Académico Completo (Objetos, Campos, Tabs).
+*   Seguridad Inicial (Perfiles Profesor y Admin).
+*   Aplicación Lightning "Gestión Académica".
+
+**Incidentes Post-Deploy**:
+*   *Ninguno reportado en las primeras 24hs.*
 
 ---
 
-## 📦 Registro de Deployments (Release History)
+## 📞 Soporte Post-Go-Live
 
-| Versión | Fecha | Contenido (Log) | Resultado |
-|---|---|---|---|
-| **v1.0 (MVP)** | 30/01 | Objetos Core, Seguridad OWD, App Lightning. | ⏳ Pendiente |
-| **v1.1** | 15/02 | Reportes Avanzados y Dashboard Rectoría. | ⚪ Planificado |
-
----
-
-## 🔄 Plan de Rollback
-
-Si el deployment v1.0 rompe el sistema:
-1.  **Desactivar**: Flows y Reglas de Validación problemáticas.
-2.  **Restaurar**: Borrar campos custom nuevos si corrompen datos.
-3.  **Comunicar**: Enviar email a soporte@lumina.edu avisando del incidente.
+Si un usuario reporta un error crítico:
+1.  Crear ticket en Jira/Trello (Etiqueta 🔴 Producción).
+2.  Reproducir el error en SANDBOX FULL (UAT).
+3.  **Nunca** depurar con datos reales de alumnos (PII).

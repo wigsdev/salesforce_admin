@@ -1,70 +1,37 @@
-# 12-Ambiente_QA.md - Entorno de Testing
-
-## 📋 Información del Ambiente
-
-**Proyecto**: Lumina Tech
-**Tipo de Ambiente**: Partial Copy Sandbox (o Simulado en Dev Edition)
-**Propósito**: Quality Assurance y UAT (User Acceptance Testing)
-**Equipo**: Grupo de Trabajo (Estudiantes)
-**Responsables**: Estudiante 3 y Estudiante 4 (Rol QA)
-**Estado**: 🟡 En Preparación
+# 12-Ambiente_QA.md - Bitácora de Calidad
+**Org ID**: N/A (Simulado en Dev Sandbox con sufijo .qa)
+**Login**: `tester@lumina.qa.com`
+**Estado**: 🟡 En Pruebas
 
 ---
 
-## 🔗 Acceso al Ambiente
+## 🧪 Datos de Prueba (Seed Data)
 
-### URL de Login
-**URL**: [https://test.salesforce.com](https://test.salesforce.com)
-**My Domain**: `https://lumina-tech-qa.sandbox.my.salesforce.com` (Simulado)
+Para validar el Sprint 1, se ha cargado el siguiente set de datos ("Data Factory"):
 
----
+### Carreras (Padres)
+1.  **Ingeniería en Sistemas** (Duración: 5 años).
+2.  **Administración de Empresas** (Duración: 4 años).
 
-## 👥 Credenciales de QA (Grupo de Trabajo)
+### Materias (Hijos)
+*   `MAT-001` Programación I (Sistemas).
+*   `MAT-002` Contabilidad Básica (Admin).
 
-Los testers son **miembros rotativos del equipo**.
-
-### Admin QA (Deployer)
-**Responsable**: Estudiante 3
-**Usuario**: `deploy@lumina.qa`
-**Función**: Recibir Change Sets de DEV y desplegar.
-
-### Tester Funcional
-**Responsable**: Estudiante 4
-**Usuario**: `tester@lumina.qa`
-**Función**: Ejecutar casos de prueba de `04-Tester_QA.md`.
+### Alumnos (Actores)
+*   **Juan Perez (Legajo 100)**: Caso feliz.
+*   **Maria Error (Legajo 999)**: Usada para pruebas de validación (notas negativas).
 
 ---
 
-## 🧪 Estrategia de Datos de Prueba
+## 🔍 Resultados de Smoke Tests
 
-Para validar las reglas de negocio, usaremos los siguientes datasets ficticios:
-
-| Objeto | Cantidad | Descripción |
-|---|---|---|
-| **Alumnos** | 10 registros | 5 con emails válidos, 5 inválidos para testear regex. |
-| **Materias** | 5 registros | Matemática, Física, Historia, etc. |
-| **Notas** | 20 registros | Notas borde (0, 1, 10, 11) para validar rangos. |
-
-### Métodos de Carga
-1.  **Manual**: Para casos borde específicos.
-2.  **Data Loader**: Import masivo de 50 alumnos (CSV preparado).
+| Fecha | Versión | Pass Rate | Bloqueantes |
+|---|---|---|---|
+| 20/01 | v0.1 (Alpha) | 40% | Sí (No se podía crear Inscripción). |
+| 22/01 | v0.5 (Beta) | 85% | No. |
+| 24/01 | v1.0 (RC) | 100% | Ready for Prod. |
 
 ---
 
-## 🐛 Defect Log (Registro de Bugs)
-
-Cualquier fallo se reporta aquí y en Trello.
-
-| ID | Fecha | Fallo Encontrado | Severidad | Estado |
-|---|---|---|---|---|
-| BUG-001 | 24/01 | Permite ingresar notas negativas (-5) | 🔴 Alta | Open |
-| BUG-002 | 24/01 | El Profesor B ve alumnos del Profesor A | 🔴 Alta | Fixed |
-
----
-
-## 🔄 Proceso de Sincronización (Deploy)
-
-1.  **Origen**: Ambiente DEV.
-2.  **Mecanismo**: Change Set (Outbound -> Inbound).
-3.  **Validación**: Ejecutar "Run Specified Tests" al desplegar.
-4.  **Rollback**: Si falla, no guardar cambios.
+## 🐛 Bugs Recurrentes (Known Issues)
+*   A veces el Lightning App Builder tarda en refrescar el cache y no muestra los campos nuevos. Solución: Hard Refresh (Ctrl+F5).

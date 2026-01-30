@@ -51,3 +51,14 @@ No trabajas en el Setup (arrastrando cajitas). Trabajas con código.
 ## 💡 Pro-Tip para este Proyecto
 *   **No reinutes la rueda**: Salesforce tiene miles de funciones nativas. Un buen Developer sabe cuándo NO programar.
 *   **Comenta tu código**: El Admin tendrá que mantener esto cuando tú te vayas. Explica qué hace tu clase en español simple.
+
+---
+
+## 📅 Estado del Rol en Sprint 1 (Reality Check)
+
+*   **Estado**: 🟡 **Soporte / Inactivo**
+*   **Motivo**: El Sprint 1 fue 100% configuración ("Clicks not Code").
+*   **Actividades Realizadas**:
+    *   Configuración de VS Code y Salesforce Extension Pack.
+    *   Apoyo al Admin en la lógica de Validaciones complejas (Regex).
+    *   Investigación de factibilidad para el Dashboard de Rectoría (Sprint 2 - LWC posible).

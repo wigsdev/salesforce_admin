@@ -1,59 +1,42 @@
-# 11-Ambiente_DEV.md - Entorno de Desarrollo
-
-## 📋 Información del Ambiente
-
-**Proyecto**: Lumina Tech
-**Tipo de Ambiente**: Developer Edition (Simulando Sandbox)
-**Propósito**: Desarrollo y configuración inicial del MVP
-**Equipo**: Grupo de Trabajo (Estudiantes)
-**Admins Principales**: Estudiante 1 y Estudiante 2
+# 11-Ambiente_DEV.md - Bitácora de Desarrollo
+**Org ID**: `00Dxxxxxxxxxxxx` (Lumina Dev)
+**Login**: `admin@lumina.dev.com`
 **Estado**: 🟢 Activo
 
 ---
 
-## 🔗 Acceso al Ambiente
+## 🛠️ Configuración Inicial (Setup)
 
-### URL de Login
-**URL**: [https://login.salesforce.com](https://login.salesforce.com) (Para Developer Edition)
-**My Domain**: `https://lumina-tech-dev-ed.my.salesforce.com` (Simulado)
+### Datos de la Org
+*   **Edición**: Developer Edition.
+*   **Dominio**: `lumina-university-dev-ed`
+*   **Timezone**: GMT-3 (Argentina).
+*   **Currency**: USD (Multicurrency desactivado).
 
----
-
-## 👥 Credenciales de Administradores (Grupo de Trabajo)
-
-Todos los administradores **son miembros del equipo**. No compartimos credenciales con externos.
-
-### Admin 1: Arquitecto de Datos
-**Responsable**: Estudiante 1
-**Username**: `admin1@lumina.dev`
-**Función**: Responsable de Objetos (`Carrera`, `Materia`, `Alumno`) y Relaciones.
-
-### Admin 2: Responsable de Seguridad
-**Responsable**: Estudiante 2
-**Username**: `admin2@lumina.dev`
-**Función**: Configuración de Perfiles, Roles y Sharing Settings (OWD).
+### Usuarios de Desarrollo
+1.  **System Admin**: WIGUSA (Arquitecto).
+2.  **Integration User**: Usuario API (para Trello/Jira).
 
 ---
 
-## 📝 Registro de Cambios (Audit Log)
+## 📝 Inventario de Cambios (Sprint 1)
 
-| Fecha | Cambio realizado | Responsable | Estado Migración |
-|-------|------------------|-------------|------------------|
-| 19/01 | Creación de Objetos Core (`Carrera`, `Materia`) | Estudiante 1 | ⏳ Pendiente |
-| 20/01 | Creación Junction Object `Inscripción__c` | Estudiante 1 | ⏳ Pendiente |
-| 21/01 | Clonación de Perfiles (`Lumina_Profesor`) | Estudiante 2 | ⏳ Pendiente |
-| 21/01 | Configuración de OWD Private en `Alumno__c` | Estudiante 2 | ⏳ Pendiente |
+Registro de metadata creada directamente en este ambiente.
+
+### Objetos Custom
+*   `Carrera__c` (Master)
+*   `Materia__c` (Master)
+*   `Alumno__c` (Transaccional)
+*   `Inscripcion__c` (Junction)
+*   `Examen__c` (Detail)
+
+### Automatización
+*   **Validation Rules**: 3 activas.
+*   **Flows**: 0 (Sprint 1 es Config pura).
+*   **Approval Processes**: 0.
 
 ---
 
-## 🔧 Checklist de Configuración
-- [x] My Domain configurado (`lumina-tech...`)
-- [x] Usuarios Admin activos
-- [x] Moneda configurada (USD/Local)
-- [ ] Idioma Español activado
-- [ ] Timezone ajustado a local
-
-## 🚫 Reglas de Oro en DEV
-1.  **NO usar datos reales**: Usar nombres ficticios ("Juan Pérez").
-2.  **Documentar todo**: Si creas un campo, añádelo al `03-Salesforce_Admin.md`.
-3.  **Comunicación**: Avisar al compañero si vas a modificar un objeto compartido.
+## 🚧 Deuda Técnica Conocida
+*   Los nombres de las pestañas están en inglés ("Students" vs "Alumnos"). Se debe corregir en la traducción de la Tab.
+*   Faltan Description en los campos creados el Día 1.

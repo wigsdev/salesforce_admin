@@ -1,62 +1,69 @@
-# 🗓️ Plan de Trabajo: Sprint 1 (Lumina Tech)
-**Objetivo**: "Zero-to-Strategy" - Implementación del Core Académico.
-**Referencia Metodológica**: `00-GUIA_METODOLOGICA.md`
+# 📅 Plan de Trabajo y Bitácora - Fase Inicial
+**Proyecto**: Lumina Tech
 
 ---
 
-## 🗺️ Roadmap de Ejecución (4 Semanas)
+## 📅 DIA 0 - Inicio y Definición de Equipo
 
-### 🚩 Semana 1: Definición Estratégica
-*Focus: Entender el problema legal de la Rectora.*
-- [x] **Kick-off**: Lectura de `SPRINT 1.md`.
-- [x] **Ingeniería de Requerimientos**:
-    - Generar `01-Business_Analyst.md` (Matriz de Trazabilidad).
-    - Detectar HU críticas: `HU-001` (Privacidad) y `HU-007` (DNI Obligatorio).
-- [x] **Setup de Herramientas**:
-    - Configurar Trello según `00-Guia_Trello_Paso_a_Paso.md`.
+### Asignación de Roles (Agile Team)
+**Fuente**: [Tarea 2 - Definir Roles](../dia_0/2_Definir_Roles.md)
 
-### 🛠️ Semana 2: Arquitectura y Diseño
-*Focus: Evitar deuda técnica.*
-- [ ] **Diseño de Datos (`02-Consultant`)**:
-    - Decidir Junction Object (`Inscripcion__c`) vs Lookup directo.
-    - Definir Naming Conventions (ej: `Ciclo_Lectivo__c`).
-- [ ] **Investigación (`06-Investigaciones`)**:
-    - Prototipar validación de email (Regex).
+*   **Product Owner (PO)**: Dra. Vance (Define el "Qué").
+*   **Scrum Master / Team Lead**: Facilita el proceso.
+*   **Business Analyst (BA)**: Releva requerimientos.
+*   **Salesforce Consultant**: Diseño Técnico.
+*   **Salesforce Admin**: Configuración.
 
-### ⚙️ Semana 3: Construcción (Salesforce)
-*Focus: Configuración robusta.*
-- [ ] **Data Model**:
-    - Crear Objetos: `Carrera`, `Materia`, `Alumno`.
-    - **Hito Crítico**: Crear Junction Object `Inscripción`.
-- [ ] **Calidad de Datos (`HU-005`, `HU-006`)**:
-    - Activar Reglas de Validación: "Nota 1-10" y "Email Format".
-- [ ] **Seguridad (`HU-001`)**:
-    - Configurar OWD = Private.
-    - Crear Perfiles Custom: `Lumina_Profesor`, `Lumina_Admin`.
+### Roles del Sistema (Usuarios)
+1.  **Administrativos**: Gestión de inscripciones y cobros.
+2.  **Profesores**: Carga de notas (Acceso restringido).
+3.  **Rol**: Project Manager
+**Sprint**: 01 (Fundamentos)
 
-### 🧪 Semana 4: Aseguramiento de Calidad
-*Focus: Romper la app.*
-- [ ] **Validación Funcional (`04-QA`)**:
-    - Ejecutar `TC-DATA-04` (Email inválido).
-    - Verificar visibilidad cruzada entre profesores.
-- [ ] **Entrega**:
-    - Generar `GUIA_USUARIO.md` en PDF.
-    - Demo Final a Dra. Vance.
+![Flujo de Trabajo Sprint 1](/uploaded_media_1769735775852.png)
+> **Referencia Visual**: Flujo de desarrollo validado (Modelado -> App -> Formularios -> Seguridad).
 
 ---
 
-## 🚦 Semáforo de Riesgos
-
-| Riesgo | Probabilidad | Impacto | Mitigación |
-|---|---|---|---|
-| **Modelo de Datos Erróneo** | Media | Crítico | Validación temprana del ERD en Semana 2. |
-| **Fuga de Datos (Privacidad)** | Alta | Legal | Testing intensivo de Sharing Rules (Semana 4). |
-| **Resistencia al Cambio** | Media | Medio | Entregar una `GUIA_USUARIO.md` muy clara. |
+## 📅 DIA 1 - Modelado de Datos (Foundation)re
+**Estado**: ✅ COMPLETO
+**Entregables**:
+1.  **Objetos Custom**: Carrera, Materia, Alumno, Inscripción, Examen.
+2.  **ERD Visual**: Diagrama de entidades-relaciones validado.
+3.  **Backlog Técnico**: Historias de Usuario (HU-001, HU-002, HU-003) creadas.
 
 ---
 
-## 📊 Definition of Done (DoD) del Sprint
-1.  [ ] Todos los objetos core creados y relacionados.
-2.  [ ] Validaciones activas impidiendo datos basura.
-3.  [ ] Al menos 1 caso de prueba fallido y corregido (evidencia de QA).
-4.  [ ] Documentación `01` a `04` completa y sincronizada.
+## 📅 DIA 2 - Branding y App Building
+**Estado**: ✅ COMPLETO
+**Entregables**:
+1.  **My Domain**: Desplegado en Sandbox.
+2.  **Theme**: "Lumina Official" activo (Azul #005A9C - Oro #F2A900).
+3.  **Lightning App**: "Gestión Académica Lumina" configurada y asignada.
+
+---
+
+## 📅 DIA 3 - Automatización y Calidad
+**Estado**: ✅ COMPLETO
+**Entregables**:
+1.  **Formularios Inteligentes**: Reglas de validación activas.
+2.  **Calidad**: Regex para Emails y Rango Numérico para Notas.
+3.  **Backlog**: HU-007 y HU-008 listas para test.
+
+---
+
+## 📅 DIA 4 - Seguridad Avanzada
+**Estado**: ✅ COMPLETO
+**Entregables**:
+1.  **Seguridad Base**: OWD Private para Alumnos.
+2.  **Gestión de Accesos**: Permission Sets (MFA, Calificador) y Groups (Profesor, Admin).
+3.  **Backlog**: HU-009 a HU-011 (Seguridad y Privacidad) implementadas.
+
+---
+
+## 🚀 Fase 2 - Mejoras Estratégicas (Propuesta)
+**Estado**: 🧠 En Análisis
+**Detalle**: [Ver Propuesta de Arquitectura](../Archivos_intermedios/08-PROPUESTA_MEJORAS_ARQUITECTURA.md)
+*   Automatización (Flows).
+*   Analytics (Dashboards).
+*   UX/UI Avanzado.

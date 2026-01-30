@@ -1,82 +1,43 @@
-# 04-Tester_QA.md - Plan de Pruebas y Resultados
-
-**Proyecto**: Universidad Lumina Tech
-**Responsable**: QA Team (Estudiantes 3 & 4)
-**Ciclo**: Sprint 1
+# 🧪 Tester QA - Plan de Pruebas
+**Proyecto**: Lumina Tech
+**Sprint**: 01
 
 ---
 
-## 🧪 Estrategia de Pruebas
-El objetivo es validar que las restricciones de seguridad y calidad de datos funcionan ANTES de pasar a Producción.
+## 📅 Definición de Casos de Prueba
+(Pendiente de Ejecución - Se definirá junto con las Historias de Usuario)
 
-### Test Suite 1: Seguridad (Perfiles)
-
-#### TC-SEC-01: Privacidad de Notas (Administrativo)
-*   **Pre-condición**: Existir un Examen con Nota 8.
-*   **Actor**: Usuario con perfil `Lumina_Administrativo`.
-*   **Pasos**:
-    1.  Loguear como Administrativo.
-    2.  Navegar al registro del Examen.
-    3.  Intentar editar el campo `Nota`.
-*   **Resultado Esperado**: El campo aparece como texto plano (sin lápiz de edición) o arroja error "Insufficient Privileges".
-*   **Status**: ⚪ Pending
-
-#### TC-SEC-02: Visibilidad de Alumnos (Profesor)
-*   **Pre-condición**: OWD Alumno = Private.
-*   **Actor**: Usuario con perfil `Lumina_Profesor` (Profesor A).
-*   **Pasos**:
-    1.  Loguear como Profesor A.
-    2.  Ir a tab "Alumnos".
-    3.  Seleccionar vista "All Records".
-*   **Resultado Esperado**: Solo debe ver los alumnos que están inscritos en SUS materias (o ninguno si no se corrió Sharing Rule). NO debe ver a todos los alumnos de la universidad.
-*   **Status**: ⚪ Pending
+## 📅 DIA 1 - Pruebas de Modelo de Datos
+*   **Estado**: Pendiente
+*   **Casos de Prueba**:
+    *   Verificar existencia de objetos: `Carrera`, `Materia`, `Alumno`, `Inscripción`.
+    *   Validar Schema Builder: Que las relaciones (Lookup/Master-Detail) sean correctas.
+    *   Verificar tipos de datos: Que "Legajo" sea Texto/Número según definición, que Fechas sean Date.
 
 ---
 
-### Test Suite 2: Calidad de Datos (Validaciones)
-
-#### TC-DATA-01: Rango de Notas Invalido (Superior)
-*   **Actor**: Profesor.
-*   **Pasos**:
-    1.  Crear nuevo examen.
-    2.  Ingresar Nota = `11`.
-    3.  Guardar.
-*   **Resultado Esperado**: Error en pantalla: "La nota debe ser un valor entre 0 y 10". No guarda.
-*   **Status**: ⚪ Pending
-
-#### TC-DATA-02: Rango de Notas Invalido (Negativo)
-*   **Actor**: Profesor.
-*   **Pasos**:
-    1.  Crear nuevo examen.
-    2.  Ingresar Nota = `-5`.
-    3.  Guardar.
-*   **Resultado Esperado**: Error en pantalla: "La nota debe ser un valor entre 0 y 10". No guarda.
-*   **Status**: ⚪ Pending
-
-#### TC-DATA-03: Integridad de DNI
-*   **Actor**: Admin.
-*   **Pasos**:
-    1.  Crear Alumno A con DNI "123".
-    2.  Crear Alumno B con DNI "123".
-*   **Resultado Esperado**: Error de duplicado al guardar el segundo registro.
-*   **Status**: ⚪ Pending
-
-#### TC-DATA-04: Formato de Email (Sintaxis)
-*   **Actor**: Admin/Profesor.
-*   **Pasos**:
-    1.  Intentar crear un alumno con Email = `juan,perez@gmail`.
-    2.  Intentar con Email = `usuario_sin_arroba`.
-    3.  Intentar con Email = `correcto@lumina.edu`.
-*   **Resultado Esperado**:
-    *   Casos 1 y 2: Bloqueo de guardado con mensaje "Formato inválido".
-    *   Caso 3: Guardado exitoso.
-*   **Status**: ⚪ Pending
+## 📅 DIA 2 - Pruebas de Aplicación
+*   **Estado**: Pendiente
+*   **Casos de Prueba**:
+    *   Verificar Branding: Logo y Colores de Lumina Tech visibles.
+    *   Verificar Navegación: Que las pestañas (Tabs) estén en el orden correcto.
+    *   Prueba de Acceso: Que la App sea visible para el perfil System Administrator.
 
 ---
 
-## 🐞 Reporte de Defectos (Bugs)
+## 📅 DIA 3 - Pruebas de Calidad de Datos
+*   **Estado**: Pendiente
+*   **Casos de Prueba**:
+    *   **Validaciones**: Intentar guardar emails sin `@lumina.edu` (Debe fallar). Intentar notas < 0 o > 10.
+    *   **Fórmulas**: Verificar que `Materia_Display__c` concatene bien el nombre y código.
+    *   **Integridad**: Verificar que no se puedan borrar registros "Hijos" si la relación es Master-Detail.
 
-| ID | Título | Severidad | Estado |
-|----|--------|-----------|--------|
-| BUG-001 | (Ejemplo) El mensaje de error de Nota está en inglés | Baja | Open |
+---
 
+## 📅 DIA 4 - Pruebas de Seguridad
+*   **Estado**: Pendiente
+*   **Casos de Prueba**:
+    *   **OWD**: Loguearse como Profesor A y verificar que NO ve alumnos de Profesor B (si aplica).
+    *   **Permission Sets**: Verificar que el usuario con `Permission Set Group: Lumina Admin` tenga acceso total.
+    *   **MFA**: Verificar que se pida doble factor al iniciar sesión (si está activo).
+    *   **FLS**: Verificar que un usuario estándar solo pueda LEER la nota final, no editarla.

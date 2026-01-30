@@ -1,56 +1,36 @@
-# SPRINT 1: Fundamentos Académicos y Seguridad
-
-## 📋 Ficha Técnica
-*   **Proyecto**: Universidad Lumina Tech
-*   **Sprint Goal**: Implementar el núcleo académico (Carrera-Materia-Alumno) y asegurar que las notas sean inviolables.
-*   **Estado**: 🟢 En Curso (Semana 4 - Cierre)
-*   **Total Story Points**: 13 SP
+# 07-SPRINT_1.md - Resumen Ejecutivo del Sprint
+**Estado**: ✅ Completado
+**Fechas**: 15/01/2026 - 30/01/2026
 
 ---
 
-## 📅 Sprint Backlog y Estimación
+## 🏆 Logros Principales
 
-| ID | Historia de Usuario | Story Points | Responsable | Estado |
-|----|---------------------|--------------|-------------|--------|
-| **HU-001** | Visibilidad de Profesores (Seguridad) | 3 | Admin 1 | ✅ Done |
-| **HU-002** | Restricción Edición Notas (Admin) | 3 | Admin 2 | ✅ Done |
-| **HU-003** | Historial Académico (Inscripciones) | 5 | Admin 1 | ✅ Done |
-| **HU-006** | Integridad de Notas (Validaciones) | 2 | Admin 2 | ✅ Done |
+### 1. Infraestructura Core
+Se desplegó la arquitectura base "Lumina University" sobre una Developer Edition.
+*   **Objetos**: 5 (Carrera, Materia, Alumno, Inscripcion, Examen).
+*   **Relaciones**: Modelo "Estrella" centrado en Inscripción.
 
----
+### 2. Seguridad Implementada ("Zero Trust")
+*   **Capas**:
+    *   Nivel 1: Login seguro.
+    *   Nivel 2: OWD Private para Alumnos.
+    *   Nivel 3: FLS Read-Only para notas sensibles.
 
-## 🏗️ Definition of Done (DoD)
-Para dar por cerrada una Historia de Usuario, debe cumplir:
-1.  [x] **Configuración**: Objetos y campos creados en DEV.
-2.  [x] **Seguridad**: Perfiles y OWD configurados según [02-Consultant](02-Salesforce_Consultant.md).
-3.  [x] **Documentación**: Pasos registrados en [03-Admin](03-Salesforce_Admin.md).
-4.  [x] **Testing**: TC ejecutado y aprobado en [04-QA](04-Tester_QA.md).
-5.  [ ] **Deployment**: Desplegado a PROD (Pendiente para Viernes).
+### 3. Calidad de Datos
+*   **Validaciones**: Se impide por sistema la carga de notas ilógicas (>10) y emails mal formados.
+*   **Integridad**: No existen alumnos "huérfanos" (sin carrera o sin DNI).
 
 ---
 
-## 📝 Bitácora Diaria (Daily Standups)
-
-### Daily #1 - Inicio (Lunes, Semana 2)
-*   **Equipo**: Todos presentes.
-*   **Updates**:
-    *   *BA*: Requerimientos cerrados con la Dra. Vance.
-    *   *Consultant*: Decidimos ir con Junction Object (Inscripción).
-*   **Blockers**: Ninguno.
-
-### Daily #5 - Mitad de Sprint (Viernes, Semana 2)
-*   **Admin 1**: Terminé creación de objetos Carrera y Materia. Luchando con Master-Detail en Inscripción.
-*   **Admin 2**: Configurando perfiles. Duda: ¿El preceptor es "Admin" o "Profesor"? -> *R: Admin*.
-*   **Consultant**: Ayudando a Admin 1 con el reparenting.
-
-### Daily #10 - Cierre (Miércoles, Semana 3)
-*   **QA Team**: Terminamos pruebas de seguridad. Encontramos BUG-001 (Error mensaje en inglés).
-*   **Admin 2**: Fixeando el BUG-001 ahora mismo (Traduar Custom Label).
-*   **Scrum Master**: Preparando la demo para el viernes.
+## 📉 Métricas de Ejecución
+*   **Historias de Usuario**: 11 Comprometidas / 11 Entregadas ([Ver Detalle](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)).
+*   **Bugs Críticos Post-Dev**: 1 (Visualización de datos cruzados) -> Resuelto en QA.
+*   **Coverage**: N/A (No Code Solution).
 
 ---
 
-## 📊 Retrospectiva (Pre-llenado)
-*   **Start**: Usar más herramientas de generación de data (Mockaroo) para no cargar datos a mano.
-*   **Stop**: Dejar la documentación para el viernes a última hora.
-*   **Continue**: Las reuniones de diseño técnico antes de tocar el teclado. ¡Funcionaron genial!
+## 🎓 Lecciones Aprendidas (Retrospectiva)
+*   **Keep**: El uso de Trello para visibilidad funcionó perfecto.
+*   **Improve**: Definir los nombres de campos antes de crearlos (hubo que renombrar `Duration` a `Duracion_Anios__c`).
+*   **Action Item**: Crear un "Diccionario de Datos" vivo para el Sprint 2.

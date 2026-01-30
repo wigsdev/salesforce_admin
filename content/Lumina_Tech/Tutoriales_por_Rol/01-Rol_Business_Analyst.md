@@ -63,3 +63,14 @@ Cuando el QA dice que "Pasó", tú eres el juez final.
 ## 💡 Pro-Tip para este Proyecto
 *   **En la duda, pregunta**: Usa `05-Preguntas_y_Dudas.md`.
 *   **No asumas**: Si la Rectora no dijo "Quiero foto del alumno", no pidas un campo de Foto. Mantenlo MVP.
+
+---
+
+## 📅 Estado del Rol en Sprint 1 (Reality Check)
+
+*   **Estado**: 🟢 **Activo / Finalizado**
+*   **Logros Desbloqueados**:
+    *   ✅ **Backlog Completo**: 11 Historias de Usuario redactadas y aceptadas.
+    *   ✅ **Aprobación de UI**: Branding institucional (`#005A9C`) validado con el cliente.
+    *   ✅ **Matriz de Seguridad**: Definición de perfiles Profesor vs Administrativo completada.
+*   **Referencia**: Ver lista oficial en `01-Business_Analyst.md`.

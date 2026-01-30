@@ -1,60 +1,105 @@
-# 01-Business_Analyst.md - Documento de Discovery y Análisis
-
-**Cliente**: Universidad Lumina Tech
-**Interlocutor**: Dra. Elena Vance (Rectora)
-**Fecha de Relevamiento**: 19/01/2026
-**Rol Analista**: Senior Salesforce Business Analyst
+# 🕵️ Business Analyst (BA) - Registro de Requerimientos
+**Proyecto**: Lumina Tech
+**Sprint**: 01 (Fundamentos)
 
 ---
 
-## 🕵️ 1. Matriz de Trazabilidad (Discovery Matrix)
+## 📅 DIA 0 - Relevamiento Detallado
 
-En esta sección traducimos los "dolores" literales del cliente en requerimientos funcionales formales del ecosistema Salesforce.
+### Catálogo de Requerimientos (Backlog)
+**Fuente**: [Tarea 1 - Leer juntos y conocer la Empresa](../dia_0/1_Leer_juntos_y_conocer_la_Empresa.md)
 
-### Bloque A: Seguridad y Compliance ("Nuestra Gente")
+#### 👮 Seguridad (SEC)
+*   **[REQ-SEC-001] Perfiles de Usuario**: Distinción estricta de roles (Admin, Profesor, Director).
+*   **[REQ-SEC-002] Privacidad Cruzada**: Visibilidad restringida (un profesor solo ve sus alumnos).
+*   **[REQ-SEC-003] Protección de Calificaciones**: Admin ve contactos pero NO edita notas cerradas.
 
-| Cita Textual | Dolor / Riesgo | Requerimiento Funcional | Solución Propuesta |
-|---|---|---|---|
-| *"El problema es que hoy en día todos ven todo."* | **Data Leak**: Falta de segregación de datos. | Implementar un modelo de seguridad restrictivo ("Least Privilege"). | **OWD (Organization-Wide Defaults)** configurados en `Private` para Alumnos. |
-| *"No quiero que un Profesor de Marketing vea notas de Ingeniería."* | **Privacidad**: Acceso cruzado no autorizado. | Los registros deben ser visibles solo por su propietario o equipo asignado. | **Sharing Rules** basadas en Criterios (Carrera) o Asignación Manual. |
-| *"Si un administrativo cambia una nota, tenemos un problema legal grave."* | **Legal/Compliance**: Riesgo de fraude académico y demandas. | Segregación de funciones (SoD) a nivel de campo. Auditoría de cambios. | **Field-Level Security (FLS)**: Campo `Nota` en *Read-Only* para perfil Admin. |
+#### 🏛️ Datos (DATA)
+*   **[REQ-DATA-001] Entidades Core**: Gestión de Carreras y Materias.
+*   **[REQ-DATA-002] Historial Académico**: Relación Muchos-a-Muchos (Inscripción) con soporte de historial.
 
-### Bloque B: Arquitectura de Datos ("La Estructura")
+#### 💎 Calidad (QUAL)
+*   **[REQ-QUAL-001] Validación de Contacto**: Formato de Email estricto.
+*   **[REQ-QUAL-002] Consistencia de Notas**: Rango 1.00 - 10.00.
+*   **[REQ-QUAL-003] Identidad Obligatoria**: DNI requerido para crear Alumno.
 
-| Cita Textual | Dolor / Riesgo | Requerimiento Funcional | Solución Propuesta |
-|---|---|---|---|
-| *"No quiero tener que escribir 'Juan Perez' veinte veces manuales."* | **Redundancia**: Datos duplicados e inconsistencia. | Normalización de Base de Datos. Principio "Golden Record". | Objeto Maestro `Alumno` único. Relación **Many-to-Many** con Materias. |
-| *"Un alumno cursa muchas materias."* | **Escalabilidad**: El modelo plano (Excel) no soporta la realidad. | Sistema relacional capaz de manejar historia académica. | Objeto de Unión **`Inscripcion__c`** (Junction Object). |
-
-### Bloque C: Calidad de Datos ("Calidad de Información")
-
-| Cita Textual | Dolor / Riesgo | Requerimiento Funcional | Solución Propuesta |
-|---|---|---|---|
-| *"Escribió 'gmail,com' con coma... y rebotó."* | **Operativo**: Fallo en comunicaciones críticas. | Validación de formato (Syntactic Validation) en punto de entrada. | Campo tipo **Email** (valida @ y dominio) + Regex si es necesario. |
-| *"Un profesor tipeó mal y le puso '11' o '-5'."* | **Integridad**: Corrupción de estadísticas y promedios. | Validación lógica de rango numérico (Business Logic Validation). | **Validation Rule**: `OR(Nota < 0, Nota > 10)`. |
-| *"No podemos inscribir si no tiene su DNI."* | **Legal**: Requisito mandatorio de matriculación. | Completitud de datos obligatorios. | Campo `DNI` marcado como **Required** en el Schema. |
+#### ⚙️ Funcionalidad (FUNC)
+*   **[REQ-FUNC-001] Ciclo de Exámenes**: Registro de Parciales/Finales.
+*   **[REQ-FUNC-002] Asistencia**: Registro de ausentismo en exámenes.
 
 ---
 
-## 📝 2. Definición de Perfiles (Roles)
+## 📅 DIA 1 - Modelo de Datos Detallado
+**Fuente**: [Tarea 5 - Crear HU en TRELLO](../dia_1/5_Crear_las_HU_en_TRELLO.md)
 
-Basado en la entrevista, identificamos los siguientes actores del sistema:
+### Backlog de Historias de Usuario (Sprint 1)
+Desglose técnico de los requerimientos anteriores.
 
-1.  **Rectora / Directores** (Stakeholders): Necesitan reportes y visión general. (Posible rol: `Read Only` o `Executive Dashboard`).
-2.  **Equipo de Administración** (Operativos): Inscriben y cobran. (Rol: `Lumina_Administrativo`).
-    *   *Permisos*: CRUD en Alumnos, Create en Inscripciones, **READ ONLY en Notas**.
-3.  **Profesores** (Docentes): Dictan y evalúan. (Rol: `Lumina_Profesor`).
-    *   *Permisos*: READ en Alumnos (Propios), **EDIT en Notas**.
+| ID | Título | Traza a | Criterios de Aceptación Clave |
+| :--- | :--- | :--- | :--- |
+| **HU-001** | Gestión de Inscripciones | [REQ-DATA-002] | Objeto `Inscripción` (M:N). Tab visible solo para Directores. |
+| **HU-002** | Unicidad de Alumnos | [REQ-QUAL-003] | Campo `DNI` (Unique, External ID). |
+| **HU-003** | Integridad de Notas | [REQ-QUAL-002] | Campo `Nota__c` (2,2) y Validation Rule `0-10`. |
 
 ---
 
-## 🎯 3. Objetivo del MVP (Sprint 1)
-*"Construir la base (...) para arrancar el primer cuatrimestre ordenados."*
+## 📅 DIA 2 - Identidad e Interfaz
+**Fuente**: [Tarea 5 - Crear HU en TRELLO (Día 2)](../dia_2/5_Crear_las_HU_en_TRELLO.md)
 
-El entregable mínimo viable debe permitir:
-1.  Dar de alta un Alumno (con validación de DNI/Email).
-2.  Inscribirlo en una Materia (`Inscripcion__c`).
-3.  Que el Profesor le cargue una nota de examen (`Examen__c`).
-4.  Que el Administrativo **NO** pueda cambiar esa nota.
+### User Stories (Visual & Branding)
 
+### User Stories (Visual & Branding) - Día 2
 
+#### 🏷️ [HU-004] Dominio Seguro (My Domain)
+*   **Enlace Req**: [REQ-SEC]
+*   **Criterios de Aceptación**:
+    - [x] La URL de la organización contiene `lumina-university`.
+    - [x] La pantalla de inicio de sesión muestra el branding correcto de la universidad.
+
+#### 🏷️ [HU-005] Identidad Institucional
+*   **Enlace Req**: [REQ-BRAND]
+*   **Criterios de Aceptación**:
+    - [x] El encabezado global se muestra en color azul corporativo (`#005A9C`).
+    - [x] El isologo de Lumina Tech es visible en la barra de navegación.
+    - [x] El fondo de las páginas es gris claro (`#F4F6F9`) para descanso visual.
+
+#### 🏷️ [HU-006] App de Gestión Central
+*   **Enlace Req**: [REQ-FUNC]
+*   **Criterios de Aceptación**:
+    - [x] Existe una aplicación Lightning llamada "Gestión Académica Lumina" y es accesible.
+    - [x] La barra de navegación incluye acceso directo a Alumnos, Materias, etc.
+
+### User Stories (Optimización y Calidad) - Día 3
+
+#### 🏷️ [HU-007] Validación de Contactos (Email)
+*   **Enlace Req**: [REQ-QUAL-001]
+*   **Criterios de Aceptación**:
+    - [x] El campo Email usa Regex.
+    - [x] Rechaza `juan.perez` (sin arroba).
+    - [x] Rechaza `juan@gmail.com` (requiere `.edu`).
+
+#### 🏷️ [HU-008] Integridad de Calificaciones
+*   **Enlace Req**: [REQ-QUAL-002]
+*   **Criterios de Aceptación**:
+    - [x] **Validation**: Ingresar `0` o `10` es válido.
+    - [x] **Error**: Ingresar `10.5` o `-1` muestra el error: *"La nota debe estar entre 0 y 10"*.
+
+### User Stories (Seguridad y Accesos) - Día 4
+
+#### 🏷️ [HU-009] Matriz de Visibilidad
+*   **Enlace Req**: [REQ-SEC-002]
+*   **Criterios de Aceptación**:
+    - [x] **OWD**: Alumno configurado como `Private`.
+    - [x] **Negative Test**: Profesor NO ve alumnos de otras materias.
+
+#### 🏷️ [HU-010] Acceso Seguro (MFA)
+*   **Enlace Req**: [REQ-SEC-001]
+*   **Criterios de Aceptación**:
+    - [x] MFA activado vía Permission Set.
+    - [x] Login requiere Authenticator App.
+
+#### 🏷️ [HU-011] Segregación de Funciones
+*   **Enlace Req**: [REQ-SEC-003]
+*   **Criterios de Aceptación**:
+    - [x] **Bedelía**: FLS Read-Only en `Nota__c`.
+    - [x] **Profesor**: Puede editar Nota.

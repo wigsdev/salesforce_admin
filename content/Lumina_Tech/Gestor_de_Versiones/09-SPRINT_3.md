@@ -1,11 +1,7 @@
-# SPRINT 3: Automatización y Cierre
-
-*(Plantilla para el sprint final)*
-
-## 📋 Objetivos
-- Flows complejos de automatización.
-- Integración con Email Marketing.
-- Preparación para Go-Live.
+# 🏃 SPRINT 3: Automatización y Calidad
+**Estado**: Pending
 
 ---
-*(Se llenará al finalizar Sprint 2)*
+
+## 📅 Objetivo
+Implementar reglas de validación complejas y flujos automáticos.

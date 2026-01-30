@@ -1,75 +1,81 @@
-# 02-Salesforce_Consultant.md - Especificación de Arquitectura Técnica
-
-**Proyecto**: Universidad Lumina Tech
-**Rol**: Salesforce Solutions Architect
-**Validación**: Basado en Entrevista Rectora Vance (19/01/2026)
+# 🏗️ Consultant - Arquitectura y Solución
+**Proyecto**: Lumina Tech
+**Sprint**: 01 (Fundamentos)
 
 ---
 
-## 🏗️ 1. Modelo de Datos Entidad-Relación (ERD)
+## 📅 DIA 0 - Estrategia de Arquitectura
 
-La solución responde al requerimiento de "Estructura Académica" mediante un modelo relacional normalizado.
+### Decisiones de Diseño (ADR)
+**Fuente**: [Tarea 3 - Generar preguntas](../dia_0/3_Generar_preguntas_en_el_documento_para_evacuar_dudas.md)
 
-```mermaid
-erDiagram
-    ALUMNO ||--|{ INSCRIPCION : "tiene historia académica en"
-    MATERIA ||--|{ INSCRIPCION : "recibe alumnos mediante"
-    INSCRIPCION ||--|{ EXAMEN : "registra notas en"
-    
-    ALUMNO {
-        string DNI PK "Mandatory (Legal)"
-        string Email "Validated Format"
-        string Nombre "Normalized"
-    }
-    INSCRIPCION {
-        lookup Alumno FK
-        lookup Materia FK
-        string Ciclo_Lectivo "Temporality"
-        picklist Estado "Cursando/Aprobado"
-    }
-    EXAMEN {
-        master_detail Inscripcion FK
-        number Nota "Validation 0-10"
-        date Fecha "Auditability"
-    }
-```
+1.  **ADR-001: Duplicación de Materias para MVP**
+    *   *Contexto*: Compartir registros de "Materia" complicaría las Sharing Rules Private.
+    *   *Decisión*: Crear registros separados `Matemática 1 - ING` y `Matemática 1 - ADM`.
+    *   *Justificación*: Simplifica la seguridad (OWD Private) en la fase 1.
+
+2.  **ADR-002: Modelo de Inscripción (Junction)**
+    *   *Contexto*: Necesidad de historial de recursantes y notas.
+    *   *Decisión*: Objeto personalizado `Inscripción` que une Alumno + Materia + Ciclo.
+
+3.  **ADR-003: Calidad de Datos en Origen**
+    *   *Decisión*: Uso de tipos de datos estrictos (Auto-Number, Number(2,2)) y reglas de validación.
 
 ---
 
-## 🧠 2. Decisiones Arquitectónicas (ADR)
+## 📅 DIA 1 - Diseño Técnico (ERD)
+**Estado**: ✅ Definido y Validado.
 
-### ADR-01: Arquitectura de "Inscripción" (Junction Object)
-*   **Dolor Cliente**: *"No quiero escribir 'Juan Perez' veinte veces manuales."*
-*   **Problema Técnico**: Redundancia de datos y falta de integridad referencial.
-*   **Decisión**: Implementar `Inscripcion__c` como entidad puente con doble Master-Detail.
-*   **Beneficio Directo**: El alumno se crea **una sola vez**. La inscripción solo referencia su ID. Si Juan Perez cambia de email, se actualiza en el maestro y se refleja en todas sus materias históricas y actuales.
+### Diagrama de Relación de Entidades
+Este esquema responde a **[REQ-DATA-002] Historial Académico**.
 
-### ADR-02: Estrategia de Seguridad "Zero Trust" (FLS)
-*   **Dolor Cliente**: *"Si un administrativo cambia una nota, tenemos un problema legal grave."*
-*   **Problema Técnico**: Los perfiles administrativos suelen tener privilegios elevados ("Modify All") por defecto en implementaciones rápidas.
-*   **Decisión**: Implementar **Field-Level Security (FLS)** estricto en el campo `Examen__c.Nota__c`.
-*   **Configuración**:
-    *   `Profile: Lumina_Administrativo` -> Read Access: ✅ | Edit Access: ❌
-*   **Justificación**: Esta capa de seguridad es inviolable por UI. Aunque el administrativo intente editar el registro, el campo de nota estará bloqueado a nivel de API y Base de Datos.
+> **[Ver Diagrama Visual Renderizado (Mermaid)](../../dia_1/2_Relacion_entre_Objetos.md)**
 
-### ADR-03: Integridad de Datos en Origen
-*   **Dolor Cliente**: *"Errores de dedo... notas de 11 o -5... emails con coma."*
-*   **Problema Técnico**: "Garbage In, Garbage Out". El costo de limpiar datos es 10x más alto que prevenir el error.
-*   **Decisión**:
-    1.  **Validación Sintáctica**: Uso de tipo de campo `Email` estándar (RFC compliant).
-    2.  **Validación Semántica**: `Validation Rule` en Examen: `Nota < 1 || Nota > 10`.
-*   **Impacto**: El sistema rechaza la transacción (Atomicidad). No se guardan registros corruptos.
+### Especificación de Relaciones
+1.  **Inscripción (Junction Object)**:
+    *   Actúa como tabla puente para manejar la relación **M:N** entre Alumnos y Materias.
+    *   *Configuración*: Master-Detail (x2). Si eliminas al Alumno, se borra su historial.
+
+2.  **Jerarquía de Carrera**:
+    *   `Materia` tiene una relación Lookup hacia `Carrera`.
+    *   *Nota*: Permite flexibilidad si una materia cambia de plan de estudios (Loosely coupled).
+
+3.  **Evaluación Continua**:
+    *   `Examen` es hijo (Child) de `Inscripción`.
+    *   *Propósito*: Permite calcular promedios directamente en la inscripción usando Roll-Up Summaries.
 
 ---
 
-## ⚙️ 3. Especificaciones de Implementación
+## 📅 DIA 2 - Identidad Visual y App
+**Fuente**: [Identidad_Colores.md](../../Identidad_Colores.md)
 
-### Objetos (Schema)
-1.  **Alumno (`Alumno__c`)**:
-    *   `DNI__c`: Text(15) + Unique + Required. (Responde a: *"Dato obligatorio legal"*).
-2.  **Examen (`Examen__c`)**:
-    *   `Ausente__c`: Checkbox. (Responde a: *"Si el alumno falta, necesito que quede constancia"*).
+### Estrategia de Branding
+Para evitar la apariencia "genérica" de Salesforce y fomentar la adopción de los docentes:
 
-### Seguridad
-*   **OWD**: `Alumno` = Private. (Responde a: *"Cada profesor debe ver solo a sus alumnos"*).
+*   **Paleta Académica**:
+    *   `#005A9C` (Lumina Blue): Confianza. Usado en Headers.
+    *   `#F2A900` (Tech Gold): Excelencia. Usado en Acentos.
+    *   `#F4F6F9` (Soft Grey): Usabilidad. Fondo para reducir fatiga visual.
+*   **Logo**: Isotipo de libro abierto con haces de luz (conocimiento).
 
+---
+
+## 📅 DIA 3 - Consistencia de Datos
+**Fuente**: [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
+
+### Estrategia de Calidad
+1.  **Validación en Capa de Datos**: Reglas de validación (VR) implementadas para Email y Notas.
+2.  **Denormalización Visual**: Uso de Formula Fields (`Materia_Display__c`) para mejorar reportes sin código.
+
+---
+
+## 📅 DIA 4 - Arquitectura de Seguridad
+**Fuente**: [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
+
+### Modelo de Seguridad (Layered Security)
+1.  **OWD (Organization-Wide Defaults)**: `Private` para Alumno. (Base restrictiva).
+2.  **Permission Set Groups vs Profiles**:
+    *   **Decisión**: Usar "Minimum Access - Salesforce" como perfil base y sumar capacidades vía PSG.
+    *   *Beneficio*: Mayor flexibilidad y menor deuda técnica.
+3.  **FLS (Field Level Security)**:
+    *   Protección a nivel atributo. `Nota__c` es Read-Only para administrativos.

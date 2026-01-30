@@ -1,56 +1,43 @@
-# 05-Preguntas_y_Dudas.md - Log de Comunicación con Cliente
-
-**Interlocutor**: Dra. Elena Vance (Rectora)
-**Estado**: 🟢 Dudas Críticas Resueltas
-
----
-
-## ❓ Historial de Consultas - Sprint 1
-
-### Bloque 1: Estructura de Cursada
-**Fecha**: 20 Enero 2026
-
-*   **P1: ¿Una misma materia se dicta en varias carreras?**
-    *   *Contexto*: "Matemática 1" en Ingeniería vs Administración.
-    *   *R (Dra. Vance)*: "Sí, es el mismo contenido y el mismo profesor."
-    *   *Impacto*: `Materia__c` no debería ser hijo exclusivo de `Carrera__c`. Pero para Sprint 1 (MVP), asumiremos que se crean duplicadas ("Matemática Ing", "Matemática Adm") para simplificar la seguridad.
-
-*   **P2: ¿Qué pasa si un alumno recursa?**
-    *   *Contexto*: ¿Se sobrescribe la inscripción vieja?
-    *   *R (Dra. Vance)*: "No, necesito ver el historial. Que cursó en 2025 y quedó libre, y volvió a cursar en 2026."
-    *   *Impacto*: El ID de la inscripción es el `Ciclo_Lectivo`. Un alumno puede tener N inscripciones a la misma materia si son ciclos distintos.
+# 05-Preguntas_y_Dudas.md - Bitácora de Consultoría
+**Rol**: Business Analyst / Consultant
+**Estado**: 🟢 Resuelto
 
 ---
 
-### Bloque 2: Calificaciones
-**Fecha**: 21 Enero 2026
+## ❓ Sesión 1: Entendimiento del Negocio (Kick-off)
+**Fecha**: 15/01/2026
+**Interlocutor**: Dra. Vance (Rectora)
 
-*   **P3: ¿Las notas son números enteros o decimales?**
-    *   *Contexto*: Configuración del campo Number.
-    *   *R*: "Dos decimales. Ejemplo: 7.50, 6.33."
-    *   *Acción*: Campo `Number(2, 2)`.
+### Q1: Estructura de Cursada
+*   **Pregunta**: *¿Un alumno puede cursar la misma materia más de una vez? (Recursantes)*
+*   **Respuesta Cliente**: *"Sí, lamentablemente muchos recursan. Necesito ver el historial completo, no solo la última nota."*
+*   **Impacto Técnica**: Descarta relación Directa (Lookup). Confirma necesidad de **Junction Object** (`Inscripcion__c`) para manejar múltiples registros por par Alumno-Materia.
 
-*   **P4: ¿Cuál es la nota mínima de aprobación?**
-    *   *Contexto*: Para flujos automáticos.
-    *   *R*: "Se aprueba con 4 (cuatro). Menos de eso es desaprobado."
-    *   *Acción*: Validation Rule / Formula Field `Estado_Aprobacion`.
-
----
-
-### Bloque 3: Datos de Personas
-**Fecha**: 22 Enero 2026
-
-*   **P5: ¿El Legajo lo generan ustedes o Salesforce?**
-    *   *Contexto*: Campo Auto-Number vs Text.
-    *   *R*: "Que el sistema genere uno nuevo. Formato `L-0000`."
-    *   *Acción*: Auto-Number field.
-
-*   **P6: ¿Email Personal o Institucional?**
-    *   *R*: "Por ahora usen el personal (Gmail/Hotmail), no tenemos dominio educativo implementado para alumnos aún."
-    *   *Acción*: No restringir dominio en la validación de Email, solo formato.
+### Q2: Seguridad de Calificaciones
+*   **Pregunta**: *Usted mencionó "problemas legales". ¿Se refiere a acceso externo o interno?*
+*   **Respuesta Cliente**: *"Interno. Tuvimos un caso de un administrativo que 'vendía' notas. Necesito que solo los profesores puedan poner la nota final."*
+*   **Impacto Técnica**: Requiere **Field-Level Security (FLS)**. El perfil `Admin` debe tener Read-Only en `Nota__c`.
 
 ---
 
-## ⏳ Dudas Pendientes (Sprint 2)
-1.  ¿Necesitan portal de autogestión para que los alumnos se anoten solos? (Autoservicio).
-2.  ¿Cómo manejamos las inasistencias? ¿Diarias o por porcentaje?
+## ❓ Sesión 2: Definiciones de Datos
+**Fecha**: 20/01/2026
+**Interlocutor**: Director de Carreras
+
+### Q3: Identificación de Alumnos
+*   **Pregunta**: *¿Usamos DNI o generamos un Legajo interno?*
+*   **Respuesta Cliente**: *"El DNI es obligatorio por ley, pero el Legajo es lo que usamos en el día a día."*
+*   **Impacto Técnica**:
+    *   `DNI__c`: Campo Texto (Unique, External ID).
+    *   `Name` (del objeto Alumno): Auto-Number formato `A-{00000}` (Legajo).
+
+### Q4: Escala de Notas
+*   **Pregunta**: *¿Usan decimales? ¿0 a 10 o 1 a 100?*
+*   **Respuesta Cliente**: *"0 a 10, con dos decimales. Se aprueba con 4."*
+*   **Impacto Técnica**: Campo `Number(2, 2)`. Validation Rule para rango `0.00 - 10.00`.
+
+---
+
+## 📝 Dudas Pendientes (Parking Lot)
+1.  ¿Necesitamos migrar datos históricos de Excel? (Sprint 2).
+2.  ¿Se integrará con algún sistema contable para las cuotas? (Sprint 3).
