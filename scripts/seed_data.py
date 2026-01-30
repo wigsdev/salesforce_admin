@@ -54,16 +54,16 @@ def parse_lumina_checklist():
             # Match Source Link (Usually right after day header)
             source_match = source_pattern.search(line)
             if source_match and current_day:
-                 raw_label = source_match.group(1).replace("[", "").replace("]", "")
-                 raw_path = source_match.group(2)
-                 
-                 # Clean up path (remove ../../)
-                 clean_path = raw_path.replace("../../", "").replace("../", "")
-                 
-                 current_day["source_label"] = f"Fuente: {raw_label}"
-                 current_day["source_link"] = clean_path
-                 continue
-            
+                raw_label = source_match.group(1).replace("[", "").replace("]", "")
+                raw_path = source_match.group(2)
+
+                # Clean up path (remove ../../)
+                clean_path = raw_path.replace("../../", "").replace("../", "")
+
+                current_day["source_label"] = f"Fuente: {raw_label}"
+                current_day["source_link"] = clean_path
+                continue
+
             # Match Task Title
             task_match = task_pattern.match(line)
             if task_match and current_day:
@@ -122,9 +122,9 @@ def seed_data():
                 print(f"Creating Day: {day_data['title']}")
                 day = LuminaDeliverable(
                     title=day_data["title"],
-                    reference="", # Cleared per user request
+                    reference="",  # Cleared per user request
                     source_link=day_data.get("source_link"),
-                    source_label=day_data.get("source_label"), # Add source label
+                    source_label=day_data.get("source_label"),  # Add source label
                 )
                 db.add(day)
                 db.commit()
