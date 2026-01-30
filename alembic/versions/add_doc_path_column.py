@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 # revision identifiers, used by Alembic.
 revision = "add_doc_path_column"
-down_revision = "20260128_cleanup_lumina"
+down_revision = "20260128_cleanup"
 branch_labels = None
 depends_on = None
 
