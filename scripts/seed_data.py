@@ -336,9 +336,7 @@ def seed_data():
                 doc_path = task_info["path"]
 
                 # FILTER: Skip administrative/Trello tasks
-                if description.startswith("Mover a") or description.startswith(
-                    "Registrar en el Doc"
-                ):
+                if description.startswith("Mover a"):
                     continue
 
                 print(f"  + Task: {description}")
