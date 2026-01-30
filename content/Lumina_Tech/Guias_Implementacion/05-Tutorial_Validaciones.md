@@ -1,7 +1,9 @@
-# 🎓 Guía Paso a Paso: Reglas de Validación (Business Logic)
-**Nivel**: Intermedio
-**Tiempo Estimado**: 20 minutos
-**Requisito**: Haber creado objetos Alumno e Inscripción.
+# 🎓 Guía Técnica: Reglas de Validación (Business Logic)
+
+**Sprint**: 01 (Fundamentos)
+**Día**: 3 (Calidad de Datos)
+**Rol Responsable**: 🛡️ **Salesforce Admin**
+**HUs Relacionadas**: HU-005 (Email), HU-006 (Rango Notas)
 
 ---
 

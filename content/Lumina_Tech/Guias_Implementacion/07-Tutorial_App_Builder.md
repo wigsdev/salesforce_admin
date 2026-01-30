@@ -1,7 +1,9 @@
-# 🎓 Guía Paso a Paso: Construcción de la App (Branding)
-**Nivel**: Intermedio (Creativo)
-**Tiempo Estimado**: 15 minutos
-**Requisito**: Haber definido la Identidad Visual.
+# 🎓 Guía Técnica: Lightning App (Branding & Navigation)
+
+**Sprint**: 01 (Fundamentos)
+**Día**: 2 (App Building)
+**Rol Responsable**: 🛡️ **Salesforce Admin**
+**HUs Relacionadas**: HU-General (Req. Implementación)
 
 ---
 

@@ -1,7 +1,9 @@
-# 🎓 Guía Paso a Paso: Creación de Objeto Carrera
-**Nivel**: Principiante
-**Tiempo Estimado**: 10 minutos
-**Rol**: Salesforce Admin
+# 🎓 Guía Técnica: Objeto Carrera (Master Data)
+
+**Sprint**: 01 (Fundamentos)
+**Día**: 1 (Modelado de Datos)
+**Rol Responsable**: 🛡️ **Salesforce Admin**
+**HUs Relacionadas**: HU-003 (Soporte a Estructura)
 
 ---
 

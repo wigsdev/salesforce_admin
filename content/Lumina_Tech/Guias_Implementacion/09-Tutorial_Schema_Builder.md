@@ -1,7 +1,11 @@
-# 🎓 Guía Paso a Paso: Schema Builder (El Mapa Visual)
-**Nivel**: Intermedio
-**Tiempo Estimado**: 10 minutos
-**Objetivo**: Ver "cómo se conectan las tablas" visualmente (ERD).
+# 🎓 Guía Técnica: Visualización (Schema Builder)
+
+**Sprint**: 01 (Fundamentos)
+**Día**: 1 (Modelado - Revisión)
+**Rol Responsable**: 🏗️ **Salesforce Consultant**
+**HUs Relacionadas**: HU-003, HU-004
+
+---vo**: Ver "cómo se conectan las tablas" visualmente (ERD).
 
 ---
 

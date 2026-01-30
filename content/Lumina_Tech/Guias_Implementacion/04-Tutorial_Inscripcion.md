@@ -1,7 +1,9 @@
-# 🎓 Guía Paso a Paso: Creación de Junction Object (Inscripción)
-**Nivel**: Avanzado
-**Tiempo Estimado**: 20 minutos
-**Requisito**: Tener creados Alumno y Materia.
+# 🎓 Guía Técnica: Objeto Inscripción (Junction)
+
+**Sprint**: 01 (Fundamentos)
+**Día**: 1 (Modelado de Datos)
+**Rol Responsable**: 🛡️ **Salesforce Admin**
+**HUs Relacionadas**: HU-003 (Historial Académico)
 
 ---
 

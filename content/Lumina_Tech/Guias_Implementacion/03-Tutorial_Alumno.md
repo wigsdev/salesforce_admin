@@ -1,7 +1,9 @@
-# 🎓 Guía Paso a Paso: Creación de Objeto Alumno
-**Nivel**: Intermedio
-**Tiempo Estimado**: 15 minutos
-**Focus**: Calidad de Datos
+# 🎓 Guía Técnica: Objeto Alumno (Persona)
+
+**Sprint**: 01 (Fundamentos)
+**Día**: 1 (Modelado de Datos)
+**Rol Responsable**: 🛡️ **Salesforce Admin**
+**HUs Relacionadas**: HU-001 (Privacidad Base), HU-007 (Identidad)
 
 ---
 

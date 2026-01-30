@@ -1,7 +1,9 @@
-# 🎓 Guía Paso a Paso: Creación de Objeto Materia
-**Nivel**: Intermedio
-**Tiempo Estimado**: 15 minutos
-**Requisito**: Haber creado objeto Carrera.
+# 🎓 Guía Técnica: Objeto Materia (Catálogo)
+
+**Sprint**: 01 (Fundamentos)
+**Día**: 1 (Modelado de Datos)
+**Rol Responsable**: 🛡️ **Salesforce Admin**
+**HUs Relacionadas**: HU-003 (Curricular)
 
 ---
 

@@ -1,7 +1,9 @@
-# 🎓 Guía Paso a Paso: Campos de Fórmula (Automation)
-**Nivel**: Básico-Intermedio
-**Tiempo Estimado**: 15 minutos
-**Requisito**: Haber creado objetos Alumno e Inscripción.
+# 🎓 Guía Técnica: Campos Fórmula (Automation Lite)
+
+**Sprint**: 01 (Fundamentos)
+**Día**: 3 (Automatización)
+**Rol Responsable**: 🛡️ **Salesforce Admin**
+**HUs Relacionadas**: HU-003 ( UX Upgrade)
 
 ---
 

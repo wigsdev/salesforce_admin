@@ -1,7 +1,9 @@
-# 🎓 Guía Paso a Paso: Seguridad y Accesos (The Vault)
-**Nivel**: Avanzado
-**Tiempo Estimado**: 25 minutos
-**Rol**: Security Admin
+# 🎓 Guía Técnica: Seguridad Avanzada (Permissions)
+
+**Sprint**: 01 (Fundamentos)
+**Día**: 4 (Seguridad)
+**Rol Responsable**: 🛡️ **Salesforce Admin**
+**HUs Relacionadas**: HU-009 (Visibilidad), HU-010 (MFA), HU-011 (FLS)
 
 ---
 

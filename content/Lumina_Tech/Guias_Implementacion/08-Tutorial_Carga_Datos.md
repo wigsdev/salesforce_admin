@@ -1,7 +1,9 @@
-# 🎓 Guía Paso a Paso: Carga Masiva de Datos (Data Loading)
-**Nivel**: Intermedio
-**Tiempo Estimado**: 30 minutos
-**Herramienta**: Data Import Wizard (Asistente de Importación)
+# 🎓 Guía Técnica: Carga de Datos (Data Loader)
+
+**Sprint**: 01 (Fundamentos)
+**Día**: 0/1 (Preparación)
+**Rol Responsable**: ♾️ **DevOps Specialist**
+**HUs Relacionadas**: HU-General (Carga Inicial)
 
 ---
 
