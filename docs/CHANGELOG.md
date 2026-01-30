@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.32.0] - 2026-01-30
+
+### Added
+- **Deployment Resilience**: Atomic Transactions implemented in `seed_data.py`. Deployment failures now trigger an automatic rollback, preventing database corruption (Zero-Downtime safety).
+- **Data Persistence**: "Smart Sync" logic. Seeding now updates existing records instead of wiping them, ensuring user checklist progress (`is_completed`) is preserved across new deployments.
+- **Documentation**: Formatted Superbadge guides (`GUIA_SB_SOLUCION.md`, `ENUNCIADO ORIGINAL.md`) with clean Markdown structure while preserving original text.
+- **Project Structure**: Consolidated documentation and aligned `TASK_LIST_MVP.md` with internal development status.
+
+### Fixed
+- **Seeding Error**: Resolved `UniqueViolation` caused by duplicate empty reference keys in `LuminaDeliverable` during deployment.
+
 ## [0.31.0] - 2026-01-19
 ### Added
 - **Mobile First UX**:
