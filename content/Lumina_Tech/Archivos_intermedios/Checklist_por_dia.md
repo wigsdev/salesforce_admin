@@ -23,20 +23,25 @@
 
 ---
 
-## 📅 Día 1: CREAR HU-MODELO DE DATOS
+## 📅 Día 1: HU - Modelo de Datos
 **Fuente**: [Practica_Clase_8.md](../../curriculum/sprint_01/semana_03/17-Practica_Clase_8.md)
 
 ### Lista de Tareas
 1.  **Creación de objetos Custom - Standard**.
     *   *Rol*: 🛡️ **Salesforce Admin**.
+    *   *Detalle*: [Ver Tarea](dia_1/1_Creacion_de_objetos_Custom_Standard.md)
 2.  **Relación entre Objetos**.
     *   *Rol*: 🏗️ **Salesforce Consultant** (Diseño), 🛡️ **Salesforce Admin** (Config).
+    *   *Detalle*: [Ver Tarea](dia_1/2_Relacion_entre_Objetos.md)
 3.  **Campos personalizados**.
     *   *Rol*: 🛡️ **Salesforce Admin**.
+    *   *Detalle*: [Ver Tarea](dia_1/3_Campos_personalizados.md)
 4.  **Registrar en el Doc: gestor de versiones**.
     *   *Rol*: 🚀 **Release Manager**.
+    *   *Detalle*: [Ver Tarea](dia_1/4_Registrar_en_el_Doc_gestor_de_versiones.md)
 5.  **Crear las HU en TRELLO**.
     *   *Rol*: 👑 **Product Owner**, 🕵️ **Business Analyst**.
+    *   *Detalle*: [Ver Tarea](dia_1/5_Crear_las_HU_en_TRELLO.md)
 
 #### 🚀 Fase de Ejecución (Flujo Trello)
 6.  **Mover a "En Progreso" y Construir en DEV**.
