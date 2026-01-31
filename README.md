@@ -106,15 +106,24 @@ Visita `http://localhost:8000` para ver el Dashboard.
 
 ## 🗺️ Roadmap & Progreso
 
-Estamos en la fase de **MVP (v0.30.0)**.
+Estamos en la fase de **Mantenimiento y Evolución (v0.32.0)**.
 
 - [x] **Fase 1**: Infraestructura Backend ✅
 - [x] **Fase 2**: Autenticación y Usuarios ✅
 - [x] **Fase 3**: Motor de Documentación ✅
 - [x] **Fase 4**: Dashboard Interactivo "Lumina" ✅
-- [ ] **Fase 5**: Integración con Salesforce (Futuro) ⏳
+- [x] **Fase 7**: Mantenimiento & DevOps (Backups, Sentry) ✅
 
-> Consulta [docs/ROADMAP.md](docs/ROADMAP.md) para más detalles.
+---
+
+## 📚 Documentación Técnica y Estratégica
+
+Hemos profesionalizado el proyecto con guías especializadas:
+
+*   📘 **[Manual de Mantenimiento](docs/MAINTENANCE_GUIDE.md)**: Protocolos de actualización, backups y respuesta a incidentes.
+*   🏛️ **[Arquitectura & Stack](docs/ARCHITECTURE_STACK.md)**: Análisis del stack tecnológico y estrategia de migración futura.
+*   🚀 **[Manual de Mejoras Futuras](docs/FUTURE_IMPROVEMENTS.md)**: Vision del Product Manager para la v1.0 (Admin Panel, Gamification).
+*   🛡️ **[SDLC & Roles](docs/SDLC.md)**: Marco de trabajo y ciclo de vida del software.
 
 ---
 
