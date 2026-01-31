@@ -73,3 +73,8 @@ dist/
 
 # Compiled CSS (generated from input.css)
 app/static/css/main.css
+
+# Backups
+backups/
+*.sql
+*.dump
