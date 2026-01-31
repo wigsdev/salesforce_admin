@@ -1,120 +1,103 @@
-# 🦅 manual Maestro de Ejecución: Proyecto Lumina Tech
+# 🦅 MANUAL MAESTRO DE EJECUCIÓN INTEGRAL: Proyecto Lumina Tech
 
 **Rol**: Project Manager & Scrum Master  
 **Proyecto**: Implementación Salesforce - Universidad Lumina Tech  
-**Versión**: 2.0 (Autónoma)
+**Versión**: 3.0 (Ciclo Completo: Planning + Dev + Deploy)
 
 ---
 
-## 🎯 ¿Cómo usar este Manual?
-
-Bienvenido al equipo. Este documento es tu **hoja de ruta**. No necesitas preguntar "¿qué hago ahora?"; este archivo te lo dice paso a paso.
-
-### 1. Identifica tu Rol 🎭
-Antes de empezar, busca qué sombrero llevas puesto hoy:
-
-*   **🕵️ Business Analyst (BA)**: Lees requisitos, traduces necesidades a historias de usuario.
-*   **🛡️ Salesforce Admin**: Configuras la plataforma (Objetos, Campos, Flows). Metes las manos en la masa.
-*   **🏗️ Salesforce Consultant/Architect**: Diseñas la solución. Decides "¿Cómo se conecta esto con aquello?".
-*   **🚀 Release Manager**: Controlas el Gestor de Versiones. Decides cuándo se pasa a la siguiente etapa.
-*   **👑 Product Owner (PO)**: Apruebas el trabajo final. La voz del cliente.
-
-### 2. El Flujo de Trabajo (The Flow) 🌊
-Para cada día del Sprint:
-1.  Ve a la sección correspondiente (ej. **Día 1**).
-2.  Busca las tareas marcadas con tu **Icono de Rol**.
-3.  Haz clic en el enlace `[Ver Tarea]` para ver el paso a paso detallado.
-4.  Ejecuta la tarea en tu Salesforce Dev Org.
-5.  Actualiza el estado en Trello/Jira.
+## 🎯 Objetivo
+Este manual es la "Biblia" del equipo. Cubre desde que te unes al proyecto hasta que entregas la funcionalidad terminada en producción.
 
 ---
 
-## 📅 Día 0: Análisis y Conocimiento
-**Objetivo**: Entender el negocio y preparar el terreno.
+## 📚 FASE 0: Tu Armería (Recursos Obligatorios)
+*Antes de mover un dedo, equípate.*
 
-1.  **Leer juntos y conocer la Empresa**.
-    *   *Responsables*: 🕵️ BA, 👑 PO.
-    *   *Acción*: [Leer Documento de Inicio](dia_0/1_Leer_juntos_y_conocer_la_Empresa.md)
-2.  **Definir Roles del Equipo**.
-    *   *Responsables*: 🤝 Team Lead.
-    *   *Acción*: [Asignar responsabilidades](dia_0/2_Definir_Roles.md)
-3.  **Generar preguntas (Q&A)**.
-    *   *Responsables*: 🕵️ BA, 🏗️ Consultant.
-    *   *Acción*: [Crear cuestionario para el cliente](dia_0/3_Generar_preguntas_en_el_documento_para_evacuar_dudas.md)
-4.  **Inicializar Gestor de Versiones**.
-    *   *Responsables*: 🚀 Release Manager.
-    *   *Acción*: [Crear documento de control](dia_0/4_Registrar_en_el_Doc_gestor_de_versiones.md)
+### 1. Conoce tu Rol (Tutoriales Personales)
+No intentes hacer todo. Lee tu guía específica para saber qué se espera de ti:
+*   📂 [Tutoriales por Rol](Tutoriales_por_Rol/)
+    *   🛡️ **Admin**: [Leer Guía](Tutoriales_por_Rol/05-Rol_Salesforce_Admin.md)
+    *   🕵️ **BA**: [Leer Guía](Tutoriales_por_Rol/01-Rol_Business_Analyst.md)
+    *   🧪 **QA**: [Leer Guía](Tutoriales_por_Rol/03-Rol_QA_Tester.md)
+    *   *(Busca el tuyo en la carpeta)*
 
----
-
-## 📅 Día 1: El Corazón del Sistema (Modelo de Datos)
-**Objetivo**: Crear la estructura base donde vivirán los datos.
-
-1.  **Creación de Objetos (Custom & Standard)**.
-    *   *Responsables*: 🛡️ Admin.
-    *   *Tarea*: Crear objetos `Carrera`, `Materia`, `Alumno`.
-    *   *Guía*: [Ver Paso a Paso](dia_1/1_Creacion_de_objetos_Custom_Standard.md)
-2.  **Definir Relaciones (Modelo ERD)**.
-    *   *Responsables*: 🏗️ Consultant (Diseño), 🛡️ Admin (Ejecución).
-    *   *Tarea*: Conectar Materias con Carreras (Lookup/Master-Detail).
-    *   *Guía*: [Ver Paso a Paso](dia_1/2_Relacion_entre_Objetos.md)
-3.  **Crear Campos Personalizados**.
-    *   *Responsables*: 🛡️ Admin.
-    *   *Tarea*: Añadir campos de fecha, texto, picklists.
-    *   *Guía*: [Ver Paso a Paso](dia_1/3_Campos_personalizados.md)
-4.  **Bitácora de Versiones**.
-    *   *Responsables*: 🚀 Release Manager.
-    *   *Guía*: [Ver Paso a Paso](dia_1/4_Registrar_en_el_Doc_gestor_de_versiones.md)
+### 2. Guías de Implementación Técnica
+Cuando te toque configurar Salesforce, **NO adivines**. Sigue los tutoriales paso-a-paso:
+*   📂 [Guías Técnicas](Guias_Implementacion/)
+    *   *Ejemplo*: Si estás creando el Objeto "Carrera", abre `01-Tutorial_Carrera.md`.
 
 ---
 
-## 📅 Día 2: Identidad y Marca (App Builder)
-**Objetivo**: Que la app se vea profesional y alineada con Lumina Tech.
+## 🌊 FASE 1: El Flujo de Trabajo (The Trello Lifecycle)
+*Así movemos las tareas desde "Idea" hasta "Realidad".*
 
-1.  **Diseño de UX/UI**.
-    *   *Responsables*: 🎨 UX Consultant.
-    *   *Tarea*: Definir paleta de colores y logo.
-    *   *Guía*: [Ver Tarea](dia_2/1_Tener_en_cuenta_el_diseno.md)
-2.  **Configurar Dominio (My Domain)**.
-    *   *Responsables*: 🛡️ Admin.
-    *   *Guía*: [Ver Configuración](dia_2/2_Lograr_hacer_el_dominio_personalizado.md)
-3.  **Branding (Themes & Branding)**.
-    *   *Responsables*: 🛡️ Admin.
-    *   *Tarea*: Subir logo y aplicar colores corporativos.
-    *   *Guía*: [Ver Tarea](dia_2/3_Agregar_el_Logo_y_colores.md)
+### 1. 📋 Backlog (Planning)
+*   **Quién**: Product Owner / BA.
+*   **Qué sucede**: Las tareas del "Checklist Diario" (ver abajo) se convierten en tarjetas de Trello.
+*   *Condición de Salida*: La tarjeta tiene Título y Descripción clara.
 
----
+### 2. 🏗️ En Progreso (Development)
+*   **Quién**: Salesforce Admin / Consultant.
+*   **Acción**:
+    1.  Toma la tarjeta y muévela a "En Progreso".
+    2.  **Consulta la Guía de Implementación** correspondiente (ej. `Guias_Implementacion/05-Tutorial_Validaciones.md`).
+    3.  Construye la solución en tu **Sandbox (Entorno Dev)**.
 
-## 📅 Día 3: Calidad de Datos (Formularios Inteligentes)
-**Objetivo**: Asegurar que los datos ingresados sean válidos y útiles.
+### 3. 🧪 QA / Testing (Validación)
+*   **Quién**: QA Tester.
+*   **Acción**:
+    1.  Lee los "Criterios de Aceptación" en la tarjeta.
+    2.  Intenta "romper" lo que construyó el Admin.
+    3.  Si falla -> Vuelve a "En Progreso". Si pasa -> Mover a "Aprobado".
 
-1.  **Reglas de Validación**.
-    *   *Responsables*: 🛡️ Admin.
-    *   *Tarea*: Impedir fechas futuras, validar formatos de email.
-    *   *Guía*: [Ver Lógica](dia_3/2_Reglas_de_validacion_y_campos_formula.md)
-2.  **Campos Fórmula**.
-    *   *Responsables*: 🏗️ Consultant.
-    *   *Tarea*: Calcular promedios, estados automáticos.
-    *   *Guía*: [Ver Fórmulas](dia_3/2_Reglas_de_validacion_y_campos_formula.md)
-3.  **Page Layouts**.
-    *   *Responsables*: 🛡️ Admin.
-    *   *Tarea*: Organizar los campos de forma lógica para el usuario.
-    *   *Guía*: [Ver Tarea](dia_3/1_Campos_adicionales.md)
+### 4. ✅ Terminado (Deployment)
+*   **Quién**: Release Manager.
+*   **Acción**: Registra la tarea en el **Gestor de Versiones** y despliega a Producción.
 
 ---
 
-## 📅 Día 4: Seguridad y Accesos
-**Objetivo**: ¿Quién puede ver qué? (Modelo de Seguridad).
+## 📅 FASE 2: Cronograma de Ejecución (Sprint 1)
 
-1.  **Permission Sets**.
-    *   *Responsables*: 🛡️ Admin.
-    *   *Tarea*: Crear permisos especiales para profesores/directores.
-    *   *Guía*: [Ver Configuración](dia_4/1_Configuracion_Permission_Sets.md)
-2.  **Sharing Rules (OWD)**.
-    *   *Responsables*: 🏗️ Architect.
-    *   *Tarea*: Definir si los alumnos ven datos de otros (Privado/Público).
-    *   *Guía*: [Ver Estrategia](dia_4/3_Visibilidad_Objetos_Campos.md)
+Sigue este orden. Cada día desbloquea el siguiente.
+
+### Día 0: Análisis y Seteo Inicial 🏁
+*   **Foco**: Entender el negocio.
+*   **Recurso Clave**: [Tutorial BA](Tutoriales_por_Rol/01-Rol_Business_Analyst.md).
+*   **Tareas**:
+    1.  [Leer caso de negocio](dia_0/1_Leer_juntos_y_conocer_la_Empresa.md)
+    2.  [Definir Roles](dia_0/2_Definir_Roles.md)
+
+### Día 1: Arquitectura de Datos 🏛️
+*   **Foco**: Crear Objetos y Relaciones.
+*   **Recurso Clave**: `Guias_Implementacion/01-Tutorial_Carrera.md` y `02-Tutorial_Materia.md`.
+*   **Tareas**:
+    1.  [Crear Objetos Custom](dia_1/1_Creacion_de_objetos_Custom_Standard.md) -> *Usa Guía 01, 02, 03*.
+    2.  [Relacionar Objetos](dia_1/2_Relacion_entre_Objetos.md) -> *Usa Guía 04*.
+    3.  **Acción Trello**: Crear tarjetas para "Objeto Carrera", "Objeto Materia".
+
+### Día 2: Branding y UI 🎨
+*   **Foco**: Look & Feel.
+*   **Recurso Clave**: `Guias_Implementacion/07-Tutorial_App_Builder.md`.
+*   **Tareas**:
+    1.  [Configurar Dominio y Logo](dia_2/2_Lograr_hacer_el_dominio_personalizado.md).
+    2.  **Acción Trello**: Crear tarjeta "Configurar Tema Visual".
+
+### Día 3: Lógica y Calidad 🧠
+*   **Foco**: Validaciones y Automatización.
+*   **Recurso Clave**: `Guias_Implementacion/05-Tutorial_Validaciones.md`.
+*   **Tareas**:
+    1.  [Crear Reglas de Validación](dia_3/2_Reglas_de_validacion_y_campos_formula.md).
+    2.  [Crear Fórmulas](dia_3/1_Campos_adicionales.md).
+    3.  **Acción Trello**: Mover tarjeta a QA para testear que la regla bloquee datos incorrectos.
+
+### Día 4: Seguridad Blindada 🛡️
+*   **Foco**: Permisos.
+*   **Recurso Clave**: `Guias_Implementacion/06-Tutorial_Seguridad.md`.
+*   **Tareas**:
+    1.  [Configurar Permission Sets](dia_4/1_Configuracion_Permission_Sets.md).
+    2.  [Definir OWD (Sharing)](dia_4/3_Visibilidad_Objetos_Campos.md).
 
 ---
 
-> **Nota Final**: Este documento es el *cerebro* del proyecto. Si te pierdes, vuelve aquí. ¡Éxito en la implementación! 🚀
+> **Mantra del Equipo**: "Si no está en Trello, no existe. Si no seguiste la Guía de Implementación, probablemente habrá que rehacerlo."
