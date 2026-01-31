@@ -24,7 +24,18 @@ Mantener las librerías al día es vital para la seguridad y performance.
 6.  **Commit**: `chore(deps): update [paquete] to [version]`
 
 ### 1.2 Regla de Oro
-> "Si funciona, no lo toques... a menos que sea un parche de seguridad."
+> "Si funciona, no lo toques... a menos que sea un parche de seguridad o toque mantenimiento programado."
+
+### 1.3 Calendario de Actualizaciones (Estrategia)
+Para evitar la obsolescencia ("Bit Rot") sin sacrificar la estabilidad, adoptamos este calendario:
+
+| Tipo | Frecuencia | Ejemplo | Acción |
+| :--- | :--- | :--- | :--- |
+| **🛡️ Crítica** | **Inmediata** | `CVE-202X` (Vulnerabilidad) | Crear Hotfix. Actualizar SOLO la librería afectada. |
+| **🛠️ Rutina** | **Mensual** | `v1.2.3` -> `v1.2.9` (Patch) | Revisar `pip list --outdated`. Aplicar actualizaciones *minor/patch*. |
+| **🏗️ Mayor** | **Trimestral** | `v1.x` -> `v2.x` (Major) | Planificar como Tarea de Desarrollo. Requiere refactorización. |
+
+**Nota sobre Estabilidad**: No perseguimos siempre la versión "Latest" (última), sino la versión "Stable" (probada). Esperar 2-3 semanas después de un lanzamiento mayor antes de adoptarlo permite que la comunidad detecte los bugs primero.
 
 ---
 
