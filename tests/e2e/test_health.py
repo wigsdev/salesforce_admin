@@ -1,8 +1,8 @@
-
 from fastapi.testclient import TestClient
 from app.main import app
 
 client = TestClient(app)
+
 
 def test_health_check():
     """Test the health check endpoint returns 200 OK and expected status."""
