@@ -10,6 +10,16 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.templating import Jinja2Templates
 
 from app.config import settings
+import sentry_sdk
+
+# Initialize Sentry if DSN is set
+if settings.SENTRY_DSN:
+    sentry_sdk.init(
+        dsn=settings.SENTRY_DSN,
+        traces_sample_rate=1.0,
+        environment=settings.ENVIRONMENT,
+    )
+
 from app.routers import auth, users, docs, progress, frontend, curriculum, lumina
 
 # Create FastAPI application

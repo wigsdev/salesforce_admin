@@ -39,6 +39,9 @@ class Settings(BaseSettings):
     DEFAULT_PAGE_SIZE: int = 20
     MAX_PAGE_SIZE: int = 100
 
+    # Monitoring
+    SENTRY_DSN: Optional[str] = None
+
     def get_allowed_origins(self) -> List[str]:
         """Get ALLOWED_ORIGINS as a list."""
         if self.ALLOWED_ORIGINS:
