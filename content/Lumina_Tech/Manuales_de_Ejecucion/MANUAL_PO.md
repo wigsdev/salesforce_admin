@@ -84,3 +84,11 @@
 1.  **Acceptance**
     *   Verifica el resultado final en Producción.
     *   Si está aprobado, el Release Manager mueve a **8. Terminado**.
+
+---
+
+## 📚 Recursos Relacionados
+
+- 📘 **Tutorial de Rol**: [06-Rol_Product_Owner.md](../Tutoriales_por_Rol/06-Rol_Product_Owner.md)
+- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+- 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)

@@ -106,3 +106,13 @@
 ---
 
 > **¡Felicidades!** Has completado las 11 misiones del Sprint 1. Tu trabajo aquí ha terminado.
+
+---
+
+## 📚 Recursos Relacionados
+
+- 📘 **Tutorial de Rol**: [05-Rol_Salesforce_Admin.md](../Tutoriales_por_Rol/05-Rol_Salesforce_Admin.md)
+- 📘 **Guías Técnicas**: [Guias_Implementacion](../Guias_Implementacion/)
+- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+- 📊 **Diagrama ERD**: [DIAGRAMA_ERD.md](../DIAGRAMA_ERD.md)
+- 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)

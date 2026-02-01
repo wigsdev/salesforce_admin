@@ -73,3 +73,10 @@
 
 *   👋 **HANDOFF**: "Sprint 1 completado y desplegado a producción".
 
+---
+
+## 📚 Recursos Relacionados
+
+- 📘 **Tutorial de Rol**: [04-Rol_Release_Manager.md](../Tutoriales_por_Rol/04-Rol_Release_Manager.md)
+- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+- 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)

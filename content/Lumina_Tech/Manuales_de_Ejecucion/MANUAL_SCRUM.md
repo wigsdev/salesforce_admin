@@ -38,4 +38,11 @@
     *   🧩 **UNBLOCK**: Organiza una llamada rápida de 5 min entre Admin y BA.
     *   *Objetivo*: Que salgan con una decisión clara.
 
+---
+
+## 📚 Recursos Relacionados
+
+- 📘 **Tutorial de Rol**: [08-Rol_Scrum_Master.md](../Tutoriales_por_Rol/08-Rol_Scrum_Master.md)
+- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+- 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)
 *   👋 **HANDOFF**: "Equipo desbloqueado, sigan trabajando".

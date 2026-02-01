@@ -117,3 +117,13 @@
 ---
 
 > **¡Felicidades!** Has diseñado una solución escalable, segura y mantenible para Lumina Tech. 🏛️
+
+---
+
+## 📚 Recursos Relacionados
+
+- 📘 **Tutorial de Rol**: [02-Rol_Salesforce_Consultant.md](../Tutoriales_por_Rol/02-Rol_Salesforce_Consultant.md)
+- 📘 **Gestor de Versiones**: [02-Salesforce_Consultant.md](../Gestor_de_Versiones/02-Salesforce_Consultant.md)
+- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+- 📊 **Diagrama ERD**: [DIAGRAMA_ERD.md](../DIAGRAMA_ERD.md)
+- 🛡️ **Diagrama Seguridad**: [DIAGRAMA_SEGURIDAD.md](../DIAGRAMA_SEGURIDAD.md)

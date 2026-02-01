@@ -28,4 +28,12 @@
 
 2.  **Aprobación Final**
     *   **Movimiento (6 -> 7)**: Mueve la tarjeta a **7. SF Producción**.
+
+---
+
+## 📚 Recursos Relacionados
+
+- 📘 **Tutorial de Rol**: [07-Rol_Team_Lead.md](../Tutoriales_por_Rol/07-Rol_Team_Lead.md)
+- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+- 🛡️ **Diagrama Seguridad**: [DIAGRAMA_SEGURIDAD.md](../DIAGRAMA_SEGURIDAD.md)
     *   👋 **Handover**: @menciona al **Release Manager**. "Código limpio. Autorizado para Deploy".

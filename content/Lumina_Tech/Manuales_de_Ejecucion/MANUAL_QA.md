@@ -32,4 +32,12 @@
 
 3.  **Aprobación**
     *   **Movimiento (5 -> 6)**: Mueve la tarjeta a **6. Aprobación TL**.
+
+---
+
+## 📚 Recursos Relacionados
+
+- 📘 **Tutorial de Rol**: [03-Rol_QA_Tester.md](../Tutoriales_por_Rol/03-Rol_QA_Tester.md)
+- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+- 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)
     *   👋 **Handover**: @menciona al **Team Lead**. "Funcionalidad validada. Pase a revisión de código".

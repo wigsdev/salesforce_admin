@@ -41,6 +41,13 @@
 
 ---
 
+## 📚 Recursos Relacionados
+
+- 📘 **Tutorial de Rol**: [09-Rol_DevOps_Specialist.md](../Tutoriales_por_Rol/09-Rol_DevOps_Specialist.md)
+- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+
+---
+
 ### Día 2: Soporte a Branding
 *   🛑 **PRE-REQ**: Admin está configurando My Domain y Themes.
 

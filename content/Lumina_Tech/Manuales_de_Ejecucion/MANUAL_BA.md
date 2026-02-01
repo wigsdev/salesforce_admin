@@ -83,4 +83,12 @@
 
 *   👋 **HANDOFF**: Mueve Tarjetas a "To Do". Avisa al **Admin** y **QA**: "HUs de seguridad listas. Requieren pruebas exhaustivas de permisos".
 
+---
+
+## 📚 Recursos Relacionados
+
+- 📘 **Tutorial de Rol**: [01-Rol_Business_Analyst.md](../Tutoriales_por_Rol/01-Rol_Business_Analyst.md)
+- 📘 **Gestor de Versiones**: [01-Business_Analyst.md](../Gestor_de_Versiones/01-Business_Analyst.md)
+- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+- 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)
 
