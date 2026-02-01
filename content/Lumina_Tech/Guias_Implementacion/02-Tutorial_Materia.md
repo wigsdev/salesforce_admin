@@ -13,35 +13,44 @@ Crear el objeto `Materia__c` y vincularlo fuertemente a una Carrera usando una r
 ## 🛠️ Procedimiento
 
 ### Paso 1: Crear el Objeto
-1.  **Setup** > **Object Manager** > **Create** > **Custom Object**.
-2.  Definición:
+1.  Ve a **Setup** > **Object Manager**.
+2.  Haz clic en **Create** > **Custom Object**.
+3.  Completa los detalles:
     *   **Label**: `Materia`
     *   **Plural Label**: `Materias`
     *   **Record Name**: `Nombre de Materia`
-    *   **Data Type**: **Text**
-    *   **Deployment Status**: Deployed.
-3.  **Save**.
+    *   **Data Type**: Selecciona **Text**.
+    *   **Allow Search**: ☑️ Marca la casilla.
+4.  Haz clic en **Save**.
 
 ### Paso 2: Crear Relación Master-Detail (Hijo-Padre)
-1.  Vaya a **Fields & Relationships** > **New**.
-2.  Seleccione Data Type: **Master-Detail Relationship**. Next.
-3.  Related To: Seleccione **Carrera**. Next.
-4.  **Field Label**: `Carrera`.
-5.  **Field Name**: `Carrera`.
-6.  **Sharing Setting**: Dejar en "Read/Write: Allows users with at least Read access...".
-7.  **Allow Reparenting**: ☑️ Marcar esta casilla (Permite mover una materia de carrera si hubo error).
-8.  **Next** > **Next** > **Save**.
+1.  En el menú izquierdo, ve a **Fields & Relationships**.
+2.  Haz clic en **New**.
+3.  Selecciona Data Type: **Master-Detail Relationship**. Haz clic en **Next**.
+4.  En "Related To", selecciona **Carrera**. Haz clic en **Next**.
+5.  **Field Label**: `Carrera`.
+6.  **Field Name**: `Carrera`.
+7.  **Sharing Setting**: Deja la opción por defecto ("Read/Write...").
+8.  **Allow Reparenting**: ☑️ **Marca esta casilla** (Es vital para corregir errores).
+9.  Haz clic en **Next**.
+10. Haz clic en **Next** (Add to layouts).
+11. Haz clic en **Save**.
 
 ### Paso 3: Crear Campo "Año del Plan"
-1.  Click **New** en Fields & Relationships.
-2.  Tipo: **Number**.
-3.  Label: `Año del Plan`.
-4.  Length: `1`. (Ej: 1ro, 2do, 3ro).
-5.  **Next** > **Save**.
+1.  Haz clic en **New** (en Fields & Relationships).
+2.  Selecciona Data Type: **Number**. Haz clic en **Next**.
+3.  **Field Label**: `Año del Plan`.
+4.  **Length**: `1`. **Decimal Places**: `0`.
+    *   *Nota*: Solo aceptará un dígito (ej: 1, 2, 3).
+5.  Haz clic en **Next**.
+6.  Haz clic en **Next**.
+7.  Haz clic en **Save**.
 
 ---
 
 ## ✅ Verificación de Éxito
-1.  Intente crear una **Materia** nueva.
-2.  Salesforce debe OBLIGARLO a seleccionar una **Carrera** (lupa).
-3.  Si borra la Carrera padre, la Materia debería borrarse automáticamente (Cascade Delete).
+1.  Abre el App Launcher y busca "Materias".
+2.  Haz clic en **New**.
+3.  Intente guardar sin elegir Carrera.
+    *   **Resultado**: Salesforce debe mostrar un error rojo obligando a usar la lupa para buscar una Carrera.
+4.  Si borras una Carrera (Prueba destructiva), verifica que sus Materias también desaparezcan.
