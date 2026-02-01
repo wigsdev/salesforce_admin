@@ -13,7 +13,8 @@ Este proyecto se ejecuta con **Roles Especializados**. Haz clic en tu rol para a
 *   🕵️ **[SOY BUSINESS ANALYST (BA)](MANUAL_BA.md)**: Detallo los Requisitos.
 
 ### 2. El Equipo de Construcción (Build) 🔨
-*   🏗️ **[SOY TEAM LEAD / CONSULTANT](MANUAL_TL.md)**: Diseño la Solución.
+*   🏗️ **[SOY SALESFORCE CONSULTANT](MANUAL_CONSULTANT.md)**: Diseño la Solución.
+*   🏗️ **[SOY TEAM LEAD](MANUAL_TL.md)**: Reviso la Calidad Técnica.
 *   🛡️ **[SOY SALESFORCE ADMIN](MANUAL_ADMIN.md)**: Configuro la Plataforma.
 
 ### 3. El Equipo de Soporte (Support) ⚙️
