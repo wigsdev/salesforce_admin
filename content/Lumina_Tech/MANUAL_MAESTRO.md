@@ -1,14 +1,12 @@
 # 🦅 MANUAL MAESTRO: Centro de Comando Lumina Tech
 
-**Versión**: 4.0 (Router de Roles)
+**Versión**: 4.1 (Trello Workflow Aligned)
 
 ---
 
 ## 🚦 ¿Quién Eres Hoy?
 
-Este proyecto se ejecuta con **Roles Especializados**. No intentes leer todo.
-
-Haz clic en tu rol para abrir tu **Manual de Misión Crítica**:
+Este proyecto se ejecuta con **Roles Especializados**. Haz clic en tu rol para abrir tu manual:
 
 ### 1. El Equipo de Definición (Planning) 🧠
 *   👔 **[SOY PRODUCT OWNER (PO)](MANUAL_PO.md)**: Priorizo el Backlog.
@@ -28,4 +26,18 @@ Haz clic en tu rol para abrir tu **Manual de Misión Crítica**:
 
 ---
 
-> **Nota**: Si tienes dudas sobre *cómo* usar Salesforce técnicamente, tu manual te dirigirá a las carpetas `Guias_Implementacion/`.
+## 🌊 FASE 1: El Ciclo de Vida en Trello (8 Columnas)
+*La tarjeta viaja de izquierda a derecha. Nadie se salta pasos.*
+
+| FASE | Columna en Trello | Responsable Principal |
+| :--- | :--- | :--- |
+| **PLANNING** | **1. Backlog** | 👔 PO / 🕵️ BA |
+| **PLANNING** | **2. Sprint Backlog** | 👔 PO |
+| **EXECUTION** | **3. En Progreso** | 🛡️ Admin |
+| **EXECUTION** | **4. SF Desarrollo** | 🛡️ Admin |
+| **VERIFY** | **5. SF QA** | 🧪 QA Tester |
+| **VERIFY** | **6. Aprobación TL** | 🏗️ Team Lead |
+| **DEPLOY** | **7. SF Producción** | 🚀 Release Mgr |
+| **DONE** | **8. Terminado** | 🚀 Release Mgr |
+
+> **Nota**: Cada tarjeta DEBE tener asignado el miembro que la tiene actualmente "en su cancha".

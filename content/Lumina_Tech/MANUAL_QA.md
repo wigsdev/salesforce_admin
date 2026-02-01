@@ -1,69 +1,33 @@
 # 🧪 Manual de Ejecución: QA Tester
 
-**Tu Misión**: Eres el Guardián de la Calidad. Nada llega a producción si no funciona (y si funcionas, lo intentas romper).
+**Tu Misión**: Romper cosas. Eres el dueño de la columna **5. SF QA**.
 
 ---
 
 ## 🚦 Tus Banderas (Reglas de Juego)
 
-| Bandera | Significado | Acción |
+| Bandera | Columna Trello | Significado |
 | :--- | :--- | :--- |
-| 🛑 **PRE-REQ** | **Entrada** | El Admin movió la tarjeta a "QA". *Condición*: El entorno de pruebas debe estar estable. |
-| 💥 **TEST** | **Tu Turno** | Ejecuta los casos de prueba. Intenta romper la configuración (Valores nulos, feos, extremos). |
-| 👋 **HANDOFF** | **Al terminar** | Si pasa: Mueve a "Aprobado". Si falla: Mueve a "En Progreso" y comenta el error. |
+| 🛑 **PRE-REQ** | **4. SF Desarrollo** | El Admin terminó de construir en Sandbox. |
+| 💥 **TEST** | **5. SF QA** | Ejecución de pruebas en entorno QA/Dev. |
+| 👋 **HANDOFF** | **6. Aprobación TL** | Validado funcionalmente. Listo para revisión técnica. |
 
 ---
 
-## 📅 CRONOGRAMA DE EJECUCIÓN (Sprint 1)
+## 📅 CRONOGRAMA DE EJECUCIÓN
 
-### Día 1: Tests de Estructura de Datos
-*   🛑 **PRE-REQ**: Admin confirma "Objetos creados".
+### Rutina de Pruebas
+1.  **Tomar la Tarea**
+    *   **Movimiento (4 -> 5)**: Mueve la tarjeta desde **4. SF Desarrollo** a **5. SF QA**.
+    *   *Acción*: Lee los Criterios de Aceptación.
 
-1.  **Validar Objetos y Relaciones**
-    *   💥 **TEST**:
-        *   Intenta crear una `Materia`.
-        *   ¿Puedes ver el campo `Carrera` para conectarla?
-        *   ¿Es obligatorio? (Si la HU decía que sí, y te deja guardar vacío -> 🐞 BUG).
+2.  **Ejecutar Tests**
+    *   💥 **Testing**:
+        *   Usa el Sandbox para verificar la funcionalidad.
+        *   Si falla: Devuelve la tarjeta a **3. En Progreso** y comenta el error.
+        *   Si pasa: Continúa.
     *   📘 **Guía**: [03-Rol_QA_Tester.md](../Tutoriales_por_Rol/03-Rol_QA_Tester.md)
 
-*   👋 **HANDOFF**: "Estructura válida".
-
----
-
-### Día 2: Tests Visuales (UI)
-*   🛑 **PRE-REQ**: Admin confirma "Branding aplicado".
-
-1.  **Verificar Branding**
-    *   💥 **TEST**:
-        *   ¿Ves el logo de Lumina arriba a la izquierda?
-        *   ¿Los colores coinciden con la guía de estilo?
-        *   ¿El dominio es `luminadesarrollo-dev-ed.my.salesforce.com` (o similar)?
-
-*   👋 **HANDOFF**: "UI Aprobada".
-
----
-
-### Día 3: Tests de Lógica (Validaciones)
-*   🛑 **PRE-REQ**: Admin confirma "Validaciones activas".
-
-1.  **Testear Reglas de Negocio**
-    *   💥 **TEST**:
-        *   *Caso Positivo*: Ingresa datos correctos. ¿Guarda? ✅
-        *   *Caso Negativo*: Ingresa fecha de fin ANTES de fecha de inicio. ¿Muestra error rojo? ✅ (Si guarda -> 🐞 BUG).
-    *   📘 **Guía**: [05-Tutorial_Validaciones.md](../Guias_Implementacion/05-Tutorial_Validaciones.md)
-
-*   👋 **HANDOFF**: "Lógica robusta validada".
-
----
-
-### Día 4: Tests de Seguridad (Hacking Ético)
-*   🛑 **PRE-REQ**: Admin confirma "Seguridad configurada".
-
-1.  **Login como Otro Usuario**
-    *   💥 **TEST**:
-        *   Loguéate como un "Profesor" (usuario de prueba).
-        *   Intenta borrar una Carrera. (Debería salir "Permisos Insuficientes").
-        *   Si puedes borrar -> 🚨 **CRITICAL BUG**.
-    *   📘 **Guía**: [06-Tutorial_Seguridad.md](../Guias_Implementacion/06-Tutorial_Seguridad.md)
-
-*   👋 **HANDOFF**: "Sistema seguro y validado".
+3.  **Aprobación**
+    *   **Movimiento (5 -> 6)**: Mueve la tarjeta a **6. Aprobación TL**.
+    *   👋 **Handover**: @menciona al **Team Lead**. "Funcionalidad validada. Pase a revisión de código".

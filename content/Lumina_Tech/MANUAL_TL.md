@@ -1,38 +1,29 @@
-# 🏗️ Manual de Ejecución: Team Lead (TL) & Consultant
+# 🏗️ Manual de Ejecución: Team Lead (TL)
 
-**Tu Misión**: Eres el Arquitecto. Aseguras que la casa no se caiga. Diseñas la solución y vigilas la calidad técnica.
+**Tu Misión**: Calidad Técnica. Eres el dueño de la columna **6. Aprobación TL**.
 
 ---
 
 ## 🚦 Tus Banderas (Reglas de Juego)
 
-| Bandera | Significado | Acción |
+| Bandera | Columna Trello | Significado |
 | :--- | :--- | :--- |
-| 🛑 **PRE-REQ** | **Entrada** | El BA tiene los requerimientos, pero no sabe CÓMO construirlos en Salesforce. |
-| 📐 **DESIGN** | **Tu Turno** | Decides la arquitectura (Modelo de Datos, Seguridad, Automatización vs Código). |
-| 🔍 **REVIEW** | **Control** | Revisas lo que hizo el Admin antes de pasarlo a QA. (Quality Gate). |
+| 🛑 **PRE-REQ** | **5. SF QA** | El QA dice que funciona funcionalmente. |
+| 🔍 **REVIEW** | **6. Aprobación TL** | Revisas calidad, nomenclatura y seguridad. |
+| 👋 **HANDOFF** | **7. SF Producción** | Todo limpio. Listo para despliegue. |
 
 ---
 
 ## 📅 CRONOGRAMA DE EJECUCIÓN
 
-### Día 1: Diseño del Modelo (ERD)
-*   🛑 **PRE-REQ**: Historias de Usuario de Datos listas.
-
-1.  **Definir Relaciones**
-    *   📐 **DESIGN**:
-        *   ¿Materia y Carrera es Lookup o Master-Detail? -> *Decisión: Master-Detail (porque si borras una Carrera, las materias no tienen sentido)*.
-    *   📘 **Guía**: [02-Rol_Salesforce_Consultant.md](../Tutoriales_por_Rol/02-Rol_Salesforce_Consultant.md)
-
-*   👋 **HANDOFF**: Avisa al Admin: "Estructura aprobada. Proceda a crear objetos".
-
-### Día 3: Revisión de Automatización
-*   🛑 **PRE-REQ**: Admin propone usar un Flow o una Regla de Validación.
-
-1.  **Code Review (Config Review)**
-    *   🔍 **REVIEW**:
+### Rutina de Revisión
+1.  **Auditoría**
+    *   **Contexto**: La tarjeta está en **6. Aprobación TL**.
+    *   🔍 **Review**:
         *   Entra al Sandbox.
-        *   Verifica que los nombres de API sean limpios (`Fecha_Inicio__c`, no `Fecha_Ini_2__c`).
-        *   Verifica que no hay validaciones hardcoadadas con IDs.
+        *   Verifica nombres de API (`Nombre__c`).
+        *   Verifica que no hay permisos excesivos.
 
-*   👋 **HANDOFF**: "Técnicamente sólido. Pase a QA".
+2.  **Aprobación Final**
+    *   **Movimiento (6 -> 7)**: Mueve la tarjeta a **7. SF Producción**.
+    *   👋 **Handover**: @menciona al **Release Manager**. "Código limpio. Autorizado para Deploy".
