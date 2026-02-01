@@ -3,7 +3,7 @@
 **Sprint**: 01 (Fundamentos)
 **Día**: 1 (Modelado de Datos)
 **Rol Responsable**: 🛡️ **Salesforce Admin**
-**HUs Relacionadas**: HU-003 (Historial Académico)
+**HUs Relacionadas**: [HU-003](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Historial Académico)
 
 ---
 

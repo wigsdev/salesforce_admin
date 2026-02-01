@@ -3,7 +3,7 @@
 **Sprint**: 01 (Fundamentos)
 **Día**: 0/1 (Preparación)
 **Rol Responsable**: ♾️ **DevOps Specialist**
-**HUs Relacionadas**: HU-General (Carga Inicial)
+**HUs Relacionadas**: [HU-General](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Carga Inicial)
 
 ---
 

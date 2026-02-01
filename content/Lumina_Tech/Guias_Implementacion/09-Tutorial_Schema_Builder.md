@@ -3,7 +3,7 @@
 **Sprint**: 01 (Fundamentos)
 **Día**: 1 (Modelado - Revisión)
 **Rol Responsable**: 🏗️ **Salesforce Consultant**
-**HUs Relacionadas**: HU-003, HU-004
+**HUs Relacionadas**: [HU-003](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md), [HU-004](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
 
 ---
 

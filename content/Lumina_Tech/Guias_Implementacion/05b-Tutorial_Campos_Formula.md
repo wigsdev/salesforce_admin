@@ -3,7 +3,7 @@
 **Sprint**: 01 (Fundamentos)
 **Día**: 3 (Automatización)
 **Rol Responsable**: 🛡️ **Salesforce Admin**
-**HUs Relacionadas**: HU-003 (UX Upgrade)
+**HUs Relacionadas**: [HU-003](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (UX Upgrade)
 
 ---
 

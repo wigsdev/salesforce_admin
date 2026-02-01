@@ -3,7 +3,7 @@
 **Sprint**: 01 (Fundamentos)
 **Día**: 1 (Modelado de Datos)
 **Rol Responsable**: 🛡️ **Salesforce Admin**
-**HUs Relacionadas**: HU-001 (Privacidad Base), HU-007 (Identidad)
+**HUs Relacionadas**: [HU-001](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Privacidad Base), [HU-007](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Identidad)
 
 ---
 

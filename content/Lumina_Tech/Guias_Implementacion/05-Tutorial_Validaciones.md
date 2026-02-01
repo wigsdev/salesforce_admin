@@ -3,7 +3,7 @@
 **Sprint**: 01 (Fundamentos)
 **Día**: 3 (Calidad de Datos)
 **Rol Responsable**: 🛡️ **Salesforce Admin**
-**HUs Relacionadas**: HU-005 (Email), HU-006 (Rango Notas)
+**HUs Relacionadas**: [HU-005](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Email), [HU-006](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Rango Notas)
 
 ---
 

@@ -3,7 +3,7 @@
 **Sprint**: 01 (Fundamentos)
 **Día**: 2 (App Building)
 **Rol Responsable**: 🛡️ **Salesforce Admin**
-**HUs Relacionadas**: HU-004 (Dominio), HU-005 (Theme), HU-006 (App)
+**HUs Relacionadas**: [HU-004](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Dominio), [HU-005](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Theme), [HU-006](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (App)
 
 ---
 

@@ -3,7 +3,7 @@
 **Sprint**: 01 (Fundamentos)
 **Día**: 4 (Seguridad)
 **Rol Responsable**: 🛡️ **Salesforce Admin**
-**HUs Relacionadas**: HU-009 (Visibilidad), HU-010 (MFA), HU-011 (FLS)
+**HUs Relacionadas**: [HU-009](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Visibilidad), [HU-010](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (MFA), [HU-011](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (FLS)
 
 ---
 
