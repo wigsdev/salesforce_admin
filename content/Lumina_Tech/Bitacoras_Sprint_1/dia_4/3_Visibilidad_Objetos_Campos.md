@@ -1,7 +1,7 @@
 # 👁️ Visibilidad de Objetos y Campos
 
 **Rol Responsable**: 🏗️ **Salesforce Consultant** (Security Specialist Persona)
-**Destino en Gestor**: [`02-Salesforce_Consultant.md`](../Gestor_de_Versiones/02-Salesforce_Consultant.md)
+**Destino en Gestor**: [`02-Salesforce_Consultant.md`](../../Gestor_de_Versiones/02-Salesforce_Consultant.md)
 **Justificación**: "Principio de Menor Privilegio (PoLP). Todo está prohibido a menos que se permita explícitamente."
 
 ## 1. Nivel Macro: Organization-Wide Defaults (OWD)

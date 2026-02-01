@@ -2,7 +2,7 @@
 
 **Rol Responsable**: 🛡️ **Salesforce Admin**
 **Calidad de Datos**: Estrictamente tipados.
-**Destino en Gestor**: [`03-Salesforce_Admin.md`](../Gestor_de_Versiones/03-Salesforce_Admin.md)
+**Destino en Gestor**: [`03-Salesforce_Admin.md`](../../Gestor_de_Versiones/03-Salesforce_Admin.md)
 
 ## Diccionario de Datos (Implementación)
 

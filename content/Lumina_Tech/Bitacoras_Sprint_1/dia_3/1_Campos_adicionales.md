@@ -1,7 +1,7 @@
 # 📝 Campos adicionales
 
 **Rol Responsable**: 🛡️ **Salesforce Admin**
-**Destino en Gestor**: [`03-Salesforce_Admin.md`](../Gestor_de_Versiones/03-Salesforce_Admin.md) (Diccionario de Datos)
+**Destino en Gestor**: [`03-Salesforce_Admin.md`](../../Gestor_de_Versiones/03-Salesforce_Admin.md) (Diccionario de Datos)
 
 ## Configuración de Nuevos Campos (Schema Builder)
 

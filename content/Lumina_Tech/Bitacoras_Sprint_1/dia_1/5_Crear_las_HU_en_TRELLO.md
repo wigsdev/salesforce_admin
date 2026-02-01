@@ -2,7 +2,7 @@
 
 **Rol Responsable**: 👑 **Product Owner** (con apoyo del BA)
 **Herramienta**: Trello / Jira (Simulado)
-**Destino en Gestor**: [`01-Business_Analyst.md`](../Gestor_de_Versiones/01-Business_Analyst.md) (Backlog)
+**Destino en Gestor**: [`01-Business_Analyst.md`](../../Gestor_de_Versiones/01-Business_Analyst.md) (Backlog)
 
 ## Backlog Grooming (Día 1)
 

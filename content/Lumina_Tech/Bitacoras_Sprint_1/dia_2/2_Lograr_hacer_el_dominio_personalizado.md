@@ -1,7 +1,7 @@
 # 🌐 Lograr hacer el dominio personalizado
 
 **Rol Responsable**: 🛡️ **Salesforce Admin**
-**Destino en Gestor**: [`03-Salesforce_Admin.md`](../Gestor_de_Versiones/03-Salesforce_Admin.md) (Configuración Básica)
+**Destino en Gestor**: [`03-Salesforce_Admin.md`](../../Gestor_de_Versiones/03-Salesforce_Admin.md) (Configuración Básica)
 
 ## Guía de Configuración: My Domain
 

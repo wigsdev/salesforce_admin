@@ -6,7 +6,7 @@
 ## 📅 DIA 0 - Inicio y Definición de Equipo
 
 ### Asignación de Roles (Agile Team)
-**Fuente**: [Tarea 2 - Definir Roles](../dia_0/2_Definir_Roles.md)
+**Fuente**: [Tarea 2 - Definir Roles](../Bitacoras_Sprint_1/dia_0/2_Definir_Roles.md)
 
 *   **Product Owner (PO)**: Dra. Vance (Define el "Qué").
 *   **Scrum Master / Team Lead**: Facilita el proceso.

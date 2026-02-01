@@ -1,7 +1,7 @@
 # 👥 Configuración de Permission Sets Groups
 
 **Rol Responsable**: 🛡️ **Salesforce Admin** (Delegated Admin Persona)
-**Destino en Gestor**: [`03-Salesforce_Admin.md`](../Gestor_de_Versiones/03-Salesforce_Admin.md)
+**Destino en Gestor**: [`03-Salesforce_Admin.md`](../../Gestor_de_Versiones/03-Salesforce_Admin.md)
 **Justificación**: "Simplificar la gestión de usuarios (Onboarding/Offboarding). Asignar 1 Grupo es más rápido y seguro que asignar 5 Sets manuales."
 
 ## 🧩 Estrategia de Agrupación (Personas)

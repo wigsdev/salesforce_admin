@@ -1,7 +1,7 @@
 # 📋 Crear las HU en TRELLO
 
 **Rol Responsable**: 👑 **Product Owner**
-**Destino en Gestor**: [`01-Business_Analyst.md`](../Gestor_de_Versiones/01-Business_Analyst.md) (Backlog Update)
+**Destino en Gestor**: [`01-Business_Analyst.md`](../../Gestor_de_Versiones/01-Business_Analyst.md) (Backlog Update)
 
 ## Backlog Update (Branding)
 

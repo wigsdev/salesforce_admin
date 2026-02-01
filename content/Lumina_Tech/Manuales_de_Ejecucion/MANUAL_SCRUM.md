@@ -22,7 +22,7 @@
         1.  ¿Qué hiciste ayer?
         2.  ¿Qué harás hoy?
         3.  ¿Qué te bloquea?
-    *   📘 **Guía**: [08-Rol_Scrum_Master.md](../../Tutoriales_por_Rol/08-Rol_Scrum_Master.md)
+    *   📘 **Guía**: [08-Rol_Scrum_Master.md](../Tutoriales_por_Rol/08-Rol_Scrum_Master.md)
 
 2.  **Higiene del Tablero Trello**
     *   🔄 **SYNC**:

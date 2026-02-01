@@ -1,7 +1,7 @@
 # 📝 Registrar en el Doc: gestor de versiones
 
 **Rol Responsable**: 🚀 **Release Manager**
-**Destino en Gestor**: [`00-PLAN_DE_TRABAJO.md`](../Gestor_de_Versiones/00-PLAN_DE_TRABAJO.md) (Bitácora Diaria)
+**Destino en Gestor**: [`00-PLAN_DE_TRABAJO.md`](../../Gestor_de_Versiones/00-PLAN_DE_TRABAJO.md) (Bitácora Diaria)
 
 ## Check-in de Cambios (End of Day)
 

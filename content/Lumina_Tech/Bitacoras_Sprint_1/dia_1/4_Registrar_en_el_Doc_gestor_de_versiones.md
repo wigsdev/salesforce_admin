@@ -2,7 +2,7 @@
 
 **Rol Responsable**: 🚀 **Release Manager**
 **Estado del Repositorio**: Actualizado.
-**Destino en Gestor**: [`00-PLAN_DE_TRABAJO.md`](../Gestor_de_Versiones/00-PLAN_DE_TRABAJO.md) (Status Update)
+**Destino en Gestor**: [`00-PLAN_DE_TRABAJO.md`](../../Gestor_de_Versiones/00-PLAN_DE_TRABAJO.md) (Status Update)
 
 ## Reporte de Consolidación (Día 1)
 

@@ -2,7 +2,7 @@
 
 **Rol Responsable**: 🏗️ **Salesforce Consultant**
 **Referencia**: HU-003, HU-004
-**Destino en Gestor**: [`02-Salesforce_Consultant.md`](../Gestor_de_Versiones/02-Salesforce_Consultant.md)
+**Destino en Gestor**: [`02-Salesforce_Consultant.md`](../../Gestor_de_Versiones/02-Salesforce_Consultant.md)
 
 ## Diseño de Arquitectura de Datos (ERD)
 

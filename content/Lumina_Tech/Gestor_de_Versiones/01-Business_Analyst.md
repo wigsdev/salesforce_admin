@@ -7,7 +7,7 @@
 ## 📅 DIA 0 - Relevamiento Detallado
 
 ### Catálogo de Requerimientos (Backlog)
-**Fuente**: [Tarea 1 - Leer juntos y conocer la Empresa](../dia_0/1_Leer_juntos_y_conocer_la_Empresa.md)
+**Fuente**: [Tarea 1 - Leer juntos y conocer la Empresa](../Bitacoras_Sprint_1/dia_0/1_Leer_juntos_y_conocer_la_Empresa.md)
 
 #### 👮 Seguridad (SEC)
 *   **[REQ-SEC-001] Perfiles de Usuario**: Distinción estricta de roles (Admin, Profesor, Director).
@@ -30,7 +30,7 @@
 ---
 
 ## 📅 DIA 1 - Modelo de Datos Detallado
-**Fuente**: [Tarea 5 - Crear HU en TRELLO](../dia_1/5_Crear_las_HU_en_TRELLO.md)
+**Fuente**: [Tarea 5 - Crear HU en TRELLO](../Bitacoras_Sprint_1/dia_1/5_Crear_las_HU_en_TRELLO.md)
 
 ### Backlog de Historias de Usuario (Sprint 1)
 Desglose técnico de los requerimientos anteriores.
@@ -44,7 +44,7 @@ Desglose técnico de los requerimientos anteriores.
 ---
 
 ## 📅 DIA 2 - Identidad e Interfaz
-**Fuente**: [Tarea 5 - Crear HU en TRELLO (Día 2)](../dia_2/5_Crear_las_HU_en_TRELLO.md)
+**Fuente**: [Tarea 5 - Crear HU en TRELLO (Día 2)](../Bitacoras_Sprint_1/dia_2/5_Crear_las_HU_en_TRELLO.md)
 
 ### User Stories (Visual & Branding)
 

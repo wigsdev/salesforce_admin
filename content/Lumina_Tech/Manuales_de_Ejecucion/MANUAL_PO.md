@@ -23,7 +23,7 @@
     *   💎 **Acción en Columna 1**:
         *   Revisa cards creadas por el BA.
         *   Ordénalas por prioridad (Arriba = Más importante).
-    *   📘 **Guía**: [06-Rol_Product_Owner.md](../../Tutoriales_por_Rol/06-Rol_Product_Owner.md)
+    *   📘 **Guía**: [06-Rol_Product_Owner.md](../Tutoriales_por_Rol/06-Rol_Product_Owner.md)
 
 2.  **Sprint Planning**
     *   🏁 **Movimiento (1 -> 2)**:

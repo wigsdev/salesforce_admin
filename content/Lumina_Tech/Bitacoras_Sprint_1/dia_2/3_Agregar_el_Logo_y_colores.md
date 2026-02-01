@@ -1,7 +1,7 @@
 # 🖌️ Agregar el Logo y colores
 
 **Rol Responsable**: 🛡️ **Salesforce Admin**
-**Destino en Gestor**: [`03-Salesforce_Admin.md`](../Gestor_de_Versiones/03-Salesforce_Admin.md) (UI & Branding)
+**Destino en Gestor**: [`03-Salesforce_Admin.md`](../../Gestor_de_Versiones/03-Salesforce_Admin.md) (UI & Branding)
 
 ## Implementación de Themes & Branding
 

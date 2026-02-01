@@ -7,7 +7,7 @@
 ## 📅 DIA 0 - Estrategia de Arquitectura
 
 ### Decisiones de Diseño (ADR)
-**Fuente**: [Tarea 3 - Generar preguntas](../dia_0/3_Generar_preguntas_en_el_documento_para_evacuar_dudas.md)
+**Fuente**: [Tarea 3 - Generar preguntas](../Bitacoras_Sprint_1/dia_0/3_Generar_preguntas_en_el_documento_para_evacuar_dudas.md)
 
 1.  **ADR-001: Duplicación de Materias para MVP**
     *   *Contexto*: Compartir registros de "Materia" complicaría las Sharing Rules Private.
@@ -29,7 +29,7 @@
 ### Diagrama de Relación de Entidades
 Este esquema responde a **[REQ-DATA-002] Historial Académico**.
 
-> **[Ver Diagrama Visual Renderizado (Mermaid)](../../dia_1/2_Relacion_entre_Objetos.md)**
+> **[Ver Diagrama Visual Renderizado (Mermaid)](../../Bitacoras_Sprint_1/dia_1/2_Relacion_entre_Objetos.md)**
 
 ### Especificación de Relaciones
 1.  **Inscripción (Junction Object)**:

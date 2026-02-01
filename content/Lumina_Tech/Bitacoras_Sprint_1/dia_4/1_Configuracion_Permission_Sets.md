@@ -1,7 +1,7 @@
 # 🛡️ Configuración de Permission Sets
 
 **Rol Responsable**: 🛡️ **Salesforce Admin** (System Architect Persona)
-**Destino en Gestor**: [`03-Salesforce_Admin.md`](../Gestor_de_Versiones/03-Salesforce_Admin.md)
+**Destino en Gestor**: [`03-Salesforce_Admin.md`](../../Gestor_de_Versiones/03-Salesforce_Admin.md)
 **Justificación**: "Evitar el 'Profile Explosion'. Usamos Permission Sets para extender funcionalidades específicas (Atomicidad)."
 
 ## 🧠 Análisis de Seguridad (Identity & Access Management)

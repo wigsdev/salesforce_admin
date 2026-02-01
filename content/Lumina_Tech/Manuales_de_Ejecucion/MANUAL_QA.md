@@ -26,7 +26,7 @@
         *   Usa el Sandbox para verificar la funcionalidad.
         *   Si falla: Devuelve la tarjeta a **3. En Progreso** y comenta el error.
         *   Si pasa: Continúa.
-    *   📘 **Guía**: [03-Rol_QA_Tester.md](../../Tutoriales_por_Rol/03-Rol_QA_Tester.md)
+    *   📘 **Guía**: [03-Rol_QA_Tester.md](../Tutoriales_por_Rol/03-Rol_QA_Tester.md)
 
 3.  **Aprobación**
     *   **Movimiento (5 -> 6)**: Mueve la tarjeta a **6. Aprobación TL**.

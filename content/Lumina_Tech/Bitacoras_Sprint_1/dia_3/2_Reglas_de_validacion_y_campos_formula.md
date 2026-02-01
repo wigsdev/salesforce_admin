@@ -1,7 +1,7 @@
 # 🛡️ Reglas de validación y campos formula
 
 **Rol Responsable**: 🛡️ **Salesforce Admin** / 🏗️ **Salesforce Consultant**
-**Destino en Gestor**: [`03-Salesforce_Admin.md`](../Gestor_de_Versiones/03-Salesforce_Admin.md) (Lógica de Negocio)
+**Destino en Gestor**: [`03-Salesforce_Admin.md`](../../Gestor_de_Versiones/03-Salesforce_Admin.md) (Lógica de Negocio)
 
 ## Automatización y Calidad
 

@@ -1,7 +1,7 @@
 # 📝 Registrar en el Doc: gestor de versiones
 
 **Rol Responsable**: 🚀 **Release Manager** (DevOps Engineer Persona)
-**Destino en Gestor**: [`00-PLAN_DE_TRABAJO.md`](../Gestor_de_Versiones/00-PLAN_DE_TRABAJO.md)
+**Destino en Gestor**: [`00-PLAN_DE_TRABAJO.md`](../../Gestor_de_Versiones/00-PLAN_DE_TRABAJO.md)
 **Justificación**: "Trazabilidad completa. 'If it's not documented, it didn't happen'. Preparación para el despliegue a QA."
 
 ## 📦 Release Manifest (Día 4)

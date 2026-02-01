@@ -2,7 +2,7 @@
 
 **Rol Responsable**: 🛡️ **Salesforce Admin**
 **Sprint**: 1 (Fundamentos)
-**Destino en Gestor**: [`03-Salesforce_Admin.md`](../Gestor_de_Versiones/03-Salesforce_Admin.md)
+**Destino en Gestor**: [`03-Salesforce_Admin.md`](../../Gestor_de_Versiones/03-Salesforce_Admin.md)
 
 ## Bitácora de Implementación (Admin)
 

@@ -1,8 +1,8 @@
 # 📝 Tarea: Leer juntos y conocer la Empresa
 
 **Fuentes**: 
-*   [Solicitud.md](../../Solicitud.md)
-*   [SPRINT 1.md](../../SPRINT%201.md)
+*   [Solicitud.md](../../../Solicitud.md)
+*   [SPRINT 1.md](../../../SPRINT%201.md)
 
 ## 1. Análisis de Dolores (Pain Points)
 1.  **Administración Caótica**: Hojas de cálculo rotas.

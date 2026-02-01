@@ -1,7 +1,7 @@
 # 🎨 Tener en cuenta el diseño
 
 **Rol Responsable**: 🏗️ **Salesforce Architect** / 🎨 **UX Specialist**
-**Destino en Gestor**: [`02-Salesforce_Consultant.md`](../Gestor_de_Versiones/02-Salesforce_Consultant.md) (ADR Branding)
+**Destino en Gestor**: [`02-Salesforce_Consultant.md`](../../Gestor_de_Versiones/02-Salesforce_Consultant.md) (ADR Branding)
 
 ## Definición de Identidad Visual (Day 2)
 

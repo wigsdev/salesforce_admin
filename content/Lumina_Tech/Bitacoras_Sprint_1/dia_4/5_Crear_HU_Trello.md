@@ -1,7 +1,7 @@
 # 📋 Crear las HU en TRELLO
 
 **Rol Responsable**: 👑 **Product Owner** (PO & BA Persona)
-**Destino en Gestor**: [`01-Business_Analyst.md`](../Gestor_de_Versiones/01-Business_Analyst.md)
+**Destino en Gestor**: [`01-Business_Analyst.md`](../../Gestor_de_Versiones/01-Business_Analyst.md)
 **Justificación**: "Traducir necesidades de negocio (Seguridad/Roles) en historias ejecutables que aporten valor y sean auditables."
 
 ## 🛡️ Epica: Seguridad Corporativa ("Trust is our #1 Value")

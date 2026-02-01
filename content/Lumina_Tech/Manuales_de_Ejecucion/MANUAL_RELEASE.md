@@ -19,7 +19,7 @@
 ### Rutina de Despliegue
 1.  **Preparar Release**
     *   **Contexto**: Acumula tarjetas en **7. SF Producción** hasta la ventana de mantenimiento (ej. Viernes).
-    *   📘 **Guía**: [04-Rol_Release_Manager.md](../../Tutoriales_por_Rol/04-Rol_Release_Manager.md)
+    *   📘 **Guía**: [04-Rol_Release_Manager.md](../Tutoriales_por_Rol/04-Rol_Release_Manager.md)
 
 2.  **Ejecutar Deploy**
     *   📦 **Acción**: Sube los cambios de Sandbox a Producción.
