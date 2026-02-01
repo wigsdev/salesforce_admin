@@ -9,8 +9,8 @@
 Confirmo que el diseño del Modelo de Datos ha sido documentado y versionado.
 
 ### Actualizaciones Realizadas
-1.  **Modelo de Datos**: La estructura diseñada por el Consultant ha sido volcada a `Gestor_de_Versiones/02-Salesforce_Consultant.md` (como plan).
-2.  **Diccionario de Datos**: La lista de campos creada por el Admin se ha registrado preliminarmente en `Gestor_de_Versiones/03-Salesforce_Admin.md` para referencia futura.
+1.  **Modelo de Datos**: La estructura diseñada por el Consultant ha sido volcada a [02-Salesforce_Consultant.md](../../Gestor_de_Versiones/02-Salesforce_Consultant.md) (como plan).
+2.  **Diccionario de Datos**: La lista de campos creada por el Admin se ha registrado preliminarmente en [03-Salesforce_Admin.md](../../Gestor_de_Versiones/03-Salesforce_Admin.md) para referencia futura.
 3.  **Checklist**: Se ha marcado el progreso del Día 1 en el tablero maestro.
 
 ### Alerta de Dependencia

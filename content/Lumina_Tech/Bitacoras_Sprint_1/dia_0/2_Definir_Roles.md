@@ -1,9 +1,9 @@
 # 📝 Tarea: Definir Roles
 
-**Fuente**: Carpetas `Tutoriales_por_Rol` y `Solicitud.md`.
+**Fuente**: Carpetas [Tutoriales_por_Rol](../../Tutoriales_por_Rol) y [Solicitud.md](../../Archivos_intermedios/Enunciados_y_Requerimientos/Solicitud.md).
 
 ## 1. Roles del Equipo de Proyecto (Agile Team)
-Basado en la estructura definida en `content/Lumina_Tech/Tutoriales_por_Rol`:
+Basado en la estructura definida en [Tutoriales_por_Rol](../../Tutoriales_por_Rol):
 
 *   **Product Owner (PO)**: Define el "Qué" (Dra. Vance / Proxy). Prioriza el Backlog.
 *   **Scrum Master**: Facilita el proceso y elimina bloqueos.

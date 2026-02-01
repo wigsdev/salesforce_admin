@@ -17,6 +17,6 @@
 4.  **Permisos**: App asignada a perfiles Admin, Profesor y Administrativo.
 
 ### Pasos de Consolidación
-1.  Actualizar `00-PLAN_DE_TRABAJO.md` marcando Día 2 como COMPLETO.
-2.  Verificar que `03-Salesforce_Admin.md` tenga los pasos de configuración visual.
+1.  Actualizar [00-PLAN_DE_TRABAJO.md](../../Gestor_de_Versiones/00-PLAN_DE_TRABAJO.md) marcando Día 2 como COMPLETO.
+2.  Verificar que [03-Salesforce_Admin.md](../../Gestor_de_Versiones/03-Salesforce_Admin.md) tenga los pasos de configuración visual.
 3.  Cerrar Sprint Task en Jira/Trello.

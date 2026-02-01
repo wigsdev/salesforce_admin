@@ -17,5 +17,5 @@
 4.  **UX**: Creado campo fórmula `Materia_Display__c` para mejorar reportes.
 
 ### Pasos de Consolidación
-1.  Actualizar `03-Salesforce_Admin.md` con las nuevas fórmulas y reglas.
-2.  Actualizar `07-SPRINT_1.md` marcando progreso del Sprint.
+1.  Actualizar [03-Salesforce_Admin.md](../../Gestor_de_Versiones/03-Salesforce_Admin.md) con las nuevas fórmulas y reglas.
+2.  Actualizar [07-SPRINT_1.md](../../Gestor_de_Versiones/07-SPRINT_1.md) marcando progreso del Sprint.

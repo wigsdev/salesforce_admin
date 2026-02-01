@@ -25,7 +25,7 @@ Documentamos los componentes XML creados para el `package.xml` de despliegue.
 3.  [x] **Naming Convention**: Todos los sets usan Snake_Case y prefijos claros.
 
 ### Instrucciones de Consolidación
-Actualizar los siguientes documentos maestros en `Gestor_de_Versiones`:
-*   Agregar definiciones de seguridad a `02-Salesforce_Consultant.md`.
-*   Listar nuevos sets en `03-Salesforce_Admin.md`.
-*   Marcar Hito de Seguridad en `07-SPRINT_1.md`.
+Actualizar los siguientes documentos maestros en [Gestor_de_Versiones](../../Gestor_de_Versiones/):
+*   Agregar definiciones de seguridad a [02-Salesforce_Consultant.md](../../Gestor_de_Versiones/02-Salesforce_Consultant.md).
+*   Listar nuevos sets en [03-Salesforce_Admin.md](../../Gestor_de_Versiones/03-Salesforce_Admin.md).
+*   Marcar Hito de Seguridad en [07-SPRINT_1.md](../../Gestor_de_Versiones/07-SPRINT_1.md).

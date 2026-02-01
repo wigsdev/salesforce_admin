@@ -1,6 +1,6 @@
 # 📝 Tarea: Generar preguntas en el documento para evacuar dudas
 
-**Fuente**: `content/Lumina_Tech/Gestor_de_Versiones/05-Preguntas_y_Dudas.md`
+**Fuente**: [05-Preguntas_y_Dudas.md](../../Gestor_de_Versiones/05-Preguntas_y_Dudas.md)
 **Fecha de Análisis**: 20 Enero 2026 (Sprint 1)
 
 ## Análisis Técnico-Funcional (Simulación Real)

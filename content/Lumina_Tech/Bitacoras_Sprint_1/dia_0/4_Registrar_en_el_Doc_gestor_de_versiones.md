@@ -21,7 +21,7 @@ Como Release Manager, confirmo que la información generada en las tareas de an�
     *   **Decision Clave**: Duplicación de Materias para MVP (Sprint 1) para garantizar seguridad sin complejidad.
 
 ### 4. Estructura del Repositorio
-Se valida la integridad de la carpeta `content/Lumina_Tech/Gestor_de_Versiones_mod/`.
+Se valida la integridad de la carpeta [Gestor_de_Versiones](../../Gestor_de_Versiones/).
 *   `00-MASTER_INDEX.md`: Índice actualizado.
 *   Archivos nombrados correctamente según convención.
 
