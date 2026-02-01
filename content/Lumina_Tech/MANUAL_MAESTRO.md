@@ -11,24 +11,20 @@ Este proyecto se ejecuta con **Roles Especializados**. No intentes leer todo.
 Haz clic en tu rol para abrir tu **Manual de Misión Crítica**:
 
 ### 1. El Equipo de Definición (Planning) 🧠
-*   🕵️ **[SOY BUSINESS ANALYST (BA)](MANUAL_BA.md)**
-    *   *Tu Misión*: Hablar con el cliente, definir requisitos y escribir Historias de Usuario.
-    *   *Entregable*: Tarjetas en Trello listas para desarrollar.
+*   👔 **[SOY PRODUCT OWNER (PO)](MANUAL_PO.md)**: Priorizo el Backlog.
+*   🕵️ **[SOY BUSINESS ANALYST (BA)](MANUAL_BA.md)**: Detallo los Requisitos.
 
 ### 2. El Equipo de Construcción (Build) 🔨
-*   🛡️ **[SOY SALESFORCE ADMIN](MANUAL_ADMIN.md)**
-    *   *Tu Misión*: Configurar Objetos, Campos, Flows y Seguridad.
-    *   *Entregable*: Funcionalidad lista en Sandbox.
+*   🏗️ **[SOY TEAM LEAD / CONSULTANT](MANUAL_TL.md)**: Diseño la Solución.
+*   🛡️ **[SOY SALESFORCE ADMIN](MANUAL_ADMIN.md)**: Configuro la Plataforma.
 
-### 3. El Equipo de Calidad (Check) 🧪
-*   🧪 **[SOY QA TESTER](MANUAL_QA.md)**
-    *   *Tu Misión*: Intentar romper lo que construyó el Admin. Validar Criterios de Aceptación.
-    *   *Entregable*: Tarjetas marcadas como "Aprobado".
+### 3. El Equipo de Soporte (Support) ⚙️
+*   ⏱️ **[SOY SCRUM MASTER](MANUAL_SCRUM.md)**: Facilito el Proceso.
+*   ♾️ **[SOY DEVOPS](MANUAL_DEVOPS.md)**: Preparo Datos y Ambientes.
 
-### 4. El Equipo de Despliegue (Release) 🚀
-*   🚀 **[SOY RELEASE MANAGER](MANUAL_RELEASE.md)**
-    *   *Tu Misión*: Llevar el código aprobado a Producción y versionarlo.
-    *   *Entregable*: Sistema en vivo y Gestor de Versiones actualizado.
+### 4. El Equipo de Calidad & Salida (Release) 🚀
+*   🧪 **[SOY QA TESTER](MANUAL_QA.md)**: Valido la Funcionalidad.
+*   🚀 **[SOY RELEASE MANAGER](MANUAL_RELEASE.md)**: Despliego a Producción.
 
 ---
 
