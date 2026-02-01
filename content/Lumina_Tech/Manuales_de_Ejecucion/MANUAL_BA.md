@@ -21,7 +21,7 @@
 
 1.  **Analizar Requisitos**
     *   📝 **SPEC**: Identifica los actores (Alumnos, Profesores) y sus dolores.
-    *   📘 **Guía**: [01-Rol_Business_Analyst.md](../Tutoriales_por_Rol/01-Rol_Business_Analyst.md)
+    *   📘 **Guía**: [01-Rol_Business_Analyst.md](../../Tutoriales_por_Rol/01-Rol_Business_Analyst.md)
 
 2.  **Generar Preguntas Q&A**
     *   📝 **SPEC**: Si algo no está claro ("¿La matrícula es anual o semestral?"), documéntalo para preguntar al PO.

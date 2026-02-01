@@ -24,7 +24,7 @@
         *   Usa Data Import Wizard o Inspector para cargar 5 Carreras (Ingeniería, Derecho, etc.).
         *   Carga 20 Materias vinculadas.
     *   *Por qué*: Para que el QA no tenga que crear datos manuales uno por uno.
-    *   📘 **Guía**: [09-Rol_DevOps_Specialist.md](../Tutoriales_por_Rol/09-Rol_DevOps_Specialist.md)
+    *   📘 **Guía**: [09-Rol_DevOps_Specialist.md](../../Tutoriales_por_Rol/09-Rol_DevOps_Specialist.md)
 
 *   👋 **HANDOFF**: Avisa al QA: "Datos de prueba listos. Hay 20 materias para jugar".
 
