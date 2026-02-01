@@ -1,25 +1,26 @@
 # 🛡️ Diagrama de Arquitectura de Seguridad
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#fff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','fontSize':'13px'}}}%%
 graph TB
-    subgraph "Organization-Wide Defaults (OWD)"
-        OWD1["Carrera: Public Read Only"]
-        OWD2["Materia: Public Read Only"]
-        OWD3["Alumno: Private"]
-        OWD4["Inscripción: Controlled by Parent"]
+    subgraph OWD["<b>Organization-Wide Defaults (OWD)</b>"]
+        OWD1["Carrera:<br/>Public Read Only"]
+        OWD2["Materia:<br/>Public Read Only"]
+        OWD3["Alumno:<br/>Private"]
+        OWD4["Inscripción:<br/>Controlled by Parent"]
     end
     
-    subgraph "Perfiles"
+    subgraph PROF["<b>Perfiles</b>"]
         P1["👔 Bedel<br/>CRUD: Alumno, Inscripción<br/>FLS: Nota = Read-Only"]
         P2["👨‍🏫 Profesor<br/>Read: Alumno (solo sus materias)<br/>FLS: Nota = Edit"]
     end
     
-    subgraph "Permission Sets"
+    subgraph PS["<b>Permission Sets</b>"]
         PS1["🔐 Lumina_MFA_Access<br/>MFA Habilitado"]
         PS2["📊 Dashboard_Rectoria<br/>Acceso a reportes ejecutivos"]
     end
     
-    subgraph "Field-Level Security (FLS)"
+    subgraph FLS["<b>Field-Level Security (FLS)</b>"]
         FLS1["DNI: Read-Only para Profesor"]
         FLS2["Nota_Final: Edit para Profesor"]
         FLS3["Nota_Final: Read-Only para Bedel"]
@@ -35,14 +36,13 @@ graph TB
     P1 -.-> PS1
     P2 -.-> PS1
     
-    style OWD1 fill:#e3f2fd
-    style OWD2 fill:#e3f2fd
-    style OWD3 fill:#ffebee
-    style OWD4 fill:#fff3e0
-    style P1 fill:#c8e6c9
-    style P2 fill:#c8e6c9
-    style PS1 fill:#f8bbd0
-    style PS2 fill:#f8bbd0
+    classDef owdStyle fill:#fff,stroke:#000,stroke-width:2px,color:#000
+    classDef profileStyle fill:#f5f5f5,stroke:#000,stroke-width:2px,color:#000
+    classDef psStyle fill:#e0e0e0,stroke:#000,stroke-width:2px,color:#000,stroke-dasharray: 5 5
+    
+    class OWD1,OWD2,OWD3,OWD4 owdStyle
+    class P1,P2 profileStyle
+    class PS1,PS2,FLS1,FLS2,FLS3,FLS4 psStyle
 ```
 
 ## Matriz de Permisos

@@ -1,25 +1,25 @@
 # 🔄 Diagrama de Flujo: Proceso Trello (8 Columnas)
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#fff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','secondaryColor':'#f5f5f5','tertiaryColor':'#e0e0e0','fontSize':'14px'}}}%%
 graph LR
-    A["1. Backlog<br/>(PO + BA)"] --> B["2. Sprint Backlog<br/>(PO)"]
-    B --> C["3. En Progreso<br/>(Admin)"]
-    C --> D["4. SF Desarrollo<br/>(Admin)"]
-    D --> E["5. SF QA<br/>(QA Tester)"]
-    E -->|❌ Falla| C
-    E -->|✅ Pasa| F["6. Aprobación TL<br/>(Team Lead)"]
-    F -->|❌ Rechaza| C
-    F -->|✅ Aprueba| G["7. SF Producción<br/>(Release Manager)"]
-    G --> H["8. Terminado<br/>(Done)"]
+    A["<b>1. Backlog</b><br/>(PO + BA)"] --> B["<b>2. Sprint Backlog</b><br/>(PO)"]
+    B --> C["<b>3. En Progreso</b><br/>(Admin)"]
+    C --> D["<b>4. SF Desarrollo</b><br/>(Admin)"]
+    D --> E["<b>5. SF QA</b><br/>(QA Tester)"]
+    E -->|"❌ Falla"| C
+    E -->|"✅ Pasa"| F["<b>6. Aprobación TL</b><br/>(Team Lead)"]
+    F -->|"❌ Rechaza"| C
+    F -->|"✅ Aprueba"| G["<b>7. SF Producción</b><br/>(Release Manager)"]
+    G --> H["<b>8. Terminado</b><br/>(Done)"]
     
-    style A fill:#e3f2fd
-    style B fill:#fff3e0
-    style C fill:#fff9c4
-    style D fill:#f0f4c3
-    style E fill:#ffe0b2
-    style F fill:#ffccbc
-    style G fill:#d1c4e9
-    style H fill:#c8e6c9
+    classDef defaultStyle fill:#fff,stroke:#000,stroke-width:3px,color:#000
+    classDef progressStyle fill:#f5f5f5,stroke:#000,stroke-width:3px,color:#000
+    classDef doneStyle fill:#e0e0e0,stroke:#000,stroke-width:3px,color:#000
+    
+    class A,B defaultStyle
+    class C,D,E,F,G progressStyle
+    class H doneStyle
 ```
 
 ## Leyenda de Responsables
