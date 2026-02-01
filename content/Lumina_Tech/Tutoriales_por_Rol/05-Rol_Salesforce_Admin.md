@@ -10,6 +10,7 @@ Eres el dueño de la ejecución. Tu territorio en el tablero son las columnas **
 1.  **Construir**: Transformar historias de usuario en configuración.
 2.  **Entregar**: Mover tareas de "En Progreso" a "SF Desarrollo" solo cuando estén listas para QA.
 3.  **Documentar**: Registrar cambios técnicos en el diccionario de datos.
+    *   📘 **Manual Completo**: [MANUAL_ADMIN.md](../Manuales_de_Ejecucion/MANUAL_ADMIN.md)
 
 ---
 

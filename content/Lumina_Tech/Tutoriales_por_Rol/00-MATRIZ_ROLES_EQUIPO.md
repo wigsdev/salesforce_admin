@@ -4,11 +4,26 @@
 *   **Base Común**: Todos los 6 integrantes son **Salesforce Admins**. Todos configuran, todos construyen en Salesforce.
 *   **Sombreros Especiales**: Además de construir, cada uno asume una responsabilidad específica para garantizar el orden del proyecto.
 
+## 🎯 Estructura de Roles del Proyecto
+
+**Total de Roles**: 10 roles en el ecosistema Salesforce
+*   **Rol Base (Transversal)**: 🛡️ **Salesforce Admin** - Los 6 integrantes tienen esta capacidad
+*   **Roles Especializados (Activos en Sprint 1)**: 8 roles distribuidos entre los 6 integrantes
+    1. Product Owner
+    2. Business Analyst
+    3. Salesforce Consultant
+    4. Team Lead
+    5. Scrum Master
+    6. QA Tester
+    7. Release Manager
+    8. DevOps Specialist
+*   **Rol Futuro (Inactivo en Sprint 1)**: 💻 **Salesforce Developer** - Reservado para mejoras con código personalizado
+
 ---
 
 ## 🗺️ Matriz de Asignación (Propuesta)
 
-Para cubrir los **8 roles** con **6 personas**, aplicamos la lógica de "Sinergia de Funciones". Agrupamos roles compatibles en una misma persona.
+Para distribuir los **8 roles especializados** entre **6 personas**, aplicamos la lógica de "Sinergia de Funciones". Agrupamos roles compatibles en una misma persona.
 
 ### 👤 Integrante 1: El Estratega de Negocio
 **Roles**: 👔 **Product Owner (PO)** + 🕵️ **Business Analyst (BA)**
