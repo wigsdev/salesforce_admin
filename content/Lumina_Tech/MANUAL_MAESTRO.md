@@ -2,7 +2,7 @@
 
 **Rol**: Project Manager & Scrum Master  
 **Proyecto**: Implementación Salesforce - Universidad Lumina Tech  
-**Versión**: 3.0 (Ciclo Completo: Planning + Dev + Deploy)
+**Versión**: 3.1 (Links Activos)
 
 ---
 
@@ -41,7 +41,7 @@ Cuando te toque configurar Salesforce, **NO adivines**. Sigue los tutoriales pas
 *   **Quién**: Salesforce Admin / Consultant.
 *   **Acción**:
     1.  Toma la tarjeta y muévela a "En Progreso".
-    2.  **Consulta la Guía de Implementación** correspondiente (ej. `Guias_Implementacion/05-Tutorial_Validaciones.md`).
+    2.  **Consulta la Guía de Implementación** correspondiente (enlazada abajo).
     3.  Construye la solución en tu **Sandbox (Entorno Dev)**.
 
 ### 3. 🧪 QA / Testing (Validación)
@@ -59,7 +59,7 @@ Cuando te toque configurar Salesforce, **NO adivines**. Sigue los tutoriales pas
 
 ## 📅 FASE 2: Cronograma de Ejecución (Sprint 1)
 
-Sigue este orden. Cada día desbloquea el siguiente.
+Sigue este orden. Cada día desbloquea el siguiente. Haz clic en "Recurso Clave" para ver cómo hacerlo.
 
 ### Día 0: Análisis y Seteo Inicial 🏁
 *   **Foco**: Entender el negocio.
@@ -70,30 +70,32 @@ Sigue este orden. Cada día desbloquea el siguiente.
 
 ### Día 1: Arquitectura de Datos 🏛️
 *   **Foco**: Crear Objetos y Relaciones.
-*   **Recurso Clave**: `Guias_Implementacion/01-Tutorial_Carrera.md` y `02-Tutorial_Materia.md`.
+*   **Recursos Claves**: 
+    *   [01-Tutorial_Carrera.md](Guias_Implementacion/01-Tutorial_Carrera.md)
+    *   [02-Tutorial_Materia.md](Guias_Implementacion/02-Tutorial_Materia.md)
 *   **Tareas**:
-    1.  [Crear Objetos Custom](dia_1/1_Creacion_de_objetos_Custom_Standard.md) -> *Usa Guía 01, 02, 03*.
-    2.  [Relacionar Objetos](dia_1/2_Relacion_entre_Objetos.md) -> *Usa Guía 04*.
+    1.  [Crear Objetos Custom](dia_1/1_Creacion_de_objetos_Custom_Standard.md)
+    2.  [Relacionar Objetos](dia_1/2_Relacion_entre_Objetos.md)
     3.  **Acción Trello**: Crear tarjetas para "Objeto Carrera", "Objeto Materia".
 
 ### Día 2: Branding y UI 🎨
 *   **Foco**: Look & Feel.
-*   **Recurso Clave**: `Guias_Implementacion/07-Tutorial_App_Builder.md`.
+*   **Recurso Clave**: [07-Tutorial_App_Builder.md](Guias_Implementacion/07-Tutorial_App_Builder.md).
 *   **Tareas**:
     1.  [Configurar Dominio y Logo](dia_2/2_Lograr_hacer_el_dominio_personalizado.md).
     2.  **Acción Trello**: Crear tarjeta "Configurar Tema Visual".
 
 ### Día 3: Lógica y Calidad 🧠
 *   **Foco**: Validaciones y Automatización.
-*   **Recurso Clave**: `Guias_Implementacion/05-Tutorial_Validaciones.md`.
+*   **Recurso Clave**: [05-Tutorial_Validaciones.md](Guias_Implementacion/05-Tutorial_Validaciones.md).
 *   **Tareas**:
     1.  [Crear Reglas de Validación](dia_3/2_Reglas_de_validacion_y_campos_formula.md).
     2.  [Crear Fórmulas](dia_3/1_Campos_adicionales.md).
-    3.  **Acción Trello**: Mover tarjeta a QA para testear que la regla bloquee datos incorrectos.
+    3.  **Acción Trello**: Mover tarjeta a QA para testear validaciones.
 
 ### Día 4: Seguridad Blindada 🛡️
 *   **Foco**: Permisos.
-*   **Recurso Clave**: `Guias_Implementacion/06-Tutorial_Seguridad.md`.
+*   **Recurso Clave**: [06-Tutorial_Seguridad.md](Guias_Implementacion/06-Tutorial_Seguridad.md).
 *   **Tareas**:
     1.  [Configurar Permission Sets](dia_4/1_Configuracion_Permission_Sets.md).
     2.  [Definir OWD (Sharing)](dia_4/3_Visibilidad_Objetos_Campos.md).
