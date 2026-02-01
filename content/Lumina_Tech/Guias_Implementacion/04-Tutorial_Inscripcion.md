@@ -45,11 +45,19 @@ Relacionar "Muchos Alumnos" con "Muchas Materias" mediante un objeto intermedio 
 5.  **Next** > **Save**.
 
 ### Paso 5: Campo de Nota Final (Crucial HU-003)
-1.  **New** > Tipo: **Number**.
-2.  Label: `Nota Final`.
-3.  Length: `2`. Decimal Places: `2`.
-    *   *Resultado*: Permite notas como 10.00 o 09.50.
-4.  **Next** > **Next** > **Save**.
+*Este campo es necesario para calcular aprobaciones.*
+
+1.  En el Object Manager de **Inscripción**, ve a **Fields & Relationships**.
+2.  Haz clic en el botón **New**.
+3.  Selecciona el Data Type: **Number**. Haz clic en **Next**.
+4.  Completa los detalles exactos:
+    *   **Field Label**: `Nota Final`
+    *   **Length**: `2`
+    *   **Decimal Places**: `2`
+    *   *Resultado visible*: `10.00`
+5.  Haz clic en **Next** (Field Level Security). Dejar visible.
+6.  Haz clic en **Next** (Add to Page Layout).
+7.  Haz clic en **Save**.
 
 ---
 
