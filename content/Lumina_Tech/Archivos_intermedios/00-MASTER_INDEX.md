@@ -4,6 +4,20 @@
 
 ---
 
+## 📑 Navegación Rápida
+
+| Fase | Descripción | Ir a |
+|------|-------------|------|
+| 🏗️ **Fase 1** | Entendimiento y Estrategia | [Ver Fase 1](#%EF%B8%8F-fase-1-entendimiento-y-estrategia) |
+| 👥 **Fase 2** | Roles y Responsabilidades | [Ver Fase 2](#-fase-2-roles-y-responsabilidades) |
+| ⚙️ **Fase 3** | Infraestructura y Diseño | [Ver Fase 3](#%EF%B8%8F-fase-3-infraestructura-y-diseño) |
+| 🛠️ **Fase 4** | Implementación (Construcción) | [Ver Fase 4](#%EF%B8%8F-fase-4-implementación-construcción) |
+| 🏁 **Fase 5** | Entrega y Cierre | [Ver Fase 5](#-fase-5-entrega-y-cierre) |
+
+**💡 Tip**: Si es tu primera vez, comienza por [Fase 1](#%EF%B8%8F-fase-1-entendimiento-y-estrategia). Si ya conoces el proyecto, salta directamente a tu fase.
+
+---
+
 ## 🏗️ Fase 1: Entendimiento y Estrategia
 *Antes de tocar Salesforce, entiende qué vas a construir.*
 

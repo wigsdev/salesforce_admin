@@ -58,6 +58,27 @@ Durante la fase de QA se identificaron y resolvieron los siguientes bugs:
 
 ---
 
+## 🎓 Lecciones Aprendidas (Retrospectiva del Equipo)
+
+### ✅ Lo que Funcionó Bien (Keep)
+- **Uso de Trello**: La visualización del flujo de trabajo (8 columnas) permitió transparencia total del progreso
+- **Separación clara de roles**: BA, QA, Admin, Consultant trabajaron sin pisarse
+- **Documentación en paralelo**: Registrar decisiones mientras se desarrollaba evitó "amnesia técnica"
+- **Schema Builder**: Visualizar el ERD antes de construir previno errores de diseño
+
+### 🔄 Áreas de Mejora (Improve)
+- **Naming Conventions**: Hubo que renombrar campos (`Duration` → `Duracion_Anios__c`) porque no se definieron estándares al inicio
+- **Comunicación entre roles**: Los handoffs BA → Admin necesitaban más contexto
+- **Testing temprano**: QA entró tarde; debería validar criterios de aceptación ANTES de construir
+
+### 💡 Acciones para Sprint 2 (Action Items)
+1. **Crear Diccionario de Datos ANTES de construir**: Definir todos los API Names en Día 0
+2. **Daily Standups estructurados**: 5 min diarios con formato: "Hice / Haré / Bloqueos"
+3. **Definition of Done (DoD)**: Checklist obligatorio antes de mover a "Terminado"
+4. **Pair Programming**: Admin + Consultant trabajando juntos en configuraciones complejas
+
+---
+
 ## 🎯 Próximos Pasos (Sprint 2)
 
 1. Automatización de procesos (Flows)
