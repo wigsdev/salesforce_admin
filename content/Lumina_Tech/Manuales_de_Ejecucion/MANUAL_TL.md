@@ -16,6 +16,8 @@
 
 ## 📅 CRONOGRAMA DE EJECUCIÓN
 
+> **Nota**: El Team Lead trabaja de forma **reactiva** durante los días 1-4. Revisa las tareas a medida que el QA las aprueba y mueve a **6. Aprobación TL**.
+
 ### Rutina de Revisión
 1.  **Auditoría**
     *   **Contexto**: La tarjeta está en **6. Aprobación TL**.

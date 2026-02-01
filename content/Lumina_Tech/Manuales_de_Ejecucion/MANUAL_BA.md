@@ -44,6 +44,21 @@
 
 ---
 
+### Día 2: Branding y UX
+*   🛑 **PRE-REQ**: Comprender los requerimientos visuales de la universidad.
+
+1.  **Crear Historias de Usuario en Trello (Branding)**
+    *   📝 **SPEC**:
+        *   **HU-004**: Dominio Seguro (My Domain)
+        *   **HU-005**: Identidad Institucional (Logo y Colores)
+        *   **HU-006**: App de Gestión Central
+    *   *Criterios*: Cada HU debe tener criterios de aceptación visuales medibles.
+    *   📘 **Guía**: [5_Crear_las_HU_en_TRELLO.md](../Bitacoras_Sprint_1/dia_2/5_Crear_las_HU_en_TRELLO.md)
+
+*   👋 **HANDOFF**: Mueve Tarjetas a "To Do". Avisa al **Admin**: "HUs de branding listas para implementar".
+
+---
+
 ### Día 3: Reglas de Negocio
 *   🛑 **PRE-REQ**: Admin reporta que los objetos existen.
 
@@ -52,3 +67,20 @@
     *   📘 **Guía**: [4_Crear_las_HU_en_TRELLO.md](../Bitacoras_Sprint_1/dia_3/4_Crear_las_HU_en_TRELLO.md)
 
 *   👋 **HANDOFF**: Mueve Tarjeta a "To Do". Avisa al **Admin**: "Reglas de validación listas para implementar".
+
+---
+
+### Día 4: Seguridad
+*   🛑 **PRE-REQ**: Comprender los requerimientos de seguridad y compliance.
+
+1.  **Crear Historias de Usuario en Trello (Seguridad)**
+    *   📝 **SPEC**:
+        *   **HU-009**: Matriz de Visibilidad (Privacidad por defecto)
+        *   **HU-010**: Acceso Seguro (MFA)
+        *   **HU-011**: Segregación de Funciones (SoD)
+    *   *Criterios*: Cada HU debe incluir tests negativos y positivos para validación de permisos.
+    *   📘 **Guía**: [5_Crear_HU_Trello.md](../Bitacoras_Sprint_1/dia_4/5_Crear_HU_Trello.md)
+
+*   👋 **HANDOFF**: Mueve Tarjetas a "To Do". Avisa al **Admin** y **QA**: "HUs de seguridad listas. Requieren pruebas exhaustivas de permisos".
+
+

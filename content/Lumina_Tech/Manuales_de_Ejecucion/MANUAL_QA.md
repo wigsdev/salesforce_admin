@@ -16,6 +16,8 @@
 
 ## 📅 CRONOGRAMA DE EJECUCIÓN
 
+> **Nota**: El QA trabaja de forma **reactiva** durante los días 1-4. No tiene un cronograma fijo por día, sino que prueba las tareas a medida que el Admin las completa y mueve a **4. SF Desarrollo**.
+
 ### Rutina de Pruebas
 1.  **Tomar la Tarea**
     *   **Movimiento (4 -> 5)**: Mueve la tarjeta desde **4. SF Desarrollo** a **5. SF QA**.

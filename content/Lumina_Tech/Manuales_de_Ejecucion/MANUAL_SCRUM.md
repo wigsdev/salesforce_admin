@@ -16,6 +16,8 @@
 
 ## 📅 CRONOGRAMA DE EJECUCIÓN
 
+> **Nota**: El Scrum Master trabaja **todos los días (0-4)** facilitando el proceso. Su rutina es transversal a todo el Sprint.
+
 ### Diario (La Rutina)
 1.  **Daily Stand-up (Síncrona o Asíncrona)**
     *   🔄 **SYNC**: Pregunta a los 5 roles:

@@ -16,6 +16,8 @@
 
 ## 📅 CRONOGRAMA DE EJECUCIÓN
 
+> **Nota**: El Release Manager trabaja principalmente al **final del Sprint** (típicamente día 4 o viernes). Acumula las tareas aprobadas por el TL durante los días 1-4 y ejecuta el deploy en una ventana de mantenimiento coordinada.
+
 ### Rutina de Despliegue
 1.  **Preparar Release**
     *   **Contexto**: Acumula tarjetas en **7. SF Producción** hasta la ventana de mantenimiento (ej. Viernes).
