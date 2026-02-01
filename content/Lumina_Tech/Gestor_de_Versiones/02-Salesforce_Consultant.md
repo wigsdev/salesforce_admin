@@ -29,7 +29,7 @@
 ### Diagrama de Relación de Entidades
 Este esquema responde a **[REQ-DATA-002] Historial Académico**.
 
-> **[Ver Diagrama Visual Renderizado (Mermaid)](../../Bitacoras_Sprint_1/dia_1/2_Relacion_entre_Objetos.md)**
+> **[Ver Diagrama Visual Renderizado (Mermaid)](../Bitacoras_Sprint_1/dia_1/2_Relacion_entre_Objetos.md)**
 
 ### Especificación de Relaciones
 1.  **Inscripción (Junction Object)**:
@@ -47,7 +47,7 @@ Este esquema responde a **[REQ-DATA-002] Historial Académico**.
 ---
 
 ## 📅 DIA 2 - Identidad Visual y App
-**Fuente**: [Identidad_Colores.md](../../Identidad_Colores.md)
+**Fuente**: [Identidad_Colores.md](../Archivos_intermedios/Enunciados_y_Requerimientos/Identidad_Colores.md)
 
 ### Estrategia de Branding
 Para evitar la apariencia "genérica" de Salesforce y fomentar la adopción de los docentes:
