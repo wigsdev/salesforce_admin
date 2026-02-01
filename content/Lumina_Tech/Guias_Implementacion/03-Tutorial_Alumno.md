@@ -30,6 +30,7 @@ Crear el objeto `Alumno__c` configurando restricciones de unicidad para evitar d
 4.  **Opciones Críticas**:
     *   ☑️ **Required**: Sí.
     *   ☑️ **Unique**: Sí.
+    *   ☑️ **External ID**: Sí. (Crucial para integraciones futuras).
     *   Seleccione: **"Treat "ABC" and "abc" as duplicate values (case insensitive)"**.
 5.  **Next** > **Save & New**.
 

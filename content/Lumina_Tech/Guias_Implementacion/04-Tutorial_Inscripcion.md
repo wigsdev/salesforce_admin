@@ -44,6 +44,13 @@ Relacionar "Muchos Alumnos" con "Muchas Materias" mediante un objeto intermedio 
 4.  **Use first value as default**: ☑️ (Cursando).
 5.  **Next** > **Save**.
 
+### Paso 5: Campo de Nota Final (Crucial HU-003)
+1.  **New** > Tipo: **Number**.
+2.  Label: `Nota Final`.
+3.  Length: `2`. Decimal Places: `2`.
+    *   *Resultado*: Permite notas como 10.00 o 09.50.
+4.  **Next** > **Next** > **Save**.
+
 ---
 
 ## 🚀 Resultado Final (Efecto Many-to-Many)

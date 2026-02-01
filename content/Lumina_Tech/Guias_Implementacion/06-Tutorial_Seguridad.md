@@ -25,38 +25,42 @@ Configurar el modelo de seguridad "Zero Trust". Por defecto nadie ve nada, a men
     *   *Significado*: Todos pueden ver las carreras, pero solo el Admin puede editarlas.
 7.  **Save**. (Salesforce tardará unos minutos recálculando).
 
-### Parte 2: Perfiles (Profiles)
-*Define qué puede hacer un rol específico.*
+### Parte 2: Perfiles (SoD - HU-011)
+*Separamos funciones: Bedelía inscribe, Profesores califican.*
 
-1.  **Setup > Profiles**.
-2.  Busca **Standard User** (o Usuario Estándar).
-3.  Click en la flecha o botón **Clone**.
-4.  **Profile Name**: `Lumina Profesor`. Save.
-5.  Click en el nombre `Lumina Profesor` para editarlo.
-6.  Click **Object Settings**.
-7.  Busca **Alumno**. Click Edit.
-    *   **Tab Settings**: Default On.
-    *   **Object Permissions**: ☑️ Read. (Desmarcar Create, Edit, Delete).
-    *   **Save**.
-8.  Busca **Inscripción**. Click Edit.
-    *   **Object Permissions**: ☑️ Read, ☑️ Create, ☑️ Edit. (Desmarcar Delete).
-    *   *Lógica*: El profesor carga notas (Edit), pero no puede borrar al alumno de la materia.
+#### Perfil Profesor
+1.  **Setup > Profiles** > Clone **Standard User** > `Lumina Profesor`.
+2.  **Object Settings > Inscripción**.
+    *   ☑️ Read, ☑️ Edit.
+    *   **Field Permissions**: `Nota Final` -> ☑️ Edit.
 
-### Parte 3: Crear un Usuario de Prueba
-1.  **Setup > Users**.
-2.  **New User**.
-3.  Nombre: "Profesor Test".
-4.  **Profile**: Selecciona `Lumina Profesor`.
+#### Perfil Bedel (Administrativo)
+1.  Clone **Standard User** > `Lumina Bedel`.
+2.  **Object Settings > Inscripción**.
+    *   ☑️ Read, ☑️ Create, ☑️ Edit.
+    *   **Field Permissions**: `Nota Final` -> ☑️ **Read Access** (⚠️ Uncheck Edit).
+    *   *Resultado*: El Bedel puede inscribir alumnos, pero NO puede ponerles nota.
+
+### Parte 3: MFA Permission Set (HU-010)
+1.  **Setup > Permission Sets > New**.
+2.  Label: `Lumina_MFA_Access`.
+3.  Click en **System Permissions** > **Edit**.
+4.  Marca: ☑️ **Multi-Factor Authentication for User Interface Logins**.
 5.  **Save**.
+
+### Parte 4: Asignación a Usuarios
+1.  **Setup > Users > New User**.
+2.  Crea "Bedel Test". Perfil: `Lumina Bedel`.
+3.  Crea "Profe Test". Perfil: `Lumina Profesor`.
+4.  **Permission Set Assignments** > Asigna `Lumina_MFA_Access` a ambos (para simular, aunque en Dev no tengas app móvil).
 
 ---
 
 ## ✅ Verificación de Éxito (Login As)
-1.  En la lista de Users, busca "Profesor Test".
-2.  Click **Login** (al lado del nombre). *Ahora ves Salesforce como él*.
-3.  Intenta borrar una Inscripción.
-    *   **Resultado**: El botón Delete no existe o da error.
-4.  Intenta editar una Carrera.
-    *   **Resultado**: Error de permisos insuficientes.
+1.  Loguéate como **Bedel Test**.
+2.  Abre una Inscripción. Intenta cambiar la Nota.
+    *   **Resultado**: El campo está bloqueado (Candado). ✅
+3.  Loguéate como **Profe Test**.
+    *   **Resultado**: Puedes editar la nota. ✅
 
-¡Sistema seguro activado! 🔐
+¡Seguridad Militar Implementada! 🔐

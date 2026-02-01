@@ -3,65 +3,51 @@
 **Sprint**: 01 (Fundamentos)
 **Día**: 2 (App Building)
 **Rol Responsable**: 🛡️ **Salesforce Admin**
-**HUs Relacionadas**: HU-General (Req. Implementación)
+**HUs Relacionadas**: HU-004 (Dominio), HU-005 (Theme), HU-006 (App)
 
 ---
 
 ## 🎯 Objetivo
-Transformar una lista de objetos aburridos en una **Aplicación Profesional** que la Rectora pueda usar. Aplicaremos los colores institucionales de Lumina Tech.
+Transformar una lista de objetos aburridos en una **Aplicación Profesional**.
 
 ## 🛠️ Procedimiento
 
-### Paso 1: Configurar Temas y Marca (Theming)
+### Paso 1: My Domain (Identidad - HU-004)
+*Requisito obligatorio para componentes modernos.*
+1.  **Setup > My Domain**.
+2.  En "My Domain Details", click **Edit**.
+3.  Cambia el nombre a algo como: `lumina-university-[tunombre]`.
+4.  Click **Save**.
+5.  Espera 2 minutos y refresca la página.
+6.  Click **Deploy to Users**. (¡Crucial!).
+
+### Paso 2: Configurar Temas y Marca (Theming - HU-005)
 1.  **Setup > User Interface > Themes and Branding**.
 2.  Click **New Theme**.
 3.  **Theme Details**:
     *   Theme Name: `Lumina Official`.
-    *   Description: "Tema corporativo 2026".
 4.  **Branding**:
     *   **Brand Color**: `#005A9C` (Lumina Blue).
-    *   **Page Background Color**: `#F4F6F9` (Soft Grey).
-    *   **Global Header Background**: `#00477D` (Deep Blue).
-    *   **Brand Image (Logo)**: Sube el logo `lumina_logo.png` (si lo tienes) o usa uno genérico de educación.
-5.  **Save** y luego click en **Activate** (Botón arriba a la derecha).
+    *   **Brand Image (Logo)**: Sube el logo corporativo.
+5.  **Save** > **Activate**.
 
-### Paso 2: Crear la Lightning App
+### Paso 3: Crear la Lightning App (HU-006)
 1.  **Setup > App Manager**.
-2.  Click **New Lightning App** (Botón arriba a la derecha).
+2.  Click **New Lightning App**.
 3.  **App Details**:
-    *   **App Name**: `Gestión Académica Lumina`.
-    *   **Developer Name**: `Gestion_Academica`.
-    *   **Description**: "Plataforma central para administración de alumnos."
-    *   **Image**: Sube el mismo logo.
-    *   **Color**: `#005A9C` (El sistema tomará esto para la barra de carga).
-    *   Click **Next**.
-4.  **App Options**:
-    *   Navigation Style: **Standard Navigation**.
-    *   Supported Form Factors: **Desktop and Phone**.
-    *   Setup Experience: **Setup (Full)**.
-    *   Click **Next**.
-5.  **Utility Items**: (Opcional) Dejar vacío por ahora. Click **Next**.
-6.  **Navigation Items** (¡Importante!):
-    *   Busca y mueve a la derecha (Selected Items) en este orden:
-        1.  **Home** (Standard).
-        2.  **Alumnos**.
-        3.  **Carreras**.
-        4.  **Materias**.
-        5.  **Inscripciones**.
-    *   Click **Next**.
-7.  **User Profiles** (Seguridad):
-    *   Selecciona:
-        *   `System Administrator` (Para ti).
-        *   `Lumina Profesor` (Para el usuario que creaste).
-    *   Click **Save & Finish**.
+    *   Name: `Gestión Académica Lumina`.
+    *   Color: `#005A9C`.
+4.  **Navigation Items** (Mueve a la derecha):
+    *   Home, Alumnos, Carreras, Materias, Inscripciones.
+5.  **User Profiles**:
+    *   System Administrator, Lumina Profesor, Lumina Bedel.
+6.  **Save & Finish**.
 
 ---
 
 ## ✅ Verificación de Éxito
-1.  Click en el **App Launcher** (9 puntos, arriba a la izquierda).
-2.  Busca "Gestión" o "Lumina".
-3.  Verás tu App con el logo y el color azul.
-4.  Haz click. Siente la satisfacción de ver la barra de navegación azul `#005A9C`.
-5.  Verifica que las pestañas (Tabs) de Alumnos, Carreras, etc., estén ahí.
+1.  Mira la URL de tu navegador. ¿Dice `lumina-university...`? ✅
+2.  Abre el App Launcher. ¿Ves "Gestión Académica Lumina"? ✅
+3.  ¿El sistema es Azul Lumina en lugar del Azul Salesforce default? ✅
 
-¡Ahora sí parece un sistema real! 🏛️
+¡Transformación Digital completada! 🏛️
