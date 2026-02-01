@@ -7,7 +7,7 @@
 ---
 
 ## 🧭 Visión del Sprint (Business Perspective)
-*Basado en el análisis de Negocio (`01-Business_Analyst.md`)*
+*Basado en el análisis de Negocio ([01-Business_Analyst.md](../../Gestor_de_Versiones/01-Business_Analyst.md))*
 
 El objetivo de este Sprint no es solo "crear campos", es **mitigar riesgos legales y operativos** críticos para la Universidad.
 1.  **Riesgo Legal**: Si un administrativo adultera una nota, la universidad puede ser demandada. 
@@ -16,7 +16,7 @@ El objetivo de este Sprint no es solo "crear campos", es **mitigar riesgos legal
     *   *Solución*: "Si el dato no es válido, no entra." (Calidad en Origen).
 
 ## 🏗️ Estrategia Técnica (Architect Perspective)
-*Basado en el diseño técnico (`02-Salesforce_Consultant.md`)*
+*Basado en el diseño técnico ([02-Salesforce_Consultant.md](../../Gestor_de_Versiones/02-Salesforce_Consultant.md))*
 
 Para sostener la visión, implementaremos una arquitectura **Scalable & Secure**:
 1.  **Normalización (3NF)**:
@@ -29,7 +29,7 @@ Para sostener la visión, implementaremos una arquitectura **Scalable & Secure**
     *   Capa 3 (DB): Field-Level Security (Admin Read-Only).
 
 ## 📋 Plan de Ejecución (Admin/Agile Perspective)
-*Basado en la guía de implementación (`03-Salesforce_Admin.md`)*
+*Basado en la guía de implementación ([03-Salesforce_Admin.md](../../Gestor_de_Versiones/03-Salesforce_Admin.md))*
 
 ### Backlog Priorizado
 1.  **[P0] Integridad Legal (DNI/Email)**: Configurar campos `Unique` y `Required` en Alumno.
@@ -44,4 +44,4 @@ Un ítem se considera terminado solo si:
 *   [ ] Un alumno inscrito en "Matemática" aparece en los reportes de esa materia.
 
 ---
-**Siguiente Paso**: Distribuir tareas en Trello según la `00-Guia_Trello_Paso_a_Paso.md`.
+**Siguiente Paso**: Distribuir tareas en Trello según la [00-Guia_Trello_Paso_a_Paso.md](../00-Guia_Trello_Paso_a_Paso.md).

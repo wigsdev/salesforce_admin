@@ -11,7 +11,7 @@ El proyecto **Lumina Tech** ha completado las fases de documentación y definici
 
 | Clase Práctica | Objetivo Académico | Hito en Proyecto (Lumina) | Estado |
 | :--- | :--- | :--- | :--- |
-| **Clase 7** | Roles, Ambientes, Conocimiento de Empresa | `00-PLAN_DE_TRABAJO.md` (Roles Definidos, Ambientes Dev/QA). | ✅ Cumplido |
+| **Clase 7** | Roles, Ambientes, Conocimiento de Empresa | [00-PLAN_DE_TRABAJO.md](../Gestor_de_Versiones/00-PLAN_DE_TRABAJO.md) (Roles Definidos, Ambientes Dev/QA). | ✅ Cumplido |
 | **Clase 8 y 9** | Modelo de Datos (Objetos/Relaciones) | **Día 1**: Objetos (Alumno, Carrera...) y DER. | ✅ Cumplido |
 | **Clase 10** | App Design & Formulas/Validaciones | **Día 2**: Branding de App. <br> **Día 3**: Reglas (VR-001) y Fórmulas. | ✅ Cumplido |
 | **Clase 11** | Seguridad (Usuarios, Permisos, FLS) | **Día 4**: Permission Sets, OWD Private, Roles. | ✅ Cumplido |
@@ -22,7 +22,7 @@ El proyecto **Lumina Tech** ha completado las fases de documentación y definici
 
 ### 1. Clase 7: Fundamentos y Metodología
 *   **Requerimiento**: Separar ambientes (Dev/QA) y definir roles (BA, QA, Admin).
-*   **Evidencia**: El `Gestor_de_Versiones` tiene archivos separados por rol (`01-BA`, `04-QA`), simulando la gestión profesional solicitada.
+*   **Evidencia**: El [`Gestor_de_Versiones`](../Gestor_de_Versiones/) tiene archivos separados por rol ([01-BA](../Gestor_de_Versiones/01-Business_Analyst.md), [04-QA](../Gestor_de_Versiones/04-Tester_QA.md)), simulando la gestión profesional solicitada.
 
 ### 2. Clase 8 y 9: El Corazón del Sistema (Datos)
 *   **Requerimiento**: Identificar Objetos y Relaciones estándar/custom.

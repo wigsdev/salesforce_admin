@@ -49,7 +49,7 @@ Para simular un entorno real de consultoría Salesforce, tu Trello debe tener es
 
 | Columna | Significado | Quién actúa |
 |---|---|---|
-| **1. Backlog** | Todas las historias identificadas (`HISTORIAS_DE_USUARIO.md`). | Product Owner |
+| **1. Backlog** | Todas las historias identificadas ([HISTORIAS_DE_USUARIO.md](HISTORIAS_DE_USUARIO.md)). | Product Owner |
 | **2. Sprint Backlog** | Lo que te comprometes a hacer ESTA semana. | Equipo |
 | **3. En Progreso** | Tarea activa (Máximo 2 por persona). | Admin / Dev |
 | **4. SF Desarrollo** | Ya configurado en Sandbox, falta probar. | Admin / Dev |
@@ -66,4 +66,4 @@ Para simular un entorno real de consultoría Salesforce, tu Trello debe tener es
 3.  **Evidencia**: Una tarea no está terminada hasta que hay una captura de pantalla en Trello demostrando que funciona.
 
 ---
-**Siguiente Paso**: Revisa la `00-Guia_Trello_Paso_a_Paso.md` para configurar tu tablero.
+**Siguiente Paso**: Revisa la [00-Guia_Trello_Paso_a_Paso.md](00-Guia_Trello_Paso_a_Paso.md) para configurar tu tablero.

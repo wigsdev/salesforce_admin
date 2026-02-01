@@ -10,16 +10,16 @@
 ### Lista de Tareas
 1.  **Leer juntos y conocer la Empresa**.
     *   *Rol*: 🕵️ **Business Analyst**, 👑 **Product Owner**.
-    *   *Detalle*: [Ver Tarea](dia_0/1_Leer_juntos_y_conocer_la_Empresa.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_0/1_Leer_juntos_y_conocer_la_Empresa.md)
 2.  **Definir Roles**.
     *   *Rol*: 🤝 **Team Lead**, 🔄 **Scrum Master**.
-    *   *Detalle*: [Ver Tarea](dia_0/2_Definir_Roles.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_0/2_Definir_Roles.md)
 3.  **Generar preguntas en el documento para evacuar dudas**.
     *   *Rol*: 🕵️ **Business Analyst**, 🏗️ **Salesforce Consultant**.
-    *   *Detalle*: [Ver Tarea](dia_0/3_Generar_preguntas_en_el_documento_para_evacuar_dudas.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_0/3_Generar_preguntas_en_el_documento_para_evacuar_dudas.md)
 4.  **Registrar en el Doc: gestor de versiones**.
     *   *Rol*: 🚀 **Release Manager**, 🛡️ **Salesforce Admin**.
-    *   *Detalle*: [Ver Tarea](dia_0/4_Registrar_en_el_Doc_gestor_de_versiones.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_0/4_Registrar_en_el_Doc_gestor_de_versiones.md)
 
 ---
 
@@ -29,19 +29,19 @@
 ### Lista de Tareas
 1.  **Creación de objetos Custom - Standard**.
     *   *Rol*: 🛡️ **Salesforce Admin**.
-    *   *Detalle*: [Ver Tarea](dia_1/1_Creacion_de_objetos_Custom_Standard.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_1/1_Creacion_de_objetos_Custom_Standard.md)
 2.  **Relación entre Objetos**.
     *   *Rol*: 🏗️ **Salesforce Consultant** (Diseño), 🛡️ **Salesforce Admin** (Config).
-    *   *Detalle*: [Ver Tarea](dia_1/2_Relacion_entre_Objetos.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_1/2_Relacion_entre_Objetos.md)
 3.  **Campos personalizados**.
     *   *Rol*: 🛡️ **Salesforce Admin**.
-    *   *Detalle*: [Ver Tarea](dia_1/3_Campos_personalizados.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_1/3_Campos_personalizados.md)
 4.  **Registrar en el Doc: gestor de versiones**.
     *   *Rol*: 🚀 **Release Manager**.
-    *   *Detalle*: [Ver Tarea](dia_1/4_Registrar_en_el_Doc_gestor_de_versiones.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_1/4_Registrar_en_el_Doc_gestor_de_versiones.md)
 5.  **Crear las HU en TRELLO**.
     *   *Rol*: 👑 **Product Owner**, 🕵️ **Business Analyst**.
-    *   *Detalle*: [Ver Tarea](dia_1/5_Crear_las_HU_en_TRELLO.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_1/5_Crear_las_HU_en_TRELLO.md)
 
 #### 🚀 Fase de Ejecución (Flujo Trello)
 6.  **Mover a "En Progreso" y Construir en DEV**.
@@ -68,19 +68,19 @@
 ### Lista de Tareas
 1.  **Tener en cuenta el diseño.**
     *   *Rol*: 🎨 **UX/UI** (Consultant), 🏗️ **Salesforce Architect**.
-    *   *Detalle*: [Ver Tarea](dia_2/1_Tener_en_cuenta_el_diseno.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_2/1_Tener_en_cuenta_el_diseno.md)
 2.  **Lograr hacer el dominio personalizado.**
     *   *Rol*: 🛡️ **Salesforce Admin**.
-    *   *Detalle*: [Ver Tarea](dia_2/2_Lograr_hacer_el_dominio_personalizado.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_2/2_Lograr_hacer_el_dominio_personalizado.md)
 3.  **Agregar el Logo y colores.**
     *   *Rol*: 🛡️ **Salesforce Admin**.
-    *   *Detalle*: [Ver Tarea](dia_2/3_Agregar_el_Logo_y_colores.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_2/3_Agregar_el_Logo_y_colores.md)
 4.  **Registrar en el Doc: gestor de versiones.**
     *   *Rol*: 🚀 **Release Manager**.
-    *   *Detalle*: [Ver Tarea](dia_2/4_Registrar_en_el_Doc_gestor_de_versiones.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_2/4_Registrar_en_el_Doc_gestor_de_versiones.md)
 5.  **Crear las HU en TRELLO.**
     *   *Rol*: 👑 **Product Owner**, 🕵️ **Business Analyst**.
-    *   *Detalle*: [Ver Tarea](dia_2/5_Crear_las_HU_en_TRELLO.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_2/5_Crear_las_HU_en_TRELLO.md)
 
 #### 🚀 Fase de Ejecución (Flujo Trello)
 6.  **Mover a "En Progreso" y Construir en DEV**.
@@ -107,16 +107,16 @@
 ### Lista de Tareas
 1.  **Campos adicionales.**
     *   *Rol*: 🛡️ **Salesforce Admin**.
-    *   *Detalle*: [Ver Tarea](dia_3/1_Campos_adicionales.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_3/1_Campos_adicionales.md)
 2.  **Reglas de validación y campos formula.**
     *   *Rol*: 🛡️ **Salesforce Admin**, 🏗️ **Salesforce Consultant**.
-    *   *Detalle*: [Ver Tarea](dia_3/2_Reglas_de_validacion_y_campos_formula.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_3/2_Reglas_de_validacion_y_campos_formula.md)
 3.  **Registrar en el Doc: gestor de versiones.**
     *   *Rol*: 🚀 **Release Manager**.
-    *   *Detalle*: [Ver Tarea](dia_3/3_Registrar_en_el_Doc_gestor_de_versiones.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_3/3_Registrar_en_el_Doc_gestor_de_versiones.md)
 4.  **Crear las HU en TRELLO.**
     *   *Rol*: 👑 **Product Owner**, 🕵️ **Business Analyst**.
-    *   *Detalle*: [Ver Tarea](dia_3/4_Crear_las_HU_en_TRELLO.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_3/4_Crear_las_HU_en_TRELLO.md)
 
 #### 🚀 Fase de Ejecución (Flujo Trello)
 5.  **Mover a "En Progreso" y Construir en DEV**.
@@ -144,19 +144,19 @@
 ### Lista de Tareas
 1.  **Configuración de Permission Sets.**
     *   *Rol*: 🛡️ **Salesforce Admin**.
-    *   *Detalle*: [Ver Tarea](dia_4/1_Configuracion_Permission_Sets.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_4/1_Configuracion_Permission_Sets.md)
 2.  **Configuración de Permission Sets Groups.**
     *   *Rol*: 🛡️ **Salesforce Admin**.
-    *   *Detalle*: [Ver Tarea](dia_4/2_Configuracion_Permission_Sets_Groups.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_4/2_Configuracion_Permission_Sets_Groups.md)
 3.  **Visibilidad de Objetos y campos.**
     *   *Rol*: 🏗️ **Salesforce Consultant** / 🛡️ **Salesforce Admin**.
-    *   *Detalle*: [Ver Tarea](dia_4/3_Visibilidad_Objetos_Campos.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_4/3_Visibilidad_Objetos_Campos.md)
 4.  **Registrar en el Doc: gestor de versiones.**
     *   *Rol*: 🚀 **Release Manager**.
-    *   *Detalle*: [Ver Tarea](dia_4/4_Registrar_Gestor_Versiones.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_4/4_Registrar_Gestor_Versiones.md)
 5.  **Crear las HU en TRELLO.**
     *   *Rol*: 👑 **Product Owner**.
-    *   *Detalle*: [Ver Tarea](dia_4/5_Crear_HU_Trello.md)
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_4/5_Crear_HU_Trello.md)
 
 #### 🚀 Fase de Ejecución (Flujo Trello)
 6.  **Mover a "En Progreso" y Construir en DEV**.
