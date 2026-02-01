@@ -9,7 +9,7 @@ Eres el arquitecto. El Admin construye, pero tú diseñas los planos. Si tú fal
 ### Responsabilidades Clave:
 1.  **Diseñar Datos**: Decidir entre Lookup vs Master-Detail.
 2.  **Seguridad**: Definir el modelo de OWD y Perfiles.
-3.  **Investigar**: Llenar `06-Investigaciones.md` con justificaciones técnicas.
+3.  **Investigar**: Llenar [`06-Investigaciones.md`](../Gestor_de_Versiones/06-Investigaciones.md) con justificaciones técnicas.
 
 ---
 
@@ -39,7 +39,7 @@ El BA te dice: "Necesitamos registrar notas".
 Tú preguntas: "¿Una nota por alumno? ¿Por materia? ¿History tracking?"
 
 ### Paso 2: La Decisión (ADR)
-Escribes en `02-Consultant.md`:
+Escribes en [`02-Salesforce_Consultant.md`](../Gestor_de_Versiones/02-Salesforce_Consultant.md):
 > "Decidimos crear un objeto `Examen__c` hijo de `Inscripcion__c` para permitir múltiples parciales por cursada."
 
 ### Paso 3: Validación de Escalabilidad
