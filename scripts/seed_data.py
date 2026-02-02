@@ -69,7 +69,6 @@ def parse_lumina_checklist():
             if task_match and current_day:
                 title = task_match.group(1).rstrip(".")  # Remove trailing dot
                 current_day["tasks"].append({"desc": title, "path": None})
-                continue
 
             # Match Link
             link_match = link_pattern.search(line)
