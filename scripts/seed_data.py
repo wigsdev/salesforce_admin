@@ -76,7 +76,10 @@ def parse_lumina_checklist():
             if link_match and current_day and current_day["tasks"]:
                 # Attach link to the last task
                 rel_path = link_match.group(1)
-                full_path = f"Lumina_Tech/{rel_path}"
+                # Clean up '../Bitacoras_Sprint_1/' from the path since it's relative from Archivos_intermedios
+                rel_path = rel_path.replace("../Bitacoras_Sprint_1/", "")
+                # Updated to reflect new folder structure: Bitacoras_Sprint_1/dia_X/...
+                full_path = f"Lumina_Tech/Bitacoras_Sprint_1/{rel_path}"
                 current_day["tasks"][-1]["path"] = full_path
 
     if current_day:
