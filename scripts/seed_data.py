@@ -27,7 +27,7 @@ def parse_lumina_checklist():
     # Regex patterns
     day_pattern = re.compile(r"^##\s+📅\s+(Día\s+\d+:.+)")
     task_pattern = re.compile(r"^\d+\.\s+\*\*(.+?)\*\*")
-    link_pattern = re.compile(r"\[Ver Tarea\]\((dia_\d+/[^)]+)\)")
+    link_pattern = re.compile(r"\[.*?\]\((.*?\.md)\)")  # Match any link ending in .md
     source_pattern = re.compile(r"\*\*Fuente\*\*:\s+\[(.+)\]\((.+)\)")
 
     with open(file_path, "r", encoding="utf-8") as f:
