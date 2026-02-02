@@ -1,6 +1,7 @@
 """
 Check local database connection and data
 """
+
 import sys
 from pathlib import Path
 
