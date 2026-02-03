@@ -20,8 +20,14 @@ depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade() -> None:
-    # Add due_date column to tasks table
-    op.add_column("tasks", sa.Column("due_date", sa.DateTime(), nullable=True))
+    # Check if column exists first to make it idempotent
+    conn = op.get_bind()
+    inspector = sa.inspect(conn)
+    columns = [c["name"] for c in inspector.get_columns("tasks")]
+
+    if "due_date" not in columns:
+        # Add due_date column to tasks table
+        op.add_column("tasks", sa.Column("due_date", sa.DateTime(), nullable=True))
 
 
 def downgrade() -> None:

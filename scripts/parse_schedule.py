@@ -131,7 +131,6 @@ class ScheduleParser:
             task_match = self.TASK_ROW_PATTERN.match(line)
             if task_match and current_week:
                 completed = task_match.group(1).strip().lower() == "x"
-                date_str = task_match.group(2).strip()
                 title = task_match.group(3).strip()
                 category = task_match.group(4).strip()
                 deadline_str = task_match.group(5).strip()
