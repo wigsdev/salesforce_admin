@@ -52,7 +52,7 @@
 | [ ] | **26 de Enero** | Reportes y Tableros | Teoría | 30 de Enero |
 | [ ] | **27 de Enero** | Gestor de Datos | Teoría | 30 de Enero |
 | [ ] | **28 de Enero** | Service Cloud Basics | Teoría | 30 de Enero |
-| [ ] | **29 de Enero** | SB - Seguridad o Data Import | FORMULARIO | **6 de Febrero** |
+| [ ] | **29 de Enero** | SB - Seguridad o Data Import | FORMULARIO | 6 de Febrero |
 
 ---
 
