@@ -270,8 +270,79 @@
         color: var(--red-500);
     }
 
-    /* Lumina Specific */
-    .lumina-gradient {
-        background: linear-gradient(135deg, #005A9C 0%, #00477D 100%);
+    /* Sprint Tabs */
+    .sprint-tab-active {
+        background-color: white;
+        color: #667eea;
+        border-color: #667eea;
+        box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2);
+    }
+
+    .sprint-tab-inactive {
+        background-color: #f7fafc;
+        color: #4a5568;
+        border-color: transparent;
+    }
+
+    .sprint-tab-inactive:hover {
+        background-color: #edf2f7;
+        color: #2d3748;
+    }
+
+    .dark .sprint-tab-active {
+        background-color: #2d3748;
+        color: #60a5fa;
+        border-color: #3b82f6;
+        box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+    }
+
+    .dark .sprint-tab-inactive {
+        background-color: rgba(26, 32, 44, 0.9);
+        color: #6b7280;
+        border-color: transparent;
+    }
+
+    .dark .sprint-tab-inactive:hover {
+        background-color: #374151;
+        color: #d1d5db;
+    }
+
+    .dark .sprint-tab-active svg,
+    .sprint-tab-active svg {
+        color: inherit;
+    }
+
+    .dark .sprint-tab-inactive svg,
+    .sprint-tab-inactive svg {
+        color: #9ca3af;
+    }
+
+    .dark .sprint-tab-inactive:hover svg {
+        color: #d1d5db;
+    }
+
+    .sprint-tab-active .sprint-badge {
+        background-color: #667eea;
+        color: white;
+    }
+
+    .sprint-tab-inactive .sprint-badge {
+        background-color: #e5e7eb;
+        color: #374151;
+    }
+
+    .dark .sprint-tab-active .sprint-badge {
+        background-color: #3b82f6;
+        color: white;
+    }
+
+    .dark .sprint-tab-inactive .sprint-badge {
+        background-color: #374151;
+        color: #d1d5db;
+    }
+
+    /* Remove left margin from first tab */
+    .sprint-tab:first-of-type {
+        margin-left: 0 !important;
     }
 }
