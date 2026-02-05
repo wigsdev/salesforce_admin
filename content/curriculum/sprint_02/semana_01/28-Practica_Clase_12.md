@@ -44,6 +44,35 @@
 
 ---
 
+## ESTIMACION DE ESFUERZO EN HISTORIAS DE USUARIO (SALESFORCE)
+
+| Story Points (SP) | Nivel de Dificultad | Tiempo Estimado (Días) |
+| :---: | :--- | :---: |
+| **1 SP** 🟢 ⬆️ | **Baja**<br>(Cambios simples, campos, listas) | 1 a 3 días |
+| **3 SP** 🟡 ➡️ | **Media**<br>(Flows simples, validaciones, permisos) | 3 a 6 días |
+| **5 SP** 🔴 ⬇️ | **Alta**<br>(Automatización compleja, LWC, Integración) | 6 a 12 días |
+
+
+
+### 🛡️ ADMIN/CONSULTANT
+> **Configura la solución.**
+*Responsable de traducir los requerimientos en configuración dentro de Salesforce.*
+
+### 🧪 QA TESTER
+> **Valida que funcione y rompe lo que construyó el Admin.**
+*Se asegura de encontrar errores antes que el usuario final.*
+
+### 🚀 DEVOPS
+> **Se asegura que el cambio pase de Sandbox a Producción (Deployment).**
+*Mueve los cambios probados entre ambientes: Sandbox ➡️ Producción.*
+
+---
+
+## ✅ ACCIÓN REQUERIDA:
+1. **Tomar una Historia de Usuario.** 📝
+2. **Ponerle Puntaje (1, 3, 5).** 🔢
+3. **Asignar un Dueño (Owner).** 👤
+
 ## CALENDARIO
 *Planning & Estrategia SPRINT 1*
 
