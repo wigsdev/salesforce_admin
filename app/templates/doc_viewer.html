@@ -395,4 +395,49 @@
         });
     });
 </script>
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+    mermaid.initialize({
+        startOnLoad: false,
+        theme: document.documentElement.classList.contains('dark') ? 'dark' : 'default',
+        securityLevel: 'loose'
+    });
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        // 1. Find all mermaid code blocks (rendered by Python-Markdown as pre > code.language-mermaid)
+        const mermaidBlocks = document.querySelectorAll('pre code.language-mermaid');
+
+        if (mermaidBlocks.length === 0) return;
+
+        const nodesToRender = [];
+
+        mermaidBlocks.forEach(codeBlock => {
+            const pre = codeBlock.parentElement;
+            const source = codeBlock.textContent;
+
+            // 2. Create a clean div for Mermaid
+            const div = document.createElement('div');
+            div.classList.add('mermaid');
+            div.textContent = source;
+            div.style.display = 'flex';
+            div.style.justifyContent = 'center';
+            div.style.margin = '2rem 0';
+
+            // 3. Replace the code block
+            pre.replaceWith(div);
+            nodesToRender.push(div);
+        });
+
+        // 4. Render
+        try {
+            await mermaid.run({
+                nodes: nodesToRender
+            });
+        } catch (err) {
+            console.error('Mermaid rendering failed:', err);
+        }
+    });
+</script>
 {% endblock %}
