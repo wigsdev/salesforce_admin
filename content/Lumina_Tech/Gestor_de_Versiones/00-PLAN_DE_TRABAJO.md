@@ -6,18 +6,19 @@
 ## 📅 DIA 0 - Inicio y Definición de Equipo
 
 ### Asignación de Roles (Agile Team)
-**Fuente**: [Tarea 2 - Definir Roles](../Bitacoras_Sprint_1/dia_0/2_Definir_Roles.md)
+**Fuente**: [Tarea 2 - Definir Roles](../Bitacoras_Sprint_1/dia_0/2_Definir_Roles.md) y `00-MATRIZ_ROLES_EQUIPO.md`.
 
 *   **Product Owner (PO)**: Dra. Vance (Define el "Qué").
-*   **Scrum Master / Team Lead**: Facilita el proceso.
+*   **Scrum Master**: Facilita el proceso y cuida el tablero.
 *   **Business Analyst (BA)**: Releva requerimientos.
 *   **Salesforce Consultant**: Diseño Técnico.
-*   **Salesforce Admin**: Configuración.
+*   **Salesforce Admin**: Configuración (Builder).
+*   **QA Tester / Release Manager**: Calidad y Despliegues.
 
 ### Roles del Sistema (Usuarios)
 1.  **Administrativos**: Gestión de inscripciones y cobros.
 2.  **Profesores**: Carga de notas (Acceso restringido).
-3.  **Rol**: Project Manager
+3.  **Directores**: Visión estratégica.
 **Sprint**: 01 (Fundamentos)
 
 ![Flujo de Trabajo Sprint 1](/uploaded_media_1769735775852.png)
@@ -25,21 +26,21 @@
 
 ---
 
-## 📅 DIA 1 - Modelado de Datos (Foundation)re
+## 📅 DIA 1 - Data Foundation
 **Estado**: ✅ COMPLETO
 **Entregables**:
-1.  **Objetos Custom**: Carrera, Materia, Alumno, Inscripción, Examen.
+1.  **Objetos Custom**: `Career`, `Subject`, `Student`, `Enrollment`, `Exam`.
 2.  **ERD Visual**: Diagrama de entidades-relaciones validado.
-3.  **Backlog Técnico**: Historias de Usuario (HU-001, HU-002, HU-003) creadas.
+3.  **Backlog Técnico**: **12 Historias de Usuario** (HU-001 a HU-012) definidas.
 
 ---
 
-## 📅 DIA 2 - Branding y App Building
+## 📅 DIA 2 - Branding & App
 **Estado**: ✅ COMPLETO
 **Entregables**:
-1.  **My Domain**: Desplegado en Sandbox.
+1.  **My Domain**: Desplegado (`lumina-university`).
 2.  **Theme**: "Lumina Official" activo (Azul #005A9C - Oro #F2A900).
-3.  **Lightning App**: "Gestión Académica Lumina" configurada y asignada.
+3.  **Lightning App**: "Lumina Academic" configurada y asignada.
 
 ---
 
@@ -52,12 +53,12 @@
 
 ---
 
-## 📅 DIA 4 - Seguridad Avanzada
+## 📅 DIA 4 - Zero Trust Security
 **Estado**: ✅ COMPLETO
 **Entregables**:
-1.  **Seguridad Base**: OWD Private para Alumnos.
-2.  **Gestión de Accesos**: Permission Sets (MFA, Calificador) y Groups (Profesor, Admin).
-3.  **Backlog**: HU-009 a HU-011 (Seguridad y Privacidad) implementadas.
+1.  **Seguridad Base**: OWD Private para `Student`.
+2.  **Gestión de Accesos**: Permission Sets (`Lumina_MFA_Access`, `Lumina_Professor_Access`).
+3.  **Backlog**: HU-010 a HU-012 (Seguridad y Privacidad) implementadas.
 
 ---
 

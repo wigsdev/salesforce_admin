@@ -1,6 +1,6 @@
 # 14-DevOPS.md - Estrategia de Despliegue y CI/CD
 **Proyecto**: Universidad Lumina Tech
-**Rol**: DevOps Engineer / Release Manager
+**Rol**: DevOps Specialist / Release Manager
 **Ciclo**: Sprint 1
 
 ---
@@ -22,7 +22,7 @@ Para este proyecto, utilizamos un modelo de **Salesforce Org-Based Development**
 
 ### Naming Convention
 Los Change Sets deben seguir el formato: `[SPRINT]_[TICKET]_[DESCRIPCION]`.
-*   *Ejemplo*: `S1_HU001_OWD_Alumno`
+*   *Ejemplo*: `S1_HU001_OWD_Student`
 
 ### Checklist Pre-Deploy
 1.  **Dependencias**: ¿Has incluido los campos nuevos antes de los Page Layouts?
@@ -31,7 +31,7 @@ Los Change Sets deben seguir el formato: `[SPRINT]_[TICKET]_[DESCRIPCION]`.
 
 ### Pasos de Despliegue (Outbound -> Inbound)
 1.  **En DEV**: Ir a Setup -> Outbound Change Sets -> New.
-2.  Agregar componentes (Custom Objects, Fields, Validation Rules).
+2.  **Agregar componentes**: Custom Objects (`Student`, `Enrollment`), Fields (`Final_Grade__c`), Validation Rules.
 3.  **Upload** a la organización target (QA).
 4.  **En QA**: Ir a Setup -> Inbound Change Sets.
 5.  **Validate**: Ejecutar "Default Tests".
@@ -45,7 +45,7 @@ Si el despliegue rompe la Org destino:
 
 ### Escenario A: Configuración (Metadata)
 *   **Acción**: Desactivar manualmente los componentes fallidos (e.g., desactivar la Validation Rule errónea).
-*   **No borrar**: Borrar campos en PROD causa pérdida de datos. Renombrar a `OBSOLETE_NombreCampo` hasta confirmar backup.
+*   **No borrar**: Borrar campos en PROD causa pérdida de datos. Renombrar a `OBSOLETE_FieldName` hasta confirmar backup.
 
 ### Escenario B: Datos (Data Loader)
 *   **Prevención**: Exportar CSV de la tabla afectada ANTES del deploy.
@@ -57,7 +57,7 @@ Si el despliegue rompe la Org destino:
 
 | Hito | Día | Hora | Responsable |
 |---|---|---|---|
-| **Freeze** | Jueves | 18:00 | Admin |
+| **Freeze** | Jueves | 18:00 | System Admin |
 | **Validation** | Viernes | 09:00 | DevOps |
 | **Deploy QA** | Viernes | 14:00 | DevOps |
 | **Deploy PROD** | Viernes | 17:00 | Release Manager |

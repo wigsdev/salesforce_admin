@@ -20,24 +20,24 @@ Basado en [REQ-DATA-001] y [REQ-DATA-002].
 
 | Objeto | API Name | Tipo | Descripción |
 | :--- | :--- | :--- | :--- |
-| **Carrera** | `Carrera__c` | Custom | Oferta académica. |
-| **Materia** | `Materia__c` | Custom | Unidad curricular. Lookup a Carrera. |
-| **Alumno** | `Alumno__c` | Custom | Estudiante. Golden Record. |
-| **Inscripción** | `Inscripcion__c` | Custom | **Junction**. Une Alumno y Materia. |
-| **Examen** | `Examen__c` | Custom | Detalle de evaluación. |
+| **Career** | `Career__c` | Custom | Oferta académica. |
+| **Subject** | `Subject__c` | Custom | Unidad curricular. Lookup a Career. |
+| **Student** | `Student__c` | Custom | Estudiante. Golden Record. |
+| **Enrollment** | `Enrollment__c` | Custom | **Junction**. Une Student y Subject. |
+| **Exam** | `Exam__c` | Custom | Detalle de evaluación. |
 
 ### 📝 Diccionario de Campos Clave
 Basado en [REQ-QUAL] (Calidad de Datos).
 
-#### Objeto: Alumno
-*   **Legajo** (`Name`): Auto-Number `{L-0000}`.
-*   **DNI** (`DNI__c`): Number(8,0) - **Unique, External ID**. [REQ-QUAL-003]
+#### Objeto: Student
+*   **Record Name** (`Name`): Auto-Number `A-{YYYY}-{0000}`.
+*   **National ID** (`National_ID__c`): Number(8,0) - **Unique, External ID**. [REQ-QUAL-003]
 *   **Email** (`Email__c`): Email Standard. [REQ-QUAL-001]
 
-#### Objeto: Examen
-*   **Nota** (`Nota__c`): Number(2,2). **Validación**: `0 <= Nota <= 10`. [REQ-QUAL-002]
-*   **Fecha** (`Fecha__c`): Date (Required). [REQ-FUNC-001]
-*   **Asistió** (`Asistio__c`): Checkbox (Default: True). [REQ-FUNC-002]
+#### Objeto: Exam
+*   **Final Grade** (`Final_Grade__c`): Number(4,2). **Validación**: `0 <= Grade <= 10`. [REQ-QUAL-002]
+*   **Date** (`Date__c`): Date (Required). [REQ-FUNC-001]
+*   **Attended** (`Attended__c`): Checkbox (Default: True). [REQ-FUNC-002]
 
 ---
 
@@ -51,14 +51,14 @@ Basado en [REQ-QUAL] (Calidad de Datos).
 ### 🎨 Themes and Branding
 *   **Theme Name**: `Lumina Official`.
 *   **Brand Color**: `#005A9C`.
-*   **Page Background**: `#F4F6F9`.
+*   **Page Background**: `#F3F3F3`.
 *   **Active**: ✅ Yes.
 
 ### 📱 App Manager
-*   **App Name**: `Gestión Académica Lumina` (Lightning App).
-*   **Developer Name**: `Gestion_Academica_Lumina`.
-*   **Navigation Items**: Home, Alumnos, Inscripciones, Materias, Exámenes, Carreras.
-*   **Profiles**: System Admin, Lumina Admin, Lumina Profesor.
+*   **App Name**: `Lumina Academic` (Lightning App).
+*   **Developer Name**: `Lumina_Academic`.
+*   **Navigation Items**: Home, Students, Enrollments, Subjects, Exams, Careers.
+*   **Profiles**: System Admin, Standard User.
 
 ---
 
@@ -66,32 +66,32 @@ Basado en [REQ-QUAL] (Calidad de Datos).
 
 ### 📦 Nuevos Campos (Schema Update)
 
-#### Objeto: Inscripción (`Inscripcion__c`)
-*   **Estado** (`Estado__c`): Picklist (Cursando, Aprobado, Libre). Default: Cursando.
-*   **Nota Final** (`Nota_Final__c`): Number(2,2).
-*   **Materia Display** (`Materia_Display__c`): Formula (Text). `Materia__r.Name`.
+#### Objeto: Enrollment (`Enrollment__c`)
+*   **Status** (`Status__c`): Picklist (Enrolled, Passed, Failed). Default: Enrolled.
+*   **Final Grade** (`Final_Grade__c`): Number(4,2).
+*   **Subject Display** (`Subject_Display__c`): Formula (Text). `Subject__r.Name`.
 
 ### 🛡️ Reglas de Validación
 
-#### Objeto: Examen
-*   **VR-001**: `Nota_0_a_10`.
-    *   Formula: `OR(Nota__c < 0, Nota__c > 10)`
-    *   Error: "La nota debe estar entre 0 y 10".
+#### Objeto: Enrollment
+*   **VR-001**: `Grade_Range`.
+    *   Formula: `OR(Final_Grade__c < 0, Final_Grade__c > 10)`
+    *   Error: "Invalid Grade. Must be 0-10".
 
-#### Objeto: Alumno
-*   **VR-002**: `Email_Educativo`.
+#### Objeto: Student
+*   **VR-002**: `Email_Format`.
     *   Formula: `NOT(REGEX(Email__c, "[a-zA-Z0-9._-]+@[a-z]+\\.edu"))`
-    *   Error: "Formato inválido. Requiere .edu".
+    *   Error: "Invalid Format. Requires .edu".
 
 ---
 
 ## 📅 DIA 4 - Seguridad y Permisos
 
 ### 🛡️ Permission Sets (Atomicidad)
-1.  **Lumina_MFA_Authorization**: `Multi-Factor Authentication for User Interface Logins`.
-2.  **Gestion_Calificaciones_Docente**: Objeto Examen (R/W), Campo Nota (Edit).
-3.  **Operador_Bedelia**: Objeto Alumno (R/W), Examen (Read Only).
+1.  **Lumina_MFA_Access**: `Multi-Factor Authentication for User Interface Logins`.
+2.  **Lumina_Professor_Access**: Objeto Exam (R/W), Campo Final Grade (Edit).
+3.  **Lumina_Registrar_Access**: Objeto Student (R/W), Exam (Read Only).
 
 ### 👥 Permission Set Groups (Roles)
-1.  **PSG - Profesor Standard**: Incluye MFA + Calificaciones.
-2.  **PSG - Administrativo Bedelia**: Incluye MFA + Operador.
+1.  **PSG - Professor Standard**: Incluye MFA + Professor Access.
+2.  **PSG - Registrar Staff**: Incluye MFA + Registrar Access.

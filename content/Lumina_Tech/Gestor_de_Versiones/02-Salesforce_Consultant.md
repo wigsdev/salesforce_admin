@@ -10,16 +10,16 @@
 **Fuente**: [Tarea 3 - Generar preguntas](../Bitacoras_Sprint_1/dia_0/3_Generar_preguntas_en_el_documento_para_evacuar_dudas.md)
 
 1.  **ADR-001: Duplicación de Materias para MVP**
-    *   *Contexto*: Compartir registros de "Materia" complicaría las Sharing Rules Private.
-    *   *Decisión*: Crear registros separados `Matemática 1 - ING` y `Matemática 1 - ADM`.
+    *   *Contexto*: Compartir registros de "Subject" complicaría las Sharing Rules Private.
+    *   *Decisión*: Crear registros separados `Math 1 - ENG` y `Math 1 - ADM`.
     *   *Justificación*: Simplifica la seguridad (OWD Private) en la fase 1.
 
 2.  **ADR-002: Modelo de Inscripción (Junction)**
     *   *Contexto*: Necesidad de historial de recursantes y notas.
-    *   *Decisión*: Objeto personalizado `Inscripción` que une Alumno + Materia + Ciclo.
+    *   *Decisión*: Objeto personalizado `Enrollment` que une `Student` + `Subject` + `Cycle`.
 
 3.  **ADR-003: Calidad de Datos en Origen**
-    *   *Decisión*: Uso de tipos de datos estrictos (Auto-Number, Number(2,2)) y reglas de validación.
+    *   *Decisión*: Uso de tipos de datos estrictos (Auto-Number, Number(4,2)) y reglas de validación.
 
 ---
 
@@ -32,16 +32,16 @@ Este esquema responde a **[REQ-DATA-002] Historial Académico**.
 > **[Ver Diagrama Visual Renderizado (Mermaid)](../Bitacoras_Sprint_1/dia_1/2_Relacion_entre_Objetos.md)**
 
 ### Especificación de Relaciones
-1.  **Inscripción (Junction Object)**:
-    *   Actúa como tabla puente para manejar la relación **M:N** entre Alumnos y Materias.
-    *   *Configuración*: Master-Detail (x2). Si eliminas al Alumno, se borra su historial.
+1.  **Enrollment (Junction Object)**:
+    *   Actúa como tabla puente para manejar la relación **M:N** entre `Student` y `Subject`.
+    *   *Configuración*: Master-Detail (x2). Si eliminas al `Student`, se borra su historial.
 
-2.  **Jerarquía de Carrera**:
-    *   `Materia` tiene una relación Lookup hacia `Carrera`.
+2.  **Jerarquía de Career**:
+    *   `Subject` tiene una relación Lookup hacia `Career`.
     *   *Nota*: Permite flexibilidad si una materia cambia de plan de estudios (Loosely coupled).
 
 3.  **Evaluación Continua**:
-    *   `Examen` es hijo (Child) de `Inscripción`.
+    *   `Exam` es hijo (Child) de `Enrollment`.
     *   *Propósito*: Permite calcular promedios directamente en la inscripción usando Roll-Up Summaries.
 
 ---
@@ -55,7 +55,7 @@ Para evitar la apariencia "genérica" de Salesforce y fomentar la adopción de l
 *   **Paleta Académica**:
     *   `#005A9C` (Lumina Blue): Confianza. Usado en Headers.
     *   `#F2A900` (Tech Gold): Excelencia. Usado en Acentos.
-    *   `#F4F6F9` (Soft Grey): Usabilidad. Fondo para reducir fatiga visual.
+    *   `#F3F3F3` (Soft Grey): Usabilidad. Fondo para reducir fatiga visual.
 *   **Logo**: Isotipo de libro abierto con haces de luz (conocimiento).
 
 ---
@@ -64,8 +64,8 @@ Para evitar la apariencia "genérica" de Salesforce y fomentar la adopción de l
 **Fuente**: [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
 
 ### Estrategia de Calidad
-1.  **Validación en Capa de Datos**: Reglas de validación (VR) implementadas para Email y Notas.
-2.  **Denormalización Visual**: Uso de Formula Fields (`Materia_Display__c`) para mejorar reportes sin código.
+1.  **Validación en Capa de Datos**: Reglas de validación (VR) implementadas para `Email__c` y `Final_Grade__c`.
+2.  **Denormalización Visual**: Uso de Formula Fields (`Subject_Display__c`) para mejorar reportes sin código.
 
 ---
 
@@ -73,9 +73,9 @@ Para evitar la apariencia "genérica" de Salesforce y fomentar la adopción de l
 **Fuente**: [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
 
 ### Modelo de Seguridad (Layered Security)
-1.  **OWD (Organization-Wide Defaults)**: `Private` para Alumno. (Base restrictiva).
+1.  **OWD (Organization-Wide Defaults)**: `Private` para `Student`. (Base restrictiva).
 2.  **Permission Set Groups vs Profiles**:
     *   **Decisión**: Usar "Minimum Access - Salesforce" como perfil base y sumar capacidades vía PSG.
     *   *Beneficio*: Mayor flexibilidad y menor deuda técnica.
 3.  **FLS (Field Level Security)**:
-    *   Protección a nivel atributo. `Nota__c` es Read-Only para administrativos.
+    *   Protección a nivel atributo. `Final_Grade__c` es Read-Only para administrativos.

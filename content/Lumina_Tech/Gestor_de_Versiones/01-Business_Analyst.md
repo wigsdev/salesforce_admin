@@ -15,17 +15,17 @@
 *   **[REQ-SEC-003] Protección de Calificaciones**: Admin ve contactos pero NO edita notas cerradas.
 
 #### 🏛️ Datos (DATA)
-*   **[REQ-DATA-001] Entidades Core**: Gestión de Carreras y Materias.
-*   **[REQ-DATA-002] Historial Académico**: Relación Muchos-a-Muchos (Inscripción) con soporte de historial.
+*   **[REQ-DATA-001] Entidades Core**: Gestión de `Careers` y `Subjects`.
+*   **[REQ-DATA-002] Historial Académico**: Relación Muchos-a-Muchos (`Enrollment`) con soporte de historial.
 
 #### 💎 Calidad (QUAL)
 *   **[REQ-QUAL-001] Validación de Contacto**: Formato de Email estricto.
-*   **[REQ-QUAL-002] Consistencia de Notas**: Rango 1.00 - 10.00.
-*   **[REQ-QUAL-003] Identidad Obligatoria**: DNI requerido para crear Alumno.
+*   **[REQ-QUAL-002] Consistencia de Notas**: Rango 0.00 - 10.00.
+*   **[REQ-QUAL-003] Identidad Obligatoria**: `National_ID` requerido para crear `Student`.
 
 #### ⚙️ Funcionalidad (FUNC)
-*   **[REQ-FUNC-001] Ciclo de Exámenes**: Registro de Parciales/Finales.
-*   **[REQ-FUNC-002] Asistencia**: Registro de ausentismo en exámenes.
+*   **[REQ-FUNC-001] Ciclo de Exámenes**: Registro de Parciales/Finales (`Exams`).
+*   **[REQ-FUNC-002] Asistencia**: Registro de `Attended__c` en exámenes.
 
 ---
 
@@ -33,13 +33,13 @@
 **Fuente**: [Tarea 5 - Crear HU en TRELLO](../Bitacoras_Sprint_1/dia_1/5_Crear_las_HU_en_TRELLO.md)
 
 ### Backlog de Historias de Usuario (Sprint 1)
-Desglose técnico de los requerimientos anteriores.
+Desglose técnico de los requerimientos anteriores. Total: **12 User Stories**.
 
 | ID | Título | Traza a | Criterios de Aceptación Clave |
 | :--- | :--- | :--- | :--- |
-| **HU-001** | Gestión de Inscripciones | [REQ-DATA-002] | Objeto `Inscripción` (M:N). Tab visible solo para Directores. |
-| **HU-002** | Unicidad de Alumnos | [REQ-QUAL-003] | Campo `DNI` (Unique, External ID). |
-| **HU-003** | Integridad de Notas | [REQ-QUAL-002] | Campo `Nota__c` (2,2) y Validation Rule `0-10`. |
+| **HU-001** | Gestión de Inscripciones | [REQ-DATA-002] | Objeto `Enrollment` (M:N). Tab visible solo para Directores. |
+| **HU-002** | Unicidad de Alumnos | [REQ-QUAL-003] | Campo `National_ID__c` (Unique, External ID). |
+| **HU-003** | Integridad de Notas | [REQ-QUAL-002] | Campo `Final_Grade__c` (4,2) y Validation Rule `Grade_Range`. |
 
 ---
 
@@ -61,20 +61,20 @@ Desglose técnico de los requerimientos anteriores.
 *   **Criterios de Aceptación**:
     - [x] El encabezado global se muestra en color azul corporativo (`#005A9C`).
     - [x] El isologo de Lumina Tech es visible en la barra de navegación.
-    - [x] El fondo de las páginas es gris claro (`#F4F6F9`) para descanso visual.
+    - [x] El fondo de las páginas es gris claro (`#F3F3F3`) para descanso visual.
 
 #### 🏷️ [HU-006] App de Gestión Central
 *   **Enlace Req**: [REQ-FUNC]
 *   **Criterios de Aceptación**:
-    - [x] Existe una aplicación Lightning llamada "Gestión Académica Lumina" y es accesible.
-    - [x] La barra de navegación incluye acceso directo a Alumnos, Materias, etc.
+    - [x] Existe una aplicación Lightning llamada "Lumina Academic" y es accesible.
+    - [x] La barra de navegación incluye acceso directo a `Students`, `Subjects`, `Enrollments`.
 
 ### User Stories (Optimización y Calidad) - Día 3
 
 #### 🏷️ [HU-007] Validación de Contactos (Email)
 *   **Enlace Req**: [REQ-QUAL-001]
 *   **Criterios de Aceptación**:
-    - [x] El campo Email usa Regex.
+    - [x] El campo `Email__c` usa Regex.
     - [x] Rechaza `juan.perez` (sin arroba).
     - [x] Rechaza `juan@gmail.com` (requiere `.edu`).
 
@@ -82,24 +82,29 @@ Desglose técnico de los requerimientos anteriores.
 *   **Enlace Req**: [REQ-QUAL-002]
 *   **Criterios de Aceptación**:
     - [x] **Validation**: Ingresar `0` o `10` es válido.
-    - [x] **Error**: Ingresar `10.5` o `-1` muestra el error: *"La nota debe estar entre 0 y 10"*.
+    - [x] **Error**: Ingresar `10.5` o `-1` muestra el error: *"Invalid Grade"*.
+
+#### 🏷️ [HU-009] Control de Asistencias
+*   **Enlace Req**: [REQ-FUNC-002]
+*   **Criterios de Aceptación**:
+    - [x] Campos `Classes_Attended__c` calculan porcentaje.
 
 ### User Stories (Seguridad y Accesos) - Día 4
 
-#### 🏷️ [HU-009] Matriz de Visibilidad
+#### 🏷️ [HU-010] Matriz de Visibilidad
 *   **Enlace Req**: [REQ-SEC-002]
 *   **Criterios de Aceptación**:
-    - [x] **OWD**: Alumno configurado como `Private`.
+    - [x] **OWD**: `Student` configurado como `Private`.
     - [x] **Negative Test**: Profesor NO ve alumnos de otras materias.
 
-#### 🏷️ [HU-010] Acceso Seguro (MFA)
+#### 🏷️ [HU-011] Acceso Seguro (MFA)
 *   **Enlace Req**: [REQ-SEC-001]
 *   **Criterios de Aceptación**:
-    - [x] MFA activado vía Permission Set.
+    - [x] MFA activado vía Permission Set `Lumina_MFA_Access`.
     - [x] Login requiere Authenticator App.
 
-#### 🏷️ [HU-011] Segregación de Funciones
+#### 🏷️ [HU-012] Segregación de Funciones
 *   **Enlace Req**: [REQ-SEC-003]
 *   **Criterios de Aceptación**:
-    - [x] **Bedelía**: FLS Read-Only en `Nota__c`.
-    - [x] **Profesor**: Puede editar Nota.
+    - [x] **Bedelía**: FLS Read-Only en `Final_Grade__c`.
+    - [x] **Profesor**: Puede editar `Final_Grade__c`.
