@@ -1,6 +1,6 @@
 # 🕵️ Manual de Ejecución: Business Analyst (BA)
 
-**Tu Misión**: Eres el Estratega. Defines QUÉ se va a construir antes de que nadie escriba una línea de código.
+**Tu Misión**: Eres el Estratega. Defines QUÉ se va a construir antes de que nadie escriba una línea de código. Transformas necesidades vagas en Requerimientos de Acero.
 
 ---
 
@@ -8,87 +8,95 @@
 
 | Bandera | Significado | Acción |
 | :--- | :--- | :--- |
-| 🛑 **PRE-REQ** | **Entrada** | Recibes necesidades vagas del cliente (Lumina Tech). Tu trabajo es clarificarlas. |
-| 📝 **SPEC** | **Tu Turno** | Escribe Historias de Usuario (HU) y Criterios de Aceptación claros en Trello. |
-| 👋 **HANDOFF** | **Al terminar** | Mueve la tarjeta a "To Do" (Ready for Dev) y avisa al **Salesforce Admin**. |
+| 🛑 **PRE-REQ** | **Entrada** | Recibes el "Dolor del Cliente" (ej. "Perdemos datos de alumnos"). |
+| 📝 **SPEC** | **Tu Turno** | Escribes Historias de Usuario (HU) en `HISTORIAS_DE_USUARIO.md` y Trello. |
+| 👋 **HANDOFF** | **Salida** | Mueves tarjeta a "Ready for Dev" y avisas al Salesforce Admin. |
 
 ---
 
-## 📅 CRONOGRAMA DE EJECUCIÓN (Sprint 1)
+## 📅 CRONOGRAMA DE ESTRATEGIA (Sprint 1: Fundamentos)
 
-### Día 0: Entendimiento del Negocio
-*   🛑 **PRE-REQ**: Leer el caso de estudio de Lumina Tech.
+### 📅 DÍA 0: Discovery & Entendimiento
+*Objetivo: Entender el negocio antes de proponer soluciones.*
 
-1.  **Analizar Requisitos**
-    *   📝 **SPEC**: Identifica los actores (Alumnos, Profesores) y sus dolores.
-    *   📘 **Guía**: [01-Rol_Business_Analyst.md](../Tutoriales_por_Rol/01-Rol_Business_Analyst.md)
+1.  **Analizar el Caso Lumina Tech**
+    *   **Acción**: Identifica actores (Rector, Bedelía, Profesores).
+    *   **Producto**: Mapa de Actores.
 
-2.  **Generar Preguntas Q&A**
-    *   📝 **SPEC**: Si algo no está claro ("¿La matrícula es anual o semestral?"), documéntalo para preguntar al PO.
-    *   📘 **Guía**: [3_Generar_preguntas_en_el_documento_para_evacuar_dudas.md](../Bitacoras_Sprint_1/dia_0/3_Generar_preguntas_en_el_documento_para_evacuar_dudas.md)
-
-*   👋 **HANDOFF**: Avisa al equipo: "Conocimiento del dominio completado".
+2.  **Refinar el Backlog Maestro**
+    *   **Acción**: Revisa el documento [HISTORIAS_DE_USUARIO.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md).
+    *   **Validación**: Asegura que las 12 HUs cubran el alcance del MVP.
 
 ---
 
-### Día 1: Definición de Historia de Usuarios (Datos)
-*   🛑 **PRE-REQ**: Comprender las entidades "Carrera" y "Materia".
+### 📅 DÍA 1: Datos Core (Modelado)
+*Definir la estructura de la información.*
 
-1.  **Crear Historias de Usuario en Trello**
-    *   📝 **SPEC**:
-        *   Título: "Como [Admin], quiero [crear Carreras], para [organizar la oferta académica]".
-        *   Criterios: "Debe tener Nombre, Duración y Tipo".
-    *   📘 **Guía**: [5_Crear_las_HU_en_TRELLO.md](../Bitacoras_Sprint_1/dia_1/5_Crear_las_HU_en_TRELLO.md)
-
-*   👋 **HANDOFF**: Mueve Tarjetas a "To Do". Avisa al **Admin**: "Modelo de datos listo para construir".
-
----
-
-### Día 2: Branding y UX
-*   🛑 **PRE-REQ**: Comprender los requerimientos visuales de la universidad.
-
-1.  **Crear Historias de Usuario en Trello (Branding)**
-    *   📝 **SPEC**:
-        *   **HU-004**: Dominio Seguro (My Domain)
-        *   **HU-005**: Identidad Institucional (Logo y Colores)
-        *   **HU-006**: App de Gestión Central
-    *   *Criterios*: Cada HU debe tener criterios de aceptación visuales medibles.
-    *   📘 **Guía**: [5_Crear_las_HU_en_TRELLO.md](../Bitacoras_Sprint_1/dia_2/5_Crear_las_HU_en_TRELLO.md)
-
-*   👋 **HANDOFF**: Mueve Tarjetas a "To Do". Avisa al **Admin**: "HUs de branding listas para implementar".
+#### 📝 Misión: Especificar el Modelo Académico
+*   **HUs a Definir**:
+    *   [HU-001](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Inscripciones (Many-to-Many).
+    *   [HU-002](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Identidad (`National ID`).
+    *   [HU-003](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Notas (`Final Grade`).
+*   **Criterios Clave**:
+    *   Especifica tipos de datos exactos (Picklist vs Texto).
+    *   Define unicidad (DNI 8 dígitos).
 
 ---
 
-### Día 3: Reglas de Negocio
-*   🛑 **PRE-REQ**: Admin reporta que los objetos existen.
+### 📅 DÍA 2: Identidad & UX
+*Definir cómo se ve y se siente el sistema.*
 
-1.  **Definir Validaciones**
-    *   📝 **SPEC**: Escribe reglas lógicas. Ejemplo: "Fecha de Fin no puede ser menor a Fecha de Inicio".
-    *   📘 **Guía**: [4_Crear_las_HU_en_TRELLO.md](../Bitacoras_Sprint_1/dia_3/4_Crear_las_HU_en_TRELLO.md)
-
-*   👋 **HANDOFF**: Mueve Tarjeta a "To Do". Avisa al **Admin**: "Reglas de validación listas para implementar".
+#### 📝 Misión: Especificar Branding
+*   **HUs a Definir**:
+    *   [HU-004](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): My Domain.
+    *   [HU-005](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Look & Feel.
+    *   [HU-006](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Lightning App.
+*   **Criterios Clave**:
+    *   Colores Hexadecimales exactos.
+    *   Navegación (Tabs) requerida.
 
 ---
 
-### Día 4: Seguridad
-*   🛑 **PRE-REQ**: Comprender los requerimientos de seguridad y compliance.
+### 📅 DÍA 3: Calidad & Reglas de Negocio
+*Blindar la base de datos.*
 
-1.  **Crear Historias de Usuario en Trello (Seguridad)**
-    *   📝 **SPEC**:
-        *   **HU-009**: Matriz de Visibilidad (Privacidad por defecto)
-        *   **HU-010**: Acceso Seguro (MFA)
-        *   **HU-011**: Segregación de Funciones (SoD)
-    *   *Criterios*: Cada HU debe incluir tests negativos y positivos para validación de permisos.
-    *   📘 **Guía**: [5_Crear_HU_Trello.md](../Bitacoras_Sprint_1/dia_4/5_Crear_HU_Trello.md)
+#### 📝 Misión: Especificar Validaciones
+*   **HUs a Definir**:
+    *   [HU-007](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Email (`.edu`).
+    *   [HU-008](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Rango Notas (1-10).
+    *   [HU-009](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Asistencia (<75% Libre).
+*   **Criterios Clave**:
+    *   Redactar el "Mensaje de Error" exacto que debe ver el usuario.
+    *   Proveer la fórmula lógica (Regex/And/Or) al Admin.
 
-*   👋 **HANDOFF**: Mueve Tarjetas a "To Do". Avisa al **Admin** y **QA**: "HUs de seguridad listas. Requieren pruebas exhaustivas de permisos".
+---
+
+### 📅 DÍA 4: Seguridad Zero Trust
+*Proteger los activos de información.*
+
+#### 📝 Misión: Matriz de Permisos
+*   **HUs a Definir**:
+    *   [HU-010](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Visibilidad (OWD Private).
+    *   [HU-011](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): MFA (2FA).
+    *   [HU-012](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Segregación (SoD).
+*   **Criterios Clave**:
+    *   Definir Perfiles: `Lumina Professor` vs `Lumina Registrar`.
+    *   Especificar qué campos son Read-Only para quién.
+
+---
+
+## 🃏 Herramienta: Planning Poker (Estimación)
+*Tu responsabilidad es liderar la sesión de estimación.*
+
+1.  Reúne al equipo (Admin + QA).
+2.  Lee la HU.
+3.  Voten Story Points (1, 3, 5).
+4.  **Referencia**: [2_Votar_Dificultad.md](../Bitacoras_Sprint_1/dia_5/2_Votar_Dificultad.md).
 
 ---
 
 ## 📚 Recursos Relacionados
-
 - 📘 **Tutorial de Rol**: [01-Rol_Business_Analyst.md](../Tutoriales_por_Rol/01-Rol_Business_Analyst.md)
-- 📘 **Gestor de Versiones**: [01-Business_Analyst.md](../Gestor_de_Versiones/01-Business_Analyst.md)
+- 📘 **Backlog Maestro**: [HISTORIAS_DE_USUARIO.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
 - 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
 - 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)
-

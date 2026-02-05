@@ -1,6 +1,7 @@
 # 🏗️ Manual de Ejecución: Team Lead (TL)
 
-**Tu Misión**: Calidad Técnica. Eres el dueño de la columna **6. Aprobación TL**.
+**Tu Misión**: Calidad Técnica y Gobernanza. Eres el portero. Nada entra a Producción si está "sucio".
+**Responsabilidad**: Garantizar que lo construido coincida con lo diseñado (`MANUAL_CONSULTANT.md`).
 
 ---
 
@@ -8,32 +9,52 @@
 
 | Bandera | Columna Trello | Significado |
 | :--- | :--- | :--- |
-| 🛑 **PRE-REQ** | **5. SF QA** | El QA dice que funciona funcionalmente. |
-| 🔍 **REVIEW** | **6. Aprobación TL** | Revisas calidad, nomenclatura y seguridad. |
-| 👋 **HANDOFF** | **7. SF Producción** | Todo limpio. Listo para despliegue. |
+| 🛑 **PRE-REQ** | **5. SF QA** | QA ha validado que "funciona" funcionalmente. |
+| 🔍 **REVIEW** | **Tu Turno** | Revisas las tripas: Naming Conventions, Seguridad, Performance. |
+| 👋 **HANDOFF** | **7. SF Producción** | Das el "Golden Ticket". Autorizas el Merge/Deploy. |
 
 ---
 
-## 📅 CRONOGRAMA DE EJECUCIÓN
+## 📅 RUTINA DE AUDITORÍA (Definition of Done)
 
-> **Nota**: El Team Lead trabaja de forma **reactiva** durante los días 1-4. Revisa las tareas a medida que el QA las aprueba y mueve a **6. Aprobación TL**.
+Cuando una tarjeta llega a tu escritorio, ejecuta este checklist implacable.
 
-### Rutina de Revisión
-1.  **Auditoría**
-    *   **Contexto**: La tarjeta está en **6. Aprobación TL**.
-    *   🔍 **Review**:
-        *   Entra al Sandbox.
-        *   Verifica nombres de API (`Nombre__c`).
-        *   Verifica que no hay permisos excesivos.
+### 1. Auditoría de Naming Conventions
+*   **Contexto**: El Admin puede haber creado `Career` como `Carrera__c` por error.
+*   **Checklist**:
+    *   [ ] Objetos Custom: PascalCase y en Inglés (`Enrollment__c`).
+    *   [ ] Campos Custom: Snake_case (o Pascal) y en Inglés (`National_ID__c`).
+    *   [ ] ¿Hay campos "Test1", "Prueba" o basura? -> **RECHAZAR**.
 
-2.  **Aprobación Final**
-    *   **Movimiento (6 -> 7)**: Mueve la tarjeta a **7. SF Producción**.
+### 2. Auditoría de Seguridad (Security Review)
+*   **Contexto**: Un campo abierto es una brecha de seguridad.
+*   **Checklist**:
+    *   [ ] **OWD**: Confirmar que `Student` esté en **Private**.
+    *   [ ] **FLS**: Verificar que el perfil `Lumina Professor` NO tenga Read Access a `National_ID__c`.
+    *   [ ] **MFA**: Verificar que el Permission Set no esté asignado a "Guest Users" por error.
+
+### 3. Auditoría de Calidad (Best Practices)
+*   **Contexto**: Evitar deuda técnica.
+*   **Checklist**:
+    *   [ ] **Validaciones**: ¿Tienen mensajes de error amigables? (No "Formula Error").
+    *   [ ] **Descripciones**: ¿Todos los campos nuevos tienen el campo `Description` lleno?
+    *   [ ] **Deprecación**: ¿Se borraron los campos temporales?
+
+---
+
+## 🛑 Gestión de Bloqueos (Troubleshooting)
+
+### Caso A: "El Admin dice que no puede cumplir el requisito"
+*   **Acción**: Revisa el `MANUAL_CONSULTANT.md`.
+*   *Solución*: Si el diseño era imposible, autoriza un cambio de alcance (Change Request) y actualiza la HU.
+
+### Caso B: "QA encontró un bug crítico el último día"
+*   **Acción**: Evaluar severidad.
+*   *Solución*: Si rompe el Core (Inscripción), se detiene el Release. Si es cosmético (Color incorrecto), se crea un "Bug Ticket" para Sprint 2.
 
 ---
 
 ## 📚 Recursos Relacionados
-
 - 📘 **Tutorial de Rol**: [07-Rol_Team_Lead.md](../Tutoriales_por_Rol/07-Rol_Team_Lead.md)
-- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+- 📘 **Manual Consultor**: [MANUAL_CONSULTANT.md](MANUAL_CONSULTANT.md) (Tu referencia de verdad)
 - 🛡️ **Diagrama Seguridad**: [DIAGRAMA_SEGURIDAD.md](../DIAGRAMA_SEGURIDAD.md)
-    *   👋 **Handover**: @menciona al **Release Manager**. "Código limpio. Autorizado para Deploy".

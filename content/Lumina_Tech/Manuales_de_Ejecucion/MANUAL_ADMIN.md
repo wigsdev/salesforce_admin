@@ -1,6 +1,6 @@
 # 🛡️ Manual de Ejecución: Salesforce Admin
 
-**Tu Misión**: Construir. Transformas Tarjetas en Soluciones.
+**Tu Misión**: Construir. Transformas Historias de Usuario (Tarjetas) en Soluciones.
 **Territorio**: Columnas **3. En Progreso** y **4. SF Desarrollo**.
 
 ---
@@ -15,104 +15,105 @@
 
 ---
 
-## 📅 CRONOGRAMA DE EJECUCIÓN (Sprint 1: Las 11 Historias)
+## 📅 CRONOGRAMA DE EJECUCIÓN (Sprint 1: Las 12 Historias)
 
 ### 📅 DÍA 1: Cimientos de Datos (Modelado)
 *Crea los objetos donde vivirá la información.*
 
-#### 🏷️ Misión 1: El Modelo Académico ([HU-001](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md))
-1.  **Trello**: Busca la tarjeta **[HU-001](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Gestión de Inscripciones**.
-2.  **Acción**: Muévela a **3. En Progreso**.
-3.  **Ejecución**: Para cumplir esto, necesitas crear `Carrera`, `Materia` e `Inscripción`.
+#### 🏷️ Misión 1: El Modelo Académico (HU-001)
+*   **Backlog**: [HU-001: Gestión de Inscripciones](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: Crear objetos `Career`, `Subject` e `Enrollment`.
     *   🔨 Usa: [01-Tutorial_Carrera.md](../Guias_Implementacion/01-Tutorial_Carrera.md)
     *   🔨 Usa: [02-Tutorial_Materia.md](../Guias_Implementacion/02-Tutorial_Materia.md)
     *   🔨 Usa: [04-Tutorial_Inscripcion.md](../Guias_Implementacion/04-Tutorial_Inscripcion.md)
-4.  **Cierre**: Muévela a **4. SF Desarrollo**.
 
-#### 🏷️ Misión 2: Identidad del Alumno ([HU-002](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md))
-1.  **Trello**: Busca **[HU-002](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Unicidad de Identidad**. -> Mueve a **En Progreso**.
-2.  **Ejecución**: Configura el campo DNI como único en el objeto Alumno.
+#### 🏷️ Misión 2: Identidad del Alumno (HU-002)
+*   **Backlog**: [HU-002: Identidad Única](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: Configurar `Student` con `National ID` único y ID automático.
     *   🔨 Usa: [03-Tutorial_Alumno.md](../Guias_Implementacion/03-Tutorial_Alumno.md)
-3.  **Cierre**: Mueve a **4. SF Desarrollo**.
+    *   🔨 Usa: [05-Tutorial_Validaciones.md](../Guias_Implementacion/05-Tutorial_Validaciones.md) (Caso D: Validación DNI)
 
-#### 🏷️ Misión 3: Precisión de Notas ([HU-003](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md))
-1.  **Trello**: Busca **[HU-003](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Integridad de Notas**. -> Mueve a **En Progreso**.
-2.  **Ejecución**: Crea el campo `Nota__c` (Number 2,2) en Inscripción.
-3.  **Cierre**: Mueve a **4. SF Desarrollo**.
+#### 🏷️ Misión 3: Integridad de Notas (HU-003)
+*   **Backlog**: [HU-003: Notas y Auditoría](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: Crear campo `Final Grade` (Number 4,2) y activar Field History.
+    *   🔨 Usa: [04-Tutorial_Inscripcion.md](../Guias_Implementacion/04-Tutorial_Inscripcion.md) (Paso 5)
 
 ---
 
 ### 📅 DÍA 2: Identidad Visual (Branding)
 *Que la app se sienta profesional.*
 
-#### 🏷️ Misión 4: Tu Propio Dominio ([HU-004](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md))
-1.  **Trello**: Mueve **[HU-004](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Dominio Institucional** a **En Progreso**.
-2.  **Ejecución**: Configura My Domain (`lumina-tech.my.salesforce...`).
+#### 🏷️ Misión 4: Tu Propio Dominio (HU-004)
+*   **Backlog**: [HU-004: Dominio Seguro](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: Configura My Domain (`lumina-university`).
     *   🔨 Usa: [07-Tutorial_App_Builder.md](../Guias_Implementacion/07-Tutorial_App_Builder.md) (Sección Dominio)
-3.  **Cierre**: Mueve a **4. SF Desarrollo**.
 
-#### 🏷️ Misión 5: Colores y Logo ([HU-005](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md))
-1.  **Trello**: Mueve **[HU-005](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Look & Feel** a **En Progreso**.
-2.  **Ejecución**: Sube el logo y activa el Theme corporativo.
+#### 🏷️ Misión 5: Colores y Logo (HU-005)
+*   **Backlog**: [HU-005: Identidad Institucional](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: Sube el logo y activa el Theme corporativo.
     *   🔨 Usa: [07-Tutorial_App_Builder.md](../Guias_Implementacion/07-Tutorial_App_Builder.md) (Sección Temas)
-3.  **Cierre**: Mueve a **4. SF Desarrollo**.
 
-#### 🏷️ Misión 6: La App Central ([HU-006](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md))
-1.  **Trello**: Mueve **[HU-006](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): App Central** a **En Progreso**.
-2.  **Ejecución**: Crea la Lightning App "Gestión Académica" con sus Tabs.
+#### 🏷️ Misión 6: La App Central (HU-006)
+*   **Backlog**: [HU-006: App de Gestión](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: Crea la Lightning App "Gestión Académica".
     *   🔨 Usa: [07-Tutorial_App_Builder.md](../Guias_Implementacion/07-Tutorial_App_Builder.md) (Sección App)
-3.  **Cierre**: Mueve a **4. SF Desarrollo**.
 
 ---
 
 ### 📅 DÍA 3: Calidad de Datos (Reglas)
 *Evitar basura en la base de datos.*
 
-#### 🏷️ Misión 7: Email Limpio ([HU-007](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md))
-1.  **Trello**: Mueve **[HU-007](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Validación de Email** a **En Progreso**.
-2.  **Ejecución**: Aplica la Regex en el campo Email.
-    *   🔨 Usa: [05-Tutorial_Validaciones.md](../Guias_Implementacion/05-Tutorial_Validaciones.md)
-3.  **Cierre**: Mueve a **4. SF Desarrollo**.
+#### 🏷️ Misión 7: Email Limpio (HU-007)
+*   **Backlog**: [HU-007: Validación Email](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: Regex para `@lumina.edu`.
+    *   🔨 Usa: [05-Tutorial_Validaciones.md](../Guias_Implementacion/05-Tutorial_Validaciones.md) (Caso A)
 
-#### 🏷️ Misión 8: Notas Lógicas ([HU-008](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md))
-1.  **Trello**: Mueve **[HU-008](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Lógica de Notas** a **En Progreso**.
-2.  **Ejecución**: Validation Rule `Nota >= 0 && Nota <= 10`.
-    *   🔨 Usa: [05-Tutorial_Validaciones.md](../Guias_Implementacion/05-Tutorial_Validaciones.md)
-3.  **Cierre**: Mueve a **4. SF Desarrollo**.
+#### 🏷️ Misión 8: Notas Lógicas (HU-008)
+*   **Backlog**: [HU-008: Integridad Numérica](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: Validation Rule `1..10`.
+    *   🔨 Usa: [05-Tutorial_Validaciones.md](../Guias_Implementacion/05-Tutorial_Validaciones.md) (Caso B)
+
+#### 🏷️ Misión 9: Automatización Asistencia (HU-009)
+*   **Backlog**: [HU-009: Control de Asistencia](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: Fórmulas de Porcentaje y Condición Académica.
+    *   🔨 Usa: [04-Tutorial_Inscripcion.md](../Guias_Implementacion/04-Tutorial_Inscripcion.md) (Paso 6)
 
 ---
 
 ### 📅 DÍA 4: Seguridad (Zero Trust)
 *Protege la información.*
 
-#### 🏷️ Misión 9: Privacidad por Defecto ([HU-009](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md))
-1.  **Trello**: Mueve **[HU-009](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Matriz de Privacidad** a **En Progreso**.
-2.  **Ejecución**: Configura OWD de Alumno a "Private".
-    *   🔨 Usa: [06-Tutorial_Seguridad.md](../Guias_Implementacion/06-Tutorial_Seguridad.md)
-3.  **Cierre**: Mueve a **4. SF Desarrollo**.
+#### 🏷️ Misión 10: Matriz de Visibilidad (HU-010)
+*   **Backlog**: [HU-010: Visibilidad](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: OWD Private + Sharing Rules.
+    *   🔨 Usa: [06-Tutorial_Seguridad.md](../Guias_Implementacion/06-Tutorial_Seguridad.md) (Parte 1 y 5)
 
-#### 🏷️ Misión 10: Doble Factor ([HU-010](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md))
-1.  **Trello**: Mueve **[HU-010](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Acceso MFA** a **En Progreso**.
-2.  **Ejecución**: Crea Permission Set para MFA.
-    *   🔨 Usa: [06-Tutorial_Seguridad.md](../Guias_Implementacion/06-Tutorial_Seguridad.md)
-3.  **Cierre**: Mueve a **4. SF Desarrollo**.
+#### 🏷️ Misión 11: Doble Factor (HU-011)
+*   **Backlog**: [HU-011: MFA](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: Permission Set MFA.
+    *   🔨 Usa: [06-Tutorial_Seguridad.md](../Guias_Implementacion/06-Tutorial_Seguridad.md) (Parte 3)
 
-#### 🏷️ Misión 11: Segregación ([HU-011](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md))
-1.  **Trello**: Mueve **[HU-011](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Segregación de Perfiles** a **En Progreso**.
-2.  **Ejecución**: Configura Perfiles (Bedelía vs Profesor).
-    *   🔨 Usa: [06-Tutorial_Seguridad.md](../Guias_Implementacion/06-Tutorial_Seguridad.md)
-3.  **Cierre**: Mueve a **4. SF Desarrollo**.
+#### 🏷️ Misión 12: Segregación de Roles (HU-012)
+*   **Backlog**: [HU-012: SoD](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+*   **Ejecución**: Perfiles Professor vs Registrar.
+    *   🔨 Usa: [06-Tutorial_Seguridad.md](../Guias_Implementacion/06-Tutorial_Seguridad.md) (Parte 2)
 
 ---
 
-> **¡Felicidades!** Has completado las 11 misiones del Sprint 1. Tu trabajo aquí ha terminado.
+## 🎁 Misiones Bonus (Tools de Poder)
+
+#### 💾 Misión Data: Carga Masiva
+*   **Objetivo**: Cargar alumnos desde Excel sin teclear.
+    *   🔨 Usa: [08-Tutorial_Carga_Datos.md](../Guias_Implementacion/08-Tutorial_Carga_Datos.md)
+
+#### �️ Misión Architect: Vista de Pájaro
+*   **Objetivo**: Ver el diagrama de la base de datos en vivo.
+    *   🔨 Usa: [09-Tutorial_Schema_Builder.md](../Guias_Implementacion/09-Tutorial_Schema_Builder.md)
 
 ---
 
 ## 📚 Recursos Relacionados
-
-- 📘 **Tutorial de Rol**: [05-Rol_Salesforce_Admin.md](../Tutoriales_por_Rol/05-Rol_Salesforce_Admin.md)
 - 📘 **Guías Técnicas**: [Guias_Implementacion](../Guias_Implementacion/)
-- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
-- 📊 **Diagrama ERD**: [DIAGRAMA_ERD.md](../DIAGRAMA_ERD.md)
-- 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)
+- 📘 **Backlog Detallado**: [HISTORIAS_DE_USUARIO.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+- � **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+- � **Diagrama ERD**: [DIAGRAMA_ERD.md](../DIAGRAMA_ERD.md)

@@ -1,43 +1,75 @@
 # 🧪 Manual de Ejecución: QA Tester
 
-**Tu Misión**: Romper cosas. Eres el dueño de la columna **5. SF QA**.
+**Tu Misión**: Romper cosas. Eres el Guardián de la Calidad. Nada pasa a Producción si tú no das el OK.
+**Herramientas**: `HISTORIAS_DE_USUARIO.md` (Tu Biblia) y Sandbox (Tu Patio de Juegos).
 
 ---
 
 ## 🚦 Tus Banderas (Reglas de Juego)
 
-| Bandera | Columna Trello | Significado |
+| Bandera | Significado | Acción |
 | :--- | :--- | :--- |
-| 🛑 **PRE-REQ** | **4. SF Desarrollo** | El Admin terminó de construir en Sandbox. |
-| 💥 **TEST** | **5. SF QA** | Ejecución de pruebas en entorno QA/Dev. |
-| 👋 **HANDOFF** | **6. Aprobación TL** | Validado funcionalmente. Listo para revisión técnica. |
+| 🛑 **PRE-REQ** | **Bloqueo** | El Admin dice "Terminado" (Columna 4). Tú dices "Vamos a ver". |
+| 💥 **TEST** | **Tu Turno** | Ejecutas los **QA Checks** definidos en la Historia de Usuario. |
+| 👋 **HANDOFF** | **Salida** | Apruebas (Pasa a Done) o Rechazas (Vuelve a In Progress). |
 
 ---
 
-## 📅 CRONOGRAMA DE EJECUCIÓN
+## 📅 ESTRATEGIA DE PRUEBAS (Sprint 1)
 
-> **Nota**: El QA trabaja de forma **reactiva** durante los días 1-4. No tiene un cronograma fijo por día, sino que prueba las tareas a medida que el Admin las completa y mueve a **4. SF Desarrollo**.
+Tu trabajo no es adivinar. Tienes un guion estricto.
 
-### Rutina de Pruebas
-1.  **Tomar la Tarea**
-    *   **Movimiento (4 -> 5)**: Mueve la tarjeta desde **4. SF Desarrollo** a **5. SF QA**.
-    *   *Acción*: Lee los Criterios de Aceptación.
+### 1. El Checklist de Oro (Backlog)
+Para cada HU, consulta la sección **✅ Criterios de Aceptación (QA Check)** en `HISTORIAS_DE_USUARIO.md`.
 
-2.  **Ejecutar Tests**
-    *   💥 **Testing**:
-        *   Usa el Sandbox para verificar la funcionalidad.
-        *   Si falla: Devuelve la tarjeta a **3. En Progreso** y comenta el error.
-        *   Si pasa: Continúa.
-    *   📘 **Guía**: [03-Rol_QA_Tester.md](../Tutoriales_por_Rol/03-Rol_QA_Tester.md)
+*   **Ejemplo (HU-002 - Identidad)**:
+    *   [ ] ¿Se generó el ID automático?
+    *   [ ] ¿El sistema explotó cuando metí un DNI duplicado? (Debe explotar).
+    *   [ ] ¿El sistema rechazó mi DNI de 7 dígitos con un mensaje claro?
 
-3.  **Aprobación**
-    *   **Movimiento (5 -> 6)**: Mueve la tarjeta a **6. Aprobación TL**.
+### 2. Pruebas de Seguridad (Personas)
+No pruebes todo como "Admin". Usa los usuarios ficticios.
+*   🔨 Referencia: [06-Tutorial_Seguridad.md](../Guias_Implementacion/06-Tutorial_Seguridad.md) (Parte 6: Estrategia de Testing).
+
+| Actor | Rol | Prueba Clave |
+| :--- | :--- | :--- |
+| **Severus S.** | Profesor | Intentar ver materias de otros. (Debe fallar). |
+| **Dolores U.** | Registrar | Intentar cambiar una nota final. (Debe fallar). |
+| **Alumno Fake** | Estudiante | Intentar ver datos de otro alumno. (Debe fallar). |
+
+---
+
+## 🐛 Cómo Reportar Bugs (Bug Tracking)
+
+Si encuentras un error, no digas "no anda". Sé profesional.
+
+**Plantilla de Bug:**
+> **Título**: [HU-008] Permite ingresar notas negativas (-5)
+> **Pasos para reproducir**:
+> 1. Loguearse como Profesor.
+> 2. Ir al alumno X.
+> 3. En la nota, poner "-5".
+> 4. Guardar.
+> **Resultado Esperado**: Error "Invalid Grade".
+> **Resultado Obtenido**: Se guardó con éxito.
+> **Severidad**: Alta.
+
+---
+
+## 📅 RUTINA DIARIA
+
+### Días 1-2: Pruebas Funcionales (Caja Negra)
+*   Verifica que los objetos existan.
+*   Crea registros de prueba manualmente.
+*   Valida los "Required Fields".
+
+### Días 3-4: Pruebas de Reglas y Seguridad
+*   **Data Quality**: Intenta ensuciar la base de datos (emails falsos, DNIs letras).
+*   **Security**: Logueate como Severus y Dolores. Intenta violar la privacidad.
 
 ---
 
 ## 📚 Recursos Relacionados
-
+- 📘 **Backlog con QA Checks**: [HISTORIAS_DE_USUARIO.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+- 📘 **Guía de Seguridad**: [06-Tutorial_Seguridad.md](../Guias_Implementacion/06-Tutorial_Seguridad.md)
 - 📘 **Tutorial de Rol**: [03-Rol_QA_Tester.md](../Tutoriales_por_Rol/03-Rol_QA_Tester.md)
-- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
-- 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)
-    *   👋 **Handover**: @menciona al **Team Lead**. "Funcionalidad validada. Pase a revisión de código".

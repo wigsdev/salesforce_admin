@@ -1,6 +1,7 @@
 # ♾️ Manual de Ejecución: DevOps Specialist
 
-**Tu Misión**: Eres el Mecánico. Preparas el terreno (Datos y Ambientes) para que los pilotos (Admin/QA) puedan volar.
+**Tu Misión**: Eres el Mecánico. Preparas el terreno (Datos y Ambientes) para que los pilotos (Admin y QA) puedan volar sin estrellarse.
+**Territorio**: Data Loader, Schema Builder y Sandboxes.
 
 ---
 
@@ -8,76 +9,84 @@
 
 | Bandera | Significado | Acción |
 | :--- | :--- | :--- |
-| 🛑 **PRE-REQ** | **Entrada** | QA necesita probar, pero el sistema está vacío (sin alumnos, sin materias). |
-| 💿 **DATA** | **Tu Turno** | Cargas datos masivos (Seed Data) para simular un entorno real. |
-| ♻️ **REFRESH** | **Mantenimiento** | Sincronizas los cambios entre Sandboxes si hay desvaríos. |
+| 🛑 **PRE-REQ** | **Bloqueo** | QA necesita probar, pero el sistema está vacío (sin alumnos). |
+| 💿 **DATA** | **Tu Turno** | Inyectas datos masivos (Seed Data) para simular realidad. |
+| 🗺️ **AUDIT** | **Mantenimiento** | Verificas que la BD no tenga objetos basura o huérfanos. |
 
 ---
 
-## 📅 CRONOGRAMA DE EJECUCIÓN
+## 📅 CRONOGRAMA DE OPERACIONES (Sprint 1)
 
-### Día 0: Preparación de Ambientes
-*   🛑 **PRE-REQ**: Acceso a la Org y Sandboxes asignados.
+### 📅 DÍA 0: Preparación del Hangar
+*Antes de que empiece el desarrollo.*
 
-1.  **Verificación de Ambientes**
-    *   💿 **DATA**: Confirma que tienes acceso a DEV, QA y PROD.
-    *   *Acción*: Documenta las credenciales y URLs de cada ambiente.
-
-*   👋 **HANDOFF**: "Ambientes verificados y listos para el equipo".
+1.  **Sanidad de Ambientes**
+    *   **Acción**: Verifica acceso a DEV y QA Sandboxes.
+    *   **Health Check**: Confirma que el `Company Information` tenga las licencias disponibles.
 
 ---
 
-### Día 1: Preparación del Terreno
-*   🛑 **PRE-REQ**: Admin creó los objetos `Carrera` y `Materia`.
+### 📅 DÍA 1: Inyección de Datos (Data Seeding)
+*Admin ha creado los objetos, pero están vacíos.*
 
-1.  **Carga de Datos Maestros (Seed)**
-    *   💿 **DATA**:
-        *   Usa Data Import Wizard o Inspector para cargar 5 Carreras (Ingeniería, Derecho, etc.).
-        *   Carga 20 Materias vinculadas.
-    *   *Por qué*: Para que el QA no tenga que crear datos manuales uno por uno.
-    *   📘 **Guía**: [09-Rol_DevOps_Specialist.md](../Tutoriales_por_Rol/09-Rol_DevOps_Specialist.md)
+#### 💿 Misión: Carga Masiva de Alumnos
+*   **Contexto**: QA necesita 50 alumnos para probar filtros y reportes.
+*   **Ejecución**:
+    1.  Prepara el CSV `Student_Load_v1.csv` con columnas: `First Name`, `Last Name`, `National ID`, `Email`.
+    2.  Ejecuta **Data Import Wizard**.
+    3.  **Validación**: Verifica que los 8 dígitos del DNI respeten la regla del Admin.
+    *   🔨 Usa: [08-Tutorial_Carga_Datos.md](../Guias_Implementacion/08-Tutorial_Carga_Datos.md)
 
-*   👋 **HANDOFF**: Avisa al QA: "Datos de prueba listos. Hay 20 materias para jugar".
+---
+
+### 📅 DÍA 2: Soporte a Branding
+*El Admin despliega My Domain.*
+
+#### 🔄 Misión: Verificación de DNS
+*   **Acción**: Verifica que la URL `lumina-university.my.salesforce.com` resuelva correctamente desde fuera de la red (simulando acceso público).
+
+---
+
+### 📅 DÍA 3: Calidad de Datos (Smoke Test)
+*Admin implementó reglas de validación.*
+
+#### 🧪 Misión: Prueba de Estrés de Datos
+*   **Acción**: Intenta cargar un CSV con datos sucios (Emails sin @, Notas > 10).
+*   **Resultado Esperado**: El Data Loader debe devolver `FAILED` para esas filas.
+*   **Reporte**: Entrega el archivo de errores al Admin como evidencia de que sus reglas funcionan.
+
+---
+
+### 📅 DÍA 4: Auditoría de Arquitectura
+*El Sprint termina. ¿Qué basura quedó?*
+
+#### 🗺️ Misión: Limpieza de Esquema
+*   **Contexto**: A veces se crean campos de prueba que luego se borran pero quedan "soft deleted".
+*   **Ejecución**:
+    1.  Entra al **Schema Builder**.
+    2.  Visualiza `Student`, `Subject`, `Enrollment`.
+    3.  **Audit**: Confirma que las relaciones sean Master-Detail (Líneas rojas) y no Lookup (Líneas azules).
+    4.  **Limpieza**: Identifica campos no usados o desconectados.
+    *   🔨 Usa: [09-Tutorial_Schema_Builder.md](../Guias_Implementacion/09-Tutorial_Schema_Builder.md)
+
+---
+
+## 🚀 Despliegue (Deployment Strategy)
+
+Cuando el QA apruebe todo, tu trabajo es moverlo a Producción.
+
+1.  **Change Set**: Crea un Change Set saliente en DEV.
+2.  **Add Components**:
+    *   Custom Objects: `Student`, `Subject`, `Career`, `Enrollment`.
+    *   Profiles: `Lumina Professor`, `Lumina Registrar`.
+    *   Permission Set: `Lumina_MFA_Access`.
+    *   Apps: `Lumina_Academic`.
+3.  **Upload & Deploy**: Sube a PROD y valida.
 
 ---
 
 ## 📚 Recursos Relacionados
-
 - 📘 **Tutorial de Rol**: [09-Rol_DevOps_Specialist.md](../Tutoriales_por_Rol/09-Rol_DevOps_Specialist.md)
-- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
-
----
-
-### Día 2: Soporte a Branding
-*   🛑 **PRE-REQ**: Admin está configurando My Domain y Themes.
-
-1.  **Monitoreo Pasivo**
-    *   ♻️ **REFRESH**: El DevOps no tiene tareas activas este día.
-    *   *Rol*: Disponible para resolver problemas técnicos si el Admin tiene bloqueos.
-
-*   👋 **HANDOFF**: "Día de construcción. DevOps en standby".
-
----
-
-### Día 3: Soporte a Validaciones
-*   🛑 **PRE-REQ**: Admin está creando Validation Rules.
-
-1.  **Backup Preventivo**
-    *   💿 **DATA**: Exporta los datos actuales de DEV como respaldo antes de las validaciones.
-    *   *Por qué*: Las validaciones pueden bloquear datos existentes.
-
-*   👋 **HANDOFF**: "Backup completado. Admin puede proceder con validaciones".
-
----
-
-### Día 4: Stress Testing (Soporte)
-*   🛑 **PRE-REQ**: QA quiere probar seguridad masiva.
-
-1.  **Creación de Usuarios Fake**
-    *   💿 **DATA**:
-        *   Crea 3 usuarios "Student" ficticios.
-        *   Crea 2 usuarios "Professor" ficticios.
-    *   *Objetivo*: Que QA pruebe los permisos de login.
-
-*   👋 **HANDOFF**: "Usuarios de prueba creados. Credenciales en el documento compartido".
-
+- 📘 **Guía Data Loader**: [08-Tutorial_Carga_Datos.md](../Guias_Implementacion/08-Tutorial_Carga_Datos.md)
+- 📘 **Guía Schema**: [09-Tutorial_Schema_Builder.md](../Guias_Implementacion/09-Tutorial_Schema_Builder.md)
+- 📊 **Diagrama ERD**: [DIAGRAMA_ERD.md](../DIAGRAMA_ERD.md)

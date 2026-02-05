@@ -1,94 +1,64 @@
 # 👔 Manual de Ejecución: Product Owner (PO)
 
-**Tu Misión**: Alimentar la máquina. Eres el dueño de las columnas **1. Backlog** y **2. Sprint Backlog**.
+**Tu Misión**: Alimentar la máquina. Decides QUÉ es valioso. Si no está en el Backlog, no existe.
+**Responsabilidad**: Maximizar el ROI. Asegurar que construyamos lo correcto, no solo "construir cosas".
 
 ---
 
 ## 🚦 Tus Banderas (Reglas de Juego)
 
-| Bandera | Columna Trello | Significado |
+| Bandera | Significado | Acción |
 | :--- | :--- | :--- |
-| 🛑 **PRE-REQ** | **(Externo)** | Recibes requerimientos del Negocio. |
-| 💎 **VALUE** | **1. Backlog** | Creas y priorizas las historias con ayuda del BA. |
-| 🏁 **COMMIT** | **2. Sprint Backlog** | Decides qué entra al Sprint. |
+| � **VALUE** | **Input** | Defines la visión. "Quiero una universidad digital". |
+| � **PRIORITY** | **Tu Turno** | Ordenas el Backlog. ¿Qué impacta más? (Core vs Nice-to-have). |
+| 🏁 **ACCEPT** | **Salida** | Validas el entregable final en la Demo. |
 
 ---
 
-## 📅 CRONOGRAMA DE EJECUCIÓN
+## 📅 ESTRATEGIA DE PRIORIZACIÓN (Sprint 1)
 
-### Día 0: Definición del Alcance
-*   🛑 **PRE-REQ**: Leer el caso de negocio.
+### 1. El Core Académico (Must Have) 🔴
+Sin esto, no hay sistema. Debe ser lo primero en el Sprint Backlog.
 
-1.  **Refinar el Backlog**
-    *   💎 **Acción en Columna 1**:
-        *   Revisa cards creadas por el BA.
-        *   Ordénalas por prioridad (Arriba = Más importante).
-    *   📘 **Guía**: [06-Rol_Product_Owner.md](../Tutoriales_por_Rol/06-Rol_Product_Owner.md)
+*   **HU-001 (Inscripciones)**: Sin esto, los alumnos no cursan.
+*   **HU-002 (Identidad)**: Necesitamos identificar a quién cobramos.
+*   **HU-003 (Notas)**: El producto final de la universidad.
 
-2.  **Sprint Planning**
-    *   🏁 **Movimiento (1 -> 2)**:
-        *   Mueve las historias elegidas de **1. Backlog** a **2. Sprint Backlog**.
-        *   *Mensaje al equipo*: "Esto es lo que vamos a construir".
+### 2. La Seguridad y Calidad (Should Have) 🟡
+Es vital para no tener una "bomba de tiempo", pero técnicamente podría esperar al Día 3.
 
----
+*   **HU-009 (Asistencia)**: Automatización que ahorra tiempo a preceptores.
+*   **HU-010 (Visibilidad)**: Compliance legal (privacidad de datos).
+*   **HU-011 (MFA)**: Seguridad bancaria.
 
-### Día 1: Definición de Datos
-*   🛑 **PRE-REQ**: BA ha analizado el modelo académico.
+### 3. La Experiencia (Could Have) 🟢
+Branding y colores. Importante para la adopción, pero no bloquea la operación.
 
-1.  **Refinar HUs de Modelado**
-    *   💎 **VALUE**: Trabajas con el BA para crear HU-001, HU-002, HU-003 (Objetos y Relaciones).
-    *   *Acción*: Priorizas estas HUs en **2. Sprint Backlog** para que el Admin comience la construcción.
-
-*   👋 **HANDOFF**: "HUs de modelado priorizadas. Admin puede comenzar".
+*   **HU-004/005 (Branding)**: "Que se vea bonito".
+*   **HU-006 (App)**: Comodidad de navegación.
 
 ---
 
-### Día 2: Branding
-*   🛑 **PRE-REQ**: BA ha definido los requerimientos visuales.
+## 📅 RUTINA DEL SPRINT
 
-1.  **Refinar HUs de Branding**
-    *   💎 **VALUE**: Trabajas con el BA para crear HU-004, HU-005, HU-006 (Dominio, Logo, App).
-    *   *Acción*: Priorizas estas HUs en **2. Sprint Backlog**.
-    *   📘 **Guía**: [5_Crear_las_HU_en_TRELLO.md](../Bitacoras_Sprint_1/dia_2/5_Crear_las_HU_en_TRELLO.md)
+### Día 0: Refinamiento (Grooming)
+*   Reúnete con el BA y el Consultant.
+*   **Pregunta**: "¿Están claras las reglas de negocio de la HU-009?".
+*   **Acción**: Si hay dudas, la HU no entra al Sprint.
 
-*   👋 **HANDOFF**: "HUs de branding priorizadas. Admin puede implementar identidad visual".
-
----
-
-### Día 3: Calidad de Datos
-*   🛑 **PRE-REQ**: BA ha definido las reglas de validación.
-
-1.  **Refinar HUs de Validaciones**
-    *   💎 **VALUE**: Trabajas con el BA para crear HU-007, HU-008 (Email, Notas).
-    *   *Acción*: Priorizas estas HUs en **2. Sprint Backlog**.
-
-*   👋 **HANDOFF**: "HUs de validaciones priorizadas. Admin puede implementar reglas".
-
----
-
-### Día 4: Seguridad
-*   🛑 **PRE-REQ**: BA ha definido los requerimientos de seguridad.
-
-1.  **Refinar HUs de Seguridad**
-    *   💎 **VALUE**: Trabajas con el BA para crear HU-009, HU-010, HU-011 (Privacidad, MFA, SoD).
-    *   *Acción*: Priorizas estas HUs en **2. Sprint Backlog**.
-    *   📘 **Guía**: [5_Crear_HU_Trello.md](../Bitacoras_Sprint_1/dia_4/5_Crear_HU_Trello.md)
-
-*   👋 **HANDOFF**: "HUs de seguridad priorizadas. Admin y QA deben trabajar juntos en permisos".
-
----
-
-### Fin del Sprint: La Demo
-*   🛑 **PRE-REQ**: Tarjetas llegan a **7. SF Producción**.
-
-1.  **Acceptance**
-    *   Verifica el resultado final en Producción.
-    *   Si está aprobado, el Release Manager mueve a **8. Terminado**.
+### Día 5: Sprint Review (Demo)
+*   El Team Lead te muestra el sistema en Producción.
+*   **Checklist de Aceptación**:
+    *   [ ] ¿Puedo inscribir un alumno?
+    *   [ ] ¿Si pongo una nota incorrecta, me frena?
+    *   [ ] ¿Si entro como Profesor, veo solo mis materias?
+*   **Decisión**:
+    *   👍 **Aprobado**: El Sprint se cierra.
+    *   👎 **Rechazado**: Se genera Bug en el Backlog para corrección inmediata.
 
 ---
 
 ## 📚 Recursos Relacionados
-
 - 📘 **Tutorial de Rol**: [06-Rol_Product_Owner.md](../Tutoriales_por_Rol/06-Rol_Product_Owner.md)
-- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
+- 📘 **Backlog Priorizado**: [HISTORIAS_DE_USUARIO.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
 - 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)

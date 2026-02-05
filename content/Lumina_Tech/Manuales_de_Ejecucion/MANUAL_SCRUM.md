@@ -1,6 +1,7 @@
 # ⏱️ Manual de Ejecución: Scrum Master
 
-**Tu Misión**: Eres el Facilitador. Tu trabajo es que los demás puedan trabajar. Eliminas obstáculos y cuidas el proceso.
+**Tu Misión**: Facilitador. Aceitas los engranajes. Si el equipo se detiene, tú empujas.
+**Responsabilidad**: Velocidad del Equipo y Salud del Proceso.
 
 ---
 
@@ -8,41 +9,47 @@
 
 | Bandera | Significado | Acción |
 | :--- | :--- | :--- |
-| 🛑 **PRE-REQ** | **Entrada** | El equipo reporta un "Bloqueo" (ej. "No tengo acceso al Sandbox"). |
-| 🧩 **UNBLOCK** | **Tu Turno** | Resuelves el problema. Persigues a quien tenga la llave. |
-| 🔄 **SYNC** | **Rutina** | Aseguras que Trello refleje la realidad. Si una tarea dice "Doing" hace 3 días, preguntas por qué. |
+| 🛑 **BLOCKER** | **Alerta Rora** | Alguien levanta la mano ("No tengo acceso"). Tú lo resuelves YA. |
+| 🔄 **SYNC** | **Rutina** | Daily Standup. ¿Están alineados Admin y QA? |
+| 📉 **BURNDOWN** | **Métrica** | ¿Llegamos al viernes con todo terminado? Si no, escala riesgos. |
 
 ---
 
-## 📅 CRONOGRAMA DE EJECUCIÓN
+## 📅 RITMO DE BATALLA (Ceremonias)
 
-> **Nota**: El Scrum Master trabaja **todos los días (0-4)** facilitando el proceso. Su rutina es transversal a todo el Sprint.
+### 🌅 Día 1: Sprint Planning (Facilitador)
+*   Asegúrate de que el PO tenga el Backlog priorizado.
+*   **Pregunta Clave**: "¿Admin, entiendes lo que pide la HU-009?".
+*   **Resultado**: El equipo se compromete a entregar las 12 HUs.
 
-### Diario (La Rutina)
-1.  **Daily Stand-up (Síncrona o Asíncrona)**
-    *   🔄 **SYNC**: Pregunta a los 5 roles:
-        1.  ¿Qué hiciste ayer?
-        2.  ¿Qué harás hoy?
-        3.  ¿Qué te bloquea?
-    *   📘 **Guía**: [08-Rol_Scrum_Master.md](../Tutoriales_por_Rol/08-Rol_Scrum_Master.md)
+### ☀️ Días 2-4: Daily Standup (15 min)
+*   Revisa el Tablero Trello.
+*   **Anti-Patrones a detectar**:
+    *   *El Admin tiene 5 tareas en "In Progress".* -> **Coach**: "Termina una antes de empezar otra".
+    *   *El QA no tiene nada que hacer.* -> **Coach**: "¿Puedes ayudar al Admin a preparar datos?".
+    *   *Una tarjeta lleva 2 días en "In Progress".* -> **Alert**: "¿Hay un bloqueo oculto?".
 
-2.  **Higiene del Tablero Trello**
-    *   🔄 **SYNC**:
-        *   Nadie debe tener más de 2 tareas en "Doing".
-        *   Las tareas en "QA" no deben acumularse.
+### 🌇 Día 5: Sprint Retrospective (Mejora Continua)
+*   Después de la Demo, reúne al equipo.
+*   **Start**: Comenzar a usar "Planning Poker" para estimar mejor.
+*   **Stop**: Dejar de subir campos sin descripción.
+*   **Continue**: Seguir usando los manuales de rol, funcionaron bien.
 
-### Gestión de Bloqueos
-*   🛑 **PRE-REQ**: Admin dice "No entiendo este requisito del BA".
+---
 
-1.  **Facilitación**
-    *   🧩 **UNBLOCK**: Organiza una llamada rápida de 5 min entre Admin y BA.
-    *   *Objetivo*: Que salgan con una decisión clara.
+## 🛑 Gestión de Bloqueos Comunes
+
+### Caso A: "Falta definición"
+*   **Síntoma**: El Admin pregunta "¿El DNI son 8 o 10 números?".
+*   **Acción SM**: Convoca al BA o PO inmediatamente. No dejes que adivinen.
+
+### Caso B: "Ambiente Caído"
+*   **Síntoma**: El Sandbox no responde o expiró.
+*   **Acción SM**: Escala con el DevOps. Busca un plan B (trabajar en papel/diseño mientras tanto).
 
 ---
 
 ## 📚 Recursos Relacionados
-
 - 📘 **Tutorial de Rol**: [08-Rol_Scrum_Master.md](../Tutoriales_por_Rol/08-Rol_Scrum_Master.md)
-- 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
 - 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)
-*   👋 **HANDOFF**: "Equipo desbloqueado, sigan trabajando".
+- 📊 **Planning Poker**: [2_Votar_Dificultad.md](../Bitacoras_Sprint_1/dia_5/2_Votar_Dificultad.md)
