@@ -2,42 +2,56 @@
 
 ```mermaid
 erDiagram
-    CARRERA ||--o{ MATERIA : "tiene"
-    MATERIA ||--o{ INSCRIPCION : "recibe"
-    ALUMNO ||--o{ INSCRIPCION : "se_inscribe_en"
+    CAREER ||--o{ SUBJECT : "offers"
+    SUBJECT ||--o{ ENROLLMENT : "is_studied_in"
+    STUDENT ||--o{ ENROLLMENT : "enrolls_in"
+    ENROLLMENT ||--o{ EXAM : "has_evaluation"
     
-    CARRERA {
-        string Nombre_Carrera__c
-        number Duracion_Anios__c
-        picklist Tipo__c
-        date Fecha_Creacion__c
+    CAREER {
+        string Name
+        string Career__c
+        number Duration_Years__c
+        picklist Type__c
+        date CreatedDate
     }
     
-    MATERIA {
-        string Nombre_Materia__c
-        number Creditos__c
-        lookup Carrera__c FK
-        number Cupo_Maximo__c
+    SUBJECT {
+        string Name
+        string Subject__c
+        number Credits__c
+        lookup Career__c FK
+        number Max_Capacity__c
     }
     
-    ALUMNO {
-        string DNI__c UK
-        string Nombre__c
-        string Apellido__c
-        email Email_Institucional__c UK
-        phone Telefono__c
-        text Direccion__c
-        formula Nombre_Completo__c
+    STUDENT {
+        string Name
+        string Student__c
+        number National_ID__c UK "External ID"
+        string First_Name__c
+        string Last_Name__c
+        email Email__c UK
+        phone Phone__c
+        textarea Address__c
     }
     
-    INSCRIPCION {
-        lookup Alumno__c FK
-        lookup Materia__c FK
-        picklist Estado__c
-        number Nota_Final__c
-        formula Estado_Cursada__c
-        formula Semaforo__c
-        date Fecha_Inscripcion__c
+    ENROLLMENT {
+        string Name
+        string Enrollment__c
+        lookup Student__c FK
+        lookup Subject__c FK
+        picklist Status__c "Enrolled, Passed, Failed"
+        number Final_Grade__c "0-10"
+        formula Subject_Display__c
+        date Enrollment_Date__c
+    }
+    
+    EXAM {
+        string Name
+        string Exam__c
+        lookup Enrollment__c FK "Master-Detail"
+        number Score__c
+        date Exam_Date__c
+        checkbox Attended__c
     }
 ```
 
@@ -45,9 +59,10 @@ erDiagram
 
 | Relación | Tipo | Descripción |
 |----------|------|-------------|
-| **Carrera → Materia** | Master-Detail | Una materia pertenece a una carrera |
-| **Alumno → Inscripción** | Master-Detail | Inscripción depende del alumno |
-| **Materia → Inscripción** | Master-Detail | Inscripción depende de la materia |
+| **Career → Subject** | Master-Detail | A Subject belongs to a Career |
+| **Student → Enrollment** | Master-Detail | Enrollment depends on Student |
+| **Subject → Enrollment** | Master-Detail | Enrollment depends on Subject |
+| **Enrollment → Exam** | Master-Detail | Exams are part of an Enrollment |
 
 ## Leyenda de Tipos de Campo
 
@@ -64,10 +79,10 @@ erDiagram
 
 ## Validaciones Clave
 
-1. **DNI**: Único en todo el sistema
-2. **Email Institucional**: Único y formato `@lumina.edu`
-3. **Nota Final**: Entre 0 y 10
-4. **Estado Cursada**: Automático (Aprobado si Nota >= 6)
+1. **National ID**: Unique in the system
+2. **Email**: Unique and strictly formatted as `@lumina.edu`
+3. **Final Grade**: Strictly between 0.00 and 10.00
+4. **Status**: Picklist based (Enrolled, Passed, Failed) - No auto-calculation yet (Sprint 2)
 
 ## Referencias
 

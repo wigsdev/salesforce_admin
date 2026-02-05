@@ -4,27 +4,27 @@
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#fff','primaryTextColor':'#000','primaryBorderColor':'#000','lineColor':'#000','fontSize':'13px'}}}%%
 graph TB
     subgraph OWD["<b>Organization-Wide Defaults (OWD)</b>"]
-        OWD1["Carrera:<br/>Public Read Only"]
-        OWD2["Materia:<br/>Public Read Only"]
-        OWD3["Alumno:<br/>Private"]
-        OWD4["Inscripción:<br/>Controlled by Parent"]
+        OWD1["Career:<br/>Public Read Only"]
+        OWD2["Subject:<br/>Public Read Only"]
+        OWD3["Student:<br/>Private"]
+        OWD4["Enrollment:<br/>Controlled by Parent"]
     end
     
-    subgraph PROF["<b>Perfiles</b>"]
-        P1["👔 Bedel<br/>CRUD: Alumno, Inscripción<br/>FLS: Nota = Read-Only"]
-        P2["👨‍🏫 Profesor<br/>Read: Alumno (solo sus materias)<br/>FLS: Nota = Edit"]
+    subgraph PROF["<b>Profiles / PSG</b>"]
+        P1["👔 Registrar (Bedel)<br/>CRUD: Student, Enrollment<br/>FLS: Final_Grade = Read-Only"]
+        P2["👨‍🏫 Professor<br/>Read: Student (My Students)<br/>FLS: Final_Grade = Edit"]
     end
     
     subgraph PS["<b>Permission Sets</b>"]
-        PS1["🔐 Lumina_MFA_Access<br/>MFA Habilitado"]
-        PS2["📊 Dashboard_Rectoria<br/>Acceso a reportes ejecutivos"]
+        PS1["🔐 Lumina_MFA_Access<br/>MFA Enabled"]
+        PS2["📊 Lumina_Registrar_Access<br/>Admin Capabilities"]
     end
     
     subgraph FLS["<b>Field-Level Security (FLS)</b>"]
-        FLS1["DNI: Read-Only para Profesor"]
-        FLS2["Nota_Final: Edit para Profesor"]
-        FLS3["Nota_Final: Read-Only para Bedel"]
-        FLS4["Email: Edit para Bedel"]
+        FLS1["National_ID: Read-Only for Professor"]
+        FLS2["Final_Grade: Edit for Professor"]
+        FLS3["Final_Grade: Read-Only for Registrar"]
+        FLS4["Email: Edit for Registrar"]
     end
     
     OWD3 --> P1
@@ -47,16 +47,16 @@ graph TB
 
 ## Matriz de Permisos
 
-| Objeto | Bedel | Profesor | Justificación |
-|--------|-------|----------|---------------|
-| **Carrera** | Read | Read | Información pública |
-| **Materia** | Read | Read | Información pública |
-| **Alumno** | CRUD | Read* | Bedel gestiona, Profesor solo ve sus alumnos |
-| **Inscripción** | CRUD | Read* | Bedel inscribe, Profesor ve sus inscripciones |
-| **Campo: DNI** | Edit | Read-Only | Solo Bedel actualiza datos personales |
-| **Campo: Nota_Final** | Read-Only | Edit | Solo Profesor califica |
+| Objeto | Registrar (Bedel) | Professor | Justificación |
+|--------|-------------------|-----------|---------------|
+| **Career** | Read | Read | Información pública |
+| **Subject** | Read | Read | Información pública |
+| **Student** | CRUD | Read* | Bedel gestiona, Professor solo ve sus alumnos |
+| **Enrollment** | CRUD | Read* | Bedel inscribe, Professor ve sus inscripciones |
+| **Campo: National_ID** | Edit | Read-Only | Solo Bedel actualiza datos personales |
+| **Campo: Final_Grade** | Read-Only | Edit | Solo Professor califica |
 
-*\*Read limitado por OWD: Profesor solo ve alumnos de sus materias*
+*\*Read limitado por OWD: Professor solo ve alumnos de sus materias*
 
 ## Principios de Seguridad Aplicados
 
