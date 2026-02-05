@@ -35,6 +35,7 @@
     - [x] **Validación Notas**: Intentar guardar `Final_Grade__c` = 10.5 → **PASS**
     - [x] **Fórmulas**: Verificar `Subject_Display__c` concatena correctamente → **PASS**
     - [x] **Integridad**: Verificar que no se borren hijos en Master-Detail → **PASS**
+    - [x] **Examen**: Crear `Exam` vinculado a Enrollment con nota 8.50 → **PASS**
 
 ---
 

@@ -35,8 +35,8 @@ Basado en [REQ-QUAL] (Calidad de Datos).
 *   **Email** (`Email__c`): Email Standard. [REQ-QUAL-001]
 
 #### Objeto: Exam
-*   **Final Grade** (`Final_Grade__c`): Number(4,2). **Validación**: `0 <= Grade <= 10`. [REQ-QUAL-002]
-*   **Date** (`Date__c`): Date (Required). [REQ-FUNC-001]
+*   **Score** (`Score__c`): Number(4,2). **Validación**: `0 <= Score <= 10`. [REQ-QUAL-002]
+*   **Exam Date** (`Exam_Date__c`): Date (Required). [REQ-FUNC-001]
 *   **Attended** (`Attended__c`): Checkbox (Default: True). [REQ-FUNC-002]
 
 ---

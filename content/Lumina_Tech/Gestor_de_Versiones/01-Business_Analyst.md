@@ -39,7 +39,7 @@ Desglose técnico de los requerimientos anteriores. Total: **12 User Stories**.
 | :--- | :--- | :--- | :--- |
 | **HU-001** | Gestión de Inscripciones | [REQ-DATA-002] | Objeto `Enrollment` (M:N). Tab visible solo para Directores. |
 | **HU-002** | Unicidad de Alumnos | [REQ-QUAL-003] | Campo `National_ID__c` (Unique, External ID). |
-| **HU-003** | Integridad de Notas | [REQ-QUAL-002] | Campo `Final_Grade__c` (4,2) y Validation Rule `Grade_Range`. |
+| **HU-003** | Gestión de Exámenes | [REQ-QUAL-002, REQ-FUNC-002] | Objeto `Exam` (M-D), `Score` y `Final_Grade__c` en Enrollment. |
 
 ---
 

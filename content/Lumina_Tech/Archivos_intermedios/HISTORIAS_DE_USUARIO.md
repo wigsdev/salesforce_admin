@@ -47,23 +47,32 @@
     - [ ] 2. Intentar crear dos alumnos con el mismo National ID; el sistema debe impedirlo.
     - [ ] 3. Intentar ingresar un National ID con letras o menos de 8 dígitos; el sistema debe impedirlo.
 
-### HU-003: Integridad de Notas y Auditoría
-*   **Estimación**: 🟡 **3 SP**
+### HU-003: Gestión de Exámenes y Notas
+*   **Estimación**: 🔴 **5 SP**
 *   **Prioridad**: Alta
-*   **Enlace Req**: [REQ-QUAL-002]
+*   **Enlace Req**: [REQ-QUAL-002, REQ-FUNC-002]
 *   **Descripción**:
-    > **Como** Administrativo de Actas,
-    > **Quiero** guardar notas con precisión decimal y auditoría de cambios,
-    > **Para** garantizar la transparencia académica y prevenir fraudes.
+    > **Como** Administrativo de Actas y Profesor,
+    > **Quiero** guardar notas con precisión decimal, auditoría y registrar exámenes parciales,
+    > **Para** garantizar la transparencia académica, prevenir fraudes y tener evaluación granular.
 *   **⚙️ Pasos de Implementación (Admin Task)**:
+    *Parte A: Integridad de Notas (Original)*
     - [x] 1. Crear un campo **Number** llamado **Final Grade** (`Final_Grade__c`) con precisión `(4,2)`.
     - [x] 2. Crear un campo **Picklist** llamado **Status** (`Status__c`) con valores Passed/Failed/Enrolled.
     - [x] 3. Crear una **Validation Rule** llamada `Grade_Range_1_10` (Fórmula: `OR(Grade < 1, Grade > 10)`).
     - [x] 4. Habilitar **Field History Tracking** para el campo `Final_Grade__c`.
+    
+    *Parte B: Gestión de Examenes (Ampliación)*
+    - [ ] 5. Crear Custom Object **Exam** (`Exam__c`).
+    - [ ] 6. Crear relación **Master-Detail** hacia **Enrollment**.
+    - [ ] 7. Crear campos: `Score__c` (Number 4,2), `Exam_Date__c` (Date), `Attended__c` (Checkbox).
+    - [ ] 8. Crear Validation Rule `Exam_Score_Range` (Fórmula: `OR(Score__c < 0, Score__c > 10)`).
 *   **✅ Criterios de Aceptación (QA Check)**:
     - [ ] 1. Ingresar una nota de 8.55 y verificar que se guarde correctamente.
     - [ ] 2. Intentar ingresar una nota de 11 o -1; el sistema debe mostrar error.
     - [ ] 3. Modificar una nota existente y verificar que el cambio aparezca en el historial (Field History).
+    - [ ] 4. (Nuevo) Crear un Examen vinculado a una Inscripción con nota 8.50.
+    - [ ] 5. (Nuevo) Intentar ingresar nota de Examen 11; el sistema debe bloquearlo.
 
 ---
 
