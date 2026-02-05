@@ -7,17 +7,17 @@
 
 Durante el setup inicial, nos faltaron algunos campos para completar el modelo de datos robusto que requiere la Dra. Vance.
 
-### Objeto: Inscripción (`Inscripcion__c`)
+### Objeto: Enrollment (`Enrollment__c`)
 
-1.  **Estado de Cursada**
-    *   **Label**: `Estado`
-    *   **API Name**: `Estado__c`
+1.  **Status**
+    *   **Label**: `Status`
+    *   **API Name**: `Status__c`
     *   **Type**: Picklist
-    *   **Values**: `Cursando` (Default), `Aprobado`, `Libre`, `Recursando`.
+    *   **Values**: `Enrolled` (Default), `Passed`, `Failed`.
     *   *Propósito*: Permite filtrar alumnos activos vs históricos.
 
-2.  **Nota Final**
-    *   **Label**: `Nota Final`
-    *   **API Name**: `Nota_Final__c`
-    *   **Type**: Number(2,2)
+2.  **Final Grade**
+    *   **Label**: `Final Grade`
+    *   **API Name**: `Final_Grade__c`
+    *   **Type**: Number(4,2)
     *   **Help Text**: "Promedio calculado de los exámenes rendidos."

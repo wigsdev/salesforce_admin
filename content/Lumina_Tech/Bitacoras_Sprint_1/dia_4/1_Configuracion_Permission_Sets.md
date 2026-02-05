@@ -10,24 +10,24 @@ En el modelo de seguridad moderno de Salesforce, los **Perfiles** deben ser mín
 
 ### 🔧 Especificación Técnica (Permission Sets)
 
-#### 1. Set: `Lumina_MFA_Authorization`
+#### 1. Set: `Lumina_MFA_Access`
 *   **Tipo**: System Permission.
 *   **Contexto de Negocio**: Cumplimiento normativo (Compliance). Salesforce exige MFA contractual desde 2022.
 *   **Permiso Crítico**: `Multi-Factor Authentication for User Interface Logins`.
 *   **Asignación**: Mandatoria para **TODOS** los usuarios internos (Admin, Profesores, Bedelía).
 
-#### 2. Set: `Gestion_Calificaciones_Docente`
+#### 2. Set: `Lumina_Professor_Access`
 *   **Tipo**: Object & Field Permission.
 *   **Contexto de Negocio**: Delegar la capacidad de "Evaluar" sin dar poderes administrativos.
 *   **Configuración**:
-    *   **Objeto Examen (`Examen__c`)**: `Read`, `Create`, `Edit`.
-    *   **Campo Nota (`Nota__c`)**: `Edit` Access.
-    *   **Objeto Inscripción**: `Read`. (Para ver a quién calificar).
+    *   **Objeto Exam (`Exam__c`)**: `Read`, `Create`, `Edit`.
+    *   **Campo Final Grade (`Final_Grade__c`)**: `Edit` Access.
+    *   **Objeto Enrollment**: `Read`. (Para ver a quién calificar).
 
-#### 3. Set: `Operador_Bedelia`
+#### 3. Set: `Lumina_Registrar_Access` (Bedelia)
 *   **Tipo**: Object Permission.
 *   **Contexto de Negocio**: Personal administrativo que gestiona el ciclo de vida del alumno pero no evalúa.
 *   **Configuración**:
-    *   **Objeto Alumno (`Alumno__c`)**: `Read`, `Create`, `Edit`.
-    *   **Objeto Inscripción (`Inscripcion__c`)**: `Read`, `Create`, `Edit`. (Inscribe alumnos).
-    *   **Objeto Examen**: `Read` ONLY. (Audita notas, no las cambia).
+    *   **Objeto Student (`Student__c`)**: `Read`, `Create`, `Edit`.
+    *   **Objeto Enrollment (`Enrollment__c`)**: `Read`, `Create`, `Edit`. (Inscribe alumnos).
+    *   **Objeto Exam**: `Read` ONLY. (Audita notas, no las cambia).

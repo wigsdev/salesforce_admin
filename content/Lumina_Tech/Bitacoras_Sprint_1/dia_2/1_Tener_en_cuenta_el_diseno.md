@@ -1,6 +1,6 @@
 # 🎨 Tener en cuenta el diseño
 
-**Rol Responsable**: 🏗️ **Salesforce Architect** / 🎨 **UX Specialist**
+**Rol Responsable**: 🏗️ **Salesforce Consultant**
 **Destino en Gestor**: [`02-Salesforce_Consultant.md`](../../Gestor_de_Versiones/02-Salesforce_Consultant.md) (ADR Branding)
 
 ## Definición de Identidad Visual (Day 2)
@@ -14,7 +14,7 @@ No se trata solo de ser "bonito", sino de **usabilidad** y **sentido de pertenen
 *   **Paleta de Colores**:
     *   **Primary**: `#005A9C` (Lumina Blue) - Usado en Header y Botones.
     *   **Secondary**: `#F2A900` (Tech Gold) - Acentos y Call-to-Action.
-    *   **Background**: `#F4F6F9` (Soft Grey) - Fondos de página.
+    *   **Background**: `#F3F3F3` (Soft Grey) - Fondos de página.
 *   **Logo**: Distintivo "Lumina Tech" con iconografía de educación (birrete/libro).
 *   **Temas**: Uso de `Salesforce Lightning Themes & Branding` para aplicar estos cambios sin código CSS complejo.
 

@@ -18,17 +18,17 @@
 4.  **Branding**:
     *   **Brand Image**: Subir `logo_lumina.png`.
     *   **Brand Color**: Ingresar `#005A9C`.
-    *   **Page Background Color**: Ingresar `#F4F6F9` (Soft Grey).
+    *   **Page Background Color**: Ingresar `#F3F3F3` (Soft Grey).
 5.  **Save** y luego **Activate**.
 
-### 3. Creación de la App "Gestión Académica Lumina"
+### 3. Creación de la App "Lumina Academic"
 El tema por sí solo no basta; necesitamos una "App" (contenedor de pestañas).
 1.  Ir a **Setup** > **App Manager** > **New Lightning App**.
 2.  **App Details**:
-    *   Name: `Gestión Académica Lumina`.
-    *   Developer Name: `Gestion_Academica_Lumina`.
+    *   Name: `Lumina Academic`.
+    *   Developer Name: `Lumina_Academic`.
     *   Color: `#005A9C`.
 3.  **Navigation Items**:
-    *   Agregar: `Home`, `Alumnos`, `Carreras`, `Materias`, `Inscripciones`, `Exámenes`.
+    *   Agregar: `Home`, `Students`, `Subjects`, `Careers`, `Enrollments`.
 4.  **User Profiles**:
-    *   Asignar a: `System Administrator`, `Lumina Administrativo`, `Lumina Profesor`.
+    *   Asignar a: `System Administrator`, `Standard User`.

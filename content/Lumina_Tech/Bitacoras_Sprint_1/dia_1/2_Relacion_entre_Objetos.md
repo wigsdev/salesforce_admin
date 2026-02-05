@@ -16,34 +16,34 @@ Mi trabajo es asegurar que los objetos "hablen" entre sí para cumplir con **[RE
 ```mermaid
 erDiagram
     %% Relaciones
-    CARRERA ||--o{ MATERIA : "Contiene"
-    MATERIA ||--o{ INSCRIPCION : "Tiene"
-    ALUMNO ||--o{ INSCRIPCION : "Realiza"
-    INSCRIPCION ||--o{ EXAMEN : "Genera"
+    CAREER ||--o{ SUBJECT : "Contiene"
+    SUBJECT ||--o{ ENROLLMENT : "Tiene"
+    STUDENT ||--o{ ENROLLMENT : "Realiza"
+    ENROLLMENT ||--o{ EXAM : "Genera"
 
     %% Definición de Entidades y Atributos
-    CARRERA {
+    CAREER {
         string Name
     }
     
-    MATERIA {
+    SUBJECT {
         string Name
-        lookup Carrera
+        lookup Career
     }
     
-    ALUMNO {
-        string Legajo
-        string DNI
+    STUDENT {
+        string RecordName
+        string National_ID
     }
     
-    INSCRIPCION {
-        picklist Ciclo
-        picklist Estado
+    ENROLLMENT {
+        picklist Cycle
+        picklist Status
     }
     
-    EXAMEN {
-        number Nota
-        date Fecha
+    EXAM {
+        number Final_Grade
+        date Date
     }
 ```
 
@@ -51,38 +51,38 @@ erDiagram
 Si no visualizas el gráfico de arriba, esta es la jerarquía:
 
 ```text
-[ CARRERA ]
+[ CAREER ]
      |
-     +---<tiene>---( MATERIA )
+     +---<tiene>---( SUBJECT )
                         |
-                        +---<tiene>---( INSCRIPCION )---<realiza>---[ ALUMNO ]
+                        +---<tiene>---( ENROLLMENT )---<realiza>---[ STUDENT ]
                                             |
-                                            +---<genera>---( EXAMEN )
+                                            +---<genera>---( EXAM )
 ```
 
 **Explicación de Cardinalidad:**
-1.  **Carrera --(1:N)--> Materia**: Una carrera tiene muchas materias.
-2.  **Materia --(1:N)--> Inscripción**: Una materia tiene muchos inscritos.
-3.  **Alumno --(1:N)--> Inscripción**: Un alumno tiene muchas inscripciones.
-4.  **Inscripción --(1:N)--> Examen**: Una inscripción tiene varios exámenes (Parciales/Finales).
+1.  **Career --(1:N)--> Subject**: Una carrera tiene muchas materias.
+2.  **Subject --(1:N)--> Enrollment**: Una materia tiene muchos inscritos.
+3.  **Student --(1:N)--> Enrollment**: Un alumno tiene muchas inscripciones.
+4.  **Enrollment --(1:N)--> Exam**: Una inscripción tiene varios exámenes (Parciales/Finales).
 
 ---
 
 ### 1. Modelo de Inscripción (Junction Object)
 El requerimiento [REQ-DATA-002] dice: *"Un alumno cursa muchas materias, una materia tiene muchos alumnos e historial"*.
 *   **Solución**: Relación `Many-to-Many`.
-*   **Objeto Intermedio**: `Inscripcion__c`.
+*   **Objeto Intermedio**: `Enrollment__c`.
 *   **Relaciones**:
-    1.  `Inscripcion__c` ➡️ **Master-Detail** ➡️ `Alumno__c`.
-    2.  `Inscripcion__c` ➡️ **Master-Detail** ➡️ `Materia__c`.
+    1.  `Enrollment__c` ➡️ **Master-Detail** ➡️ `Student__c`.
+    2.  `Enrollment__c` ➡️ **Master-Detail** ➡️ `Subject__c`.
 
 ### 2. Modelo de Exámenes (Evaluación Continua)
 Responde a **[REQ-FUNC-001] Ciclo de Exámenes**.
-*   **Relación**: `Examen__c` ➡️ **Master-Detail** ➡️ `Inscripcion__c`.
+*   **Relación**: `Exam__c` ➡️ **Master-Detail** ➡️ `Enrollment__c`.
 *   **Justificación**: Un examen no existe sin una inscripción activa.
 
-### 3. Carrera - Materia
-*   **Relación**: `Materia__c` ➡️ **Lookup** ➡️ `Carrera__c`.
+### 3. Career - Subject
+*   **Relación**: `Subject__c` ➡️ **Lookup** ➡️ `Career__c`.
 *   **Justificación**: Facilita [REQ-SEC-002], permitiendo reasignar materias sin perder integridad.
 
 ---

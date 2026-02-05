@@ -22,14 +22,14 @@ He traducido los requerimientos visuales de la Dra. Vance en historias de usuari
 *   **Criterios de Aceptación**:
     - [ ] El encabezado global se muestra en color azul corporativo (`#005A9C`).
     - [ ] El isologo de Lumina Tech es visible en la barra de navegación.
-    - [ ] El fondo de las páginas es gris claro (`#F4F6F9`) para descanso visual.
+    - [ ] El fondo de las páginas es gris claro (`#F3F3F3`) para descanso visual.
 
 #### 🏷️ [HU-006] App de Gestión Central
 *   **Trazabilidad**: Responde a **[REQ-FUNC] App Centralizada**.
 *   **Descripción**: "Como Administrativo, quiero tener una App con mis pestañas ordenadas, para no buscar objetos en el lanzador."
 *   **Criterios de Aceptación**:
-    - [ ] Existe una aplicación Lightning llamada "Gestión Académica Lumina" y es accesible.
-    - [ ] La barra de navegación incluye acceso directo a Alumnos, Materias, Inscripciones y Exámenes.
+    - [ ] Existe una aplicación Lightning llamada "Lumina Academic" y es accesible.
+    - [ ] La barra de navegación incluye acceso directo a `Students`, `Subjects`, `Enrollments` y `Careers`.
 
 ---
 **Próximo Paso**: Grooming de HU para Día 3 (Reglas de Calidad).

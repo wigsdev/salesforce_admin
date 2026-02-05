@@ -8,25 +8,25 @@
 
 Configuración de campos para cumplir los requisitos de Calidad (**[REQ-QUAL]**).
 
-### Objeto: Alumno (`Alumno__c`)
+### Objeto: Student (`Student__c`)
 | Label | API Name | Tipo | Reglas / REQ |
 | :--- | :--- | :--- | :--- |
-| **Legajo** | `Name` | Auto-Number | **[REQ-QUAL-003]**: Auto-generado `{L-0000}`. |
-| **DNI** | `DNI__c` | Number(8,0) | **[REQ-QUAL-003]**: Unique + Required. |
+| **Record Name** | `Name` | Auto-Number | **[REQ-QUAL-003]**: Auto-generado `A-{YYYY}-{0000}`. |
+| **National ID** | `National_ID__c` | Number(8,0) | **[REQ-QUAL-003]**: Unique + Required + ExtID. |
 | **Email** | `Email__c` | Email | **[REQ-QUAL-001]**: Validación de formato regex. |
 
-### Objeto: Inscripción (`Inscripcion__c`)
+### Objeto: Enrollment (`Enrollment__c`)
 | Label | API Name | Tipo | Reglas / REQ |
 | :--- | :--- | :--- | :--- |
-| **Ciclo Lectivo** | `Ciclo__c` | Picklist | [REQ-DATA-002]: Diferencia historial. |
-| **Estado** | `Estado__c` | Picklist | En Curso, Aprobado, Reprobado. |
+| **Cycle** | `Cycle__c` | Picklist | [REQ-DATA-002]: Diferencia historial. |
+| **Status** | `Status__c` | Picklist | Enrolled, Passed, Failed. |
 
-### Objeto: Examen (`Examen__c`)
+### Objeto: Exam (`Exam__c`)
 | Label | API Name | Tipo | Reglas / REQ |
 | :--- | :--- | :--- | :--- |
-| **Nota** | `Nota__c` | Number(2,2) | **[REQ-QUAL-002]**: Validación `VR_Nota_Rango`. |
-| **Fecha** | `Fecha__c` | Date | **[REQ-FUNC-001]**: Fecha obligatoria. |
-| **Asistió?** | `Asistio__c`| Checkbox | **[REQ-FUNC-002]**: Registro de Asistencia. |
+| **Final Grade** | `Final_Grade__c` | Number(4,2) | **[REQ-QUAL-002]**: Validación `Grade_Range_1_10`. |
+| **Date** | `Date__c` | Date | **[REQ-FUNC-001]**: Fecha obligatoria. |
+| **Attended?** | `Attended__c`| Checkbox | **[REQ-FUNC-002]**: Registro de Asistencia. |
 
 ---
 **Nota**: Campos bloqueados para edición según [REQ-SEC-003].

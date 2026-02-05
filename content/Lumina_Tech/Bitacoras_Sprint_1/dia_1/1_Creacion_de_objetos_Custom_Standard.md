@@ -16,15 +16,15 @@ Analicé si podíamos usar objetos estándar, pero:
 ### 2. Objetos Personalizados (Nuevos)
 He creado los siguientes objetos en la Org para responder a **[REQ-DATA-001] Entidades Core**:
 
-*   **Carrera** (`Carrera__c`):
+*   **Career** (`Career__c`):
     *   *Descripción*: Representa la oferta académica (ej. "Ingeniería en Sistemas").
     *   *Justificación*: Necesitamos agrupar materias y alumnos bajo un paraguas académico.
 
-*   **Materia** (`Materia__c`):
+*   **Subject** (`Subject__c`):
     *   *Descripción*: La unidad curricular (ej. "Matemática I").
     *   *Decisión de Diseño*: Siguiendo ADR-001 (Consultant), crearemos registros duplicados si se comparten entre carreras para simplificar [REQ-SEC-002] (Privacidad Cruzada).
 
-*   **Alumno** (`Alumno__c`):
+*   **Student** (`Student__c`):
     *   *Descripción*: El estudiante matriculado.
     *   *Nota*: Objeto separado para facilitar [REQ-DATA-002] (M:N limpio) y [REQ-QUAL-003] (Identidad obligatoria y única).
 

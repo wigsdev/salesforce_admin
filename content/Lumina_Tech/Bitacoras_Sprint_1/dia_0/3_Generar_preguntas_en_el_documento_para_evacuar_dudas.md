@@ -33,7 +33,7 @@ Este documento registra el proceso mental y diálogo entre el **Business Analyst
 *   **Respuesta Cliente**: "Decimales, ejemplo 7.50."
 
 **🏗️ Análisis del Admin/Consultant**:
-*   *Configuración*: Campo tipo `Number(2, 2)`.
+*   *Configuración*: Campo tipo `Number(4, 2)`.
 *   *Riesgo*: Si usáramos Currency o Percent, confundiría al usuario.
 *   *Validación*: Regla de validación `Nota <= 10.00` y `Nota >= 1.00`.
 
@@ -42,8 +42,8 @@ Este documento registra el proceso mental y diálogo entre el **Business Analyst
 *   **Respuesta Cliente**: "Que el sistema lo genere."
 
 **🏗️ Análisis del Consultant**:
-*   *Solución*: Campo **Auto-Number** `{L-0000}`.
-*   *Justificación*: Garantiza unicidad absoluta e inmutable, sirviendo como `External ID` eficiente para futuras integraciones con sistemas contables.
+*   *Solución*: Campo **Auto-Number** `A-{YYYY}-{0000}`.
+*   *Justificación*: Garantiza unicidad absoluta e inmutable, sirviendo como `External ID` eficiente para cargas masivas (Data Import).
 
 ---
 **Conclusión para el Día 1**:
