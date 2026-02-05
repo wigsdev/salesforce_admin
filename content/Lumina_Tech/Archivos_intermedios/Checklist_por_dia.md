@@ -43,23 +43,6 @@
     *   *Rol*: 👑 **Product Owner**, 🕵️ **Business Analyst**.
     *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_1/5_Crear_las_HU_en_TRELLO.md)
 
-#### 🚀 Fase de Ejecución (Flujo Trello)
-6.  **Mover a "En Progreso" y Construir en DEV**.
-    *   *Rol*: 🛡️ **Salesforce Admin**.
-    *   *Estado*: Tarea activa en Sandbox.
-7.  **Mover a "SF Desarrollo" y Registrar Avance**.
-    *   *Rol*: 🛡️ **Salesforce Admin** / 🚀 **Release Manager**.
-    *   *Acción*: Confirmar que la configuración está lista para pruebas.
-8.  **Mover a "SF QA" y Ejecutar Validación**.
-    *   *Rol*: 🧪 **QA Tester**.
-    *   *Acción*: Verificar Criterios de Aceptación.
-9.  **Mover a "Aprobación TL" (Revisión)**.
-    *   *Rol*: 🏗️ **Team Lead/Architect**.
-    *   *Acción*: Validar calidad técnica y seguridad.
-10. **Mover a "Terminado" y Registrar Versión**.
-    *   *Rol*: 🚀 **Release Manager**.
-    *   *Acción*: Cierre oficial de la tarea en el Gestor de Versiones.
-
 ---
 
 ## 📅 Día 2: HU - Creación de la APP
@@ -82,23 +65,6 @@
     *   *Rol*: 👑 **Product Owner**, 🕵️ **Business Analyst**.
     *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_2/5_Crear_las_HU_en_TRELLO.md)
 
-#### 🚀 Fase de Ejecución (Flujo Trello)
-6.  **Mover a "En Progreso" y Construir en DEV**.
-    *   *Rol*: 🛡️ **Salesforce Admin**.
-    *   *Estado*: Tarea activa en Sandbox.
-7.  **Mover a "SF Desarrollo" y Registrar Avance**.
-    *   *Rol*: 🛡️ **Salesforce Admin** / 🚀 **Release Manager**.
-    *   *Acción*: Confirmar que la configuración está lista para pruebas.
-8.  **Mover a "SF QA" y Ejecutar Validación**.
-    *   *Rol*: 🧪 **QA Tester**.
-    *   *Acción*: Verificar Criterios de Aceptación.
-9.  **Mover a "Aprobación TL" (Revisión)**.
-    *   *Rol*: 🏗️ **Team Lead/Architect**.
-    *   *Acción*: Validar calidad técnica y seguridad.
-10. **Mover a "Terminado" y Registrar Versión**.
-    *   *Rol*: 🚀 **Release Manager**.
-    *   *Acción*: Cierre oficial de la tarea en el Gestor de Versiones.
-
 ---
 
 ## 📅 Día 3: HU - Creación de los Formularios
@@ -118,24 +84,6 @@
     *   *Rol*: 👑 **Product Owner**, 🕵️ **Business Analyst**.
     *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_3/4_Crear_las_HU_en_TRELLO.md)
 
-#### 🚀 Fase de Ejecución (Flujo Trello)
-5.  **Mover a "En Progreso" y Construir en DEV**.
-    *   *Rol*: 🛡️ **Salesforce Admin**.
-    *   *Estado*: Tarea activa en Sandbox.
-6.  **Mover a "SF Desarrollo" y Registrar Avance**.
-    *   *Rol*: 🛡️ **Salesforce Admin** / 🚀 **Release Manager**.
-    *   *Acción*: Confirmar que la configuración está lista para pruebas.
-7.  **Mover a "SF QA" y Ejecutar Validación**.
-    *   *Rol*: 🧪 **QA Tester**.
-    *   *Acción*: Verificar Criterios de Aceptación.
-8.  **Mover a "Aprobación TL" (Revisión)**.
-    *   *Rol*: 🏗️ **Team Lead/Architect**.
-    *   *Acción*: Validar calidad técnica y seguridad.
-9.  **Mover a "Terminado" y Registrar Versión**.
-    *   *Rol*: 🚀 **Release Manager**.
-    *   *Acción*: Cierre oficial de la tarea en el Gestor de Versiones.
-
----
 ---
 
 ## 📅 Día 4: Gestión de Usuarios y Seguridad
@@ -158,22 +106,33 @@
     *   *Rol*: 👑 **Product Owner**.
     *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_4/5_Crear_HU_Trello.md)
 
-#### 🚀 Fase de Ejecución (Flujo Trello)
-6.  **Mover a "En Progreso" y Construir en DEV**.
-    *   *Rol*: 🛡️ **Salesforce Admin**.
-    *   *Estado*: Tarea activa en Sandbox.
-7.  **Mover a "SF Desarrollo" y Registrar Avance**.
-    *   *Rol*: 🛡️ **Salesforce Admin** / 🚀 **Release Manager**.
-    *   *Acción*: Confirmar que la configuración está lista para pruebas.
-8.  **Mover a "SF QA" y Ejecutar Validación**.
-    *   *Rol*: 🧪 **QA Tester**.
-    *   *Acción*: Verificar Criterios de Aceptación.
-9.  **Mover a "Aprobación TL" (Revisión)**.
-    *   *Rol*: 🏗️ **Team Lead/Architect**.
-    *   *Acción*: Validar calidad técnica y seguridad.
-10. **Mover a "Terminado" y Registrar Versión**.
-    *   *Rol*: 🚀 **Release Manager**.
-    *   *Acción*: Cierre oficial de la tarea en el Gestor de Versiones.
 
----
-> **Estado**: ✅ **Completado** - Sprint 1 ejecutado exitosamente (30/01/2026).
+## 📅 Día 5: Sprint Planning en Trello (Lunes)
+### Lista de Tareas
+1.  **Leer las Historias de Usuarios del Backlog**
+    *   *Rol*: Equipo Completo.
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_5/1_Leer_Historias_Usuario.md)
+2.  **Votar la dificultad (Planning Poker)**
+    *   *Rol*: Equipo Completo.
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_5/2_Votar_Dificultad.md)
+3.  **Mover al carril To Do y asignar responsable**
+    *   *Rol*: Scrum Master / Product Owner.
+    *   *Detalle*: [Ver Tarea](../Bitacoras_Sprint_1/dia_5/3_Asignar_Responsables.md)
+
+
+## 📅 Día 6: Flujo Trello HU - Martes
+### Lista de Tareas
+1. Revisión de los tickets
+2. Organizar el tiempo que me lleva cada tarea
+3. Levantar la mano si hay algún bloqueo
+4. Cumplir con el objetivo propuesto
+
+## 📅 Día 7: Flujo Trello HU - Miercoles
+### Lista de Tareas
+1. Usar el App Manager para crear la Lightning App (Branding y Navegación).
+2. Configurar Temas y Branding (Themes).
+3. Organizar el Menú de Navegación (Tabs).
+4. Personalizar la Home Page con componentes útiles.
+
+
+

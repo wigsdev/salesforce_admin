@@ -9,6 +9,11 @@
 
 ## 🌟 Nuevas Características
 
+### Documentación Gold Standard (v3.0)
+- **Metodología Ágil**: Guías actualizadas con flujo de 11 columnas y checkpoints de DevOps.
+- **Backlog Gherkin**: 12 Historias de Usuario con Triple Checklist (Narrativa, Implementación, QA).
+- **Roles Especializados**: Guías paso a paso para cada sombrero (Admin, QA, DevOps).
+
 ### Gestión Académica
 - **Carreras y Materias**: Implementación del catálogo académico básico.
 - **Base de Datos de Alumnos**: Registro centralizado con validación de identidad (DNI requerido).
@@ -54,14 +59,14 @@ Durante la fase de QA se identificaron y resolvieron los siguientes bugs:
 - **Cobertura de Tests**: 100% (18/18 casos PASS)
 - **Bugs Críticos**: 0
 - **Bugs Menores Resueltos**: 2
-- **Historias de Usuario Completadas**: 11/11
+- **Historias de Usuario Completadas**: 12/12
 
 ---
 
 ## 🎓 Lecciones Aprendidas (Retrospectiva del Equipo)
 
 ### ✅ Lo que Funcionó Bien (Keep)
-- **Uso de Trello**: La visualización del flujo de trabajo (8 columnas) permitió transparencia total del progreso
+- **Uso de Trello**: La visualización del flujo de trabajo (11 columnas) permitió transparencia total del progreso
 - **Separación clara de roles**: BA, QA, Admin, Consultant trabajaron sin pisarse
 - **Documentación en paralelo**: Registrar decisiones mientras se desarrollaba evitó "amnesia técnica"
 - **Schema Builder**: Visualizar el ERD antes de construir previno errores de diseño

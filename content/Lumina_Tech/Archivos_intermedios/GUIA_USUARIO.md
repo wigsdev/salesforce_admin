@@ -10,7 +10,7 @@ Para inscribir un nuevo estudiante, la **Calidad del Dato** es prioridad.
 1.  Navegue a la ficha **Alumnos**.
 2.  Presione **Nuevo**.
 3.  **Campos Críticos**:
-    *   `DNI`: Es obligatorio. Si ya existe, el sistema bloqueará el duplicado.
+    *   `DNI`: Es obligatorio y debe tener **exactamente 8 dígitos numéricos**.
     *   `Email`: Debe ser válido (ej: `alumno@lumina.edu`). No use comas ni espacios.
 4.  Guarde el registro.
 
@@ -18,7 +18,7 @@ Para inscribir un nuevo estudiante, la **Calidad del Dato** es prioridad.
 Una vez creado el Alumno:
 1.  Vaya a la pestaña **Relacionado > Inscripciones**.
 2.  Clic en **Nueva Inscripción**.
-3.  Seleccione la Materia y el Ciclo Lectivo (ej: 2026-1).
+3.  Seleccione la Materia, el Ciclo Lectivo y la **Comisión** (Lista desplegable).
 
 > ⚠️ **Nota Legal**: Usted no puede modificar calificaciones de exámenes cerrados.
 
@@ -43,5 +43,6 @@ El sistema opera bajo normativa de protección de datos:
 
 ## 🆘 Mesa de Ayuda
 Para reportar bloqueos o errores de sistema:
-*   📧 Email: `soporte@lumina.edu`
-*   Tickets: Indique el ID del Alumno y captura de pantalla del error.
+*   � **Acceso Bloqueado**: Si el sistema pide "Código de Verificación", use la app Salesforce Authenticator (MFA). 
+*   �📧 Email: `soporte@lumina.edu`
+*   Tickets: Indique el ID del Alumno (ej. `A-2026-XXXX`) y captura de pantalla.

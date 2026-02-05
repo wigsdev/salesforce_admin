@@ -1,5 +1,5 @@
 # 🧭 MASTER INDEX: Proyecto Lumina Tech
-**Versión**: 1.0 (MVP Sprint 1)
+**Versión**: Standard v3.0 (Agile Core)
 **Objetivo**: Este documento es el **Mapa Central**. Conecta todas las guías, tutoriales y documentos del proyecto en un orden lógico de ejecución.
 
 ---
@@ -23,11 +23,12 @@
 
 1.  **📜 ¿Qué vamos a hacer?**
     *   [SPRINT 1 (Requerimientos)](Enunciados_y_Requerimientos/SPRINT%201.md): Lee esto primero. Define el problema de la Rectora Vance.
+    *   [Backlog de Historias (12 HUs)](HISTORIAS_DE_USUARIO.md): El alcance detallado en formato Gherkin.
     *   [Identidad Visual](Enunciados_y_Requerimientos/Identidad_Colores.md): Conoce los colores (`#005A9C`) y el logo.
 
 2.  **🧠 ¿Cómo trabajamos?**
     *   [Guía Metodológica](00-GUIA_METODOLOGICA.md): Las reglas del juego (Semanas, Entregables).
-    *   [Integración Trello](00-INTEGRACION_TRELLO.md): Cómo mover las tarjetas.
+    *   [Integración Trello](00-INTEGRACION_TRELLO.md): Cómo mover las tarjetas (11 Columnas).
 
 ---
 

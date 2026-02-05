@@ -20,28 +20,28 @@ El objetivo de este Sprint no es solo "crear campos", es **mitigar riesgos legal
 
 Para sostener la visión, implementaremos una arquitectura **Scalable & Secure**:
 1.  **Normalización (3NF)**:
-    *   `Alumno` es la entidad maestra (Golden Record).
-    *   `Inscripcion` es la entidad transaccional (Junction).
+    *   `Student` es la entidad maestra (**Golden Record**).
+    *   `Enrollment` es la entidad transaccional (**Junction Object**).
     *   *Resultado*: Juan Perez se carga 1 sola vez, no 20.
 2.  **Defense in Depth**:
-    *   Capa 1 (UI): Page Layouts separados.
-    *   Capa 2 (Schema): Validation Rules (`Nota 1-10`).
-    *   Capa 3 (DB): Field-Level Security (Admin Read-Only).
+    *   Capa 1 (UI): **Page Layouts** separados.
+    *   Capa 2 (Schema): **Validation Rules** (`Nota 1-10`).
+    *   Capa 3 (DB): **Field-Level Security** (Admin Read-Only).
 
 ## 📋 Plan de Ejecución (Admin/Agile Perspective)
 *Basado en la guía de implementación ([03-Salesforce_Admin.md](../../Gestor_de_Versiones/03-Salesforce_Admin.md))*
 
 ### Backlog Priorizado
-1.  **[P0] Integridad Legal (DNI/Email)**: Configurar campos `Unique` y `Required` en Alumno.
-2.  **[P0] Estructura Base**: Crear Objetos `Carrera`, `Materia`, `Inscripcion`.
-3.  **[P1] Motor de Seguridad**: Configurar Perfiles (Profesor/Admin) y OWD (Private).
-4.  **[P1] Gestión de Exámenes**: Implementar objeto `Examen` con bloqueo de notas.
+1.  **[P0] Integridad Legal (DNI/Email)**: Configurar campos `Unique` y `Required` en `Student`.
+2.  **[P0] Estructura Base**: Crear **Objects** `Career`, `Subject`, `Enrollment`.
+3.  **[P1] Motor de Seguridad**: Configurar **Profiles** (Profesor/Admin) y OWD (Private).
+4.  **[P1] Gestión de Exámenes**: Implementar **Object** `Exam` con bloqueo de notas.
 
 ### Definition of Done (DoD)
 Un ítem se considera terminado solo si:
 *   [ ] El Profesor puede cargar notas corre y el Admin **NO**.
 *   [ ] No se pueden ingresar notas "11" ni emails rotos.
-*   [ ] Un alumno inscrito en "Matemática" aparece en los reportes de esa materia.
+*   [ ] Un `Student` inscrito en "Matemática" aparece en los reportes de esa `Subject`.
 
 ---
 **Siguiente Paso**: Distribuir tareas en Trello según la [00-Guia_Trello_Paso_a_Paso.md](../00-Guia_Trello_Paso_a_Paso.md).

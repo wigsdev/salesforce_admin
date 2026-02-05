@@ -28,7 +28,7 @@ Hemos adaptado el flujo semanal a un ritmo diario intenso para el MVP.
 ### 📅 Día 0: Estrategia y Roles (BA & PO)
 *Objetivo: Entender el dolor de la Rectora Vance.*
 1.  **Input**: [SPRINT 1.md](Enunciados_y_Requerimientos/SPRINT%201.md).
-2.  **Acción**: Traducir quejas en 11 Historias de Usuario.
+2.  **Acción**: Traducir quejas en 12 Historias de Usuario (Gherkin).
 3.  **Output**: [01-Business_Analyst.md](../Gestor_de_Versiones/01-Business_Analyst.md).
 
 ### 📅 Día 1: Cimientos de Datos (Consultant)
@@ -48,7 +48,7 @@ Hemos adaptado el flujo semanal a un ritmo diario intenso para el MVP.
 *Objetivo: Zero Trust.*
 1.  **Acción**:
     *   Configurar OWD Private.
-    *   Testear "Sad Path" (intentar romperlo).
+    *   Testear "Sad Path" usando **Dual Checklists** (Admin vs QA).
     *   Activar MFA.
 2.  **Output**: [04-Tester_QA.md](../Gestor_de_Versiones/04-Tester_QA.md) y [14-DevOPS.md](../Gestor_de_Versiones/14-DevOPS.md).
 
@@ -60,7 +60,8 @@ Hemos adaptado el flujo semanal a un ritmo diario intenso para el MVP.
 |---|---|---|
 | [`Gestor_de_Versiones/*`](../Gestor_de_Versiones/) | **Team Lead** | Fuente de verdad para auditoría. |
 | [`00-MASTER_INDEX`](00-MASTER_INDEX.md) | Todos | Mapa de navegación (en Archivos Intermedios). |
-| [`HISTORIAS_DE_USUARIO`](HISTORIAS_DE_USUARIO.md) | PO / BA | Control de alcance y Sprint Backlog. |
+| [`HISTORIAS_DE_USUARIO`](HISTORIAS_DE_USUARIO.md) | PO / BA | Control de alcance (12 HUs) y Backlog. |
+| `Guia Trello` ([Pipeline](../Archivos_intermedios/00-Guia_Trello_Paso_a_Paso.md)) | Scrum Master | Gestión de las **11 Columnas** (DevOps Gates). |
 | `Bitácoras` ([03 Admin](../Gestor_de_Versiones/03-Salesforce_Admin.md)/[04 QA](../Gestor_de_Versiones/04-Tester_QA.md)) | Admin / QA | Evidencia de trabajo diario. |
 
 ---
