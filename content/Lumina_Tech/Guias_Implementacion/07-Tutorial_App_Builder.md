@@ -41,20 +41,20 @@ Transformar una lista de objetos aburridos en una **Aplicación Profesional** qu
 1.  Busca **App Manager** en Setup.
 2.  Haz clic en el botón **New Lightning App** (arriba a la derecha).
 3.  **App Details**:
-    *   App Name: `Gestión Académica Lumina`.
-    *   Developer Name: `Gestion_Academica` (Automático).
+    *   App Name: `Lumina Academic Management`.
+    *   Developer Name: `Academic_Management` (Automático).
     *   Haz clic en **Next**.
 4.  **App Options**: Deja todo por defecto (Standard Navigation). Haz clic en **Next**.
 5.  **Utility Items**: Haz clic en **Next** (Saltar).
 6.  **Navigation Items** (El menú de la app):
-    *   En la lista izquierda ("Available Items"), busca `Alumnos`.
+    *   En la lista izquierda ("Available Items"), busca `Students`.
     *   Selecciónalo y haz clic en la flecha derecha (▶) para moverlo a "Selected Items".
-    *   Repite para: `Carreras`, `Materias`, `Inscripciones`.
+    *   Repite para: `Careers`, `Subjects`, `Enrollments`.
     *   Haz clic en **Next**.
 7.  **User Profiles** (Quién puede ver la app):
     *   Mueve a la derecha: `System Administrator`.
-    *   Mueve a la derecha: `Lumina Profesor`.
-    *   Mueve a la derecha: `Lumina Bedel`.
+    *   Mueve a la derecha: `Lumina Professor`.
+    *   Mueve a la derecha: `Lumina Registrar`.
     *   Haz clic en **Save & Finish**.
 
 ---
@@ -62,7 +62,7 @@ Transformar una lista de objetos aburridos en una **Aplicación Profesional** qu
 ## ✅ Verificación de Éxito
 1.  Mira la URL de tu navegador. ¿Dice `lumina-tech...`? ✅
 2.  Haz clic en el **App Launcher** (los 9 puntos arriba a la izquierda).
-3.  Escribe "Gestión" en el buscador. Haz clic en **Gestión Académica Lumina**.
+3.  Escribe "Academic" en el buscador. Haz clic en **Lumina Academic Management**.
 4.  ¿Ves el logo que subiste? ¿El color de fondo es azul `#005A9C`? ✅
 5.  Verifica que las pestañas (Tabs) funcionan.
 

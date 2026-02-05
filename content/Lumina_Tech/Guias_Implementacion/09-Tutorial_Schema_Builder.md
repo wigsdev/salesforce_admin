@@ -24,20 +24,19 @@ Por defecto, verás cientos de objetos estándar.
 
 ### Paso 3: Seleccionar tus Objetos
 En el panel izquierdo ("Select from"), usa el buscador o las casillas para marcar SOLO tus 4 objetos:
-1.  Marca ☑️ `Carrera`
-2.  Marca ☑️ `Materia`
-3.  Marca ☑️ `Alumno`
-4.  Marca ☑️ `Inscripción`
-    *   *(Si no aparece, revisa si escribiste Inscripcion sin tilde)*.
+1.  Marca ☑️ `Career`
+2.  Marca ☑️ `Subject`
+3.  Marca ☑️ `Student`
+4.  Marca ☑️ `Enrollment`
 
 ### Paso 4: Interpretar las Conexiones
 Verás 4 cajas flotando. Arrástralas con el mouse para ordenarlas.
 
 **Validación Visual (La Prueba de Fuego):**
-1.  Verifica que sale una línea de **Materia** y toca a **Carrera**.
+1.  Verifica que sale una línea de **Subject** y toca a **Career**.
 2.  Verifica el "Triángulo":
-    *   Una línea sale de **Inscripción** y toca a **Alumno**.
-    *   Otra línea sale de **Inscripción** y toca a **Materia**.
+    *   Una línea sale de **Enrollment** y toca a **Student**.
+    *   Otra línea sale de **Enrollment** y toca a **Subject**.
 
 > **Referencia de Colores**:
 > *   **Rojo/Rosado**: Relación Master-Detail (Si borras el padre, se borra el hijo).
@@ -46,6 +45,6 @@ Verás 4 cajas flotando. Arrástralas con el mouse para ordenarlas.
 ---
 
 ## ✅ Verificación de Éxito
-1.  Organiza las cajas para que `Inscripción` quede visualmente al medio de `Alumno` y `Materia`.
+1.  Organiza las cajas para que `Enrollment` quede visualmente al medio de `Student` y `Subject`.
 2.  Toma una **Captura de Pantalla**.
 3.  ¡Ese es tu **Diagrama Entidad-Relación (ERD)** oficial para la documentación! 🗺️

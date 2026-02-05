@@ -3,7 +3,7 @@
 **Sprint**: 01 (Fundamentos)
 **Día**: 1 (Modelado de Datos)
 **Rol Responsable**: 🛡️ **Salesforce Admin**
-**HUs Relacionadas**: [HU-001](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Privacidad Base), [HU-007](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Identidad)
+**HUs Relacionadas**: [HU-002](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Identidad), [HU-007](../../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Validación Email)
 
 ---
 
@@ -16,39 +16,49 @@ Crear el objeto `Alumno__c` configurando restricciones de unicidad para evitar d
 1.  Ve a **Setup** > **Object Manager**.
 2.  Haz clic en **Create** > **Custom Object**.
 3.  Completa los detalles:
-    *   **Label**: `Alumno`
-    *   **Plural Label**: `Alumnos`
-    *   **Record Name**: `Legajo`
+    *   **Label**: `Student`
+    *   **Plural Label**: `Students`
+    *   **Record Name**: `File Number`
     *   **Data Type**: **Auto Number**
-    *   **Display Format**: `LEG-{000000}`
+    *   **Display Format**: `A-{YYYY}-{0000}`
     *   **Starting Number**: `1`
     *   **Allow Search**: ☑️ Marca la casilla.
 4.  Haz clic en **Save**.
 
-### Paso 2: Campos de Identidad (DNI)
-1.  Ve a **Fields & Relationships** > **New**.
-2.  Selecciona Data Type: **Text**. Haz clic en **Next**.
-3.  **Field Label**: `DNI`.
-4.  **Length**: `15`.
-5.  **Opciones Críticas (General Options)**:
-    *   Marca ☑️ **Required**.
-    *   Marca ☑️ **Unique**.
-    *   Marca ☑️ **External ID** (Esta opción aparece debajo de Unique).
-    *   En "Unique Case Sensitivity", selecciona: **"Treat 'ABC' and 'abc' as duplicate values (case insensitive)"**.
-6.  Haz clic en **Next**.
-7.  Haz clic en **Next**.
-8.  Haz clic en **Save & New** (Para crear otro campo inmediatamente).
+### Paso 2: Campos de Identidad y Contacto (Core Fields)
 
-### Paso 3: Campos de Contacto (Email)
-1.  Selecciona Data Type: **Email**. Haz clic en **Next**.
-2.  **Field Label**: `Email Personal`.
-3.  **Opciones Críticas**:
-    *   Marca ☑️ **Required**.
-    *   Marca ☑️ **Unique**.
-    *   Seleccione "Treat 'ABC' and 'abc' as duplicate values".
-4.  Haz clic en **Next**.
-5.  Haz clic en **Next**.
-6.  Haz clic en **Save**.
+#### 2.1 First Name & Last Name (Nombres)
+*Como usamos AutoNumber en el ID, necesitamos campos reales para el nombre.*
+1.  **New** > Data Type: **Text**.
+2.  **Field Label**: `First Name`. Length: `80`. ☑️ **Required**. **Save & New**.
+3.  **New** > Data Type: **Text**.
+4.  **Field Label**: `Last Name`. Length: `80`. ☑️ **Required**. **Save & New**.
+
+#### 2.2 National ID (DNI)
+1.  **New** > Data Type: **Text**.
+2.  **Field Label**: `National ID`. Length: `15`.
+3.  ☑️ **Required** & ☑️ **Unique** (Case Insensitive) & ☑️ **External ID**.
+4.  **Save & New**.
+
+#### 2.3 Date of Birth (Natalicio)
+1.  **New** > Data Type: **Date**.
+2.  **Field Label**: `Date of Birth`. **Save & New**.
+
+#### 2.4 Phone & Email
+1.  **New** > Data Type: **Phone**.
+2.  **Field Label**: `Phone`. **Save & New**.
+3.  **New** > Data Type: **Email**.
+4.  **Field Label**: `Personal Email`.
+5.  ☑️ **Required** & ☑️ **Unique**.
+6.  **Save & New**.
+
+#### 2.5 Admission Date (Ingreso)
+1.  **New** > Data Type: **Date**.
+2.  **Field Label**: `Admission Date`.
+3.  **Default Value**: `Today()`.
+4.  **Save**.
+
+
 
 ---
 
