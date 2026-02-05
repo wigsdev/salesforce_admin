@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
   - Added "Sticky Footer" layout support for short content pages.
   - Added "Add Task" manual input field for rapid entry.
 - **Frontend**: Clean and Minimalist Mobile Brand Icon (Cloud SVG).
+- **Frontend**: Added Mermaid.js support for automatic diagram rendering in documentation.
 - **Quality**: Implemented extensive CI/CD Pipeline.
   - **GitHub Actions**: Automated testing workflow on push/PR (`.github/workflows/ci.yml`).
   - **Pre-commit Hooks**: Automatic local verification before commit (`scripts/run_tests.bat`).

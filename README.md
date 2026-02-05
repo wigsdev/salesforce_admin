@@ -22,7 +22,7 @@ Permite a los estudiantes (rol Admin) y profesores (rol Stakeholders) visualizar
     *   Visualización de avance por Sprints.
     *   Filtrado por Roles (Admin, Consultant, QA).
     *   KPIs de Calidad de Datos.
-*   **📄 Documentación Viva**: Motor de renderizado Markdown que convierte los apuntes de clase en guías visuales.
+*   **📄 Documentación Viva**: Motor de renderizado Markdown que convierte apuntes de clase en guías visuales (Soporte Mermaid.js).
 *   **📱 Diseño Responsivo**: Interfaz moderna adaptable a cualquier dispositivo (Dark Mode incluido).
 
 ---
