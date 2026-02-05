@@ -191,7 +191,7 @@
 *   **✅ Criterios de Aceptación (QA Check)**:
     - [ ] 1. Loguearse como Profesor A (Propietario de Materia 1).
     - [ ] 2. Verificar que NO pueda ver la Materia 2 (propiedad de Profesor B).
-    - [ ] 3. Verificar que solo pueda ver los alumnos inscriptos en SU Materia 1.
+    - [ ] 3. Verificar que solo pueda ver los alumnos inscritos en SU Materia 1.
 
 ### HU-011: Acceso Seguro (MFA)
 *   **Estimación**: 🟡 **3 SP**
