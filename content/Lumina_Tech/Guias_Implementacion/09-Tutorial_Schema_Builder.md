@@ -23,20 +23,23 @@ Por defecto, verás cientos de objetos estándar.
     *   *Resultado*: La pizarra central quedará vacía.
 
 ### Paso 3: Seleccionar tus Objetos
-En el panel izquierdo ("Select from"), usa el buscador o las casillas para marcar SOLO tus 4 objetos:
+### Paso 3: Seleccionar tus Objetos
+En el panel izquierdo ("Select from"), usa el buscador o las casillas para marcar SOLO tus 5 objetos:
 1.  Marca ☑️ `Career`
 2.  Marca ☑️ `Subject`
 3.  Marca ☑️ `Student`
 4.  Marca ☑️ `Enrollment`
+5.  Marca ☑️ `Exam` *(If you already completed Guide 10)*
 
 ### Paso 4: Interpretar las Conexiones
-Verás 4 cajas flotando. Arrástralas con el mouse para ordenarlas.
+Verás 5 cajas flotando. Arrástralas con el mouse para ordenarlas.
 
 **Validación Visual (La Prueba de Fuego):**
 1.  Verifica que sale una línea de **Subject** y toca a **Career**.
 2.  Verifica el "Triángulo":
     *   Una línea sale de **Enrollment** y toca a **Student**.
     *   Otra línea sale de **Enrollment** y toca a **Subject**.
+3.  Verify that **Exam** hangs from **Enrollment** (Master-Detail Relationship).
 
 > **Referencia de Colores**:
 > *   **Rojo/Rosado**: Relación Master-Detail (Si borras el padre, se borra el hijo).

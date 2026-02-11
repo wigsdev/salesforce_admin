@@ -8,44 +8,50 @@
 ## 📅 DIA 1: Modelado de Datos (Data Foundation)
 *Objetivo: Estructurar la base de datos para soportar la operación académica.*
 
-### HU-001: Gestión de Inscripciones (Recursantes)
+### HU-001: Gestión de Oferta Académica (Career & Subject)
 *   **Estimación**: 🟡 **3 SP**
 *   **Prioridad**: Crack (Core)
-*   **Enlace Req**: [REQ-DATA-002]
+*   **Enlace Req**: [REQ-DATA-001]
 *   **Descripción**:
     > **Como** Director Académico,
-    > **Quiero** vincular alumnos a materias permitiendo recursadas (historial),
-    > **Para** tener una trazabilidad completa del desempeño del alumno a lo largo del tiempo.
+    > **Quiero** definir las Carreras y sus Materias asociadas,
+    > **Para** estructurar el plan de estudios disponible para los alumnos.
 *   **⚙️ Pasos de Implementación (Admin Task)**:
-    - [x] 1. Crear un **Custom Object** llamado **Enrollment** (`Enrollment__c`).
-    - [x] 2. Crear un campo tipo **Master-Detail Relationship** hacia **Student** (`Student__c`).
-    - [x] 3. Crear un campo tipo **Master-Detail Relationship** hacia **Subject** (`Subject__c`).
-    - [x] 4. Crear un campo **Picklist** llamado **Cycle** (`Cycle__c`).
-    - [x] 5. Crear un campo **Picklist** llamado **Commission** (`Commission__c`).
-    - [x] 6. Configurar la **Tab Visibility** en *Default On* solo para perfiles Admin/Director.
+    - [ ] 1. Crear Custom Object: **Career** (`Career__c`). Campos: `Name` (Text), `Duration_Years__c` (Number), `Type__c` (Picklist).
+    - [ ] 2. Crear Custom Object: **Subject** (`Subject__c`). Campos: `Credits__c` (Number), `Max_Capacity__c` (Number).
+    - [ ] 3. Crear relación **Master-Detail** en Subject hacia **Career** (`Career__c`).
+    - [ ] 4. Configurar **Tab Visibility** en *Default On* para Admin/Director.
 *   **✅ Criterios de Aceptación (QA Check)**:
-    - [ ] 1. Verificar que se pueda crear un registro de Inscripción relacionando un Alumno y una Materia existente.
-    - [ ] 2. Verificar que se pueda seleccionar el Ciclo y la Comisión desde una lista desplegable.
-    - [ ] 3. Verificar que si se borra un Alumno, se borren sus inscripciones (Master-Detail).
+    - [ ] 1. Verificar creación de una Carrera (ej: "Ingeniería de Software").
+    - [ ] 2. Verificar creación de una Materia vinculada a esa Carrera (ej: "Algoritmos I" -> "Ing. Software").
+    - [ ] 3. Validar que al borrar la Carrera, se borren sus Materias (Master-Detail).
 
-### HU-002: Identidad Única del Alumno
-*   **Estimación**: 🟢 **1 SP**
+### HU-002: Gestión de Alumnos e Inscripciones (Student & Enrollment)
+*   **Estimación**: 🔴 **5 SP**
 *   **Prioridad**: Alta
-*   **Enlace Req**: [REQ-QUAL-003]
+*   **Enlace Req**: [REQ-QUAL-003, REQ-DATA-002]
 *   **Descripción**:
-    > **Como** Sistema de Gestión,
-    > **Quiero** identificar unívocamente a cada estudiante mediante ID y Documento,
-    > **Para** asegurar la integridad de los datos y evitar registros duplicados.
+    > **Como** Administrativo,
+    > **Quiero** registrar alumnos con identidad única e inscribirlos a materias,
+    > **Para** formalizar su cursada garantizando que no existan duplicados.
 *   **⚙️ Pasos de Implementación (Admin Task)**:
-    - [x] 1. Configurar el **Record Name** con formato **Auto-Number** `A-{YYYY}-{0000}`.
-    - [x] 2. Crear un campo **Text** llamado **National ID** (`National_ID__c`).
-    - [x] 3. Habilitar el atributo **Unique** (Case Insensitive) en el campo.
-    - [x] 4. Habilitar el atributo **External ID** en el campo.
-    - [x] 5. Crear una **Validation Rule** para forzar formato numérico de 8 dígitos.
+    *Parte A: Alumno (Student)*
+    - [ ] 1. Crear Custom Object: **Student** (`Student__c`).
+    - [ ] 2. Configurar **Record Name** como **Auto-Number** `A-{YYYY}-{0000}`.
+    - [ ] 3. Crear campo **Text** `National_ID__c` (Unique, External ID) con Validation Rule (8 dígitos).
+    - [ ] 4. Crear campos básicos: `First_Name__c`, `Last_Name__c`, `Email__c` (Email), `Phone__c` (Phone), `Address__c` (Text Area).
+    
+    *Parte B: Inscripción (Enrollment)*
+    - [ ] 5. Crear Custom Object: **Enrollment** (`Enrollment__c`).
+    - [ ] 6. Relacionar **Master-Detail** hacia **Student** (`Student__c`) y **Subject** (`Subject__c`).
+    - [ ] 7. Crear campos Picklist: `Cycle__c`, `Commission__c` y `Status__c` (Enrolled/Passed/Failed).
+    - [ ] 8. (Advanced) Implementar **Flow** para llenar campo único `Enrollment_Key__c` (Student+Subject+Cycle) para evitar duplicados.
 *   **✅ Criterios de Aceptación (QA Check)**:
-    - [ ] 1. Crear un Alumno y verificar que el ID se genere automáticamente (ej. A-2024-0001).
-    - [ ] 2. Intentar crear dos alumnos con el mismo National ID; el sistema debe impedirlo.
-    - [ ] 3. Intentar ingresar un National ID con letras o menos de 8 dígitos; el sistema debe impedirlo.
+    - [ ] 1. Verificar que el Student ID se genere automático (A-2024-xxxx).
+    - [ ] 2. Validar bloqueo de National ID duplicado y formato incorrecto.
+    - [ ] 3. Verificar creación de Inscripción vinculando Student y Subject existentes.
+    - [ ] 4. Confirmar que borrar un Alumno elimina sus Inscripciones.
+    - [ ] 5. Intentar inscribir al mismo alumno en la misma materia y ciclo (Ej: Mat-2024-1) dos veces; el sistema debe bloquearlo.
 
 ### HU-003: Gestión de Exámenes y Notas
 *   **Estimación**: 🔴 **5 SP**
@@ -57,7 +63,7 @@
     > **Para** garantizar la transparencia académica, prevenir fraudes y tener evaluación granular.
 *   **⚙️ Pasos de Implementación (Admin Task)**:
     *Parte A: Integridad de Notas (Original)*
-    - [x] 1. Crear un campo **Number** llamado **Final Grade** (`Final_Grade__c`) con precisión `(4,2)`.
+    - [x] 1. En el objeto **Enrollment**: Crear un campo **Number** llamado **Final Grade** (`Final_Grade__c`) con precisión `(4,2)`.
     - [x] 2. Crear un campo **Picklist** llamado **Status** (`Status__c`) con valores Passed/Failed/Enrolled.
     - [x] 3. Crear una **Validation Rule** llamada `Grade_Range_1_10` (Fórmula: `OR(Grade < 1, Grade > 10)`).
     - [x] 4. Habilitar **Field History Tracking** para el campo `Final_Grade__c`.
@@ -132,20 +138,20 @@
 ## 📅 DIA 3: Calidad y Automatización
 *Objetivo: "Data Quality at Source" y Automatización de Procesos.*
 
-### HU-007: Validación de Contactos (Email)
+### HU-007: Validar Formato de Email
 *   **Estimación**: 🟡 **3 SP**
 *   **Prioridad**: Media
 *   **Enlace Req**: [REQ-QUAL-001]
 *   **Descripción**:
     > **Como** Departamento de Marketing,
-    > **Quiero** impedir el registro de correos que no sean institucionales,
-    > **Para** asegurar que las comunicaciones oficiales lleguen correctamente.
+    > **Quiero** asegurar que los correos electrónicos tengan un formato válido,
+    > **Para** evitar errores de tipeo y asegurar la comunicación.
 *   **⚙️ Pasos de Implementación (Admin Task)**:
-    - [x] 1. Crear una **Validation Rule** llamada `Valid_Institutional_Email` en el objeto **Student**.
-    - [x] 2. Implementar lógica **REGEX** para forzar el dominio `@lumina.edu`.
+    - [x] 1. Crear una **Validation Rule** llamada `Valid_Email_Format` en el objeto **Student**.
+    - [x] 2. Implementar lógica **REGEX** para validar estructura estándar (user@domain.com).
 *   **✅ Criterios de Aceptación (QA Check)**:
-    - [ ] 1. Intentar registrar `usuario@gmail.com`; el sistema debe rechazarlo.
-    - [ ] 2. Registrar `usuario@lumina.edu`; el sistema debe aceptarlo exitosamente.
+    - [ ] 1. Intentar registrar `user@gmail,com` (con coma); el sistema debe rechazarlo.
+    - [ ] 2. Registrar `user@gmail.com` o `user@lumina.edu`; el sistema debe aceptarlo exitosamente.
 
 ### HU-008: Integridad Numérica (Hard Validation)
 *   **Estimación**: 🟢 **1 SP**

@@ -1,33 +1,40 @@
 # 🚀 Notas de Lanzamiento: Lumina Tech v1.0
 
-**Fecha de Lanzamiento**: 30/01/2026  
-**Versión**: v1.0 (MVP Sprint 1)  
-**Estado**: ✅ **Desplegado a Producción**  
-**Autor**: Equipo de Desarrollo Salesforce
+**Fecha de Lanzamiento**: 06/02/2026
+**Versión**: v1.0 (MVP Sprint 1 - Argentina)
+**Estado**: ✅ **Desplegado a Producción**
+**Autor**: Equipo de Desarrollo Salesforce (Localización)
 
 ---
 
 ## 🌟 Nuevas Características
 
-### Documentación Gold Standard (v3.0)
-- **Metodología Ágil**: Guías actualizadas con flujo de 11 columnas y checkpoints de DevOps.
-- **Backlog Gherkin**: 12 Historias de Usuario con Triple Checklist (Narrativa, Implementación, QA).
-- **Roles Especializados**: Guías paso a paso para cada sombrero (Admin, QA, DevOps).
+### Gestión Metodológica y Documentación
+- **Documentación Gold Standard**: Guías de implementación detalladas con controles de calidad por rol.
+- **Backlog Gherkin**: Historias de Usuario con Criterios de Aceptación verificables y narrativa clara.
+- **Roles Definidos**: Guías específicas para Admins, QA y DevOps.
 
-### Gestión Académica
-- **Carreras y Materias**: Implementación del catálogo académico básico.
-- **Base de Datos de Alumnos**: Registro centralizado con validación de identidad (DNI requerido).
-- **Inscripciones**: Capacidad de vincular alumnos a materias específicas mediante Junction Object.
+### Gestión Académica (Core)
+- **Careers & Subjects**: Implementación del catálogo académico básico (`Careers` y `Subjects`).
+- **Student Database**: Registro centralizado con `First Name` y `Last Name` separados, y validación de `National ID` (8 dígitos).
+- **Enrollments**: Capacidad de vincular `Students` a `Subjects`.
+- **Exams**: Carga de notas parciales y finales con escala 0-10 (`Score`).
 
 ### Seguridad y Privacidad
-- **Modelo de Seguridad Privado**: OWD configurado para que los profesores solo vean sus propios cursos.
-- **Protección de Datos**: Los administrativos tienen acceso de solo lectura a calificaciones (FLS).
-- **Multi-Factor Authentication (MFA)**: Implementado para todos los usuarios vía Permission Set.
+- **Modelo "Zero Trust"**: OWD Privado. Los profesores solo ven sus propias `Subjects`.
+- **Perfiles Especializados**:
+    - `Lumina Professor`: Carga notas, ve solo sus cursos.
+    - `Lumina Registrar`: Inscribe alumnos (`Enrollments`), pero no puede modificar notas históricas (Read Only).
+- **MFA (Multi-Factor Authentication)**: Implementado para usuarios clave.
 
 ### Calidad de Datos
-- **Validación de Email**: Bloqueo automático de formatos de correo inválidos (requiere `.edu`).
-- **Integridad de Notas**: Reglas de validación para asegurar rango 0-10 con 2 decimales.
-- **Unicidad de DNI**: Campo configurado como External ID y Unique.
+- **Validación de Email**: Formato de correo validado (acepta Gmail, Hotmail, etc., pero con estructura correcta).
+- **Integridad de Notas**: Validation Rules para asegurar rango 0-10 (`Score`).
+- **Unicidad de National ID**: Campo `National ID` configurado como Unique para evitar duplicados.
+
+### Experiencia de Usuario (UX)
+- **App "Lumina Academic Management"**: Branding institucional y navegación personalizada.
+- **Terminología**: Interfaz mantiene los términos estándar en inglés (`Students`, `Careers`) para alineación con el Backend.
 
 ---
 
@@ -35,63 +42,58 @@
 
 Durante la fase de QA se identificaron y resolvieron los siguientes bugs:
 
-### BUG-001: Logo no visible en modo móvil ✅ RESUELTO
-- **Descripción**: El logo institucional no se mostraba correctamente en dispositivos móviles
-- **Solución**: Ajustado tamaño de imagen en Theme configuration
-- **Fecha de Resolución**: 23/01/2026
+### BUG-001: Validación de Email Restrictiva ✅ RESUELTO
+- **Descripción**: El sistema rechazaba emails personales (Gmail), exigiendo `@lumina.edu`.
+- **Solución**: Se relajó la regla a `Valid_Email_Format` (Regex genérico).
+- **Fecha de Resolución**: 06/02/2026
 
-### BUG-002: Permission Set de MFA no se asignaba automáticamente ✅ RESUELTO
-- **Descripción**: El Permission Set `Lumina_MFA_Access` no se asignaba en el flujo de onboarding
-- **Solución**: Ajustado proceso de asignación manual con documentación
-- **Fecha de Resolución**: 25/01/2026
-
----
-
-## 📋 Problemas Conocidos
-
-- **Carga Manual de Exámenes**: La carga de exámenes es manual (registro por registro). Importación masiva planificada para Sprint 2.
-- **Reportes Limitados**: Dashboards ejecutivos pendientes para Sprint 2.
+### BUG-002: Formato de Nombres ⚠️ AJUSTADO
+- **Descripción**: Confusión sobre dónde cargar segundo nombre o apellido materno.
+- **Solución**: Se aclaró en las guías el uso de `First Name` para nombres completos y `Last Name` para ambos apellidos.
+- **Fecha de Resolución**: 06/02/2026
 
 ---
 
-## 📊 Métricas de Calidad
+## 📋 Problemas Conocidos (Known Issues)
 
-- **Cobertura de Tests**: 100% (18/18 casos PASS)
-- **Bugs Críticos**: 0
-- **Bugs Menores Resueltos**: 2
-- **Historias de Usuario Completadas**: 12/12
+- **Carga Manual de Exams**: Actualmente se hace registro por registro. Importación masiva (Bulk Import) planificada para Sprint 2.
+- **Reportes**: Aún no hay dashboards gráficos de rendimiento académico.
+
+---
+
+## 📊 Métricas del Sprint 1
+
+- **Guías de Implementación**: 10 Documentos Localizados (100%).
+- **Historias de Usuario**: 12/12 Completadas.
+- **Índice de Adopción**: User Guide creada con Tips de Productividad.
 
 ---
 
 ## 🎓 Lecciones Aprendidas (Retrospectiva del Equipo)
 
 ### ✅ Lo que Funcionó Bien (Keep)
-- **Uso de Trello**: La visualización del flujo de trabajo (11 columnas) permitió transparencia total del progreso
-- **Separación clara de roles**: BA, QA, Admin, Consultant trabajaron sin pisarse
-- **Documentación en paralelo**: Registrar decisiones mientras se desarrollaba evitó "amnesia técnica"
-- **Schema Builder**: Visualizar el ERD antes de construir previno errores de diseño
+- **Transparencia en Trello**: El flujo de 11 columnas permitió visibilidad total.
+- **Separación de Roles**: BA, QA, Admin y Consultant trabajaron sin bloqueos.
+- **Schema Builder**: Validar el ERD visualmente antes de construir previno errores de diseño.
 
 ### 🔄 Áreas de Mejora (Improve)
-- **Naming Conventions**: Hubo que renombrar campos (`Duration` → `Duracion_Anios__c`) porque no se definieron estándares al inicio
-- **Comunicación entre roles**: Los handoffs BA → Admin necesitaban más contexto
-- **Testing temprano**: QA entró tarde; debería validar criterios de aceptación ANTES de construir
+- **Naming Convention**: Hubo que refactorizar `First Name` y `Last Name` tardíamente por falta de definición inicial sobre el manejo de apellidos compuestos.
+- **Testing Temprano**: QA debería validar criterios de aceptación antes de la construcción.
 
-### 💡 Acciones para Sprint 2 (Action Items)
-1. **Crear Diccionario de Datos ANTES de construir**: Definir todos los API Names en Día 0
-2. **Daily Standups estructurados**: 5 min diarios con formato: "Hice / Haré / Bloqueos"
-3. **Definition of Done (DoD)**: Checklist obligatorio antes de mover a "Terminado"
-4. **Pair Programming**: Admin + Consultant trabajando juntos en configuraciones complejas
+### 💡 Acciones para el Futuro
+1. **Data Dictionary**: Definir API Names antes del Día 0.
+2. **Definition of Done (DoD)**: Checklist obligatorio antes de cerrar la tarea.
 
 ---
 
 ## 🎯 Próximos Pasos (Sprint 2)
 
-1. Automatización de procesos (Flows)
-2. Dashboards ejecutivos
-3. Carga masiva de datos históricos
-4. Mejoras de UX (Dynamic Forms, Path)
+1.  Automatización de procesos (Flows de Email, Alertas).
+2.  Dashboards Ejecutivos para Rectoría.
+3.  Migración masiva de notas históricas.
+4.  Dynamic Forms según el estado del `Student`.
 
 ---
 
-**Aprobado por**: Dra. Vance (Rectora) - 30/01/2026  
-**Equipo**: 6 integrantes - Roles Salesforce
+**Aprobado por**: Product Owner (Usuario)
+**Equipo**: Visionary Admins Grupo 03

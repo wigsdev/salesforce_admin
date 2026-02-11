@@ -12,23 +12,23 @@
 
 ## 🛠️ Procedimiento
 
-### Caso A: Validación de Email Institucional (HU-007)
-**Contexto**: Queremos que todos los alumnos tengan email `@lumina.edu`.
+### Caso A: Validación de Formato de Email (HU-007)
+**Contexto**: Queremos asegurar que el email tenga un formato válido de estructura (ej: usuario@dominio.com).
 
 1.  Ve a **Setup** > **Object Manager**.
 2.  Busca y haz clic en **Student**.
 3.  En el menú izquierdo, haz clic en **Validation Rules**.
 4.  Haz clic en **New**.
-5.  **Rule Name**: Escribe `Valid_Institutional_Email`.
-6.  **Description**: Escribe "Enforces @lumina.edu format".
+5.  **Rule Name**: Escribe `Valid_Email_Format`.
+6.  **Description**: Escribe "Enforces valid email structure".
 7.  **Error Condition Formula**:
     *   Copia y pega EXACTAMENTE esto en el cuadro grande:
     ```sql
-    NOT(REGEX(Personal_Email__c, "[a-zA-Z0-9._%+-]+@lumina\\.edu"))
+    NOT(REGEX(Personal_Email__c, "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$"))
     ```
     *(Nota: Asegúrate de usar el API Name correcto. Si creaste el campo en inglés será `Personal_Email__c`).*
 8.  Haz clic en el botón **Check Syntax**. Espera a ver "No errors found".
-9.  **Error Message**: Escribe "Email must be institutional (@lumina.edu)".
+9.  **Error Message**: Escribe "Invalid email format (e.g. name@domain.com)".
 10. **Error Location**: Selecciona la opción **Field** y busca `Personal Email`.
 11. Haz clic en **Save**.
 
@@ -87,9 +87,9 @@
 
 ## ✅ Verificación de Éxito
 1.  Ve a la pestaña **Students**.
-2.  Intenta crear uno con email: `pepe@gmail.com`.
+2.  Intenta crear uno con email: `pepe@gmail,com` (coma).
     *   **Resultado**: Bloqueo con mensaje de error rojo.
-3.  Cambia el email a `pepe@lumina.edu` y guarda.
+3.  Cambia el email a `pepe@gmail.com` y guarda.
     *   **Resultado**: Éxito.
 4.  Ve a **Enrollments**. Intenta poner nota `15`.
     *   **Resultado**: Bloqueo.

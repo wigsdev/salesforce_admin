@@ -24,12 +24,18 @@ Esto habilita una relación **1 a N** (Una Inscripción tiene Muchos Exámenes).
 
 ### Paso 2: Crear el Vínculo Padre (Hacia Inscripción)
 *El examen no existe en el aire, pertenece a una cursada concreta.*
+
+> **⚠️ Nota de Arquitectura (Junction Object limitation)**
+> Dado que `Enrollment` ya es un Objeto Conector (Hijo de Student y Subject), Salesforce **no permite** que sea el "Master" de otro objeto.
+> Por lo tanto, usaremos una **Lookup Relationship** obligatoria en su lugar. Funcionalmente es casi idéntico.
+
 1.  **Fields & Relationships** > **New**.
-2.  Tipo: **Master-Detail Relationship**.
+2.  Tipo: **Lookup Relationship**.
 3.  Related To: **Enrollment**.
 4.  **Label**: `Enrollment`.
-5.  **Child Relationship Name**: `Exams`.
-6.  **Next** > **Next** > **Save & New**.
+5.  **Next**.
+6.  **Importante**: Marca la casilla ☑️ **Always require an value in this field in order to save a record**. (Esto simula el comportamiento estricto de un Master-Detail).
+7.  **Next** > **Next** > **Save & New**.
 
 ### Paso 3: Crear Campos de Datos
 

@@ -121,21 +121,54 @@ Relacionar "Muchos Alumnos" con "Muchas Materias" mediante un objeto intermedio 
     ```
 5.  **Save**.
 
-### 🛠️ Nota Técnica: Unicidad de Recursantes (HU-001)
-Para evitar duplicados en el *mismo* ciclo, se recomienda crear un campo texto único `Enrollment_Key__c` (Unique, Case Sensitive) y llenarlo mediante Flow con la concatenación: `StudentId & "_" & SubjectId & "_" & Cycle__c`.
-*(Esta configuración avanzada se realizará en el Sprint de Automatización).*
+### Paso 7: Prevención de Duplicados (Composite Key)
+*Evitar que un alumno se inscriba dos veces a la misma materia en el mismo ciclo.*
+
+#### 7.1 Crear Campo de Clave Única
+1.  **Fields & Relationships** > **New**.
+2.  Data Type: **Text**. Next.
+3.  **Field Label**: `Enrollment Key`.
+4.  **Field Name**: `Enrollment_Key`. Length: `255`.
+5.  ☑️ **Unique** (Treat "ABC" and "abc" as different values - Case Sensitive).
+6.  ☑️ **External ID** (Recomendado para data loading).
+7.  **Next** > **Next** > **Save**.
+
+#### 7.2 Crear Flow de Automatización (Before Save)
+1.  Ve a **Setup** > **Process Automation** > **Flows**.
+2.  Haz clic en **New Flow** > **Record-Triggered Flow** > **Create**.
+3.  **Configure Start**:
+    *   **Object**: `Enrollment`.
+    *   **Trigger**: A record is created or updated.
+    *   **Condition Requirements**: None.
+    *   **Optimize for**: Fast Field Updates (Before Save).
+4.  Haz clic en el círculo (+) > **Update Triggering Record**.
+5.  **Label**: `Set Composite Key`.
+6.  **Set Field Values for the Enrollment Record**:
+    *   **Field**: `Enrollment_Key__c`
+    *   **Value**: New Resource > Formula.
+        *   **API Name**: `form_CompositeKey`
+        *   **Data Type**: Text
+        *   **Formula**: `{!$Record.Student__c} & "_" & {!$Record.Subject__c} & "_" & TEXT({!$Record.Cycle__c})`
+7.  Haz clic en **Check Syntax** > **Done**.
+8.  Haz clic en **Save**. Label: `Enrollment: Generate Composite Key`.
+9.  Haz clic en **Activate**.
 
 **IMPORTANTE**: Activa **Set History Tracking** para `Final Grade` y `Academic Condition`. **Save**.
 
 ---
 
 ## 🚀 Resultado Final (Efecto Many-to-Many)
-Ahora, si vas al registro de un **Alumno**, verás una lista relacionada "Inscripciones".
-Si vas al registro de una **Materia**, verás una lista relacionada "Inscripciones".
+Ahora, si vas al registro de un **Student**, verás una lista relacionada "Enrollments".
+Si vas al registro de una **Subject** verás una lista relacionada "Enrollments".
 
 Esto permite que:
 *   Juan curse Matemática.
 *   Juan curse Historia.
 *   María curse Matemática.
+
+**Prueba de Fuego (Duplicados):**
+1.  Inscribe a Juan en "Math" (Cycle 2024-1).
+2.  Intenta inscribir DE NUEVO a Juan en "Math" (Cycle 2024-1).
+3.  **Resultado**: Salesforce bloqueará el guardado con un error de "Duplicate Value".
 
 ¡Has creado una arquitectura escalable! 🏛️
