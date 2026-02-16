@@ -15,8 +15,8 @@
 | [x] | **2 de Febrero** | Flows Intro | Teoría | 6 de Febrero |
 | [x] | **3 de Febrero** | Trigger Flow | Práctica | 6 de Febrero |
 | [x] | **4 de Febrero** | Soluciones para Flow | Práctica | 6 de Febrero |
-| [x] | **5 de Febrero** | Trailmix Completo | Opcional | 6 de Febrero |
-| [x] | **5 de Febrero** | SuperBadge Flows | Opcional / FORMULARIO | 8 de Febrero |
+| [x] | **5 de Febrero** | Trailmix Completo (Parte 1) | Opcional | 6 de Febrero |
+| [x] | **5 de Febrero** | SuperBadge Flows (Parte 1) | Opcional / FORMULARIO | 8 de Febrero |
 
 ---
 
@@ -28,8 +28,8 @@
 | [x] | **9 de Febrero** | Flows Screen | Práctica | 13 de Febrero |
 | [x] | **10 de Febrero** | Flow Schedule y Subflows | Práctica | 13 de Febrero |
 | [x] | **11 de Febrero** | Flows Approvals | Práctica | 13 de Febrero |
-| [x] | **12 de Febrero** | Trailmix completo | Opcional | 13 de Febrero |
-| [x] | **12 de Febrero** | Superbadge Flows | Opcional / FORMULARIO | 15 de Febrero |
+| [x] | **12 de Febrero** | Trailmix Completo (Parte 2) | Opcional | 13 de Febrero |
+| [x] | **12 de Febrero** | Superbadge Flows (Parte 2) | Opcional / FORMULARIO | 15 de Febrero |
 
 ---
 
