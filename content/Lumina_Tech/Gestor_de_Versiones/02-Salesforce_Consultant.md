@@ -10,13 +10,13 @@
 **Fuente**: [Tarea 3 - Generar preguntas](../Bitacoras_Sprint_1/dia_0/3_Generar_preguntas_en_el_documento_para_evacuar_dudas.md)
 
 1.  **ADR-001: Duplicación de Materias para MVP**
-    *   *Contexto*: Compartir registros de "Subject" complicaría las Sharing Rules Private.
-    *   *Decisión*: Crear registros separados `Math 1 - ENG` y `Math 1 - ADM`.
+    *   *Contexto*: Compartir registros de "Materia" complicaría las Sharing Rules Private.
+    *   *Decisión*: Crear registros separados `Matemática I - Ing` y `Matemática I - Adm`.
     *   *Justificación*: Simplifica la seguridad (OWD Private) en la fase 1.
 
 2.  **ADR-002: Modelo de Inscripción (Junction)**
     *   *Contexto*: Necesidad de historial de recursantes y notas.
-    *   *Decisión*: Objeto personalizado `Enrollment` que une `Student` + `Subject` + `Cycle`.
+    *   *Decisión*: Objeto personalizado `Inscripcion__c` que une `Alumno` + `Materia` + `Ciclo`.
 
 3.  **ADR-003: Calidad de Datos en Origen**
     *   *Decisión*: Uso de tipos de datos estrictos (Auto-Number, Number(4,2)) y reglas de validación.
@@ -32,17 +32,17 @@ Este esquema responde a **[REQ-DATA-002] Historial Académico**.
 > **[Ver Diagrama Visual Renderizado (Mermaid)](../Bitacoras_Sprint_1/dia_1/2_Relacion_entre_Objetos.md)**
 
 ### Especificación de Relaciones
-1.  **Enrollment (Junction Object)**:
-    *   Actúa como tabla puente para manejar la relación **M:N** entre `Student` y `Subject`.
-    *   *Configuración*: Master-Detail (x2). Si eliminas al `Student`, se borra su historial.
+1.  **Inscripción (Junction Object)**:
+    *   Actúa como tabla puente para manejar la relación **M:N** entre `Alumno` y `Materia`.
+    *   *Configuración*: Master-Detail (x2). Si eliminas al `Alumno`, se borra su historial.
 
-2.  **Jerarquía de Career**:
-    *   `Subject` tiene una relación Lookup hacia `Career`.
-    *   *Nota*: Permite flexibilidad si una materia cambia de plan de estudios (Loosely coupled).
+2.  **Jerarquía de Carrera**:
+    *   `Materia` tiene una relación Master-Detail hacia `Carrera`.
+    *   *Nota*: Permite flexibilidad si una materia cambia de plan de estudios.
 
 3.  **Evaluación Continua**:
-    *   `Exam` es hijo (Child) de `Enrollment`.
-    *   *Propósito*: Permite calcular promedios directamente en la inscripción usando Roll-Up Summaries.
+    *   `Nota` es hijo (Child) de `Inscripción` mediante Lookup obligatorio.
+    *   *Propósito*: Permite calcular promedios usando Flows (Roll-Up simulado).
 
 ---
 
@@ -64,8 +64,8 @@ Para evitar la apariencia "genérica" de Salesforce y fomentar la adopción de l
 **Fuente**: [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
 
 ### Estrategia de Calidad
-1.  **Validación en Capa de Datos**: Reglas de validación (VR) implementadas para `Email__c` y `Final_Grade__c`.
-2.  **Denormalización Visual**: Uso de Formula Fields (`Subject_Display__c`) para mejorar reportes sin código.
+1.  **Validación en Capa de Datos**: Reglas de validación (VR) implementadas para `Email_Personal__c` y `Nota_Final__c`.
+2.  **Denormalización Visual**: Uso de Formula Fields (`Nombre_Materia__c`) para mejorar reportes sin código.
 
 ---
 
@@ -73,9 +73,9 @@ Para evitar la apariencia "genérica" de Salesforce y fomentar la adopción de l
 **Fuente**: [03-Salesforce_Admin.md](03-Salesforce_Admin.md)
 
 ### Modelo de Seguridad (Layered Security)
-1.  **OWD (Organization-Wide Defaults)**: `Private` para `Student`. (Base restrictiva).
-2.  **Permission Set Groups vs Profiles**:
-    *   **Decisión**: Usar "Minimum Access - Salesforce" como perfil base y sumar capacidades vía PSG.
+1.  **OWD (Organization-Wide Defaults)**: `Private` para `Alumno`. (Base restrictiva).
+2.  **Perfiles Personalizados vs Perfil Base**:
+    *   **Decisión**: Crear perfiles `Lumina_Professor`, `Lumina_Registrar`, `Lumina_Student` basados en "Minimum Access - Salesforce".
     *   *Beneficio*: Mayor flexibilidad y menor deuda técnica.
 3.  **FLS (Field Level Security)**:
-    *   Protección a nivel atributo. `Final_Grade__c` es Read-Only para administrativos.
+    *   Protección a nivel atributo. `Nota_Final__c` es Read-Only para `Lumina_Registrar`.

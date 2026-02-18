@@ -20,31 +20,32 @@ Basado en [REQ-DATA-001] y [REQ-DATA-002].
 
 | Objeto | API Name | Tipo | Descripción |
 | :--- | :--- | :--- | :--- |
-| **Career** | `Career__c` | Custom | Oferta académica. |
-| **Subject** | `Subject__c` | Custom | Unidad curricular. Lookup a Career. |
-| **Student** | `Student__c` | Custom | Estudiante. Golden Record. |
-| **Enrollment** | `Enrollment__c` | Custom | **Junction**. Une Student y Subject. |
-| **Exam** | `Exam__c` | Custom | Detalle de evaluación. |
+| **Carrera** | `Carrera__c` | Custom | Oferta académica. |
+| **Materia** | `Materia__c` | Custom | Unidad curricular. Master-Detail a Carrera. |
+| **Alumno** | `Alumno__c` | Custom | Estudiante. Golden Record. |
+| **Inscripción** | `Inscripcion__c` | Custom | **Junction**. Une Alumno y Materia. |
+| **Nota** | `Nota__c` | Custom | Detalle de evaluación. |
+| **Asistencia** | `Asistencia__c` | Custom | Registro de asistencia por clase. |
 
 ### 📝 Diccionario de Campos Clave
 Basado en [REQ-QUAL] (Calidad de Datos).
 
-#### Objeto: Student
+#### Objeto: Alumno
 *   **Record Name** (`Name`): Auto-Number `A-{YYYY}-{0000}`.
-*   **National ID** (`National_ID__c`): Number(8,0) - **Unique, External ID**. [REQ-QUAL-003]
-*   **Email** (`Email__c`): Email Standard. [REQ-QUAL-001]
+*   **DNI** (`DNI__c`): Text(15) - **Unique, External ID**. [REQ-QUAL-003]
+*   **Email Personal** (`Email_Personal__c`): Email Standard. [REQ-QUAL-001]
 
-#### Objeto: Exam
-*   **Score** (`Score__c`): Number(4,2). **Validación**: `0 <= Score <= 10`. [REQ-QUAL-002]
-*   **Exam Date** (`Exam_Date__c`): Date (Required). [REQ-FUNC-001]
-*   **Attended** (`Attended__c`): Checkbox (Default: True). [REQ-FUNC-002]
+#### Objeto: Nota
+*   **Calificación** (`Calificacion__c`): Number(4,2). **Validación**: `1 <= Calificacion <= 10`. [REQ-QUAL-002]
+*   **Fecha** (`Fecha__c`): Date (Required). [REQ-FUNC-001]
+*   **Asistió** (`Asistio__c`): Checkbox (Default: True). [REQ-FUNC-002]
 
 ---
 
 ## 📅 DIA 2 - Configuración de Branding
 
 ### 🌐 My Domain
-*   **Nombre**: `lumina-university` (Ejemplo).
+*   **Nombre**: `lumina-tech-university`.
 *   **Estado**: Deployed to users.
 *   **Propósito**: Habilita componentes Lightning custom.
 
@@ -55,10 +56,10 @@ Basado en [REQ-QUAL] (Calidad de Datos).
 *   **Active**: ✅ Yes.
 
 ### 📱 App Manager
-*   **App Name**: `Lumina Academic` (Lightning App).
-*   **Developer Name**: `Lumina_Academic`.
-*   **Navigation Items**: Home, Students, Enrollments, Subjects, Exams, Careers.
-*   **Profiles**: System Admin, Standard User.
+*   **App Name**: `Gestión Académica Lumina` (Lightning App).
+*   **Developer Name**: `Gestion_Academica_Lumina`.
+*   **Navigation Items**: Home, Alumnos, Carreras, Materias, Inscripciones, Asistencias, Notas.
+*   **Profiles**: Lumina_Professor, Lumina_Registrar, Lumina_Student.
 
 ---
 
@@ -66,32 +67,32 @@ Basado en [REQ-QUAL] (Calidad de Datos).
 
 ### 📦 Nuevos Campos (Schema Update)
 
-#### Objeto: Enrollment (`Enrollment__c`)
-*   **Status** (`Status__c`): Picklist (Enrolled, Passed, Failed). Default: Enrolled.
-*   **Final Grade** (`Final_Grade__c`): Number(4,2).
-*   **Subject Display** (`Subject_Display__c`): Formula (Text). `Subject__r.Name`.
+#### Objeto: Inscripción (`Inscripcion__c`)
+*   **Estado** (`Estado__c`): Picklist (Matriculado, Aprobado, Reprobado). Default: Matriculado.
+*   **Nota Final** (`Nota_Final__c`): Number(4,2). Calculado por Flow.
+*   **Nombre Materia** (`Nombre_Materia__c`): Formula (Text). `Materia__r.Name`.
 
 ### 🛡️ Reglas de Validación
 
-#### Objeto: Enrollment
-*   **VR-001**: `Grade_Range`.
-    *   Formula: `OR(Final_Grade__c < 0, Final_Grade__c > 10)`
-    *   Error: "Invalid Grade. Must be 0-10".
+#### Objeto: Inscripción
+*   **VR-001**: `Rango_Nota_Valida`.
+    *   Formula: `OR(Nota_Final__c < 1, Nota_Final__c > 10)`
+    *   Error: "Calificación inválida. Debe ser entre 1 y 10."
 
-#### Objeto: Student
-*   **VR-002**: `Email_Format`.
-    *   Formula: `NOT(REGEX(Email__c, "[a-zA-Z0-9._-]+@[a-z]+\\.edu"))`
-    *   Error: "Invalid Format. Requires .edu".
+#### Objeto: Alumno
+*   **VR-002**: `Formato_Email_Valido`.
+    *   Formula: `NOT(REGEX(Email_Personal__c, "[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\\.[a-zA-Z]{2,}"))`
+    *   Error: "El formato del email no es válido."
 
 ---
 
 ## 📅 DIA 4 - Seguridad y Permisos
 
 ### 🛡️ Permission Sets (Atomicidad)
-1.  **Lumina_MFA_Access**: `Multi-Factor Authentication for User Interface Logins`.
-2.  **Lumina_Professor_Access**: Objeto Exam (R/W), Campo Final Grade (Edit).
-3.  **Lumina_Registrar_Access**: Objeto Student (R/W), Exam (Read Only).
+1.  **Lumina_MFA_Required**: `Multi-Factor Authentication for User Interface Logins`.
+2.  **Lumina_Professor**: Objeto Nota (R/W), Objeto Inscripción (Read).
+3.  **Lumina_Registrar**: Objeto Alumno (R/W), Objeto Nota (Read Only).
 
-### 👥 Permission Set Groups (Roles)
-1.  **PSG - Professor Standard**: Incluye MFA + Professor Access.
-2.  **PSG - Registrar Staff**: Incluye MFA + Registrar Access.
+### 👥 Perfiles Personalizados
+1.  **Lumina_Professor**: Incluye MFA + acceso a Notas.
+2.  **Lumina_Registrar**: Incluye MFA + acceso a Alumnos e Inscripciones.

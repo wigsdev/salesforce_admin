@@ -9,7 +9,7 @@
 *   **Estado**: ✅ Completado
 *   **Fecha de Ejecución**: 22/01/2026
 *   **Casos de Prueba Ejecutados**:
-    - [x] Verificar existencia de objetos: `Career`, `Subject`, `Student`, `Enrollment`. → **PASS**
+    - [x] Verificar existencia de objetos: `Carrera`, `Materia`, `Alumno`, `Inscripción`, `Nota`, `Asistencia`. → **PASS**
     - [x] Validar Schema Builder: Relaciones (Lookup/Master-Detail) correctas → **PASS**
     - [x] Verificar tipos de datos: Record Name (Auto-Number), Dates → **PASS**
 
@@ -19,9 +19,9 @@
 *   **Estado**: ✅ Completado
 *   **Fecha de Ejecución**: 23/01/2026
 *   **Casos de Prueba Ejecutados**:
-    - [x] Verificar Branding: Logo y Colores (`#F3F3F3`) de Lumina Tech visibles → **PASS**
-    - [x] Verificar Navegación: Pestañas (Tabs) en inglés (`Students`, `Subjects`) → **PASS**
-    - [x] Prueba de Acceso: App "Lumina Academic" visible → **PASS**
+    - [x] Verificar Branding: Logo y Colores (`#005A9C`) de Lumina Tech visibles → **PASS**
+    - [x] Verificar Navegación: Pestañas en español (`Alumnos`, `Materias`, `Inscripciones`) → **PASS**
+    - [x] Prueba de Acceso: App "Gestión Académica Lumina" visible → **PASS**
 
 ---
 
@@ -29,13 +29,13 @@
 *   **Estado**: ✅ Completado
 *   **Fecha de Ejecución**: 24/01/2026
 *   **Casos de Prueba Ejecutados**:
-    - [x] **Validación Email**: Intentar guardar `juan@gmail.com` (Non-Edu) → **PASS**
-    - [x] **Validación Email**: Intentar guardar `juan.perez` (Format) → **PASS**
-    - [x] **Validación Notas**: Intentar guardar `Final_Grade__c` = -1 → **PASS**
-    - [x] **Validación Notas**: Intentar guardar `Final_Grade__c` = 10.5 → **PASS**
-    - [x] **Fórmulas**: Verificar `Subject_Display__c` concatena correctamente → **PASS**
+    - [x] **Validación Email**: Intentar guardar `juan@gmail,com` (coma en lugar de punto) → **PASS**
+    - [x] **Validación Email**: Intentar guardar `juan.perez` (sin arroba) → **PASS**
+    - [x] **Validación Notas**: Intentar guardar `Calificacion__c` = -1 → **PASS**
+    - [x] **Validación Notas**: Intentar guardar `Calificacion__c` = 10.5 → **PASS**
+    - [x] **Fórmulas**: Verificar `Nombre_Materia__c` concatena correctamente → **PASS**
     - [x] **Integridad**: Verificar que no se borren hijos en Master-Detail → **PASS**
-    - [x] **Examen**: Crear `Exam` vinculado a Enrollment con nota 8.50 → **PASS**
+    - [x] **Nota**: Crear `Nota` vinculada a Inscripción con calificación 8.50 → **PASS**
 
 ---
 
@@ -43,11 +43,11 @@
 *   **Estado**: ✅ Completado
 *   **Fecha de Ejecución**: 25/01/2026
 *   **Casos de Prueba Ejecutados**:
-    - [x] **OWD**: Loguearse como Profesor A y verificar que NO ve `Student` de Profesor B → **PASS**
-    - [x] **Permission Sets**: Usuario con PSG `Lumina_Professor_Standard` tiene acceso correcto → **PASS**
-    - [x] **MFA**: Se solicita doble factor (`Lumina_MFA_Access`) → **PASS**
-    - [x] **FLS**: Usuario Registrar (Bedel) solo puede LEER `Final_Grade__c`, no editar → **PASS**
-    - [x] **FLS**: Usuario Profesor puede EDITAR `Final_Grade__c` → **PASS**
+    - [x] **OWD**: Loguearse como Profesor A y verificar que NO ve `Alumno` de Profesor B → **PASS**
+    - [x] **Permission Sets**: Usuario con perfil `Lumina_Professor` tiene acceso correcto → **PASS**
+    - [x] **MFA**: Se solicita doble factor (`Lumina_MFA_Required`) → **PASS**
+    - [x] **FLS**: Usuario `Lumina_Registrar` solo puede LEER `Nota_Final__c`, no editar → **PASS**
+    - [x] **FLS**: Usuario `Lumina_Professor` puede EDITAR `Nota_Final__c` → **PASS**
 
 ---
 

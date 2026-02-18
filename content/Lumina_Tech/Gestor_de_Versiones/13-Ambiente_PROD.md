@@ -1,6 +1,6 @@
 # 13-Ambiente_PROD.md - Bitácora de Producción
 **Org ID**: `00D_PROD_LUMINA`
-**Dominio**: `lumina.my.salesforce.com`
+**Dominio**: `lumina-tech-university-dev-ed.trailblaze.my.salesforce.com`
 **Estado**: 🔒 Locked (Solo Deployments)
 
 ---
@@ -20,9 +20,9 @@
 **Release Manager**: WIGUSA
 
 **Contenido**:
-*   Core Académico Completo (Objetos, Campos, Tabs).
-*   Seguridad Inicial (Perfiles Profesor y Admin).
-*   Aplicación Lightning "Gestión Académica".
+*   Core Académico Completo (6 Objetos: Carrera, Materia, Alumno, Inscripción, Nota, Asistencia).
+*   Seguridad Inicial (Perfiles Lumina_Professor, Lumina_Registrar, Lumina_Student).
+*   Aplicación Lightning "Gestión Académica Lumina".
 
 **Incidentes Post-Deploy**:
 *   *Ninguno reportado en las primeras 24hs.*

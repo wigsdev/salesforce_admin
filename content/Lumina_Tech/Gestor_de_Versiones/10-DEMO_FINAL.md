@@ -21,7 +21,7 @@
 ### 3. La Prueba de Fuego: Seguridad (5 min)
 *   **Switch User**: "Login As" -> Seleccionar usuario `Profesor Garcia`.
 *   **Acción**: Ir a la pestaña "Alumnos".
-*   **Validación**: Mostrar que la lista "All" solo muestra los alumnos de Garcia, no los de todo el colegio.
+*   **Validación**: Mostrar que la lista "All" solo muestra los alumnos de García, no los de todo el colegio.
 *   **Acción**: Intentar cambiar la nota de una materia cerrada.
     *   *Resultado*: Campo bloqueado o Error de validación.
 

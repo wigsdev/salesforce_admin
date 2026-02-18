@@ -22,7 +22,7 @@ Para este proyecto, utilizamos un modelo de **Salesforce Org-Based Development**
 
 ### Naming Convention
 Los Change Sets deben seguir el formato: `[SPRINT]_[TICKET]_[DESCRIPCION]`.
-*   *Ejemplo*: `S1_HU001_OWD_Student`
+*   *Ejemplo*: `S1_HU001_OWD_Alumno`
 
 ### Checklist Pre-Deploy
 1.  **Dependencias**: ¿Has incluido los campos nuevos antes de los Page Layouts?
@@ -31,7 +31,7 @@ Los Change Sets deben seguir el formato: `[SPRINT]_[TICKET]_[DESCRIPCION]`.
 
 ### Pasos de Despliegue (Outbound -> Inbound)
 1.  **En DEV**: Ir a Setup -> Outbound Change Sets -> New.
-2.  **Agregar componentes**: Custom Objects (`Student`, `Enrollment`), Fields (`Final_Grade__c`), Validation Rules.
+2.  **Agregar componentes**: Custom Objects (`Alumno`, `Inscripcion`), Fields (`Nota_Final__c`), Validation Rules.
 3.  **Upload** a la organización target (QA).
 4.  **En QA**: Ir a Setup -> Inbound Change Sets.
 5.  **Validate**: Ejecutar "Default Tests".

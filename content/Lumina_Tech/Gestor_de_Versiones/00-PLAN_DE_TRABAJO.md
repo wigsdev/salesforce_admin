@@ -29,7 +29,7 @@
 ## 📅 DIA 1 - Data Foundation
 **Estado**: ✅ COMPLETO
 **Entregables**:
-1.  **Objetos Custom**: `Career`, `Subject`, `Student`, `Enrollment`, `Exam`.
+1.  **Objetos Custom**: `Carrera`, `Materia`, `Alumno`, `Inscripción`, `Nota`, `Asistencia`.
 2.  **ERD Visual**: Diagrama de entidades-relaciones validado.
 3.  **Backlog Técnico**: **12 Historias de Usuario** (HU-001 a HU-012) definidas.
 
@@ -38,9 +38,9 @@
 ## 📅 DIA 2 - Branding & App
 **Estado**: ✅ COMPLETO
 **Entregables**:
-1.  **My Domain**: Desplegado (`lumina-university`).
-2.  **Theme**: "Lumina Official" activo (Azul #005A9C - Oro #F2A900).
-3.  **Lightning App**: "Lumina Academic" configurada y asignada.
+1.  **My Domain**: Desplegado (`lumina-tech-university`).
+2.  **Theme**: "Lumina Oficial" activo (Azul Lumina `#005A9C`).
+3.  **Lightning App**: "Gestión Académica Lumina" configurada y asignada.
 
 ---
 
@@ -56,8 +56,8 @@
 ## 📅 DIA 4 - Zero Trust Security
 **Estado**: ✅ COMPLETO
 **Entregables**:
-1.  **Seguridad Base**: OWD Private para `Student`.
-2.  **Gestión de Accesos**: Permission Sets (`Lumina_MFA_Access`, `Lumina_Professor_Access`).
+1.  **Seguridad Base**: OWD Private para `Alumno`.
+2.  **Gestión de Accesos**: Perfiles (`Lumina_Professor`, `Lumina_Registrar`, `Lumina_Student`).
 3.  **Backlog**: HU-010 a HU-012 (Seguridad y Privacidad) implementadas.
 
 ---

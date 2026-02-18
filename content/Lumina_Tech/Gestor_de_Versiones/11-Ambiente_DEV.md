@@ -9,8 +9,8 @@
 
 ### Datos de la Org
 *   **Edición**: Developer Edition.
-*   **Dominio**: `lumina-university-dev-ed`
-*   **Timezone**: GMT-3 (Argentina).
+*   **Dominio**: `lumina-tech-university-dev-ed`
+*   **Timezone**: GMT-5 (Perú/Colombia).
 *   **Currency**: USD (Multicurrency desactivado).
 
 ### Usuarios de Desarrollo
@@ -25,18 +25,18 @@ Registro de metadata creada directamente en este ambiente.
 
 ### Objetos Custom
 *   `Carrera__c` (Master)
-*   `Materia__c` (Master)
+*   `Materia__c` (Master-Detail de Carrera)
 *   `Alumno__c` (Transaccional)
 *   `Inscripcion__c` (Junction)
-*   `Examen__c` (Detail)
+*   `Nota__c` (Lookup a Inscripción)
+*   `Asistencia__c` (Lookup a Inscripción)
 
 ### Automatización
-*   **Validation Rules**: 3 activas.
-*   **Flows**: 0 (Sprint 1 es Config pura).
+*   **Validation Rules**: 6 activas (ver Guía 09).
+*   **Flows**: 2 activos (`Nota: Calcular Nota Final`, `Nota: Recalcular al Borrar`).
 *   **Approval Processes**: 0.
 
 ---
 
 ## 🚧 Deuda Técnica Conocida
-*   Los nombres de las pestañas están en inglés ("Students" vs "Alumnos"). Se debe corregir en la traducción de la Tab.
-*   Faltan Description en los campos creados el Día 1.
+*   Faltan Description en algunos campos creados el Día 1 (mejora para Sprint 2).
