@@ -21,17 +21,18 @@
 
 1.  **Definición de Entidades Core**
     *   🎨 **DESIGN**: Identifica los objetos necesarios.
-        *   `Career` (Padre)
-        *   `Subject` (Hijo de Career)
-        *   `Student` (Entidad Principal)
-        *   `Enrollment` (Junction Object: Student <-> Subject)
+        *   `Carrera` (Padre)
+        *   `Materia` (Master-Detail de Carrera)
+        *   `Alumno` (Entidad Principal)
+        *   `Inscripcion` (Junction Object: Alumno <-> Materia)
+        *   `Nota` y `Asistencia` (Hijos de Inscripcion)
     *   *Decisión*: Usar Master-Detail para heredar seguridad y permitir Roll-Up Summaries.
 
 2.  **Estrategia de Seguridad (Zero Trust)**
     *   🎨 **DESIGN**: Define el nivel base (OWD).
-        *   `Student` = **Private** (Nadie ve nada).
-        *   `Enrollment` = **Controlled by Parent** (Hereda de Student/Subject).
-        *   `Career` = **Public Read Only** (Catálogo visible).
+        *   `Alumno` = **Private** (Nadie ve nada).
+        *   `Inscripcion` = **Controlled by Parent** (Hereda de Alumno/Materia).
+        *   `Carrera` = **Public Read Only** (Catálogo visible).
 
 ---
 
@@ -40,9 +41,9 @@
 
 #### 🎨 Diseño: Modelo Académico (HU-001, HU-002, HU-003)
 *   **Decisiones Técnicas**:
-    *   **Identidad**: Usar `Auto-Number` para ID interno y `National_ID__c` (8 dígitos, Unique) como ID legal.
-    *   **Inscripción**: Campo `Commission` debe ser **Picklist** (Morning A/B, etc.) para evitar "data irrelevante".
-    *   **Notas**: Campo `Final_Grade__c` requiere History Tracking para auditoría.
+    *   **Identidad**: Usar `Auto-Number` para ID interno y `DNI__c` (Unique, External ID) como ID legal.
+    *   **Inscripción**: Campo `Comision__c` debe ser **Picklist** (Mañana A/B, etc.) para evitar "data irrelevante".
+    *   **Notas**: Objetos `Nota__c` y `Asistencia__c` con Lookup obligatorio a `Inscripcion__c`.
 
 ---
 
@@ -51,8 +52,8 @@
 
 #### 🎨 Diseño: Look & Feel (HU-004, HU-005, HU-006)
 *   **Decisiones Técnicas**:
-    *   **Dominio**: `lumina-university`. Es requisito para componentes custom futuros.
-    *   **App**: "Gestión Académica". Limpiar Tabs irrelevantes (Tasks, Notes). Solo dejar objetos Core.
+    *   **Dominio**: `lumina-tech-university`. Es requisito para componentes custom futuros.
+    *   **App**: "Gestión Académica Lumina". Solo dejar objetos Core (Alumnos, Carreras, Materias, Inscripciones, Notas, Asistencias).
     *   **Theme**: Color Azul `#005A9C`. Logo de alta resolución en Login.
 
 ---
@@ -74,17 +75,17 @@
 #### 🎨 Diseño: Matriz de Acceso (HU-010, HU-011, HU-012)
 *   **Decisiones Técnicas**:
     *   **Perfiles**:
-        *   `Lumina Professor`: Puede editar `Final_Grade__c`, pero NO ve `National_ID__c` (FLS).
-        *   `Lumina Registrar`: Puede ver `National_ID__c`, pero `Final_Grade__c` es Read-Only.
-    *   **MFA**: Usar **Permission Set** `Lumina_MFA_Access` en lugar de activarlo en el perfil (mayor flexibilidad).
-    *   **Visibilidad**: Crear **Sharing Rule** basada en criterios: "Si soy el Owner de la Materia, ver sus Inscripciones".
+        *   `Lumina_Professor`: Puede editar `Nota_Final__c`, pero NO ve `DNI__c` (FLS).
+        *   `Lumina_Registrar`: Puede ver `DNI__c`, pero `Nota_Final__c` es Read-Only.
+    *   **MFA**: Usar **Permission Set** `Lumina_MFA_Required` en lugar de activarlo en el perfil (mayor flexibilidad).
+    *   **Visibilidad**: OWD `Private` para `Alumno`. Sharing Rules basadas en Owner.
 
 ---
 
 ## 💡 Pro-Tips de Consultoría
 
 1.  **Clicks not Code**: Siempre prioriza configuración (Validation Rules, Flows) sobre código (Apex). Es más barato de mantener.
-2.  **Escalabilidad**: Al diseñar `Enrollment` como Junction, permitimos un futuro objeto `Attendance` (Asistencia diaria) vinculado a la misma inscripción.
+2.  **Escalabilidad**: `Asistencia__c` ya implementado como hijo de `Inscripcion__c`. En el futuro se pueden agregar tipos de clase y automatizaciones adicionales.
 3.  **Documentación**: Tu entregable no es la configuración, es el **Diseño**. El Admin solo sigue tus planos.
 
 ---

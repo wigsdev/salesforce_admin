@@ -1,7 +1,7 @@
 # 🧪 Manual de Ejecución: QA Tester
 
 **Tu Misión**: Romper cosas. Eres el Guardián de la Calidad. Nada pasa a Producción si tú no das el OK.
-**Herramientas**: `HISTORIAS_DE_USUARIO.md` (Tu Biblia) y Sandbox (Tu Patio de Juegos).
+**Herramientas**: `HISTORIAS_DE_USUARIO_ES_ES.md` (Tu Biblia) y Sandbox (Tu Patio de Juegos).
 
 ---
 
@@ -20,7 +20,7 @@
 Tu trabajo no es adivinar. Tienes un guion estricto.
 
 ### 1. El Checklist de Oro (Backlog)
-Para cada HU, consulta la sección **✅ Criterios de Aceptación (QA Check)** en `HISTORIAS_DE_USUARIO.md`.
+Para cada HU, consulta la sección **✅ Criterios de Aceptación (QA Check)** en `HISTORIAS_DE_USUARIO_ES_ES.md`.
 
 *   **Ejemplo (HU-002 - Identidad)**:
     *   [ ] ¿Se generó el ID automático?
@@ -29,7 +29,7 @@ Para cada HU, consulta la sección **✅ Criterios de Aceptación (QA Check)** e
 
 ### 2. Pruebas de Seguridad (Personas)
 No pruebes todo como "Admin". Usa los usuarios ficticios.
-*   🔨 Referencia: [06-Tutorial_Seguridad.md](../Guias_Implementacion/06-Tutorial_Seguridad.md) (Parte 6: Estrategia de Testing).
+*   🔨 Referencia: [10-Tutorial_Seguridad_Es_Es.md](../Guias_Implementacion/10-Tutorial_Seguridad_Es_Es.md) (Parte 6: Estrategia de Testing).
 
 | Actor | Rol | Prueba Clave |
 | :--- | :--- | :--- |
@@ -70,6 +70,6 @@ Si encuentras un error, no digas "no anda". Sé profesional.
 ---
 
 ## 📚 Recursos Relacionados
-- 📘 **Backlog con QA Checks**: [HISTORIAS_DE_USUARIO.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
-- 📘 **Guía de Seguridad**: [06-Tutorial_Seguridad.md](../Guias_Implementacion/06-Tutorial_Seguridad.md)
+- 📘 **Backlog con QA Checks**: [HISTORIAS_DE_USUARIO_ES_ES.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md)
+- 📘 **Guía de Seguridad**: [10-Tutorial_Seguridad_Es_Es.md](../Guias_Implementacion/10-Tutorial_Seguridad_Es_Es.md)
 - 📘 **Tutorial de Rol**: [03-Rol_QA_Tester.md](../Tutoriales_por_Rol/03-Rol_QA_Tester.md)

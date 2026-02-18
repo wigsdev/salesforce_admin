@@ -22,16 +22,16 @@ Cuando una tarjeta llega a tu escritorio, ejecuta este checklist implacable.
 ### 1. Auditoría de Naming Conventions
 *   **Contexto**: El Admin puede haber creado `Career` como `Carrera__c` por error.
 *   **Checklist**:
-    *   [ ] Objetos Custom: PascalCase y en Inglés (`Enrollment__c`).
-    *   [ ] Campos Custom: Snake_case (o Pascal) y en Inglés (`National_ID__c`).
+    *   [ ] Objetos Custom: PascalCase en Español (`Inscripcion__c`, `Alumno__c`).
+    *   [ ] Campos Custom: Snake_case en Español (`DNI__c`, `Nota_Final__c`).
     *   [ ] ¿Hay campos "Test1", "Prueba" o basura? -> **RECHAZAR**.
 
 ### 2. Auditoría de Seguridad (Security Review)
 *   **Contexto**: Un campo abierto es una brecha de seguridad.
 *   **Checklist**:
-    *   [ ] **OWD**: Confirmar que `Student` esté en **Private**.
-    *   [ ] **FLS**: Verificar que el perfil `Lumina Professor` NO tenga Read Access a `National_ID__c`.
-    *   [ ] **MFA**: Verificar que el Permission Set no esté asignado a "Guest Users" por error.
+    *   [ ] **OWD**: Confirmar que `Alumno` esté en **Private**.
+    *   [ ] **FLS**: Verificar que el perfil `Lumina_Professor` NO tenga Read Access a `DNI__c`.
+    *   [ ] **MFA**: Verificar que el Permission Set `Lumina_MFA_Required` no esté asignado a "Guest Users" por error.
 
 ### 3. Auditoría de Calidad (Best Practices)
 *   **Contexto**: Evitar deuda técnica.

@@ -23,30 +23,30 @@ Tu trabajo es preparar el paquete `Release_1.0_Foundation`.
 Asegúrate de incluir TODO esto. Si falta uno, el deploy falla.
 
 *   **Custom Objects**:
-    *   `Career__c`, `Subject__c`, `Student__c`, `Enrollment__c`.
+    *   `Carrera__c`, `Materia__c`, `Alumno__c`, `Inscripcion__c`, `Nota__c`, `Asistencia__c`.
 *   **Custom Fields**:
     *   Todos los campos de los objetos anteriores.
-    *   *Ojo*: Incluir `Career__c.Status__c` (Picklist).
+    *   *Ojo*: Incluir `Carrera__c.Estado__c` (Picklist) y `Alumno__c.DNI__c`.
 *   **Validation Rules**:
-    *   `Student__c.Valid_Institutional_Email`.
-    *   `Enrollment__c.Grade_Range_1_10`.
+    *   `Alumno__c.Formato_Email_Valido`.
+    *   `Inscripcion__c.Rango_Nota_Valida`.
 *   **Apps**:
-    *   `Lumina_Academic` (Lightning App).
+    *   `Gestion_Academica_Lumina` (Lightning App).
 *   **Permission Sets**:
-    *   `Lumina_MFA_Access`.
+    *   `Lumina_MFA_Required`.
 *   **Profiles** (¡Cuidado con esto!):
-    *   `Lumina Professor`, `Lumina Registrar`.
+    *   `Lumina_Professor`, `Lumina_Registrar`.
     *   *Nota*: A veces los perfiles no pasan bien por Change Set. Prepárate para ajustar a mano.
 
 ### 2. Pasos Pre-Despliegue (En PROD)
-*   [ ] Verificar que el dominio `lumina-university` esté activado y desplegado.
+*   [ ] Verificar que el dominio `lumina-tech-university` esté activado y desplegado.
 
 ### 3. Pasos Post-Despliegue (Manual Steps)
 No todo viaja por la API. Esto lo haces a mano en Producción:
 
 *   [ ] **Organización**: Ir a *Company Information* y verificar licencias.
 *   [ ] **Seguridad**:
-    *   Ir a *Sharing Settings* y poner `Student` en **Private**. (A veces se resetea a Public).
+    *   Ir a *Sharing Settings* y poner `Alumno` en **Private**. (A veces se resetea a Public).
 *   [ ] **Datos Base (Seed Data)**:
     *   Tu compañero (DevOps) te dará el CSV. Cárgalo con Data Loader.
 
@@ -66,5 +66,5 @@ No todo viaja por la API. Esto lo haces a mano en Producción:
 
 ## 📚 Recursos Relacionados
 - 📘 **Tutorial de Rol**: [04-Rol_Release_Manager.md](../Tutoriales_por_Rol/04-Rol_Release_Manager.md)
-- 📘 **Lista de Componentes**: [HISTORIAS_DE_USUARIO.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md) (Tu checklist de qué incluir).
+- 📘 **Lista de Componentes**: [HISTORIAS_DE_USUARIO_ES_ES.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md) (Tu checklist de qué incluir).
 - 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)

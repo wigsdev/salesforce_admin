@@ -9,7 +9,7 @@
 | Bandera | Significado | Acción |
 | :--- | :--- | :--- |
 | 🛑 **PRE-REQ** | **Entrada** | Recibes el "Dolor del Cliente" (ej. "Perdemos datos de alumnos"). |
-| 📝 **SPEC** | **Tu Turno** | Escribes Historias de Usuario (HU) en `HISTORIAS_DE_USUARIO.md` y Trello. |
+| 📝 **SPEC** | **Tu Turno** | Escribes Historias de Usuario (HU) en `HISTORIAS_DE_USUARIO_ES_ES.md` y Trello. |
 | 👋 **HANDOFF** | **Salida** | Mueves tarjeta a "Ready for Dev" y avisas al Salesforce Admin. |
 
 ---
@@ -24,7 +24,7 @@
     *   **Producto**: Mapa de Actores.
 
 2.  **Refinar el Backlog Maestro**
-    *   **Acción**: Revisa el documento [HISTORIAS_DE_USUARIO.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md).
+    *   **Acción**: Revisa el documento [HISTORIAS_DE_USUARIO_ES_ES.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md).
     *   **Validación**: Asegura que las 12 HUs cubran el alcance del MVP.
 
 ---
@@ -34,9 +34,9 @@
 
 #### 📝 Misión: Especificar el Modelo Académico
 *   **HUs a Definir**:
-    *   [HU-001](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Inscripciones (Many-to-Many).
-    *   [HU-002](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Identidad (`National ID`).
-    *   [HU-003](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Notas (`Final Grade`).
+    *   [HU-001](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): Inscripciones (Many-to-Many).
+    *   [HU-002](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): Identidad (`DNI__c`).
+    *   [HU-003](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): Notas (`Nota_Final__c`).
 *   **Criterios Clave**:
     *   Especifica tipos de datos exactos (Picklist vs Texto).
     *   Define unicidad (DNI 8 dígitos).
@@ -48,9 +48,9 @@
 
 #### 📝 Misión: Especificar Branding
 *   **HUs a Definir**:
-    *   [HU-004](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): My Domain.
-    *   [HU-005](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Look & Feel.
-    *   [HU-006](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Lightning App.
+    *   [HU-004](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): My Domain.
+    *   [HU-005](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): Look & Feel.
+    *   [HU-006](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): Lightning App.
 *   **Criterios Clave**:
     *   Colores Hexadecimales exactos.
     *   Navegación (Tabs) requerida.
@@ -62,9 +62,9 @@
 
 #### 📝 Misión: Especificar Validaciones
 *   **HUs a Definir**:
-    *   [HU-007](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Email (`.edu`).
-    *   [HU-008](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Rango Notas (1-10).
-    *   [HU-009](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Asistencia (<75% Libre).
+    *   [HU-007](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): Email (`.edu`).
+    *   [HU-008](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): Rango Notas (1-10).
+    *   [HU-009](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): Asistencia (<75% Libre).
 *   **Criterios Clave**:
     *   Redactar el "Mensaje de Error" exacto que debe ver el usuario.
     *   Proveer la fórmula lógica (Regex/And/Or) al Admin.
@@ -76,9 +76,9 @@
 
 #### 📝 Misión: Matriz de Permisos
 *   **HUs a Definir**:
-    *   [HU-010](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Visibilidad (OWD Private).
-    *   [HU-011](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): MFA (2FA).
-    *   [HU-012](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md): Segregación (SoD).
+    *   [HU-010](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): Visibilidad (OWD Private).
+    *   [HU-011](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): MFA (2FA).
+    *   [HU-012](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md): Segregación (SoD).
 *   **Criterios Clave**:
     *   Definir Perfiles: `Lumina Professor` vs `Lumina Registrar`.
     *   Especificar qué campos son Read-Only para quién.
@@ -97,6 +97,6 @@
 
 ## 📚 Recursos Relacionados
 - 📘 **Tutorial de Rol**: [01-Rol_Business_Analyst.md](../Tutoriales_por_Rol/01-Rol_Business_Analyst.md)
-- 📘 **Backlog Maestro**: [HISTORIAS_DE_USUARIO.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+- 📘 **Backlog Maestro**: [HISTORIAS_DE_USUARIO_ES_ES.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md)
 - 📘 **Glosario**: [GLOSARIO.md](../GLOSARIO.md)
 - 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)

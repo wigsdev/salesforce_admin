@@ -60,5 +60,5 @@ Branding y colores. Importante para la adopción, pero no bloquea la operación.
 
 ## 📚 Recursos Relacionados
 - 📘 **Tutorial de Rol**: [06-Rol_Product_Owner.md](../Tutoriales_por_Rol/06-Rol_Product_Owner.md)
-- 📘 **Backlog Priorizado**: [HISTORIAS_DE_USUARIO.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO.md)
+- 📘 **Backlog Priorizado**: [HISTORIAS_DE_USUARIO_ES_ES.md](../Archivos_intermedios/HISTORIAS_DE_USUARIO_ES_ES.md)
 - 🔄 **Diagrama Trello**: [DIAGRAMA_FLUJO_TRELLO.md](../DIAGRAMA_FLUJO_TRELLO.md)
