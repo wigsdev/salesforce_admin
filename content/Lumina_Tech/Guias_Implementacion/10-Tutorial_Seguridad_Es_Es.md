@@ -29,33 +29,19 @@ Configurar el modelo de seguridad "Zero Trust". Por defecto nadie ve nada, a men
 6.  Busca **Materia** (`Materia`). Cambia a **Private**.
     *   *Significado*: Fundamental para HU-009. Un profesor solo verá las Materias (Comisiones) que le pertenezcan o se le compartan.
     *   *Nota*: El objeto **Inscripción** (`Inscripcion`) heredará esta privacidad "Controlled by Parent".
-7.  Haz clic en **Save**.
+7.  Busca **Nota** (`Nota`). Cambia a **Private**.
+    *   *Nota*: Como es un vínculo Lookup (no Master-Detail), debe tener su propio candado.
+8.  Haz clic en **Save**.
 
-### Parte 2: Perfiles (SoD - HU-011)
-*Separamos funciones: "Registrar" inscribe, "Professor" califica.*
 
-#### Creación Perfil Professor
-1.  Ve a **Setup > Profiles**.
-2.  Busca el perfil **Standard User**.
-3.  Haz clic en **Clone**.
-4.  Escribe el nombre: `Lumina Professor`. Haz clic en **Save**.
-5.  En la pantalla del perfil, haz clic en **Object Settings**.
-6.  Busca y haz clic en **Inscripción** (`Inscripción`). Haz clic en **Edit**.
-    *   En **Object Permissions**, marca: ☑️ Read, ☑️ Edit.
-    *   En **Field Permissions**, busca `Nota Final` (`Nota_Final__c`) y asegúrate de que ☑️ **Edit Access** esté marcado.
-    *   *(Privacidad)*: Busca `DNI` y `Teléfono`. **DESMARCA** Read Access (o asegúrate de que esté vacío) para cumplir HU-011 estricto.
-    *   Haz clic en **Save**.
 
-#### Creación Perfil Registrar (Administrativo)
-1.  Vuelve a **Profiles**. Haz clic en **Standard User** > **Clone**.
-2.  Nombre: `Lumina Registrar`. Haz clic en **Save**.
-3.  Ve a **Object Settings** > **Inscripción** (`Inscripción`) > **Edit**.
-    *   En **Object Permissions**, marca: ☑️ Read, ☑️ Create, ☑️ Edit.
-    *   En **Field Permissions** (¡Atención!):
-        *   Busca `Nota Final` (`Nota_Final__c`).
-        *   **DESMARCA** la casilla **Edit Access**. (Solo debe quedar ☑️ Read Access).
-    *   Haz clic en **Save**.
-    *   *Resultado*: El Registrar puede inscribir alumnos, pero NO puede ponerles nota.
+### Parte 2: Perfiles y Roles (Referencia)
+*La configuración detallada de perfiles (Profesor, Registrar) se ha movido a su propia guía.*
+
+> **Ver Configuración en:** [Guía 07 - Perfiles y Usuarios](./07-Tutorial-Perfiles_Usuarios_Es_Es.md)
+> *   Creación de Perfil `Lumina Professor`.
+> *   Creación de Perfil `Lumina Registrar`.
+> *   Ajustes de Field Level Security (FLS).
 
 ### Parte 3: MFA Permission Set (HU-010)
 1.  Ve a **Setup** y busca **Permission Sets**.
@@ -66,21 +52,6 @@ Configurar el modelo de seguridad "Zero Trust". Por defecto nadie ve nada, a men
 6.  Busca la opción: ☑️ **Multi-Factor Authentication for User Interface Logins**.
 7.  Haz clic en **Save**. Confirma el mensaje emergente si aparece.
 
-### Parte 4: Asignación a Usuarios de Prueba
-1.  Ve a **Setup > Users**.
-2.  Haz clic en **New User**.
-3.  Crea el usuario "Registrar Test":
-    *   Last Name: `Test`. Alias: `rtest`. Email: (tu email). Username: `registrar@lumina.test`.
-    *   **Profile**: Selecciona `Lumina Registrar`.
-    *   Haz clic en **Save**.
-4.  Repite para "Profe Test" con perfil `Lumina Professor`.
-    *   *Tip*: Asigna a este profesor como **Owner** de un registro de Materia para probar la visibilidad.
-5.  Para asignar MFA:
-    *   Ve a **Permission Sets**. Haz clic en `Lumina_MFA_Access`.
-    *   Haz clic en **Manage Assignments**.
-    *   Haz clic en **Add Assignments**.
-    *   Selecciona a ambos usuarios.
-    *   Haz clic en **Assign** > **Done**.
 
 ### Parte 5: Sharing Rules (Visibilidad Comisiones HU-010)
 *Si no usas Owners directos, puedes crear reglas.*

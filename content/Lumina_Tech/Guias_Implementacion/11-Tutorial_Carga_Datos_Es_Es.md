@@ -28,8 +28,10 @@ Salesforce no lee tu mente, lee columnas.
     *   `Email Personal`
     *   `Telefono`
     *   `Fecha Nacimiento`
+    *   `Carrera` (Nombre Exacto)
+    *   `Estado` (Matriculado/Graduado)
 3.  Llena con datos de prueba (Mínimo 5 filas).
-    *   *Ejemplo*: Juan, Perez, 11122233, juan@lumina.edu, 555-0101, 15/05/1990
+    *   *Ejemplo*: Juan, Perez, 11122233, juan@lumina.edu, 555-0101, 15/05/1990, Ingeniería de Software, Matriculado
 4.  **Guardar como**:
     *   Haz clic en **Archivo** > **Guardar como** (o Descargar).
     *   Selecciona formato **CSV (Delimitado por comas)**.
@@ -48,10 +50,12 @@ Salesforce no lee tu mente, lee columnas.
 2.  Selecciona **Alumnos** (`Alumno`).
 3.  **¿Qué quieres hacer?**: Haz clic en **Add new records** (Agregar nuevos registros).
 4.  **Match by**: Déjalo en `--None--` (o selecciona **DNI** si estuvieras actualizando datos existentes para no duplicar).
-5.  **Where is your data?**:
+5.  **Which User Field...**: Déjalo por defecto.
+6.  **Which Carrera Field...**: Selecciona **Nombre Carrera** (para que busque por nombre y no por ID).
+7.  **Where is your data?**:
     *   Haz clic en **CSV**.
     *   Haz clic en **Choose File** (o arrastra tu archivo) y selecciona `Carga_Alumnos_v1.csv`.
-6.  Haz clic en **Next**.
+8.  Haz clic en **Next**.
 
 ### Paso 4: Mapeo de Campos (Mapping)
 *Aquí conectas tu Excel con Salesforce.*
@@ -65,6 +69,8 @@ Salesforce no lee tu mente, lee columnas.
         *   `Apellidos` -> Mapear a `Apellidos`
         *   `DNI` -> Mapear a `DNI`
         *   `Email Personal` -> Mapear a `Email Personal` (API: `Email_Personal__c`)
+        *   `Carrera` -> Mapear a `Carrera` (Lookup). Salesforce usará el nombre para buscar el ID.
+        *   `Estado` -> Mapear a `Estado` (Picklist).
     *   Haz clic en **Map**.
 4.  Cuando todo esté verde (Mapped), haz clic en **Next**.
 

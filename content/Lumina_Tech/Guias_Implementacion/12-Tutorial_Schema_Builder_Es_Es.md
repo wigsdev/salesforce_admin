@@ -31,17 +31,18 @@ En el panel izquierdo ("Select from"), usa el buscador o las casillas para marca
 2.  Marca ☑️ `Materia` (`Materia`)
 3.  Marca ☑️ `Alumno` (`Alumno`)
 4.  Marca ☑️ `Inscripción` (`Inscripcion`)
-5.  Marca ☑️ `Examen` (`Examen`) *(Si ya completaste la Guía 10)*
+5.  Marca ☑️ `Nota` (`Nota`)
+6.  Marca ☑️ `Asistencia` (`Asistencia`)
 
 ### Paso 4: Interpretar las Conexiones
-Verás 5 cajas flotando. Arrástralas con el mouse para ordenarlas.
+Verás 6 cajas flotando. Arrástralas con el mouse para ordenarlas.
 
 **Validación Visual (La Prueba de Fuego):**
 1.  Verifica que sale una línea de **Materia** y toca a **Carrera**.
 2.  Verifica el "Triángulo" (Junction Object):
     *   Una línea sale de **Inscripción** y toca a **Alumno**.
     *   Otra línea sale de **Inscripción** y toca a **Materia**.
-3.  Verifica que **Examen** cuelga de **Inscripción** (Relación Lookup Obrigatória).
+3.  Verifica que **Nota** y **Asistencia** cuelgan de **Inscripción** (Relación Lookup Obrigatória).
 
 > **Referencia de Colores**:
 > *   **Rojo/Rosado**: Relación Master-Detail (Si borras el padre, se borra el hijo).
