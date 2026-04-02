@@ -41,21 +41,23 @@ Antes de abrir Data Loader, verifique que los siguientes campos tengan el check 
 | **Contacto** | `Numero_Documento__c` | Text(20) | Llave para Inscripciones |
 | **Materia** | `Codigo_Materia__c` | Text(20) | Llave para Inscripciones |
 | **Inscripción**| `ID_Importacion__c` | Text(50) | Llave para Evaluaciones |
+| **Evaluación** | `ID_Evaluacion__c` | Text(80) | Llave Única (Fecha-Inscrip) |
 
 ---
 
 ## 🚀 Fase de Ejecución: Paso a Paso
 
-### Carga 1: Carreras (`00_Carga_Carreras.csv`)
+### Carga 1: Carreras (`DEMO/00_Carga_Carreras_DEMO.csv` o `202X/...`)
 1. **Operación:** `Upsert`.
 2. **Step 2: Object:** `Carrera__c`.
 3. **Step 2a: External ID:** Seleccionar `Abreviatura__c`.
 4. **Step 3: Mapping:**
-   - `Name` -> `Name`
+   - `Nombre_Carrera` -> `Name` (Campo estándar "Nombre de la Carrera")
    - `Abreviatura__c` -> `Abreviatura__c`
-5. **Resultado esperado:** 7 registros maestros creados.
+5. **⚠️ Nota Crítica:** Se detectó una **Regla de Validación** (`Nombre_Carrera_Solo_Letras`) que bloquea números o caracteres especiales. Asegúrese de que la columna `Nombre_Carrera` en el CSV solo contenga texto limpio.
+6. **Resultado esperado:** 7 registros maestros creados con sus nombres correctos.
 
-### Carga 2: Contactos (`01_Carga_Contactos.csv`)
+### Carga 2: Contactos (`DEMO/01_Carga_Contactos_DEMO.csv` o `202X/...`)
 1. **Operación:** `Upsert`.
 2. **Secretos de Arquitecto:**
    - Desactivar temporalmente las **Duplicate Rules** en `Setup -> Duplicate Management`.
@@ -67,36 +69,42 @@ Antes de abrir Data Loader, verifique que los siguientes campos tengan el check 
    - `Telefono` -> `Phone`
    - `Numero_Documento__c` -> `Numero_Documento__c`
 
-### Carga 3: Materias (`02_Carga_Materias.csv`)
+### Carga 3: Materias (`DEMO/02_Carga_Materias_DEMO.csv` o `202X/...`)
 1. **Operación:** `Upsert`.
 2. **Step 2: Object:** `Materia__c`.
 3. **Step 2a: External ID:** Seleccionar `Codigo_Materia__c`.
 4. **Step 2b: Relationship:** En `Carrera__r`, seleccionar `Abreviatura__c`.
 5. **Step 3: Mapping:**
-   - `Name` -> `Name`
    - `Codigo_Materia__c` -> `Codigo_Materia__c`
-   - `Carrera__c` -> `Carrera__r:Carrera__c-Abreviatura__c`
+   - `Nombre_Materia` -> `Name`
+   - `Abreviatura__c` -> `Carrera__r:Carrera__c-Abreviatura__c`
 
-### Carga 4: Inscripciones (`03_Carga_Inscripciones.csv`)
+### Carga 4: Inscripciones (`DEMO/03_Carga_Inscripciones_DEMO.csv` o `202X/...`)
 1. **Operación:** `Upsert`.
 2. **Secretos de Arquitecto:**
    - **IMPORTANTE:** Desactivar **Lookup Filters** en el objeto Inscripción (Campos `Alumno__c` y `Materia__c`).
+   - El campo `Anio_Lectivo` debe seguir el formato `YYYY-S` (ej: `2024-1`).
 3. **Step 2a: External ID:** Seleccionar `ID_Importacion__c`.
 4. **Step 2b: Discovering Relationships:**
    - `Alumno__r` -> Seleccionar `Numero_Documento__c`.
    - `Materia__r` -> Seleccionar `Codigo_Materia__c`.
 5. **Step 3: Mapping:**
-   - `Contact_Numero_Documento__c` -> `Alumno__r:Contact-Numero_Documento__c`
-   - `Materia_Codigo__c` -> `Materia__r:Materia__c-Codigo_Materia__c`
-   - `ID_Importacion__c` -> `ID_Importacion__c`
+   - `Numero_Documento__c` -> `Alumno__r:Contact-Numero_Documento__c`
+   - `Codigo_Materia` -> `Materia__r:Materia__c-Codigo_Materia__c`
+   - `ID_Importacion` -> `ID_Importacion__c`
+   - `Anio_Lectivo` -> `Anio_Lectivo__c`
 
-### Carga 5: Evaluaciones (`04_Carga_Evaluaciones.csv`)
-1. **Operación:** `Insert` (No requiere External ID propio).
-2. **Step 2b: Relationship:** En `Inscripcion__r`, seleccionar `ID_Importacion__c`.
-3. **Step 3: Mapping:**
-   - `Nota` -> `Examen_Final__c` (o el campo Number correspondiente).
-   - `Fecha_Examen` -> `Fecha_de_Examen__c`.
-   - `Inscripcion_ID_Importacion__c` -> `Inscripcion__r:Inscripcion__c-ID_Importacion__c`.
+### Carga 5: Evaluaciones (`DEMO/04_Carga_Evaluaciones_DEMO.csv` o `202X/...`)
+1. **Operación:** `Upsert`.
+2. **Step 2a: External ID:** Seleccionar `ID_Evaluacion__c`.
+3. **Step 2b: Relationships:**
+   - `Inscripcion__r` -> Seleccionar `ID_Importacion__c`.
+4. **Step 3: Mapping:**
+   - `ID_Evaluacion` -> `ID_Evaluacion__c`
+   - `ID_Inscripcion` -> `Inscripcion__r:Inscripcion__c-ID_Importacion__c`
+   - `Fecha_Lista` -> `Fecha_de_Examen__c`
+   - `Nota` -> `Examen_Final__c`
+   - `Estado` -> `Estado__c` (Asegurar valores picklist: **Aprobado**, **Desaprobado**)
 
 ---
 
