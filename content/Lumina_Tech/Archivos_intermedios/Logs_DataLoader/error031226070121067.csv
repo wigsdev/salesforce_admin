@@ -1,0 +1,8 @@
+﻿"Nombre_Carrera;Abreviatura__c","ERROR"
+"Ciencia de Datos;DAT","Specified External ID for Abreviatura__c in entity Carrera__c value length is 20 which exceeds maximum field length of 10"
+"Desarrollo de Software;DEV","Specified External ID for Abreviatura__c in entity Carrera__c value length is 26 which exceeds maximum field length of 10"
+"Diseño de Experiencia de Usuario;UX","Specified External ID for Abreviatura__c in entity Carrera__c value length is 35 which exceeds maximum field length of 10"
+"Formación General;GEN","Specified External ID for Abreviatura__c in entity Carrera__c value length is 21 which exceeds maximum field length of 10"
+"Inteligencia Artificial;IA","Specified External ID for Abreviatura__c in entity Carrera__c value length is 26 which exceeds maximum field length of 10"
+"Marketing Digital;MKT","Specified External ID for Abreviatura__c in entity Carrera__c value length is 21 which exceeds maximum field length of 10"
+"Negocios Digitales;NEG","Specified External ID for Abreviatura__c in entity Carrera__c value length is 22 which exceeds maximum field length of 10"

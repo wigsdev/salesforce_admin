@@ -78,3 +78,6 @@ app/static/css/main.css
 backups/
 *.sql
 *.dump
+
+# Salesforce tools
+.sfdx/

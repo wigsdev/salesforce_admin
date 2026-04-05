@@ -43,9 +43,7 @@ def seed_curriculum(schedule_files: list[str], clear_existing: bool = False):
         print("=" * 80 + "\n")
 
         if clear_existing:
-            print(
-                "⚠️  WARNING: 'clear_existing' flag ignored to protect User Progress."
-            )
+            print("⚠️  WARNING: 'clear_existing' flag ignored to protect User Progress.")
             print("   Using Smart Sync (Upsert) instead of Delete-All.\n")
 
         # Process each schedule file

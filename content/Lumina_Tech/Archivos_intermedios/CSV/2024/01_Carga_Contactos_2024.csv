@@ -1,0 +1,1179 @@
+Nombre,Apellido,Numero_Documento__c,Email,Telefono,Rol__c,Tipo_Documento__c
+Bastian,Torres,45147679,bastian.torres@outlook.com,+54 9 2120 6852,Alumno,DNI
+Valentina,Paz,33789545,valentina.paz@gmail.com,+54 9 2627 6570,Alumno,DNI
+Guadalupe,Coronel,34250668,guadalupe.coronel@yahoo.com,+54 9 3594 5990,Alumno,DNI
+Camilo,Acosta,41943395,camilo.acosta@yahoo.com,+54 9 3164 7718,Alumno,DNI
+Luciana,Rodriguez,37706458,luciana.rodriguez@yahoo.com,+54 9 2168 5585,Alumno,DNI
+Luna,Suarez,30309712,luna.suarez@hotmail.com,+54 9 2833 8901,Alumno,DNI
+Morena,Romero,43539600,,+54 9 2431 8055,Alumno,DNI
+Máximo,Rodriguez,32343092,maximo.rodriguez@yahoo.com,+54 9 2693 4828,Alumno,DNI
+Mateo,Moreno,45688788,mateo.moreno@hotmail.com,+54 9 3709 2027,Alumno,DNI
+Mateo,Dominguez,45130131,mateo.dominguez@hotmail.com,+54 9 2147 5969,Alumno,DNI
+Geronimo,Soria,41111676,geronimo.soria@gmail.com,+54 9 3145 1502,Alumno,DNI
+Milagros,Soria,44047721,,+54 9 3617 8080,Alumno,DNI
+Tomàs,Gonzalez,37513790,tomas.gonzalez@hotmail.com,+54 9 2501 9384,Alumno,DNI
+Martina,Gomez,43449566,martina.gomez@hotmail.com,+54 9 3561 0521,Alumno,DNI
+Benjamin,Molina,31303564,benjamin.molina@gmail.com,+54 9 3624 3883,Alumno,DNI
+Tomàs,Sanchez,39074649,tomas.sanchez@outlook.com,+54 9 2177 5226,Alumno,DNI
+Alexander,Soto,30542692,alexander.soto@yahoo.com,+54 9 3295 3328,Alumno,DNI
+Valentin,Alvarez,34508314,valentin.alvarez@yahoo.com,+54 9 2368 3900,Alumno,DNI
+Lautaro,Sosa,38811418,lautaro.sosa@outlook.com,+54 9 3409 7570,Alumno,DNI
+Juan Martin,Rodriguez,35891432,juan.martin.rodriguez@yahoo.com,+54 9 2905 1290,Alumno,DNI
+Ludmila,Lopez,36163868,ludmila.lopez@gmail.com,+54 9 2343 3079,Alumno,DNI
+Dante,Romero,38677145,dante.romero@outlook.com,+54 9 2961 0720,Alumno,DNI
+Milena,Suarez,32971550,milena.suarez@yahoo.com,+54 9 3191 4580,Alumno,DNI
+Tomàs,Juarez,30348701,tomas.juarez@yahoo.com,+54 9 2950 1285,Alumno,DNI
+Benjamin,Hernandez,41944353,benjamin.hernandez@outlook.com,+54 9 2219 9785,Alumno,DNI
+Santino,Gonzalez,44313136,santino.gonzalez@hotmail.com,+54 9 2861 3870,Alumno,DNI
+Thiago Nicolas,Roldan,31763113,thiago.nicolas.roldan@outlook.com,+54 9 2597 1174,Alumno,DNI
+Violeta,Suarez,37085503,violeta.suarez@gmail.com,+54 9 3945 4441,Alumno,DNI
+Faustino,Suarez,40578248,faustino.suarez@yahoo.com,+54 9 3577 8183,Alumno,DNI
+Valentino,Suarez,33541682,valentino.suarez@gmail.com,+54 9 3650 2039,Alumno,DNI
+Joaquin,Rodriguez,44012569,joaquin.rodriguez@yahoo.com,+54 9 2125 1380,Alumno,DNI
+Milena,Diaz,42500015,milena.diaz@hotmail.com,+54 9 2395 1848,Alumno,DNI
+Juana,Ramos,45840080,,+54 9 2542 4466,Alumno,DNI
+Alfonsina,Carrizo,35376871,alfonsina.carrizo@outlook.com,+54 9 3228 1938,Alumno,DNI
+Joaquin,Lopez,39696052,joaquin.lopez@gmail.com,+54 9 3266 5055,Alumno,DNI
+Felipe,Acosta,30117903,,+54 9 2561 7615,Alumno,DNI
+Maria Paz,Rojas,41068300,maria.paz.rojas@yahoo.com,+54 9 2596 3705,Alumno,DNI
+Gonzalo,Garcia,35620137,gonzalo.garcia@outlook.com,+54 9 3892 2082,Alumno,DNI
+Santino,Dominguez,38207316,santino.dominguez@gmail.com,+54 9 2730 0517,Alumno,DNI
+Valentina,Fernandez,42254691,valentina.fernandez@gmail.com,+54 9 2224 4536,Alumno,DNI
+Bautista,Vega,44635112,bautista.vega@hotmail.com,+54 9 3333 0825,Alumno,DNI
+Giovanni,Maldonado,41289550,giovanni.maldonado@hotmail.com,+54 9 2547 1803,Alumno,DNI
+Santino,Rodriguez,45656190,santino.rodriguez@hotmail.com,+54 9 2446 7104,Alumno,DNI
+Catalina,Barrios,31621161,,+54 9 3510 2381,Alumno,DNI
+Renzo,Benitez,42845702,renzo.benitez@hotmail.com,+54 9 2495 2033,Alumno,DNI
+Facundo,Maldonado,35420584,facundo.maldonado@outlook.com,+54 9 3512 9462,Alumno,DNI
+Santiago,Pereyra,36369209,santiago.pereyra@outlook.com,+54 9 3535 6554,Alumno,DNI
+Milo,Rodriguez,43625205,,+54 9 2919 0402,Alumno,DNI
+Lola,Martinez,44094966,lola.martinez@hotmail.com,+54 9 2702 8765,Alumno,DNI
+Jazmin,Sosa,35824110,jazmin.sosa@hotmail.com,+54 9 2856 1675,Alumno,DNI
+Guillermina,Lucero,40033579,guillermina.lucero@hotmail.com,+54 9 3622 0074,Alumno,DNI
+Alma Valentina,Rodriguez,38194575,alma.valentina.rodriguez@outlook.com,+54 9 3288 3272,Alumno,DNI
+Santino,Gomez,33952849,santino.gomez@outlook.com,+54 9 3924 3631,Alumno,DNI
+Felipe,Carrizo,32991581,felipe.carrizo@outlook.com,+54 9 3844 6642,Alumno,DNI
+Lautaro,Rodriguez,41885509,lautaro.rodriguez@gmail.com,+54 9 2279 7194,Alumno,DNI
+Joaquin,Flores,33838303,joaquin.flores@outlook.com,+54 9 3965 6415,Alumno,DNI
+Olivia,Olivera,36279807,olivia.olivera@yahoo.com,+54 9 2309 1902,Alumno,DNI
+Julian,Castro,42208457,julian.castro@hotmail.com,+54 9 2462 7289,Alumno,DNI
+Catalina,Gutierrez,38750180,catalina.gutierrez@yahoo.com,+54 9 3250 8351,Alumno,DNI
+Guillermina,Gimenez,37222211,guillermina.gimenez@outlook.com,+54 9 2307 9996,Alumno,DNI
+Agustina,Martinez,38645258,agustina.martinez@yahoo.com,+54 9 2678 9032,Alumno,DNI
+Paula,Garcia,37604035,paula.garcia@yahoo.com,+54 9 2465 7991,Alumno,DNI
+Luz Maria,Rodriguez,32160000,luz.maria.rodriguez@gmail.com,+54 9 2451 7818,Alumno,DNI
+Alma Valentina,Aguero,38223982,alma.valentina.aguero@yahoo.com,+54 9 3726 6320,Alumno,DNI
+Santiago,Avila,33081027,santiago.avila@yahoo.com,+54 9 2644 6030,Alumno,DNI
+Manuel,Lopez,32349994,manuel.lopez@outlook.com,+54 9 3812 8627,Alumno,DNI
+Ramiro,Vazquez,34636803,ramiro.vazquez@outlook.com,+54 9 3748 3725,Alumno,DNI
+Martina,Torres,38629655,martina.torres@gmail.com,+54 9 3564 7486,Alumno,DNI
+Juana,Gomez,36015798,juana.gomez@hotmail.com,+54 9 2471 6701,Alumno,DNI
+Isabella,Perez,37951141,isabella.perez@outlook.com,+54 9 2560 2478,Alumno,DNI
+Agustín,Gomez,39734889,agustin.gomez@yahoo.com,+54 9 3221 3066,Alumno,DNI
+Lourdes,Escobar,41134242,lourdes.escobar@outlook.com,+54 9 3222 9415,Alumno,DNI
+Bastian,Castro,31379964,bastian.castro@gmail.com,+54 9 3857 6198,Alumno,DNI
+Santino,Franco,45752068,santino.franco@gmail.com,+54 9 3811 5295,Alumno,DNI
+Ciro,Vega,37795993,ciro.vega@hotmail.com,+54 9 3187 1032,Alumno,DNI
+Santino,Gomez,36128228,santino.gomez@hotmail.com,+54 9 2220 1548,Alumno,DNI
+Angelina,Caceres,33155313,angelina.caceres@outlook.com,+54 9 3754 6527,Alumno,DNI
+Maria Luz,Sanchez,31187731,maria.luz.sanchez@gmail.com,+54 9 2522 9265,Alumno,DNI
+Victoria,Fernandez,30507337,victoria.fernandez@gmail.com,+54 9 3875 6904,Alumno,DNI
+Felipe,Suarez,33195960,felipe.suarez@outlook.com,+54 9 2532 2510,Alumno,DNI
+Jazmín,Suarez,35524090,jazmin.suarez@hotmail.com,+54 9 3874 8933,Alumno,DNI
+Maximo,Rojas,35081927,maximo.rojas@outlook.com,+54 9 2532 0906,Alumno,DNI
+Constantino,Correa,35845730,constantino.correa@hotmail.com,+54 9 3183 2777,Alumno,DNI
+Maria Luz,Cabrera,42574929,maria.luz.cabrera@gmail.com,+54 9 3395 6725,Alumno,DNI
+Antonia,Quiroga,31370404,antonia.quiroga@outlook.com,+54 9 2637 0380,Alumno,DNI
+Luca,Gutierrez,35915007,luca.gutierrez@yahoo.com,+54 9 2789 5016,Alumno,DNI
+Agustin,Flores,35589315,agustin.flores@gmail.com,+54 9 2773 2706,Alumno,DNI
+Juan Cruz,Lucero,32200927,juan.cruz.lucero@hotmail.com,+54 9 2665 0107,Alumno,DNI
+Dylan,Ledesma,42305779,dylan.ledesma@outlook.com,+54 9 2809 9508,Alumno,DNI
+Valentin,Garcia,40988877,valentin.garcia@outlook.com,+54 9 3738 8703,Alumno,DNI
+Maria Victoria,Vega,32150912,maria.victoria.vega@hotmail.com,+54 9 2877 7652,Alumno,DNI
+Isabella,Dominguez,34471842,isabella.dominguez@hotmail.com,+54 9 3485 3632,Alumno,DNI
+Benjamin,Alvarez,33988348,benjamin.alvarez@yahoo.com,+54 9 2999 4033,Alumno,DNI
+Sofía,Rodriguez,31554768,sofia.rodriguez@outlook.com,+54 9 3536 5898,Alumno,DNI
+Maria Paz,Campos,41754338,maria.paz.campos@outlook.com,+54 9 2442 5731,Alumno,DNI
+Mateo,Rodriguez,32474711,mateo.rodriguez@outlook.com,+54 9 3823 2050,Alumno,DNI
+Sofia,Villalba,41591741,sofia.villalba@hotmail.com,+54 9 3890 4385,Alumno,DNI
+Josefina,Leiva,36117422,josefina.leiva@yahoo.com,+54 9 3668 6630,Alumno,DNI
+Facundo,Diaz,36005534,facundo.diaz@gmail.com,+54 9 3735 2263,Alumno,DNI
+Guillermina,Lopez,32088271,guillermina.lopez@outlook.com,+54 9 3253 1720,Alumno,DNI
+Martina,Ojeda,42740444,martina.ojeda@yahoo.com,+54 9 2462 7303,Alumno,DNI
+Agustina,Fernandez,36868365,agustina.fernandez@hotmail.com,+54 9 2729 9413,Alumno,DNI
+Juliana,Gomez,43315303,juliana.gomez@hotmail.com,+54 9 2721 5674,Alumno,DNI
+Dylan Benjamin,Martinez,37275248,dylan.benjamin.martinez@yahoo.com,+54 9 2281 2884,Alumno,DNI
+Maria Guadalupe,Romero,43904609,maria.guadalupe.romero@yahoo.com,+54 9 2904 8289,Alumno,DNI
+Alma Valentina,Garcia,42763799,alma.valentina.garcia@yahoo.com,+54 9 2978 5301,Alumno,DNI
+Juan Manuel,Diaz,33601032,juan.manuel.diaz@yahoo.com,+54 9 2833 1051,Alumno,DNI
+Mateo Agustin,Figueroa,31629308,mateo.agustin.figueroa@yahoo.com,+54 9 3568 1037,Alumno,DNI
+Juan Bautista,Soria,42881854,juan.bautista.soria@yahoo.com,+54 9 3300 1226,Alumno,DNI
+Alexander,Ojeda,33293475,alexander.ojeda@outlook.com,+54 9 3763 2317,Alumno,DNI
+Nicolas,Carrizo,37663002,nicolas.carrizo@gmail.com,+54 9 3166 2680,Alumno,DNI
+Agustina,Mansilla,34343777,agustina.mansilla@gmail.com,+54 9 3946 3002,Alumno,DNI
+Tobias,Mansilla,43888324,tobias.mansilla@outlook.com,+54 9 3192 2155,Alumno,DNI
+Matias,Gonzalez,42645481,matias.gonzalez@yahoo.com,+54 9 2621 6311,Alumno,DNI
+Joaquín,Godoy,42613265,joaquin.godoy@gmail.com,+54 9 2986 2185,Alumno,DNI
+Thiago Benjamin,Cabrera,40603350,thiago.benjamin.cabrera@hotmail.com,+54 9 3347 6137,Alumno,DNI
+Simon,Perez,35650079,simon.perez@gmail.com,+54 9 3576 0814,Alumno,DNI
+Candelaria,Romero,36630045,candelaria.romero@yahoo.com,+54 9 3267 1593,Alumno,DNI
+Pedro,Coronel,34939319,pedro.coronel@gmail.com,+54 9 2580 8086,Alumno,DNI
+Facundo,Pereyra,39916823,facundo.pereyra@outlook.com,+54 9 3460 3432,Alumno,DNI
+Isabella,Chavez,36906085,isabella.chavez@yahoo.com,+54 9 3384 6959,Alumno,DNI
+Bautista,Ruiz,34211417,bautista.ruiz@hotmail.com,+54 9 3763 3160,Alumno,DNI
+Juan Bautista,Ojeda,45182848,juan.bautista.ojeda@hotmail.com,+54 9 2978 9237,Alumno,DNI
+Simon,Vega,40422549,simon.vega@hotmail.com,+54 9 3827 6182,Alumno,DNI
+Santiago,Muñoz,31122274,santiago.munoz@yahoo.com,+54 9 2957 4262,Alumno,DNI
+Nahiara Jazmin,Farias,32152121,nahiara.jazmin.farias@hotmail.com,+54 9 2856 8727,Alumno,DNI
+Joaquin,Perez,36362413,joaquin.perez@gmail.com,+54 9 3118 1360,Alumno,DNI
+Thiago Benjamin,Diaz,37856329,thiago.benjamin.diaz@outlook.com,+54 9 3991 5567,Alumno,DNI
+Juana,Nuñez,38934818,juana.nunez@outlook.com,+54 9 3516 0997,Alumno,DNI
+Lara,Coronel,43651742,lara.coronel@yahoo.com,+54 9 2242 5700,Alumno,DNI
+Delfina,Garcia,44661890,delfina.garcia@hotmail.com,+54 9 2809 2992,Alumno,DNI
+Ludmila,Sanchez,35648819,ludmila.sanchez@gmail.com,+54 9 2916 4362,Alumno,DNI
+Bautista,Nuñez,30680437,bautista.nunez@yahoo.com,+54 9 3354 5747,Alumno,DNI
+Valentina,Gonzalez,35915416,valentina.gonzalez@outlook.com,+54 9 2949 1607,Alumno,DNI
+Sofia,Garcia,38526500,sofia.garcia@outlook.com,+54 9 3930 4224,Alumno,DNI
+Pilar,Dominguez,37869329,pilar.dominguez@yahoo.com,+54 9 3991 2831,Alumno,DNI
+Simon,Torres,30856430,simon.torres@outlook.com,+54 9 3376 2366,Alumno,DNI
+Manuel,Castillo,42760731,manuel.castillo@hotmail.com,+54 9 2941 6333,Alumno,DNI
+Lola,Gomez,41332008,lola.gomez@outlook.com,+54 9 3653 8521,Alumno,DNI
+Matilda,Gomez,31767975,matilda.gomez@gmail.com,+54 9 3156 7069,Alumno,DNI
+Martina,Maidana,44536877,martina.maidana@hotmail.com,+54 9 3227 2813,Alumno,DNI
+Tiziano,Gomez,38877407,tiziano.gomez@outlook.com,+54 9 3511 2847,Alumno,DNI
+Ciro,Diaz,35049197,ciro.diaz@outlook.com,+54 9 3221 9202,Alumno,DNI
+Maximo,Perez,36629400,maximo.perez@yahoo.com,+54 9 2589 0528,Alumno,DNI
+Mora,Martin,36701152,mora.martin@yahoo.com,+54 9 2108 0372,Alumno,DNI
+Samuel,Molina,39775624,samuel.molina@yahoo.com,+54 9 2323 1548,Alumno,DNI
+Ana Paula,Gomez,30362258,ana.paula.gomez@gmail.com,+54 9 3841 6702,Alumno,DNI
+Isabella,Arias,36309794,isabella.arias@hotmail.com,+54 9 3470 9937,Alumno,DNI
+Sebastian,Silva,36727365,sebastian.silva@hotmail.com,+54 9 2236 3579,Alumno,DNI
+Alfonsina,Perez,31087473,alfonsina.perez@yahoo.com,+54 9 3465 7235,Alumno,DNI
+Mia Jazmin,Olivera,45561312,mia.jazmin.olivera@outlook.com,+54 9 2624 3817,Alumno,DNI
+Lautaro Ezequiel,Cabrera,35515194,lautaro.ezequiel.cabrera@gmail.com,+54 9 2360 5258,Alumno,DNI
+Valentina,Martinez,30279612,valentina.martinez@outlook.com,+54 9 2139 6410,Alumno,DNI
+Felipe,Rojas,30252475,felipe.rojas@outlook.com,+54 9 3393 8691,Alumno,DNI
+Mateo,Benitez,42727516,mateo.benitez@outlook.com,+54 9 3778 1066,Alumno,DNI
+Francisco,Rodriguez,44385458,francisco.rodriguez@gmail.com,+54 9 3606 9781,Alumno,DNI
+Nina,Rodriguez,34567608,nina.rodriguez@yahoo.com,+54 9 2330 0776,Alumno,DNI
+Martina,Cordoba,42909942,martina.cordoba@yahoo.com,+54 9 2726 2352,Alumno,DNI
+Bautista,Cabrera,38622234,bautista.cabrera@outlook.com,+54 9 2547 1522,Alumno,DNI
+Milena,Escobar,44927685,milena.escobar@outlook.com,+54 9 2975 2699,Alumno,DNI
+Maria Emilia,Martinez,35316729,maria.emilia.martinez@outlook.com,+54 9 2614 4761,Alumno,DNI
+Renata,Lopez,41530667,renata.lopez@yahoo.com,+54 9 2115 6600,Alumno,DNI
+Valentina,Gomez,34356381,valentina.gomez@gmail.com,+54 9 3206 5509,Alumno,DNI
+Sofia,Escobar,43105183,sofia.escobar@yahoo.com,+54 9 3826 7431,Alumno,DNI
+Joaquin,Ponce,41112892,joaquin.ponce@outlook.com,+54 9 2289 7440,Alumno,DNI
+Olivia,Lopez,32141644,olivia.lopez@hotmail.com,+54 9 2602 2166,Alumno,DNI
+Felipe,Martinez,31061893,felipe.martinez@gmail.com,+54 9 3311 5083,Alumno,DNI
+Ramiro,Acuña,37674710,,+54 9 3847 0533,Alumno,DNI
+Valentino,Castillo,39571770,valentino.castillo@outlook.com,+54 9 2270 8416,Alumno,DNI
+Gonzalo,Garcia,39463207,gonzalo.garcia@outlook.com,+54 9 3935 3291,Alumno,DNI
+Maximo,Flores,35517472,maximo.flores@gmail.com,+54 9 3341 0323,Alumno,DNI
+Juan Gabriel,Quiroga,37678418,juan.gabriel.quiroga@hotmail.com,+54 9 3775 6248,Alumno,DNI
+Santiago,Farias,34635361,santiago.farias@outlook.com,+54 9 3827 3233,Alumno,DNI
+Florencia,Rojas,42253635,florencia.rojas@outlook.com,+54 9 2702 8180,Alumno,DNI
+Lautaro Benjamin,Ramirez,35501443,lautaro.benjamin.ramirez@hotmail.com,+54 9 2586 1123,Alumno,DNI
+Olivia,Acosta,40245831,olivia.acosta@yahoo.com,+54 9 2785 9055,Alumno,DNI
+Joaquín,Morales,39144752,joaquin.morales@yahoo.com,+54 9 3700 3705,Alumno,DNI
+Benicio,Gonzalez,41931470,benicio.gonzalez@outlook.com,+54 9 3803 9410,Alumno,DNI
+Valentina,Rios,39386440,valentina.rios@gmail.com,+54 9 3234 9603,Alumno,DNI
+Maria Luz,Gimenez,36948146,maria.luz.gimenez@hotmail.com,+54 9 3143 6557,Alumno,DNI
+Mateo Benjamin,Perez,34092604,mateo.benjamin.perez@yahoo.com,+54 9 2218 8357,Alumno,DNI
+Lucía,Diaz,37505561,lucia.diaz@yahoo.com,+54 9 2850 3516,Alumno,DNI
+Violeta,Muñoz,45419981,violeta.munoz@hotmail.com,+54 9 2982 4228,Alumno,DNI
+Juan Sebastian,Escobar,45503533,juan.sebastian.escobar@hotmail.com,+54 9 3635 4397,Alumno,DNI
+Guadalupe,Rivero,30966401,guadalupe.rivero@yahoo.com,+54 9 3242 7856,Alumno,DNI
+Tomàs,Molina,36456678,tomas.molina@gmail.com,+54 9 2658 0121,Alumno,DNI
+Sara,Fernandez,30465936,sara.fernandez@hotmail.com,+54 9 3260 8459,Alumno,DNI
+Maximo,Ledesma,40764881,maximo.ledesma@hotmail.com,+54 9 2280 5333,Alumno,DNI
+Juan Ignacio,Bustos,37142397,juan.ignacio.bustos@outlook.com,+54 9 2305 9095,Alumno,DNI
+Maria Victoria,Pereyra,38481398,maria.victoria.pereyra@gmail.com,+54 9 2183 1275,Alumno,DNI
+Constanza,Torres,44654200,constanza.torres@outlook.com,+54 9 3785 4481,Alumno,DNI
+Sofia,Vega,45171795,sofia.vega@yahoo.com,+54 9 2361 5465,Alumno,DNI
+Juana,Gomez,40167473,juana.gomez@outlook.com,+54 9 2349 6632,Alumno,DNI
+Alma Valentina,Ruiz,42002650,alma.valentina.ruiz@yahoo.com,+54 9 3557 3260,Alumno,DNI
+Lola,Pereyra,34758464,lola.pereyra@gmail.com,+54 9 3429 5981,Alumno,DNI
+Lara,Gimenez,39194704,lara.gimenez@yahoo.com,+54 9 3676 1820,Alumno,DNI
+Violeta,Diaz,36489803,violeta.diaz@hotmail.com,+54 9 2726 4086,Alumno,DNI
+Sofia,Diaz,41915923,sofia.diaz@outlook.com,+54 9 3817 9484,Alumno,DNI
+Mora,Martinez,40421216,mora.martinez@outlook.com,+54 9 3934 7210,Alumno,DNI
+Thiago Lionel,Sosa,39747478,thiago.lionel.sosa@yahoo.com,+54 9 2304 4743,Alumno,DNI
+Valentina,Ponce,44765173,valentina.ponce@gmail.com,+54 9 3379 5484,Alumno,DNI
+Bautista,Ruiz,36594040,bautista.ruiz@outlook.com,+54 9 2263 4888,Alumno,DNI
+Miguel Angel,Mansilla,37444361,miguel.angel.mansilla@outlook.com,+54 9 3726 1873,Alumno,DNI
+Ramiro,Gonzalez,38446695,ramiro.gonzalez@gmail.com,+54 9 3495 0074,Alumno,DNI
+Catalina,Sanchez,43062304,catalina.sanchez@gmail.com,+54 9 2343 8565,Alumno,DNI
+Delfina,Castro,44412440,delfina.castro@yahoo.com,+54 9 3853 5449,Alumno,DNI
+Benjamin Alejandro,Torres,41748984,benjamin.alejandro.torres@hotmail.com,+54 9 2699 9313,Alumno,DNI
+Juana,Fernandez,38038154,juana.fernandez@hotmail.com,+54 9 3178 3445,Alumno,DNI
+Julieta,Duarte,44753132,,+54 9 2831 5109,Alumno,DNI
+Lola,Farias,30619113,lola.farias@outlook.com,+54 9 3412 1839,Alumno,DNI
+Santino,Aguero,39641826,santino.aguero@yahoo.com,+54 9 3740 6873,Alumno,DNI
+Micaela,Sosa,31442827,micaela.sosa@outlook.com,+54 9 3951 3445,Alumno,DNI
+Constantino,Castro,41594052,constantino.castro@outlook.com,+54 9 3916 6714,Alumno,DNI
+Alejo,Diaz,44698831,alejo.diaz@hotmail.com,+54 9 3603 7832,Alumno,DNI
+Gonzalo,Sanchez,37749075,gonzalo.sanchez@outlook.com,+54 9 3104 9303,Alumno,DNI
+Luz Milagros,Ramirez,37797988,luz.milagros.ramirez@outlook.com,+54 9 3690 0657,Alumno,DNI
+Juan Martin,Paez,31821525,juan.martin.paez@yahoo.com,+54 9 3718 4386,Alumno,DNI
+Santiago,Rodriguez,38657054,santiago.rodriguez@outlook.com,+54 9 3243 5121,Alumno,DNI
+Delfina,Godoy,31165911,delfina.godoy@gmail.com,+54 9 2946 3828,Alumno,DNI
+Bruno,Ponce,31777177,bruno.ponce@yahoo.com,+54 9 3125 2111,Alumno,DNI
+Joaquin,Perez,39451059,joaquin.perez@yahoo.com,+54 9 3571 5483,Alumno,DNI
+Dante,Correa,39054820,dante.correa@yahoo.com,+54 9 2147 7006,Alumno,DNI
+Sebastian,Escobar,36016561,sebastian.escobar@gmail.com,+54 9 3881 2828,Alumno,DNI
+Juan Ignacio,Vega,35745673,juan.ignacio.vega@outlook.com,+54 9 2830 2542,Alumno,DNI
+Lucas,Sanchez,32416248,lucas.sanchez@gmail.com,+54 9 2799 4314,Alumno,DNI
+Josefina,Escobar,31162466,josefina.escobar@outlook.com,+54 9 3725 2282,Alumno,DNI
+Lucía,Gonzalez,42179672,lucia.gonzalez@gmail.com,+54 9 2429 5377,Alumno,DNI
+Augusto,Benitez,30263228,augusto.benitez@gmail.com,+54 9 3619 0055,Alumno,DNI
+Lautaro Ezequiel,Lopez,36855486,lautaro.ezequiel.lopez@yahoo.com,+54 9 3537 0144,Alumno,DNI
+Joaquina,Figueroa,31935757,,+54 9 2346 4225,Alumno,DNI
+Isabella,Sanchez,36461761,isabella.sanchez@outlook.com,+54 9 2791 8739,Alumno,DNI
+Juan Bautista,Garcia,31178906,juan.bautista.garcia@hotmail.com,+54 9 2530 4519,Alumno,DNI
+Gino,Castro,39556507,gino.castro@gmail.com,+54 9 3133 7629,Alumno,DNI
+Thiago Benjamin,Martinez,37161768,thiago.benjamin.martinez@gmail.com,+54 9 2860 1374,Alumno,DNI
+Clara,Ledesma,44508081,clara.ledesma@outlook.com,+54 9 2294 5934,Alumno,DNI
+Geronimo,Caceres,45402891,geronimo.caceres@outlook.com,+54 9 3616 2287,Alumno,DNI
+Juan Ignacio,Aguirre,30116169,juan.ignacio.aguirre@yahoo.com,+54 9 3321 8845,Alumno,DNI
+Victoria,Diaz,44563667,victoria.diaz@gmail.com,+54 9 3974 5366,Alumno,DNI
+Gabriel,Benitez,38925094,gabriel.benitez@yahoo.com,+54 9 2411 8929,Alumno,DNI
+Julieta,Lucero,45341622,julieta.lucero@gmail.com,+54 9 2991 6005,Alumno,DNI
+Candela,Pereyra,41575887,candela.pereyra@outlook.com,+54 9 3264 8389,Alumno,DNI
+Emma,Vazquez,44555423,emma.vazquez@yahoo.com,+54 9 3541 1746,Alumno,DNI
+Valentin,Acosta,40534516,valentin.acosta@yahoo.com,+54 9 3275 9629,Alumno,DNI
+Pedro,Alvarez,32932411,pedro.alvarez@hotmail.com,+54 9 3346 2180,Alumno,DNI
+Julieta,Gonzalez,41473248,julieta.gonzalez@yahoo.com,+54 9 3472 0478,Alumno,DNI
+Tomas,Rodriguez,35990190,tomas.rodriguez@yahoo.com,+54 9 3576 3251,Alumno,DNI
+Elena,Soria,40701939,elena.soria@hotmail.com,+54 9 3676 4345,Alumno,DNI
+Emma,Luna,45788790,emma.luna@yahoo.com,+54 9 2632 6016,Alumno,DNI
+Paloma,Aguero,43767499,paloma.aguero@yahoo.com,+54 9 2198 7505,Alumno,DNI
+Pilar,Blanco,35023742,pilar.blanco@hotmail.com,+54 9 2457 1189,Alumno,DNI
+Paloma,Alvarez,34146531,paloma.alvarez@yahoo.com,+54 9 2287 0519,Alumno,DNI
+Constanza,Maidana,30370016,constanza.maidana@gmail.com,+54 9 3858 7918,Alumno,DNI
+Mia Morena,Torres,30058812,,+54 9 2588 8829,Alumno,DNI
+Victoria,Pereyra,36083652,victoria.pereyra@outlook.com,+54 9 2474 3313,Alumno,DNI
+Thiago Lionel,Flores,44419194,thiago.lionel.flores@outlook.com,+54 9 2150 6044,Alumno,DNI
+Luz Milagros,Medina,35437650,luz.milagros.medina@outlook.com,+54 9 2492 6811,Alumno,DNI
+Benjamin,Alvarez,38388641,benjamin.alvarez@outlook.com,+54 9 3174 8991,Alumno,DNI
+Olivia,Miranda,34166651,olivia.miranda@yahoo.com,+54 9 3471 5217,Alumno,DNI
+Valentina,Coronel,31593963,valentina.coronel@gmail.com,+54 9 2196 7061,Alumno,DNI
+Pedro,Bustos,39129106,pedro.bustos@yahoo.com,+54 9 2390 2204,Alumno,DNI
+Tomàs,Gonzalez,34059848,tomas.gonzalez@gmail.com,+54 9 3824 7495,Alumno,DNI
+Tomas,Mansilla,35598228,tomas.mansilla@yahoo.com,+54 9 3297 5035,Alumno,DNI
+Agostina,Rivero,35196112,agostina.rivero@hotmail.com,+54 9 3984 7134,Alumno,DNI
+Thiago Agustin,Torres,33665133,thiago.agustin.torres@outlook.com,+54 9 2744 3520,Alumno,DNI
+Luana,Gonzalez,31723879,luana.gonzalez@hotmail.com,+54 9 3937 0807,Alumno,DNI
+Malena,Gomez,42892502,malena.gomez@yahoo.com,+54 9 3221 0394,Alumno,DNI
+Franco,Perez,36725023,franco.perez@outlook.com,+54 9 2101 9113,Alumno,DNI
+Lautaro,Carrizo,43720785,lautaro.carrizo@outlook.com,+54 9 2593 1249,Alumno,DNI
+Lucia,Ramos,31800702,,+54 9 3426 1752,Alumno,DNI
+Catalina,Franco,42679506,catalina.franco@yahoo.com,+54 9 2126 5465,Alumno,DNI
+Bautista,Gomez,40105729,bautista.gomez@outlook.com,+54 9 2863 1004,Alumno,DNI
+Martina,Sanchez,40860494,martina.sanchez@outlook.com,+54 9 2497 0467,Alumno,DNI
+Lucas Ezequiel,Fernandez,42331291,lucas.ezequiel.fernandez@yahoo.com,+54 9 2969 0729,Alumno,DNI
+Bautista,Romero,44886400,bautista.romero@outlook.com,+54 9 3813 9647,Alumno,DNI
+Kiara,Vega,45609644,kiara.vega@outlook.com,+54 9 2249 9080,Alumno,DNI
+Mateo Benjamin,Gimenez,31453197,mateo.benjamin.gimenez@gmail.com,+54 9 3453 6421,Alumno,DNI
+Olivia,Torres,32196825,olivia.torres@outlook.com,+54 9 2889 5702,Alumno,DNI
+Thiago Benjamin,Suarez,36392604,thiago.benjamin.suarez@outlook.com,+54 9 3868 8461,Alumno,DNI
+Catalina,Acuña,30174396,catalina.acuna@gmail.com,+54 9 3472 3906,Alumno,DNI
+Thiago Gabriel,Morales,40532051,thiago.gabriel.morales@hotmail.com,+54 9 2511 9172,Alumno,DNI
+Valentina,Ledesma,39003369,valentina.ledesma@outlook.com,+54 9 2808 7111,Alumno,DNI
+Juan Pablo,Suarez,32272850,juan.pablo.suarez@outlook.com,+54 9 3278 3178,Alumno,DNI
+Olivia,Lopez,38406894,olivia.lopez@outlook.com,+54 9 2919 6333,Alumno,DNI
+Juan Manuel,Gonzalez,39718327,juan.manuel.gonzalez@yahoo.com,+54 9 2255 7778,Alumno,DNI
+Isabella,Benitez,43736953,isabella.benitez@hotmail.com,+54 9 2667 7027,Alumno,DNI
+Emma,Diaz,34443405,emma.diaz@outlook.com,+54 9 2795 0602,Alumno,DNI
+Isabella,Acosta,34711560,isabella.acosta@yahoo.com,+54 9 3396 0862,Alumno,DNI
+Julian,Acuña,40446070,julian.acuna@outlook.com,+54 9 2233 6706,Alumno,DNI
+Mateo Ezequiel,Caceres,45427332,mateo.ezequiel.caceres@hotmail.com,+54 9 3940 9207,Alumno,DNI
+Mia Morena,Gonzalez,39308771,mia.morena.gonzalez@outlook.com,+54 9 2179 8775,Alumno,DNI
+Sofia,Gimenez,40496612,sofia.gimenez@yahoo.com,+54 9 2374 0267,Alumno,DNI
+Tobias,Acosta,40338924,tobias.acosta@gmail.com,+54 9 2279 0887,Alumno,DNI
+Tiziano,Torres,35155411,tiziano.torres@hotmail.com,+54 9 3483 9661,Alumno,DNI
+Felipe,Gonzalez,36839899,felipe.gonzalez@outlook.com,+54 9 3434 8901,Alumno,DNI
+Miguel Angel,Fernandez,43388966,miguel.angel.fernandez@yahoo.com,+54 9 3426 7701,Alumno,DNI
+Emanuel,Medina,35409911,emanuel.medina@gmail.com,+54 9 3945 3357,Alumno,DNI
+Nicolas,Ramirez,37345680,nicolas.ramirez@yahoo.com,+54 9 2984 6553,Alumno,DNI
+Ian,Herrera,39500363,ian.herrera@gmail.com,+54 9 2744 8221,Alumno,DNI
+Mia Valentina,Molina,43312078,mia.valentina.molina@hotmail.com,+54 9 2297 0399,Alumno,DNI
+Joaquin,Fernandez,43549185,joaquin.fernandez@hotmail.com,+54 9 3718 3602,Alumno,DNI
+Micaela,Lopez,32430086,micaela.lopez@yahoo.com,+54 9 2212 7030,Alumno,DNI
+Guadalupe,Ruiz,41886872,guadalupe.ruiz@outlook.com,+54 9 3461 7808,Alumno,DNI
+Lorenzo,Herrera,33663590,,+54 9 3998 6990,Alumno,DNI
+Thiago Joaquin,Gimenez,43483992,thiago.joaquin.gimenez@yahoo.com,+54 9 3834 5945,Alumno,DNI
+Thiago Nicolas,Cordoba,42758944,thiago.nicolas.cordoba@gmail.com,+54 9 3444 2890,Alumno,DNI
+Joaquin,Flores,33353040,joaquin.flores@gmail.com,+54 9 2845 8115,Alumno,DNI
+Maria Victoria,Bravo,34759191,maria.victoria.bravo@hotmail.com,+54 9 2260 1623,Alumno,DNI
+Miguel Angel,Valdez,35212815,miguel.angel.valdez@hotmail.com,+54 9 3576 9991,Alumno,DNI
+Maria Guadalupe,Peralta,32143636,maria.guadalupe.peralta@gmail.com,+54 9 3813 1631,Alumno,DNI
+Maximo,Gonzalez,32449620,maximo.gonzalez@outlook.com,+54 9 3759 1737,Alumno,DNI
+Thiago,Ponce,41883892,thiago.ponce@gmail.com,+54 9 2697 8811,Alumno,DNI
+Bautista Benjamin,Miranda,37155742,bautista.benjamin.miranda@yahoo.com,+54 9 3946 0891,Alumno,DNI
+Benjamin Ezequiel,Ferreyra,45743513,benjamin.ezequiel.ferreyra@gmail.com,+54 9 3157 0890,Alumno,DNI
+Augusto,Medina,41597245,augusto.medina@hotmail.com,+54 9 2630 1109,Alumno,DNI
+Sofia Belen,Benitez,31295512,sofia.belen.benitez@gmail.com,+54 9 2465 5624,Alumno,DNI
+Simon,Coronel,42321650,simon.coronel@hotmail.com,+54 9 2987 5461,Alumno,DNI
+Mateo,Pereyra,31326547,mateo.pereyra@yahoo.com,+54 9 3173 2926,Alumno,DNI
+Sofia,Morales,38866674,sofia.morales@outlook.com,+54 9 3891 4602,Alumno,DNI
+Francesca,Acuña,41109574,francesca.acuna@outlook.com,+54 9 2164 9052,Alumno,DNI
+Lautaro Ezequiel,Martinez,44113409,lautaro.ezequiel.martinez@outlook.com,+54 9 2801 8475,Alumno,DNI
+Tiziano Benjamin,Garcia,40434897,tiziano.benjamin.garcia@hotmail.com,+54 9 2929 4952,Alumno,DNI
+Camila,Lopez,42590810,camila.lopez@hotmail.com,+54 9 2866 9837,Alumno,DNI
+Isabella,Rojas,38338168,isabella.rojas@gmail.com,+54 9 3669 1091,Alumno,DNI
+Elena,Morales,42810923,elena.morales@outlook.com,+54 9 2276 2771,Alumno,DNI
+Lorenzo,Rodriguez,33225144,lorenzo.rodriguez@yahoo.com,+54 9 3313 2806,Alumno,DNI
+Francesca,Juarez,33387615,francesca.juarez@gmail.com,+54 9 2100 2133,Alumno,DNI
+Kiara,Cardozo,39430035,kiara.cardozo@outlook.com,+54 9 2494 1634,Alumno,DNI
+Violeta,Gomez,35449166,violeta.gomez@outlook.com,+54 9 2728 4262,Alumno,DNI
+Valentin,Medina,44791193,valentin.medina@gmail.com,+54 9 2274 4510,Alumno,DNI
+Felipe,Sosa,41941216,felipe.sosa@hotmail.com,+54 9 3822 9392,Alumno,DNI
+Francesca,Alvarez,31352683,francesca.alvarez@outlook.com,+54 9 2291 8928,Alumno,DNI
+Nicolas,Suarez,39777873,nicolas.suarez@yahoo.com,+54 9 2804 9821,Alumno,DNI
+Felipe,Quiroga,31205804,felipe.quiroga@yahoo.com,+54 9 3135 8421,Alumno,DNI
+Bautista Benjamin,Rodriguez,38290265,bautista.benjamin.rodriguez@yahoo.com,+54 9 3894 0104,Alumno,DNI
+Benjamin,Rios,43773004,benjamin.rios@hotmail.com,+54 9 3138 8805,Alumno,DNI
+Martina,Ruiz,40886471,martina.ruiz@outlook.com,+54 9 2578 9149,Alumno,DNI
+Lautaro Benjamin,Benitez,30723545,lautaro.benjamin.benitez@gmail.com,+54 9 3146 3065,Alumno,DNI
+Zoe Valentina,Rios,39099433,zoe.valentina.rios@gmail.com,+54 9 2322 5982,Alumno,DNI
+Felicitas,Rios,42378567,felicitas.rios@hotmail.com,+54 9 2442 5152,Alumno,DNI
+Juan Ignacio,Rodriguez,41171969,juan.ignacio.rodriguez@gmail.com,+54 9 3473 5907,Alumno,DNI
+Emanuel,Villalba,40328227,emanuel.villalba@gmail.com,+54 9 3228 7687,Alumno,DNI
+Santino,Barrios,30126752,santino.barrios@hotmail.com,+54 9 3148 8939,Alumno,DNI
+Augusto,Flores,30926558,augusto.flores@yahoo.com,+54 9 3704 5207,Alumno,DNI
+Felipe,Diaz,41297634,felipe.diaz@yahoo.com,+54 9 2874 8240,Alumno,DNI
+Lautaro Benjamin,Fernandez,35188238,lautaro.benjamin.fernandez@yahoo.com,+54 9 2450 2897,Alumno,DNI
+Agustín,Martinez,41829357,agustin.martinez@outlook.com,+54 9 3467 3084,Alumno,DNI
+Victoria,Gomez,39157120,victoria.gomez@outlook.com,+54 9 3310 3142,Alumno,DNI
+Mia,Rodriguez,35440459,mia.rodriguez@yahoo.com,+54 9 3104 4901,Alumno,DNI
+Sofía,Aguirre,42849061,sofia.aguirre@yahoo.com,+54 9 2393 2267,Alumno,DNI
+Thiago Benjamin,Carrizo,37099184,thiago.benjamin.carrizo@gmail.com,+54 9 3301 2233,Alumno,DNI
+Agustin,Garcia,32099618,agustin.garcia@yahoo.com,+54 9 3791 4083,Alumno,DNI
+Felipe,Ojeda,45076126,felipe.ojeda@hotmail.com,+54 9 2214 5024,Alumno,DNI
+Olivia,Soto,40371152,olivia.soto@outlook.com,+54 9 2701 8989,Alumno,DNI
+Maria Emilia,Valdez,31868622,maria.emilia.valdez@gmail.com,+54 9 2483 6060,Alumno,DNI
+Isabella,Sanchez,39924190,isabella.sanchez@hotmail.com,+54 9 2622 1510,Alumno,DNI
+Bautista,Dominguez,42419781,bautista.dominguez@gmail.com,+54 9 2354 1372,Alumno,DNI
+Agustina,Ojeda,43068884,agustina.ojeda@outlook.com,+54 9 2566 6034,Alumno,DNI
+Lautaro,Gonzalez,39822223,lautaro.gonzalez@outlook.com,+54 9 3142 2701,Alumno,DNI
+Tiziana,Perez,37024637,tiziana.perez@hotmail.com,+54 9 3992 6102,Alumno,DNI
+Juan Martin,Figueroa,45055136,juan.martin.figueroa@yahoo.com,+54 9 3194 0163,Alumno,DNI
+Santiago,Diaz,42928321,santiago.diaz@gmail.com,+54 9 2215 6625,Alumno,DNI
+Francesco,Gomez,31730247,francesco.gomez@outlook.com,+54 9 2840 7754,Alumno,DNI
+Bautista,Flores,35674650,bautista.flores@yahoo.com,+54 9 2903 9861,Alumno,DNI
+Nina,Perez,37949128,nina.perez@hotmail.com,+54 9 2327 0565,Alumno,DNI
+Benjamin,Avila,34801591,benjamin.avila@yahoo.com,+54 9 2399 3699,Alumno,DNI
+Lucía,Olivera,43416352,lucia.olivera@outlook.com,+54 9 2167 4983,Alumno,DNI
+Tomàs,Molina,41763206,tomas.molina@outlook.com,+54 9 2458 3458,Alumno,DNI
+Benicio,Roldan,36326296,benicio.roldan@hotmail.com,+54 9 2232 7266,Alumno,DNI
+Santiago Benjamin,Lopez,32808702,santiago.benjamin.lopez@gmail.com,+54 9 3826 4907,Alumno,DNI
+Augusto,Fernandez,30413264,augusto.fernandez@yahoo.com,+54 9 3927 1284,Alumno,DNI
+Martín,Alvarez,42124538,martin.alvarez@outlook.com,+54 9 2507 2867,Alumno,DNI
+Thiago Gabriel,Flores,33493292,thiago.gabriel.flores@hotmail.com,+54 9 2200 6549,Alumno,DNI
+Sofia,Gutierrez,44594931,sofia.gutierrez@yahoo.com,+54 9 3472 4097,Alumno,DNI
+Martina,Molina,31366271,martina.molina@gmail.com,+54 9 2319 5813,Alumno,DNI
+Juan Cruz,Fernandez,40665974,juan.cruz.fernandez@hotmail.com,+54 9 3983 4184,Alumno,DNI
+Valentino,Ponce,37268989,valentino.ponce@outlook.com,+54 9 2771 2686,Alumno,DNI
+Jazmin,Coronel,33630695,jazmin.coronel@gmail.com,+54 9 3947 7879,Alumno,DNI
+Matias,Ponce,33556417,,+54 9 3311 8454,Alumno,DNI
+Amparo,Roldan,32578687,,+54 9 3465 8880,Alumno,DNI
+Juan Ignacio,Cruz,40993683,juan.ignacio.cruz@gmail.com,+54 9 3683 6890,Alumno,DNI
+Felipe,Paez,45842940,felipe.paez@gmail.com,+54 9 3135 6997,Alumno,DNI
+Francesca,Garcia,41950086,francesca.garcia@hotmail.com,+54 9 3782 6468,Alumno,DNI
+Pilar,Rodriguez,36794996,pilar.rodriguez@outlook.com,+54 9 3494 9969,Alumno,DNI
+Nicolas,Ayala,39579403,nicolas.ayala@yahoo.com,+54 9 3989 1667,Alumno,DNI
+Agostina,Martin,45819512,agostina.martin@yahoo.com,+54 9 2973 7775,Alumno,DNI
+Santiago,Diaz,33429749,santiago.diaz@hotmail.com,+54 9 2566 2085,Alumno,DNI
+Geronimo,Ramirez,33035804,,+54 9 2997 5339,Alumno,DNI
+Santiago,Vera,45170259,santiago.vera@hotmail.com,+54 9 2663 6938,Alumno,DNI
+Thiago Benjamin,Gonzalez,36031653,thiago.benjamin.gonzalez@gmail.com,+54 9 2821 1399,Alumno,DNI
+Valentino,Suarez,41065435,valentino.suarez@gmail.com,+54 9 3761 5014,Alumno,DNI
+Maite,Villalba,35627041,maite.villalba@outlook.com,+54 9 3960 6282,Alumno,DNI
+Alejo,Lopez,33753511,alejo.lopez@hotmail.com,+54 9 2129 9549,Alumno,DNI
+Emilia,Rodriguez,36878477,emilia.rodriguez@outlook.com,+54 9 2658 0367,Alumno,DNI
+Emma,Lopez,45968790,emma.lopez@outlook.com,+54 9 2848 2153,Alumno,DNI
+Isabella,Fernandez,31188805,isabella.fernandez@hotmail.com,+54 9 3212 7662,Alumno,DNI
+Juan Manuel,Luna,33247205,juan.manuel.luna@yahoo.com,+54 9 2908 3475,Alumno,DNI
+Valentina ,Suarez,30763137,valentina..suarez@gmail.com,+54 9 3834 3966,Alumno,DNI
+Alvaro,Guzman,41077276,alvaro.guzman@outlook.com,+54 9 2232 0812,Alumno,DNI
+Alma,Acosta,45303367,alma.acosta@yahoo.com,+54 9 3979 6634,Alumno,DNI
+Joaquin,Romero,30089193,joaquin.romero@gmail.com,+54 9 3788 7975,Alumno,DNI
+Lucía,Gonzalez,30445334,lucia.gonzalez@hotmail.com,+54 9 3641 4214,Alumno,DNI
+Ignacio,Moyano,36659139,ignacio.moyano@hotmail.com,+54 9 3378 9602,Alumno,DNI
+Guadalupe,Ojeda,32698751,guadalupe.ojeda@gmail.com,+54 9 2824 8204,Alumno,DNI
+Dylan Ezequiel,Rodriguez,41998415,dylan.ezequiel.rodriguez@outlook.com,+54 9 2713 2323,Alumno,DNI
+Benjamin,Luna,45383156,benjamin.luna@yahoo.com,+54 9 2521 9219,Alumno,DNI
+Guadalupe,Sosa,44713988,guadalupe.sosa@outlook.com,+54 9 3273 2380,Alumno,DNI
+Catalina,Rios,36349870,catalina.rios@hotmail.com,+54 9 3441 0122,Alumno,DNI
+Tiziano Benjamin,Gomez,31230787,tiziano.benjamin.gomez@gmail.com,+54 9 2799 4843,Alumno,DNI
+Bruno,Gomez,42242735,bruno.gomez@outlook.com,+54 9 2623 2722,Alumno,DNI
+Benicio,Martinez,45385368,benicio.martinez@gmail.com,+54 9 2572 2586,Alumno,DNI
+Thiago Leonel,Gonzalez,44807676,thiago.leonel.gonzalez@outlook.com,+54 9 3846 5462,Alumno,DNI
+Ian Benjamin,Moyano,31263287,ian.benjamin.moyano@outlook.com,+54 9 2936 9912,Alumno,DNI
+Bianca,Gonzalez,34864189,bianca.gonzalez@outlook.com,+54 9 3785 8770,Alumno,DNI
+Thiago Leonel,Gomez,34077479,thiago.leonel.gomez@outlook.com,+54 9 2178 4032,Alumno,DNI
+Emma,Perez,39164387,emma.perez@gmail.com,+54 9 3391 7027,Alumno,DNI
+Valentina ,Gomez,33267106,valentina..gomez@gmail.com,+54 9 2537 5989,Alumno,DNI
+Sofia,Flores,44242303,sofia.flores@hotmail.com,+54 9 2831 8762,Alumno,DNI
+Juan Ignacio,Gomez,31692100,juan.ignacio.gomez@hotmail.com,+54 9 2455 6657,Alumno,DNI
+Agustina,Torres,42132790,agustina.torres@gmail.com,+54 9 2124 3093,Alumno,DNI
+Lorenzo,Gonzalez,39842417,lorenzo.gonzalez@hotmail.com,+54 9 2891 3674,Alumno,DNI
+Juan Bautista,Gomez,44120543,juan.bautista.gomez@outlook.com,+54 9 2752 4496,Alumno,DNI
+Joaquín,Sosa,31379248,joaquin.sosa@outlook.com,+54 9 2975 2269,Alumno,DNI
+Bautista,Velazquez,33885760,bautista.velazquez@outlook.com,+54 9 3632 0670,Alumno,DNI
+Bautista,Romero,33338311,bautista.romero@gmail.com,+54 9 2879 1991,Alumno,DNI
+Mia,Gomez,45633220,mia.gomez@hotmail.com,+54 9 3867 4637,Alumno,DNI
+Federico,Gomez,41003214,federico.gomez@hotmail.com,+54 9 3475 5648,Alumno,DNI
+Valentino,Cardozo,40348880,valentino.cardozo@yahoo.com,+54 9 3586 9893,Alumno,DNI
+Isabella,Perez,31438321,isabella.perez@yahoo.com,+54 9 2939 5443,Alumno,DNI
+Franco,Sanchez,31185224,franco.sanchez@yahoo.com,+54 9 2993 6412,Alumno,DNI
+Juliana,Ramos,31134185,juliana.ramos@hotmail.com,+54 9 2907 3471,Alumno,DNI
+Maite,Farias,38542906,maite.farias@yahoo.com,+54 9 2945 8137,Alumno,DNI
+Olivia,Flores,35740137,olivia.flores@gmail.com,+54 9 2768 7292,Alumno,DNI
+Lautaro,Luna,38832034,lautaro.luna@outlook.com,+54 9 2513 4886,Alumno,DNI
+Mia Jazmin,Sosa,45256650,mia.jazmin.sosa@yahoo.com,+54 9 2604 7877,Alumno,DNI
+Santiago,Peralta,36313373,santiago.peralta@yahoo.com,+54 9 2543 8160,Alumno,DNI
+Juan Cruz,Ruiz,45850941,juan.cruz.ruiz@outlook.com,+54 9 3668 2851,Alumno,DNI
+Morena,Luna,44775708,morena.luna@yahoo.com,+54 9 2846 0677,Alumno,DNI
+Thiago Valentin,Flores,32085812,thiago.valentin.flores@gmail.com,+54 9 3325 6099,Alumno,DNI
+Jazmin,Roldan,37935165,jazmin.roldan@outlook.com,+54 9 2493 1713,Alumno,DNI
+Emilia,Rios,36744678,emilia.rios@gmail.com,+54 9 2362 2911,Alumno,DNI
+Martina,Garcia,40069107,martina.garcia@gmail.com,+54 9 2881 9157,Alumno,DNI
+Ciro,Nuñez,40214433,ciro.nunez@hotmail.com,+54 9 2659 3467,Alumno,DNI
+Bruno,Herrera,32259990,bruno.herrera@gmail.com,+54 9 2334 4971,Alumno,DNI
+Ciro,Bustos,30437958,ciro.bustos@gmail.com,+54 9 3627 0325,Alumno,DNI
+Lautaro Benjamin,Castro,31921360,lautaro.benjamin.castro@gmail.com,+54 9 2692 1416,Alumno,DNI
+Abril,Sosa,39268069,abril.sosa@gmail.com,+54 9 3331 4281,Alumno,DNI
+Maria Victoria,Ruiz,38689454,maria.victoria.ruiz@gmail.com,+54 9 2207 6028,Alumno,DNI
+Dante,Vargas,34845546,dante.vargas@hotmail.com,+54 9 2629 6000,Alumno,DNI
+Clara,Alvarez,43023911,clara.alvarez@yahoo.com,+54 9 2816 0515,Alumno,DNI
+Jazmin,Sosa,36907787,jazmin.sosa@outlook.com,+54 9 2775 9254,Alumno,DNI
+Olivia,Rodriguez,30566758,olivia.rodriguez@gmail.com,+54 9 3464 1700,Alumno,DNI
+Valentin,Perez,37261587,valentin.perez@outlook.com,+54 9 2898 6859,Alumno,DNI
+Thiago Benjamin,Sanchez,39041016,thiago.benjamin.sanchez@gmail.com,+54 9 2385 8705,Alumno,DNI
+Delfina,Acosta,32169352,delfina.acosta@outlook.com,+54 9 2578 7523,Alumno,DNI
+Dylan Benjamin,Medina,33922912,dylan.benjamin.medina@outlook.com,+54 9 2180 5550,Alumno,DNI
+Mateo,Ramirez,31594777,mateo.ramirez@outlook.com,+54 9 3476 1002,Alumno,DNI
+Lautaro,Soto,42266843,lautaro.soto@gmail.com,+54 9 3164 7741,Alumno,DNI
+Francesca,Barrios,45826183,francesca.barrios@outlook.com,+54 9 2740 0345,Alumno,DNI
+Lorenzo,Martin,37454570,lorenzo.martin@yahoo.com,+54 9 3629 4107,Alumno,DNI
+Francesca,Sosa,41129177,,+54 9 3263 6818,Alumno,DNI
+Alma,Rodriguez,32099297,alma.rodriguez@yahoo.com,+54 9 2746 8806,Alumno,DNI
+Catalina,Diaz,31599603,catalina.diaz@hotmail.com,+54 9 2408 8941,Alumno,DNI
+Alma,Perez,33699765,alma.perez@hotmail.com,+54 9 3664 5122,Alumno,DNI
+Bianca,Silva,35579453,bianca.silva@outlook.com,+54 9 2534 1155,Alumno,DNI
+Ignacio,Gonzalez,34070539,ignacio.gonzalez@gmail.com,+54 9 2368 8357,Alumno,DNI
+Tiziana,Gonzalez,37054065,,+54 9 2494 4893,Alumno,DNI
+Ciro,Rodriguez,34631318,ciro.rodriguez@yahoo.com,+54 9 2847 7119,Alumno,DNI
+Delfina,Diaz,45181550,delfina.diaz@outlook.com,+54 9 3913 7400,Alumno,DNI
+Pedro,Lucero,40818237,pedro.lucero@yahoo.com,+54 9 3557 7108,Alumno,DNI
+Juana,Soto,45426738,juana.soto@gmail.com,+54 9 3811 4474,Alumno,DNI
+Santino,Gonzalez,35543489,santino.gonzalez@gmail.com,+54 9 2703 1064,Alumno,DNI
+Samuel,Silva,40776019,samuel.silva@outlook.com,+54 9 3546 2542,Alumno,DNI
+Santino,Villalba,43771658,santino.villalba@outlook.com,+54 9 3603 7640,Alumno,DNI
+Thiago Benjamin,Romero,34715773,thiago.benjamin.romero@outlook.com,+54 9 3605 8576,Alumno,DNI
+Julian,Perez,43695456,julian.perez@outlook.com,+54 9 3364 0937,Alumno,DNI
+Maria Victoria,Diaz,32151241,maria.victoria.diaz@outlook.com,+54 9 2530 2803,Alumno,DNI
+Valentina ,Fernandez,33130984,valentina..fernandez@yahoo.com,+54 9 2451 6282,Alumno,DNI
+Jeronimo,Arias,42280040,jeronimo.arias@hotmail.com,+54 9 3493 4405,Alumno,DNI
+Lautaro,Franco,35325959,lautaro.franco@gmail.com,+54 9 3794 0608,Alumno,DNI
+Francesca,Quiroga,39402003,francesca.quiroga@yahoo.com,+54 9 2402 0580,Alumno,DNI
+Morena Jazmin,Rivero,37083223,morena.jazmin.rivero@hotmail.com,+54 9 2396 0275,Alumno,DNI
+Sofia,Benitez,44780393,sofia.benitez@gmail.com,+54 9 2247 9330,Alumno,DNI
+Jazmin,Figueroa,33506985,,+54 9 3622 1648,Alumno,DNI
+Valentina,Rivero,42576713,valentina.rivero@yahoo.com,+54 9 2165 8078,Alumno,DNI
+Ambar,Benitez,39856178,ambar.benitez@hotmail.com,+54 9 2801 5416,Alumno,DNI
+Candelaria,Vazquez,43010564,candelaria.vazquez@hotmail.com,+54 9 2233 0908,Alumno,DNI
+Thiago Daniel,Gonzalez,30339434,thiago.daniel.gonzalez@yahoo.com,+54 9 2217 6392,Alumno,DNI
+Josefina,Castillo,40133866,josefina.castillo@outlook.com,+54 9 3540 3797,Alumno,DNI
+Matias,Mendoza,42799422,matias.mendoza@gmail.com,+54 9 2795 0884,Alumno,DNI
+Tomas Benjamin,Martinez,38162732,tomas.benjamin.martinez@gmail.com,+54 9 2415 9046,Alumno,DNI
+Facundo,Lopez,39216162,facundo.lopez@outlook.com,+54 9 3678 2102,Alumno,DNI
+Thiago Ezequiel,Herrera,30365765,thiago.ezequiel.herrera@yahoo.com,+54 9 3949 9501,Alumno,DNI
+Kiara,Fernandez,37550168,kiara.fernandez@yahoo.com,+54 9 2356 7343,Alumno,DNI
+Dante,Lopez,39691054,dante.lopez@hotmail.com,+54 9 3829 3464,Alumno,DNI
+Milagros,Arias,34529542,milagros.arias@gmail.com,+54 9 3313 3516,Alumno,DNI
+Lautaro,Valdez,34255143,lautaro.valdez@hotmail.com,+54 9 2758 1224,Alumno,DNI
+Lorenzo,Fernandez,39001607,lorenzo.fernandez@hotmail.com,+54 9 3350 2779,Alumno,DNI
+Ignacio,Ruiz,37849139,ignacio.ruiz@gmail.com,+54 9 3588 9837,Alumno,DNI
+Ian Ezequiel,Carrizo,42677307,ian.ezequiel.carrizo@gmail.com,+54 9 2218 5047,Alumno,DNI
+Candelaria,Benitez,36514168,candelaria.benitez@gmail.com,+54 9 2535 7985,Alumno,DNI
+Juan Sebastian,Romero,33444595,juan.sebastian.romero@gmail.com,+54 9 2582 0532,Alumno,DNI
+Bruno,Pereyra,37253616,bruno.pereyra@gmail.com,+54 9 3157 6195,Alumno,DNI
+Alma Valentina,Molina,30782743,alma.valentina.molina@outlook.com,+54 9 2479 6504,Alumno,DNI
+Julieta,Figueroa,38724522,julieta.figueroa@outlook.com,+54 9 3893 0912,Alumno,DNI
+Juana,Gomez,33857648,juana.gomez@yahoo.com,+54 9 3375 2886,Alumno,DNI
+Victoria,Bustos,35471829,victoria.bustos@yahoo.com,+54 9 3491 4998,Alumno,DNI
+Benjamin,Herrera,40051444,benjamin.herrera@yahoo.com,+54 9 3584 5295,Alumno,DNI
+Emma,Vazquez,44912505,emma.vazquez@outlook.com,+54 9 2537 3053,Alumno,DNI
+Delfina,Aguirre,32864447,delfina.aguirre@yahoo.com,+54 9 2228 1078,Alumno,DNI
+Bautista,Torres,43991901,bautista.torres@yahoo.com,+54 9 3821 7001,Alumno,DNI
+Benjamin,Sosa,33696189,benjamin.sosa@yahoo.com,+54 9 3981 2286,Alumno,DNI
+Alfonsina,Medina,41848705,alfonsina.medina@outlook.com,+54 9 3389 8678,Alumno,DNI
+Juan Manuel,Castro,38114009,juan.manuel.castro@yahoo.com,+54 9 3346 6462,Alumno,DNI
+Francesca,Martinez,33488611,francesca.martinez@yahoo.com,+54 9 2945 3631,Alumno,DNI
+Catalina,Rodriguez,36286352,catalina.rodriguez@gmail.com,+54 9 3577 2423,Alumno,DNI
+Francisco,Gonzalez,39264124,francisco.gonzalez@outlook.com,+54 9 2204 3954,Alumno,DNI
+Santiago,Godoy,35965210,santiago.godoy@outlook.com,+54 9 2885 4543,Alumno,DNI
+Maria Paz,Gutierrez,45298142,maria.paz.gutierrez@hotmail.com,+54 9 2616 1530,Alumno,DNI
+Santino,Lopez,34265698,santino.lopez@hotmail.com,+54 9 2408 8377,Alumno,DNI
+Rafael,Flores,40579606,rafael.flores@outlook.com,+54 9 2952 1963,Alumno,DNI
+Emma,Valdez,43978117,emma.valdez@yahoo.com,+54 9 2552 3105,Alumno,DNI
+Mia Jazmin,Castillo,32556008,mia.jazmin.castillo@gmail.com,+54 9 2104 5495,Alumno,DNI
+Victoria,Fernandez,37326359,victoria.fernandez@outlook.com,+54 9 2172 0879,Alumno,DNI
+Juan Martin,Rivero,43362081,juan.martin.rivero@outlook.com,+54 9 3784 9092,Alumno,DNI
+León,Blanco,42221418,leon.blanco@outlook.com,+54 9 2934 2600,Alumno,DNI
+Emma,Rodriguez,30974929,emma.rodriguez@yahoo.com,+54 9 3424 9857,Alumno,DNI
+Morena,Luna,37347578,morena.luna@yahoo.com,+54 9 3147 0669,Alumno,DNI
+Fausto,Gutierrez,40649002,fausto.gutierrez@outlook.com,+54 9 3283 3666,Alumno,DNI
+Lorenzo,Blanco,33115581,lorenzo.blanco@gmail.com,+54 9 2904 2649,Alumno,DNI
+Uma ,Martin,39405037,uma..martin@outlook.com,+54 9 2922 7871,Alumno,DNI
+Catalina,Sanchez,41347543,catalina.sanchez@gmail.com,+54 9 3339 1715,Alumno,DNI
+Malena,Rios,37831209,malena.rios@yahoo.com,+54 9 2647 5314,Alumno,DNI
+Martina,Martinez,37179608,martina.martinez@outlook.com,+54 9 2879 0441,Alumno,DNI
+Felipe,Gonzalez,31399534,felipe.gonzalez@gmail.com,+54 9 2755 8309,Alumno,DNI
+Delfina,Acosta,45090532,delfina.acosta@yahoo.com,+54 9 3972 0578,Alumno,DNI
+Joaquin,Ledesma,33221169,joaquin.ledesma@gmail.com,+54 9 2581 8360,Alumno,DNI
+Ian Ezequiel,Paez,35810239,ian.ezequiel.paez@outlook.com,+54 9 2765 0639,Alumno,DNI
+Bruno,Gomez,37223015,bruno.gomez@hotmail.com,+54 9 3921 3077,Alumno,DNI
+Mateo Agustin,Cabrera,33049597,mateo.agustin.cabrera@hotmail.com,+54 9 3958 3082,Alumno,DNI
+Luz Milagros,Soria,37329041,luz.milagros.soria@yahoo.com,+54 9 3373 6824,Alumno,DNI
+Lautaro,Alvarez,40727710,lautaro.alvarez@hotmail.com,+54 9 2797 4272,Alumno,DNI
+Micaela,Sanchez,38048801,micaela.sanchez@gmail.com,+54 9 2165 0656,Alumno,DNI
+Felipe,Fernandez,44210932,felipe.fernandez@outlook.com,+54 9 2561 4109,Alumno,DNI
+Isabel,Rodriguez,39695989,isabel.rodriguez@gmail.com,+54 9 3625 1347,Alumno,DNI
+Valentin,Diaz,41147686,valentin.diaz@hotmail.com,+54 9 3886 3342,Alumno,DNI
+Matilda,Nuñez,34209869,matilda.nunez@yahoo.com,+54 9 2750 1204,Alumno,DNI
+Ana Paula,Cardozo,38485886,ana.paula.cardozo@hotmail.com,+54 9 3537 9742,Alumno,DNI
+Santino,Bustos,34363040,santino.bustos@hotmail.com,+54 9 2979 3338,Alumno,DNI
+Mia Morena,Ramos,35282987,mia.morena.ramos@yahoo.com,+54 9 2255 6382,Alumno,DNI
+Milagros,Perez,36935055,milagros.perez@yahoo.com,+54 9 3695 5944,Alumno,DNI
+Valentina,Vega,42509169,valentina.vega@outlook.com,+54 9 2541 0855,Alumno,DNI
+Gino,Rios,43802935,gino.rios@outlook.com,+54 9 2666 2954,Alumno,DNI
+Juan Ignacio,Torres,38726954,juan.ignacio.torres@gmail.com,+54 9 3460 5839,Alumno,DNI
+Valentina,Perez,41330737,valentina.perez@outlook.com,+54 9 3253 7935,Alumno,DNI
+Nahiara,Luna,42024629,nahiara.luna@yahoo.com,+54 9 2751 6979,Alumno,DNI
+Juliana,Vera,44370456,juliana.vera@outlook.com,+54 9 2907 3012,Alumno,DNI
+Santiago,Perez,33074317,santiago.perez@gmail.com,+54 9 3371 9288,Alumno,DNI
+Malena,Fernandez,33957369,malena.fernandez@gmail.com,+54 9 2869 1744,Alumno,DNI
+Lorenzo,Sosa,38451826,lorenzo.sosa@outlook.com,+54 9 2179 6644,Alumno,DNI
+Faustino,Roldan,38373582,faustino.roldan@yahoo.com,+54 9 2900 1671,Alumno,DNI
+Mia,Villalba,31922848,mia.villalba@yahoo.com,+54 9 3660 2379,Alumno,DNI
+Ana Paula,Martinez,39269288,ana.paula.martinez@hotmail.com,+54 9 2316 3329,Alumno,DNI
+Joaquín,Castro,36702199,joaquin.castro@outlook.com,+54 9 2242 8548,Alumno,DNI
+Mateo Agustin,Rodriguez,45039367,mateo.agustin.rodriguez@hotmail.com,+54 9 3653 9166,Alumno,DNI
+Juan Pablo,Romero,36953747,juan.pablo.romero@gmail.com,+54 9 3361 8209,Alumno,DNI
+Simon,Dominguez,44910143,simon.dominguez@hotmail.com,+54 9 3132 8890,Alumno,DNI
+Camila,Duarte,45265185,camila.duarte@gmail.com,+54 9 2702 2020,Alumno,DNI
+Valentina,Soto,44617524,valentina.soto@outlook.com,+54 9 3624 2276,Alumno,DNI
+Mia,Correa,39386861,mia.correa@hotmail.com,+54 9 3137 9865,Alumno,DNI
+Ambar,Gomez,33827674,ambar.gomez@hotmail.com,+54 9 2614 8695,Alumno,DNI
+Kiara,Ramos,31158762,kiara.ramos@outlook.com,+54 9 3473 8411,Alumno,DNI
+Mia Valentina,Ojeda,42117900,mia.valentina.ojeda@gmail.com,+54 9 3757 7212,Alumno,DNI
+Martina,Valdez,38218744,martina.valdez@outlook.com,+54 9 3549 9907,Alumno,DNI
+Thiago Daniel,Gonzalez,31438742,thiago.daniel.gonzalez@gmail.com,+54 9 3758 6863,Alumno,DNI
+Mateo,Gonzalez,43270052,mateo.gonzalez@outlook.com,+54 9 2136 5520,Alumno,DNI
+Amparo,Ledesma,42706367,amparo.ledesma@outlook.com,+54 9 2660 1868,Alumno,DNI
+Santino Agustin,Rojas,43159265,santino.agustin.rojas@yahoo.com,+54 9 3216 3261,Alumno,DNI
+Santino,Perez,44654293,santino.perez@yahoo.com,+54 9 2194 4672,Alumno,DNI
+Alma,Figueroa,41333233,alma.figueroa@hotmail.com,+54 9 3610 0018,Alumno,DNI
+Sebastian,Peralta,30469731,sebastian.peralta@gmail.com,+54 9 3965 9347,Alumno,DNI
+Thiago,Diaz,33910188,thiago.diaz@gmail.com,+54 9 3576 1975,Alumno,DNI
+Lautaro,Silva,34971595,lautaro.silva@gmail.com,+54 9 3481 9495,Alumno,DNI
+Santiago,Avila,40729905,santiago.avila@outlook.com,+54 9 3841 2532,Alumno,DNI
+Valentina,Suarez,42757045,valentina.suarez@hotmail.com,+54 9 2634 5699,Alumno,DNI
+Morena,Duarte,44308885,morena.duarte@outlook.com,+54 9 2249 9550,Alumno,DNI
+Renzo,Gomez,35320655,renzo.gomez@outlook.com,+54 9 3182 6750,Alumno,DNI
+Agustin,Suarez,38164166,agustin.suarez@hotmail.com,+54 9 3509 8099,Alumno,DNI
+Sofia,Godoy,30946614,sofia.godoy@hotmail.com,+54 9 2277 7438,Alumno,DNI
+Juan Francisco,Escobar,45417967,juan.francisco.escobar@yahoo.com,+54 9 3550 2492,Alumno,DNI
+Juan Ignacio,Lopez,34033433,juan.ignacio.lopez@gmail.com,+54 9 3734 1359,Alumno,DNI
+Oriana,Sanchez,34617592,oriana.sanchez@outlook.com,+54 9 2971 4369,Alumno,DNI
+Alejo,Acosta,37168127,alejo.acosta@outlook.com,+54 9 3574 5548,Alumno,DNI
+Ian Ezequiel,Sosa,40513724,ian.ezequiel.sosa@yahoo.com,+54 9 2709 1624,Alumno,DNI
+Martina,Soria,40980648,martina.soria@outlook.com,+54 9 2849 5957,Alumno,DNI
+Lara,Rodriguez,32357600,lara.rodriguez@hotmail.com,+54 9 3309 8485,Alumno,DNI
+Santino,Garcia,30985783,santino.garcia@yahoo.com,+54 9 3603 7412,Alumno,DNI
+Juan Cruz,Fernandez,32295114,juan.cruz.fernandez@yahoo.com,+54 9 2714 0828,Alumno,DNI
+Sofía,Gomez,38140531,sofia.gomez@outlook.com,+54 9 3718 4814,Alumno,DNI
+Tiziano,Nuñez,44528233,tiziano.nunez@outlook.com,+54 9 2975 8392,Alumno,DNI
+Maximo,Molina,30106929,maximo.molina@gmail.com,+54 9 3595 0394,Alumno,DNI
+Juana,Cabrera,37605752,juana.cabrera@gmail.com,+54 9 2813 9806,Alumno,DNI
+Bianca,Lopez,32440459,bianca.lopez@hotmail.com,+54 9 3173 2166,Alumno,DNI
+Guadalupe,Gimenez,33352008,guadalupe.gimenez@gmail.com,+54 9 2941 1441,Alumno,DNI
+Amparo,Sosa,35625713,amparo.sosa@yahoo.com,+54 9 3242 9474,Alumno,DNI
+Benicio,Gomez,36490297,benicio.gomez@yahoo.com,+54 9 3675 6025,Alumno,DNI
+Thiago Benjamin,Benitez,31356012,thiago.benjamin.benitez@yahoo.com,+54 9 2522 7068,Alumno,DNI
+Emma,Lucero,34446593,emma.lucero@outlook.com,+54 9 3142 8192,Alumno,DNI
+Thiago Daniel,Diaz,43864775,thiago.daniel.diaz@outlook.com,+54 9 3482 1035,Alumno,DNI
+Ignacio,Castillo,42219949,ignacio.castillo@gmail.com,+54 9 2626 4764,Alumno,DNI
+Julia,Flores,34039776,julia.flores@gmail.com,+54 9 3498 6730,Alumno,DNI
+Benicio,Perez,39875233,benicio.perez@outlook.com,+54 9 2327 0125,Alumno,DNI
+Felipe,Nuñez,30226372,felipe.nunez@gmail.com,+54 9 2202 2375,Alumno,DNI
+Emma,Gomez,34912303,emma.gomez@yahoo.com,+54 9 3387 7261,Alumno,DNI
+Sofia,Ponce,43947996,sofia.ponce@gmail.com,+54 9 3483 1858,Alumno,DNI
+Francesca,Bustos,44219639,francesca.bustos@yahoo.com,+54 9 2449 6552,Alumno,DNI
+Tiziano Benjamin,Gonzalez,45941376,tiziano.benjamin.gonzalez@yahoo.com,+54 9 2202 1827,Alumno,DNI
+Tiziano Benjamin,Acosta,32575818,tiziano.benjamin.acosta@yahoo.com,+54 9 2297 2531,Alumno,DNI
+Isabella,Gimenez,34998039,,+54 9 3139 5102,Alumno,DNI
+Violeta,Vazquez,31509667,,+54 9 3696 4967,Alumno,DNI
+Lautaro,Figueroa,32702619,lautaro.figueroa@yahoo.com,+54 9 2667 1332,Alumno,DNI
+Ludmila,Moreno,43663971,ludmila.moreno@hotmail.com,+54 9 3523 7374,Alumno,DNI
+Priscila,Ortiz,37012198,priscila.ortiz@yahoo.com,+54 9 3538 1304,Alumno,DNI
+Francisco,Caceres,41021877,francisco.caceres@outlook.com,+54 9 3650 9143,Alumno,DNI
+Tomàs,Martinez,38370600,tomas.martinez@yahoo.com,+54 9 2854 5404,Alumno,DNI
+Juan Ignacio,Barrios,31963378,juan.ignacio.barrios@yahoo.com,+54 9 2989 5261,Alumno,DNI
+Antonia,Castillo,35111521,antonia.castillo@gmail.com,+54 9 3363 8314,Alumno,DNI
+Lara,Gonzalez,38519723,lara.gonzalez@outlook.com,+54 9 3266 5415,Alumno,DNI
+Sol,Gomez,38393673,sol.gomez@outlook.com,+54 9 2818 1789,Alumno,DNI
+Valentina ,Gonzalez,44289991,valentina..gonzalez@hotmail.com,+54 9 3943 3955,Alumno,DNI
+Isabella,Garcia,34078388,isabella.garcia@gmail.com,+54 9 3688 9612,Alumno,DNI
+Juan Bautista,Vargas,30386383,juan.bautista.vargas@gmail.com,+54 9 2622 4096,Alumno,DNI
+Giuliana,Gutierrez,30246491,giuliana.gutierrez@hotmail.com,+54 9 3452 0334,Alumno,DNI
+Pedro,Silva,39341417,pedro.silva@hotmail.com,+54 9 2643 6929,Alumno,DNI
+Juana,Ponce,36057182,juana.ponce@outlook.com,+54 9 2380 1772,Alumno,DNI
+Sol,Gonzalez,41788868,sol.gonzalez@hotmail.com,+54 9 2884 2829,Alumno,DNI
+Agustin,Correa,35155914,agustin.correa@hotmail.com,+54 9 2626 1896,Alumno,DNI
+Benjamin,Garcia,38642477,benjamin.garcia@gmail.com,+54 9 3926 6299,Alumno,DNI
+Renata,Quiroga,40126484,renata.quiroga@hotmail.com,+54 9 3501 7223,Alumno,DNI
+Octavio,Gonzalez,45246102,octavio.gonzalez@gmail.com,+54 9 2417 1316,Alumno,DNI
+Sebastian,Ramos,33730130,sebastian.ramos@hotmail.com,+54 9 2745 9393,Alumno,DNI
+Nicolas,Lopez,36236123,nicolas.lopez@outlook.com,+54 9 2913 1391,Alumno,DNI
+Lautaro Benjamin,Alvarez,35468094,lautaro.benjamin.alvarez@outlook.com,+54 9 3414 2024,Alumno,DNI
+Juan Ignacio,Castillo,32150263,juan.ignacio.castillo@hotmail.com,+54 9 2722 2335,Alumno,DNI
+Thiago Daniel,Duarte,43750283,thiago.daniel.duarte@hotmail.com,+54 9 3489 6451,Alumno,DNI
+Santino,Diaz,37169999,santino.diaz@outlook.com,+54 9 3666 3683,Alumno,DNI
+Vicente,Sanchez,32811654,vicente.sanchez@hotmail.com,+54 9 2205 2983,Alumno,DNI
+Milena,Mendoza,32050515,milena.mendoza@yahoo.com,+54 9 3567 3099,Alumno,DNI
+Thiago Nahuel,Gomez,45605722,thiago.nahuel.gomez@gmail.com,+54 9 3705 5561,Alumno,DNI
+Tomas,Leiva,38268761,tomas.leiva@hotmail.com,+54 9 2513 5432,Alumno,DNI
+Octavio,Gomez,41620840,octavio.gomez@outlook.com,+54 9 3412 7365,Alumno,DNI
+Giovanni,Gomez,45068171,giovanni.gomez@hotmail.com,+54 9 3748 9979,Alumno,DNI
+Micaela,Miranda,38325772,micaela.miranda@hotmail.com,+54 9 3445 1776,Alumno,DNI
+Felipe,Ruiz,32682238,felipe.ruiz@yahoo.com,+54 9 3631 4213,Alumno,DNI
+Valentin,Suarez,37199951,valentin.suarez@hotmail.com,+54 9 2678 7699,Alumno,DNI
+Alma Mia,Carrizo,34494885,alma.mia.carrizo@outlook.com,+54 9 2129 3049,Alumno,DNI
+Morena,Soto,37915491,morena.soto@outlook.com,+54 9 2955 0590,Alumno,DNI
+Martina,Benitez,36470833,martina.benitez@hotmail.com,+54 9 3547 0946,Alumno,DNI
+Benicio,Acosta,34081471,benicio.acosta@hotmail.com,+54 9 2628 9859,Alumno,DNI
+Ciro,Lopez,30941372,ciro.lopez@yahoo.com,+54 9 3505 3066,Alumno,DNI
+Juana,Medina,31222266,juana.medina@gmail.com,+54 9 2646 9865,Alumno,DNI
+Zoe,Aguirre,45324229,zoe.aguirre@yahoo.com,+54 9 2495 8104,Alumno,DNI
+Valentina,Miranda,42693185,valentina.miranda@hotmail.com,+54 9 2941 4656,Alumno,DNI
+Francisco,Ortiz,44513749,francisco.ortiz@gmail.com,+54 9 3294 3431,Alumno,DNI
+Luisana,Sanchez,39605597,luisana.sanchez@gmail.com,+54 9 3474 8228,Alumno,DNI
+Martin,Gutierrez,41702335,martin.gutierrez@outlook.com,+54 9 3704 6933,Alumno,DNI
+Guadalupe,Diaz,34731502,guadalupe.diaz@hotmail.com,+54 9 3562 8000,Alumno,DNI
+Lautaro,Ramos,39563230,,+54 9 3436 0889,Alumno,DNI
+Delfina,Medina,33436656,delfina.medina@gmail.com,+54 9 2175 2128,Alumno,DNI
+Ignacio,Diaz,44919962,ignacio.diaz@hotmail.com,+54 9 3949 0167,Alumno,DNI
+Justina,Diaz,34657279,justina.diaz@hotmail.com,+54 9 2940 3217,Alumno,DNI
+Kiara,Soria,36890268,kiara.soria@gmail.com,+54 9 3402 1940,Alumno,DNI
+Benjamin,Valdez,37573276,benjamin.valdez@outlook.com,+54 9 2839 7571,Alumno,DNI
+Mora,Valdez,45746270,mora.valdez@yahoo.com,+54 9 3416 1334,Alumno,DNI
+Juan Ignacio,Gimenez,45331374,juan.ignacio.gimenez@gmail.com,+54 9 2865 1013,Alumno,DNI
+Joaquin,Mansilla,34365303,joaquin.mansilla@hotmail.com,+54 9 2895 8083,Alumno,DNI
+Geronimo,Godoy,43043273,geronimo.godoy@yahoo.com,+54 9 2376 8022,Alumno,DNI
+Agustín,Vargas,33037423,agustin.vargas@outlook.com,+54 9 2480 3891,Alumno,DNI
+Isabella,Soto,41694165,isabella.soto@hotmail.com,+54 9 3558 2004,Alumno,DNI
+Valentina ,Aguirre,33673050,valentina..aguirre@yahoo.com,+54 9 2325 1613,Alumno,DNI
+Benjamin,Gomez,33386069,benjamin.gomez@gmail.com,+54 9 2999 3057,Alumno,DNI
+Olivia,Villalba,36251602,olivia.villalba@yahoo.com,+54 9 2485 6233,Alumno,DNI
+Tomas,Gomez,40059343,tomas.gomez@yahoo.com,+54 9 2591 5110,Alumno,DNI
+Nina,Acosta,45908531,nina.acosta@yahoo.com,+54 9 2328 8839,Alumno,DNI
+Santiago,Cardozo,45948143,santiago.cardozo@outlook.com,+54 9 3611 8096,Alumno,DNI
+Thiago Agustin,Gomez,32180590,thiago.agustin.gomez@yahoo.com,+54 9 3993 3633,Alumno,DNI
+Joaquin,Franco,30321355,joaquin.franco@yahoo.com,+54 9 2334 0837,Alumno,DNI
+Victoria,Ramos,38567788,victoria.ramos@outlook.com,+54 9 3967 9507,Alumno,DNI
+Josefina,Garcia,33547291,josefina.garcia@gmail.com,+54 9 2792 6449,Alumno,DNI
+Santino,Gonzalez,45422028,santino.gonzalez@outlook.com,+54 9 2474 2803,Alumno,DNI
+Maximiliano,Ramirez,41252196,maximiliano.ramirez@hotmail.com,+54 9 2194 0145,Alumno,DNI
+Matias,Rivero,41174384,matias.rivero@yahoo.com,+54 9 3868 7669,Alumno,DNI
+Lucia,Gonzalez,38720883,lucia.gonzalez@gmail.com,+54 9 2170 5701,Alumno,DNI
+Simon,Ferreyra,42826422,simon.ferreyra@outlook.com,+54 9 2314 6197,Alumno,DNI
+Mateo,Morales,43972226,mateo.morales@yahoo.com,+54 9 3643 2715,Alumno,DNI
+Catalina,Martinez,44441151,catalina.martinez@gmail.com,+54 9 2473 8080,Alumno,DNI
+Isabel,Diaz,43695277,,+54 9 3812 0948,Alumno,DNI
+Abril,Morales,36800218,abril.morales@hotmail.com,+54 9 2710 3086,Alumno,DNI
+Valentino,Martinez,33678309,,+54 9 2137 1058,Alumno,DNI
+Catalina,Quiroga,39224971,catalina.quiroga@outlook.com,+54 9 2268 0361,Alumno,DNI
+Joaquin,Romero,42905002,joaquin.romero@hotmail.com,+54 9 2595 2252,Alumno,DNI
+Tobias,Nuñez,34839561,tobias.nunez@yahoo.com,+54 9 3723 6714,Alumno,DNI
+Valentina,Ayala,32264676,valentina.ayala@yahoo.com,+54 9 3151 0774,Alumno,DNI
+Genaro,Valdez,40051802,genaro.valdez@outlook.com,+54 9 2691 5722,Alumno,DNI
+Rafael,Ledesma,30700814,rafael.ledesma@yahoo.com,+54 9 2976 2954,Alumno,DNI
+Rafael,Acuña,32134822,rafael.acuna@gmail.com,+54 9 3445 5159,Alumno,DNI
+Alma,Fernandez,32800317,alma.fernandez@yahoo.com,+54 9 3100 1657,Alumno,DNI
+Emma,Sosa,40220174,emma.sosa@hotmail.com,+54 9 2914 0113,Alumno,DNI
+Manuel,Ruiz,43496917,manuel.ruiz@gmail.com,+54 9 3722 2618,Alumno,DNI
+Alma,Ferreyra,33025091,alma.ferreyra@yahoo.com,+54 9 2291 1447,Alumno,DNI
+Delfina,Lopez,35569822,delfina.lopez@hotmail.com,+54 9 2250 8478,Alumno,DNI
+Lola,Lopez,42011137,lola.lopez@yahoo.com,+54 9 3894 4120,Alumno,DNI
+Valentina ,Flores,39679193,valentina..flores@hotmail.com,+54 9 2430 5261,Alumno,DNI
+Agustina,Olivera,33109769,agustina.olivera@outlook.com,+54 9 2368 8001,Alumno,DNI
+Lola,Aguirre,30300658,lola.aguirre@outlook.com,+54 9 2619 9992,Alumno,DNI
+Francisco,Ortiz,40863182,francisco.ortiz@outlook.com,+54 9 3575 7767,Alumno,DNI
+Lola,Caceres,34011987,lola.caceres@yahoo.com,+54 9 2996 4004,Alumno,DNI
+Maria Guadalupe,Ayala,45507315,maria.guadalupe.ayala@yahoo.com,+54 9 3647 1301,Alumno,DNI
+Thiago Valentin,Chavez,44427813,thiago.valentin.chavez@outlook.com,+54 9 3994 8024,Alumno,DNI
+Luna,Rojas,39921380,luna.rojas@outlook.com,+54 9 3575 8135,Alumno,DNI
+Antonella,Gimenez,42863827,antonella.gimenez@outlook.com,+54 9 2662 5205,Alumno,DNI
+Valentino,Gonzalez,44142004,valentino.gonzalez@outlook.com,+54 9 2245 3394,Alumno,DNI
+Luisana,Juarez,36462635,luisana.juarez@hotmail.com,+54 9 3608 6690,Alumno,DNI
+Santino,Gonzalez,38789605,santino.gonzalez@outlook.com,+54 9 3720 1467,Alumno,DNI
+Lucas,Gomez,32902968,lucas.gomez@gmail.com,+54 9 3456 0230,Alumno,DNI
+Bruno,Moyano,31065119,bruno.moyano@yahoo.com,+54 9 2797 2420,Alumno,DNI
+Juan Bautista,Gonzalez,41182374,juan.bautista.gonzalez@yahoo.com,+54 9 2662 2460,Alumno,DNI
+Luna,Sanchez,43948943,luna.sanchez@hotmail.com,+54 9 2710 2305,Alumno,DNI
+Valentino,Romero,42168576,valentino.romero@yahoo.com,+54 9 2742 3551,Alumno,DNI
+Malena,Rodriguez,32487000,malena.rodriguez@hotmail.com,+54 9 3849 6653,Alumno,DNI
+Santino,Ledesma,42954368,santino.ledesma@yahoo.com,+54 9 2214 7459,Alumno,DNI
+Nina,Gomez,37665322,nina.gomez@hotmail.com,+54 9 3603 2237,Alumno,DNI
+Mateo Ezequiel,Gomez,34457031,mateo.ezequiel.gomez@hotmail.com,+54 9 2178 0993,Alumno,DNI
+Camila,Vargas,37123255,camila.vargas@yahoo.com,+54 9 2513 3451,Alumno,DNI
+Nicolas,Lopez,36158336,nicolas.lopez@gmail.com,+54 9 2374 8631,Alumno,DNI
+Tomàs,Villalba,34761805,tomas.villalba@outlook.com,+54 9 2388 0421,Alumno,DNI
+Bruno,Ruiz,44831598,bruno.ruiz@outlook.com,+54 9 3965 7714,Alumno,DNI
+Guillermina,Perez,44726844,guillermina.perez@yahoo.com,+54 9 2254 8542,Alumno,DNI
+Amparo,Ojeda,30642032,amparo.ojeda@outlook.com,+54 9 2491 3594,Alumno,DNI
+Tiziano Valentin,Rodriguez,34554870,tiziano.valentin.rodriguez@yahoo.com,+54 9 2399 3435,Alumno,DNI
+Martina,Garcia,39724445,martina.garcia@yahoo.com,+54 9 3699 6992,Alumno,DNI
+Juan Cruz,Gonzalez,44084939,juan.cruz.gonzalez@yahoo.com,+54 9 2792 1644,Alumno,DNI
+Santiago,Maldonado,39839138,santiago.maldonado@gmail.com,+54 9 2354 9902,Alumno,DNI
+Juan Ignacio,Juarez,43956427,juan.ignacio.juarez@hotmail.com,+54 9 2926 7185,Alumno,DNI
+Sebastian,Gomez,41503023,sebastian.gomez@outlook.com,+54 9 2487 3994,Alumno,DNI
+Paloma,Castro,32247069,paloma.castro@hotmail.com,+54 9 2200 1700,Alumno,DNI
+Lucas Benjamin,Perez,36501353,lucas.benjamin.perez@outlook.com,+54 9 3997 1832,Alumno,DNI
+Ciro,Ponce,30261560,ciro.ponce@gmail.com,+54 9 3375 2661,Alumno,DNI
+Lucía,Bravo,36821499,lucia.bravo@yahoo.com,+54 9 2275 5768,Alumno,DNI
+Antonio,Garcia,45140374,antonio.garcia@outlook.com,+54 9 3161 5962,Alumno,DNI
+Juan Gabriel,Romero,44263113,juan.gabriel.romero@gmail.com,+54 9 3606 9023,Alumno,DNI
+Lucía,Martinez,40237965,lucia.martinez@hotmail.com,+54 9 3634 6774,Alumno,DNI
+Maria Belen,Benitez,31896700,maria.belen.benitez@outlook.com,+54 9 2269 3576,Alumno,DNI
+Emilia,Luna,36985322,emilia.luna@outlook.com,+54 9 3150 4598,Alumno,DNI
+Morena,Peralta,44047485,morena.peralta@hotmail.com,+54 9 3595 8344,Alumno,DNI
+Dante,Suarez,43394175,dante.suarez@gmail.com,+54 9 2661 0611,Alumno,DNI
+Helena,Lopez,32712408,helena.lopez@outlook.com,+54 9 2837 8733,Alumno,DNI
+Juliana,Ortiz,40913314,juliana.ortiz@hotmail.com,+54 9 3356 4856,Alumno,DNI
+Lisandro,Peralta,39479461,lisandro.peralta@yahoo.com,+54 9 2193 2637,Alumno,DNI
+Santiago Benjamin,Lopez,39263332,santiago.benjamin.lopez@gmail.com,+54 9 3155 4721,Alumno,DNI
+Juan Gabriel,Carrizo,39632675,juan.gabriel.carrizo@outlook.com,+54 9 3149 3579,Alumno,DNI
+Francesca,Perez,38072230,francesca.perez@yahoo.com,+54 9 3556 0796,Alumno,DNI
+Thiago Benjamin,Soria,35213115,thiago.benjamin.soria@outlook.com,+54 9 3794 0567,Alumno,DNI
+Mateo,Vargas,31271467,mateo.vargas@yahoo.com,+54 9 2727 5989,Alumno,DNI
+Ambar,Vazquez,41813295,ambar.vazquez@yahoo.com,+54 9 2653 5052,Alumno,DNI
+Federico,Diaz,38941014,federico.diaz@hotmail.com,+54 9 2268 8021,Alumno,DNI
+Gael,Rojas,30815585,gael.rojas@outlook.com,+54 9 3945 8368,Alumno,DNI
+Julian,Bravo,37642410,julian.bravo@hotmail.com,+54 9 2473 0358,Alumno,DNI
+Ciro Benjamin,Molina,38480744,ciro.benjamin.molina@yahoo.com,+54 9 2573 6629,Alumno,DNI
+Paulina,Fernandez,36322281,paulina.fernandez@hotmail.com,+54 9 2896 3138,Alumno,DNI
+Lucas,Gutierrez,43554211,lucas.gutierrez@outlook.com,+54 9 3108 4040,Alumno,DNI
+Camila,Molina,42630421,camila.molina@gmail.com,+54 9 2273 5209,Alumno,DNI
+Bautista Benjamin,Godoy,39371126,bautista.benjamin.godoy@gmail.com,+54 9 2429 8619,Alumno,DNI
+Valentino,Garcia,39881121,valentino.garcia@gmail.com,+54 9 2377 5047,Alumno,DNI
+Francesca,Rodriguez,37284939,francesca.rodriguez@outlook.com,+54 9 3995 4462,Alumno,DNI
+Alma,Diaz,44059778,alma.diaz@gmail.com,+54 9 2522 7337,Alumno,DNI
+Lucas Benjamin,Sanchez,30445520,lucas.benjamin.sanchez@outlook.com,+54 9 2973 2240,Alumno,DNI
+Thiago Nicolas,Villalba,37239130,thiago.nicolas.villalba@yahoo.com,+54 9 3983 1375,Alumno,DNI
+Juan Ignacio,Ponce,34161904,juan.ignacio.ponce@yahoo.com,+54 9 2127 0479,Alumno,DNI
+Juan Cruz,Fernandez,31636346,juan.cruz.fernandez@gmail.com,+54 9 3794 6853,Alumno,DNI
+Camila,Correa,36050675,camila.correa@outlook.com,+54 9 3885 8201,Alumno,DNI
+Lourdes,Lopez,38221990,lourdes.lopez@yahoo.com,+54 9 2192 6523,Alumno,DNI
+Guadalupe,Rodriguez,35895932,guadalupe.rodriguez@yahoo.com,+54 9 2995 8689,Alumno,DNI
+Lorenzo,Martinez,34666804,lorenzo.martinez@gmail.com,+54 9 3740 2958,Alumno,DNI
+Renata,Medina,36514666,renata.medina@yahoo.com,+54 9 2518 2753,Alumno,DNI
+Valentin,Martinez,36948669,valentin.martinez@gmail.com,+54 9 2691 1897,Alumno,DNI
+Catalina,Gomez,41402719,catalina.gomez@outlook.com,+54 9 3917 2603,Alumno,DNI
+Luciano Benjamin,Fernandez,33033916,luciano.benjamin.fernandez@hotmail.com,+54 9 2147 0161,Alumno,DNI
+Lara,Mendoza,37337493,lara.mendoza@outlook.com,+54 9 3486 2690,Alumno,DNI
+Juan Ignacio,Fernandez,45931150,juan.ignacio.fernandez@outlook.com,+54 9 3568 1526,Alumno,DNI
+Pedro,Torres,38749521,pedro.torres@hotmail.com,+54 9 3289 5543,Alumno,DNI
+Antonio,Barrios,44778294,antonio.barrios@gmail.com,+54 9 2170 7223,Alumno,DNI
+Rafael,Arias,41119537,rafael.arias@outlook.com,+54 9 3981 7786,Alumno,DNI
+Delfina,Acuña,33567445,delfina.acuna@yahoo.com,+54 9 3150 4515,Alumno,DNI
+Simon,Villalba,37242370,simon.villalba@hotmail.com,+54 9 2441 9233,Alumno,DNI
+Luca,Correa,41291663,luca.correa@gmail.com,+54 9 3280 1478,Alumno,DNI
+Julian,Aguirre,32540190,julian.aguirre@yahoo.com,+54 9 2472 5293,Alumno,DNI
+Maximo,Gonzalez,30506093,maximo.gonzalez@gmail.com,+54 9 3902 8521,Alumno,DNI
+Julia,Medina,38353339,julia.medina@gmail.com,+54 9 2309 9286,Alumno,DNI
+Isabella,Torres,41866022,isabella.torres@yahoo.com,+54 9 2302 4235,Alumno,DNI
+Valentino,Suarez,36892131,valentino.suarez@yahoo.com,+54 9 2390 7466,Alumno,DNI
+Zoe Valentina,Torres,32686293,zoe.valentina.torres@gmail.com,+54 9 3833 9847,Alumno,DNI
+Jeronimo,Vega,33076159,jeronimo.vega@yahoo.com,+54 9 2940 1402,Alumno,DNI
+Mia Jazmin,Gimenez,40775474,mia.jazmin.gimenez@outlook.com,+54 9 3883 8586,Alumno,DNI
+Helena,Ortiz,41017872,helena.ortiz@hotmail.com,+54 9 3261 1029,Alumno,DNI
+Catalina,Sosa,34554550,catalina.sosa@hotmail.com,+54 9 3904 7776,Alumno,DNI
+Benicio,Ponce,35915600,,+54 9 3718 2696,Alumno,DNI
+Lucia,Martin,45419935,lucia.martin@gmail.com,+54 9 2104 1490,Alumno,DNI
+Santiago,Gimenez,30197508,santiago.gimenez@outlook.com,+54 9 3196 0991,Alumno,DNI
+Guadalupe,Gutierrez,38917148,guadalupe.gutierrez@hotmail.com,+54 9 2787 4111,Alumno,DNI
+Ludmila,Herrera,36651921,ludmila.herrera@yahoo.com,+54 9 2113 3238,Alumno,DNI
+Bautista,Gimenez,43710760,bautista.gimenez@yahoo.com,+54 9 2374 8134,Alumno,DNI
+Tomàs,Campos,41437572,tomas.campos@yahoo.com,+54 9 2750 4287,Alumno,DNI
+Victoria,Roldan,31731791,victoria.roldan@hotmail.com,+54 9 3469 4962,Alumno,DNI
+Benjamin,Gomez,31388447,benjamin.gomez@gmail.com,+54 9 3255 7426,Alumno,DNI
+Sofia,Rodriguez,30367578,sofia.rodriguez@outlook.com,+54 9 3965 4385,Alumno,DNI
+Santino,Aguirre,37442207,santino.aguirre@gmail.com,+54 9 2225 8599,Alumno,DNI
+Milena,Gonzalez,34485777,milena.gonzalez@gmail.com,+54 9 3226 4145,Alumno,DNI
+Samuel,Rodriguez,43198246,samuel.rodriguez@gmail.com,+54 9 2751 2214,Alumno,DNI
+Santiago,Hernandez,40746517,santiago.hernandez@yahoo.com,+54 9 3370 7661,Alumno,DNI
+Ignacio,Martin,32151606,ignacio.martin@outlook.com,+54 9 3552 2221,Alumno,DNI
+Dante,Castro,30616294,dante.castro@gmail.com,+54 9 2403 4212,Alumno,DNI
+Mateo Benjamin,Cardozo,33619676,mateo.benjamin.cardozo@gmail.com,+54 9 3281 1836,Alumno,DNI
+Florencia,Godoy,44358674,florencia.godoy@outlook.com,+54 9 2653 4149,Alumno,DNI
+Lola,Ayala,39110609,lola.ayala@hotmail.com,+54 9 2444 5800,Alumno,DNI
+Agustín,Perez,33722791,agustin.perez@outlook.com,+54 9 3301 9512,Alumno,DNI
+Juan Martin,Medina,31835198,juan.martin.medina@outlook.com,+54 9 2676 9157,Alumno,DNI
+Renata,Roldan,42473169,renata.roldan@outlook.com,+54 9 3585 9074,Alumno,DNI
+Thiago,Fernandez,37332897,thiago.fernandez@yahoo.com,+54 9 2388 7647,Alumno,DNI
+Mateo,Diaz,45341305,mateo.diaz@outlook.com,+54 9 3725 7654,Alumno,DNI
+Valentin,Aguirre,36380821,valentin.aguirre@hotmail.com,+54 9 3529 3830,Alumno,DNI
+Ambar,Peralta,39540425,ambar.peralta@hotmail.com,+54 9 3676 4024,Alumno,DNI
+Alma,Gomez,38156702,alma.gomez@gmail.com,+54 9 3633 3162,Alumno,DNI
+Maria Emilia,Suarez,32443281,maria.emilia.suarez@yahoo.com,+54 9 2564 4031,Alumno,DNI
+Lola,Garcia,41726756,lola.garcia@gmail.com,+54 9 3148 1089,Alumno,DNI
+Helena,Benitez,34844319,helena.benitez@outlook.com,+54 9 2759 4551,Alumno,DNI
+Luciano,Fernandez,41177146,luciano.fernandez@hotmail.com,+54 9 2957 0125,Alumno,DNI
+Nicolas,Perez,45426946,nicolas.perez@outlook.com,+54 9 2785 5741,Alumno,DNI
+Sofia Belen,Romero,43914297,sofia.belen.romero@outlook.com,+54 9 2604 2249,Alumno,DNI
+Nicolas,Escobar,43220086,nicolas.escobar@gmail.com,+54 9 2257 7210,Alumno,DNI
+Sofia,Ramirez,34027014,sofia.ramirez@gmail.com,+54 9 2685 1639,Alumno,DNI
+Emilia,Pereyra,35412606,emilia.pereyra@yahoo.com,+54 9 2571 5226,Alumno,DNI
+Bautista Benjamin,Figueroa,38282799,bautista.benjamin.figueroa@hotmail.com,+54 9 3128 5156,Alumno,DNI
+Lautaro Benjamin,Bustos,31888081,lautaro.benjamin.bustos@hotmail.com,+54 9 2440 7477,Alumno,DNI
+Valentino,Coronel,31834919,valentino.coronel@hotmail.com,+54 9 3460 1436,Alumno,DNI
+Ana Paula,Peralta,35944501,ana.paula.peralta@gmail.com,+54 9 3102 7685,Alumno,DNI
+Sofía,Garcia,41249420,sofia.garcia@yahoo.com,+54 9 3401 1529,Alumno,DNI
+Juan Cruz,Moreno,32108091,juan.cruz.moreno@outlook.com,+54 9 2442 8391,Alumno,DNI
+Agostina,Aguirre,30367040,agostina.aguirre@gmail.com,+54 9 2370 4341,Alumno,DNI
+Sofia Belen,Bravo,41333709,sofia.belen.bravo@outlook.com,+54 9 2154 5398,Alumno,DNI
+Juan Martin,Alvarez,35281520,juan.martin.alvarez@gmail.com,+54 9 2182 5400,Alumno,DNI
+Morena,Sosa,36615209,morena.sosa@outlook.com,+54 9 2597 8577,Alumno,DNI
+Isabella,Ruiz,31725100,isabella.ruiz@gmail.com,+54 9 3452 8176,Alumno,DNI
+Benjamin Ezequiel,Medina,34704174,benjamin.ezequiel.medina@yahoo.com,+54 9 3235 6753,Alumno,DNI
+Alfonsina,Duarte,44713441,alfonsina.duarte@hotmail.com,+54 9 2509 1276,Alumno,DNI
+Julia,Bustos,38129607,julia.bustos@gmail.com,+54 9 2107 5921,Alumno,DNI
+Mora,Sanchez,30530462,mora.sanchez@hotmail.com,+54 9 3753 2126,Alumno,DNI
+Mora,Maldonado,39877132,mora.maldonado@yahoo.com,+54 9 3397 5284,Alumno,DNI
+Enzo,Lopez,31036656,enzo.lopez@gmail.com,+54 9 3672 6666,Alumno,DNI
+Ciro,Fernandez,35345987,ciro.fernandez@hotmail.com,+54 9 2757 8671,Alumno,DNI
+Julieta,Gonzalez,44341695,julieta.gonzalez@gmail.com,+54 9 2636 7869,Alumno,DNI
+Geronimo,Rodriguez,30757580,geronimo.rodriguez@outlook.com,+54 9 3637 9605,Alumno,DNI
+Francesca,Ledesma,30398761,francesca.ledesma@gmail.com,+54 9 3128 2830,Alumno,DNI
+Valentino,Farias,33730688,valentino.farias@hotmail.com,+54 9 2756 6066,Alumno,DNI
+Catalina,Acosta,38632250,catalina.acosta@gmail.com,+54 9 3553 0248,Alumno,DNI
+Emanuel,Aguero,33112320,emanuel.aguero@outlook.com,+54 9 3350 7122,Alumno,DNI
+Sofia,Godoy,43671191,sofia.godoy@yahoo.com,+54 9 2656 8600,Alumno,DNI
+Victoria,Sosa,32412306,victoria.sosa@yahoo.com,+54 9 3962 9040,Alumno,DNI
+Salvador,Sanchez,45038314,salvador.sanchez@hotmail.com,+54 9 2988 1095,Alumno,DNI
+Mateo,Medina,41258011,mateo.medina@hotmail.com,+54 9 3598 1512,Alumno,DNI
+Pilar,Gimenez,45245358,pilar.gimenez@yahoo.com,+54 9 2318 9070,Alumno,DNI
+Morena,Escobar,32204161,morena.escobar@yahoo.com,+54 9 2172 9101,Alumno,DNI
+Angel Gabriel,Gonzalez,30961379,angel.gabriel.gonzalez@outlook.com,+54 9 3581 6868,Alumno,DNI
+Constanza,Flores,35565985,constanza.flores@hotmail.com,+54 9 2821 4246,Alumno,DNI
+Benjamin,Aguirre,42674907,benjamin.aguirre@outlook.com,+54 9 2922 4113,Alumno,DNI
+Tomàs,Gomez,30098040,tomas.gomez@outlook.com,+54 9 3603 6843,Alumno,DNI
+Felipe,Perez,30123333,felipe.perez@yahoo.com,+54 9 2604 0224,Alumno,DNI
+Mateo,Vera,37814684,mateo.vera@hotmail.com,+54 9 2972 5933,Alumno,DNI
+Valentina,Benitez,38856423,valentina.benitez@yahoo.com,+54 9 3211 7388,Alumno,DNI
+Benicio,Fernandez,37244102,benicio.fernandez@gmail.com,+54 9 3916 6475,Alumno,DNI
+Thiago,Escobar,33460388,thiago.escobar@outlook.com,+54 9 3540 9601,Alumno,DNI
+Jazmin,Bravo,41664468,jazmin.bravo@hotmail.com,+54 9 3832 3094,Alumno,DNI
+Valentin,Silva,44144505,valentin.silva@yahoo.com,+54 9 2553 3837,Alumno,DNI
+Bautista,Acosta,34207249,bautista.acosta@gmail.com,+54 9 3355 7407,Alumno,DNI
+Micaela,Martinez,37478367,micaela.martinez@yahoo.com,+54 9 3823 9483,Alumno,DNI
+Juan Manuel,Gonzalez,43867075,juan.manuel.gonzalez@hotmail.com,+54 9 3148 6620,Alumno,DNI
+Santino,Vega,42781956,santino.vega@yahoo.com,+54 9 3178 6657,Alumno,DNI
+Ciro,Caceres,43942866,ciro.caceres@yahoo.com,+54 9 2810 8961,Alumno,DNI
+Lola,Avila,42936217,lola.avila@hotmail.com,+54 9 3551 4356,Alumno,DNI
+Lara,Rodriguez,41268285,lara.rodriguez@hotmail.com,+54 9 3151 9824,Alumno,DNI
+Agostina,Lopez,37495057,agostina.lopez@yahoo.com,+54 9 2198 0678,Alumno,DNI
+Benicio,Sanchez,40840726,benicio.sanchez@outlook.com,+54 9 2767 4311,Alumno,DNI
+Camilo,Acosta,33871049,camilo.acosta@outlook.com,+54 9 2260 1518,Alumno,DNI
+Simon,Garcia,35552454,simon.garcia@gmail.com,+54 9 3854 8194,Alumno,DNI
+Elena,Aguirre,41734135,elena.aguirre@outlook.com,+54 9 2405 2837,Alumno,DNI
+Bautista,Cabrera,36296794,bautista.cabrera@hotmail.com,+54 9 2696 5764,Alumno,DNI
+Miguel Angel,Mansilla,35953678,miguel.angel.mansilla@outlook.com,+54 9 2331 2498,Alumno,DNI
+Ana Paula,Benitez,43110444,ana.paula.benitez@hotmail.com,+54 9 3322 9860,Alumno,DNI
+Juan Cruz,Fernandez,30055060,juan.cruz.fernandez@outlook.com,+54 9 2364 0323,Alumno,DNI
+Nahiara,Quiroga,40132599,nahiara.quiroga@yahoo.com,+54 9 2801 7393,Alumno,DNI
+Emanuel,Rodriguez,44506499,emanuel.rodriguez@gmail.com,+54 9 2526 8888,Alumno,DNI
+Isabella,Martinez,44141804,isabella.martinez@yahoo.com,+54 9 2321 2821,Alumno,DNI
+Ana Paula,Perez,44228213,ana.paula.perez@gmail.com,+54 9 3447 0887,Alumno,DNI
+Bautista,Ramirez,38406935,bautista.ramirez@outlook.com,+54 9 3650 6437,Alumno,DNI
+Maria Victoria,Castro,39684246,maria.victoria.castro@gmail.com,+54 9 3815 6300,Alumno,DNI
+Juan Ignacio,Gonzalez,35842163,juan.ignacio.gonzalez@outlook.com,+54 9 2320 0749,Alumno,DNI
+Julieta,Caceres,43799230,julieta.caceres@outlook.com,+54 9 2584 5613,Alumno,DNI
+Santino Gabriel,Perez,31451368,santino.gabriel.perez@yahoo.com,+54 9 2955 9114,Alumno,DNI
+Mia,Vazquez,43350438,mia.vazquez@yahoo.com,+54 9 2901 6454,Alumno,DNI
+Thiago Agustin,Leiva,45170433,thiago.agustin.leiva@hotmail.com,+54 9 3752 4905,Alumno,DNI
+Sofia,Torres,41824986,sofia.torres@hotmail.com,+54 9 3691 2568,Alumno,DNI
+Valentin,Martinez,35388639,valentin.martinez@gmail.com,+54 9 2514 8912,Alumno,DNI
+Benjamin,Franco,45970742,benjamin.franco@hotmail.com,+54 9 3255 0134,Alumno,DNI
+Ignacio,Paz,42886191,ignacio.paz@hotmail.com,+54 9 3340 4530,Alumno,DNI
+Helena,Rodriguez,37031483,helena.rodriguez@hotmail.com,+54 9 3784 0196,Alumno,DNI
+Bautista,Carrizo,42411250,bautista.carrizo@hotmail.com,+54 9 3369 0463,Alumno,DNI
+Angelina,Gomez,38290123,angelina.gomez@yahoo.com,+54 9 2809 2655,Alumno,DNI
+Lucía,Avila,41765198,lucia.avila@outlook.com,+54 9 2765 7966,Alumno,DNI
+Agustín,Silva,35605561,agustin.silva@outlook.com,+54 9 3533 4868,Alumno,DNI
+Victoria,Ledesma,36928006,victoria.ledesma@yahoo.com,+54 9 3624 7141,Alumno,DNI
+Luisina,Coronel,35278293,luisina.coronel@yahoo.com,+54 9 3150 0267,Alumno,DNI
+Kiara,Gimenez,40583085,kiara.gimenez@hotmail.com,+54 9 3202 4623,Alumno,DNI
+Lucia,Mendoza,43529073,lucia.mendoza@outlook.com,+54 9 2703 8970,Alumno,DNI
+Sofia,Fernandez,35297114,sofia.fernandez@gmail.com,+54 9 3382 0868,Alumno,DNI
+Santino,Sosa,32738313,santino.sosa@gmail.com,+54 9 2710 1644,Alumno,DNI
+Morena Jazmin,Dominguez,41728313,morena.jazmin.dominguez@outlook.com,+54 9 3812 9863,Alumno,DNI
+Agostina,Diaz,33693959,agostina.diaz@yahoo.com,+54 9 3888 6108,Alumno,DNI
+Benicio,Barrios,33964267,benicio.barrios@hotmail.com,+54 9 2932 6960,Alumno,DNI
+Fausto,Molina,41485165,fausto.molina@yahoo.com,+54 9 3123 4849,Alumno,DNI
+Morena,Benitez,34198627,morena.benitez@gmail.com,+54 9 2661 0157,Alumno,DNI
+Valentino,Sanchez,34687649,valentino.sanchez@yahoo.com,+54 9 3160 3255,Alumno,DNI
+Martina,Coronel,31017566,martina.coronel@hotmail.com,+54 9 3675 7611,Alumno,DNI
+León,Chavez,42699425,leon.chavez@yahoo.com,+54 9 3724 7880,Alumno,DNI
+Sol,Aguirre,30088172,sol.aguirre@yahoo.com,+54 9 3580 2420,Alumno,DNI
+Benjamin,Acuña,43542005,benjamin.acuna@outlook.com,+54 9 2955 2425,Alumno,DNI
+Bautista,Toledo,32692729,bautista.toledo@hotmail.com,+54 9 2804 1173,Alumno,DNI
+Gael,Romero,41248088,gael.romero@hotmail.com,+54 9 2410 4043,Alumno,DNI
+Tomas,Rodriguez,35654379,tomas.rodriguez@outlook.com,+54 9 2448 6949,Alumno,DNI
+Bautista,Moyano,35242773,bautista.moyano@outlook.com,+54 9 2949 1350,Alumno,DNI
+Vicente,Sanchez,44436801,vicente.sanchez@outlook.com,+54 9 2388 6574,Alumno,DNI
+Alma,Caceres,33043866,alma.caceres@yahoo.com,+54 9 2263 5632,Alumno,DNI
+Juan Ignacio,Mendez,39695033,juan.ignacio.mendez@hotmail.com,+54 9 3662 3805,Alumno,DNI
+Zoe Jazmin,Duarte,31102495,zoe.jazmin.duarte@hotmail.com,+54 9 2633 1110,Alumno,DNI
+Julia,Garcia,43727225,julia.garcia@gmail.com,+54 9 3330 8895,Alumno,DNI
+Angel Gabriel,Ayala,33828320,angel.gabriel.ayala@gmail.com,+54 9 2397 5222,Alumno,DNI
+Valentino,Navarro,39515864,valentino.navarro@yahoo.com,+54 9 3422 5210,Alumno,DNI
+Maria Emilia,Castro,33544470,maria.emilia.castro@hotmail.com,+54 9 3612 0639,Alumno,DNI
+Emiliano,Alvarez,39314240,emiliano.alvarez@outlook.com,+54 9 2622 9740,Alumno,DNI
+Victoria,Suarez,30735404,victoria.suarez@yahoo.com,+54 9 3900 1818,Alumno,DNI
+Milagros,Hernandez,33133815,milagros.hernandez@hotmail.com,+54 9 2787 2709,Alumno,DNI
+Emanuel,Silva,38133728,emanuel.silva@yahoo.com,+54 9 2443 7222,Alumno,DNI
+Ambar,Carrizo,31071888,ambar.carrizo@gmail.com,+54 9 2204 2253,Alumno,DNI
+Juan Ignacio,Diaz,45896651,juan.ignacio.diaz@yahoo.com,+54 9 2255 6956,Alumno,DNI
+Jazmin,Silva,38137274,jazmin.silva@hotmail.com,+54 9 2881 1833,Alumno,DNI
+Lola,Gonzalez,40306605,lola.gonzalez@yahoo.com,+54 9 2206 1641,Alumno,DNI
+Martina,Perez,35906862,martina.perez@yahoo.com,+54 9 2179 3774,Alumno,DNI
+Lautaro Benjamin,Figueroa,35511517,lautaro.benjamin.figueroa@outlook.com,+54 9 3728 4080,Alumno,DNI
+Luciano,Soria,38717375,luciano.soria@outlook.com,+54 9 2316 8447,Alumno,DNI
+Francisco,Sosa,35940256,francisco.sosa@gmail.com,+54 9 3712 7580,Alumno,DNI
+Zoe Jazmin,Paez,40668065,zoe.jazmin.paez@yahoo.com,+54 9 3849 9314,Alumno,DNI
+Ian Ezequiel,Silva,38188233,ian.ezequiel.silva@hotmail.com,+54 9 2481 4804,Alumno,DNI
+Oriana,Gimenez,44516064,oriana.gimenez@gmail.com,+54 9 2210 8961,Alumno,DNI
+Agustin,Perez,45544327,agustin.perez@hotmail.com,+54 9 2928 2857,Alumno,DNI
+Renata,Perez,32231628,renata.perez@hotmail.com,+54 9 2513 8871,Alumno,DNI
+Sofia Belen,Lucero,33423546,sofia.belen.lucero@gmail.com,+54 9 3644 8717,Alumno,DNI
+Sofia,Rodriguez,34728997,sofia.rodriguez@hotmail.com,+54 9 2119 9773,Alumno,DNI
+Lucas Benjamin,Roldan,30230499,lucas.benjamin.roldan@hotmail.com,+54 9 3838 9647,Alumno,DNI
+Francisco,Peralta,32673458,francisco.peralta@outlook.com,+54 9 2302 6935,Alumno,DNI
+Renata,Fernandez,37239533,renata.fernandez@hotmail.com,+54 9 2664 1519,Alumno,DNI
+Maria Belen,Ramos,38842716,maria.belen.ramos@yahoo.com,+54 9 2805 4050,Alumno,DNI
+Pedro,Rodriguez,43733466,pedro.rodriguez@yahoo.com,+54 9 3809 4602,Alumno,DNI
+Lucia,Soria,32901887,lucia.soria@hotmail.com,+54 9 2977 5530,Alumno,DNI
+Santino Agustin,Ramirez,38081258,santino.agustin.ramirez@hotmail.com,+54 9 3836 4063,Alumno,DNI
+Martin,Silva,30004548,martin.silva@gmail.com,+54 9 2719 3815,Alumno,DNI
+Zoe Valentina,Romero,45692552,zoe.valentina.romero@outlook.com,+54 9 2433 5632,Alumno,DNI
+Giuliana,Blanco,36520319,giuliana.blanco@yahoo.com,+54 9 3292 7786,Alumno,DNI
+Emilia,Suarez,42082012,emilia.suarez@outlook.com,+54 9 2996 1754,Alumno,DNI
+Ivan,Bustos,41310259,ivan.bustos@yahoo.com,+54 9 3849 1905,Alumno,DNI
+Maria Victoria,Ramos,44492899,maria.victoria.ramos@outlook.com,+54 9 2283 0598,Alumno,DNI
+Mora,Flores,40156501,mora.flores@outlook.com,+54 9 2254 7112,Alumno,DNI
+Gonzalo,Muñoz,32919443,gonzalo.munoz@yahoo.com,+54 9 3424 3541,Alumno,DNI
+Abril,Vazquez,33545850,abril.vazquez@yahoo.com,+54 9 2162 9761,Alumno,DNI
+Thiago Benjamin,Martinez,38928581,thiago.benjamin.martinez@gmail.com,+54 9 2568 2980,Alumno,DNI
+Sofia,Gomez,34989772,sofia.gomez@outlook.com,+54 9 2743 4100,Alumno,DNI
+Ramiro,Olivera,41418439,ramiro.olivera@yahoo.com,+54 9 2332 6663,Alumno,DNI
+Lautaro Nicolas,Diaz,38434835,lautaro.nicolas.diaz@hotmail.com,+54 9 2807 7144,Alumno,DNI
+Lola,Martinez,36537106,lola.martinez@yahoo.com,+54 9 2594 0082,Alumno,DNI
+Santino Agustin,Fernandez,41008531,santino.agustin.fernandez@gmail.com,+54 9 2582 8814,Alumno,DNI
+Martina,Maldonado,41453617,martina.maldonado@yahoo.com,+54 9 2640 2672,Alumno,DNI
+Facundo,Fernandez,38703238,facundo.fernandez@hotmail.com,+54 9 2866 4633,Alumno,DNI
+Tobias,Diaz,43726508,tobias.diaz@gmail.com,+54 9 2885 2045,Alumno,DNI
+Tomàs,Gonzalez,34447081,tomas.gonzalez@yahoo.com,+54 9 2731 0414,Alumno,DNI
+Olivia,Perez,38703285,olivia.perez@gmail.com,+54 9 3131 1449,Alumno,DNI
+Catalina,Caceres,44521824,catalina.caceres@outlook.com,+54 9 3718 0118,Alumno,DNI
+Sebastian,Ledesma,35031297,sebastian.ledesma@outlook.com,+54 9 2757 4586,Alumno,DNI
+Juan,Sanchez,32823541,juan.sanchez@hotmail.com,+54 9 3253 2696,Alumno,DNI
+Lourdes,Alvarez,45091268,lourdes.alvarez@hotmail.com,+54 9 3563 4379,Alumno,DNI
+Facundo,Paez,34641008,facundo.paez@gmail.com,+54 9 2340 6650,Alumno,DNI
+Matilda,Quiroga,30996789,matilda.quiroga@yahoo.com,+54 9 2743 4973,Alumno,DNI
+Benjamin,Aguirre,38027945,benjamin.aguirre@gmail.com,+54 9 3326 9109,Alumno,DNI
+Guillermina,Garcia,31591629,guillermina.garcia@outlook.com,+54 9 3905 4651,Alumno,DNI
+Lucía ,Campos,33688099,lucia..campos@yahoo.com,+54 9 2466 3766,Alumno,DNI
+Camila,Martinez,39208663,camila.martinez@outlook.com,+54 9 3443 3706,Alumno,DNI
+Nina,Diaz,30772589,nina.diaz@hotmail.com,+54 9 2815 3940,Alumno,DNI
+Ezequiel,Lopez,45532881,ezequiel.lopez@hotmail.com,+54 9 2824 5367,Alumno,DNI
+Nicolas,Cabrera,42026432,nicolas.cabrera@outlook.com,+54 9 2355 3045,Alumno,DNI
+Lautaro Ezequiel,Rojas,41660538,lautaro.ezequiel.rojas@hotmail.com,+54 9 3974 0906,Alumno,DNI
+Geronimo,Castillo,32875207,geronimo.castillo@yahoo.com,+54 9 2399 2142,Alumno,DNI
+Vicente,Nuñez,45878884,vicente.nunez@yahoo.com,+54 9 2773 9063,Alumno,DNI
+Mateo Ezequiel,Silva,32838454,mateo.ezequiel.silva@outlook.com,+54 9 2800 0722,Alumno,DNI
+Juan Gabriel,Cruz,42555362,juan.gabriel.cruz@gmail.com,+54 9 3279 0400,Alumno,DNI
+Facundo,Flores,35961291,facundo.flores@outlook.com,+54 9 2995 1730,Alumno,DNI
+Lautaro Benjamin,Campos,36847519,,+54 9 3441 3659,Alumno,DNI
+Felipe,Sanchez,31695622,felipe.sanchez@yahoo.com,+54 9 2847 3851,Alumno,DNI
+Alma,Rodriguez,45844538,alma.rodriguez@gmail.com,+54 9 3457 7978,Alumno,DNI
+Felipe,Ramirez,43810640,felipe.ramirez@gmail.com,+54 9 3525 2675,Alumno,DNI
+Isabella,Gonzalez,30763126,isabella.gonzalez@outlook.com,+54 9 3627 1435,Alumno,DNI
+Sofia,Mendoza,30609077,sofia.mendoza@gmail.com,+54 9 3744 6115,Alumno,DNI
+Catalina,Martinez,39749714,catalina.martinez@gmail.com,+54 9 3973 0075,Alumno,DNI
+Juan Ignacio,Fernandez,33878037,juan.ignacio.fernandez@outlook.com,+54 9 3283 3919,Alumno,DNI
+Benjamin,Morales,31704019,benjamin.morales@hotmail.com,+54 9 3856 1189,Alumno,DNI
+Maximiliano,Rojas,44502106,maximiliano.rojas@hotmail.com,+54 9 2616 5886,Alumno,DNI
+Juan Manuel,Cordoba,45666370,juan.manuel.cordoba@outlook.com,+54 9 2816 8960,Alumno,DNI
+Delfina,Sosa,33883514,delfina.sosa@yahoo.com,+54 9 2737 3724,Alumno,DNI
+Renata,Lopez,35854507,renata.lopez@yahoo.com,+54 9 2350 8482,Alumno,DNI
+Santiago Nicolas,Gomez,34452113,santiago.nicolas.gomez@yahoo.com,+54 9 2265 0546,Alumno,DNI
+Thiago Ezequiel,Molina,32697331,thiago.ezequiel.molina@hotmail.com,+54 9 2584 9188,Alumno,DNI
+Vicente,Medina,43777501,vicente.medina@yahoo.com,+54 9 3651 2667,Alumno,DNI
+Tomas,Arias,33158030,tomas.arias@hotmail.com,+54 9 3217 9090,Alumno,DNI
+Julieta,Martinez,32096884,julieta.martinez@outlook.com,+54 9 3160 1200,Alumno,DNI
+Ema,Gomez,44946319,ema.gomez@outlook.com,+54 9 3594 4144,Alumno,DNI
+Mateo Agustin,Ponce,32830740,mateo.agustin.ponce@outlook.com,+54 9 3386 4828,Alumno,DNI
+Benjamin,Ayala,41240321,benjamin.ayala@gmail.com,+54 9 2960 3361,Alumno,DNI
+Felipe,Paez,37149339,felipe.paez@gmail.com,+54 9 3975 2796,Alumno,DNI
+Thiago,Vera,35904105,thiago.vera@yahoo.com,+54 9 3734 8232,Alumno,DNI
+Ludmila,Martinez,35792864,ludmila.martinez@gmail.com,+54 9 2244 6550,Alumno,DNI
+Santino Ezequiel,Vega,36161620,santino.ezequiel.vega@yahoo.com,+54 9 3228 1663,Alumno,DNI
+Paula,Martinez,31562479,paula.martinez@gmail.com,+54 9 3959 5067,Alumno,DNI
+Milagros,Maldonado,34850065,milagros.maldonado@yahoo.com,+54 9 2282 4071,Alumno,DNI
+Morena,Cordoba,45685363,morena.cordoba@hotmail.com,+54 9 2815 2647,Alumno,DNI
+Helena,Suarez,41092656,helena.suarez@gmail.com,+54 9 3937 2670,Alumno,DNI
+Juan,Aguirre,31500794,juan.aguirre@gmail.com,+54 9 2469 0424,Alumno,DNI
+Lautaro,Moyano,33822169,lautaro.moyano@yahoo.com,+54 9 3952 4015,Alumno,DNI
+Sofía,Martinez,31262811,sofia.martinez@yahoo.com,+54 9 2561 4182,Alumno,DNI
+Juan Martin,Gutierrez,31305554,juan.martin.gutierrez@yahoo.com,+54 9 3538 5954,Alumno,DNI
+Francisco,Gimenez,33212131,francisco.gimenez@outlook.com,+54 9 3836 6659,Alumno,DNI
+Santino,Martinez,43970719,santino.martinez@outlook.com,+54 9 3687 1842,Alumno,DNI
+Emilia,Moreno,35718936,emilia.moreno@gmail.com,+54 9 3588 3763,Alumno,DNI
+Dylan,Torres,31668253,dylan.torres@outlook.com,+54 9 2282 5593,Alumno,DNI
+Delfina,Fernandez,32284080,delfina.fernandez@gmail.com,+54 9 2224 9634,Alumno,DNI
+Bruno,Romero,35690393,bruno.romero@outlook.com,+54 9 3164 0655,Alumno,DNI
+Martina,Hernandez,32486624,,+54 9 2775 4922,Alumno,DNI
+Martina,Leiva,41212075,martina.leiva@gmail.com,+54 9 3651 4360,Alumno,DNI
+Agustina,Suarez,36867908,agustina.suarez@hotmail.com,+54 9 3232 9381,Alumno,DNI
+Valentino,Figueroa,41511282,valentino.figueroa@gmail.com,+54 9 2236 6190,Alumno,DNI
+Juana,Rios,32369229,juana.rios@yahoo.com,+54 9 2872 5176,Alumno,DNI
+Lola,Vargas,44898507,lola.vargas@gmail.com,+54 9 2423 9477,Alumno,DNI
+Benjamin,Martinez,43447193,benjamin.martinez@gmail.com,+54 9 2930 4243,Alumno,DNI
+Victoria,Martin,39038900,victoria.martin@yahoo.com,+54 9 2568 6840,Alumno,DNI
+Lorenzo,Garcia,37216255,lorenzo.garcia@yahoo.com,+54 9 2944 7867,Alumno,DNI
+Santino Benjamin,Silva,34218122,santino.benjamin.silva@yahoo.com,+54 9 3466 1449,Alumno,DNI
+Lorenzo,Sanchez,45320934,lorenzo.sanchez@hotmail.com,+54 9 2602 2743,Alumno,DNI
+Alma,Acuña,40358012,alma.acuna@gmail.com,+54 9 2157 7844,Alumno,DNI
+Clara,Ojeda,37607894,clara.ojeda@outlook.com,+54 9 3692 7877,Alumno,DNI
+Delfina,Sosa,33555444,delfina.sosa@yahoo.com,+54 9 2699 7901,Alumno,DNI
+Genaro,Rodriguez,32659067,genaro.rodriguez@yahoo.com,+54 9 2945 2152,Alumno,DNI
+Thiago Benjamin,Medina,32033807,thiago.benjamin.medina@yahoo.com,+54 9 2962 4018,Alumno,DNI
+Ambar,Herrera,37531532,ambar.herrera@outlook.com,+54 9 3263 5421,Alumno,DNI
+Clara,Maidana,37564736,clara.maidana@yahoo.com,+54 9 2674 0946,Alumno,DNI
+Juana,Romero,37597528,juana.romero@gmail.com,+54 9 2737 5119,Alumno,DNI
+Bianca,Fernandez,45926308,bianca.fernandez@outlook.com,+54 9 2736 8279,Alumno,DNI
+Emilia,Diaz,44870664,emilia.diaz@hotmail.com,+54 9 3512 5116,Alumno,DNI
+Juan Ignacio,Fernandez,31404097,juan.ignacio.fernandez@hotmail.com,+54 9 2922 2941,Alumno,DNI
+Renata,Bustos,38600036,renata.bustos@outlook.com,+54 9 2987 2630,Alumno,DNI
+Martina,Benitez,43093166,martina.benitez@outlook.com,+54 9 2203 0629,Alumno,DNI
+Ian Benjamin,Ruiz,35668496,ian.benjamin.ruiz@gmail.com,+54 9 2311 2335,Alumno,DNI
+Luca,Gutierrez,44554723,luca.gutierrez@gmail.com,+54 9 3639 6498,Alumno,DNI
+Ignacio,Valdez,44698429,ignacio.valdez@outlook.com,+54 9 2257 9840,Alumno,DNI
+Felipe,Rodriguez,32785292,felipe.rodriguez@hotmail.com,+54 9 2526 8722,Alumno,DNI
+Josefina,Garcia,32794495,josefina.garcia@outlook.com,+54 9 3391 7679,Alumno,DNI
+Luca,Romero,33898883,luca.romero@gmail.com,+54 9 3911 9576,Alumno,DNI
+Josefina,Vazquez,45116252,josefina.vazquez@yahoo.com,+54 9 3171 6830,Alumno,DNI
+Valentino,Chavez,41235752,valentino.chavez@gmail.com,+54 9 2712 4622,Alumno,DNI
+Lorenzo,Villalba,31544603,lorenzo.villalba@yahoo.com,+54 9 2924 0341,Alumno,DNI
+Alma Valentina,Flores,34724187,alma.valentina.flores@gmail.com,+54 9 3323 2889,Alumno,DNI
+Alejo,Juarez,36746458,alejo.juarez@outlook.com,+54 9 2558 7808,Alumno,DNI
+Mateo,Fernandez,42622519,mateo.fernandez@hotmail.com,+54 9 2841 2021,Alumno,DNI
+Sofia,Coronel,32120170,sofia.coronel@outlook.com,+54 9 2619 1417,Alumno,DNI
+Alma Valentina,Gomez,30682265,alma.valentina.gomez@hotmail.com,+54 9 3561 3635,Alumno,DNI
+Juliana,Leiva,37272214,juliana.leiva@outlook.com,+54 9 2206 6918,Alumno,DNI
+Lucas,Acosta,37376900,lucas.acosta@gmail.com,+54 9 2332 2937,Alumno,DNI
+Sofia,Rodriguez,41564993,sofia.rodriguez@outlook.com,+54 9 2779 0712,Alumno,DNI
+Paulina,Sanchez,40391525,paulina.sanchez@yahoo.com,+54 9 3267 7615,Alumno,DNI
+Gino,Martinez,45348552,gino.martinez@gmail.com,+54 9 3929 5140,Alumno,DNI
+Sofia,Lopez,37032603,sofia.lopez@gmail.com,+54 9 3137 1964,Alumno,DNI
+Nicolas,Perez,43990468,nicolas.perez@hotmail.com,+54 9 2251 4214,Alumno,DNI
+Ignacio,Mansilla,39910307,,+54 9 2222 1032,Alumno,DNI
+Matias,Martinez,31581376,matias.martinez@yahoo.com,+54 9 3995 4031,Alumno,DNI
+Maria Victoria,Diaz,41289623,maria.victoria.diaz@gmail.com,+54 9 3904 6464,Alumno,DNI
+Ciro,Diaz,40965886,ciro.diaz@gmail.com,+54 9 2322 0571,Alumno,DNI
+Lucia,Sanchez,38443830,lucia.sanchez@hotmail.com,+54 9 2715 6544,Alumno,DNI
+Benjamin Ezequiel,Benitez,44900640,benjamin.ezequiel.benitez@hotmail.com,+54 9 3783 5346,Alumno,DNI
+Alma,Correa,44067426,alma.correa@yahoo.com,+54 9 2178 3979,Alumno,DNI
+Lisandro,Romero,38082801,lisandro.romero@yahoo.com,+54 9 2563 9978,Alumno,DNI
+Isabella,Flores,31770202,isabella.flores@gmail.com,+54 9 3722 6093,Alumno,DNI
+Lucas Ezequiel,Medina,32855448,lucas.ezequiel.medina@yahoo.com,+54 9 3910 1797,Alumno,DNI
+Thiago Lionel,Gutierrez,41607939,thiago.lionel.gutierrez@outlook.com,+54 9 2764 4837,Alumno,DNI
+Lautaro Nicolas,Rodriguez,41126806,lautaro.nicolas.rodriguez@hotmail.com,+54 9 2123 4531,Alumno,DNI
+Felicitas,Cruz,30808302,felicitas.cruz@outlook.com,+54 9 2810 8883,Alumno,DNI
+Alma,Bustos,42789411,alma.bustos@hotmail.com,+54 9 3778 8096,Alumno,DNI
+Santiago,Bravo,39353079,santiago.bravo@outlook.com,+54 9 3274 3743,Alumno,DNI
+Lautaro,Ledesma,34543225,lautaro.ledesma@gmail.com,+54 9 3896 5291,Alumno,DNI
+Valentin,Sanchez,35975020,valentin.sanchez@outlook.com,+54 9 3910 3284,Alumno,DNI
+Helena,Diaz,45908118,helena.diaz@outlook.com,+54 9 3788 2647,Alumno,DNI
+Mia Morena,Rios,36377876,mia.morena.rios@hotmail.com,+54 9 3827 9824,Alumno,DNI
+Thiago Valentin,Perez,45594124,thiago.valentin.perez@yahoo.com,+54 9 2463 3945,Alumno,DNI
+Nicolas,Gimenez,39260956,nicolas.gimenez@hotmail.com,+54 9 2483 2272,Alumno,DNI
+Geronimo,Mansilla,30716676,geronimo.mansilla@hotmail.com,+54 9 2783 8410,Alumno,DNI
+Alfonsina,Martinez,45365573,alfonsina.martinez@gmail.com,+54 9 3555 6471,Alumno,DNI
+Lucas Ezequiel,Rojas,43243328,lucas.ezequiel.rojas@yahoo.com,+54 9 3522 1137,Alumno,DNI
+Dylan,Medina,34572098,dylan.medina@yahoo.com,+54 9 3870 2128,Alumno,DNI
+Josefina,Ledesma,33693770,josefina.ledesma@outlook.com,+54 9 3303 0053,Alumno,DNI
+Luisina,Quiroga,45128829,luisina.quiroga@hotmail.com,+54 9 2475 0424,Alumno,DNI
+Valentin,Ramos,42974553,valentin.ramos@hotmail.com,+54 9 3683 6589,Alumno,DNI
+Victoria,Muñoz,41938150,victoria.munoz@gmail.com,+54 9 2481 5226,Alumno,DNI
+Bianca,Fernandez,36187665,bianca.fernandez@hotmail.com,+54 9 3974 5752,Alumno,DNI
+Helena,Flores,38314294,helena.flores@yahoo.com,+54 9 2806 4366,Alumno,DNI
+Matilda,Gonzalez,45801274,matilda.gonzalez@outlook.com,+54 9 2773 8058,Alumno,DNI
+Lautaro Benjamin,Acuña,37026116,lautaro.benjamin.acuna@gmail.com,+54 9 2631 8719,Alumno,DNI
+Vicente,Valdez,30894734,vicente.valdez@yahoo.com,+54 9 2331 7386,Alumno,DNI
+Ian Benjamin,Sanchez,44456279,ian.benjamin.sanchez@hotmail.com,+54 9 3325 8497,Alumno,DNI
+Bruno,Gonzalez,41570701,bruno.gonzalez@hotmail.com,+54 9 3214 5389,Alumno,DNI
+Juliana,Miranda,32480053,juliana.miranda@outlook.com,+54 9 2443 7668,Alumno,DNI
+Pilar,Ayala,32028899,pilar.ayala@outlook.com,+54 9 3376 7498,Alumno,DNI
+Delfina,Sosa,45670602,delfina.sosa@yahoo.com,+54 9 3218 1150,Alumno,DNI
+Mia Jazmin,Pereyra,30300948,mia.jazmin.pereyra@gmail.com,+54 9 2783 3656,Alumno,DNI
+Juan Pablo,Sanchez,30898022,juan.pablo.sanchez@hotmail.com,+54 9 2692 3092,Alumno,DNI
+Luisana,Vega,44904880,luisana.vega@outlook.com,+54 9 3786 6783,Alumno,DNI
+Francisco,Romero,41150046,francisco.romero@outlook.com,+54 9 3799 7143,Alumno,DNI
+Benjamin Ezequiel,Acosta,43029052,benjamin.ezequiel.acosta@outlook.com,+54 9 2417 6210,Alumno,DNI
+Maia,Gonzalez,32308961,maia.gonzalez@hotmail.com,+54 9 3418 9671,Alumno,DNI
+Victoria,Gomez,37080082,victoria.gomez@yahoo.com,+54 9 2715 5198,Alumno,DNI
+Camila,Franco,40626532,camila.franco@hotmail.com,+54 9 3580 9460,Alumno,DNI
+Joaquin,Muñoz,36098117,joaquin.munoz@hotmail.com,+54 9 2690 8562,Alumno,DNI
+Valentina Jazmin,Flores,35517461,valentina.jazmin.flores@yahoo.com,+54 9 2985 0324,Alumno,DNI
+Carmela,Romero,43088662,carmela.romero@gmail.com,+54 9 2930 4997,Alumno,DNI
+Santino,Castro,37682475,santino.castro@hotmail.com,+54 9 2368 3957,Alumno,DNI
+Dante,Diaz,35061213,dante.diaz@yahoo.com,+54 9 2564 4914,Alumno,DNI
+Pilar,Rodriguez,42287708,pilar.rodriguez@yahoo.com,+54 9 2109 1532,Alumno,DNI
+Antonia,Aguirre,33648177,antonia.aguirre@gmail.com,+54 9 2118 0023,Alumno,DNI
+Juan Pablo,Alvarez,41744958,juan.pablo.alvarez@outlook.com,+54 9 2711 6346,Alumno,DNI
+Julia,Moreno,43313143,julia.moreno@gmail.com,+54 9 2578 5272,Alumno,DNI
+Giuliana,Arias,37556007,giuliana.arias@hotmail.com,+54 9 3115 5139,Alumno,DNI
+Luciano,Ayala,35652925,luciano.ayala@yahoo.com,+54 9 3871 8403,Alumno,DNI
+Milena,Silva,43001086,milena.silva@gmail.com,+54 9 3819 6459,Alumno,DNI
+Giuliana,Ferreyra,33193102,giuliana.ferreyra@hotmail.com,+54 9 3979 5952,Alumno,DNI
+Milagros,Aguirre,36861254,milagros.aguirre@outlook.com,+54 9 2541 3131,Alumno,DNI
+Juan David,Fernandez,34933089,juan.david.fernandez@hotmail.com,+54 9 2663 2958,Alumno,DNI
+Santiago Benjamin,Muñoz,34007375,santiago.benjamin.munoz@outlook.com,+54 9 3433 3070,Alumno,DNI
+Lautaro Ezequiel,Martinez,43695489,lautaro.ezequiel.martinez@hotmail.com,+54 9 2735 5450,Alumno,DNI
+Benicio,Farias,39251592,benicio.farias@hotmail.com,+54 9 3997 7083,Alumno,DNI
+Delfina,Barrios,31301580,delfina.barrios@yahoo.com,+54 9 2404 3585,Alumno,DNI
+Felipe,Flores,43583039,felipe.flores@outlook.com,+54 9 3811 7512,Alumno,DNI
+Mora,Diaz,30081724,mora.diaz@gmail.com,+54 9 3924 6166,Alumno,DNI
+Franco,Morales,38766730,franco.morales@outlook.com,+54 9 3970 3314,Alumno,DNI
+Emilia,Miranda,40419585,emilia.miranda@hotmail.com,+54 9 3707 7251,Alumno,DNI
+Julia,Suarez,40174122,julia.suarez@hotmail.com,+54 9 2909 1920,Alumno,DNI
+Luisina,Acosta,30359807,luisina.acosta@yahoo.com,+54 9 2456 5564,Alumno,DNI
+Mateo Agustin,Rodriguez,42473833,mateo.agustin.rodriguez@hotmail.com,+54 9 2273 6791,Alumno,DNI
+Camilo,Ramos,35927529,camilo.ramos@outlook.com,+54 9 3456 2380,Alumno,DNI
+Franco,Medina,45660425,franco.medina@hotmail.com,+54 9 3778 2152,Alumno,DNI
+Santino,Barrios,30910226,santino.barrios@hotmail.com,+54 9 3600 8433,Alumno,DNI
+Francesca,Arias,37927619,francesca.arias@yahoo.com,+54 9 3291 8567,Alumno,DNI
+Alfonsina,Lopez,34130452,alfonsina.lopez@yahoo.com,+54 9 2830 3147,Alumno,DNI
+Lucas,Ramirez,40038176,lucas.ramirez@hotmail.com,+54 9 3944 3657,Alumno,DNI
+Nahiara Jazmin,Morales,36070932,nahiara.jazmin.morales@hotmail.com,+54 9 3983 4691,Alumno,DNI
+Catalina,Rodriguez,44859529,catalina.rodriguez@yahoo.com,+54 9 3586 5103,Alumno,DNI
+Antonella,Ramirez,38333929,antonella.ramirez@yahoo.com,+54 9 3260 2559,Alumno,DNI
+Valentino,Soria,44483113,valentino.soria@gmail.com,+54 9 3320 3272,Alumno,DNI
