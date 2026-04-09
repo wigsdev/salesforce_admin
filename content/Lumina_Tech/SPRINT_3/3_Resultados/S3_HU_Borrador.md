@@ -109,8 +109,8 @@ Como **Futuro Alumno**, Quiero completar un formulario simple en la página púb
 5. **Pantalla de Éxito:** Agregar una **Screen** final con un componente `Display Text`. Mensaje: `✅ ¡Gracias por tu interés en Lumina Tech! Te hemos enviado un correo de confirmación a {!inputEmail.value}.`
 6. **Fault Path:** Conectar el nodo Create Records → Agregar **Fault Path** → Nueva Screen con mensaje amigable: `Ups, ocurrió un problema. Por favor intente nuevamente o contáctenos por teléfono. Detalle técnico: {!$Flow.FaultMessage}`.
 7. **Guardar y Activar** el Flow.
-7. **Configurar permisos del Guest User Profile (Herramienta: Setup → All Sites → [Sitio] → Guest User Profile):** Ir al perfil del Guest User del sitio. En **Object Permissions** para `Lead`, activar: **Read, Create**. En la sección de **Flows**, agregar el Flow `Lumina_EC_Captacion_Futuro_Alumno` a la lista de Flows ejecutables.
-8. **Publicar el Flow en el Sitio (Herramienta: Experience Builder):** En el Builder, navegar a la página pública. Desde el panel de componentes arrastrar el componente estándar **Flow** a la página. En su configuración, seleccionar `Lumina EC Captación Futuro Alumno`. Hacer clic en **Publish**.
+8. **Configurar permisos del Guest User Profile (Herramienta: Setup → All Sites → [Sitio] → Guest User Profile):** Ir al perfil del Guest User del sitio. En **Object Permissions** para `Lead`, activar: **Read, Create**. En la sección de **Flows**, agregar el Flow `Lumina_EC_Captacion_Futuro_Alumno` a la lista de Flows ejecutables.
+9. **Publicar el Flow en el Sitio (Herramienta: Experience Builder):** En el Builder, navegar a la página pública. Desde el panel de componentes arrastrar el componente estándar **Flow** a la página. En su configuración, seleccionar `Lumina EC Captación Futuro Alumno`. Hacer clic en **Publish**.
 
 **✅ Criterios de Aceptación (QA Check):**
 1. Abrir el sitio en modo incógnito. Verificar que el formulario es visible sin necesidad de login.
