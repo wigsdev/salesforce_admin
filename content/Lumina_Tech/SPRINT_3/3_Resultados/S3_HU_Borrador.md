@@ -102,12 +102,8 @@ Como **Futuro Alumno**, Quiero completar un formulario simple en la página púb
    - `Phone` ← `{!inputCelular.value}`
    - `LeadSource` ← valor literal `Web`
    - `Company` ← valor literal `Lumina Tech - Prospecto` *(campo requerido)*
-4. **Elemento Action (Enviar Email Automático):** Agregar un nodo de tipo Action -> Send Email:
-   - `Body` ← `¡Hola {!inputNombre.firstName}! Gracias por escribir a Lumina Tech. Recibimos tus datos correctamente y muy pronto un asesor de Admisiones te contactará. Mientras tanto, puedes revisar nuestro Campus Virtual.`
-   - `Subject` ← `¡Gracias por tu interés en Lumina Tech!`
-   - `Recipient Email Addresses` ← `{!inputEmail.value}`
-5. **Pantalla de Éxito:** Agregar una **Screen** final con un componente `Display Text`. Mensaje: `✅ ¡Gracias por tu interés en Lumina Tech! Te hemos enviado un correo de confirmación a {!inputEmail.value}.`
-6. **Fault Path:** Conectar el nodo Create Records → Agregar **Fault Path** → Nueva Screen con mensaje amigable: `Ups, ocurrió un problema. Por favor intente nuevamente o contáctenos por teléfono. Detalle técnico: {!$Flow.FaultMessage}`.
+4. **Pantalla de Éxito:** Agregar una **Screen** final con un componente `Display Text`. Mensaje: `✅ ¡Gracias por tu interés en Lumina Tech! Nos comunicaremos contigo a la brevedad a tu correo {!inputEmail.value}.`
+5. **Fault Path:** Conectar el nodo Create Records → Agregar **Fault Path** → Nueva Screen con mensaje amigable: `Ups, ocurrió un problema. Por favor intente nuevamente o contáctenos por teléfono. Detalle técnico: {!$Flow.FaultMessage}`.
 7. **Guardar y Activar** el Flow.
 8. **Configurar permisos del Guest User Profile (Herramienta: Setup → All Sites → [Sitio] → Guest User Profile):** Ir al perfil del Guest User del sitio. En **Object Permissions** para `Lead`, activar: **Read, Create**. En la sección de **Flows**, agregar el Flow `Lumina_EC_Captacion_Futuro_Alumno` a la lista de Flows ejecutables.
 9. **Publicar el Flow en el Sitio (Herramienta: Experience Builder):** En el Builder, navegar a la página pública. Desde el panel de componentes arrastrar el componente estándar **Flow** a la página. En su configuración, seleccionar `Lumina EC Captación Futuro Alumno`. Hacer clic en **Publish**.
@@ -115,7 +111,7 @@ Como **Futuro Alumno**, Quiero completar un formulario simple en la página púb
 **✅ Criterios de Aceptación (QA Check):**
 1. Abrir el sitio en modo incógnito. Verificar que el formulario es visible sin necesidad de login.
 2. Completar el formulario con datos ficticios (`Test Prospecto` / `test@prueba.com`) y enviarlo. Verificar que aparece la pantalla de éxito con el email ingresado.
-3. En Salesforce (sesión de Admin), ir a la pestaña **Leads** y verificar que existe el registro de `Test Prospecto` con `LeadSource = Web`. Además verificar (vía bandeja de entrada en pruebas) que el prospecto recibió su correo de confirmación automático.
+3. En Salesforce (sesión de Admin), ir a la pestaña **Leads** y verificar que existe el registro de `Test Prospecto` con `LeadSource = Web`.
 4. **Prueba Negativa:** Intentar enviar el formulario con el campo Email o Apellido vacío. Verificar que el Flow bloquea el avance.
 5. **Prueba de Seguridad:** Si el formulario presenta error al guardar en modo incógnito, ir directamente al Guest User Profile y verificar los permisos CRUD en Lead — no modificar el Flow.
 

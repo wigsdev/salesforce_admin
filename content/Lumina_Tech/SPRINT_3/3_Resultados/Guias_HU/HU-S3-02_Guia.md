@@ -21,12 +21,7 @@
      - `LeadSource` → Escribe el texto directo: `Web`.
      - `Email` → `{!inputEmail.value}`
      - `Phone` → `{!inputCelular.value}`
-4. **Nodo de Correo Automático:** Haz clic en el `+` después del *Create Records* y agrega un elemento de acción **Action** → Busca **Send Email**.
-   - Label: `Enviar Email Bienvenida`
-   - Body: `¡Hola {!inputNombre.firstName}! Gracias por escribir a Lumina Tech. Recibimos tus datos correctamente y muy pronto un asesor de Admisiones te contactará. Mientras tanto, puedes revisar nuestro Campus Virtual.`
-   - Subject: `¡Gracias por tu interés en Lumina Tech!`
-   - Recipient Email Addresses (comma-separated): `{!inputEmail.value}`
-5. Agrega una pantalla final con el elemento **Display Text**. Escribe "Gracias por tu interés, revisa tu correo". Guarda el flow, llámalo `Captacion Futuro Alumno` y dale **Activate**.
+4. Agrega una pantalla final con el elemento **Display Text**. Escribe "Gracias por tu interés, nos comunicaremos contigo a la brevedad". Guarda el flow, llámalo `Captacion Futuro Alumno` y dale **Activate**.
 
 ### Paso 2: Permisos de Guest User (La Trampa)
 1. Ve al **Experience Builder** de tu sitio → Engranaje ⚙️ (Settings) → **General**.
