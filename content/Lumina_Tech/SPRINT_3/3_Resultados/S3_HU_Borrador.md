@@ -25,8 +25,8 @@ Como **Administrador Salesforce**, Quiero activar los interruptores maestros de 
 
 **⚙️ Pasos de Implementación (Admin Task):**
 1. **Activar Digital Experiences (Herramienta: Setup → Digital Experiences):** Buscar "Digital Experiences" en el Setup Quick Find. Hacer clic en **Enable** para activar el interruptor maestro. Sin este paso, el menú "All Sites" no existirá.
-2. **Activar Knowledge (Herramienta: Setup → Knowledge Settings):** Buscar "Knowledge" en el Setup Quick Find → Knowledge Settings → marcar el checkbox **Enable Lightning Knowledge** → Save.
-3. **Habilitar Knowledge User (Herramienta: Setup → Users):** Ir a `Setup → Users → [Tu propio registro de usuario]`. Hacer clic en Edit y marcar la casilla **Knowledge User** ✅. Sin este paso, la pestaña de Knowledge no aparecerá en la interfaz aunque Knowledge esté activado en la Org.
+2. **Habilitar Knowledge User (Herramienta: Setup → Users):** Ir a `Setup → Users → [Tu propio registro de administrador]`. Hacer clic en Edit y marcar la casilla **Knowledge User** ✅. *(Nota: Sin este paso, el siguiente menú no aparecerá).*
+3. **Activar Knowledge (Herramienta: Setup → Knowledge Settings):** Apretar F5 para recargar la página tras el paso 2. Buscar `Knowledge` en el Setup Quick Find → Seleccionar `Knowledge Settings` → Marcar el checkbox **Enable Lightning Knowledge** → Save.
 4. **Verificar licencias disponibles:** Ir a `Setup → Company Information`. Confirmar que existen licencias del tipo **Customer Community** disponibles. Reservar máximo 2 para pruebas de login de alumnos.
 5. **Verificar Contacts de prueba:** Confirmar que los Contacts de Lucas Martinez y Ana Vega existen en la Org como Alumnos activos (Rol__c = Alumno). Estos serán los usuarios de prueba del portal privado.
 
