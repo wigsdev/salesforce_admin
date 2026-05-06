@@ -31,11 +31,11 @@ El canal de comunicación actual de Lumina Tech (teléfono + correo) genera un c
 | **B — Portal del Alumno** | Portal privado con login para alumnos activos + formulario de reclamos/trámites (Cases) |
 | **C — Base de Conocimiento** | Librería de artículos FAQ publicados en el portal (Knowledge) |
 
-### Fuera de alcance ❌
+### Bonus Track (Superación de Expectativas) 🚀
 
-| Elemento | Razón |
+| Elemento | Descripción |
 |:---|:---|
-| Chat en tiempo real (Embedded Service) | Marcado por el TL como "laborioso" — no prioritario para este Sprint |
+| **D — Soporte en Tiempo Real** | Chat en vivo (Embedded Service) con contención de Nivel 1 mediante IA (LuminaBot) y derivación a Omni-Channel en Service Console |
 
 ---
 
@@ -122,6 +122,7 @@ Estos pasos deben completarse **antes de cualquier configuración** del Sprint:
 | **B — Portal del Alumno** | HU-S3-03: Habilitar alumnos como Community Users |
 | | HU-S3-04: Screen Flow privado para generación de Cases |
 | **C — Base de Conocimiento** | HU-S3-05: Activar Knowledge y publicar 3 artículos FAQ |
+| **D — Soporte en Tiempo Real** | HU-S3-06: Implementar Soporte en Tiempo Real (Live Chat) <br> HU-S3-07: Implementación de Einstein Bot (LuminaBot) |
 
 ---
 

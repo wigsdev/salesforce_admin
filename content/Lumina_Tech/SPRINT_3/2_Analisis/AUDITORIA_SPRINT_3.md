@@ -35,11 +35,11 @@
 | Advertencia TL: Casilla "Visible in Public KB / Customer" | Guía `HU-S3-05_Guia.md` | ✅ 100% |
 | **Gaps detectados:** Visibilidad técnica requerida | `S3_Consultas_y_Dudas.md` (GAP G4) | ✅ 100% |
 
-## 4. Requisitos Excluidos o Aplazados
+## 4. Requisitos de Superación (Bonus Tracks)
 
-| Criterio Base (BA / TL) | Artefacto de Salida donde reside | Justificación |
+| Criterio Base (BA / TL) | Artefacto de Salida donde reside | Justificación y Estado |
 | :--- | :--- | :--- |
-| Chat y Omnicanalidad | `S3_Consolidado.md` (Fuera de alcance) | El TL lo especificó como funcional pero "laborioso". En acuerdo con la simpleza solicitada por la Rectora, se eliminó de la meta prioritaria para priorizar flujos asíncronos. |
+| Chat, Omnicanalidad y Bot | `HU-S3-06` y `HU-S3-07` | **Implementado con éxito.** El TL lo especificó como "laborioso" y sugirió excluirlo del alcance core. Sin embargo, se logró implementar como Bonus Track Avanzado, incluyendo un bot de Nivel 1 (LuminaBot) para priorizar flujos asíncronos y derivación inteligente. |
 
 ---
 

@@ -1,32 +1,28 @@
-# 🎯 GUÍA DE IMPLEMENTACIÓN: HU-S3-04
-**Nombre:** Screen Flow Privado para Reclamos y Trámites del Alumno (Case)
+# 🎯 GUÍA DE IMPLEMENTACIÓN: HU-S3-04a
+**Nombre:** Screen Flow Privado — Construcción del Flow (Parte A)
 **Proyecto:** Lumina Tech University
 **Audiencia:** Administradores Salesforce (aprendices)
+**Herramienta principal:** Setup → Flow Builder
 
 > [!IMPORTANT]
-> **Pre-requisito:** La HU-S3-03 debe estar completada. Lucas Martinez y Ana Vega deben existir como Community Users activos con sesión de portal habilitada antes de iniciar esta HU.
+> **Pre-requisito:** La HU-S3-03 debe estar completada. Lucas Martinez y Ana Vega deben existir como Community Users activos antes de iniciar esta HU.
+>
+> **Siguiente paso:** Al terminar esta guía, continúa con **HU-S3-04b** para publicar el Flow en el portal.
 
 ---
 
-## 🧭 ¿Qué vas a construir?
+## 🧭 ¿Qué vas a construir en esta parte?
 
-Un **formulario de 2 pasos** dentro del portal privado que permite al alumno reportar un problema o solicitar un trámite. El formulario:
-- Crea automáticamente un **Case** en Salesforce vinculado al alumno logueado (sin que el alumno escriba su nombre)
-- Es **solo accesible para usuarios con login** — visitantes anónimos son redirigidos al login
-- Mapea el `ContactId` del alumno desde la variable global `{!$User.ContactId}`
+Un **Screen Flow** de 2 pantallas que crea un Case (ticket) en Salesforce vinculado automáticamente al alumno logueado. Al finalizar esta guía el Flow estará **activo y listo** para ser publicado en el portal.
 
----
-
-## 🔁 Resumen del Flujo a construir
+## 🔁 Estructura del Flow
 
 ```
-[Pantalla 1: ¿Qué necesitás?]
-        ↓
-[Pantalla 2: Contanos más]
+[Pantalla 1: Que necesitas]  →  [Pantalla 2: Contanos mas]
         ↓
 [Create Records → Case]
    ↓ (éxito)          ↓ (error)
-[Pantalla OK]    [Pantalla Error]
+[Solicitud enviada]   [Error al enviar]
 ```
 
 ---
@@ -44,7 +40,7 @@ Un **formulario de 2 pasos** dentro del portal privado que permite al alumno rep
 
 ---
 
-### Paso 2: Crear la Pantalla 1 — "¿Qué necesitás?"
+### Paso 2: Crear la Pantalla 1 — "Que necesitas"
 
 Esta es la primera pantalla que verá el alumno: un menú desplegable para categorizar su solicitud.
 
@@ -67,7 +63,7 @@ Esta es la primera pantalla que verá el alumno: un menú desplegable para categ
    - Luego haz clic en **+ Add Choice** para agregar la siguiente
 
 > [!WARNING]
-> **Importante sobre tildes y caracteres especiales:** Salesforce **elimina automáticamente** los tildes y caracteres especiales del API Name de cada Choice. Por ejemplo, `Consulta Académica` se convierte internamente en `Consulta_Acad_mica`. Para evitar API Names deformados, **escribe los valores sin tildes**. Usa los siguientes textos exactos:
+> **Importante sobre tildes y caracteres especiales:** Salesforce **elimina automáticamente** los tildes del API Name de cada Choice. Por ejemplo, `Consulta Académica` se convierte internamente en `Consulta_Acad_mica`. Para evitar API Names deformados, **escribe los valores sin tildes**. Usa los siguientes textos exactos:
 > - `Consulta academica`
 > - `Nota o calificacion`
 > - `Certificado de alumno regular`
@@ -79,22 +75,20 @@ Esta es la primera pantalla que verá el alumno: un menú desplegable para categ
 8. Agrega los 5 valores indicados arriba uno a uno usando el proceso del punto 7.
 9. Haz clic en **Done** (botón en la parte inferior del Screen Editor) para guardar la pantalla y volver al canvas.
 
-
-
 ---
 
-### Paso 3: Crear la Pantalla 2 — "Contanos más"
+### Paso 3: Crear la Pantalla 2 — "Contanos mas"
 
 Esta es la segunda pantalla. El alumno describe el problema con detalle.
 
 1. En el canvas, haz clic en el **+** que aparece debajo de la Pantalla 1.
 2. Selecciona **Screen**.
-3. En el campo **Label** del Screen Editor, escribe: `Contanos más`
+3. En el campo **Label** del Screen Editor, escribe: `Contanos mas`
    - **API Name:** déjalo como se genera automáticamente.
 4. En la barra de búsqueda de componentes del panel izquierdo, escribe `Long Text`.
 5. Haz clic en el componente **Long Text Area** para agregarlo a la pantalla.
 6. Con el componente seleccionado, configura en el panel derecho:
-   - **Label:** `Descripción del problema`
+   - **Label:** `Descripcion del problema`
    - **API Name:** borra y escribe: `inputDescripcion`
    - **Required:** activa **Required** ✅
    - **Placeholder Text:** `Ej: No veo mi nota de Algoritmos I del parcial del 10 de marzo`
@@ -182,19 +176,19 @@ El alumno verá este mensaje cuando su solicitud se registre correctamente.
 7. En el área de texto del componente, escribe el siguiente mensaje:
 
 ```
-✅ Tu solicitud fue enviada exitosamente.
+Tu solicitud fue enviada exitosamente.
 
-El equipo de Administración revisará tu caso y te responderá por correo.
+El equipo de Administracion revisara tu caso y te respondera por correo.
 
 Tu referencia: Tipo de solicitud —
 ```
 
-7. Para insertar la variable dinámica al final de la línea de referencia:
+8. Para insertar la variable dinámica al final de la línea de referencia:
    - Coloca el cursor al final del texto `Tipo de solicitud —`
-   - Haz clic en el botón de insertar recurso (ícono `{!}` o similar que aparece en la barra del editor de texto)
+   - Haz clic en el botón de insertar recurso (ícono `{!}` que aparece en la barra del editor de texto)
    - En el buscador, escribe `inputTipoSolicitud` y selecciónala
    - Quedará: `Tipo de solicitud — {!inputTipoSolicitud}`
-8. Haz clic en **Done**.
+9. Haz clic en **Done**.
 
 ---
 
@@ -206,7 +200,7 @@ Si el Create Records falla (por ejemplo, por falta de permisos), el alumno verá
 2. Con el elemento seleccionado, mira el **panel de propiedades de la derecha**. Desplázate hacia abajo hasta encontrar la opción **"Add Fault Path"** o una sección llamada **"Fault Connector"**. Haz clic en ella.
 
 > [!NOTE]
-> **Si no encuentras "Add Fault Path" en el panel derecho:** En modo Auto-Layout, también puedes hacer clic en el ícono de **⋮ (tres puntos)** que aparece en la esquina del elemento en el canvas → selecciona **"Add Fault Path"**. Una vez activado, verás un nuevo conector de color **naranja** saliendo del elemento hacia la derecha o hacia abajo, separado del flujo principal.
+> **Si no encuentras "Add Fault Path" en el panel derecho:** En modo Auto-Layout, también puedes hacer clic en el ícono de **⋮ (tres puntos)** que aparece en la esquina del elemento en el canvas → selecciona **"Add Fault Path"**. Una vez activado, verás un nuevo conector de color **naranja** saliendo del elemento, separado del flujo principal.
 
 3. Haz clic en el **+** al final del conector naranja (camino de error).
 4. Selecciona **Screen**.
@@ -229,9 +223,9 @@ Detalle tecnico:
 
 9. Para insertar la variable `FaultMessage` al final (después de "Detalle tecnico:"):
    - Coloca el cursor al final del texto
-   - Haz clic en el botón de insertar recurso (`{!}` o botón similar en la barra del editor)
+   - Haz clic en el botón de insertar recurso (`{!}` en la barra del editor)
    - En el buscador escribe `Fault`
-   - Busca la categoría **Flow** (o **$Flow**) → selecciona **FaultMessage**
+   - Selecciona **Flow → FaultMessage** (o **$Flow → FaultMessage**)
    - Quedará: `Detalle tecnico: {!$Flow.FaultMessage}`
 
 > [!TIP]
@@ -239,110 +233,36 @@ Detalle tecnico:
 
 10. Haz clic en **Done**.
 
-
-
 ---
 
-### Paso 7: Guardar el Flow y configurar su Nombre
+### Paso 7: Guardar el Flow y Activarlo
 
 Ahora que el Flow está construido, guárdalo. **Es en este momento que se configura el Label y API Name.**
 
 1. En la barra superior del Flow Builder, haz clic en el botón **Save**.
-2. Aparece un **diálogo de guardado** con los siguientes campos — complétalos exactamente así:
+2. Aparece un **diálogo de guardado** — complétalos exactamente así:
    - **Flow Label:** `Lumina EC Reclamos y Tramites Alumno`
    - **Flow API Name:** `Lumina_EC_Reclamos_Tramites_Alumno` *(se completa automáticamente al escribir el Label — verifícalo)*
-   - **Description:** `Flow privado del portal Campus Virtual. Permite a alumnos logueados crear un Case de reclamo o trámite. El ContactId se mapea automáticamente.`
+   - **Description:** `Flow privado del portal Campus Virtual. Permite a alumnos logueados crear un Case de reclamo o tramite. El ContactId se mapea automaticamente.`
 3. Haz clic en **Save** en el diálogo.
 4. Una vez guardado, haz clic en el botón **Activate** que aparece en la barra superior.
 5. Confirma la activación en el modal que aparece.
 
 > [!WARNING]
-> Un Flow en estado **Draft** (borrador) **no funciona en el portal**. El Flow debe estar en estado **Active** antes de publicarlo en el sitio. Verifica que la barra superior indica "Active" después de activarlo.
+> Un Flow en estado **Draft** (borrador) **no funciona en el portal**. El Flow debe quedar en estado **Active** antes de continuar. Verifica que la barra superior indica "Active" después de activarlo.
 
 ---
 
-### Paso 8: Verificar Permisos del Perfil Customer Community User
+### ✅ Verificación antes de continuar con HU-S3-04b
 
-El alumno logueado usa el perfil **Customer Community User**. Sin permisos de creación sobre `Case`, el Flow fallará silenciosamente.
-
-1. En Setup, escribe `Profiles` en el Quick Find → haz clic en **Profiles**.
-2. En la lista de perfiles, haz clic en **Customer Community User**.
-3. En la página del perfil, haz clic en el botón **Edit** (arriba a la derecha o al inicio).
-4. Usa `Ctrl+F` en el navegador para buscar `Case` dentro de la página del perfil.
-5. En la sección de permisos del objeto **Case**, verifica que estén activas:
-   - ✅ **Read**
-   - ✅ **Create**
-6. Si alguna no está activa, actívala y haz clic en **Save** al final de la página.
-
----
-
-### Paso 9: Crear la Página Privada "Trámites" en el Experience Builder
-
-1. Ve a **Setup** → en el Quick Find escribe `All Sites` → haz clic en **All Sites**.
-2. En la fila del sitio **Campus Virtual Lumina Tech**, haz clic en el botón **Builder**.
-3. En la barra superior del Builder, haz clic sobre el **nombre de la página actual** (dice "Home" o "Inicio"). Se despliega un panel con todas las páginas del sitio.
-4. En la parte inferior de ese panel, haz clic en **+ New Page**.
-5. Selecciona **Standard Page** en el modal que aparece.
-6. Selecciona el layout **Flexible Layout**.
-7. Completa los campos:
-   - **Page Name:** `Trámites`
-   - **URL:** `tramites`
-8. Haz clic en **Create**.
-
-> [!NOTE]
-> La página nueva tiene **Page Access: Default**. En Experience Cloud, el acceso por defecto **requiere login** — los alumnos anónimos que intenten acceder a `/tramites` serán redirigidos automáticamente al login. Esto es exactamente el comportamiento deseado.
-
----
-
-### Paso 10: Agregar el Flow a la Página Trámites
-
-1. Verifica que estás en la página **Trámites** — el nombre debe aparecer en la barra superior del Builder.
-2. En la **barra lateral izquierda** del Builder, haz clic en el primer ícono (⚡ rayo o figura geométrica) — este es el panel de **Components**.
-3. En el buscador del panel de componentes, escribe `Flow`.
-4. Aparecerá el componente estándar **Flow** — arrástralo al área central de la página y suéltalo.
-5. Con el componente Flow seleccionado, en el **panel derecho** de propiedades:
-   - En el campo **Flow**, haz clic en el dropdown y selecciona `Lumina EC Reclamos y Tramites Alumno`.
-6. El componente mostrará la primera pantalla del Flow en la vista previa del Builder — esto confirma que está bien conectado.
-
----
-
-### Paso 11: Actualizar el Menú de Navegación
-
-La página "Trámites" ahora existe. Agrega el ítem de menú que quedó pendiente desde la HU-S3-01.
-
-1. En el Builder, haz clic sobre la **barra de navegación** (la franja azul debajo del header donde dice "INICIO").
-2. En el panel derecho aparece la propiedad **Navigation Menu** — haz clic en el nombre del menú para editarlo.
-3. Se abre el editor **Edit Default Navigation**. Haz clic en **+ Add Menu Item**.
-4. Configura el nuevo ítem:
-   - **Name:** `Hacer una consulta`
-   - **Type:** selecciona **External URL** (es la opción más confiable en la versión actual para apuntar a páginas internas del sitio)
-   - **URL:** `/tramites`
-   - **Open in new window:** ❌ No
-   - **Publicly available:** ❌ **NO** — la página es privada, solo visible para usuarios logueados
-5. Haz clic en **Save Menu**.
-6. Verifica que el menú del Builder ahora muestra: `Inicio | Hacer una consulta`.
-
----
-
-### Paso 12: Publicar el Sitio
-
-1. En la barra superior del Builder, haz clic en el botón **Publish**.
-2. En el modal de confirmación, haz clic en **Publish** nuevamente.
-3. Espera el mensaje de confirmación de publicación exitosa.
-
----
-
-### ✅ Checklist de Resultado Profesional — QA
-
-Ejecuta estas pruebas en orden:
-
-| # | Prueba | Cómo verificar | Resultado Esperado |
+| # | Verificación | Cómo comprobar | Resultado esperado |
 |:---:|:---|:---|:---|
-| 1 | **Flow activo** | Setup → Flows → buscar `Lumina EC Reclamos` | Estado = **Active** |
-| 2 | **Página Trámites existe** | Builder → selector de páginas (barra superior) | Aparece `Trámites` en la lista |
-| 3 | **Acceso anónimo bloqueado** | Abrir portal en incógnito → ir a URL del sitio + `/tramites` | Redirige al login — no muestra el formulario |
-| 4 | **Login y formulario visible** | Iniciar sesión como Lucas Martinez → clic en "Hacer una consulta" | Muestra la Pantalla 1 con el Picklist de tipos |
-| 5 | **Completar formulario** | Seleccionar `Nota o calificación` → escribir descripción → enviar | Aparece pantalla de confirmación con el tipo seleccionado |
-| 6 | **Case creado en Salesforce** | Admin → App Launcher → Cases | Existe el Case con `Origin = Web`, `Status = New`, `Priority = Medium` |
-| 7 | **ContactId automático** | Abrir el Case → campo **Contact** | Muestra `Lucas Martinez` sin que él lo haya escrito |
-| 8 | **Menú actualizado** | Sitio publicado → barra de navegación | Muestra: `Inicio \| Hacer una consulta` |
+| 1 | **Flow existe** | Setup → Flows → buscar `Lumina EC Reclamos` | Aparece en la lista |
+| 2 | **Flow activo** | Misma pantalla → columna Status | Estado = **Active** ✅ |
+| 3 | **Pantallas correctas** | Clic en el nombre del Flow → vista del canvas | Se ven: Que necesitas → Contanos mas → Create Records → Solicitud enviada + rama Error al enviar |
+| 4 | **Picklist con 5 opciones** | Abrir Pantalla 1 en el canvas | Picklist `inputTipoSolicitud` con los 5 valores |
+
+> [!IMPORTANT]
+> Si el Flow no está **Active**, la HU-S3-04b no tendrá el Flow disponible para publicar en el portal. No avances hasta verificar el estado.
+
+**➡️ Continúa en: `HU-S3-04b_Guia.md`**

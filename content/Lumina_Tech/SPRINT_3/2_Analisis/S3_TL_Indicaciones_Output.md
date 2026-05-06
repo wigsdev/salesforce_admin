@@ -45,14 +45,14 @@
 
 ---
 
-### MÓD-04 — Chat y Omnicanalidad *(fuera del alcance core)*
+### MÓD-04 — Chat, Omnicanalidad y Bot (Superación de Expectativas)
 
 | Elemento | Especificación |
 |:---|:---|
-| **Herramienta** | Embedded Service Deployment |
-| **Estado TL** | "Viable, pero laborioso" |
-| **Requiere** | Canal + presencia del usuario + cola de atención en Omni-Channel |
-| **Decisión** | Fuera del alcance del Sprint 3 core — implementar solo si el tiempo lo permite |
+| **Herramienta** | Embedded Service Deployment + Einstein Bots + Omni-Channel |
+| **Estado TL inicial** | "Viable, pero laborioso" (Sugerido como fuera de alcance) |
+| **Decisión Final** | **Implementado con éxito** como Bonus Track Avanzado |
+| **Valor aportado** | Contención de Nivel 1 con IA (LuminaBot) y derivación inteligente a agente humano en Service Console |
 
 ---
 
@@ -66,7 +66,7 @@ Requisitos previos que deben ejecutarse en orden — si se saltan, bloquean todo
 | A2 | Licencias Developer Edition limitadas | Máximo 1-2 Community Users de prueba | 🟡 Limitante |
 | A3 | Error en formulario público | Revisar `Guest User Profile → Object Permissions → Lead` — no tocar el Flow | 🔴 Condicional |
 | A4 | Knowledge no aparece | `Setup → Users → [Tu usuario] → Knowledge User ✅` | 🔴 Sí |
-| A5 | Chat requiere Omni-Channel completo | No priorizar en Sprint 3 | 🟡 Fuera de alcance |
+| A5 | Chat requiere Omni-Channel completo | Se configuró exitosamente cola y presencia | 🟢 Resuelto |
 
 ---
 
@@ -76,7 +76,7 @@ Requisitos previos que deben ejecutarse en orden — si se saltan, bloquean todo
 |:---:|:---|:---|
 | G3 | Objeto destino del formulario de reclamos del alumno | ✅ `Case` — las categorías específicas siguen como decisión pendiente |
 | G4 | Visibilidad de artículos de Knowledge | ✅ "Visible to Customer" (portal privado) + "Visible in Public Knowledge Base" (página pública) |
-| G5 | "Soporte en tiempo real" | ✅ Es Chat via Embedded Service — descartado del scope core del Sprint |
+| G5 | "Soporte en tiempo real" | ✅ Implementado: Live Chat + Einstein Bot (LuminaBot) enrutado a Omni-Channel |
 
 ---
 
@@ -88,5 +88,5 @@ Requisitos previos que deben ejecutarse en orden — si se saltan, bloquean todo
 | Formulario público → `Lead` via Guest User | ✅ Definido |
 | Formulario privado → `Case` via `{!$User.ContactId}` | ✅ Definido |
 | Knowledge: 3 artículos + visibilidad marcada | ✅ Definido |
-| Chat / Omnicanalidad: fuera del scope core | ✅ Descartado |
+| Chat / Omnicanalidad + IA (Bot) | ✅ Implementado con éxito (Bonus Track) |
 | A1-A4: Pre-requisitos de configuración de la Org | ✅ Documentados como checklist de arranque |

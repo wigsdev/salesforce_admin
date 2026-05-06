@@ -19,3 +19,9 @@
    - Email: El real de prueba que controles.
    - *Nota:* Asegúrate de que el campo Username (nombre de usuario) sea único (ej: `lucas.mtz@lumina.edu.2024`).
 5. **Save.** ¡El alumno ahora puede iniciar sesión!
+
+### Paso 3: Verificar el Acceso al Portal (QA)
+1. Vuelve al registro del Contact de **Lucas Martinez** en la aplicación.
+2. Despliega el menú de opciones (▼ junto a los botones de acción, arriba a la derecha).
+3. Selecciona **"Log in to Experience as User"**. Esto te mete directamente en la sesión del alumno dentro del portal sin necesidad de contraseña ni email de activación.
+4. Verifica que el Campus Virtual carga correctamente con el nombre del alumno visible en la esquina superior derecha.
