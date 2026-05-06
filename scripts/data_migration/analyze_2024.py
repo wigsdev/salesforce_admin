@@ -21,7 +21,7 @@ def analyze_2024():
                 try:
                     mes = int(fecha.split("-")[1])
                     months.append(mes)
-                except:
+                except Exception:
                     pass
 
         month_counts = Counter(months)

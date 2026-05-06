@@ -12,7 +12,6 @@ def get_sample_metrics(path, year_key, count):
 
     with open(path, mode="r", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
-        all_dnis = []
         for row in reader:
             d = row["DNI"]
             if d not in sample_dnis and len(sample_dnis) < count:
@@ -32,7 +31,7 @@ def get_sample_metrics(path, year_key, count):
                     mes = int(fecha.split("-")[1])
                     semestre = "1" if mes <= 6 else "2"
                     anio_lectivo = f"{year_key}-{semestre}"
-                except:
+                except Exception:
                     anio_lectivo = year_key
 
                 id_inscripcion = f"{dni}_{cod_materia}_{anio_lectivo}"

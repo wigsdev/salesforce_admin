@@ -44,7 +44,7 @@ def transform():
                 mes = int(fecha_lista.split("-")[1])
                 semestre = "1" if mes <= 6 else "2"
                 anio_lectivo = f"{anio}-{semestre}"
-            except:
+            except Exception:
                 anio_lectivo = anio
 
             carreras.add((nombre_carrera, prefix))
@@ -90,7 +90,7 @@ def transform():
                 try:
                     if int(new_eval["Nota"]) > int(evaluaciones[id_evaluacion]["Nota"]):
                         evaluaciones[id_evaluacion] = new_eval
-                except:
+                except Exception:
                     pass
 
     def write_csv(filename, data, fieldnames):

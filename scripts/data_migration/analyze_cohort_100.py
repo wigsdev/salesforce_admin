@@ -40,7 +40,7 @@ def analyze_cohort():
                             mes = int(fecha.split("-")[1])
                             semestre = "1" if mes <= 6 else "2"
                             anio_lectivo = f"{year_key}-{semestre}"
-                        except:
+                        except Exception:
                             anio_lectivo = year_key
 
                         id_inscripcion = f"{dni}_{cod_materia}_{anio_lectivo}"

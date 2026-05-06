@@ -28,7 +28,7 @@ def analyze():
                     mes = int(fecha.split("-")[1])
                     semestre = "1" if mes <= 6 else "2"
                     anio_lectivo = f"2025-{semestre}"
-                except:
+                except Exception:
                     anio_lectivo = "2025"
 
                 id_inscripcion = f"{dni}_{cod_materia}_{anio_lectivo}"

@@ -34,7 +34,6 @@ def generate_demo():
 
     sample_2024 = get_sample_dnis(input_2024, 100)
     sample_2025 = get_sample_dnis(input_2025, 100)
-    all_sample_dnis = sample_2024 | sample_2025
 
     # Estructuras para CSVs
     carreras = set()
@@ -82,7 +81,7 @@ def generate_demo():
                     mes = int(fecha.split("-")[1])
                     sem = "1" if mes <= 6 else "2"
                     anio_lec = f"{year}-{sem}"
-                except:
+                except Exception:
                     anio_lec = year
 
                 id_ins = f"{dni}_{cod_materia}_{anio_lec}"
