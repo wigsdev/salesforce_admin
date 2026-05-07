@@ -1,75 +1,74 @@
-# Guion Final Consolidado: Lumina Tech University (Formato Ágil)
+# Guion Final Consolidado: Lumina Tech University (Lenguaje de Negocio)
 **Estructura:** 9 Slides (3 por Sprint).
-**Metodología:** Listas de impacto para reducir el tiempo y sincronizar con imágenes.
+**Metodología:** Listas de impacto enfocadas en beneficios y resultados institucionales.
 
 ---
 
-## 🏛️ SPRINT 1: El Núcleo y la Seguridad Blindada
+## 🏛️ SPRINT 1: Orden y Seguridad de la Información
 
-### Slide 1: El Problema (Solicitud S1)
-*   **Caos de archivos:** Operación basada en papeles y hojas de cálculo compartidas.
-*   **Vulnerabilidad:** Personal administrativo con permisos para alterar notas (riesgo legal).
-*   **Falta de privacidad:** Docentes visualizando información financiera y de otras carreras.
-*   **Redundancia:** Tipeo manual repetitivo para inscripciones (error humano).
-*   **Datos corruptos:** Correos mal escritos y notas fuera de escala (0-10).
+### Slide 1: El Problema (Dificultades Iniciales)
+*   **Información desorganizada:** Dependencia de papeles y archivos de Excel que causaban errores.
+*   **Falta de control:** Personal administrativo con acceso a modificar notas sin supervisión.
+*   **Privacidad en riesgo:** Profesores que veían datos confidenciales de otras áreas.
+*   **Trabajo doble:** Necesidad de escribir los mismos datos varias veces para una inscripción.
+*   **Datos incorrectos:** Errores en correos y notas fuera de la escala permitida.
 
-### Slide 2: La Solución (Implementación S1)
-*   **Estructura Relacional:** Conexión automática Alumno-Inscripción-Materia (evita duplicidad).
-*   **Seguridad Zero Trust:** Perfiles con accesos restringidos por rol (protección de datos).
-*   **Seguridad a Nivel de Campo (FLS):** Ocultamiento de información financiera a docentes.
-*   **Motor de Validaciones:** Reglas que bloquean físicamente el ingreso de datos erróneos.
+### Slide 2: La Solución (Lo que construimos)
+*   **Información conectada:** Todo dato se ingresa una vez y se vincula automáticamente.
+*   **Acceso seguro por cargo:** Cada persona ve solo lo necesario para sus funciones.
+*   **Privacidad garantizada:** Blindaje de datos financieros y personales sensibles.
+*   **Control de calidad automático:** Reglas que impiden guardar datos incompletos o erróneos.
 
-### Slide 3: El Resultado (Valor S1)
-*   **Base de datos blindada:** Información íntegra, trazable y legalmente segura.
-*   **Fundación sólida:** Un sistema limpio listo para recibir automatizaciones.
-
----
-
-## ⚙️ SPRINT 2: Automatización y Gestión Gerencial
-
-### Slide 4: El Problema (Solicitud S2)
-*   **Carga Inmanejable:** 1.000 registros históricos en Excel imposibles de cargar a mano.
-*   **Lentitud Operativa:** Pérdida de tiempo redactando correos de bienvenida manuales.
-*   **Falta de Auditoría:** Profesores que olvidan cerrar actas de exámenes.
-*   **Ceguera Directiva:** Falta de reportes para la toma de decisiones basada en números.
-
-### Slide 5: La Solución (Implementación S2)
-*   **Migración Masiva:** Uso de Data Loader con IDs externos (evita duplicados).
-*   **Screen Flow:** Asistente de carga rápida en pantalla para recepción (agilidad).
-*   **Record-Triggered Flow:** Envío automático de correos de bienvenida (ahorro de tiempo).
-*   **Scheduled Flow:** Auditoría automática los viernes para reclamar notas (proactividad).
-*   **Analytics:** 3 Dashboards estratégicos: Académico, Docente y Calidad de Datos.
-
-### Slide 6: El Resultado (Valor S2)
-*   **Eficiencia Operativa:** El sistema trabaja de forma autónoma reduciendo carga manual.
-*   **Visión Estratégica:** Control total de la universidad mediante métricas en tiempo real.
+### Slide 3: El Resultado (Beneficios logrados)
+*   **Institución blindada:** Información confiable, ordenada y protegida legalmente.
+*   **Cimientos sólidos:** Una plataforma lista para crecer y automatizar procesos.
 
 ---
 
-## 🌐 SPRINT 3: Expansión y Soporte 24/7
+## ⚙️ SPRINT 2: Velocidad y Visión Directiva
 
-### Slide 7: El Problema (Solicitud S3)
-*   **Soporte Saturado:** El equipo dedica el 60% del tiempo a consultas repetitivas.
-*   **Captación Inexistente:** No había canal digital para interesados en carreras.
-*   **Alumnos Frustrados:** Falta de un portal para consultar trámites o notas.
-*   **Cuello de Botella:** Dependencia absoluta de la atención física o telefónica.
+### Slide 4: El Problema (Limitaciones operativas)
+*   **Exceso de carga manual:** 1.000 registros antiguos que era imposible pasar a mano.
+*   **Atención lenta:** Tiempo perdido redactando correos de bienvenida uno por uno.
+*   **Falta de seguimiento:** Dificultad para saber qué profesores no habían cerrado actas.
+*   **Falta de visibilidad:** Imposibilidad de ver el estado de la universidad en tiempo real.
 
-### Slide 8: La Solución (Implementación S3)
-*   **Portal Público:** Página institucional accesible para usuarios anónimos (identidad).
-*   **Formulario de Captación:** Generación automática de Leads para nuevos interesados.
-*   **Experience Cloud:** Campus Virtual privado para alumnos registrados (Portal Privado).
-*   **Base de Conocimientos:** Artículos FAQ para el autoservicio (contención).
-*   **Screen Flows Privados:** Trámites y solicitudes autogestionadas (autoservicio).
-*   **LuminaBot:** Asistente virtual con IA para respuestas inmediatas (primer nivel).
-*   **Omni-Channel:** Enrutamiento inteligente hacia agentes humanos (atención escalable).
+### Slide 5: La Solución (Lo que construimos)
+*   **Carga rápida de históricos:** Traspaso masivo de información sin errores ni duplicados.
+*   **Asistente de atención rápida:** Una pantalla sencilla para que recepción trabaje velozmente.
+*   **Comunicaciones automáticas:** Envío inmediato de correos de bienvenida al inscribir alumnos.
+*   **Auditoría inteligente:** El sistema detecta olvidos y avisa automáticamente a los profesores.
+*   **Tableros de control:** Reportes visuales de alumnos, docentes y calidad de la información.
 
-### Slide 9: El Resultado (Valor S3)
-*   **Crecimiento Digital:** Motor de captación 24/7 para prospectos sin intervención manual.
-*   **Experiencia del Alumno:** Alumno empoderado con acceso a su información y trámites.
-*   **Soporte Escalable:** Reducción drástica de la carga administrativa mediante tecnología.
+### Slide 6: El Resultado (Beneficios logrados)
+*   **Eficiencia en el trabajo:** El sistema realiza las tareas repetitivas de forma autónoma.
+*   **Decisiones con datos:** La dirección tiene el control total con métricas actualizadas.
 
 ---
 
-## 🏁 CONCLUSIÓN TÉCNICA FINAL
-**Discurso de Cierre (30 seg):**
-"En conclusión, hemos transformado a Lumina Tech de una operación manual y vulnerable a una institución moderna y automatizada. No solo cumplimos con los 3 Sprints, sino que construimos un ecosistema donde la **integridad de los datos**, la **eficiencia de los procesos** y la **experiencia del usuario** son ahora el estándar. Con esta visión clara de la arquitectura, pasamos de la teoría a la práctica para ver el sistema funcionando en vivo. Muchas gracias."
+## 🌐 SPRINT 3: Atención y Crecimiento 24/7
+
+### Slide 7: El Problema (Atención al alumno)
+*   **Soporte desbordado:** El equipo perdía la mayor parte del tiempo en dudas repetitivas.
+*   **Sin canal para interesados:** No había una vía digital para captar nuevos alumnos.
+*   **Alumnos sin información:** Los estudiantes no tenían un lugar para ver sus trámites.
+*   **Dependencia física:** Todo requería llamadas o visitas a la oficina.
+
+### Slide 8: La Solución (Lo que construimos)
+*   **Portal Institucional:** Una página web para informar a visitantes y captar interesados.
+*   **Registro automático de interesados:** Formulario web que crea prospectos al instante.
+*   **Campus Virtual Privado:** Un espacio seguro donde el alumno gestiona sus propios datos.
+*   **Centro de ayuda:** Una biblioteca de respuestas para que el alumno se ayude solo.
+*   **Asistente virtual inteligente:** Respuestas inmediatas a consultas frecuentes.
+*   **Distribución inteligente:** Las consultas complejas llegan directo al personal encargado.
+
+### Slide 9: El Resultado (Beneficios logrados)
+*   **Crecimiento constante:** Un motor que capta alumnos las 24 horas del día.
+*   **Estudiantes satisfechos:** Acceso a trámites y respuestas sin esperas ni llamadas.
+*   **Soporte profesional:** El personal ahora se enfoca en resolver casos importantes.
+
+---
+
+## 🏁 CONCLUSIÓN FINAL
+**Discurso de Cierre:**
+"En conclusión, hemos transformado la gestión de Lumina Tech. Pasamos de un sistema manual y riesgoso a una plataforma moderna que cuida la información, facilita el trabajo del personal y ofrece una atención de primer nivel a los alumnos. Hoy, la universidad no solo tiene datos, sino una herramienta que le permite crecer con orden y eficiencia. Muchas gracias."

@@ -1,50 +1,49 @@
 # Guion de Demo en Vivo: Lumina Tech (Sprint 2)
 **Tiempo asignado:** 4 Minutos.
-**Estrategia:** Demo ejecutada como Administrador, mostrando el uso de las herramientas sin exageraciones.
-
-**Preparación técnica antes de empezar:**
-1. Tener abierta la Lightning App "Gestión Académica Lumina".
-2. Tener lista la *Utility Bar* inferior para acceder al Screen Flow de Carga.
-3. Tener un registro de Evaluación sin nota ("Null") preparado, que muestre la Tarea generada.
-4. Tener la pestaña Dashboards lista para mostrar.
+**Enfoque:** "Mostrar lo implementado". Minimizamos la carga de datos en vivo para enfocarnos en la potencia de la automatización y los reportes.
 
 ---
 
-## 🎤 TRANSICIÓN DESDE LA PPT
+## 🎤 TRANSICIÓN
 **Discurso:**
-"Pasemos a la plataforma de Salesforce para visualizar estas tres implementaciones trabajando en conjunto."
+"Sobre la base segura del Sprint 1, ahora veremos cómo encendimos el motor de automatización para que el personal deje de hacer tareas repetitivas y la dirección tenga claridad total del negocio."
 
 ---
 
-## ⚙️ ESCENARIO 1: Carga Rápida y Correo de Bienvenida (1.5 Minutos)
-*Objetivo: Demostrar la solución al pedido de una pantalla simplificada para recepción y la automatización del correo.*
+## 📂 ESCENARIO 1: Migración y Velocidad (1.5 Minutos)
+*Objetivo: Mostrar la carga masiva y el asistente de recepción.*
+*Encuadre: Vista de lista de Alumnos y Utility Bar.*
 
-**1. El Asistente de Recepción (Screen Flow)**
-*   *(Acción: Haz clic en la barra inferior para abrir el flujo "Lumina Asistente Carga Recepcion").*
-*   **Discurso:** "Para solucionar la queja del personal de recepción sobre la complejidad de la pantalla estándar, implementamos este asistente en la barra de utilidades. Contiene solo los campos estrictamente necesarios para registrar a un alumno."
-*   *(Acción: Ingresa un Nombre, Apellido, DNI y Email de prueba, y presiona Guardar).*
-*   **Discurso:** "Al guardar, el alumno queda registrado en la base de datos. Además, esto activa nuestro segundo flujo en segundo plano: el sistema le envía automáticamente el correo de bienvenida al estudiante, eliminando la necesidad de que el personal lo redacte manualmente."
+**1. Resultados de la Migración**
+*   *(Acción: Muestra una vista de lista con muchos Alumnos).*
+*   **Discurso:** "La Rectora nos entregó 1.000 registros en Excel que hubieran tomado meses cargar a mano. Aquí vemos el resultado de la migración masiva: toda la historia académica está en Salesforce, protegida por reglas que evitaron cualquier registro duplicado durante el proceso."
+
+**2. Asistente de Recepción y Bienvenida**
+*   *(Acción: Abre el 'Asistente de Recepción' en la barra inferior (Utility Bar)).*
+*   **Discurso:** "Para el día a día, implementamos este asistente simplificado. No necesitamos llenarlo ahora, pero quiero que observen que solo pide los datos críticos. Al guardar desde aquí, el sistema dispara en el acto el correo de bienvenida institucional, ahorrando 10 minutos de redacción manual por cada nuevo inscripto."
 
 ---
 
-## 📅 ESCENARIO 2: Auditoría de Cierre de Actas (1 Minuto)
-*Objetivo: Demostrar la automatización para gestionar a los profesores que no cargan notas.*
+## 🤖 ESCENARIO 2: El Auditor Automático (1 Minuto)
+*Objetivo: Mostrar la automatización del cierre de actas.*
+*Encuadre: Registro de Evaluación con nota vacía y sección de Tareas.*
 
-**1. Tarea Automática (Schedule-Triggered Flow)**
-*   *(Acción: Cierra el asistente y abre el registro de Evaluación que tienes preparado. Señala la Tarea asignada en la lista de actividades).*
-*   **Discurso:** "Respecto al seguimiento de los profesores, aquí tenemos una Evaluación pasada que aún no tiene calificación. En lugar de revisión manual, configuramos un Flujo Programado. Todos los viernes a las 17:00 hs, el sistema busca estos registros vacíos y genera automáticamente esta Tarea, notificando al profesor responsable que debe cerrar el acta."
+**1. Gestión Proactiva de Notas**
+*   *(Acción: Abre una Evaluación que no tenga nota y señala la 'Tarea' creada para el profesor).*
+*   **Discurso:** "Para que Bedelía no tenga que perseguir a los profesores, el sistema ahora audita solo. Este es un acta sin nota; el flujo automático detectó la omisión y generó esta Tarea de reclamo para el docente responsable. El cumplimiento académico ahora es proactivo, no reactivo."
 
 ---
 
 ## 📊 ESCENARIO 3: Tableros de Control (1.5 Minutos)
-*Objetivo: Mostrar la visibilidad de datos solicitada por la Rectora.*
+*Objetivo: Mostrar la visibilidad gerencial solicitada.*
+*Encuadre: Pestaña Dashboards > Tablero Directivo.*
 
-**1. Dashboards Directivos**
-*   *(Acción: Ve a la pestaña Dashboards y abre la carpeta de reportes directivos. Muestra el Tablero 1 y luego el Tablero 3).*
-*   **Discurso:** "Finalmente, para la toma de decisiones, hemos procesado los 1000 registros históricos y los hemos consolidado en estos Tableros. Por ejemplo, en el Tablero Académico la Rectora puede ver la distribución de alumnos por carrera. Y en el Tablero de Calidad de Datos, puede auditar fácilmente cuántos alumnos tienen información de contacto incompleta para solicitar su corrección. Estos tableros están configurados con seguridad de carpetas, por lo que solo la alta dirección tiene acceso a ellos."
+**1. Toma de Decisiones con Datos**
+*   *(Acción: Abre el Dashboard y muestra el gráfico de 'Alumnos por Carrera' y el de 'Calidad de Datos').*
+*   **Discurso:** "Finalmente, resolvimos la 'ceguera' directiva. Estos tableros se alimentan solos de la información que vimos antes. La Rectora puede ver ahora cuántos alumnos tiene por carrera y, fundamentalmente, este reporte de Calidad de Datos que le avisa qué registros están incompletos para corregirlos de inmediato. Todo esto con seguridad restringida para la dirección."
 
 ---
 
-## 🏁 EL CIERRE (Final de la Demo Sprint 2)
+## 🏁 CIERRE
 **Discurso:**
-"De esta manera, hemos cubierto los requerimientos de migración, automatización de procesos clave y visibilidad gerencial solicitados para este Sprint. Muchas gracias."
+"Hemos pasado de una operación manual a una automatizada y medible. Con esta eficiencia operativa, estamos listos para el Sprint 3: abrir nuestras puertas al alumno a través del Campus Virtual."

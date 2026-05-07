@@ -1,49 +1,52 @@
 # Guion de Demo en Vivo: Lumina Tech (Sprint 1)
 **Tiempo asignado:** 4 Minutos.
-**Estrategia:** Demo ejecutada 100% como Administrador. Respondemos directamente a las peticiones de la `Solicitud.md` sin cambiar de usuario, explicando de forma narrativa las restricciones.
-
-**Preparación técnica antes de empezar:**
-1. Tener abierta la Lightning App "Gestión Académica Lumina".
-2. Tener abierta la ficha de un Alumno de prueba con una Materia asociada, y listo para crearle un Examen y modificar su email.
+**Enfoque:** "Mostrar lo implementado". No llenamos formularios para ahorrar tiempo. Mostramos evidencia de seguridad, estructura y calidad.
 
 ---
 
-## 🎤 TRANSICIÓN DESDE LA PPT
+## 🎤 APERTURA
 **Discurso:**
-"Pasemos a la plataforma. La Rectora nos pidió profesionalizar la operación y atacar errores específicos. Veamos cómo esta base de datos resuelve esos dolores de cabeza cotidianos."
+"Pasemos a la plataforma para ver cómo Salesforce resuelve los problemas de desorden y seguridad que planteó la Rectora. En este Sprint 1, nos enfocamos en construir los cimientos: una base de datos segura, organizada y con control de calidad automático."
 
 ---
 
-## 🏗️ ESCENARIO 1: La Estructura Académica (1.5 Minutos)
-*Responde a la solicitud: "No quiero tener que escribir 'Juan Perez' veinte veces manuales... quiero abrir su ficha y ver su historial".*
-*Encuadre: Pestaña Personas > Ficha de un Alumno.*
+## 🏛️ ESCENARIO 1: Estructura y Relaciones (1.5 Minutos)
+*Objetivo: Mostrar la solución a la redundancia manual y la relación Alumno-Materia.*
+*Encuadre: Registro de un Alumno (Contacto).*
 
-**1. Navegación y Relaciones**
-*   *(Acción: Abre el registro de un Alumno. Muévete hacia la pestaña "Relacionado" o muestra las Related Lists).*
-*   **Discurso:** "La primera queja de la dirección era la redundancia manual. Aquí estamos en la ficha central del alumno. Fíjense que gracias a la estructura relacional que construimos en este Sprint, ya no hay que tipear nada veinte veces. En esta misma pantalla vemos todas las **Inscripciones** a sus materias y, si hacemos un clic, vemos su historial exacto de **Evaluaciones** y **Asistencias**. Toda su vida académica está interconectada de forma automática."
-
----
-
-## 🛡️ ESCENARIO 2: Calidad de la Información (1.5 Minutos)
-*Responde a la solicitud: "Alguien escribió 'gmail,com'... le puso un '11' o '-5'... no podemos inscribir sin DNI".*
-*Encuadre: Edición del Alumno y creación de una Evaluación.*
-
-**1. Errores de Dedo (Email y DNI)**
-*   *(Acción: Edita el correo del alumno, borra el punto y pon una coma `alumno@gmail,com` y haz clic en Guardar).*
-*   **Discurso:** "La Rectora mencionó que los correos rebotaban por errores de dedo. Miren qué ocurre si alguien en administración escribe 'gmail con coma'. *(Muestra el error rojo)*. El sistema lo bloquea de inmediato. Lo mismo ocurre si intentan dejar el DNI vacío o ponerle letras."
-
-**2. Rango de Notas**
-*   *(Acción: Ve a la lista relacionada de Evaluaciones, haz clic en Nueva o edita una existente. Intenta poner un `11` en la nota y guarda).*
-*   **Discurso:** "Y sobre las calificaciones que arruinaban los promedios... Si un profesor se equivoca y tipea un '11' o un número negativo en un examen, nuestro motor de validación salta al rescate. El dato corrupto jamás ingresa a la base de datos."
+**1. La Ficha Única del Alumno**
+*   *(Acción: Abre el registro de un Alumno y muestra la información básica).*
+*   **Discurso:** "La primera solicitud fue eliminar la redundancia. Aquí vemos la ficha central del alumno. Gracias al modelo relacional, los datos del estudiante se cargan una sola vez. No hay que repetir su nombre en cada proceso."
+*   *(Acción: Haz clic en la pestaña 'Relacionado' y muestra la lista de 'Inscripciones').*
+*   **Discurso:** "Aquí respondemos al dolor de cabeza de la Rectora: ¿Qué está cursando este alumno? En una sola mirada vemos todas sus **Inscripciones**. Si entro a una materia, puedo ver de inmediato su historial de **Evaluaciones**. La relación 'muchos a muchos' entre alumnos y materias está resuelta y es navegable con un solo clic."
 
 ---
 
-## 🔒 ESCENARIO 3: Privacidad de Roles (1 Minuto)
-*Responde a la solicitud: "Si un administrativo cambia una nota, tenemos un problema legal grave".*
-*Encuadre: Se mantiene en la pantalla del Examen (Evaluacion).*
+## 🛡️ ESCENARIO 2: Calidad de Datos y Seguridad (1.5 Minutos)
+*Objetivo: Mostrar las reglas de validación y la protección de información.*
+*Encuadre: Registro de Alumno y Registro de Evaluación.*
 
-**1. Seguridad Zero Trust (SoD)**
-*   *(Acción: Señala con el mouse el botón 'Guardar' o el campo 'Nota').*
-*   **Discurso:** "Finalmente, para resolver el riesgo legal. Como Administrador del Sistema, yo tengo acceso total. Pero hemos configurado los Permisos de Perfil (Zero Trust) de tal forma que, si la persona de Admisiones o Cobranzas entra a esta pantalla de Examen, el botón de editar y modificar notas está desactivado por completo para ellos. 
+**1. El Sistema como Filtro (Validaciones)**
+*   *(Acción: Muestra el campo Email y el campo DNI en el Alumno).*
+*   **Discurso:** "Para evitar los 'errores de dedo' que mencionaba la Rectora, el sistema ahora actúa como un filtro. Hemos configurado reglas que impiden guardar correos sin formato válido o alumnos sin su identificación legal (DNI). Ya no hay lugar para el olvido."
+*   *(Acción: Abre una Evaluación y señala el campo 'Nota').*
+*   **Discurso:** "Lo mismo ocurre con las calificaciones. El sistema bloquea físicamente cualquier nota fuera del rango de 1 a 10. Ya no es posible que un error de tipeo arruine los promedios institucionales."
 
-Con esta estructura interconectada, limpia y segura, hemos cumplido con los requisitos de la Rectora y dejado el terreno fértil para el Sprint 2."
+**2. Privacidad de la Información**
+*   **Discurso:** "En cuanto a la privacidad, hemos aplicado perfiles de seguridad. Aunque ahora lo vemos como administradores, un docente no puede ver los datos financieros de este alumno, y el personal administrativo no tiene permisos para alterar estas notas de examen. La integridad legal está garantizada."
+
+---
+
+## 📅 ESCENARIO 3: Gestión de Exámenes y Ciclos (1 Minuto)
+*Objetivo: Mostrar el registro de notas y asistencias.*
+*Encuadre: Lista Relacionada de Evaluaciones dentro de una Inscripción.*
+
+**1. El Registro Académico**
+*   *(Acción: Muestra una lista de Evaluaciones con sus fechas y estados).*
+*   **Discurso:** "Finalmente, organizamos el ciclo de exámenes. Cada evaluación queda registrada con su fecha exacta y, como solicitó la dirección, incluimos el estado de asistencia. Si un alumno falta, queda constancia en su historial de forma permanente. Con esto, Lumina Tech tiene ahora el control total de su vida académica."
+
+---
+
+## 🏁 CIERRE
+**Discurso:**
+"Con esta base estructurada y segura, estamos listos para pasar al Sprint 2, donde veremos cómo automatizamos y cargamos los datos masivos sobre estos cimientos."
