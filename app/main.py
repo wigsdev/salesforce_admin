@@ -46,7 +46,7 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/templates")
 templates.env.globals["app_version"] = settings.VERSION
 
-
+@app.head("/health")
 @app.get("/health")
 async def health_check():
     """Health check endpoint for monitoring."""
