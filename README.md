@@ -1,10 +1,11 @@
 # 🚀 Salesforce Admin Learning Platform (MVP v0.30.0)
 
-[![Status](https://img.shields.io/badge/Status-Active_Development-success?style=for-the-badge&logo=statuspage)](https://salesforce-admin.onrender.com)
+[![Status](https://img.shields.io/badge/Status-Live_Production-success?style=for-the-badge&logo=render)](https://admin-salesforce.onrender.com/)
 [![Version](https://img.shields.io/badge/MVP-v0.30.0-blue?style=for-the-badge&logo=semver)](docs/NO_VERSION_YET)
 [![Tech Stack](https://img.shields.io/badge/Stack-FastAPI%20%7C%20Tailwind%20%7C%20PostgreSQL-005A9C?style=for-the-badge&logo=python)](docs/IMPLEMENTATION_PLAN.md)
 
 > **Plataforma Web Interactiva** para la gestión y aprendizaje del curso Salesforce Administrator.  
+> 🌐 **Sitio en Producción:** [https://admin-salesforce.onrender.com/](https://admin-salesforce.onrender.com/)  
 > Diseñada para el equipo **VISIONARY ADMINS (Grupo 3)**.
 
 ---
